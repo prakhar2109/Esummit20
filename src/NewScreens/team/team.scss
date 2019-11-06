@@ -1,0 +1,190 @@
+.team {
+
+    padding: 80px 220px;
+    background: #1A4D66;
+
+    .text {
+        line-height: 41px;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        padding-top: 44px;
+        color: #E5E5E5;
+    }
+
+    .team_array {
+        display: grid;
+        padding-top: 96px;
+        grid-template-columns: 30% 30% 30%;
+
+        div {
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+
+            span {
+
+
+                background: rgba(243, 148, 35, 0.9);
+                width: 100%;
+                display: block;
+                padding: 16px 0;
+                position: absolute;
+                bottom: 0;
+
+
+                p {
+                    text-align: center;
+                    color: white;
+
+                    i {
+                        font-size: 2rem;
+                        margin-right: 28px;
+                    }
+
+
+                }
+
+                .mobile {
+                    line-height: 35px;
+                    font-size: 24px;
+                    letter-spacing: 0.1em;
+
+                    color: #FFFFFF;
+
+                }
+
+                p:first-child {
+                    line-height: 47px;
+                    font-size: 24px;
+                    letter-spacing: 0.1em;
+
+                    color: #FFFFFF;
+                }
+
+                p:nth-child(2) {
+                    line-height: 35px;
+                    font-size: 20px;
+                    letter-spacing: 0.1em;
+
+                    color: #FFFFFF;
+
+
+                }
+            }
+        }
+    }
+
+}
+
+.team {
+
+    padding: 80px 220px;
+    background: #1A4D66;
+
+    .text {
+        line-height: 41px;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        padding-top: 44px;
+        color: #E5E5E5;
+    }
+
+    .team_array {
+        display: grid;
+        padding-top: 96px;
+        grid-template-columns: 30% 30% 30%;
+
+        div {
+            width: 100%;
+            position: relative;
+            transition: 0.4s;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+
+            span {
+
+
+                background: rgba(243, 148, 35, 0.9);
+                width: 100%;
+                display: block;
+                padding: 16px 0;
+                position: absolute;
+                bottom: 0;
+                transition: 0.4s;
+
+                p {
+                    text-align: center;
+                    color: white;
+
+                    i {
+                        font-size: 2rem;
+                        margin-right: 28px;
+                        
+                    }
+
+
+                }
+
+                .mobile {
+                    line-height: 35px;
+                    font-size: 20px;
+                    letter-spacing: 0.1em;
+
+                    color: #FFFFFF;
+                    
+                    display: none;
+
+                }
+                
+                .links{
+                    display: none;
+                    padding-top:30%;
+                }
+
+                p:first-child {
+                    line-height: 47px;
+                    font-size: 28px;
+                    letter-spacing: 0.1em;
+
+                    color: #FFFFFF;
+                }
+
+                p:nth-child(2) {
+                    line-height: 35px;
+                    font-size: 24px;
+                    letter-spacing: 0.1em;
+
+                    color: #FFFFFF;
+
+
+                }
+            }
+        }
+
+
+        div:hover{
+            transition: 0.4s;
+
+
+            span{
+                height:100%;
+                transition: 0.4s;
+            }
+
+            .links ,.mobile{
+                display: block;
+            }
+        }
+    }
+
+}

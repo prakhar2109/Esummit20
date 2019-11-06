@@ -1,0 +1,68 @@
+.events {
+    background: url("./static/leadership.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 60rem;
+    height: 88.35vh;
+
+    padding: 100px 220px;
+
+    p:first-child {
+        font-size: 32px;
+        letter-spacing: 0.1em;
+        padding-bottom: calc(20px + 1vh);
+        color: #FFFFFF;
+    }
+
+    p:nth-child(2) {
+        line-height: 41px;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        padding-bottom: calc(30px + 3vh);
+    }
+
+    p:nth-child(3) {
+        line-height: 46px;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+
+        color: #FFFFFF;
+
+        margin-bottom: calc(10vh + 5rem);
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .details {
+
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 2px;
+        padding: 15px 40px;
+        line-height: 20px;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.09em;
+        margin-right: 32px;
+        color: #FFFFFF;
+    }
+
+    .register {
+
+        background: #FFFFFF;
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 2px;
+        line-height: 20px;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.09em;
+        padding: 15px 40px;
+        color: #240202;
+
+    }
+}

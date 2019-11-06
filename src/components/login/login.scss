@@ -1,0 +1,266 @@
+
+@mixin fhd {
+    @media  (min-width:1000px) and (max-width: 1600px) {
+        @content ;
+    }
+
+}
+
+
+
+.andhera {
+    background: rgba(79, 79, 79, 0.37);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    z-index: 200;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cross{
+    position: absolute;
+    z-index: 202;
+    top:7.7vh;
+    cursor: pointer;
+    left:75vw;
+}
+
+.login_outer {
+    position: fixed;
+    z-index: 201;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    .login_inner {
+        background: white;
+
+       
+        position: relative;
+        min-width: 40vw;
+
+        .top {
+            padding: 24px 0;
+            background: rgba(49, 99, 123, 0.08);
+
+            p:first-child {
+                font-size: 24px;
+                text-align: center;
+                letter-spacing: 0.04em;
+                color: #1A4D66;
+
+                @include fhd{
+                    font-size: 18px;
+                }
+            }
+
+            p:nth-child(2) {
+                font-size: 20px;
+                color: #1A4D66;
+                text-align: center;
+
+                @include fhd{
+                    font-size:16px;
+                }
+
+            }
+        }
+    }
+
+
+
+    .google {
+
+        font-size: 20px;
+        cursor: pointer;
+        color: #FFFFFF;
+        padding-right: 2rem;
+
+        @include fhd{
+            font-size: 16px;
+        }
+
+        span:first-child {
+            padding: 2.1% 24px;
+            border-right: 1px solid #C8341A;
+            display: inline-block;
+            background: #E0492F;
+        }
+
+        span:nth-child(2) {
+            padding: 3% 64px;
+            background: #E0492F;
+            @include fhd{
+                padding: 2.8% 64px;
+            }
+        }
+    }
+
+    .facebook {
+
+        font-size: 20px;
+        cursor: pointer;
+        color: #FFFFFF;
+
+        @include fhd{
+            font-size: 16px;
+        }
+
+        span:first-child {
+            padding: 2.1% 24px;
+            border-right: 1px solid #193776;
+            display: inline-block;
+            background: #3B5999;
+        }
+
+        span:nth-child(2) {
+            padding: 3% 64px;
+            background: #3B5999;
+
+            @include fhd{
+                padding: 2.8% 64px;
+            }
+        }
+    }
+
+
+
+    .login_bottom {
+        padding: 54px;
+
+        @include fhd{
+            padding: 32px;
+        }
+    }
+
+
+    form {
+        padding-top: 3rem;
+
+        @include fhd{
+            padding-top: 1rem;
+        }
+        label {
+            display: block;
+            font-size: 20px;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.5rem;
+
+            color: #B2B2B2;
+
+            @include fhd{
+                font-size: 16px;
+            }
+
+        }
+
+        .input {
+            background: none;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            border: none;
+            color: #B2B2B2;
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #B2B2B2;
+            margin-bottom:3rem;
+
+            @include fhd{
+                font-size: 14px;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .submit {
+
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 0.06em;
+
+            color: #FFFFFF;
+            padding: 14px 32px;
+            background: rgba(243, 148, 35, 0.75);
+            border-radius: 4px;
+            border: none;
+
+            @include fhd{
+                padding: 10px 24px;
+                font-size: 16px;
+
+            }
+
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#log{
+    display: none;
+}
+
+
+.hr-text {
+    line-height: 1em;
+    margin-top: 2.5rem;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: 1;
+
+    @include fhd{
+        margin-top: 1rem;
+    }
+
+    &:before {
+        content: '';
+        // use the linear-gradient for the fading effect
+        // use a solid background color for a solid bar
+        background: #4F4F4F;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+
+    &:after {
+        content: attr(data-content);
+        position: relative;
+        display: inline-block;
+        color: black;
+
+        padding: 0 .5em;
+        line-height: 1.5em;
+        // this is really the only tricky part, you need to specify the background color of the container element...
+
+
+
+        color: #4F4F4F;
+
+        background-color: #fcfcfa;
+    }
+}

@@ -1,0 +1,556 @@
+.Eventsheader {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .Eventsheader {
+    display: block;
+  }
+}
+.ideastorm {
+  padding-top: 50px;
+}
+
+.ideastorm .header {
+  background: #0D1313;
+  -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  padding: 0 10vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000000000000000;
+  height: 100px;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .header {
+    display: none;
+  }
+}
+
+.ideastorm .header img {
+  height: 100px;
+}
+
+.ideastorm .header .head_array {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.ideastorm .header .head_array span {
+  font-family: "ProximaNova-Semibold";
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: #FFFFFF;
+  margin-left: 40px;
+}
+
+.ideastorm .idea {
+  background: url("./static/1920.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  min-height: 65rem;
+  height: auto;
+  padding: 100px 10vw;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .idea {
+    padding: 44px 32px;
+    padding-top: 60px;
+    background: url("./static/mobileIS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+  }
+}
+
+.ideastorm .idea p:first-child {
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: #FFFFFF;
+  font-family: "ProximaNova-Bold";
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .idea p:first-child {
+    font-size: 16px;
+    padding-bottom: calc(0px + 1vh);
+  }
+}
+
+.ideastorm .idea p:nth-child(2) {
+  line-height: 41px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  font-family: "ProximaNova-Light";
+  padding-bottom: calc(0px + 3vh);
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .idea p:nth-child(2) {
+    line-height: 15px;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding-bottom: 0;
+    color: #FFFFFF;
+  }
+}
+
+.ideastorm .idea p:nth-child(3) {
+  font-size: 28px;
+  font-family: "ProximaNova-Semibold";
+  color: #FFFFFF;
+  padding-bottom: 4.62vh;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .idea p:nth-child(3) {
+    line-height: 14px;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding-bottom: calc(15px + 3vh);
+  }
+}
+
+.ideastorm .idea p:nth-child(4) {
+  line-height: 46px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  font-family: "Proxima-nova-regular";
+  color: #FFFFFF;
+  text-align: justify;
+  margin-bottom: calc(10vh + 5rem);
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .idea p:nth-child(4) {
+    line-height: 18px;
+    font-size: 12px;
+    text-align: justify;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(6vh + 2rem);
+    color: #FFFFFF;
+  }
+}
+
+.ideastorm .idea p {
+  text-align: center;
+}
+
+.ideastorm .idea .register_button {
+  border: 2px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  padding: 14px 16px;
+  font-family: "ProximaNova-Bold";
+  line-height: normal;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background: none;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .idea .register_button {
+    line-height: 15px;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    color: #FFFFFF;
+  }
+}
+
+.ideastorm .Rules,
+.ideastorm .eligiblity {
+  padding: 120px 10vw;
+  display: block;
+  border-bottom: 1px solid #B2B2B2;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .Rules,
+  .ideastorm .eligiblity {
+    padding: 32px;
+  }
+}
+
+.ideastorm .Rules .head1,
+.ideastorm .eligiblity .head1 {
+  color: #1A4D66;
+  font-family: "ProximaNova-Bold";
+}
+
+.ideastorm .Rules ol,
+.ideastorm .eligiblity ol {
+  padding-top: 72px;
+  font-family: "Proxima-nova-regular";
+  list-style-type: decimal;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .Rules ol,
+  .ideastorm .eligiblity ol {
+    padding-top: 24px;
+  }
+}
+
+.ideastorm .Rules ol li,
+.ideastorm .eligiblity ol li {
+  line-height: 41px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  font-family: "Proxima-nova-regular";
+  color: #000000;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .Rules ol li,
+  .ideastorm .eligiblity ol li {
+    line-height: 21px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+}
+
+.ideastorm .Rules ol li span,
+.ideastorm .eligiblity ol li span {
+  font-weight: bold;
+}
+
+.ideastorm .register {
+  background: #F49D35;
+  padding: 96px 10vw;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .register {
+    display: none;
+  }
+}
+
+.ideastorm .register .register_now {
+  font-size: 40px;
+  font-family: "ProximaNova-Semibold";
+}
+
+.ideastorm .register p {
+  font-family: "Proxima-nova-regular";
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 48px;
+  line-height: 41px;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.ideastorm .register span {
+  padding: 14px 16px;
+  font-family: "ProximaNova-Bold";
+  border: 2px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  margin-right: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.ideastorm .register_mobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .register_mobile {
+    display: block;
+    background: #F49D35;
+    padding: 44px 32px;
+  }
+  .ideastorm .register_mobile p {
+    line-height: 17px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: "ProximaNova-Semibold";
+    color: #FFFFFF;
+  }
+  .ideastorm .register_mobile span {
+    line-height: 15px;
+    font-size: 12px;
+    text-align: center;
+    width: 190px;
+    height: 48px;
+    font-family: "ProximaNova-Bold";
+    letter-spacing: 0.09em;
+    padding: 0;
+    padding-top: 15px;
+    border: 2px solid #E1E2E2;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 2px;
+    color: #FFFFFF;
+    display: block;
+    margin: 16px 0;
+  }
+  .ideastorm .register_mobile .register_now {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+}
+
+.ideastorm .view_all {
+  display: none;
+}
+
+.ideastorm #faq {
+  border-bottom: 1px solid #B2B2B2;
+}
+
+.ideastorm .coordinator {
+  padding: 120px 10vw;
+  display: block;
+  border-bottom: 1px solid #B2B2B2;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .coordinator {
+    padding: 44px 32px;
+  }
+}
+
+.ideastorm .coordinator .head1 {
+  color: #1A4D66;
+  font-family: "ProximaNova-Bold";
+}
+
+.ideastorm .coordinator .coordinator_grid {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 20px;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  padding-top: 72px;
+  font-family: Proxima-nova-regular;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .coordinator .coordinator_grid {
+    display: block;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .coordinator .coordinator_grid .coordinator_unit {
+    margin: 16px 0;
+  }
+}
+
+.ideastorm .coordinator .coordinator_grid .coordinator_unit p {
+  line-height: 41px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .coordinator .coordinator_grid .coordinator_unit p {
+    line-height: 18px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+}
+
+.ideastorm .coordinator .coordinator_grid .coordinator_unit p:first-child {
+  font-family: ProximaNova-Bold;
+}
+
+.ideastorm .es {
+  padding: 64px;
+  background: #242626;
+}
+
+.ideastorm .es a,
+.ideastorm .es p {
+  font-size: 32px;
+  margin-top: 48px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #F39423;
+  text-decoration: none;
+  font-family: Proxima-nova-regular !important;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .es a,
+  .ideastorm .es p {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #F39423;
+  }
+}
+
+.ideastorm .timeline {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #1A4D66;
+}
+
+.ideastorm .ant-steps-item-finish > .ant-steps-item-content > .ant-steps-item-title {
+  color: white;
+}
+
+.ideastorm .erks {
+  padding: 120px 10vw;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .erks {
+    padding: 32px;
+  }
+}
+
+.ideastorm .erks .head1 {
+  color: #1A4D66;
+}
+
+.ideastorm .erks .perks_array {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  grid-row-gap: 40px;
+  grid-column-gap: 90px;
+  padding-top: 72px;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .erks .perks_array {
+    -ms-grid-columns: 90%;
+        grid-template-columns: 90%;
+  }
+}
+
+.ideastorm .erks .perks_array .perks_unit {
+  line-height: 41px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  font-family: "Proxima-nova-regular";
+  color: #4F4F4F;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .erks .perks_array .perks_unit {
+    line-height: 21px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #4F4F4F;
+  }
+}
+
+.ideastorm .erks .perks_array .perks_unit img {
+  display: block;
+  height: 20vh;
+}
+
+.ideastorm .erks .perks_array .perks_unit span {
+  display: block;
+  line-height: 44px;
+  font-size: 26px;
+  letter-spacing: 0.1em;
+  padding: 20px 0;
+  color: #F49D35;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .ideastorm .erks .perks_array .perks_unit span {
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    font-family: "ProximaNova-Semibold";
+    color: #F39423;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .ideastorm .header .head_array span {
+    font-size: 14.2px;
+  }
+  .idea {
+    background: url("./static/1366.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height: 65rem;
+    height: auto;
+    padding: 100px 10vw;
+  }
+  .ideastorm .idea p:nth-child(2) {
+    padding-bottom: 0;
+    font-size: 19.88px;
+  }
+  .ideastorm .idea p:nth-child(3) {
+    font-size: 19.88px;
+    font-family: "ProximaNova-Semibold";
+    color: #FFFFFF;
+  }
+  .ideastorm .idea p:first-child {
+    font-size: 34.08px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .ideastorm .idea p:nth-child(4) {
+    font-size: 22.07px;
+  }
+  .ideastorm .erks .perks_array .perks_unit span {
+    font-size: 19.88px;
+  }
+  .ideastorm .Rules ol li,
+  .ideastorm .eligiblity ol li {
+    font-size: 19.88px;
+  }
+  .ideastorm .register .register_now {
+    font-size: 34.08px;
+  }
+  .ideastorm .register p {
+    font-size: 19.88px;
+  }
+  .land_faq p {
+    font-size: 19.88px;
+  }
+  .faq_unit .question {
+    font-size: 22.72px;
+  }
+}
+/*# sourceMappingURL=ideastorm.css.map */

@@ -1,0 +1,316 @@
+@mixin desktop {
+    @media(max-width: 960px)
+    {
+        @content;
+    }
+    
+}
+
+@mixin hd {
+    @media(max-height:900px)
+    {
+        @content;
+    }
+    
+}
+
+@mixin fhd {
+    @media(max-height:1600px)
+    {
+        @content;
+    }
+    
+}
+#perksexcite{
+    padding: 6vh 4rem 6vh 4rem ;
+ 
+    font-size: 1.5rem;
+    line-height: normal;
+    text-align: justify;
+    letter-spacing: 0.06em;
+    display: block;
+    color: #1A4D66;
+ 
+
+    p{
+        margin-top:10vh;
+        line-height: normal;
+        font-size: 2rem;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: #1A4D66;
+        text-transform: capitalize;
+
+    }
+}
+
+.register_main{
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    @include desktop{
+     
+        display: block;
+    }
+
+
+
+
+    .register_text{
+
+  
+  
+
+
+        span{
+            display:block;
+        }
+
+        span:first-child{
+
+            margin-top:10vh;
+            line-height: normal;
+            font-size: 2rem;
+            text-align: center;
+            letter-spacing: 0.06em;
+            color: #1A4D66;
+
+            @include fhd{
+                font-size: 2rem;
+            }
+       
+
+
+            @include desktop{
+            
+              margin-top:1.875rem;
+              font-size: 1.5rem;
+            }
+
+          
+        }
+
+
+        span:nth-child(2){
+            margin: 6vh 4rem 6vh 4rem ;
+            line-height: 2.3125rem;
+            font-size: 1.75rem;
+            text-align: justify;
+            letter-spacing: 0.06em;
+            color: #1A4D66;
+
+            @include fhd{
+                font-size: 1.5rem;
+                line-height: normal;
+            }
+
+            @include desktop{
+     
+                margin:2rem 1.375rem;
+                font-size: 0.875rem;
+                line-height: 1.1875rem;
+            }
+
+              
+        }
+
+        span:nth-child(3){
+            line-height: normal;
+            font-size: 2.25rem;
+            text-align: center;
+            letter-spacing: 0.06em;
+             color: #1A4D66;
+
+             @include fhd{
+                font-size: 2rem;
+            }
+             @include desktop{
+                font-size: 1rem;
+            }
+         }
+         button{
+            border: 0.125rem solid #3A667B;
+            box-sizing: border-box;
+            padding: 1.125rem 1.875rem;
+            line-height: 1.5625rem;
+            font-size: 1.25rem;
+            text-align: center;
+            letter-spacing: 0.09em;
+            background: none;
+            color: #3A667B;
+            margin-top: 1.5rem;
+            cursor: pointer;
+       
+         }
+
+
+    
+
+
+    }
+
+    .register_form{
+
+        background: #1A4D66;
+        padding:36px 100px ;
+   
+
+        min-height: 40rem;
+
+        @include desktop{
+            
+            margin-top:60px;
+            padding:36px;
+          }
+
+
+    a , a:hover{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 1.25rem;
+        letter-spacing: 0.06em;
+        color: #FFFFFF;
+
+        @include desktop{
+            font-size: 12px;
+            letter-spacing: 0.06em;
+        }
+   
+
+
+    }
+    
+    button{
+        background: #F39423;
+        border-radius:  15rem;
+        border: none;
+        line-height: normal;
+        font-size: 1.25rem;
+        text-align: center;
+        letter-spacing: 0.06em;
+        display: block;
+        padding: 0.875rem 3.75rem;
+        margin-top: 5rem;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        
+    }
+      
+
+
+    
+
+        .register_login{
+            
+            padding: 1rem 1.25rem;
+            background: #265C77;
+           
+            border-top-right-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+            float:right;
+            color:white !important;
+            
+            @include desktop{
+                margin:auto;
+            }
+        }
+
+        .register_register{
+          
+            padding: 1rem 1.25rem;
+            background: #F39423;
+            border-top-left-radius: 3rem;
+            border-bottom-left-radius: 3rem;
+            float:right;
+            color:white !important;
+            
+            @include desktop{
+                margin:auto;
+            }
+        }
+
+      
+        form{
+           margin:6.25rem 0 0 0 ;
+
+
+           label{
+
+            display: block;
+            line-height: normal;
+            font-size: 1.75rem;
+            letter-spacing: 0.06em;
+            color: #FFFFFF;
+            margin-top:3.5rem;
+
+            @include fhd{
+                font-size: 1.5rem;
+            }
+            @include desktop{
+                font-size: 16px;
+                letter-spacing: 0.06em;
+            }
+            
+
+        }
+
+        input  {
+            border-bottom: 1px solid #FFFFFF;
+            border-top:none;
+            border-left:none;
+            border-right:none;
+            background: none;
+            width:100%;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            font-size: 1.25rem;
+            letter-spacing: 0.06em;
+            height: 2rem;
+            color: #FFFFFF;
+
+
+
+        }
+
+        select {
+             
+            width:100%;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            font-size: 1.25rem;
+            letter-spacing: 0.06em;
+            background: #FFFFFF;
+            padding:0.5rem;
+            height:3.3rem;
+            border-radius: 0.3rem;
+            color:rgb(0,0,0);
+
+            
+            border:none;
+            
+        }
+        option{
+           color:black;
+            
+        }
+
+    
+
+ 
+
+        }
+
+    
+        
+    }
+
+
+}

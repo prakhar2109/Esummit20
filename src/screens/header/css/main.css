@@ -1,0 +1,7 @@
+@import "1600px.css" screen and (min-width: 1600px);
+@import "1100px.css" screen and (min-width: 1200px) and (max-width: 1600px);
+@import "mobile.css" screen and (max-width: 1200px) ;
+
+
+
+ 

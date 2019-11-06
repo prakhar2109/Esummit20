@@ -1,0 +1,63 @@
+.coordinator {
+  padding: 120px 10vw;
+  display: block;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+@media (max-width: 1000px) {
+  .coordinator {
+    padding: 44px 32px;
+  }
+}
+
+.coordinator .head1 {
+  color: #1a4d66;
+  font-family: "ProximaNova-Bold";
+}
+
+.coordinator .coordinator_grid {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  -ms-grid-columns: 30% 30% 30%;
+  grid-template-columns: 30% 30% 30%;
+  padding-top: 72px;
+  font-family: Proxima-nova-regular;
+}
+
+@media (max-width: 1000px) {
+  .coordinator .coordinator_grid {
+    display: block;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .coordinator .coordinator_grid .coordinator_unit {
+    margin: 16px 0;
+  }
+}
+
+.coordinator .coordinator_grid .coordinator_unit p {
+  line-height: 41px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+@media (max-width: 1000px) {
+  .coordinator .coordinator_grid .coordinator_unit p {
+    line-height: 18px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+}
+
+.coordinator .coordinator_grid .coordinator_unit p:first-child {
+  font-family: ProximaNova-Bold;
+}
+/*# sourceMappingURL=contact.css.map */

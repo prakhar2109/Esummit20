@@ -1,0 +1,18 @@
+.esummit-login-common-parent-common{
+    background-color:  #0E425B;
+}
+.esummit-login-common-first-child{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
+.esummit-login-common-grand-child-first div{
+    background-image: url("../svg/esummit_logo.png");
+    width: 41.55%;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,109 @@
+@mixin mobile {
+    @media(max-width: 1000px) {
+        @content;
+    }
+
+}
+
+
+
+.sponsors {
+
+    padding: 80px 10vw;
+    background: #1A4D66;
+
+    @include mobile {
+        padding: 36px;
+        padding-top: 15vh;
+    }
+
+    .text {
+        line-height: 41px;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        padding-top: 45px;
+        color: #E5E5E5;
+
+        @include mobile {
+            line-height: 21px;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+
+            color: #D8D8D8;
+        }
+    }
+
+    .title_sponsor {
+        line-height: 41px;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        display: block;
+        color: #FFFFFF;
+
+    }
+
+    .title_sponsor_img {
+        margin-top: 100px;
+
+        @include mobile{
+            margin-top: 36px;
+        }
+    }
+
+
+
+    .sponsors_array {
+        display: grid;
+        grid-template-columns: repeat(5,17%);
+        grid-column-gap: 3vw;
+        padding-top: 100px;
+        grid-row-gap: 5vh;
+
+        @include mobile{
+            grid-template-columns:100%;
+            padding: 36px 20vw;
+            grid-row-gap: 1vh;
+          
+        }
+
+
+
+        .sonsors_logo {
+
+            height:auto;
+            width: 100%;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+  
+            
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            @include mobile{
+                height:40vh;
+                
+            }
+
+            img {
+                width: 100%;
+
+            }
+        }
+
+        .sponsors_name {
+            
+            padding-top: 16px;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            color: #FFFFFF;
+            text-align: center;
+
+            @include mobile{
+                padding-top: 8px;
+
+            }
+
+        }
+    }
+}

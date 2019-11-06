@@ -1,0 +1,250 @@
+.taskparent {
+    background: #F7F8F9;
+    height: fit-content;
+    width: 82%;
+    position: absolute;
+    top:0;
+    left: 18%;
+}
+
+.taskchildrow {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5vh;
+}
+
+
+.taskchild {
+
+    background: #FFFFFF;
+    height: fit-content;
+
+    width: 46.57%;
+    margin-left: 1.875%;
+    margin-bottom: 1.875%;
+    box-shadow: 1.5px 2px 15px rgba(51, 51, 51, 0.08);
+}
+
+.taskchild-body {
+
+    margin: 5%;
+}
+
+.taskchild-heading {
+
+    font-family: "Proxima-nova-regular";
+    font-size: 19.88px;
+    line-height: 32px;
+    color:#000000;
+    font-weight: 500;
+
+}
+
+.taskchild-description {
+
+    height: 10vh;
+    width: 100%;
+    overflow: hidden;
+    /* background: blue; */
+    font-family: "ProximaNova-Light";
+    margin-top: 4%;
+    opacity: 0.58;
+    color: #4F4F4F;
+    font-size: 14px;
+}
+
+.taskchild-fileupload {
+    cursor: pointer;
+    margin-top: 4%;
+    border-color: #B2B2B2;
+    border-style: dashed;
+    border-width: 2px;
+    height: 21vh;
+    background: url('../png/selectdown.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10vh;
+
+}
+
+.taskchildheaderrow {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.taskchild-line {
+    width: 200vh;
+    height: 0.4vh;
+    background-color: #E0E0E0;
+    /* position:absolute; */
+    margin-top: 4vh;
+    width: 50%;
+    margin-left: 1vh;
+}
+
+.taskchild-weeklyuploads {
+    margin-top: 2vh;
+    margin-left: 3vh;
+    margin-right: 2vh;
+    color: rgba(130, 130, 130, 0.93);
+    font-size: 20px;
+
+}
+
+.taskchild-dates {
+    margin-top: 2vh;
+    font-size: 20px;
+    color: rgba(130, 130, 130, 0.93);
+    margin-left: 3vh;
+}
+
+.taskchild-fileupload input {
+    cursor: pointer;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+
+}
+
+.Selectfilesvg {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    text-align: center;
+    align-self: center;
+}
+.taskchild-uploadedfiles{
+    height: 9.25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: rgba(255, 241, 224, 0.29);
+}
+.taskchild-uploadedfiles-p{
+    color:#B2B2B2;
+    font-family: "ProximaNova-Semibold";
+    font-size: 16px;
+}
+.taskchild-filesupload{
+    height: 9.25vh;
+    display: flex;
+    justify-content: center;
+    background: rgba(181, 255, 128, 0.31);
+}
+.taskchild-filesupload-p{
+    color:#70BF48;
+    font-family: "ProximaNova-Semibold";
+    font-size: 12px;
+}
+.taskName1 {
+    color: #4F4F4F;
+    font-family: "ProximaNova-Semibold";
+    font-size: 16px;
+    margin-bottom: 0;
+
+}
+.taskName2 {
+    color: #70BF48;
+    font-family: "ProximaNova-Semibold";
+    font-size: 12px;
+    margin-top: 1vh;
+}
+.tasktick{
+    background: url('../png/tick.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    margin-top: .8vh;
+}
+.tasktickparent{
+    display:flex;
+}
+@media (min-width: 1620px) and (max-width: 2560px){
+    .taskchild-heading{
+        font-size: 28px;
+
+    }
+    .taskchild-description{
+        font-size: 16px;
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    .taskchildrow {
+        flex-direction: column;
+        justify-items: center;
+
+    }
+    .taskName1{
+        font-size: 12px;
+    }
+    .taskchild-filesupload {
+        height: 8.25vh;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        background: rgba(181, 255, 128, 0.31);
+    }
+    .taskchild-description {
+        height: fit-content;
+    }
+    .taskchild-heading{
+        font-size: 18px;
+        line-height: 20px;
+
+    }
+    .taskparent {
+        color: black;
+    position: relative;
+    top: 0;
+    left:0;
+    width:100%;
+    min-height: 100vh;
+    padding-bottom: 2vh;
+    background-color: #F7F8F9;
+    }
+
+    .taskchild {
+
+        background: #FFFFFF;
+        height: auto;
+
+        align-self: center;
+        width: 80%;
+        margin-left: 1.875%;
+        margin-bottom: 5.875%;
+        box-shadow: 1.5px 2px 15px rgba(51, 51, 51, 0.08);
+    }
+
+    #leftPane {
+        display: none;
+    }
+
+
+    .taskchild-weeklyuploads {
+        font-size: 13px;
+
+    }
+
+    .taskchild-line {
+        width: 25%;
+    }
+
+    .taskchild-dates {
+        font-size: 13px;
+    }
+
+}
+

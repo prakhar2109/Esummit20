@@ -1,0 +1,53 @@
+@mixin mobile {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin fhd {
+  @media (min-width: 1000px) and (max-width: 1600px) {
+    @content;
+  }
+}
+
+.bullets {
+  padding: 72px 10vw;
+  border-bottom: 1px solid #b2b2b2;
+
+  .head1 {
+    color: #1a4d66;
+  }
+
+  ol {
+    line-height: 2.1875rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    padding-top: 4.5rem;
+    color: rgba(0, 0, 0, 0.87);
+    list-style-type: decimal;
+
+    @include fhd {
+      font-size: 1.25rem;
+      padding-top: 3.5rem;
+    }
+
+    @include mobile {
+      line-height: 21px;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      padding-top: 3vh;
+    }
+  }
+
+  li {
+    padding-top: 1rem;
+
+    @include fhd {
+      padding-top: 0.7rem;
+    }
+
+    @include mobile {
+      padding-top: 8px;
+    }
+  }
+}

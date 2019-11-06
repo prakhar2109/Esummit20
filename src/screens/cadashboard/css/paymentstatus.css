@@ -1,0 +1,301 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url('../../..//fonts/ProximaNova-Regular.otf') format('opentype')
+}
+.cainvite-linkparent-parent-parent{
+    font-family: Proxima Nova; 
+    /* padding-left: 0px !important; */
+    /* padding-right: 0px !important; */
+    /* padding-top: 0px !important; */
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+    border-radius: 8px;
+    height:auto;
+    width: 86.70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+    margin-left: 2.24%;
+    /* margin-left: auto; */
+    margin-right: auto;
+    
+}
+/* .cainvite-linkparent-parent{
+    /* height: 100%; */
+    /* width:100%; */
+
+#cainvite-linkparentstatic-subparent{
+    /* padding */
+    /* padding-left:1vw !important; */
+    /* padding-top: 1vh; */
+    background: #FFFFFF;
+    /* box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08); */
+    border-radius: 8px;
+    height:auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    display: flex;
+    padding-top: 1.2vh;
+    padding-left: 1vw;
+    padding-bottom: 1.2vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+} 
+.cainvite-linkparent-heading{
+    /* margin-left: 1.8vw; */
+    margin-top: 0.5vh;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.cainvite-paymentstatus-text2{
+    /* margin-left: 0.8vw; */
+    margin-top: 1.2vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Proxima Nova;
+
+}
+.cainvite-paymentstatus-text2-paymentdone{
+    font-family: Proxima Nova;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #4F4F4F;
+    margin-right:4vw;
+}
+.cainvite-paymentstatus-text2-paymentdone svg{
+    margin-right: 0.6vw;
+    height: 25px;
+    width: 20px;
+}
+.cainvite-paymentstatus-text2-paymentnotdone{
+    font-family: Proxima Nova;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #4F4F4F;
+    /* margin-right:20vw; */
+}
+.cainvite-paymentstatus-text2-paymentnotdone svg{
+    margin-right: 0.6vw;
+    height: 25px;
+    width: 20px;
+}
+.cainvite-paymentstatus-viewlist{
+    font-family: Proxima Nova;
+    line-height: normal;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #F39423;
+    margin-left: 20vw;
+    /* justify-content: flex-end; */
+    /* display: flex;
+     */
+     /* order: 2; */
+    /* align-content: flex-end; */
+    cursor: pointer;
+}
+.cainvite-paymentstatus-viewlist svg{
+    height: 1vh;
+}
+.capayment-status table,.capayment-status td,.capayment-status th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .capayment-status table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 3vh;
+    border-width: 0px;
+    margin-bottom: 2vh;
+    
+  }
+  
+  .capayment-status th{
+    padding-left: 14vw;
+    padding-top:1.5vh;
+    padding-bottom: 1.5vh;
+    border-left-width: 0px;
+    border-top-width: 0px;
+  }
+  .capayment-status th{
+      font-size: 18px;
+      font-weight: 500;
+  }
+  .capayment-status td{
+    font-family: Proxima Nova;
+    line-height: normal;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 13vw;
+    color: #000000;
+    padding-top: 1.5vh;
+    opacity: 0.58;
+    border-radius: 8px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+  }
+#cainvite-paymentnametable{
+    display: none;
+}
+
+    
+  
+    @media (max-width: 900px){
+        .cainvite-paymentstatus-viewlist{
+            font-family: Proxima Nova;
+            line-height: normal;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #F39423;
+            margin-top: 3vh;
+            margin-left: 20vw;
+            cursor: pointer;
+        }
+        .cainvite-linkparent-parent-parent{
+            font-family: Proxima Nova;   
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+            border-radius: 8px;
+            height:auto;
+            width: 86.70%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 4vh;
+            /* margin-left: 2.24%; */
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        .cainvite-paymentstatus-viewlist{
+            font-family: Proxima Nova;
+            line-height: normal;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #F39423;
+            margin-top: 3vh;
+            margin-left: 68vw;
+            cursor: pointer;
+        }
+        .cainvite-paymentstatus-viewlist{
+            font-family: Proxima Nova;
+            line-height: normal;
+            font-size: 15px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #F39423;
+            margin-left: 20vw;
+            /* justify-content: flex-end; */
+            /* display: flex;
+             */
+             /* order: 2; */
+            /* align-content: flex-end; */
+            cursor: pointer;
+            position: absolute;
+            left: 50vw;
+            top: 40vh;
+        }
+        
+        .cainvite-paymentstatus-text2-paymentdone{
+            font-family: Proxima Nova;
+            line-height: normal;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #4F4F4F;
+            margin-right:4vw;
+        }
+        .cainvite-paymentstatus-text2-paymentnotdone{
+            font-family: Proxima Nova;
+            line-height: normal;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #4F4F4F;
+            /* margin-right:20vw; */
+        }
+        .capayment-status table,.capayment-status td,.capayment-status th {  
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+          
+          .capayment-status table {
+            border-collapse: collapse;
+            width: 100.5%;
+            margin-top: 3vh;
+            border-width: 0px;
+            margin-bottom: 2vh;
+            
+          }
+          
+          .capayment-status th{
+            padding-left: 14vw;
+            padding-top:1.5vh;
+            padding-bottom: 1.5vh;
+            border-left-width: 0px;
+            border-top-width: 0px;
+          }
+          .capayment-status th{
+              font-size: 14px;
+              font-weight: 500;
+          }
+          .capayment-status td{
+            font-family: Proxima Nova;
+            line-height: normal;
+            font-size: 13px;
+            text-align: left;
+            padding-left: 13vw;
+            color: #000000;
+            padding-top: 1.5vh;
+            opacity: 0.58;
+            border-radius: 8px;
+            border-left-width: 0px;
+            border-bottom-width: 0px;
+            border-top-width: 0px;
+          }
+          .cainvite-paymentstatus-text2-paymentdone svg{
+            margin-right: 0.6vw;
+            height: 2.3vh;
+            width: 20px;
+        }
+        .cainvite-paymentstatus-text2-paymentnotdone svg{
+            margin-right: 0.6vw;
+            height: 2.3vh;
+            width: 20px;
+        }
+        .cainvite-paymentstatus-text2-paymentdone{
+            font-family: Proxima Nova;
+            line-height: normal;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #4F4F4F;
+            margin-right:4vw;
+            margin-bottom: 1vh;
+        }
+        .cainvite-linkparent-heading{
+            /* margin-left: 1.8vw; */
+            font-size: 16px;
+            margin-top: 0.5vh;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        
+    }
+    
+
+    
+    
+    

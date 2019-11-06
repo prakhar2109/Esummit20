@@ -1,0 +1,382 @@
+/* .ecell-special-navbar-parent {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000000;
+    background: white;
+}
+.background-effect{
+    background-color: #707070;
+}
+.box-shadow{
+    -webkit-box-shadow: 0px 9px 15px -10px rgba(155,155,155,1);
+    -moz-box-shadow: 0px 9px 15px -10px rgba(155,155,155,1);
+    box-shadow: 0px 9px 15px -10px rgba(155,155,155,1);
+}
+.ecell-special-navbar-logo {    
+    width: 20%;
+    padding: 5px 10px 0px 60px;
+}
+.ecell-special-navbar-logo img {
+    width: auto;
+    height: 78px;
+    cursor: pointer; 
+}
+.ecell-special-navbar-ctos {
+    width: 80%; 
+} */
+
+.Eventsheader {
+
+    background: #0D1313;
+    height: 68px;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.producta_logo {
+    height: 100%;
+    width: 131.89px;
+    background: url("../logo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.ecell-special-navbar-toggle {
+    text-align: right;
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+}
+
+.ecell-special-navbar-toggle i {
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    padding: 20px 30px 10px 0;
+}
+
+.beta-special-navbar-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.ecell-special-navbar-navtoggle {
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+.ecell-special-navbar-navtoggle-hide {
+    display: none;
+}
+
+.ecell-special-navbar-navtoggle span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    transition: .5s;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .20);
+}
+
+.ecell-special-navbar-dropdown-content {
+    display: none;
+    padding: 0px 10px 10px 15px;
+    margin-top: 31px;
+    margin-left: -13px;
+    position: absolute;
+    font-weight: 500;
+    min-width: 100px;
+    z-index: 1;
+    background: white;
+    border: 1px solid rgb(151, 151, 151, 0.4);
+}
+
+.ecell-special-navbar-dropdown-content a {
+    float: none;
+    color: #1389d5;
+    padding: 10px 0px 0px 0px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    text-align: left;
+}
+
+.ecell-special-navbar-int-ctos ul .ecell-special-navbar-dropdown-content a {
+    color: #616568;
+    font-weight: 500;
+}
+
+.ecell-special-navbar-int-ctos ul .ecell-special-navbar-dropdown-content a:hover {
+    color: #1389d5;
+}
+
+.ecell-special-navbar-int-ctos ul .ecell-special-navbar-dropdown-content a:active {
+    color: #1389d5;
+}
+
+.ecell-special-navbar-ctos-dropdown:hover .ecell-special-navbar-dropdown-content {
+    transition: ease-in-out 0.1s;
+    display: block;
+}
+
+.ecell-special-navbar-ctos-dropdown:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #1389d5;
+}
+
+.ecell-special-navbar-ctos-dropdown:hover .ecell-ctos-special-navbar-option {
+    color: #1389d5;
+}
+
+.ecell-special-navbar-ctos-nodropdown:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #1389d5;
+}
+
+.ecell-special-navbar-ctos-nodropdown:hover .ecell-special-navbar-ctos-nodropdown a {
+    color: #1389d5;
+}
+
+.ecell-special-navbar-int-ctos {
+    width: 100%;
+    height: 100%;
+}
+
+.ecell-special-navbar-int-ctos ul {
+    margin: 0px;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: end;
+    justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 40px 0px 0 0;
+    float: right;
+    height: calc(100%);
+    width: 100%;
+}
+
+.ecell-special-navbar-int-ctos ul li {
+    height: 100%;
+    padding: 0px 13.25px 0px 13.25px;
+}
+
+.ecell-special-navbar-int-ctos ul li a {
+    text-decoration: none;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    color: #616568;
+    transition: all 0.3s ease-in-out;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.ecell-special-navbar-int-ctos ul li .events-offline-special-navbar-option::after,
+.ecell-special-navbar-int-ctos ul li .ecell-ctos-special-navbar-option::after {
+    margin-top: 0px;
+    height: 0px;
+}
+
+.ecell-special-navbar-int-ctos ul li .linkZonals::after,
+.ecell-special-navbar-int-ctos ul li .linkCaportal::after,
+.ecell-special-navbar-int-ctos ul li .linkEvents::after,
+.ecell-special-navbar-int-ctos ul li .linkTeam::after,
+.ecell-special-navbar-int-ctos ul li .linkSponsors::after,
+.ecell-special-navbar-int-ctos ul li .linkFaq::after,
+.ecell-special-navbar-int-ctos ul li .linkEventson::after,
+.ecell-special-navbar-int-ctos ul li .linkEventsoff::after {
+    content: "";
+    display: block;
+    margin-top: 1vh;
+    width: 90%;
+    height: 2px;
+    background: #1389d5;
+}
+
+.events-delhi-special-navbar-new {
+    background: red;
+    top: 30px;
+    position: absolute;
+    margin-left: -5px;
+}
+
+.events-special-navbar-new {
+    margin-top: -5px;
+    position: relative;
+}
+
+@media (max-width: 1068px) {
+    .ecell-special-navbar-toggle {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        transition: all 0.4s;
+    }
+
+    .ecell-special-navbar-mobilelist {
+        width: 0px;
+        height: 0px;
+        z-index: 1000;
+        background-color: grey;
+        transition: height 0.4s ease-in-out;
+    }
+
+    .ecell-special-navbar-mobilelist-active {
+        width: 100%;
+        height: 100vh;
+        transition: height 0.4s ease-in-out;
+    }
+
+    #ecell-special-navbar-options-hide {
+        display: none;
+        transition: all 2s ease-in-out;
+    }
+
+    .ecell-special-navbar-ctos {
+        width: 70%;
+    }
+
+    .esummit-navbarevent-cto-active {
+        color: #F39423;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size:16px;
+        padding: 10px 20px 10px 56px;
+        background: rgba(243, 148, 35, 0.09);
+    }
+
+    .esummit-navbarevent-cto-inactive {
+        color:#FFFFFF;
+        font-family: Montserrat;
+        font-size:16px;
+        padding: 10px 20px 10px 56px;
+    }
+
+    .new-navbarevent-i {
+        padding: 16px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        position: fixed;
+        top: 9px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    .new-navbarevent-i>span {
+        user-select: none;
+        transition: all 0.6s;
+        border-bottom: 2.5px solid #FFFFFF;
+        display: block;
+        width: 26px;
+        height: 7px;
+        z-index: 300;
+    }
+
+    .span-cross>span:nth-child(1) {
+        transition: all 0.6s;
+        transform: rotate(45deg) translate(4px, 0px);
+    }
+
+    .span-cross>span:nth-child(2) {
+        transition: all 0.6s;
+        transform: rotate(-45deg) translate(2px, -3px);
+    }
+
+    .span-cross>span:nth-child(3) {
+        display: none;
+    }
+
+    .ecell-mobile-navbarevent-active {
+        width: 100vw;
+        height: 100vh;
+        top: 67px;
+        right: 0px;
+        background: #0D1313;
+        position: fixed;
+        transition: height 0.4s;
+    }
+
+    .ecell-mobile-navbareevent-active a {
+        text-decoration: none;
+    }
+
+    .ecell-mobile-navbarevent-active a div {
+        padding: 0;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.22;
+        letter-spacing: normal;
+        color: white;
+
+        white-space: nowrap;
+    }
+
+    /* .ecell-mobile-menuback{
+        background: #def4fd;
+    } */
+    .ecell-mobile-navbar-inactive {
+        width: 100vw;
+        height: 0vh;
+        top: 70px;
+        right: 0px;
+        background: white;
+        position: fixed;
+        transition: height 0.4s;
+    }
+
+    .ecell-mobile-navbar-inactive a {
+        text-decoration: none;
+        outline: none;
+        display: none;
+    }
+
+    .ecell-mobile-navbar-inactive a div {
+        font-family: Montserrat;
+        display: none;
+        font-size: 18px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.22;
+        letter-spacing: normal;
+        color: #7a7d80;
+        padding: 20px;
+        white-space: nowrap;
+    }
+
+    .navbar-show {
+        visibility: visible;
+        transition: visibility 0.2s;
+    }
+
+    .navbar-hide {
+        visibility: hidden;
+        transition: visibility 0.2s;
+    }
+}

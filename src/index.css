@@ -1,0 +1,48 @@
+ 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900');
+@font-face {
+        font-family: "Proxima-nova-regular";
+        
+        src:url('./fonts/ProximaNova-Regular.otf')  format('truetype');
+    
+        }
+@font-face {
+        font-family: "ProximaNova-Light";
+        
+        src:url('./fonts/ProximaNova-Light.otf')  format('truetype');
+    
+        }
+
+@font-face {
+        font-family: "Proxima-nova-regular";
+        
+        src:url('./fonts/ProximaNova-Regular.otf')  format('truetype');
+    
+        }
+@font-face {
+        font-family: "ProximaNova-Bold";
+        
+        src:url('./fonts/ProximaNova-Bold.otf')  format('truetype');
+    
+        }
+
+@font-face {
+        font-family: "ProximaNova-Semibold";
+        
+        src:url('./fonts/ProximaNova-Semibold.otf')  format('truetype');
+    
+        }
+body ,html{
+    padding: 0;
+    margin:0;
+
+  
+}
+.active{
+    color:#F39423  !important;
+}
+ input , td,tr,div,span,label{
+        font-family: Proxima-nova-regular,sans-serif;
+ }
+
+ p{}

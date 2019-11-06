@@ -1,0 +1,79 @@
+.esummit-common-parent-common{
+    background-color:  #0E425B;
+}
+.esummit-common-first-child{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.esummit-common-grand-child-first{
+    top: 0px;
+    left: 10px;
+    position: absolute;
+}
+.esummit-common-grand-child-first div{
+    background-image: url("../svg/esummit_logo.png");
+    width: 41.55%;
+    background-size: cover;
+    background-position: center;
+}
+.esummit-common-grand-child-second{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 36.19%;
+}
+.esummit-common-grand-child-second img{
+    height: 105px;
+    width: 30.5%;
+}
+.esummit-common-second-child{
+    width: 51%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 15px;
+
+}
+.esummit-common-dotted-line{
+    border-top:2px dashed #ffffff;
+    height: 1px;
+    width: 11.5%;
+}
+.esummit-common-second-child span{
+    font-family: Montserrat;
+    line-height: normal;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    width: fit-content;
+}
+@media (max-width:768px){
+    .esummit-common-grand-child-first{
+        position: relative;
+        display: flex;
+        left: 0px;
+    }
+    .esummit-common-first-child{
+        justify-content: space-around;
+        padding-bottom: 0px;
+    }
+    .esummit-common-second-child{
+        width: 100%;
+        margin-top: 85px;
+    }
+    .esummit-common-grand-child-first img{
+        height: 60px;
+    }
+    .esummit-common-second-child{
+        position: absolute;
+        width: 100%;
+    }
+    
+}

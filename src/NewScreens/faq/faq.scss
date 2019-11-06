@@ -1,0 +1,105 @@
+@mixin mobile {
+    @media(max-width: 1000px) {
+        @content;
+    }
+
+}
+
+
+.faq {
+    padding: 80px 10vw;
+
+    @include mobile {
+        padding: 36px;
+    }
+
+    .head1 {
+        color: #1A4D66 !important;
+    }
+
+    .text {
+        line-height: 41px;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        color: #000000;
+        padding-top: 44px;
+
+        @include mobile {
+            line-height: 21px;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+
+            color: rgba(0, 0, 0, 0.87);
+
+        }
+    }
+
+
+
+    .ant-tabs-nav .ant-tabs-tab-active {
+        color: #F39423;
+    }
+
+    .ant-tabs-ink-bar {
+        background-color: #F39423;
+    }
+
+    .ant-tabs-nav .ant-tabs-tab {
+
+        line-height: 29px;
+        font-size: 18px;
+
+        letter-spacing: 0.08em;
+
+
+        @include mobile {
+            line-height: 15px;
+            font-size: 14px;
+            
+            letter-spacing: 0.04em;
+
+        }
+    }
+}
+
+.cannot_find {
+
+    background: #F49D35;
+    padding: 32px;
+
+    p {
+        line-height: 41px;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.1em;
+
+        color: #FFFFFF;
+
+        @include mobile {
+            line-height: 15px;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.04em;
+
+        }
+    }
+
+    p:first-child {
+        line-height: normal;
+        font-size: 32px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        margin-bottom: 32px;
+
+        @include mobile {
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 0.02em;
+
+            color: #FFFFFF;
+
+        }
+    }
+
+
+}

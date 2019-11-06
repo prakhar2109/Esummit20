@@ -1,0 +1,73 @@
+.task {
+  box-shadow: 1.5px 2px 15px rgba(51, 51, 51, 0.08);
+  min-width: 38vh;
+  height: 40vh;
+}
+#tasks > div {
+  background-color: white;
+
+  width: 20%;
+
+  margin: 3%;
+  margin-right: 7%;
+  padding: 1.7%;
+  padding-left: 2%;
+  padding-top: 1%;
+  border-color: rgba(51, 51, 51, 0.08);
+}
+#task-file {
+  height: 24vh;
+  width: 100%;
+  opacity: 0;
+  position: relative;
+  top: -14vh;
+}
+.taskItem {
+  font-size: 24px;
+
+  color: #3a667b;
+}
+
+.taskDescription {
+  padding-top: 2%;
+  padding-bottom: 3%;
+  font-size: 20px;
+
+  color: #4f4f4f;
+
+  opacity: 0.58;
+}
+.fileUpload {
+  font-size: 80%;
+  font-weight: 200;
+}
+.chooseFile {
+  font-size: 20px;
+
+  color: #4f4f4f;
+}
+.taskFile {
+  height: 24vh;
+  margin-top: 5vh;
+  border-style: dashed;
+  border-color: #b2b2b2;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5%;
+  color: #3a667b;
+  font-size: 2vh;
+}
+.svgArrow {
+  margin-left: 4%;
+}
+.svg {
+  margin-top: 6%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.dropZone {
+  height: 15%;
+}

@@ -1,0 +1,26 @@
+.esummit-resent-password-second-heading{
+
+}
+.esummit-register-form-reset-button-cancel{
+    background-color:white;
+    border-radius: 2px;
+    padding: 8px 35px;
+    cursor: pointer;
+    border: 2px solid #F39423;
+    color :#F39423;
+    font-weight: 600;
+    outline: none;
+}
+.esummit-register-form-reset-button-try-different-other{
+    background-color:#F39423;
+    border-radius: 2px;
+    padding: 8px 35px;
+    cursor: pointer;
+    border: 2px solid #F39423;
+    color :white;
+    font-weight: 600;
+    outline: none;
+}
+.esummit-register-form-confirm-message-handle{
+    color:green;
+}

@@ -1,0 +1,796 @@
+@mixin mobile {
+    @media(max-width: 1000px) {
+        @content;
+    }
+
+}
+
+@mixin fhd {
+    @media (min-width:1000px) and (max-width: 1600px) {
+        @content;
+    }
+
+}
+.esummit-landing-view-more-button{
+    padding: 10px;
+}
+a:hover {
+    text-decoration: none !important;
+}
+.land_screen1 {
+    
+    width: 100vw;
+    padding: 3rem  0;
+    min-height:91vh;
+    height: auto;
+ 
+    background:rgb(12,17,19);
+    padding: 5rem;
+    display: grid;
+    align-items: end;
+    justify-items: center;
+
+    @include mobile{
+        padding: 0;
+    }
+
+    @include mobile {
+        height: 80vh;
+        width: 100%;
+    }
+    button {
+        border: 2.5px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background: none;
+        line-height: 1.5625rem;
+        font-size: 1.25rem;
+        text-align: center;
+        letter-spacing: 0.09em;
+        padding: 20px 24px ;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        @include mobile {
+            font-size: 16px;
+            padding: 16px;
+            margin-bottom: 4vh;
+        }
+
+        @include fhd{
+            font-size: 16px;
+            
+        }
+
+    }
+
+     .PcVid{
+
+        video{
+            height:50vh !important;
+        }
+
+        @include mobile{
+            display: none;
+        }
+
+    }
+
+    .MobVid{
+        display: none;
+        padding-bottom: 5vh;
+
+         img{
+        
+             width: inherit;
+         }
+        
+       
+        
+
+        @include mobile{
+            display:block;
+            width: 100%;
+        }
+    }
+
+  
+
+}
+
+.land_screen2 {
+    background: url("../static/1.jpg");
+    padding: 7.6% 13.6vw 40px 13.6vw;
+ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+
+    @include mobile {
+
+        padding: 64px 32px 32px 32px;
+        padding-bottom: 36px;
+    }
+
+
+    .p {
+        line-height: 128%;
+        font-size: 24px;
+        letter-spacing: 0.04em;
+        padding: 44px 0 6% 0;
+        
+        color: #FEFFFF;
+
+
+        @include mobile {
+            line-height: 20px;
+            font-size: 16px;
+            padding: 25px 0 6% 0;
+            letter-spacing: 0.02em;
+
+        }
+
+   @media (max-width: 1400px) and (min-width : 1000px) {
+       font-size: 21px; 
+       
+   }
+    }
+}
+
+.land_events,
+.land_speakers,
+.land_sponsors {
+
+    background: #1A4D66;
+    ;
+
+    .text {
+        line-height:124%;
+        font-size: 24px;
+        letter-spacing: 0.02em;
+        padding: 2% 0 0 0;
+        color: #D8D8D8;
+
+        @include mobile {
+            line-height: 20px;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            color: #D8D8D8;
+            padding: 25px 0 0 0;
+
+        }
+
+        @include fhd{
+                font-size: 22px;
+        }
+
+    }
+
+    .all_events_button {
+
+        border: 0.125rem solid white;
+        background: none;
+        padding: 20px;
+       
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+         
+        color: #FFFFFF;
+
+        @include mobile {
+            margin-bottom: 0;
+            line-height: 15px;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.06em;
+            padding: 1rem;
+        }
+
+         
+    }
+
+    .slick-list {
+        // margin: 1.25rem;
+    }
+
+
+
+
+    .speaker_slidder {
+        padding-top: 6.75rem;
+        padding-bottom: 5rem;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .img_holder {
+        height: 11.6vw !important;
+        width: 11.6vw;
+        margin-left: auto;
+        margin-right: auto;
+      
+        
+         
+
+        @include mobile{
+            height:300px !important;
+            width:100%;
+        }
+
+
+        img{
+     
+            width:100%;
+            height: 100%;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 5%;
+    
+        }
+
+
+    }
+
+    .name {
+        
+        font-size: 26px;
+        letter-spacing: 0.02em;
+        padding-top: 1rem;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        text-align: center;
+
+
+        color: #138AD6;
+
+        @include fhd{
+            font-size: 18px
+        }
+
+        @include mobile {
+            line-height: 35px;
+            font-size: 24px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            color: #138AD6;
+
+        }
+
+    }
+
+    .designation {
+ 
+        font-size: 20px;
+        letter-spacing: 0.02em;
+        text-align: center;
+
+        color: #FFFFFF;
+
+        @include mobile {
+            line-height: 24px;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            color: #FFFFFF;
+            padding-bottom: 32px;
+        }
+
+        @include fhd{
+            font-size: 14px;
+        }
+    }
+
+}
+
+
+.speaker_mobile{
+    display: none;
+
+    @include mobile{
+        display: block;
+        padding-top: 25px;
+    }
+}
+.land_speakers,
+.land_sponsors {
+    padding: 7.6% 13.6vw 0 13.6vw;
+    background: #0E425B;
+
+    @include mobile {
+        padding: 32px;
+        padding-bottom: 125px;
+    }
+
+    @include fhd{
+        padding: 80px 13.6vw 0 13.6vw ;
+    }
+}
+
+.land_sponsors{
+    padding-bottom: 7.6%;
+    @include mobile {
+        padding-bottom: 125px;
+    }
+ 
+}
+.land_events {
+    padding: 7.6% 13.6vw 7.6% 13.6vw;
+
+    @include mobile {
+        padding: 36px;
+    }
+
+    .land_events_array2 {
+        padding: 6% 0 0 0;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 1vw;
+        grid-row-gap: 1vw;
+
+        @media (min-width: 1000px) and (max-width: 1300px) {
+
+            grid-template-columns: 50% 50%;
+        }
+
+        @include mobile {
+            grid-template-columns: 100%;
+            grid-row-gap: 5vw;
+            justify-items: center;
+             
+            
+        }
+        #events_production7{
+            background: url("../static/con.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        #events_production1{
+
+            background: url("../static/Mask\ Group\ \(2\)\ \(1\).png");
+        }
+        #events_production2{
+
+            background: url("../static/Mask\ Group\ \(2\).png");
+        }
+        #events_production3{
+
+            background: url("../static/Group\ 55.png");
+        }
+        #events_production4{
+
+            background: url("../static/Group\ 27.1.png");
+        }
+        #events_production5{
+
+            background: url("../static/Group\ 54.png");
+        }
+
+        #events_production6{
+
+            background: url("../static/Group\ 29.1.png");
+        }
+
+
+        .events_production {
+            background: url("../static/6.png");
+            padding: 60px 0;
+            height: 37vh;
+            display: grid;
+            border : 2px solid white;
+           
+
+            @include mobile {
+                height: 300px;
+                width: 300px;
+            }
+
+            p {
+                text-align: center;
+                color: #FFFFFF;
+
+            }
+
+            span {
+                align-self: start;
+            }
+
+            .t1 {
+                font-size: 26.4px;
+                letter-spacing: 0.1em;
+                font-weight: bold;
+
+                @include mobile {
+                    line-height: normal;
+                    font-size: 16px;
+                    letter-spacing: 0.1em;
+                }
+
+                @include fhd{
+                    font-size: 22.4px;
+                }
+
+            }
+
+            .t2 {
+
+                font-size: 1.5rem;
+                letter-spacing: 0.1em;
+                font-weight: 100;
+
+                @include mobile {
+                    line-height: 18px;
+                    font-size: 12px;
+                    text-align: center;
+                    letter-spacing: 0.1em;
+
+                    color: #FFFFFF;
+
+                }
+
+                @include fhd{
+                    font-size: 1.25rem;
+                }
+
+
+            }
+
+            .t3 {
+
+                font-size: 1.4rem;
+                text-align: center;
+                letter-spacing: 0.09em;
+                align-self: end;
+                font-weight: bold;
+
+                @include mobile {
+                    line-height: 15px;
+                    font-size: 12px;
+                    text-align: center;
+                    letter-spacing: 0.09em;
+
+                    color: #FFFFFF;
+                }
+
+                @include fhd{
+                    font-size: 1.125rem;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+.land_events_array {
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    background: #1A4D66;
+
+    padding: 0 8.5vw;
+    margin-top:-3%;
+
+
+
+    @include mobile {
+        grid-template-columns: 50% 50%;
+        padding: 0;
+    }
+
+    .conclave {
+        background: url("../static/events1.png");
+    }
+
+    .workshop {
+        background: url("../static/events2.png");
+    }
+
+    .leadership {
+        background: url("../static/events3.png");
+    }
+
+    .competition {
+        background: url("../static/events4.png");
+    }
+
+
+
+    .conclave,
+    .leadership,
+    .workshop,
+    .competition {
+
+        padding: 0 50px;
+        color: white;
+        padding-bottom: 200px;
+        border : 2px solid #c7d2ce;
+        height:90vh;
+        display: grid;
+        justify-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+
+
+        @include mobile {
+            padding-top: 64px;
+            padding-bottom: 64px;
+
+            padding-left:0;
+            padding-right: 0;
+            height:50vh;
+        }
+
+        @include fhd{
+            padding-bottom: 100px;
+        }
+
+        .title{
+            font-size: 2rem;
+            letter-spacing: 0.06em;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-top: 12.5rem;
+            text-align: center;
+            text-decoration: none ;
+
+            @include mobile {
+
+                font-size: 16px;
+                text-align: center;
+                letter-spacing: 0.06em;
+
+                color: #FFFFFF;
+                margin-top: 16px;
+
+            }
+
+            @include fhd{
+                font-size: 1.75rem;
+                margin-top:6rem;
+            }
+        }
+
+        .tagline {
+            line-height: 41px;
+            font-size: 22px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            color: #FFFFFF;
+            margin-top: 6.125rem;
+
+            @include mobile {
+                line-height: 18px;
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                margin-top: 16px;
+                color: #FFFFFF;
+            }
+
+            @include fhd{
+                font-size: 20px;
+                margin-top:4rem;
+            }
+
+        }
+
+        .viewmore {
+            line-height: 30px;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 0.09em;
+            color: #FFFFFF;
+            font-weight: bold ; 
+            padding-top: 16px;
+            text-decoration: none;
+
+            @include mobile {
+                line-height: 15px;
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 0.09em;
+                margin-top: 16px;
+                color: #FFFFFF;
+
+            }
+
+            @include fhd{
+                font-size: 1.25rem;
+            }
+
+        }
+
+      
+
+        span:nth-child(2)
+        {
+            align-self: end;
+        }
+    }
+}
+
+
+
+ 
+
+.land_testinomial {
+    background: #F39423;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 7.6% 13.6vw;
+
+    @include mobile {
+        padding: 128px 0;
+
+    }
+
+    div {
+        background: #242626;
+        border-radius: 16px;
+        color: white;
+        padding: 0 110px 110px 110px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        @include mobile {
+            padding: 0 36px 36px 36px;
+            border-radius: 0;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-top: -10%;
+            
+            @include mobile {
+                margin-top: -20%;
+                height:120px;
+            }
+        }
+
+        .testimonial {
+            line-height: 140%;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            margin-top:6%;
+            color: #FFFFFF;
+
+
+
+            @include mobile {
+ 
+                font-size: 16px;
+                text-align: center;
+                letter-spacing: 0.04em;
+                margin-top: 48px;
+            }
+
+            @include fhd{
+                font-size: 1.5rem;
+            }
+
+        }
+
+        p{padding: 0;}
+
+        .name {
+         
+            font-size: 2rem;
+            letter-spacing: 0.06em;
+            color: #FFFFFF;
+            margin-top:1%;
+            margin-bottom: 0;
+
+            @include mobile {
+                line-height: 26px;
+                font-size: 18px;
+                letter-spacing: 0.06em;
+            }
+
+            @include fhd{
+                font-size: 1.75rem;
+            }
+        }
+
+        .designation {
+            line-height: 2.1875rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.06em;
+            margin-top:0;
+            color: #E5E5E5;
+
+            @include mobile {
+                line-height: 21px;
+                font-size: 14px;
+                letter-spacing: 0.06em;
+                color: #E5E5E5;
+            }
+
+            @include fhd{
+                font-size: 1.125rem;
+            }
+
+        }
+    }
+}
+
+
+
+.land_faq {
+
+    padding: 7.6% 13.6vw;
+    z-index: 2;
+    background: white;
+
+    @include mobile {
+        padding: 32px;
+        padding-top: 50px;
+        padding-bottom: 125px;
+    }
+
+    .head1 {
+        color: #1A4D66 !important;
+        font-family: "ProximaNova-Bold", sans-serif;
+    }
+
+    @include fhd{
+        padding: 100px 13.6vw;
+    }
+
+    .esummit-landing-faq-land-para {
+        line-height:35px;
+        font-size: 1.75rem;
+        letter-spacing: 0.04em;
+        margin-bottom: 4.5rem;
+        color: #000000;
+        font-family: "Proxima-nova-regular", sans-serif;
+
+        @include mobile {
+            line-height: 20px;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            // padding-top: 10px;
+            position: relative;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        @include fhd{
+            font-size: 1.5rem;
+            padding-top: 2rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+
+
+
+
+    .view_all {
+        line-height: 1.25rem;
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing: 0.09em;
+        padding: 15px 20px;
+        color: #F39423;
+        border: 3px solid #F39423;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background: none;
+        margin-top: 80px;
+        cursor: pointer;
+    }
+}
+
+
+ 

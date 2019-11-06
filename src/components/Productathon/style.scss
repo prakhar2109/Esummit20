@@ -1,0 +1,175 @@
+@mixin mobile {
+    @media(max-width: 1000px) {
+        @content;
+    }
+
+}
+
+
+
+.esummit-productathon-parent-back-image{
+    background-image: url("./product.png") !important;
+    padding: 10vh 10vw !important;
+ 
+ 
+
+
+}
+.esummit-productathon-partners-parent{
+    padding: 73px 10vw;
+ 
+    
+}
+.esummit-productathon-partners-body{
+   
+ 
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    padding: 20px;
+    margin-top: 40px;
+
+    @include mobile{
+        columns: 2;
+        grid-template-columns: repeat(1,auto);
+        grid-row-gap: 5vh;
+    }
+}
+.esummit-productathon-partners-body-image-parent{
+    height: auto;
+    width: 200px;
+}
+.esummit-productathon-partners-body-image-parent img{
+    height: 100%;
+    width: 100%;
+}
+.esummit-productathon-register-now-button-parent{
+    display: flex;
+    justify-content: space-around;
+}
+.esummit-productathon-register-now-button-parent button{
+    background:none;
+    line-height: normal;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: white;
+    display: inline;
+    border: 1.5px solid white;
+    border-radius: 2px;
+    padding: 10px 18px;
+    margin-right : 11px;
+    cursor: pointer;
+}
+
+.esummit-productathon-partners-parent .head1{
+    color: #1A4D66;
+}
+.esummit-productathon-para{
+    color: #FFFFFF;
+    font-size: 22.07px;
+    letter-spacing: 0.04em !important;
+    line-height: 128% !important;
+    text-align: center !important;
+    font-family: "Proxima-nova-regular";
+    margin-bottom: 30px !important;
+
+    @include mobile{
+        font-size: 16px !important;
+    }
+}
+.esummit-productathon-cash-para{
+    font-size: 19.88px;
+    font-family: "ProximaNova-Semibold";
+    color: #FFFFFF;
+    padding: 0px 10px 30px 10px;
+    margin-top: 30px;
+}
+.esummit-productathon-heading-para{
+    font-size: 34.08px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-family: "ProximaNova-Semibold" !important;
+}
+.idea {
+    background: url("../../NewScreens/IdeaStorm/static/1366.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height: 65rem;
+    height: auto;
+    padding: 100px 10vw;
+  }
+  .ideastorm .idea p:nth-child(2) {
+    padding-bottom: 0;
+    font-size: 19.88px;
+  }
+  .ideastorm .idea p:nth-child(3) {
+    font-size: 19.88px;
+    font-family: "ProximaNova-Semibold";
+    color: #FFFFFF;
+  }
+  .ideastorm .idea p:first-child {
+    font-size: 34.08px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .ideastorm .idea p:nth-child(4) {
+    font-size: 22.07px;
+  }
+  .facebook-developer-circle{
+      width: 230px !important;
+  }
+.esummit-productathon-ol li{
+    line-height: 2.5em !important;
+    letter-spacing: 0.05em !important;
+
+    @include mobile{
+        line-height: 1.5rem !important;
+    }
+}
+.esummit-productathon-logo-css{
+    height: 80px !important;
+    margin-top: 5px;
+}
+.esummit-productathon-apply-now{
+    font-family: "ProximaNova-Semibold" !important;
+    text-decoration: none;
+    margin-right: 0px !important;
+font-size: 20px !important;
+border:1.5px solid white;
+color:white !important;
+padding: 20px;
+
+
+@include mobile{
+    font-size: 14px !important  ;
+    padding: 10px;
+}
+  
+}
+.esummit-productathon-organizer-name{
+    font-family: "ProximaNova-Semibold" !important;
+}
+
+
+.register_prod{
+    background: #F49D35;
+    padding:10vh 0;
+
+    @include mobile{
+        padding:4vh 0;
+
+    }
+    .apply_now{
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: white;
+        margin-bottom: 5vh !important;
+        
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+}
