@@ -1,22 +1,26 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-parent {
+  height: 100vh;
+  width: 100vw;
+  background: #0c0d14;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #09d3ac;
+.app-parent img {
+  height: 100vh;
+  margin: auto;
+}
+.register-now-button {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  position: absolute;
+  color: white;
+  top: 74vh;
+  font-family: Poppins;
+}
+@media only screen and (max-width: 768px) {
+  .register-now-button {
+    top: 80vh;
+  }
 }

@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+// import logo from './logo.svg'
+import theme from './assets/theme.svg'
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <React.Fragment>
+      <div className="app-parent">
+        <img src={theme} alt="theme" />
         <a
-          className="App-link"
-          href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdaJH9lppWdVlgjXDiw60KvkT1kQeUcn-4s-UHDL_BirextvQ/viewform?usp=sf_link"
+          className="register-now-button"
         >
-          Learn React
+          Register Now
         </a>
-      </header>
-    </div>
-  );
+      </div>
+    </React.Fragment>
+  )
 }
 
-export default App;
+export default App
