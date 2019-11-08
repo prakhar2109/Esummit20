@@ -4,6 +4,7 @@
   background: #0c0d14;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .app-parent img {
   height: 100vh;
@@ -22,5 +23,9 @@
 @media only screen and (max-width: 768px) {
   .register-now-button {
     top: 80vh;
+  }
+  .app-parent img {
+    height: 51vh;
+    margin: auto;
   }
 }
