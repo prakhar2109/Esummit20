@@ -14,7 +14,6 @@
     "babel-preset-react-app": "^9.0.2",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
-    "css-loader": "2.1.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.1.0",
@@ -42,6 +41,7 @@
     "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
+    "prettier": "^1.19.0",
     "react": "^16.11.0",
     "react-app-polyfill": "^1.0.4",
     "react-dev-utils": "^9.1.0",
@@ -50,7 +50,6 @@
     "resolve-url-loader": "3.1.0",
     "sass-loader": "7.2.0",
     "semver": "6.3.0",
-    "style-loader": "1.0.0",
     "terser-webpack-plugin": "1.4.1",
     "ts-pnp": "1.1.4",
     "url-loader": "2.1.0",
@@ -59,10 +58,23 @@
     "webpack-manifest-plugin": "2.1.1",
     "workbox-webpack-plugin": "4.3.1"
   },
+  "devDependencies": {
+    "@babel/runtime": "^7.7.2",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "dotenv": "^8.0.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "style-loader": "^1.0.0"
+  },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "lint": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,json}\""
   },
   "eslintConfig": {
     "extends": "react-app"
