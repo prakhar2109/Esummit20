@@ -424,6 +424,52 @@ class Personaldetail extends Component {
                       ) : null}
                     </span>
                   </div>
+                  <label htmlFor="inputCountry">Country</label>
+                <div className="personaldetails_input_feild">
+                  <input
+                    id="inputCountry"
+                    type="text"
+                    name="country"
+                    placeholder="Enter country name"
+                    value={country}
+                    autoCorrect="off"
+                    autoComplete="off"
+                    autoCapitalize="off"
+                    onChange={e => {
+                      this.handleChange(e)
+                      this.country_validate()
+                    }}
+                    required
+                  />
+                  <span className="personaldetails_input_error">
+                    {country_error_bool ? (
+                      <div className="error_message">{country_error}</div>
+                    ) : null}
+                  </span>
+                </div>
+                <label htmlFor="inputState">State</label>
+                <div className="personaldetails_input_feild">
+                  <input
+                    id="inputState"
+                    type="text"
+                    name="state"
+                    placeholder="Enter state name"
+                    value={state}
+                    autoCorrect="off"
+                    autoComplete="off"
+                    autoCapitalize="off"
+                    onChange={e => {
+                      this.handleChange(e)
+                      this.state_validate()
+                    }}
+                    required
+                  />
+                  <span className="personaldetails_input_error">
+                    {state_error_bool ? (
+                      <div className="error_message">{state_error}</div>
+                    ) : null}
+                  </span>
+                </div>
                   <label htmlFor="inputTshirt">T-Shirt Size</label>
                   <div className="personaldetails_input_feild">
                     <input
