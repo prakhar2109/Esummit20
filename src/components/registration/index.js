@@ -20,7 +20,8 @@ class Registration extends Component {
       college: '',
       tshirt_size: '',
       success: false,
-      password: 'cada@1234'
+      password: 'cada@1234',
+      error: false
     }
   }
   handleBack = data => {
@@ -40,10 +41,15 @@ class Registration extends Component {
     FetchApi('POST', '/v1/api/user/signup/', this.state, null)
       .then(res => {
         if (res.data) {
-          this.setState({ success: true })
+          this.setState({ success: true, activeStep: 0 })
         }
       })
-      .catch(error => {})
+      .catch(error => {
+        this.setState({
+          activeStep: 0,
+          error: true
+        })
+      })
   }
   responseFacebook = response => {
     this.setState({
@@ -71,7 +77,14 @@ class Registration extends Component {
     }
   }
   render() {
-    const { active_step, name, email, profile_type, success } = this.state
+    const {
+      active_step,
+      name,
+      email,
+      profile_type,
+      success,
+      error
+    } = this.state
     return (
       <React.Fragment>
         {active_step === 1 ? (
@@ -90,6 +103,7 @@ class Registration extends Component {
           />
         ) : null}
         {success ? <h1>Successfully Submitted</h1> : null}
+        {error ? <h1>Something went wrong!</h1> : null}
       </React.Fragment>
     )
   }
