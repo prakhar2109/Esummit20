@@ -19,7 +19,8 @@ class Registration extends Component {
       profile_type: 'CA',
       college: '',
       tshirt_size: '',
-      success: false
+      success: false,
+      password: 'cada@1234'
     }
   }
   handleBack = data => {
