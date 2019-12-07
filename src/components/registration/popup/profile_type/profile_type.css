@@ -1,0 +1,156 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .profiletype_outer {
+  }
+  .navbar_content {
+    font-size: 20px;
+  }
+  .profiletype_main {
+    height: 250px !important;
+
+    width: 380px !important;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: 'Poppins';
+  }
+  .profiletype_list_selection {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .profiletype_container {
+    width: 360px;
+  }
+  .profiletype_extra_info {
+    margin-left: 40px !important;
+  }
+  .profiletype_button {
+    position: unset !important;
+    margin: 20px 0 0 0 !important;
+  }
+}
+.profiletype_outer {
+  width: 100%;
+  height: 80vh;
+  background: rgba(1, 12, 15, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profiletype_main {
+  width: 556px;
+  height: 284px;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: 'Poppins';
+}
+
+.profiletype_heading {
+  background-color: #09c9c3;
+  height: 54px;
+  text-align: center;
+  border-radius: 4px 4px 0px 0px;
+  padding-top: 12px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.profiletype_list_selection {
+  font-family: 'Poppins';
+  padding-top: 34px;
+  padding-left: 100px;
+}
+.profiletype_container {
+  font-family: 'Poppins';
+  display: flex;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: rgba(1, 12, 15, 0.75);
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+.profiletype_button {
+  width: 93px;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  margin-top: 26px;
+  margin-left: 335px;
+}
+.profiletype_button > div {
+  color: #ffffff !important;
+}
+/* Hide the browser's default radio button */
+.profiletype_container input {
+  position: relative;
+  opacity: 0;
+  flex-basis: 20px;
+  cursor: pointer;
+  /* padding-left: 0 px; */
+}
+
+/* Create a custom radio button */
+.profiletype_checkmark {
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* On mouse-over, add a grey background color */
+.profiletype_container:hover .profiletype_checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.profiletype_container input:checked ~ .profiletype_checkmark {
+  border: 1px solid #41494b;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.profiletype_checkmark:after {
+  content: '';
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.profiletype_container input:checked ~ .profiletype_checkmark:after {
+  display: block;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 4px;
+  position: relative;
+}
+
+/* Style the indicator (dot/circle) */
+.profiletype_container .profiletype_checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #41494b;
+}
+.profiletype_extra_info {
+  display: none;
+  position: relative;
+  margin-left: 80px;
+  color: #009994;
+  font-size: 12px;
+}
