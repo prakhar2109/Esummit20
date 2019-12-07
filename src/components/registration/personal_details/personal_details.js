@@ -134,7 +134,7 @@ class Personaldetail extends Component {
   }
   phonevalidate = () => {
     setTimeout(
-      function() {
+      function () {
         if (this.state.phone.length < 10 || this.state.phone.length > 10) {
           this.setState({
             phone_error_bool: true,
@@ -152,7 +152,7 @@ class Personaldetail extends Component {
   }
   name_validate = () => {
     setTimeout(
-      function() {
+      function () {
         if (this.state.name.length < 3) {
           this.setState({
             name_error_bool: true,
@@ -170,7 +170,7 @@ class Personaldetail extends Component {
   }
   email_validate = () => {
     setTimeout(
-      function() {
+      function () {
         const re = /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/
         if (!re.test(this.state.email)) {
           this.setState({
@@ -189,7 +189,7 @@ class Personaldetail extends Component {
   }
   tshirt_validate = () => {
     setTimeout(
-      function() {
+      function () {
         if (this.state.tshirt_size !== '') {
           this.setState({
             tshirt_error_bool: false,
@@ -207,7 +207,7 @@ class Personaldetail extends Component {
   }
   college_validate = () => {
     setTimeout(
-      function() {
+      function () {
         if (this.state.college !== '') {
           this.setState({
             college_error_bool: false,
@@ -225,7 +225,7 @@ class Personaldetail extends Component {
   }
   city_validate = () => {
     setTimeout(
-      function() {
+      function () {
         if (this.state.city !== '') {
           this.setState({
             city_error_bool: false,
@@ -243,7 +243,7 @@ class Personaldetail extends Component {
   }
   country_validate = () => {
     setTimeout(
-      function() {
+      function () {
         if (this.state.country !== '') {
           this.setState({
             country_error_bool: false,
@@ -261,7 +261,7 @@ class Personaldetail extends Component {
   }
   state_validate = () => {
     setTimeout(
-      function() {
+      function () {
         if (this.state.state !== '') {
           this.setState({
             state_error_bool: false,
@@ -449,25 +449,23 @@ class Personaldetail extends Component {
                   </div>
                 </form>
               </div>
-
-              <Button
-                name="Back"
-                style={{
-                  marginLeft: '48px',
-                  marginTop: '3px',
-                  border: '2px solid #09C9C3',
-                  backgroundColor: '#fff',
-                  fontWeight: 'bold',
-                  color: 'rgba(9, 201, 195, 0.87)'
-                }}
-                handleClick={this.handleBack}
-              />
-              <div className="personal-submitButton">
+              <div className="personal-backButton">
+                <Button
+                  name="Back"
+                  style={{
+                    // marginLeft: '48px',
+                    // marginTop: '3px',
+                    border: '2px solid #09C9C3',
+                    backgroundColor: '#fff',
+                    fontWeight: 'bold',
+                    color: 'rgba(9, 201, 195, 0.87)'
+                  }}
+                  handleClick={this.handleBack}
+                />
                 <Button
                   name="Submit"
                   style={{
-                    marginLeft: '350px',
-
+                    // marginLeft: '350px',
                     fontWeight: 'bold',
                     borderRadius: '3px'
                   }}
