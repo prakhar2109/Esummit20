@@ -49,6 +49,7 @@ class Registration extends Component {
           activeStep: 0,
           error: true
         })
+        console.log(error)
       })
   }
   responseFacebook = response => {
@@ -103,6 +104,7 @@ class Registration extends Component {
           />
         ) : null}
         {success ? this.props.history.push('/register-success') : null}
+        {error ? this.props.history.push('/register-failure') : null}
       </React.Fragment>
     )
   }

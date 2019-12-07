@@ -5,7 +5,7 @@ input {
   width: 100%;
   border-bottom: 2px solid #ccc;
   margin-top: 10px !important;
-  margin-left: 48px !important;
+  margin-left: 48px;
 }
 .error_message {
   margin-left: 48px;
@@ -197,6 +197,6 @@ label {
     left: 230px;
   }
   .personal-submitButton {
-    margin-left: -120px !important;
+    margin-left: -150px !important;
   }
 }
