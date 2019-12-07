@@ -20,7 +20,7 @@ class index extends Component {
             </Link>
           </li>
           <li className="navbar-items">
-            <Link href="/register" className="navbar-links">
+            <Link to="/register" className="navbar-links">
               <button className="navbar-register-button">Register</button>
             </Link>
           </li>

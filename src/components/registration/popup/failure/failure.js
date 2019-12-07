@@ -29,7 +29,8 @@ class Failuremessage extends Component {
             }}
           ></div>
           <div className="success_content">
-            Your Registration could not be completed .Please Register Again.
+            Your Registration could not be completed. <br />
+            Please Register Again.
           </div>
           <div className="closeButton">
             <Button

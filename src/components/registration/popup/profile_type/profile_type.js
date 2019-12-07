@@ -37,11 +37,11 @@ class Profiletype extends Component {
   render() {
     return (
       <div className="profiletype_outer">
-        <Navbar
+        {/* <Navbar
           style={{
             opacity: '0.5'
           }}
-        />
+        /> */}
         <div className="profiletype_main" id="profiletype_main_opacity">
           <div className="profiletype_heading">Profile Type</div>
           <div className="profiletype_list_selection">

@@ -19,7 +19,7 @@ class Footer extends Component {
         <div className="footer-section-contact-container">
           <div className="footer-section-contact-heading">E-Mail ID</div>
           <div className="footer-section-contact-subheading">
-            esummit18@gmail.com{' '}
+            esummit@iitr.ac.in{' '}
           </div>
         </div>
         <div className="footer-section-contact-container">

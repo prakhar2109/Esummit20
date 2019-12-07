@@ -13,13 +13,13 @@ class CAIntro extends Component {
         />
         <div className="ca-section-intro-paragraph">
           The CAP (Campus Ambassador Programme) is a pinion initiative of
-          E-Summit IIT Roorkee, 2018 organized by the Entrepreneurship Cell, IIT
-          Roorkee and aims to amplify our purview to newer horizons. We aspire
-          to increase our outreach to as many students as possible throughout
-          the country and spread the spirit of entrepreneurship to similar
-          extents. This year E-Summit IIT Roorkee brings with it loads and loads
-          of colossal opportunities for the participating students and exciting
-          perks for the Campus Ambassadors.
+          E-Summit IIT Roorkee, 2020 organized by the E-Cell, IIT Roorkee and
+          aims to amplify our purview to newer horizons. We aspire to increase
+          our outreach to as many students as possible throughout the country
+          and spread the spirit of entrepreneurship to similar extents. This
+          year E-Summit IIT Roorkee brings with it loads and loads of colossal
+          opportunities for the participating students and exciting perks for
+          the Campus Ambassadors.
         </div>
         <Link to="/ca-registration" className="ca-section-intro-link">
           <button className="ca-section-intro-button">Register</button>

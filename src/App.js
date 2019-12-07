@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import Loading from './assets/loading.gif'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import theme from './assets/theme.png'
-import Success from './components/registration/success/success.js.js'
+import Success from './components/registration/popup/success/success.js'
 import Loadable from 'react-loadable'
 import Registration from './components/registration/index.js'
 import Personaldetail from './components/registration/personal_details/personal_details.js'
@@ -16,7 +16,7 @@ import Home from './components/home/Home.js'
 import Footer from './components/footer'
 import CampusAmbassador from './components/ca/CampusAmbassador'
 import './styles/main.scss'
-import Failuremessage from './components/registration/popup/failure/failure'
+import Failuremessage from './components/registration/popup/failure/failure.js'
 
 const register = Loadable({
   loader: () => import('./components/registration/index.js'),
