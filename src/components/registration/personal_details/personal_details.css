@@ -4,8 +4,8 @@ input {
   border: none;
   width: 100%;
   border-bottom: 2px solid #ccc;
-  margin-top: 10px;
-  margin-left: 48px;
+  margin-top: 10px !important;
+  margin-left: 48px !important;
 }
 .error_message {
   margin-left: 48px;
@@ -150,4 +150,53 @@ label {
   line-height: 24px; /* identical to box height */
   letter-spacing: 0.02em;
   color: rgba(1, 12, 15, 0.5);
+}
+/* .personalDetail-container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+} */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .personaldetails {
+    width: 380px !important;
+    height: 680px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navbar-container {
+    width: 380px !important;
+  }
+  .personaldetails_form {
+    width: 380px !important;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .personaldetails_title {
+    width: 380px !important;
+  }
+  input {
+    width: 330px !important;
+  }
+  .p_signup_innercircle {
+    left: 40px;
+  }
+  .p_signup {
+    left: 32px;
+  }
+  .p_between_line {
+    left: 70px;
+    width: 200px;
+  }
+  .p_personaldetail_circle {
+    left: 270px;
+  }
+  .p_personaldetail {
+    left: 230px;
+  }
+  .personal-submitButton {
+    margin-left: -120px !important;
+  }
 }

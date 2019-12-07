@@ -88,7 +88,6 @@ class Facebooklogin extends Component {
     return (
       <React.Fragment>
         <div className="account_setup">
-          <Navbar />
           <div className="signup-container">
             <div className="signupcircle_marker">
               <div className="signup_circle">

@@ -53,3 +53,22 @@
   color: white;
   font-family: '';
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .registration_success {
+    width: 380px !important;
+  }
+  .success_main {
+    margin-left: 1px;
+    width: 380px;
+  }
+  .success_content {
+    margin-left: 5px;
+    width: 370px;
+  }
+  .success_close {
+    margin-left: 300px;
+  }
+  .closeButton {
+    margin-left: -290px;
+  }
+}

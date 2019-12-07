@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './personal_details.css'
 import Navbar from '../navbar/navbar.js'
+import Index from '../../navbar/index.js'
 import Button from '../popup/button/register_button.js'
 class Personaldetail extends Component {
   constructor(props) {
@@ -307,239 +308,173 @@ class Personaldetail extends Component {
     return (
       <React.Fragment>
         <div className="personaldetails">
-          <Navbar />
-          <div className="p_signupcircle_marker">
-            <div className="p_signup_circle">
-              <div className="p_signup_innercircle">
-                <div>1</div>
+          <div className="personalDetail-container">
+            <div className="p_signupcircle_marker">
+              <div className="p_signup_circle">
+                <div className="p_signup_innercircle">
+                  <div>1</div>
+                </div>
+                <p className="p_signup">Sign Up</p>
               </div>
-              <p className="p_signup">Sign Up</p>
-            </div>
 
-            <div className="p_between_line"></div>
-            <div className="p_personaldetail_circle">
-              <div className="p_personaldetail_innercircle">2</div>
+              <div className="p_between_line"></div>
+              <div className="p_personaldetail_circle">
+                <div className="p_personaldetail_innercircle">2</div>
+              </div>
+              <div className="p_personaldetail">
+                <p>Personal Details</p>
+              </div>
             </div>
-            <div className="p_personaldetail">
-              <p>Personal Details</p>
-            </div>
-          </div>
-          <div className="personaldetails_form">
-            <div className="personaldetails_title">
-              <p>Personal Details</p>
-            </div>
-            <div className="personaldetails_data">
-              <form method="POST">
-                <label htmlFor="inputName">Name</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputName"
-                    type="text"
-                    name="name"
-                    placeholder="Enter Name"
-                    className="inputname"
-                    value={name}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="on"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.name_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {name_error_bool ? (
-                      <div className="error_message">{name_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputEmail">E-Mail</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputEmail"
-                    type="email"
-                    name="email"
-                    placeholder="Enter E-Mail"
-                    value={email}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.email_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {email_error_bool ? (
-                      <div className="error_message">{email_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputPhone">Contact No.</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputPhone"
-                    type="number"
-                    name="phone"
-                    placeholder="Enter Mobile Number"
-                    value={phone}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.phonevalidate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {phone_error_bool ? (
-                      <div className="error_message">{phone_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputCollege">College</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputCollege"
-                    type="text"
-                    name="college"
-                    placeholder="Enter College name"
-                    value={college}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.college_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {college_error_bool ? (
-                      <div className="error_message">{college_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputCountry">Country</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputCountry"
-                    type="text"
-                    name="country"
-                    placeholder="Enter country name"
-                    value={country}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.country_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {country_error_bool ? (
-                      <div className="error_message">{country_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputState">State</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputState"
-                    type="text"
-                    name="state"
-                    placeholder="Enter state name"
-                    value={state}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.state_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {state_error_bool ? (
-                      <div className="error_message">{state_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputCity">City</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputCity"
-                    type="text"
-                    name="city"
-                    placeholder="Enter city name"
-                    value={city}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.city_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {city_error_bool ? (
-                      <div className="error_message">{city_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputTshirt">T-Shirt Size</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputTshirt"
-                    type="text"
-                    name="tshirt_size"
-                    placeholder="Enter T-Shirt Size"
-                    value={tshirt_size}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.tshirt_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {tshirt_error_bool ? (
-                      <div className="error_message">{tshirt_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-              </form>
-            </div>
+            <div className="personaldetails_form">
+              <div className="personaldetails_title">
+                <p>Personal Details</p>
+              </div>
+              <div className="personaldetails_data">
+                <form method="POST">
+                  <label htmlFor="inputName">Name</label>
+                  <div className="personaldetails_input_feild">
+                    <input
+                      id="inputName"
+                      type="text"
+                      name="name"
+                      placeholder="Enter Name"
+                      className="inputname"
+                      value={name}
+                      autoCorrect="off"
+                      autoComplete="off"
+                      autoCapitalize="on"
+                      onChange={e => {
+                        this.handleChange(e)
+                        this.name_validate()
+                      }}
+                      required
+                    />
+                    <span className="personaldetails_input_error">
+                      {name_error_bool ? (
+                        <div className="error_message">{name_error}</div>
+                      ) : null}
+                    </span>
+                  </div>
+                  <label htmlFor="inputEmail">E-Mail</label>
+                  <div className="personaldetails_input_feild">
+                    <input
+                      id="inputEmail"
+                      type="email"
+                      name="email"
+                      placeholder="Enter E-Mail"
+                      value={email}
+                      autoCorrect="off"
+                      autoComplete="off"
+                      autoCapitalize="off"
+                      onChange={e => {
+                        this.handleChange(e)
+                        this.email_validate()
+                      }}
+                      required
+                    />
+                    <span className="personaldetails_input_error">
+                      {email_error_bool ? (
+                        <div className="error_message">{email_error}</div>
+                      ) : null}
+                    </span>
+                  </div>
+                  <label htmlFor="inputPhone">Contact No.</label>
+                  <div className="personaldetails_input_feild">
+                    <input
+                      id="inputPhone"
+                      type="number"
+                      name="contactno"
+                      placeholder="Enter Mobile Number"
+                      value={phone}
+                      autoCorrect="off"
+                      autoComplete="off"
+                      autoCapitalize="off"
+                      onChange={e => {
+                        this.handleChange(e)
+                        this.phonevalidate()
+                      }}
+                      required
+                    />
+                    <span className="personaldetails_input_error">
+                      {phone_error_bool ? (
+                        <div className="error_message">{phone_error}</div>
+                      ) : null}
+                    </span>
+                  </div>
+                  <label htmlFor="inputCollege">College</label>
+                  <div className="personaldetails_input_feild">
+                    <input
+                      id="inputCollege"
+                      type="text"
+                      name="college"
+                      placeholder="Select College"
+                      value={college}
+                      autoCorrect="off"
+                      autoComplete="off"
+                      autoCapitalize="off"
+                      onChange={e => {
+                        this.handleChange(e)
+                        this.college_validate()
+                      }}
+                      required
+                    />
+                    <span className="personaldetails_input_error">
+                      {college_error_bool ? (
+                        <div className="error_message">{college_error}</div>
+                      ) : null}
+                    </span>
+                  </div>
+                  <label htmlFor="inputTshirt">T-Shirt Size</label>
+                  <div className="personaldetails_input_feild">
+                    <input
+                      id="inputTshirt"
+                      type="text"
+                      name="tshirt_size"
+                      placeholder="Enter T-Shirt Size"
+                      value={tshirt_size}
+                      autoCorrect="off"
+                      autoComplete="off"
+                      autoCapitalize="off"
+                      onChange={e => {
+                        this.handleChange(e)
+                        this.tshirt_validate()
+                      }}
+                      required
+                    />
+                    <span className="personaldetails_input_error">
+                      {tshirt_error_bool ? (
+                        <div className="error_message">{tshirt_error}</div>
+                      ) : null}
+                    </span>
+                  </div>
+                </form>
+              </div>
 
-            <Button
-              name="BACK"
-              style={{
-                marginLeft: '48px',
-                border: '2px solid #09C9C3',
-                backgroundColor: '#fff',
-                fontWeight: 'bold',
-                color: 'rgba(9, 201, 195, 0.87)'
-              }}
-              handleClick={this.handleBack}
-            />
-
-            <Button
-              name="Submit"
-              style={{
-                marginLeft: '350px',
-                marginTop: '-40.5px',
-                fontWeight: 'bold',
-                borderRadius: '3px'
-              }}
-              handleClick={this.handleSubmit}
-            />
+              <Button
+                name="BACK"
+                style={{
+                  marginLeft: '48px',
+                  marginTop: '44px',
+                  border: '2px solid #09C9C3',
+                  backgroundColor: '#fff',
+                  fontWeight: 'bold',
+                  color: 'rgba(9, 201, 195, 0.87)'
+                }}
+                handleClick={this.handleBack}
+              />
+              <div className="personal-submitButton">
+                <Button
+                  name="Submit"
+                  style={{
+                    marginLeft: '350px',
+                    marginTop: '-40.5px',
+                    fontWeight: 'bold',
+                    borderRadius: '3px'
+                  }}
+                  handleClick={this.handleSubmit}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </React.Fragment>
