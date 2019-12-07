@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import caHeading from '../../../assets/ca.svg'
+import { Link } from 'react-router-dom'
 class CAIntro extends Component {
   render() {
     return (
@@ -20,9 +21,9 @@ class CAIntro extends Component {
           of colossal opportunities for the participating students and exciting
           perks for the Campus Ambassadors.
         </div>
-        <a href="/register" className="ca-section-intro-link">
+        <Link to="/ca-registration" className="ca-section-intro-link">
           <button className="ca-section-intro-button">Register</button>
-        </a>
+        </Link>
       </div>
     )
   }

@@ -46,9 +46,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-
         <BrowserRouter>
+          <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route
@@ -64,8 +63,8 @@ class App extends Component {
           </Switch>
 
           {/* <Facebooklogin /> */}
+          <Footer />
         </BrowserRouter>
-        <Footer />
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FacebookLogin from './account_setup/accountsetup.js'
 import Personaldetails from './personal_details/personal_details.js'
-
+import PropTypes from 'prop-types'
 import FetchApi from '../../utils/fetchAPI'
 class Registration extends Component {
   constructor(props) {
@@ -102,10 +102,12 @@ class Registration extends Component {
             email={email}
           />
         ) : null}
-        {success ? <h1>Successfully Submitted</h1> : null}
-        {error ? <h1>Something went wrong!</h1> : null}
+        {success ? this.props.history.push('/register-success') : null}
       </React.Fragment>
     )
   }
 }
 export default Registration
+Registration.propTypes = {
+  history: PropTypes.func
+}

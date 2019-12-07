@@ -9,7 +9,7 @@ class CAAbout extends Component {
           <img src={roleHeading} className="section-image-heading" alt="" />
           <div className="ca-section-paragraph">
             Being a Campus Ambassador, you have to help the organizing team of
-            E-Summit 2019 to reach out to the students and organizations
+            E-Summit 2020 to reach out to the students and organizations
             associated with your college. You are supposed to promote our events
             through online and offline means. For more details regarding the
             tasks and awards, register as a CA and get access to the illustrious
@@ -21,7 +21,7 @@ class CAAbout extends Component {
           <div className="ca-section-paragraph">
             1. For every successful payment from the participants who have
             registered from the referral link, the CA would be awarded Rs.150
-            off on the registration plus accommodation fees for E - Summit 2019.
+            off on the registration plus accommodation fees for E - Summit 2020.
           </div>
           <div className="ca-section-paragraph">
             2. An official certificate from E - Summit IIT Roorkee will be

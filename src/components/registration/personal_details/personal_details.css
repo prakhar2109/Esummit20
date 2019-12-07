@@ -112,19 +112,15 @@ input {
   position: absolute;
   width: 556px;
   left: 445px;
+  height: 725px;
   top: 254px;
   background: #ffffff;
   border-radius: 4px;
 }
-@media screen and (min-width: 1400px) {
-  .personaldetails_form {
-    position: absolute;
-    width: 556px;
-    left: calc(50% - 278px);
-    top: 254px;
-    background: #ffffff;
-    border-radius: 4px;
-  }
+.personal-submitButton {
+  position: absolute;
+  padding: 0px;
+  top: 627px;
 }
 .personaldetails_data {
   padding: 1rem;

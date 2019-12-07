@@ -87,7 +87,7 @@ class PreviousSpeakers extends Component {
                 Gulzar Azad
               </div>
               <div className="previous-speakers-section-card-subheading">
-                Country Head, Google India
+                Country Head Of Connectivity, Google India
               </div>
             </div>
           </div>
