@@ -44,7 +44,7 @@ class Footer extends Component {
               />
             </a>
             <a
-              href="https://www.facebook.com/ecelliitr"
+              href="https://www.instagram.com/ecelliitr/"
               target="_blank"
               className="footer-section-contact-link"
               rel="noopener noreferrer"
@@ -57,7 +57,7 @@ class Footer extends Component {
             </a>
             <a
               className="footer-section-contact-link"
-              href="https://www.facebook.com/ecelliitr"
+              href="https://www.youtube.com/channel/UCf1py66Ov1easJAswwjxQZw"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -69,7 +69,7 @@ class Footer extends Component {
             </a>
             <a
               className="footer-section-contact-link"
-              href="https://www.facebook.com/ecelliitr"
+              href="https://twitter.com/EDC_IITRoorkee"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -81,7 +81,7 @@ class Footer extends Component {
             </a>
             <a
               className="footer-section-contact-link"
-              href="https://www.facebook.com/ecelliitr"
+              href="https://www.linkedin.com/company/esummit"
               target="_blank"
               rel="noopener noreferrer"
             >

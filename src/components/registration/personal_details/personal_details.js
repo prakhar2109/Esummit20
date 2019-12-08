@@ -15,7 +15,7 @@ class Personaldetail extends Component {
       profile_type: 'CA',
       college: '',
       tshirt_size: '',
-      city: '',
+      city: 'B',
       state: '',
       country: '',
       accomodation_needed: '',
@@ -56,32 +56,51 @@ class Personaldetail extends Component {
   }
   handleSubmit = () => {
     if (this.state.name_error !== '' && !this.state.name_error_bool) {
-      return this.name_validate
-    }
-    if (this.state.email_error !== '' && !this.state.email_error_bool) {
-      return this.email_validate
-    }
-    if (this.state.phone_error !== '' && !this.state.phone_error_bool) {
-      return this.phonevalidate
-    }
-    if (this.state.college_error !== '' && !this.state.college_error_bool) {
-      return this.college_validate
+      return this.emptyValidate("name")
     }
 
-    if (this.state.country_error !== '' && !this.state.country_error_bool) {
-      return this.country_validate
+    if (!this.state.email) {
+      return this.emptyValidate("email")
     }
+    else if (this.state.email && this.state.email_error)
+      return this.email_validate()
+    // else if(this.state.email!== '' && this.state.email_error_bool)
+    // return this.email_validate()
 
-    if (this.state.city_error !== '' && !this.state.city_error_bool) {
-      return this.city_validate
-    }
 
-    if (this.state.state_error !== '' && !this.state.state_error_bool) {
-      return this.state_validate
-    }
-    if (this.state.tshirt_error !== '' && !this.state.tshirt_error_bool) {
-      return this.tshirt_validate
-    }
+    // if ((this.state.email_error !== '' && !this.state.email_error_bool)||this.state.email=='') {
+    //   return this.emptyValidate("email ")
+    // }
+
+    if (!this.state.phone)
+      return this.emptyValidate("Phone number ")
+    else if (this.state.phone && this.state.phone_error_bool)
+      return this.phonevalidate();
+
+    if (this.state.college == '')
+      return this.emptyValidate("college")
+    else if (this.state.college !== '' && this.state.college_error_bool)
+      return this.college_validate()
+
+    if (this.state.country == '')
+      return this.emptyValidate("country")
+    else if (this.state.country !== '' && this.state.country_error_bool)
+      return this.country_validate()
+
+    // if (this.state.city==''||this.state.city_error_bool) {
+    //   return this.emptyValidate("city ")
+    // }
+
+    if (this.state.state == '')
+      return this.emptyValidate("state")
+    else if (this.state.state !== '' && this.state.state_error_bool)
+      return this.state_validate()
+    if (!this.state.tshirt_size)
+      return this.emptyValidate("tshirt")
+    else if (this.state.tshirt_size !== '' && this.state.tshirt_error_bool)
+      return this.tshirt_validate()
+
+
     const {
       name,
       email,
@@ -132,6 +151,47 @@ class Personaldetail extends Component {
     }
     this.props.handleBack(data)
   }
+  emptyValidate = (data) => {
+    setTimeout(
+      function () {
+        switch (data) {
+          case "email": this.setState({
+            email_error_bool: true,
+            email_error: "Email cannot be empty"
+          })
+            break;
+          case "Phone number ": this.setState({
+            phone_error_bool: true,
+            phone_error: "Phone number cannot be empty"
+          })
+            break;
+          case "college": this.setState({
+            college_error_bool: true,
+            college_error: 'College cannot be empty'
+          })
+            break;
+          case "tshirt": this.setState({
+            tshirt_error_bool: true,
+            tshirt_error: 'Tshirt Size cannot be empty'
+          })
+            break;
+          case "country": this.setState({
+            country_error_bool: true,
+            country_error: 'Country Name cannot be empty'
+          })
+            break;
+          case "state": this.setState({
+            state_error_bool: true,
+            state_error: 'State Name cannot be empty'
+          })
+            break;
+        }
+      }.bind(this),
+      1000
+    )
+  }
+
+
   phonevalidate = () => {
     setTimeout(
       function () {
@@ -171,15 +231,15 @@ class Personaldetail extends Component {
   email_validate = () => {
     setTimeout(
       function () {
-        const re = /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!re.test(this.state.email)) {
           this.setState({
-            email_error_bool: 'true',
+            email_error_bool: true,
             email_error: 'Email is not valid'
           })
         } else {
           this.setState({
-            email_error_bool: 'false',
+            email_error_bool: false,
             email_error: ''
           })
         }
@@ -425,52 +485,52 @@ class Personaldetail extends Component {
                     </span>
                   </div>
                   <label htmlFor="inputCountry">Country</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputCountry"
-                    type="text"
-                    name="country"
-                    placeholder="Enter country name"
-                    value={country}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.country_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {country_error_bool ? (
-                      <div className="error_message">{country_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                <label htmlFor="inputState">State</label>
-                <div className="personaldetails_input_feild">
-                  <input
-                    id="inputState"
-                    type="text"
-                    name="state"
-                    placeholder="Enter state name"
-                    value={state}
-                    autoCorrect="off"
-                    autoComplete="off"
-                    autoCapitalize="off"
-                    onChange={e => {
-                      this.handleChange(e)
-                      this.state_validate()
-                    }}
-                    required
-                  />
-                  <span className="personaldetails_input_error">
-                    {state_error_bool ? (
-                      <div className="error_message">{state_error}</div>
-                    ) : null}
-                  </span>
-                </div>
-                  <label htmlFor="inputTshirt">T-Shirt Size</label>
+                  <div className="personaldetails_input_feild">
+                    <input
+                      id="inputCountry"
+                      type="text"
+                      name="country"
+                      placeholder="Enter country name"
+                      value={country}
+                      autoCorrect="off"
+                      autoComplete="off"
+                      autoCapitalize="off"
+                      onChange={e => {
+                        this.handleChange(e)
+                        this.country_validate()
+                      }}
+                      required
+                    />
+                    <span className="personaldetails_input_error">
+                      {country_error_bool ? (
+                        <div className="error_message">{country_error}</div>
+                      ) : null}
+                    </span>
+                  </div>
+                  <label htmlFor="inputState">State</label>
+                  <div className="personaldetails_input_feild">
+                    <input
+                      id="inputState"
+                      type="text"
+                      name="state"
+                      placeholder="Enter state name"
+                      value={state}
+                      autoCorrect="off"
+                      autoComplete="off"
+                      autoCapitalize="off"
+                      onChange={e => {
+                        this.handleChange(e)
+                        this.state_validate()
+                      }}
+                      required
+                    />
+                    <span className="personaldetails_input_error">
+                      {state_error_bool ? (
+                        <div className="error_message">{state_error}</div>
+                      ) : null}
+                    </span>
+                  </div>
+                  <label htmlFor="inputTshirt">T-Shirt Size(XS,S,M,L,XL,XXL)</label>
                   <div className="personaldetails_input_feild">
                     <input
                       id="inputTshirt"
