@@ -16,6 +16,7 @@ import Home from './components/home/Home.js'
 import Footer from './components/footer'
 import CampusAmbassador from './components/ca/CampusAmbassador'
 import './styles/main.scss'
+import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 
 const register = Loadable({
@@ -61,6 +62,8 @@ class App extends Component {
             <Route path="/personal-detail" component={Personaldetail} />
             <Route path="/register-success" component={Success} />
             <Route path="/register-failure" component={Failuremessage} />
+            <Route path="/Ideastorm" component={Ideastorm} />
+
             {/* <Route path="*" component={} /> */}
           </Switch>
 
