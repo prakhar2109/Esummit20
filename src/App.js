@@ -18,7 +18,7 @@ import CampusAmbassador from './components/ca/CampusAmbassador'
 import './styles/main.scss'
 import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
-
+import DashboardIndex from './components/cadashboard/js/index';
 const register = Loadable({
   loader: () => import('./components/registration/index.js'),
   loading: () => <Loading />
@@ -29,46 +29,35 @@ const Registration_profiletype = Loadable({
   loading: () => <Loading />
 })
 
-export function Landing() {
-  return (
-    <div className="app-parent">
-      <img src={theme} alt="theme" />
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdaJH9lppWdVlgjXDiw60KvkT1kQeUcn-4s-UHDL_BirextvQ/viewform?usp=sf_link"
-        className="register-now-button"
-      >
-        Register Now
-      </a>
-    </div>
-  )
-}
+
 class App extends Component {
+  constructor(props)
+  {
+    super(props);
+    
+  }
   render() {
     return (
       <div>
         <BrowserRouter>
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route
-              exact
-              path="/campus-ambassador"
-              component={CampusAmbassador}
-            />
+            <Route exact path="/campus-ambassador" component={CampusAmbassador}/>
             <Route path="/register" component={Profiletype} />
             <Route path="/ca-registration" component={Registration} />
             <Route path="/personal-detail" component={Personaldetail} />
             <Route path="/register-success" component={Success} />
             <Route path="/register-failure" component={Failuremessage} />
             <Route path="/Ideastorm" component={Ideastorm} />
-
             {/* <Route path="*" component={} /> */}
-          </Switch>
+          </Switch> 
+          {/* <Footer /> */}
 
-          {/* <Facebooklogin /> */}
-          <Footer />
+
+          
+          <Route path="/dashboard/" component={DashboardIndex} />
+         
         </BrowserRouter>
       </div>
     )

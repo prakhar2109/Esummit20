@@ -1,0 +1,485 @@
+.capaymentwv-parent{
+    color: black;
+    background-color: #F7F8F9;
+    position: absolute;
+    height: fit-content;
+    top: 0;
+    left: 18%;
+    width: 82%;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    
+}
+.capaymentwv-headerrow {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.capaymentwv-header{
+    font-family:"ProximaNova-Semibold" !important;
+    color: rgba(130, 130, 130, 0.93);
+    margin-top: 2vh;
+    margin-left: 1vw;
+    font-size: 14px;
+    font-weight: 500;
+}
+.capaymentwv-line1 {
+    flex-basis: 61vw;
+    height: 0.3vh;
+    background-color: #E0E0E0;
+    /* position:absolute; */
+    margin-top: 3.4vh;
+    width: 50%;
+    margin-left: 1vw;
+}
+.capaymentwv-paymentinfo{
+    overflow: auto;
+    background-color: white;
+    margin-left: 1vw;
+    margin-top: 5.925vh;
+    height: fit-content;
+    padding-bottom: 2.5vh;
+    width: 70vw;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+    border-radius: 6px;
+}
+.capaymentwv-paymentstatus{
+    
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 3.611vh;
+}
+.capaymentwv-span{
+    color: black;
+    font-size: 25px;
+    margin-left: 1.7vw;
+    font-weight:500;
+}
+.capaymentwv-registrationfee{
+    margin-left: 5.625vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    color: #8A8A8A;
+    font-size: 18px;
+}
+.capaymentwv-accomodationfee{
+    margin-left: 5.625vw;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2.96vh;
+    color: #8A8A8A;
+}
+.capaymentwv-discountavailed{
+    margin-left: 5.625vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2.96vh;
+    color: #8A8A8A;
+    
+}
+.capaymentwv-discountcoupon{
+    margin-left: 5.625vw;
+    font-size: 18px;
+    margin-top: 2.96vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #8A8A8A;
+}
+.capaymentwv-spaceaboutcolon12{
+    margin-top: 2vh;
+    font-size: 24px;
+    font-weight: 600;
+    width: 30vw;
+    color: #4F4F4F;
+}
+.capaymentwv-spaceaboutcolon{
+    width: 30vw;
+    font-size: 18px;
+
+}
+.capaymentwv-spaceaboutcolon1{
+    width: 30vw;
+    font-size: 22px;
+    font-weight: 600;
+
+}
+.capaymentwv-space{
+    width: 13vw;    
+
+
+}
+.capaymentwv-toggleaccomodation{
+    margin-left:4.5vw;
+    background-color: white;
+    border:1.5px solid #E2574C;
+    color: #E2574C;
+    width: 6.21vw;
+    height: 3.7vh;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+
+}
+.capaymentwv-earlybirddiscount{
+    margin-left:2vw;
+}
+.capaymentwv-billingdetails-date-value{
+    color: #000000;
+    font-size: 18px;
+}
+.capaymentwv-billingdetails-amount{
+    font-size: 16px;
+    margin-left: 3vw;
+    color: #4F4F4F
+}
+.capaymentwv-billingdetails-amount-value{
+    font-size: 18px;
+    color: #000000;
+}
+.capaymentwv-billingdetails-type-value{
+    font-size: 18px;
+    color: #000000;
+}
+.capaymentwv-billingdetails-type{
+    font-size: 16px;
+    margin-left: 6vw;
+    color: #4F4F4F
+}
+.capaymentwv-billingdetails-date{
+    margin-left: 5.3vw;
+    color: #4F4F4F;
+}
+.capaymentwv-billingdetails-secondrow{
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 3vh;
+}
+.capayment-viewbillingdetails-coupondiscount{
+    color: #70BF48;
+}
+.capaymentwv-couponapply{
+    color: #F39423;
+    border: 1.5px solid #F39423;
+    border-radius: 4px;
+
+    background-color: white;
+    margin-left:5.5vw;
+    width: 6.21vw;
+    height: 3.7vh;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.capaymentwv-horizontalline{
+    height: 0.2vh;
+    background-color: #4F4F4F;
+    /* position:absolute; */
+    margin-top: 1.5vh;
+    width: 55vw;
+    margin-left: 5.625vw;
+    /* border: 2px solid #4F4F4F; */
+}
+svg{
+    margin-left: 1vw;
+    margin-right: 0.5vw;
+}
+.capaymentwv-totalamt{
+    margin-left: 5.625vw;
+    margin-top: 2.96vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 22px;
+    color: #4F4F4F;
+}
+.capaymentwv-totlamt{
+    margin-left: 5.625vw;
+    margin-top: 2.96vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 25px;
+    color: #4F4F4F;
+}
+.capaymentwv-spaceaboutcolon-total{
+    font-size: 25px;
+    width: 30vw;
+    font-weight: 600;
+}
+#capayment-wv-UpArrowSVG{
+    margin-left: 1vw;
+    height: 10px;
+}
+.capaymentwv-hortizontalline2{
+    width: 55vw ;
+    margin-top: 2vh;
+    margin-left: 5.625vw;
+    border:1px dashed #B2B2B2;
+    /* height: 1vh; */
+}
+
+.capaymentwv-hortizontalline21{
+    width: 55vw ;
+    margin-top: 2vh;
+    margin-left: 5.625vw;
+    border:1px dashed #B2B2B2;
+    /* height: 1vh; */
+}
+.capaymentwv-registration-header{
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 5.5vw;
+    margin-top: 1vh;
+}
+.capaymentwv-workshop-parent{
+    margin-left: 5.625vw;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 1vh;
+}
+.capaymentwv-middlerow{
+    width: 70vw;
+    margin-top: 2.59vh;
+    margin-left: 1vw;
+    display: flex;
+    line-height: 3.5vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+
+}
+.capaymentwv-tnc{
+    border:1px solid #989898;
+    border-radius: 8px;
+    width: 45vw;
+    color: #8A8A8A;
+}
+.capaymentwv-paymentbtn{
+    background-color: #F39423;
+    width: 24.5vw;
+    border: none;
+    font-size: 20px;
+    margin-left: 0.5vw;
+    border-radius: 8px;
+    color: white;
+    /* display: inline;     */
+}
+.capaymentwv-bottomrow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+      
+}
+.capaymentwv-discountcriterion{
+    font-family:"ProximaNova-Semibold" !important;
+    margin-top: 5.92vh;
+    margin-left: 1vw;
+    color: rgba(130, 130, 130, 0.93);   
+}
+.capaymentwv-line2{
+    flex-basis: 62vw;
+    height: 0.3vh;
+    background-color: #E0E0E0;
+    /* position:absolute; */
+    margin-top: 8vh;
+    width: 29%;
+    margin-left: 1vw;
+}
+.capaymentwv-criterialistparent{
+    background-color: white;
+    margin-left: 1vw;
+    margin-top: 5.925vh;
+    height: auto;
+    width: 70vw;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+    border-radius: 6px;
+    padding-left: 1vw;
+    overflow-y: auto;
+}
+.capaymentwv-criterialistheader{
+    color: black;
+    font-size: 20px;
+    /* margin-left: 1vw; */
+    /* margin-top: 1vh; */
+}
+.capaymentwv-criterialistminorheader{
+    color: #4F4F4F;
+    opacity: 0.58;
+}
+.capaymentwv-criterialist{
+    margin-top: 2vh;
+        
+}
+.capaymentwv-paymentstatusdone{
+    color: green;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+.capaymentwv-paymentstatusdone12{
+    margin-top:2vh;
+}
+.capaymentwv-viewbillingdetails{
+    color: orange;
+    margin-left: 25vw;
+    font-size: 14px;
+    cursor:pointer;
+}
+.capaymentwv-paymentinfodoneu{
+    /* padding-top: 2.5vh; */
+    background-color: white;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    height: auto;
+    width: 70vw;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+    border-radius: 6px;
+}
+.capaymentwv-criterialistparentdone{
+    background-color: white;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    height: fit-content;
+    width: 70vw;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+    border-radius: 6px;
+    padding-left: 1vw;
+
+}
+.capaymentwv-paymentinfodonee{
+    display: none;
+    padding-top: 0vh;
+    padding-bottom:2.5vh;
+    background-color: white;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    height: fit-content;
+    width: 70vw;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+    border-radius: 6px;
+}
+.capaymentwv-modalinputcode{
+    margin-top: 0.8vh;
+    width: 20vw;
+    border: none;
+    height: 4vh;
+    border-style: solid;
+    border: 1px solid #B2B2B2;
+    color: #70BF48;
+    font-size: 18px;
+}
+.ant-modal-content{
+    width: 25vw !important;
+    height: 55vh !important;
+    
+}
+.ant-modal-footer{
+background:white;
+}
+.ant-modal-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: #5A5A5A;
+}
+.ant-modal-body{
+    height:40vh; 
+    padding-top: 0.5vh;
+padding-left: 0;
+padding-bottom:0;
+    padding-right: 0;
+}
+.capaymentwv-modalheader{
+    font-weight: 800 !important;
+    font-size: 13px;
+    color: black;
+}
+.ant-btn{
+    border: none;
+}
+.ant-btn-primary{
+    background-color:  #F39423;
+    width: 5vw;
+}
+.capaymentwv-modalmiddlerow{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 13px;
+    padding-right: 6vw;
+    padding-left: 6vw;
+}
+.capaymentwv-modalline{
+   width: 0.2vw;
+   background-color: black;
+   
+
+}
+.capaymentwv-earlybirddiscount{
+    margin-left:2vw;
+}
+.capaymentwv-modallastrowheader{
+    color: black;
+    font-weight: 600;
+}
+.capaymentwv-modallastrowheader1{
+    color: #E2574C;
+    font-weight: 500;
+}
+.capaymentwv-modalcouponlist{
+    height: 36vh;
+    overflow-y: auto ;
+
+}
+.capaymentwv-modalcouponlist1{
+    height: 24vh;
+    overflow-y: auto ;
+}
+.capaymentwv-modalparent{
+background:white;
+height:40vh;
+padding-left: 24px;
+    padding-right: 24px;
+}
+
+.coming_soon{
+padding: 2rem;
+font-size: 2rem;
+font-family:"ProximaNova-Semibold" !important;
+
+
+}
+
+@media only screen and (max-width: 900px){
+.capaymentwv-parent {
+    color: black;
+    position: relative;
+    top: 0;
+    left:0;
+    width:100%;
+    min-height: 100vh;
+    padding-bottom: 2vh;
+    background-color: #F7F8F9;
+}
+.capaymentwv-paymentinfo{
+	margin-left:0;
+    
+  
+    width: 100%;
+}
+}

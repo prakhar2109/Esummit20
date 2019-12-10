@@ -21,10 +21,9 @@ module.exports = {
       'off',
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false }
     ],
-    'no-console': 'off',
     'prettier/prettier': ['warn', { semi: false, singleQuote: true }]
   },
-  settings: {
+  settings: { 
     react: {
       createClass: 'createReactClass',
       pragma: 'React',

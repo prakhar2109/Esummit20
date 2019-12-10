@@ -1,0 +1,78 @@
+.capaymentwv-workshopmappingelement{    
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    color: #8A8A8A;
+    font-size: 18px;
+    font-weight: 500;
+}
+.capaymentwv-workshop-spaceaboutcolon{
+    width: 12.7vw;
+    
+
+}
+.capayment-workshops-registrationfee-parent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: fit-content;
+}
+.capayment-toggleaccomodation-div{
+    width: 17.4vw;
+}
+.capaymentwv-space{
+    width:13vw;
+}
+.capayment-toggleaccomodation-workshops{
+    
+    background-color: white;
+    border:1.5px solid #E2574C;
+    color: #E2574C;
+    height: auto;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: 10vw;
+    padding-left :0.4vw;
+    padding-right:0.4vw;
+}
+@media only screen and (max-width: 900px){
+    .capaymentwv-workshopmappingelement{    
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 2vh;
+        color: #8A8A8A;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .capayment-toggleaccomodation-workshops{
+        background-color: white;
+        border:1.5px solid #E2574C;
+        color: #E2574C;
+        height: auto;
+        font-size: 12px;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        width: fit-content;
+        /* margin-right: auto; */
+        padding-left :0.4vw;
+        padding-right:0.4vw;
+    }
+
+.capayment-toggleaccomodation-div{
+    width: 30vw;
+}
+.capayment-workshops-registrationfee-parent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: fit-content;
+}
+}
