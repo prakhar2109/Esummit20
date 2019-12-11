@@ -1,10 +1,11 @@
 .taskparent {
-    background: #F7F8F9;
+    background: #070F12;
     height: fit-content;
-    width: 82%;
+    width: 83.5%;
     position: absolute;
     top:0;
-    left: 18%;
+    left: 16.5%;
+    min-height: 100vh;
 }
 
 .taskchildrow {
@@ -18,10 +19,10 @@
 
 .taskchild {
 
-    background: #FFFFFF;
+    background: #0D1719;
     height: fit-content;
 
-    width: 46.57%;
+    width: 30.19%;
     margin-left: 1.875%;
     margin-bottom: 1.875%;
     box-shadow: 1.5px 2px 15px rgba(51, 51, 51, 0.08);
@@ -35,24 +36,24 @@
 .taskchild-heading {
 
     font-family: "Proxima-nova-regular";
-    font-size: 19.88px;
-    line-height: 32px;
-    color:#000000;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.87);
     font-weight: 500;
 
 }
 
 .taskchild-description {
 
-    height: 10vh;
+    height: fit-content;
     width: 100%;
     overflow: hidden;
     /* background: blue; */
     font-family: "ProximaNova-Light";
-    margin-top: 4%;
-    opacity: 0.58;
-    color: #4F4F4F;
-    font-size: 14px;
+    margin-top: 4%; 
+    margin-bottom: 4%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.25rem;
 }
 
 .taskchild-fileupload {
@@ -75,6 +76,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+
 }
 
 .taskchild-line {
@@ -91,8 +93,9 @@
     margin-top: 2vh;
     margin-left: 3vh;
     margin-right: 2vh;
-    color: rgba(130, 130, 130, 0.93);
-    font-size: 20px;
+    color: rgba(255, 255, 255, 0.87);
+    border-bottom: 2px solid #359D9A;
+    font-size: 1.75rem;
 
 }
 
@@ -125,23 +128,24 @@
     align-items: center;
     justify-content: center;
     
-    background: rgba(255, 241, 224, 0.29);
+    background: #121C1D;
 }
 .taskchild-uploadedfiles-p{
     color:#B2B2B2;
     font-family: "ProximaNova-Semibold";
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 .taskchild-filesupload{
     height: 9.25vh;
     display: flex;
     justify-content: center;
-    background: rgba(181, 255, 128, 0.31);
+    background: #359D9A;
 }
 .taskchild-filesupload-p{
-    color:#70BF48;
+    color: rgba(255, 255, 255, 0.87);
+
     font-family: "ProximaNova-Semibold";
-    font-size: 12px;
+    font-size: 1.5rem;
 }
 .taskName1 {
     color: #4F4F4F;

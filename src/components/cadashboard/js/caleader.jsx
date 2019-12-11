@@ -9,7 +9,8 @@ export default class Caleader extends Component {
   }
 
   componentDidMount = () => {
-    let token = localStorage.getItem('user_token')
+    let token="6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
+    // let token = localStorage.getItem('user_token')
     axios
       .get(BASE_URL + '/v1/api/leaderboard/', {
         headers: {
@@ -27,17 +28,19 @@ export default class Caleader extends Component {
   render() {
     return (
       <div className="caleaderboard-parent">
-        <div className="caleader-heading">Top10</div>
-        <div className="caleader-line1" />
+        <div>
+        <div className="caleader-heading">Leaderboard</div>
+        </div>
+        
 
         <div className="caleader-board-parent">
           <table id="ca01">
             <tbody>
               <tr>
-                <th id="carank">Rank</th>
-                <th id="caname">Name</th>
-                <th id="cacollege">University</th>
-                <th id="capoints">Points</th>
+                <th id="carank">RANK</th>
+                <th id="caname">NAME</th>
+                <th id="cacollege">UNIVERSITY</th>
+                <th id="capoints">POINTS</th>
               </tr>
 
               {this.state.leaderboard.map((data, key) => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../header/static/esummit.png'
+import logo from '../header/static/logo.png'
 import './../css/caLeaderboard.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -56,12 +56,16 @@ class caLeaderboard extends Component {
 
   render() {
     let { name, score, data } = this.state
-    let profile = this.state.data.user_type
+    // let profile = this.state.data.user_type
+    let profile="CA"
     let profile_display
     let scorePercentage = (score / 10000) * 100 + ''
     let options
-    let is_ca =
-      this.state.data.user_type === 'AMB' || this.state.data.user_type === 'CA'
+    // let is_ca =
+    //   this.state.data.user_type === 'AMB' || this.state.data.user_type === 'CA'
+
+    let is_ca=true
+    console.log(`${profile}aaaaa${is_ca}`,"abdsmnbdasn")
 
     if (profile === 'AMB') {
       profile_display = 'CAMPUS AMBASSADOR'
@@ -126,11 +130,14 @@ class caLeaderboard extends Component {
         <Header />
         <div id="container">
           <div id="leftPane">
+            
             <a href="/">
-              <img id="logo" src={logo} alt="" />
+              {/* <img id="logo" src={logo} alt="" /> */}
+              <div className="leftpane-esummit-logo"></div>
             </a>
-
-            <hr id="line1" />
+            
+          <div className="side-navbar-details">
+            
 
             <Link
               to="/dashboard/Viewprofile"
@@ -176,7 +183,7 @@ class caLeaderboard extends Component {
                 />
               </div>
             )}
-
+          </div>
             <div id="optionsToggle">
               {options}
 

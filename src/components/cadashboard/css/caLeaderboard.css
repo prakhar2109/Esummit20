@@ -11,17 +11,28 @@
     width: 100%;
 }
 #leftPane{
-    max-width: 18vw;
-    background-color: white;
+    max-width: 16.5%;
+    background-color: #030D0F;
     padding-bottom: 3.5%; 
     height: 100%;
-    width: 18vw;
+    width: 16.5%;
     position: fixed;
     /* display: inline; */
     
 }
 
- 
+.leftpane-esummit-logo{
+    background: url('../header/static/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 64%;
+    background-position: center;
+    height: 5.62%;
+    background-size: contain;
+    margin-top: 2.59%;
+    margin-left: 18%;
+    margin-right: 18%;
+}
 #logo{
     max-width: 100%;
     padding: 12%;
@@ -102,21 +113,16 @@
 }
 #optionsToggle{
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
   
     text-align: left;
-    margin-top: 15%;
-    margin-left: 7.54%;
-    margin-right:7.54%;
-    font-size: 16.2px;
-    max-width: 92%;
+    margin: 4.44% 0;
+    font-size: 1.25rem;
     line-height: 250%;
-   
+    color: rgba(255, 255, 255, 0.38);;
     max-height: 41vh;
     height: fit-content;    
-    background: #FFFFFF;
     box-shadow: none !important;
-    border: 2px solid #F2F2F2;
     font-family:"ProximaNova-Semibold" !important; 
     
 
@@ -138,15 +144,15 @@
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #F39423;
+	background-color: #359D9A;
 }
 .linkEventson-inactive{
 
-    padding-left: 10%;
+    padding-left: 15.14%;
 
 }
 #optionsToggle a{
-color: #DBDBDB;
+    color: rgba(255, 255, 255, 0.38);
 font-family:"ProximaNova-Semibold" !important; 
 
 }
@@ -168,7 +174,7 @@ text-decoration:none !important;
 }
 #leaderboardButton{
     color: rgba(189, 189, 189, 0.55);
-    padding-left: 10%;
+    padding-left: 15.14%;
 }
 #submitButton{
     display: flex;
@@ -177,7 +183,7 @@ text-decoration:none !important;
 }
 #submitButton button{
     cursor: pointer;
-    color: #E24F3B;
+    color: #359D9A;
     font-weight: 500;
     font-size: 14.2px;
     margin-left: auto;
@@ -210,8 +216,7 @@ text-decoration:none !important;
     margin-right:7.54%;
 }
 .sidebar-dashboard-box{
-    border-bottom: 1px solid #F2F2F2;
-    border-top: 1px solid #F2F2F2;
+ 
     padding-top: 1vh;
     padding-bottom: 1vh;
     margin-top: 5vh;
@@ -222,6 +227,11 @@ text-decoration:none !important;
 }
 .link-viewprofile{
     color: #F39423 !important;
+}
+
+.side-navbar-details{
+    background: #0D1719;
+    margin: 5%;
 }
 @media only screen and (max-width: 900px){
 
@@ -287,7 +297,7 @@ height: fit-content;
        
       /* Handle */
       #leftPane::-webkit-scrollbar-thumb {
-        background: #F39423; 
+        background: #359D9A; 
       }
       
       /* Handle on hover */

@@ -1,12 +1,12 @@
 .caleaderboard-parent{
-    color: black;
+    color: rgba(255, 255, 255, 0.87);
     position: absolute;
     top: 0;
-    left: 18%;
-    width: 82%;
+    left: 16.5%;
+    width: 83.5%;
     min-height: 100vh;
 padding-bottom: 2vh;
-background-color: #F7F8F9;
+background-color: #070F12;
 
 
 }
@@ -23,15 +23,18 @@ background-color: #F7F8F9;
 
     margin-top: 3.33vh;
     margin-left: 2.24%;
-    color: rgba(130, 130, 130, 0.93);
-    font-size:14.22px;
+    color: rgba(255, 255, 255, 0.87);
+    width: fit-content;
+    font-size:1.45rem;
+    line-height: 2.625rem;
     font-family:"ProximaNova-Semibold" !important; 
+    border-bottom: 2px solid #09C9C3;
 }
 
 .caleader-board-parent{
 
     margin-top: 5.92vh;
-    background: #fff;
+    background: #0D1719;
     width: 95.52%;
     height: 100vh;
     margin-left: 2.24%;
@@ -56,15 +59,15 @@ table#ca01 td{
     padding-bottom: 2.60vh;
  
     padding-top: 2.60vh;
-    color: #000000;
+    color: rgba(255, 255, 255, 0.87);
     font-size: 14.2px;
     font-family:"ProximaNova-Semibold" !important; 
  
 }
 table#ca01 th{
     padding-bottom: 5vh;
-    color: rgba(79, 79, 79, 0.44);
-    font-size: 11.37px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1rem ;
 }
 th#carank{
 
@@ -82,12 +85,12 @@ th#cacollege{
     width: 40.98%;
 }
 #capointstd{
-    color: #70BF48 !important;
+    color: #359D9A !important;
 }
 
 #caranktd{
 
-    color: #1A4D66 !important;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 
@@ -205,16 +208,16 @@ border-right:1px solid #DDDDDD;
 
 table#ca01 th{
     padding-bottom: 5vh;
-    color: rgba(79, 79, 79, 0.44);
-    font-size: 16px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1rem;
 }
 
 .caleader-heading{
 
     margin-top: 3.33vh;
     margin-left: 2.24%;
-    color: rgba(130, 130, 130, 0.93);
-    font-size:20px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size:1.45rem; 
 }
 table#ca01 td{
 
@@ -222,8 +225,8 @@ table#ca01 td{
     text-transform: lowercase;
 
     padding-top: 2.60vh;
-    color: #000000;
-    font-size: 20px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.25rem;
     font-family:"ProximaNova-Semibold" !important; 
  
 }

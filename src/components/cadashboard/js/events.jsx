@@ -14,7 +14,8 @@ export default class Viewprofile extends Component {
     let appliedevents = []
     let status = []
 
-    let token = localStorage.getItem('user_token')
+    // let token = localStorage.getItem('user_token')
+    let token = "6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
     axios
       .get(BASE_URL + '/v1/api/user/events', {
         headers: {
@@ -32,13 +33,15 @@ export default class Viewprofile extends Component {
           appliedevents: appliedevents,
           status: status
         })
-        console.log(this.state.appliedevents, 'dnfnnjndnnjnj')
+        console.log(this.state.status, 'dnfnnjndnnjnj')
       })
-      .catch(response => {})
+      .catch(response => { })
   }
   discardEvent = id => {
     // console.log("hello")
-    let token = localStorage.getItem('user_token')
+    // let token = localStorage.getItem('user_token')
+    let token = "6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
+
     axios
       .get(BASE_URL + `/v1/api/event/${id}/unregister`, {
         headers: {
@@ -49,22 +52,22 @@ export default class Viewprofile extends Component {
         if (res.status === 200) window.location.href = '/dashboard/Events'
         // console.log(res)
       })
-      .catch(response => {})
+      .catch(response => { })
   }
   infoMenushow = index => {
     document.getElementById(
-      'caevents-earnedcoupons-child-parent1' + index
+      'caevents-earnedcoupons-child-parent11' + index
     ).style.display = 'none'
     document.getElementById(
-      'caevents-earnedcoupons-child-parent2' + index
+      'caevents-earnedcoupons-child-parent21' + index
     ).style.display = 'block'
   }
   infoMenuhide = index => {
     document.getElementById(
-      'caevents-earnedcoupons-child-parent1' + index
+      'caevents-earnedcoupons-child-parent11' + index
     ).style.display = 'block'
     document.getElementById(
-      'caevents-earnedcoupons-child-parent2' + index
+      'caevents-earnedcoupons-child-parent21' + index
     ).style.display = 'none'
   }
 
@@ -76,11 +79,10 @@ export default class Viewprofile extends Component {
             <div className="ca-events-parent-heading1 caeventsparent-font">
               Applied Events
             </div>
-            <div className="caevents-line1"></div>
           </>
         ) : null}
         <div className="caevents-earnedcoupons-rowparent1">
-          {this.state.appliedevents.map((event, index) => (
+          {this.state.appliedevents && this.state.appliedevents.map((event, index) => (
             <div
               key={index}
               className="caevents-earnedcoupons-child"
@@ -92,13 +94,14 @@ export default class Viewprofile extends Component {
               }}
             >
               {console.log(this.state.appliedevents, 'helloboys')}
-              <div id={'caevents-earnedcoupons-child-parent1' + index}>
+              <div id={'caevents-earnedcoupons-child-parent11' + index}>
                 <div className="caevents-earnedcoupons-child-heading">
                   {event.title}
                 </div>
                 {console.log(this.state.status[index], 'asnkasjfjs')}
                 <div className="caevents-registration-status">
                   {this.state.status[index] === 'APP' ? (
+                    <>
                     <div>
                       {' '}
                       <svg
@@ -127,10 +130,14 @@ export default class Viewprofile extends Component {
                           fill="#E2574C"
                         />
                       </svg>
+                      </div>
+                      <div>
                       Payment Pending
-                    </div>
+                      </div>
+                    </>
                   ) : null}
                   {this.state.status[index] === 'REG' ? (
+                    <>
                     <div>
                       {' '}
                       <svg
@@ -149,9 +156,13 @@ export default class Viewprofile extends Component {
                           fill="#70BF48"
                         />
                       </svg>
+                      </div>
+                      <div>
                       Registered Successfully
-                    </div>
+                      </div>
+                    </>
                   ) : null}
+
                 </div>
                 <div className="caevents-earnedcoupons-child-description">
                   {event.short_description}
@@ -159,34 +170,34 @@ export default class Viewprofile extends Component {
                 {event.status === 'Upcomming' ? (
                   <div className="caevents-coming-soon">COMING SOON</div>
                 ) : (
-                  <div>
-                    {/* <div className="caevents-earnedcoupons-deadline">
+                    <div>
+                      {/* <div className="caevents-earnedcoupons-deadline">
                                             Deadline: {event.deadline}
                                         </div> */}
 
-                    <div className="caevents-earnedcoupons-child-button">
-                      {/* {console.log(event.id,"event_id")} */}
-                      <button
-                        id={'dashboard-events-applyevents' + index}
-                        onClick={() => {
-                          this.discardEvent(event.id)
-                        }}
-                      >
-                        DISCARD
+                      <div className="caevents-earnedcoupons-child-button">
+                        {/* {console.log(event.id,"event_id")} */}
+                        <button
+                          id={'dashboard-events-applyevents' + index}
+                          onClick={() => {
+                            this.discardEvent(event.id)
+                          }}
+                        >
+                          DISCARD
                       </button>
-                      <button
-                        className="caofferb01"
-                        onClick={() => this.infoMenushow(index)}
-                      >
-                        INFO
+                        <button
+                          className="caofferb01"
+                          onClick={() => this.infoMenushow(index)}
+                        >
+                          INFO
                       </button>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
               </div>
               <div
                 className="caevents-earnedcoupons-child-parent-parent"
-                id={'caevents-earnedcoupons-child-parent2' + index}
+                id={'caevents-earnedcoupons-child-parent21' + index}
               >
                 <div className="caevents-earnedcoupons-child-info">
                   {event.long_description}
@@ -203,7 +214,6 @@ export default class Viewprofile extends Component {
         <div className="ca-events-parent-heading2 caeventsparent-font">
           All Events
         </div>
-        <div className="caevents-line1"></div>
         <Allevents />
       </div>
     )

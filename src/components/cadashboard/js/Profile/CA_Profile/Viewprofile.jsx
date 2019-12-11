@@ -24,8 +24,8 @@ export default class Viewprofile extends Component {
   }
 
   componentDidMount = () => {
-    let token = localStorage.getItem('user_token')
-
+    // let token = localStorage.getItem('user_token')
+    let token="6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
     axios
       .get(BASE_URL + '/v1/api/user/profile', {
         headers: {
