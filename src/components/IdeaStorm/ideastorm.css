@@ -1,6 +1,9 @@
 .Eventsheader {
   display: none;
 }
+.es{
+  font-size: 64px !important;
+}
 
 @media (max-width: 1200px) {
   .Eventsheader {
@@ -12,7 +15,7 @@
 }
 
 .ideastorm .header {
-  background: #0D1313;
+  background: #010C0F;
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   display: -ms-grid;
@@ -241,7 +244,7 @@
 }
 
 .ideastorm .register {
-  background: #F49D35;
+  background:#010C0F;
   padding: 96px 10vw;
 }
 
@@ -287,7 +290,7 @@
 @media (max-width: 1200px) {
   .ideastorm .register_mobile {
     display: block;
-    background: #F49D35;
+    background: #010C0F;
     padding: 44px 32px;
   }
   .ideastorm .register_mobile p {
@@ -396,16 +399,18 @@
 
 .ideastorm .es {
   padding: 64px;
-  background: #242626;
+
+  background: #010C0F;
+
 }
 
 .ideastorm .es a,
 .ideastorm .es p {
-  font-size: 32px;
+  font-size: 40px;
   margin-top: 48px;
   letter-spacing: 0.1em;
   text-align: center;
-  color: #F39423;
+  color: white;
   text-decoration: none;
   font-family: Proxima-nova-regular !important;
 }
@@ -415,7 +420,7 @@
   .ideastorm .es p {
     font-size: 20px;
     letter-spacing: 0.1em;
-    color: #F39423;
+    color: white;
   }
 }
 
@@ -491,7 +496,7 @@
   font-size: 26px;
   letter-spacing: 0.1em;
   padding: 20px 0;
-  color: #F49D35;
+  color: #010C0F;
   font-weight: 600;
 }
 
@@ -501,7 +506,7 @@
     font-size: 16px;
     letter-spacing: 0.1em;
     font-family: "ProximaNova-Semibold";
-    color: #F39423;
+    color: #010C0F;
   }
 }
 
@@ -621,4 +626,20 @@
   color: #FFFFFF;
   padding-top: 4vh;
   padding-bottom: 4.62vh;
+}
+
+@media (max-width: 700px) {
+  .ideastorm .idea p:nth-child(6){
+    font-size: 18px;
+
+
+  }
+  .ideastorm .idea p:nth-child(7) {
+    font-size: 14px;
+    font-family: "ProximaNova-Light", sans-serif;
+    color: #FFFFFF;
+    padding-top: 4vh;
+    padding-bottom: 4.62vh;
+  }
+
 }

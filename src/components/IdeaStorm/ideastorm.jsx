@@ -113,9 +113,9 @@ export class IdeaStorm extends Component {
   render() {
     return (
       <div className="ideastorm">
-        <Eventsheader />
+        {/* <Eventsheader /> */}
 
-        <div id="nav" className="header">
+        {/* <div id="nav" className="header">
           <span>
             <img alt="IdeaStorm" src={Idea} />
           </span>
@@ -135,7 +135,7 @@ export class IdeaStorm extends Component {
           </span>
 
           <span />
-        </div>
+        </div> */}
         <div className="idea">
           <p className  = "header_idea">IDEA STORM</p>
 
@@ -167,14 +167,14 @@ export class IdeaStorm extends Component {
            
         </div>
 
-        <div name="timeline" id="timeline" className="timeline">
-        {/* <Header title = "TIMELINE"/> */}
+        {/* <div name="timeline" id="timeline" className="timeline">
+        <Header title = "TIMELINE"/>
           <div>
             <img className="ideastorm-vector" src={Vector} alt="" />
             <p className="ideastorm-head1">TIMELINE</p>
           </div>
           <Timelineindex />
-        </div>
+        </div> */}
 
         <div className="Rules">
           <Header title="RULES & REGULATIONS" />
@@ -233,9 +233,8 @@ export class IdeaStorm extends Component {
 
               <div className="perks_unit">
                 <img src={Mentorship} alt="Mentorship" />
-                <span>Mentorship:</span>
-                Mentorship opportunities from Venture Capitalists and Industry
-                Leaders.
+                <span>Workspaces:</span>
+                Get workspaces from Oyo workspaces, Innov8.
                 
               </div>
 
@@ -248,7 +247,7 @@ export class IdeaStorm extends Component {
               <div className="perks_unit">
                 <img src={Funding} alt="Funding" />
                 <span>Funding Opportunities</span>
-                An opportunity to raise real time funds.
+                Opportunity from; 100X.VC, Ah Ventures, Nexus Venture, Zenfold Ventures.
               </div>
               <div className="perks_unit">
                 <img src={Media} alt="Media Coverage" />
@@ -296,33 +295,33 @@ export class IdeaStorm extends Component {
 
           <div className="coordinator_grid">
             <div className="coordinator_unit">
-              <p>Rachit Garg</p>
+              <p>Bharat</p>
 
-              <p>+91 9992929203</p>
-              <p>rgarg@me.iitr.ac.in</p>
+              <p>+91 9121681948</p>
+              <p>nbharat@ch.iitr.ac.in</p>
             </div>
 
             <div className="coordinator_unit">
-              <p>Harshit Dubey</p>
+              <p>Pranay</p>
 
-              <p>+91 7412883060</p>
-              <p>hdubey@ee.iitr.ac.in</p>
+              <p>+91 8003427771</p>
+              <p>pjain@ch.iitr.ac.in</p>
             </div>
           </div>
         </div>
 
-        {/* <div className="es">
+        <div className="es">
           <center>
-            <NavLink to="/">
+            {/* <NavLink to="/">
               <img alt="Esummit Logo" src={esummit} />
-            </NavLink>
+            </NavLink> */}
           </center>
 
           <p>
             Go to &nbsp;
-            <NavLink to="/">esummit.iin</NavLink>
+            <NavLink to="/">esummit.in</NavLink>
           </p>
-        </div> */}
+        </div>
         {/* <Eventfooter /> */}
       </div>
     );
