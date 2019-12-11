@@ -265,7 +265,8 @@ export class IdeaStorm extends Component {
 
             <a
               without rel="noopener noreferrer"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeso_7FRi2A42dVvvbzRro_XA6DoKUILfW1EB0E01RAAtus2g/viewform"
+              href="https://drive.google.com/open?id=1POE-_FZYIujX1Wi3iWPpVlZPqWuyUB5G6mEL3MueLNs
+              "
               target="_blank"
             >
               <span>APPLY FOR IDEASTORM</span>
@@ -280,7 +281,8 @@ export class IdeaStorm extends Component {
           <center>
             <a
               without rel="noopener noreferrer"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeso_7FRi2A42dVvvbzRro_XA6DoKUILfW1EB0E01RAAtus2g/viewform"
+              href="https://drive.google.com/open?id=1POE-_FZYIujX1Wi3iWPpVlZPqWuyUB5G6mEL3MueLNs
+              "
               target="_blank"
             >
               {" "}
