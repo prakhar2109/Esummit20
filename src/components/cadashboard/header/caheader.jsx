@@ -17,7 +17,7 @@ export default class ComingSoon extends Component {
     data: []
   };
 
-  componentDidMount = () => {
+   componentDidMount = () => {
     let token = localStorage.getItem('user_token');
     // document.getElementById("main_class").style.marginTop = '0px';
 
@@ -145,8 +145,8 @@ export default class ComingSoon extends Component {
             </NavLink>
           </span>
 
-          <i id="menu_button" class="fas fa-bars" onClick={this.handle_menu} />
-          <i id="close_button" class="fas fa-times" onClick={this.hide_menu} />
+          <i id="menu_button" className="fas fa-bars" onClick={this.handle_menu} />
+          <i id="close_button" className="fas fa-times" onClick={this.hide_menu} />
         </div>
         <div id="phone" className="mob_menu">
 
