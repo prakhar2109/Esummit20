@@ -265,7 +265,7 @@ export class IdeaStorm extends Component {
 
             <a
               without rel="noopener noreferrer"
-              href="https://drive.google.com/open?id=1POE-_FZYIujX1Wi3iWPpVlZPqWuyUB5G6mEL3MueLNs
+              href="https://forms.gle/w8iWovVznoCJZKdq5
               "
               target="_blank"
             >
@@ -281,7 +281,7 @@ export class IdeaStorm extends Component {
           <center>
             <a
               without rel="noopener noreferrer"
-              href="https://drive.google.com/open?id=1POE-_FZYIujX1Wi3iWPpVlZPqWuyUB5G6mEL3MueLNs
+              href="https://forms.gle/w8iWovVznoCJZKdq5
               "
               target="_blank"
             >
