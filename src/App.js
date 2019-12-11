@@ -19,6 +19,7 @@ import './styles/main.scss'
 import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index';
+import 'antd/dist/antd.css'
 const register = Loadable({
   loader: () => import('./components/registration/index.js'),
   loading: () => <Loading />
