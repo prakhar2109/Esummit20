@@ -18,7 +18,7 @@ import CampusAmbassador from './components/ca/CampusAmbassador'
 import './styles/main.scss'
 import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
-import DashboardIndex from './components/cadashboard/js/index';
+import DashboardIndex from './components/cadashboard/js/index'
 import 'antd/dist/antd.css'
 const register = Loadable({
   loader: () => import('./components/registration/index.js'),
@@ -30,12 +30,9 @@ const Registration_profiletype = Loadable({
   loading: () => <Loading />
 })
 
-
 class App extends Component {
-  constructor(props)
-  {
-    super(props);
-    
+  constructor(props) {
+    super(props)
   }
   render() {
     return (
@@ -44,7 +41,11 @@ class App extends Component {
           {/* <Navbar /> */}
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/campus-ambassador" component={CampusAmbassador}/>
+            <Route
+              exact
+              path="/campus-ambassador"
+              component={CampusAmbassador}
+            />
             <Route path="/register" component={Profiletype} />
             <Route path="/ca-registration" component={Registration} />
             <Route path="/personal-detail" component={Personaldetail} />
@@ -52,13 +53,10 @@ class App extends Component {
             <Route path="/register-failure" component={Failuremessage} />
             <Route path="/Ideastorm" component={Ideastorm} />
             {/* <Route path="*" component={} /> */}
-          </Switch> 
+          </Switch>
           {/* <Footer /> */}
 
-
-          
           <Route path="/dashboard/" component={DashboardIndex} />
-         
         </BrowserRouter>
       </div>
     )

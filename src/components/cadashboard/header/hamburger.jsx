@@ -29,7 +29,7 @@
 //         return (
 //             <div>
 //                 <div className="hamburger-header">
-                    
+
 //                     <button className="hamburger">&#9776;</button>
 //                     <button className="cross">&#735;</button>
 //                 </div>
@@ -47,5 +47,3 @@
 //         )
 //     }
 // }
-
-

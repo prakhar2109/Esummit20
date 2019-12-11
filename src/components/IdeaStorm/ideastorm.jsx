@@ -1,111 +1,110 @@
-import React, { Component } from "react";
-import "./ideastorm.css";
-import Header from "./Vector/vector";
+import React, { Component } from 'react'
+import './ideastorm.css'
+import Header from './Vector/vector'
 // import FAQ from "../../components/faqs";
-import esummit from "./static/es.png";
-import Eventfooter from "./footer/eventfooter.jsx";
-import Idea from "./static/idea.png";
-import jump from "jump.js";
-import Eventsheader from "./Navbar/header";
-import Vector from "./static/headVector.png";
-import Timelineindex from "./timeline/Index.js";
-import { NavLink } from "react-router-dom";
-import Cash from "./static/1.png";
-import Mentorship from "./static/2.png";
-import Networking from "./static/3.png";
-import Funding from "./static/4.png";
-import Media from "./static/5.png";
-import "./scrollanimation.css"
+import esummit from './static/es.png'
+import Eventfooter from './footer/eventfooter.jsx'
+import Idea from './static/idea.png'
+import jump from 'jump.js'
+import Eventsheader from './Navbar/header'
+import Vector from './static/headVector.png'
+import Timelineindex from './timeline/Index.js'
+import { NavLink } from 'react-router-dom'
+import Cash from './static/1.png'
+import Mentorship from './static/2.png'
+import Networking from './static/3.png'
+import Funding from './static/4.png'
+import Media from './static/5.png'
+import './scrollanimation.css'
 import FAQBoard from '../IdeaStorm/faqs/faqs'
 import PropTypes from 'prop-types'
-
 
 export class IdeaStorm extends Component {
   state = {
     faq: [
       {
         id: 2,
-        question: "What is the last date of submission?",
+        question: 'What is the last date of submission?',
         answer:
-          "10th of January is the last date of submission of entries for the first round of the competition.",
+          '10th of January is the last date of submission of entries for the first round of the competition.'
       },
       {
         id: 3,
-        question: " Is there a participation fee for Idea Storm?",
+        question: ' Is there a participation fee for Idea Storm?',
         answer:
-          "No, there is no participation fee for participation in the first round of Idea Storm.",
+          'No, there is no participation fee for participation in the first round of Idea Storm.'
       },
 
       {
         id: 4,
-        question: " How will the mentors be allocated?",
+        question: ' How will the mentors be allocated?',
         answer:
-          "Your idea will be judged by a panel of experts and then mentors will be allocated to you based on the area of their expertise.",
+          'Your idea will be judged by a panel of experts and then mentors will be allocated to you based on the area of their expertise.'
       },
 
       {
         id: 5,
-        question: " How will our ideas be judged? ",
+        question: ' How will our ideas be judged? ',
         answer: [
-          "Your ideas will be judged on the basis of ",
-          "innovation in your idea , " +
-          "real-world problem it mitigates, " +
-          "the market opportunity for the idea, " +
-          " & the competitive advantage that it possesses",
-        ],
+          'Your ideas will be judged on the basis of ',
+          'innovation in your idea , ' +
+            'real-world problem it mitigates, ' +
+            'the market opportunity for the idea, ' +
+            ' & the competitive advantage that it possesses'
+        ]
       },
 
       {
         id: 6,
-        question: " Is it compulsory to have a team to participate? ",
-        answer: "Yes, you should atleast have a team size of 3 members.",
+        question: ' Is it compulsory to have a team to participate? ',
+        answer: 'Yes, you should atleast have a team size of 3 members.'
       },
 
       {
         id: 7,
-        question: " Does my business model have to be technology related? ",
+        question: ' Does my business model have to be technology related? ',
         answer:
-          "No, we encourage all entries that can get mentorship,funding and be developed into a business venture.",
+          'No, we encourage all entries that can get mentorship,funding and be developed into a business venture.'
       },
 
       {
         id: 8,
         question:
-          "  Can a team consists of people from different college/companies? ",
+          '  Can a team consists of people from different college/companies? ',
         answer:
-          "Yes, team size should be in between 3 to 5. Individuals in the team can be from any organization",
-      },
+          'Yes, team size should be in between 3 to 5. Individuals in the team can be from any organization'
+      }
     ],
 
-    current: 2,
-  };
+    current: 2
+  }
 
   timeline = () => {
-    jump(".timeline", { offset: -130 });
-  };
+    jump('.timeline', { offset: -130 })
+  }
 
   Rules = () => {
-    jump(".Rules", { offset: -130 });
-  };
+    jump('.Rules', { offset: -130 })
+  }
 
   erks = () => {
-    jump(".erks", { offset: -130 });
-  };
+    jump('.erks', { offset: -130 })
+  }
 
   faq_idea = () => {
-    jump("#faq", { offset: -0 });
-  };
+    jump('#faq', { offset: -0 })
+  }
 
   coordinator = () => {
-    jump(".coordinator", { offset: -130 });
-  };
+    jump('.coordinator', { offset: -130 })
+  }
 
   eligiblity = () => {
-    jump(".eligiblity", { offset: -130 });
-  };
+    jump('.eligiblity', { offset: -130 })
+  }
   register = () => {
-    jump(".register", { offset: -130 });
-  };
+    jump('.register', { offset: -130 })
+  }
   jum = () => {
     jump('#timeline')
   }
@@ -137,13 +136,13 @@ export class IdeaStorm extends Component {
           <span />
         </div>
         <div className="idea">
-          <p className  = "header_idea">IDEA STORM</p>
+          <p className="header_idea">IDEA STORM</p>
 
           <p>You make it happen.</p>
 
-          <br/>
-          <br/>
-          <br/>
+          <br />
+          <br />
+          <br />
           <p>CASH PRIZE WORTH INR 2,50,000</p>
           <p>
             Idea Storm is the annual business plan competition,conducted as a
@@ -157,18 +156,17 @@ export class IdeaStorm extends Component {
           </p>
 
           <div className="ignite-first-page-scroll">
-                <div onClick={this.timeline} className='icon-scroll'></div> <br />
-                
-                <div id="ignite-first-page-scroll-child"> <p> SCROLL DOWN</p></div>
-              </div>
-          <center>
-
-          </center>
-           
+            <div onClick={this.timeline} className="icon-scroll"></div> <br />
+            <div id="ignite-first-page-scroll-child">
+              {' '}
+              <p> SCROLL DOWN</p>
+            </div>
+          </div>
+          <center></center>
         </div>
 
         <div name="timeline" id="timeline" className="timeline">
-        {/* <Header title = "TIMELINE"/> */}
+          {/* <Header title = "TIMELINE"/> */}
           <div>
             <img className="ideastorm-vector" src={Vector} alt="" />
             <p className="ideastorm-head1">TIMELINE</p>
@@ -236,7 +234,6 @@ export class IdeaStorm extends Component {
                 <span>Mentorship:</span>
                 Mentorship opportunities from Venture Capitalists and Industry
                 Leaders.
-                
               </div>
 
               <div className="perks_unit">
@@ -263,15 +260,14 @@ export class IdeaStorm extends Component {
           <p className="register_now">Apply Now</p>
 
           <center>
-
             <a
-              without rel="noopener noreferrer"
+              without
+              rel="noopener noreferrer"
               href="https://docs.google.com/forms/d/e/1FAIpQLSeso_7FRi2A42dVvvbzRro_XA6DoKUILfW1EB0E01RAAtus2g/viewform"
               target="_blank"
             >
               <span>APPLY FOR IDEASTORM</span>
             </a>
-
           </center>
         </div>
 
@@ -280,15 +276,15 @@ export class IdeaStorm extends Component {
           <p>To participate in Idea-Storm 2019 register here.</p>
           <center>
             <a
-              without rel="noopener noreferrer"
+              without
+              rel="noopener noreferrer"
               href="https://docs.google.com/forms/d/e/1FAIpQLSeso_7FRi2A42dVvvbzRro_XA6DoKUILfW1EB0E01RAAtus2g/viewform"
               target="_blank"
             >
-              {" "}
+              {' '}
               <span>APPLY FOR IDEASTORM</span>
             </a>
           </center>
-
         </div>
         <FAQBoard faqList={this.state.faq} />
         <div className="coordinator">
@@ -325,7 +321,7 @@ export class IdeaStorm extends Component {
         </div> */}
         {/* <Eventfooter /> */}
       </div>
-    );
+    )
   }
 }
 

@@ -1,32 +1,30 @@
-import React, { Component } from "react";
-import "../css/caleader.css";
-import { BASE_URL } from "../../../utils/urls";
-import axios from "axios";
+import React, { Component } from 'react'
+import '../css/caleader.css'
+import { BASE_URL } from '../../../utils/urls'
+import axios from 'axios'
 
 export default class Caleader extends Component {
   state = {
-    leaderboard: [],
-  };
+    leaderboard: []
+  }
 
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
     axios
-        .get(BASE_URL + "/v1/api/leaderboard/", {
-            headers: {
-                Authorization: `Token ${token}`,
-            },
-        })
-        .then(res => {
-            this.setState({leaderboard: res.data});
- 
-        })
-        .catch(response => {
-            alert(response);
-        });
-};
+      .get(BASE_URL + '/v1/api/leaderboard/', {
+        headers: {
+          Authorization: `Token ${token}`
+        }
+      })
+      .then(res => {
+        this.setState({ leaderboard: res.data })
+      })
+      .catch(response => {
+        alert(response)
+      })
+  }
 
   render() {
-  
     return (
       <div className="caleaderboard-parent">
         <div className="caleader-heading">Top10</div>
@@ -42,15 +40,15 @@ export default class Caleader extends Component {
                 <th id="capoints">Points</th>
               </tr>
 
-              {this.state.leaderboard.map((data,key) => {
+              {this.state.leaderboard.map((data, key) => {
                 return (
                   <tr key={key}>
-                    <td id="caranktd">{key+1}</td>
+                    <td id="caranktd">{key + 1}</td>
                     <td id="canametd">{data.name}</td>
                     <td id="cacollegenametd">{data.college}</td>
                     <td id="capointstd">{data.tot_score}</td>
                   </tr>
-                );
+                )
               })}
             </tbody>
           </table>
@@ -59,7 +57,6 @@ export default class Caleader extends Component {
         <div className="caleader-board-mobileparent">
           <table id="ca01">
             <tbody>
-
               <tr>
                 <th id="carank">Rank</th>
                 <th id="caname">Name & University</th>
@@ -67,18 +64,19 @@ export default class Caleader extends Component {
                 <th id="capoints">Points</th>
               </tr>
 
-              {this.state.leaderboard.map((data,key) => {
-                return(
-              <tr key={key}>
-                <td id="caranktd">{key+1}</td>
-                <td id="canametd">
-                {data.name} <br />
-                  <span id="cacollegespan">{data.college}</span>
-                </td>
+              {this.state.leaderboard.map((data, key) => {
+                return (
+                  <tr key={key}>
+                    <td id="caranktd">{key + 1}</td>
+                    <td id="canametd">
+                      {data.name} <br />
+                      <span id="cacollegespan">{data.college}</span>
+                    </td>
 
-                <td id="capointstd">{data.tot_score}</td>
-              </tr>
-              )})}
+                    <td id="capointstd">{data.tot_score}</td>
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>
@@ -97,6 +95,6 @@ export default class Caleader extends Component {
           </div>
         </div> */}
       </div>
-    );
+    )
   }
 }

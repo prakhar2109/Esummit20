@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import "../../css/payment/paymentwithoutworkshop.css";
-import CriteriaMapping from "./../discountcriterias";
-import { Modal } from "antd";
-import Coupon from "./../coupon";
-import { BASE_URL } from "./../../../../utils/urls";
-import axios from "axios";
-import Payments from "./workshops";
-import PaymentsPayed from "./workshopsPayed";
+import React, { Component } from 'react'
+import '../../css/payment/paymentwithoutworkshop.css'
+import CriteriaMapping from './../discountcriterias'
+import { Modal } from 'antd'
+import Coupon from './../coupon'
+import { BASE_URL } from './../../../../utils/urls'
+import axios from 'axios'
+import Payments from './workshops'
+import PaymentsPayed from './workshopsPayed'
 /* eslint-disable react/prop-types */
 
 export default class Payment extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       //payment data
       dataPayment: null,
@@ -32,12 +32,12 @@ export default class Payment extends Component {
       couponDiscount: 0,
       isBillingOpen: false,
       isModalVisible: false,
-      couponcode: "",
-      couponSelected: "",
+      couponcode: '',
+      couponSelected: '',
       //workshops
       workshopsNotPayed: [],
       noOfWorkshopsNotPayed: 0,
-      workshopsAppNotPayed:[],
+      workshopsAppNotPayed: [],
       workshopsPayed: [],
       noOfWorkshopsPayed: 0,
       isIIT: false,
@@ -51,22 +51,22 @@ export default class Payment extends Component {
       couponDiscountPayed: 0,
       couponDiscountPercentPayed: 0,
       totAmtPayed: null,
-      datePayed: "12/12/18",
-    };
+      datePayed: '12/12/18'
+    }
   }
 
   letMeknowIfDiscardClicked = () => {
-    let token = localStorage.getItem("user_token");
+    let token = localStorage.getItem('user_token')
     axios
-      .get(BASE_URL + "/v1/api/user/profile", {
+      .get(BASE_URL + '/v1/api/user/profile', {
         headers: {
-          Authorization: `Token ${token}`,
-        },
+          Authorization: `Token ${token}`
+        }
       })
       .then(res => {
-        console.log(res.data, "AAA");
+        console.log(res.data, 'AAA')
 
-        if (res.data.payment.payment_status === "PEN") {
+        if (res.data.payment.payment_status === 'PEN') {
           this.setState({
             isPayed: false,
             registrationFee: res.data.payment.payment_details.payble_reg_fees,
@@ -75,9 +75,9 @@ export default class Payment extends Component {
             accomodationFee: res.data.payment.payment_details.payble_acco_fees,
             totalFee: res.data.payment.payment_details.total_payble,
             isIIT: res.data.user_type,
-            workshopsAppNotPayed:res.data.applications
-          });
-        } else if (res.data.payment.payment_status === "SUC") {
+            workshopsAppNotPayed: res.data.applications
+          })
+        } else if (res.data.payment.payment_status === 'SUC') {
           this.setState({
             isPayed: true,
             registrationFeePayed:
@@ -86,54 +86,54 @@ export default class Payment extends Component {
               res.data.payment.payment_details.payble_acco_fees,
             accomodationFee: res.data.payment.payble_acco_fees,
             totAmtPayed: res.data.payment.payment_details.amount_paid,
-            isIIT: res.data.user_type,
-          });
+            isIIT: res.data.user_type
+          })
         } else {
           this.setState({
             isPayed: false,
             registrationFee: res.data.payment.registration_fee,
             visibleAccomodationFee: res.data.payment.accommodation_fee,
             accomodationFee: res.data.payment.accommodation_fee,
-            isIIT: res.data.user_type,
-          });
+            isIIT: res.data.user_type
+          })
         }
         //   console.log(res.data)
       })
       .catch(response => {
         // console.log("could not connect to the server");
-        alert("could not connect to the server");
-      });
+        alert('could not connect to the server')
+      })
     axios
-      .get(BASE_URL + "/v1/api/events/", {
+      .get(BASE_URL + '/v1/api/events/', {
         headers: {
-          Authorization: `Token ${token}`,
-        },
+          Authorization: `Token ${token}`
+        }
       })
       .then(res => {
-        console.log(res.data, "dfnam");
+        console.log(res.data, 'dfnam')
         this.setState({
           workshopsNotPayed: res.data,
-          noOfWorkshopsNotPayed: res.data.length,
-        });
+          noOfWorkshopsNotPayed: res.data.length
+        })
       })
       .catch(response => {
-        alert("could not connect to the server");
-      });
-  };
+        alert('could not connect to the server')
+      })
+  }
   componentDidMount = () => {
-    let token = localStorage.getItem("user_token");
+    let token = localStorage.getItem('user_token')
     // let URL = '10.42.0.1:8000'
     if (token !== undefined) {
       axios
-        .get(BASE_URL + "/v1/api/user/profile", {
+        .get(BASE_URL + '/v1/api/user/profile', {
           headers: {
-            Authorization: `Token ${token}`,
-          },
+            Authorization: `Token ${token}`
+          }
         })
         .then(res => {
-          console.log(res.data, "sfs");
+          console.log(res.data, 'sfs')
 
-          if (res.data.payment.payment_status === "PEN") {
+          if (res.data.payment.payment_status === 'PEN') {
             this.setState({
               isPayed: false,
               registrationFee: res.data.payment.payment_details.payble_reg_fees,
@@ -143,10 +143,9 @@ export default class Payment extends Component {
                 res.data.payment.payment_details.payble_acco_fees,
               totalFee: res.data.payment.payment_details.total_payble,
               isIIT: res.data.user_type,
-              workshopsAppNotPayed:res.data.applications
-
-            });
-          } else if (res.data.payment.payment_status === "SUC") {
+              workshopsAppNotPayed: res.data.applications
+            })
+          } else if (res.data.payment.payment_status === 'SUC') {
             this.setState({
               isPayed: true,
               registrationFeePayed:
@@ -156,87 +155,87 @@ export default class Payment extends Component {
               accomodationFee: res.data.payment.payble_acco_fees,
               totAmtPayed: res.data.payment.payment_details.amount_paid,
               workshopsPayed: res.data.payment.applications.filter(
-                workshop => workshop.status == "REG"
+                workshop => workshop.status == 'REG'
               ),
               noOfWorkshopsPayed: res.data.payment.applications.filter(
-                workshop => workshop.status == "REG"
+                workshop => workshop.status == 'REG'
               ).length,
-              isIIT: res.data.user_type,
-            });
+              isIIT: res.data.user_type
+            })
           } else {
             this.setState({
               isPayed: false,
               registrationFee: res.data.payment.registration_fee,
               visibleAccomodationFee: res.data.payment.accommodation_fee,
               accomodationFee: res.data.payment.accommodation_fee,
-              isIIT: res.data.user_type,
-            });
+              isIIT: res.data.user_type
+            })
           }
           //   console.log(res.data)
         })
         .catch(response => {
           // console.log("could not connect to the server");
-          alert("could not connect to the server");
-        });
+          alert('could not connect to the server')
+        })
 
       axios
-        .get(BASE_URL + "/v1/api/events/", {
+        .get(BASE_URL + '/v1/api/events/', {
           headers: {
-            Authorization: `Token ${token}`,
-          },
+            Authorization: `Token ${token}`
+          }
         })
         .then(res => {
-          console.log(res.data, "dfnam");
+          console.log(res.data, 'dfnam')
           this.setState({
             workshopsNotPayed: res.data,
-            noOfWorkshopsNotPayed: res.data.length,
-          });
+            noOfWorkshopsNotPayed: res.data.length
+          })
         })
         .catch(response => {
-          alert("could not connect to the server");
-        });
-      let ta = this.props.location.search;
+          alert('could not connect to the server')
+        })
+      let ta = this.props.location.search
       // console.log(ta,'sad')
       if (ta.length !== 0) {
         axios
-          .get(BASE_URL + "/v1/pay/complete/" + ta, {
+          .get(BASE_URL + '/v1/pay/complete/' + ta, {
             headers: {
-              Authorization: `Token ${token}`,
-            },
+              Authorization: `Token ${token}`
+            }
           })
           .then(res => {
-            window.location.href = "/dashboard/payment";
+            window.location.href = '/dashboard/payment'
             // console.log(res.data, "data");
 
-            let datePayed = res.data.date_created.substr(0, 10);
-            let totAmtPayed = res.data.amount_paid;
-            datePayed = datePayed.split("-");
-            let year = datePayed[0];
-            let month = datePayed[1];
-            let date = datePayed[2];
+            let datePayed = res.data.date_created.substr(0, 10)
+            let totAmtPayed = res.data.amount_paid
+            datePayed = datePayed.split('-')
+            let year = datePayed[0]
+            let month = datePayed[1]
+            let date = datePayed[2]
             // console(res.data,'data')
             // console.log("totalAMT", totAmtPayed);
             this.setState({
-              datePayed: date + "/" + month + "/" + year,
-              totAmtPayed: totAmtPayed,
-            });
+              datePayed: date + '/' + month + '/' + year,
+              totAmtPayed: totAmtPayed
+            })
           })
           .catch(response => {
-            alert("could not connect to the server");
-          });
+            alert('could not connect to the server')
+          })
       }
     }
-  };
+  }
 
   toggleAccomodation = e => {
     // e.preventDefault()
-    let token = localStorage.getItem("user_token");
-    let data = null;
+    let token = localStorage.getItem('user_token')
+    let data = null
     axios
-      .post(BASE_URL + "/v1/api/user/acco/toogle/", data, {
+      .post(BASE_URL + '/v1/api/user/acco/toogle/', data, {
         headers: {
-          Authorization: `Token ${token}`,
-        },
+          Authorization: `Token ${token}`
+        }
       })
       .then(res => {
         // console.log(res.data,'ddfssf')
@@ -244,7 +243,7 @@ export default class Payment extends Component {
           {
             isDiscarded: res.data.is_accommodation,
             visibleAccomodationFee: res.data.payment_details.payble_acco_fees,
-            totalFee: res.data.payment_details.total_payble,
+            totalFee: res.data.payment_details.total_payble
           },
           () => {
             // console.log(this.state.isDiscarded,'outside')
@@ -252,11 +251,11 @@ export default class Payment extends Component {
             if (this.state.isDiscarded === true) {
               // console.log(this.state.isDiscarded,'inside discard')
               document.getElementById(
-                "capayment-toggleaccomodation"
-              ).style.borderColor = "#E2574C";
+                'capayment-toggleaccomodation'
+              ).style.borderColor = '#E2574C'
               document.getElementById(
-                "capayment-toggleaccomodation"
-              ).innerHTML = "DISCARD";
+                'capayment-toggleaccomodation'
+              ).innerHTML = 'DISCARD'
               this.setState(
                 {
                   // isDiscarded: false,
@@ -265,15 +264,15 @@ export default class Payment extends Component {
                 () => {
                   // console.log(this.state.isDiscarded)
                 }
-              );
+              )
             } else {
               // console.log(this.state.isDiscarded,'inside add')
               document.getElementById(
-                "capayment-toggleaccomodation"
-              ).style.borderColor = "#F39423";
+                'capayment-toggleaccomodation'
+              ).style.borderColor = '#F39423'
               document.getElementById(
-                "capayment-toggleaccomodation"
-              ).innerHTML = "ADD";
+                'capayment-toggleaccomodation'
+              ).innerHTML = 'ADD'
               this.setState(
                 {
                   // isDiscarded: true,
@@ -282,43 +281,43 @@ export default class Payment extends Component {
                 () => {
                   // console.log(this.state.isDiscarded)
                 }
-              );
+              )
             }
           }
-        );
-      });
-  };
+        )
+      })
+  }
   toggleCoupon = e => {
-    e.preventDefault();
+    e.preventDefault()
 
     // document.getElementById("capayment-couponapply").style.borderColor="#E2574C";
 
     if (this.state.couponDiscountPercent === 0) {
-      document.getElementById("capayment-couponapply").innerHTML = "REMOVE";
+      document.getElementById('capayment-couponapply').innerHTML = 'REMOVE'
       this.setState(
         {
           isApplied: true,
-          isModalVisible: true,
+          isModalVisible: true
 
           // visibleAccomodationFee:this.state.accomodationFee,
         },
         () => {
           // console.log(this.state.isModalVisible)
         }
-      );
+      )
     } else {
-      document.getElementById("capayment-couponapply").innerHTML = "APPLY";
+      document.getElementById('capayment-couponapply').innerHTML = 'APPLY'
       this.setState(
         {
           isApplied: false,
           isModalVisible: false,
-          couponDiscountPercent: 0,
+          couponDiscountPercent: 0
           // visibleAccomodationFee:this.state.accomodationFee,
         },
         () => {
           // console.log(this.state.isModalVisible)
         }
-      );
+      )
     }
     // $("#myModal").modal();
 
@@ -346,112 +345,112 @@ export default class Payment extends Component {
     //         // console.log(this.state.isDiscarded)
     //     })
     // }
-  };
+  }
   onPay = e => {
     // e.preventDefault()
-    let token = localStorage.getItem("user_token");
+    let token = localStorage.getItem('user_token')
     if (token !== undefined) {
       // let URL = '10.42.0.1:8000'
       // console.log("sdsd", "ss");
-      window.location.assign(BASE_URL + `/v1/pay/now?order=${token}`);
+      window.location.assign(BASE_URL + `/v1/pay/now?order=${token}`)
       // console.log("sdsd", "ss");
-      let ta = window.location.search;
+      let ta = window.location.search
       // console.log(ta);
     }
-  };
+  }
   viewBillingDetails = () => {
     // console.log("ksf")
     if (!this.state.isBillingOpen) {
-      document.getElementById("capayment-paymentinfodoneu").style.display =
-        "none";
-      document.getElementById("capayment-paymentinfodonee").style.display =
-        "block";
+      document.getElementById('capayment-paymentinfodoneu').style.display =
+        'none'
+      document.getElementById('capayment-paymentinfodonee').style.display =
+        'block'
       document.getElementById(
-        "capayment-paymentstatusdone"
-      ).style.backgroundColor = "#FFFAF4";
+        'capayment-paymentstatusdone'
+      ).style.backgroundColor = '#FFFAF4'
       this.setState({
-        isBillingOpen: !this.state.isBillingOpen,
-      });
+        isBillingOpen: !this.state.isBillingOpen
+      })
     } else {
-      document.getElementById("capayment-paymentinfodonee").style.display =
-        "none";
-      document.getElementById("capayment-paymentinfodoneu").style.display =
-        "block";
+      document.getElementById('capayment-paymentinfodonee').style.display =
+        'none'
+      document.getElementById('capayment-paymentinfodoneu').style.display =
+        'block'
       document.getElementById(
-        "capayment-paymentstatusdone"
-      ).style.backgroundColor = "white";
+        'capayment-paymentstatusdone'
+      ).style.backgroundColor = 'white'
 
       this.setState({
-        isBillingOpen: !this.state.isBillingOpen,
-      });
+        isBillingOpen: !this.state.isBillingOpen
+      })
     }
-  };
+  }
   handleCancel = () => {
-    document.getElementById("capayment-couponapply").innerHTML = "APPLY";
+    document.getElementById('capayment-couponapply').innerHTML = 'APPLY'
     this.setState({
       isModalVisible: false,
       couponDiscountPercent: 0,
-      isApplied: false,
-    });
-  };
+      isApplied: false
+    })
+  }
   handleOk = () => {
     //checking if entered value exists in keys
-    let { couponcode, possibleCoupons } = this.state;
-    let index = "";
+    let { couponcode, possibleCoupons } = this.state
+    let index = ''
     // console.log(possibleCoupons["GFDS"])
 
-    let sval = "";
-    let nval = 0;
+    let sval = ''
+    let nval = 0
     try {
       try {
-        sval = document.querySelector('input[name="coupon"]:checked').value;
-        nval = parseInt(sval);
+        sval = document.querySelector('input[name="coupon"]:checked').value
+        nval = parseInt(sval)
       } catch (err) {
-        sval = "";
-        nval = 0;
+        sval = ''
+        nval = 0
       }
 
       // console.log(this.state.couponcode in this.state.possibleCoupons)
       if (this.state.couponcode in this.state.possibleCoupons) {
-        index = couponcode;
+        index = couponcode
         // console.log(index)
       } else if (nval === 0) {
-        alert("Coupon code invalid");
+        alert('Coupon code invalid')
       }
     } catch (err) {
-      alert("hi");
+      alert('hi')
     }
-    if (index !== "" && nval === 0) {
+    if (index !== '' && nval === 0) {
       this.setState(
         {
           couponDiscountPercent: possibleCoupons[index],
           isModalVisible: false,
-          isApplied: true,
+          isApplied: true
         },
         () => {}
-      );
-    } else if (index === "" && nval !== 0) {
+      )
+    } else if (index === '' && nval !== 0) {
       this.setState(
         {
           couponDiscountPercent: nval,
           isModalVisible: false,
-          isApplied: true,
+          isApplied: true
         },
         () => {}
-      );
+      )
     } else {
-      alert("Please select the coupon either way");
+      alert('Please select the coupon either way')
       // document.querySelector('input:radio[name="coupon"]:checked').prop('checked', false).checkboxradio("refresh");
       this.setState(
         {
           couponDiscountPercent: 0,
           isModalVisible: true,
-          couponcode: 0,
+          couponcode: 0
         },
         () => {}
-      );
+      )
     }
-  };
+  }
   render() {
     let {
       isCouponValid,
@@ -475,22 +474,22 @@ export default class Payment extends Component {
       couponDiscountPayed,
       visibleAccomodationFeePayed,
       discountAvailedPercentPayed,
-      couponDiscountPercentPayed,
-    } = this.state;
-    console.log("this.state", this.state);
+      couponDiscountPercentPayed
+    } = this.state
+    console.log('this.state', this.state)
     // let discountAvailed = (visibleAccomodationFee+registrationFee)*discountAvailedPercent/100//formula has to be changed
     // let convenienceFee2 = (convenienceFeeDiscount * totAmtPayed) / 100;
-    let convenienceFee1 = (convenienceFeeDiscount * totalFee) / 100;
+    let convenienceFee1 = (convenienceFeeDiscount * totalFee) / 100
     // console.log(totalFee,'conv')
     // totalFee = totalFee + convenienceFeeDiscount*totalFee/100
     // totAmtPayed = totAmtPayed + convenienceFeeDiscount*totAmtPayed/100
-    let actualFee = totalFee / 1.0236;
-    let convenienceFee2 = totalFee - actualFee;
-    couponDiscount = (registrationFee * couponDiscountPercent) / 100;
-    totalFee = Number(totalFee).toFixed(2);
-    totAmtPayed = Number(totAmtPayed).toFixed(2);
-    convenienceFee1 = Number(convenienceFee1).toFixed(2);
-    convenienceFee2 = Number(convenienceFee2).toFixed(2);
+    let actualFee = totalFee / 1.0236
+    let convenienceFee2 = totalFee - actualFee
+    couponDiscount = (registrationFee * couponDiscountPercent) / 100
+    totalFee = Number(totalFee).toFixed(2)
+    totAmtPayed = Number(totAmtPayed).toFixed(2)
+    convenienceFee1 = Number(convenienceFee1).toFixed(2)
+    convenienceFee2 = Number(convenienceFee2).toFixed(2)
     // convenienceFee = Number.toFixed(2)
     // totalFee = Number(totalFee).toFixed(2)
     // let totalamt = registrationFee+visibleAccomodationFee-discountAvailed-couponDiscount
@@ -521,8 +520,8 @@ export default class Payment extends Component {
                 <path
                   d="M22.6771 2C11.3047 2 2 11.3083 2 22.6852C2 34.062 11.3047 43.3704 22.6771 43.3704C34.0495 43.3704 43.3542 34.062 43.3542 22.6852C43.3542 11.3083 34.0495 2 22.6771 2Z"
                   stroke="#E2574C"
-                  stroke-width="3.5"
-                  stroke-miterlimit="10"
+                  strokeWidth="3.5"
+                  strokeMiterlimit="10"
                 />
                 <path
                   d="M24.7438 10.0156H20.6084V12.3427H24.7438V10.0156Z"
@@ -539,7 +538,7 @@ export default class Payment extends Component {
               </svg>
               <span className="capayment-span">Payment Status</span> : Pending
             </div>
-            {isIIT !== "IIT" && (
+            {isIIT !== 'IIT' && (
               <React.Fragment>
                 {/* {console.log(!isIIT,'idhar')} */}
                 <div className="capayment-registration1-header">
@@ -548,10 +547,10 @@ export default class Payment extends Component {
                 <div className="capayment-registrationfee">
                   <div className="capayment-spaceaboutcolon">
                     Registration Fee
-                  </div>{" "}
+                  </div>{' '}
                   :<div className="capayment-space" />
                   <div className="capayment-registrationfee-innerdiv">
-                    Rs {registrationFee}&nbsp; 
+                    Rs {registrationFee}&nbsp;
                     <strike>Rs 800</strike>
                     <div className="capayment-earlybirddiscount">
                       (Republic Week Discount)
@@ -560,15 +559,15 @@ export default class Payment extends Component {
                 </div>
                 <div className="capayment-accomodationfee">
                   <div className="capayment-spaceaboutcolon">
-                    Accomodation Fee{" "}
+                    Accomodation Fee{' '}
                     <div
                       id="capayment-toggleaccomodation"
                       className="capayment-toggleaccomodation"
                       onClick={e => this.toggleAccomodation(e)}
                     >
                       DISCARD
-                    </div>{" "}
-                  </div>{" "}
+                    </div>{' '}
+                  </div>{' '}
                   :<div className="capayment-space" />
                   Rs {visibleAccomodationFee}
                 </div>
@@ -577,8 +576,8 @@ export default class Payment extends Component {
        </div> */}
                 <div className="capayment-discountcoupon">
                   <div className="capayment-spaceaboutcolon">
-                    Coupon Discount{" "}
-                  </div>{" "}
+                    Coupon Discount{' '}
+                  </div>{' '}
                   :<div className="capayment-space" />
                   <div className="capayment-viewbillingdetails-coupondiscount">
                     - Rs {couponDiscount}
@@ -605,13 +604,13 @@ export default class Payment extends Component {
                           value={this.state.couponcode}
                           onChange={e => {
                             this.setState({
-                              couponcode: e.target.value,
-                            });
+                              couponcode: e.target.value
+                            })
                           }}
                           type="text"
                         />
                         <div className="capayment-modalmiddlerow">
-                          <hr className="capayment-modalline" /> OR{" "}
+                          <hr className="capayment-modalline" /> OR{' '}
                           <hr className="capayment-modalline" />
                         </div>
                         <div className="capayment-modallastrow">
@@ -659,10 +658,9 @@ export default class Payment extends Component {
                 letMeknowIfDiscardClicked={this.letMeknowIfDiscardClicked}
                 workshopsAppNotPayed={this.state.workshopsAppNotPayed}
               />
-              
             </div>
             <div className="capayment-discountcoupon">
-              <div className="capayment-spaceaboutcolon">Convenience Fee </div>{" "}
+              <div className="capayment-spaceaboutcolon">Convenience Fee </div>{' '}
               :<div className="capayment-space" />
               <div className="capayment-registrationfee-innerdiv">
                 Rs {convenienceFee2}
@@ -689,13 +687,13 @@ export default class Payment extends Component {
                       value={this.state.couponcode}
                       onChange={e => {
                         this.setState({
-                          couponcode: e.target.value,
-                        });
+                          couponcode: e.target.value
+                        })
                       }}
                       type="text"
                     />
                     <div className="capayment-modalmiddlerow">
-                      <hr className="capayment-modalline" /> OR{" "}
+                      <hr className="capayment-modalline" /> OR{' '}
                       <hr className="capayment-modalline" />
                     </div>
                     <div className="capayment-modallastrow">
@@ -747,7 +745,7 @@ export default class Payment extends Component {
             </div>
             <button
               onClick={e => {
-                this.onPay(e);
+                this.onPay(e)
               }}
               className="capayment-paymentbtn"
             >
@@ -756,7 +754,7 @@ export default class Payment extends Component {
           </div>
           <div className="capayment-bottomrow">
             <div className="capayment-discountcriterion">
-              {" "}
+              {' '}
               Discount Criterion
             </div>
             <div className="capayment-line2" />
@@ -774,7 +772,7 @@ export default class Payment extends Component {
             </div>
           </div>
         </div>
-      );
+      )
     } else {
       return (
         <div className="capayment-parent">
@@ -842,7 +840,7 @@ export default class Payment extends Component {
                       <path
                         d="M1.42578 2L13.4255 14L25.4258 2"
                         stroke="#F39423"
-                        stroke-width="3"
+                        strokeWidth="3"
                       />
                     </svg>
                   </div>
@@ -912,14 +910,14 @@ export default class Payment extends Component {
                       <path
                         d="M25.1602 14.6533L13.1604 2.65332L1.16016 14.6533"
                         stroke="#F39423"
-                        stroke-width="3"
+                        strokeWidth="3"
                       />
                     </svg>
                   </div>
                 </div>
               </div>
             </div>
-            {isIIT !== "IIT" && (
+            {isIIT !== 'IIT' && (
               <React.Fragment>
                 <div className="capayment-viewbillingdetails-registration">
                   Registration
@@ -927,7 +925,7 @@ export default class Payment extends Component {
                 <div className="capayment-registrationfee">
                   <div className="capayment-spaceaboutcolon">
                     Registration Fee
-                  </div>{" "}
+                  </div>{' '}
                   :<div className="capayment-space" />
                   Rs {registrationFeePayed}
                   <div className="capayment-earlybirddiscount">
@@ -936,8 +934,8 @@ export default class Payment extends Component {
                 </div>
                 <div className="capayment-accomodationfee">
                   <div className="capayment-spaceaboutcolon">
-                    Accomodation Fee{" "}
-                  </div>{" "}
+                    Accomodation Fee{' '}
+                  </div>{' '}
                   :<div className="capayment-space" />
                   Rs {visibleAccomodationFeePayed}
                 </div>
@@ -946,8 +944,8 @@ export default class Payment extends Component {
                      </div> */}
                 <div className="capayment-discountcoupon">
                   <div className="capayment-spaceaboutcolon">
-                    Coupon Discount{" "}
-                  </div>{" "}
+                    Coupon Discount{' '}
+                  </div>{' '}
                   :<div className="capayment-space" />
                   <div className="capayment-viewbillingdetails-coupondiscount">
                     - Rs {couponDiscountPayed}
@@ -1016,7 +1014,7 @@ export default class Payment extends Component {
             </div>
           </div>
         </div>
-      );
+      )
     }
   }
 }

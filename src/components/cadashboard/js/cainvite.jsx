@@ -1,87 +1,79 @@
 import React, { Component } from 'react'
-import "../css/cainvite.css";
+import '../css/cainvite.css'
 import PaymentStatus from './paymentstatus'
 import InviteBenefits from './invitebenefits'
-import { BASE_URL } from "../../../utils/urls";
-import axios from "axios";
-
-
+import { BASE_URL } from '../../../utils/urls'
+import axios from 'axios'
 
 export default class Cainvite extends Component {
-    state = {
-        loading: false,
-        visible: false,
-        invite_link : ""
-      }      
-    viewMore() {
-        document.getElementById("viewmore").style.display = "none";
-        document.getElementById("viewless").style.display = "block";
-        document.getElementById("show").style.display = "block";
-        document.getElementById("show1").style.marginBottom = "0";
-        document.getElementById("show1").style.background = "#FFFAF4";
+  state = {
+    loading: false,
+    visible: false,
+    invite_link: ''
+  }
+  viewMore() {
+    document.getElementById('viewmore').style.display = 'none'
+    document.getElementById('viewless').style.display = 'block'
+    document.getElementById('show').style.display = 'block'
+    document.getElementById('show1').style.marginBottom = '0'
+    document.getElementById('show1').style.background = '#FFFAF4'
+  }
 
+  viewLess() {
+    document.getElementById('viewmore').style.display = 'block'
+    document.getElementById('viewless').style.display = 'none'
+    document.getElementById('show').style.display = 'none'
+    document.getElementById('show1').style.background = '#FFF'
+  }
 
+  copyLink() {
+    var copyText = document.getElementById('camyinput')
+    copyText.select()
+    document.execCommand('copy')
+  }
 
+  componentDidMount = () => {
+    let token = localStorage.getItem('user_token')
 
+    if (token !== undefined) {
+      axios
+        .get(BASE_URL + '/v1/api/user/profile', {
+          headers: {
+            Authorization: `Token ${token}`
+          }
+        })
+        .then(res => {
+          this.setState({ invite_link: res.data.invite_url })
+        })
+        .catch(response => {
+          //   window.location.href = "/login";
+        })
     }
+  }
 
-    viewLess() {
-        document.getElementById("viewmore").style.display = "block";
-        document.getElementById("viewless").style.display = "none";
-        document.getElementById("show").style.display = "none";
-        document.getElementById("show1").style.background = "#FFF"
-    }
+  render() {
+    let status = 'Done'
+    let stat = 'Notdone'
 
-    copyLink() {
-        var copyText = document.getElementById("camyinput");
-        copyText.select();
-        document.execCommand("copy");
+    return (
+      <div className="cainvite-parent">
+        <div className="cainviteparent-heading">Invites here</div>
+        <div className="cainvite-line1"></div>
+        <div className="cainvite-linkparent">
+          <div className="cainvite-linkparent-heading">Invite link</div>
 
-    }
-
-    componentDidMount = () => {
-        let token = localStorage.getItem("user_token");
-    
-        if (token !== undefined) {
-          axios
-            .get(BASE_URL + "/v1/api/user/profile", {
-              headers: {
-                Authorization: `Token ${token}`,
-              },
-            })
-            .then(res => {
-              this.setState({ invite_link : res.data.invite_url });
-    
-            })
-            .catch(response => {
-            //   window.location.href = "/login";
-            });
-        }
-      };
-  
-    render() {
-        let status="Done";
-        let stat="Notdone";
-        
-        return (
-            <div className="cainvite-parent">
-
-                <div className="cainviteparent-heading">
-                    Invites here
-                </div>
-                <div className="cainvite-line1"></div>
-                <div className="cainvite-linkparent">
-
-                    <div className="cainvite-linkparent-heading">
-                        Invite link
-                    </div>
-
-                    <div className="cainvite-linkparent-input">
-                        <input value = {this.state.invite_link} type="text" id="camyinput"></input>
-                        <button id="camyinputbutton" onClick={this.copyLink}>Copy link</button>
-                    </div>
-                </div>
-{/*
+          <div className="cainvite-linkparent-input">
+            <input
+              value={this.state.invite_link}
+              type="text"
+              id="camyinput"
+            ></input>
+            <button id="camyinputbutton" onClick={this.copyLink}>
+              Copy link
+            </button>
+          </div>
+        </div>
+        {/*
 
                 <div id="show1" className="cainvite-register-parent">
 
@@ -159,31 +151,26 @@ export default class Cainvite extends Component {
 
 
                
-*/}         
-            <PaymentStatus />
+*/}
+        <PaymentStatus />
 
-             <div className="cainviteparent-heading">
-                    Perks
-                </div>
-                <div className="cainvite-line2"></div>
-                <div className="cainviteparent-perks">
-                    <div className="cainviteparent-perks-heading">
-                    Benefits of sending invites
-                    </div>
-                    <div className="cainviteparent-perks-childparent">
-                    The following criteria were used to decide the waiver in fees for all the participants.
-                    
-                    </div>
+        <div className="cainviteparent-heading">Perks</div>
+        <div className="cainvite-line2"></div>
+        <div className="cainviteparent-perks">
+          <div className="cainviteparent-perks-heading">
+            Benefits of sending invites
+          </div>
+          <div className="cainviteparent-perks-childparent">
+            The following criteria were used to decide the waiver in fees for
+            all the participants.
+          </div>
 
-                    <div className="cainviteparent-perks-child">
-                        10% off on the registration fee on each successful payment done through invite link
-
-                    </div> 
-                   
-                </div>
-                
-            </div>
-
-        )
-    }
+          <div className="cainviteparent-perks-child">
+            10% off on the registration fee on each successful payment done
+            through invite link
+          </div>
+        </div>
+      </div>
+    )
+  }
 }

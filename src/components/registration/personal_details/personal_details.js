@@ -56,34 +56,29 @@ class Personaldetail extends Component {
   }
   handleSubmit = () => {
     if (this.state.name_error !== '' && !this.state.name_error_bool) {
-      return this.emptyValidate("name")
+      return this.emptyValidate('name')
     }
 
     if (!this.state.email) {
-      return this.emptyValidate("email")
-    }
-    else if (this.state.email && this.state.email_error)
+      return this.emptyValidate('email')
+    } else if (this.state.email && this.state.email_error)
       return this.email_validate()
     // else if(this.state.email!== '' && this.state.email_error_bool)
     // return this.email_validate()
-
 
     // if ((this.state.email_error !== '' && !this.state.email_error_bool)||this.state.email=='') {
     //   return this.emptyValidate("email ")
     // }
 
-    if (!this.state.phone)
-      return this.emptyValidate("Phone number ")
+    if (!this.state.phone) return this.emptyValidate('Phone number ')
     else if (this.state.phone && this.state.phone_error_bool)
-      return this.phonevalidate();
+      return this.phonevalidate()
 
-    if (this.state.college == '')
-      return this.emptyValidate("college")
+    if (this.state.college == '') return this.emptyValidate('college')
     else if (this.state.college !== '' && this.state.college_error_bool)
       return this.college_validate()
 
-    if (this.state.country == '')
-      return this.emptyValidate("country")
+    if (this.state.country == '') return this.emptyValidate('country')
     else if (this.state.country !== '' && this.state.country_error_bool)
       return this.country_validate()
 
@@ -91,15 +86,12 @@ class Personaldetail extends Component {
     //   return this.emptyValidate("city ")
     // }
 
-    if (this.state.state == '')
-      return this.emptyValidate("state")
+    if (this.state.state == '') return this.emptyValidate('state')
     else if (this.state.state !== '' && this.state.state_error_bool)
       return this.state_validate()
-    if (!this.state.tshirt_size)
-      return this.emptyValidate("tshirt")
+    if (!this.state.tshirt_size) return this.emptyValidate('tshirt')
     else if (this.state.tshirt_size !== '' && this.state.tshirt_error_bool)
       return this.tshirt_validate()
-
 
     const {
       name,
@@ -151,50 +143,55 @@ class Personaldetail extends Component {
     }
     this.props.handleBack(data)
   }
-  emptyValidate = (data) => {
+  emptyValidate = data => {
     setTimeout(
-      function () {
+      function() {
         switch (data) {
-          case "email": this.setState({
-            email_error_bool: true,
-            email_error: "Email cannot be empty"
-          })
-            break;
-          case "Phone number ": this.setState({
-            phone_error_bool: true,
-            phone_error: "Phone number cannot be empty"
-          })
-            break;
-          case "college": this.setState({
-            college_error_bool: true,
-            college_error: 'College cannot be empty'
-          })
-            break;
-          case "tshirt": this.setState({
-            tshirt_error_bool: true,
-            tshirt_error: 'Tshirt Size cannot be empty'
-          })
-            break;
-          case "country": this.setState({
-            country_error_bool: true,
-            country_error: 'Country Name cannot be empty'
-          })
-            break;
-          case "state": this.setState({
-            state_error_bool: true,
-            state_error: 'State Name cannot be empty'
-          })
-            break;
+          case 'email':
+            this.setState({
+              email_error_bool: true,
+              email_error: 'Email cannot be empty'
+            })
+            break
+          case 'Phone number ':
+            this.setState({
+              phone_error_bool: true,
+              phone_error: 'Phone number cannot be empty'
+            })
+            break
+          case 'college':
+            this.setState({
+              college_error_bool: true,
+              college_error: 'College cannot be empty'
+            })
+            break
+          case 'tshirt':
+            this.setState({
+              tshirt_error_bool: true,
+              tshirt_error: 'Tshirt Size cannot be empty'
+            })
+            break
+          case 'country':
+            this.setState({
+              country_error_bool: true,
+              country_error: 'Country Name cannot be empty'
+            })
+            break
+          case 'state':
+            this.setState({
+              state_error_bool: true,
+              state_error: 'State Name cannot be empty'
+            })
+            break
         }
       }.bind(this),
       1000
     )
   }
 
-
   phonevalidate = () => {
     setTimeout(
-      function () {
+      function() {
         if (this.state.phone.length < 10 || this.state.phone.length > 10) {
           this.setState({
             phone_error_bool: true,
@@ -212,7 +209,7 @@ class Personaldetail extends Component {
   }
   name_validate = () => {
     setTimeout(
-      function () {
+      function() {
         if (this.state.name.length < 3) {
           this.setState({
             name_error_bool: true,
@@ -230,8 +227,8 @@ class Personaldetail extends Component {
   }
   email_validate = () => {
     setTimeout(
-      function () {
-        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      function() {
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         if (!re.test(this.state.email)) {
           this.setState({
             email_error_bool: true,
@@ -249,7 +246,7 @@ class Personaldetail extends Component {
   }
   tshirt_validate = () => {
     setTimeout(
-      function () {
+      function() {
         if (this.state.tshirt_size !== '') {
           this.setState({
             tshirt_error_bool: false,
@@ -267,7 +264,7 @@ class Personaldetail extends Component {
   }
   college_validate = () => {
     setTimeout(
-      function () {
+      function() {
         if (this.state.college !== '') {
           this.setState({
             college_error_bool: false,
@@ -285,7 +282,7 @@ class Personaldetail extends Component {
   }
   city_validate = () => {
     setTimeout(
-      function () {
+      function() {
         if (this.state.city !== '') {
           this.setState({
             city_error_bool: false,
@@ -303,7 +300,7 @@ class Personaldetail extends Component {
   }
   country_validate = () => {
     setTimeout(
-      function () {
+      function() {
         if (this.state.country !== '') {
           this.setState({
             country_error_bool: false,
@@ -321,7 +318,7 @@ class Personaldetail extends Component {
   }
   state_validate = () => {
     setTimeout(
-      function () {
+      function() {
         if (this.state.state !== '') {
           this.setState({
             state_error_bool: false,
@@ -530,7 +527,9 @@ class Personaldetail extends Component {
                       ) : null}
                     </span>
                   </div>
-                  <label htmlFor="inputTshirt">T-Shirt Size(XS,S,M,L,XL,XXL)</label>
+                  <label htmlFor="inputTshirt">
+                    T-Shirt Size(XS,S,M,L,XL,XXL)
+                  </label>
                   <div className="personaldetails_input_feild">
                     <input
                       id="inputTshirt"

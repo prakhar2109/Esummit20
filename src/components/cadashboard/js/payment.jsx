@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import "../css/payment.css";
-import CriteriaMapping from "./discountcriterias";
+import React, { Component } from 'react'
+import '../css/payment.css'
+import CriteriaMapping from './discountcriterias'
 // import { Modal } from 'antd';
 // import Coupon from './coupon'
 
 export default class Payment extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       isPayed: false, //if payment is done, value will come from backend
-      possibleCoupons: { GFDS: "50" }, //coupons which are to be entered
+      possibleCoupons: { GFDS: '50' }, //coupons which are to be entered
       registrationFee: 800, //data if payment not done
       accomodationFee: 1000,
       visibleAccomodationFee: 1000,
@@ -19,8 +19,8 @@ export default class Payment extends Component {
       couponDiscountPercent: 0,
       isBillingOpen: false,
       isModalVisible: false,
-      couponcode: "",
-      couponSelected: "",
+      couponcode: '',
+      couponSelected: '',
 
       //if payment is done isPayed will become true
       // values will come from backend
@@ -28,74 +28,74 @@ export default class Payment extends Component {
       accomodationFeePayed: 1000,
       visibleAccomodationFeePayed: 1000,
       discountAvailedPercentPayed: 20,
-      couponDiscountPercentPayed: 0,
-    };
+      couponDiscountPercentPayed: 0
+    }
   }
 
   toggleAccomodation = e => {
     // e.preventDefault()
     if (this.state.isDiscarded) {
       document.getElementById(
-        "capayment-toggleaccomodation"
-      ).style.borderColor = "#E2574C";
-      document.getElementById("capayment-toggleaccomodation").innerHTML =
-        "Discard";
+        'capayment-toggleaccomodation'
+      ).style.borderColor = '#E2574C'
+      document.getElementById('capayment-toggleaccomodation').innerHTML =
+        'Discard'
       this.setState(
         {
           isDiscarded: false,
-          visibleAccomodationFee: this.state.accomodationFee,
+          visibleAccomodationFee: this.state.accomodationFee
         },
         () => {
           // console.log(this.state.isDiscarded)
         }
-      );
+      )
     } else {
       document.getElementById(
-        "capayment-toggleaccomodation"
-      ).style.borderColor = "#F39423";
-      document.getElementById("capayment-toggleaccomodation").innerHTML = "Add";
+        'capayment-toggleaccomodation'
+      ).style.borderColor = '#F39423'
+      document.getElementById('capayment-toggleaccomodation').innerHTML = 'Add'
       this.setState(
         {
           isDiscarded: true,
-          visibleAccomodationFee: 0,
+          visibleAccomodationFee: 0
         },
         () => {
           // console.log(this.state.isDiscarded)
         }
-      );
+      )
     }
-  };
+  }
   toggleCoupon = e => {
-    e.preventDefault();
+    e.preventDefault()
 
     // document.getElementById("capayment-couponapply").style.borderColor="#E2574C";
 
     if (this.state.couponDiscountPercent === 0) {
-      document.getElementById("capayment-couponapply").innerHTML = "Remove";
+      document.getElementById('capayment-couponapply').innerHTML = 'Remove'
       this.setState(
         {
           isApplied: true,
-          isModalVisible: true,
+          isModalVisible: true
 
           // visibleAccomodationFee:this.state.accomodationFee,
         },
         () => {
           // console.log(this.state.isModalVisible)
         }
-      );
+      )
     } else {
-      document.getElementById("capayment-couponapply").innerHTML = "Apply";
+      document.getElementById('capayment-couponapply').innerHTML = 'Apply'
       this.setState(
         {
           isApplied: false,
           isModalVisible: false,
-          couponDiscountPercent: 0,
+          couponDiscountPercent: 0
           // visibleAccomodationFee:this.state.accomodationFee,
         },
         () => {
           // console.log(this.state.isModalVisible)
         }
-      );
+      )
     }
     // $("#myModal").modal();
 
@@ -123,129 +123,129 @@ export default class Payment extends Component {
     //         // console.log(this.state.isDiscarded)
     //     })
     // }
-  };
-  onPay = e => {};
+  }
+  onPay = e => {}
   viewBillingDetails = () => {
     // console.log("ksf")
     if (!this.state.isBillingOpen) {
-      document.getElementById("capayment-paymentinfodoneu").style.display =
-        "none";
-      document.getElementById("capayment-paymentinfodonee").style.display =
-        "block";
+      document.getElementById('capayment-paymentinfodoneu').style.display =
+        'none'
+      document.getElementById('capayment-paymentinfodonee').style.display =
+        'block'
       this.setState({
-        isBillingOpen: !this.state.isBillingOpen,
-      });
+        isBillingOpen: !this.state.isBillingOpen
+      })
     } else {
-      document.getElementById("capayment-paymentinfodonee").style.display =
-        "none";
-      document.getElementById("capayment-paymentinfodoneu").style.display =
-        "block";
+      document.getElementById('capayment-paymentinfodonee').style.display =
+        'none'
+      document.getElementById('capayment-paymentinfodoneu').style.display =
+        'block'
       this.setState({
-        isBillingOpen: !this.state.isBillingOpen,
-      });
+        isBillingOpen: !this.state.isBillingOpen
+      })
     }
-  };
+  }
   handleCancel = () => {
-    document.getElementById("capayment-couponapply").innerHTML = "Apply";
+    document.getElementById('capayment-couponapply').innerHTML = 'Apply'
     this.setState({
       isModalVisible: false,
       couponDiscountPercent: 0,
-      isApplied: false,
-    });
-  };
+      isApplied: false
+    })
+  }
   handleOk = () => {
     //checking if entered value exists in keys
-    let { couponcode, possibleCoupons } = this.state;
-    let index = "";
+    let { couponcode, possibleCoupons } = this.state
+    let index = ''
     // console.log(possibleCoupons["GFDS"])
 
-    let sval = "";
-    let nval = 0;
+    let sval = ''
+    let nval = 0
     try {
       try {
-        sval = document.querySelector('input[name="coupon"]:checked').value;
-        nval = parseInt(sval);
+        sval = document.querySelector('input[name="coupon"]:checked').value
+        nval = parseInt(sval)
       } catch (err) {
-        sval = "";
-        nval = 0;
+        sval = ''
+        nval = 0
       }
 
       // console.log(this.state.couponcode in this.state.possibleCoupons)
       if (this.state.couponcode in this.state.possibleCoupons) {
-        index = couponcode;
+        index = couponcode
         // console.log(index)
       } else if (nval === 0) {
-        alert("Coupon code invalid");
+        alert('Coupon code invalid')
       }
     } catch (err) {
-      alert("hi");
+      alert('hi')
     }
-    if (index !== "" && nval === 0) {
+    if (index !== '' && nval === 0) {
       this.setState(
         {
           couponDiscountPercent: possibleCoupons[index],
           isModalVisible: false,
-          isApplied: true,
+          isApplied: true
         },
         () => {}
-      );
-    } else if (index === "" && nval !== 0) {
+      )
+    } else if (index === '' && nval !== 0) {
       this.setState(
         {
           couponDiscountPercent: nval,
           isModalVisible: false,
-          isApplied: true,
+          isApplied: true
         },
         () => {}
-      );
+      )
     } else {
-      alert("Please select the coupon either way");
+      alert('Please select the coupon either way')
       // document.querySelector('input:radio[name="coupon"]:checked').prop('checked', false).checkboxradio("refresh");
       this.setState(
         {
           couponDiscountPercent: 0,
           isModalVisible: true,
-          couponcode: 0,
+          couponcode: 0
         },
         () => {}
-      );
+      )
     }
-  };
+  }
   render() {
     let {
       isPayed,
       registrationFee,
       visibleAccomodationFee,
       discountAvailedPercent,
-      couponDiscountPercent,
-    } = this.state;
+      couponDiscountPercent
+    } = this.state
     let discountAvailed =
       ((visibleAccomodationFee + registrationFee) * discountAvailedPercent) /
-      100; //formula has to be changed
-    let couponDiscount = (registrationFee * couponDiscountPercent) / 100;
+      100 //formula has to be changed
+    let couponDiscount = (registrationFee * couponDiscountPercent) / 100
     let totalamt =
       registrationFee +
       visibleAccomodationFee -
       discountAvailed -
-      couponDiscount;
+      couponDiscount
 
     let {
       registrationFeePayed,
       visibleAccomodationFeePayed,
       discountAvailedPercentPayed,
-      couponDiscountPercentPayed,
-    } = this.state;
+      couponDiscountPercentPayed
+    } = this.state
     let discountAvailedPayed =
       ((visibleAccomodationFeePayed + registrationFeePayed) *
         discountAvailedPercentPayed) /
-      100; //formula has to be changed
+      100 //formula has to be changed
     let couponDiscountPayed =
-      (registrationFeePayed * couponDiscountPercentPayed) / 100;
+      (registrationFeePayed * couponDiscountPercentPayed) / 100
     let totalamtPayed =
       registrationFeePayed +
       visibleAccomodationFeePayed -
       discountAvailedPayed -
-      couponDiscountPayed;
+      couponDiscountPayed
 
     if (!isPayed) {
       return (
@@ -336,7 +336,7 @@ export default class Payment extends Component {
                     </div>
                 </div> */}
         </div>
-      );
+      )
     } else {
       return (
         <div className="capayment-parent">
@@ -381,7 +381,7 @@ export default class Payment extends Component {
                   <path
                     d="M1.42578 2L13.4255 14L25.4258 2"
                     stroke="#F39423"
-                    stroke-width="3"
+                    strokeWidth="3"
                   />
                 </svg>
               </div>
@@ -419,33 +419,38 @@ export default class Payment extends Component {
             </div>
 
             <div className="capayment-registrationfee">
-              <div className="capayment-spaceaboutcolon">Registeration Fee</div>{" "}
-              :<div className="capayment-space" />Rs&nbsp;{registrationFeePayed}
+              <div className="capayment-spaceaboutcolon">Registeration Fee</div>{' '}
+              :<div className="capayment-space" />
+              Rs&nbsp;{registrationFeePayed}
             </div>
             <div className="capayment-accomodationfee">
-              <div className="capayment-spaceaboutcolon">Accomodation Fee </div>{" "}
-              :<div className="capayment-space" />Rs&nbsp;
+              <div className="capayment-spaceaboutcolon">Accomodation Fee </div>{' '}
+              :<div className="capayment-space" />
+              Rs&nbsp;
               {visibleAccomodationFeePayed}
             </div>
             <div className="capayment-discountavailed">
               <div className="capayment-spaceaboutcolon">
-                {discountAvailedPercent}% Discount availed*{" "}
+                {discountAvailedPercent}% Discount availed*{' '}
               </div>
-              :<div className="capayment-space" />Rs&nbsp;{discountAvailedPayed}
+              :<div className="capayment-space" />
+              Rs&nbsp;{discountAvailedPayed}
             </div>
             <div className="capayment-discountcoupon">
-              <div className="capayment-spaceaboutcolon">Coupon Discount </div>{" "}
-              :<div className="capayment-space" />Rs&nbsp;{couponDiscountPayed}
+              <div className="capayment-spaceaboutcolon">Coupon Discount </div>{' '}
+              :<div className="capayment-space" />
+              Rs&nbsp;{couponDiscountPayed}
             </div>
             <div className="capayment-horizontalline" />
             <div className="capayment-totalamt">
               <div className="capayment-spaceaboutcolon">Total Amount</div>:
-              <div className="capayment-space" />Rs&nbsp;{totalamtPayed}
+              <div className="capayment-space" />
+              Rs&nbsp;{totalamtPayed}
             </div>
           </div>
           <div className="capayment-bottomrow">
             <div className="capayment-discountcriterion">
-              {" "}
+              {' '}
               Discount Criterion
             </div>
             <div className="capayment-line2" />
@@ -463,7 +468,7 @@ export default class Payment extends Component {
             </div>
           </div>
         </div>
-      );
+      )
     }
   }
 }
