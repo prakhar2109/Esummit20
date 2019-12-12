@@ -58,9 +58,9 @@
     margin-top:10%; 
     margin-left: auto;
     margin-right: auto;
-    background-color: #F39423;
+    background-color: #359E9A;;
     color: white;
-    text-transform: lowercase;
+    text-transform: uppercase;
     max-width: 8.79vh;
     height: 8.79vh;
     width: 8.79vh;
@@ -75,6 +75,7 @@
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    border-top-left-radius:50% ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,20 +85,31 @@
     text-align: center;
     font-weight: 500;
     margin-bottom: 0;
-    color: #4F4F4F;
     font-size:14.2px;
-    font-family:"ProximaNova-Semibold" !important; 
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.87);
     text-decoration: none !important;
 }
 #scoreWritten{
-    font-size: 85%;
-    color: rgba(79, 79, 79, 0.44);
-    margin-left: 7.54%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9.94px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 #scoreValue{
     float: right;
-    margin-right: 7.54%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9.94px;
+    text-align: center;
+
+    color: #09C9C3;
 }
 .progress{
     margin-top: 5%;
@@ -148,12 +160,18 @@
 }
 .linkEventson-inactive{
 
-    padding-left: 15.14%;
+    /* padding-left: 11.3%; */
+    padding: 1% 11.3%;
 
 }
 #optionsToggle a{
     color: rgba(255, 255, 255, 0.38);
-font-family:"ProximaNova-Semibold" !important; 
+/* font-family:"ProximaNova-Semibold" !important;  */
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 1.25rem;
+padding: .9% 0;
 
 }
 
@@ -163,18 +181,15 @@ text-decoration:none !important;
 
 }
 
-
-
 #rightPane{
-    
     display: inline;   
 }
 #tasksButton{
     color: #333333;
 }
 #leaderboardButton{
-    color: rgba(189, 189, 189, 0.55);
-    padding-left: 15.14%;
+    color: rgba(189, 189, 189, 0.38);
+    padding-left: 11.3%;
 }
 #submitButton{
     display: flex;
@@ -194,44 +209,69 @@ text-decoration:none !important;
 }
 
 .linkEventson{
-    padding-left: 10%;
-    border-left: 2px solid #F39423;
-    color:#333333 !important;
+    /* padding-left: 11.3%; */
+    padding: 1% 11.3%;
+    background: linear-gradient(270deg, #0F9DB1 53.24%, rgba(15, 157, 177, 0.5) 100%);
+    opacity: 0.2;
+    color: #359D9A !important;
     text-decoration:none !important;
     font-family:"ProximaNova-Semibold" !important; 
 
 }
+.linkEventson a{
+    color: #359D9A !important;
+
+}
 #sidebar-dashboard-esummitId {
-    color: #4F4F4F;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
 }
 #sidebar-dashboard-esummitId-value{
     float: right;
-    color: #1A4D66;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #359D9A;
 
 }
 .sidebar-dashboard-esummit {
     font-size: 9.94px;
+    padding: 1rem 0;
    
     margin-left: 7.54%;
     margin-right:7.54%;
 }
-.sidebar-dashboard-box{
- 
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    margin-top: 5vh;
-}
+
 #dashboard-typename{
     font-size: 10px;
     text-align:center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+
+color: rgba(255, 255, 255, 0.87);
 }
 .link-viewprofile{
-    color: #F39423 !important;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 1.25rem 0;
 }
 
 .side-navbar-details{
     background: #0D1719;
     margin: 5%;
+    overflow: auto;
 }
 @media only screen and (max-width: 900px){
 
@@ -254,15 +294,24 @@ height: fit-content;
 
 }
 #dashboard-typename{
-    font-size: 14px;
+    font-size: 12px;
 }
 .sidebar-dashboard-esummit {
-    font-size: 14px;
+    font-size:1rem;
+    line-height: 1.5rem;
+    padding: 1rem 0;
 
+}
+#scoreWritten{
+font-size: 1rem;
+}
+
+#scoreValue{
+font-size: 1rem;
 }
 #submitButton button{
     cursor: pointer;
-    color: #E24F3B;
+    color:#359D9A;
     font-weight: 500;
     font-size: 24px;
     margin-left: auto;
@@ -274,10 +323,11 @@ height: fit-content;
 #name{
     padding-top: 10%;
     text-align: center;
-    font-weight: 500;
-    color: #4F4F4F;
     font-size:24px;
     text-decoration: none !important;
+}
+#scoreValue{
+    font-size: 1rem;
 }
 }
 @media (max-width: 1500px){

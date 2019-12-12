@@ -57,15 +57,15 @@ class caLeaderboard extends Component {
   render() {
     let { name, score, data } = this.state
     // let profile = this.state.data.user_type
-    let profile="CA"
+    let profile = "CA"
     let profile_display
-    let scorePercentage = (score / 10000) * 100 + ''
+    let scorePercentage = (score/ 10000) * 100 + ''
     let options
     // let is_ca =
     //   this.state.data.user_type === 'AMB' || this.state.data.user_type === 'CA'
 
-    let is_ca=true
-    console.log(`${profile}aaaaa${is_ca}`,"abdsmnbdasn")
+    let is_ca = true
+    console.log(`${profile}aaaaa${is_ca}`, "abdsmnbdasn")
 
     if (profile === 'AMB') {
       profile_display = 'CAMPUS AMBASSADOR'
@@ -85,14 +85,15 @@ class caLeaderboard extends Component {
     if (is_ca) {
       options = (
         <>
-          <span>
-            <Link
-              to="/dashboard/task"
-              className={
+        <div className={
                 this.state.activeState === 'task'
                   ? 'linkEventson'
                   : 'linkEventson-inactive'
-              }
+              }>
+         
+            <Link
+              to="/dashboard/task"
+              
               onClick={() => {
                 this.setActive('task')
               }}
@@ -100,26 +101,27 @@ class caLeaderboard extends Component {
               TASKS
             </Link>
             <br />
-          </span>
+          
+          </div>
 
-          {
-            <span>
-              <Link
-                to="/dashboard/leader"
-                className={
+          
+            
+              <div className={
                   this.state.activeState === 'leaderboard'
                     ? 'linkEventson'
                     : 'linkEventson-inactive'
-                }
+                }>
+              <Link
+                to="/dashboard/leader"
+                
                 onClick={() => {
                   this.setActive('leaderboard')
                 }}
               >
                 LEADERBOARD
               </Link>
-              <br />
-            </span>
-          }
+              </div>
+          
         </>
       )
     } else {
@@ -130,71 +132,73 @@ class caLeaderboard extends Component {
         <Header />
         <div id="container">
           <div id="leftPane">
-            
+
             <a href="/">
               {/* <img id="logo" src={logo} alt="" /> */}
               <div className="leftpane-esummit-logo"></div>
             </a>
-            
-          <div className="side-navbar-details">
-            
 
-            <Link
-              to="/dashboard/Viewprofile"
-              onClick={() => {
-                this.setActive('Viewprofile')
-              }}
-              className="link-viewprofile"
-            >
-              <div id="dropShape">{name[0]}</div>
-              <p id="name">{name}</p>
-            </Link>
-            <p id="dashboard-typename">{profile_display}</p>
-            <div className="sidebar-dashboard-box">
-              <div className="sidebar-dashboard-esummit">
-                <span id="sidebar-dashboard-esummitId">E-Summit’19 ID</span>
-                <span id="sidebar-dashboard-esummitId-value">
-                  {data.esummit_id}
-                </span>
+            <div className="side-navbar-details">
+
+
+            
+                <div id="dropShape">{name[0]}A</div>
+                <p id="name">{name}Prakhar</p>
+            
+              <p id="dashboard-typename">{profile_display}</p>
+              {is_ca && (
+                <div className="sidebar-dashboard-esummit">
+                  <span id="scoreWritten">SCORE</span>
+                  <span id="scoreValue">{score}123/10000</span>
+                </div>
+              )}
+              {/* {is_ca && (
+                <div className="progress">
+                  <div
+                    className="progress-bar bg-custom"
+                    style={{
+                      width: scorePercentage + '%'
+                    }}
+                  />
+                </div>
+              )} */}
+              <div className="sidebar-dashboard-box">
+                <div className="sidebar-dashboard-esummit">
+                  <span id="sidebar-dashboard-esummitId">E-Summit’19 ID</span>
+                  <span id="sidebar-dashboard-esummitId-value">
+                    {data.esummit_id}ES12122
+                  </span>
+                </div>
               </div>
-            </div>
-            {/*
+              
               <div className="sidebar-dashboard-esummit">
                 <span id="sidebar-dashboard-esummitId">
                   Contingent No (Leader)
                 </span>
                 <span id="sidebar-dashboard-esummitId-value">CN 2</span>
               </div>
+              
+              <Link
+                to="/dashboard/Viewprofile" 
+              >
+                <div className="link-viewprofile"  onClick={() => {
+                  this.setActive('Viewprofile')
+                }}>
+                ViewProfile
+                </div>
+              </Link>
+              
             </div>
-              */}
-            {is_ca && (
-              <div className="score">
-                <span id="scoreWritten">SCORE</span>
-                <span id="scoreValue">{score}/10000</span>
-              </div>
-            )}
-            {is_ca && (
-              <div className="progress">
-                <div
-                  className="progress-bar bg-custom"
-                  style={{
-                    width: scorePercentage + '%'
-                  }}
-                />
-              </div>
-            )}
-          </div>
             <div id="optionsToggle">
               {options}
-
-              <span>
-                <Link
-                  to="/dashboard/payment"
-                  className={
+              <div  className={
                     this.state.activeState === 'payment'
                       ? 'linkEventson'
                       : 'linkEventson-inactive'
-                  }
+                  }>
+                <Link
+                  to="/dashboard/payment"
+                 
                   onClick={() => {
                     this.setActive('payment')
                   }}
@@ -202,16 +206,15 @@ class caLeaderboard extends Component {
                   PAYMENT
                 </Link>
                 <br />
-              </span>
-
-              <span>
-                <Link
-                  to="/dashboard/invite"
-                  className={
+              </div>
+              <div   className={
                     this.state.activeState === 'invite'
                       ? 'linkEventson'
                       : 'linkEventson-inactive'
-                  }
+                  }>
+                <Link
+                  to="/dashboard/invite"
+                
                   onClick={() => {
                     this.setActive('invite')
                   }}
@@ -219,17 +222,16 @@ class caLeaderboard extends Component {
                   INVITE
                 </Link>
                 <br />
-              </span>
-
+              </div>
               {profile !== 'IIT' && (
-                <span>
+                <div  className={
+                  this.state.activeState === 'contigent'
+                    ? 'linkEventson'
+                    : 'linkEventson-inactive'
+                }>
                   <Link
                     to="/dashboard/contingent"
-                    className={
-                      this.state.activeState === 'contigent'
-                        ? 'linkEventson'
-                        : 'linkEventson-inactive'
-                    }
+                   
                     onClick={() => {
                       this.setActive('contigent')
                     }}
@@ -237,17 +239,16 @@ class caLeaderboard extends Component {
                     CONTINGENT
                   </Link>
                   <br />
-                </span>
-              )}
-
-              <span>
-                <Link
-                  to="/dashboard/Events"
-                  className={
+                </div>
+                              )}
+              <div   className={
                     this.state.activeState === 'Events'
                       ? 'linkEventson'
                       : 'linkEventson-inactive'
-                  }
+                  }>
+                <Link
+                  to="/dashboard/Events"
+                
                   onClick={() => {
                     this.setActive('Events')
                   }}
@@ -255,8 +256,7 @@ class caLeaderboard extends Component {
                   EVENTS
                 </Link>
                 <br />
-              </span>
-
+              </div>
               {/*<span id="leaderboardButton">LeaderBoard</span>*/}
               {is_ca && (
                 <div id="leaderboardButton">
