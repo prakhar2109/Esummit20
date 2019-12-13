@@ -21,7 +21,6 @@ export default class ComingSoon extends Component {
     let token = localStorage.getItem('user_token')
     // document.getElementById("main_class").style.marginTop = '0px';
 
-
     axios
       .get(BASE_URL + '/v1/api/user/profile', {
         headers: {
@@ -100,35 +99,39 @@ export default class ComingSoon extends Component {
     }
 
     if (
-      2 ==2 ||
+      2 == 2 ||
       this.state.data.user_type === 'AMB' ||
       this.state.data.user_type === 'CA'
     ) {
       options = (
         <>
           <Link to="/dashboard/task">
-            <div className={
-              this.state.activeState === 'task'
-                ? 'linkEventson'
-                : 'linkEventson-inactive'
-            }
+            <div
+              className={
+                this.state.activeState === 'task'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
               onClick={() => {
                 this.setActive('task')
-              }}>
+              }}
+            >
               TASKS
-              </div>
+            </div>
           </Link>
           <Link to="/dashboard/leader">
-            <div className={
-              this.state.activeState === 'leaderboard'
-                ? 'linkEventson'
-                : 'linkEventson-inactive'
-            }
+            <div
+              className={
+                this.state.activeState === 'leaderboard'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
               onClick={() => {
                 this.setActive('leaderboard')
-              }}>
+              }}
+            >
               LEADERBOARD
-              </div>
+            </div>
           </Link>
         </>
       )
@@ -149,48 +152,59 @@ export default class ComingSoon extends Component {
             className="fas fa-bars new-navbar-i"
             onClick={this.handle_menu}
           >
-            <span><i></i></span>
-            <span><i></i></span>
-            <span><i></i></span>
+            <span>
+              <i></i>
+            </span>
+            <span>
+              <i></i>
+            </span>
+            <span>
+              <i></i>
+            </span>
           </div>
           <div
             id="close_button"
             className="new-navbar-i span-cross"
             onClick={this.hide_menu}
           >
-            <span><i></i></span>
-            <span><i></i></span>
-            <span><i></i></span>
+            <span>
+              <i></i>
+            </span>
+            <span>
+              <i></i>
+            </span>
+            <span>
+              <i></i>
+            </span>
           </div>
         </div>
         <div id="phone" className="mob_menu">
           <div className="dashboard-mobile-navbar">
             <div id="droperShape">{name[0]}p</div>
             <div className="headerdata">
-                <p id="nms">{name}Prakhar</p>
-                <p id="typeofdashboard">{profile_display}</p>
-                <Link to="/dashboard/Viewprofile" onClick={this.hide_menu}>View Profile</Link>
+              <p id="nms">{name}Prakhar</p>
+              <p id="typeofdashboard">{profile_display}</p>
+              <Link to="/dashboard/Viewprofile" onClick={this.hide_menu}>
+                View Profile
+              </Link>
               {(this.state.data.user_type === 'AMB' ||
                 this.state.data.user_type === 'CA') && (
-                  <div>
-                    <div className="scor">
-                      <span id="scoresWritten">SCORE</span>
-                      <span id="scoresValue">{this.state.score}/10000</span>
-                    </div>
-                    <div className="progress">
-                      <div
-                        className="progress-bar bg-custom"
-                        style={{
-                          width: scorePercentage + '%'
-                        }}
-                      />
-                    </div>
+                <div>
+                  <div className="scor">
+                    <span id="scoresWritten">SCORE</span>
+                    <span id="scoresValue">{this.state.score}/10000</span>
                   </div>
-                )}
+                  <div className="progress">
+                    <div
+                      className="progress-bar bg-custom"
+                      style={{
+                        width: scorePercentage + '%'
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
-         
-         
-         
           </div>
           <div className="mobile-profile-dashboard-esummit1">
             <span id="mobileprofile-dashboard-esummitId">E-Summit’19 ID</span>
@@ -206,84 +220,77 @@ export default class ComingSoon extends Component {
         <div id="optionsToggle">
           {options}
 
-
-          <Link
-            to="/dashboard/invite"
-
-          ><div className={
-            this.state.activeState === 'invite'
-              ? 'linkEventson'
-              : 'linkEventson-inactive'
-          }
-            onClick={() => {
-              this.setActive('invite')
-            }}>
+          <Link to="/dashboard/invite">
+            <div
+              className={
+                this.state.activeState === 'invite'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
+              onClick={() => {
+                this.setActive('invite')
+              }}
+            >
               INVITE
-              </div>
+            </div>
           </Link>
 
-
-          <Link
-            to="/dashboard/payment"
-
-          >
-            <div className={
-              this.state.activeState === 'payment'
-                ? 'linkEventson'
-                : 'linkEventson-inactive'
-            }
+          <Link to="/dashboard/payment">
+            <div
+              className={
+                this.state.activeState === 'payment'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
               onClick={() => {
                 this.setActive('payment')
-              }}>
-
-
+              }}
+            >
               PAYMENT
-              </div>
+            </div>
           </Link>
-          <Link
-            to="/dashboard/contingent"
-
-          >
-            <div className={
-              this.state.activeState === 'contigent'
-                ? 'linkEventson'
-                : 'linkEventson-inactive'
-            }
+          <Link to="/dashboard/contingent">
+            <div
+              className={
+                this.state.activeState === 'contigent'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
               onClick={() => {
                 this.setActive('contigent')
-              }}>
+              }}
+            >
               CONTINGENT
-              </div>
+            </div>
           </Link>
-          <Link
-            to="/dashboard/events"
-
-          >
-            <div className={
-              this.state.activeState === 'events'
-                ? 'linkEventson'
-                : 'linkEventson-inactive'
-            }
+          <Link to="/dashboard/events">
+            <div
+              className={
+                this.state.activeState === 'events'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
               onClick={() => {
                 this.setActive('events')
-              }}>
+              }}
+            >
               EVENTS
-              </div>
+            </div>
           </Link>
 
           {this.state.data.user_type === 'AMB' ||
-            this.state.data.user_type === 'CA' ? (
-              <div id="leaderboardButton">
-                <a
-                  without
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
-                >
-                  CA RULEBOOK
+          this.state.data.user_type === 'CA' ? (
+            <div id="leaderboardButton">
+              <a
+                without
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
+              >
+                CA RULEBOOK
               </a>
-              </div>
-            ) : null}
+            </div>
+          ) : null}
         </div>
         <div id="mobile-navbar-dashboard-logout">
           <div id="mobile-navbar-submitButton">

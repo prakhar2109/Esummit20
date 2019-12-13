@@ -23,7 +23,10 @@ class App extends Component {
   }
   componentDidMount = () => {
     // let token = localStorage.getItem('user_token')
-    localStorage.setItem('user_token', "6c12e42608d40120c94fe7d488426b6fdb0e9c3c");
+    localStorage.setItem(
+      'user_token',
+      '6c12e42608d40120c94fe7d488426b6fdb0e9c3c'
+    )
   }
   render() {
     let { dashboardProps } = this.props

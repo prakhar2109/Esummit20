@@ -112,7 +112,6 @@ export default class Viewprofile extends Component {
                 </Button> */}
         <div className="caprofile-container-heading">PROFILE</div>
 
-
         <button id="caprofile-b01" onClick={this.showModal}>
           Edit Profile
         </button>

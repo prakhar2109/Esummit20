@@ -233,7 +233,6 @@ export class IdeaStorm extends Component {
                 <img src={Mentorship} alt="Mentorship" />
                 <span>Workspaces:</span>
                 Get workspaces from Oyo workspaces, Innov8.
-                
               </div>
 
               <div className="perks_unit">
@@ -245,7 +244,8 @@ export class IdeaStorm extends Component {
               <div className="perks_unit">
                 <img src={Funding} alt="Funding" />
                 <span>Funding Opportunities</span>
-                Opportunity from; 100X.VC, Ah Ventures, Nexus Venture, Zenfold Ventures.
+                Opportunity from; 100X.VC, Ah Ventures, Nexus Venture, Zenfold
+                Ventures.
               </div>
               <div className="perks_unit">
                 <img src={Media} alt="Media Coverage" />
@@ -261,7 +261,8 @@ export class IdeaStorm extends Component {
 
           <center>
             <a
-              without rel="noopener noreferrer"
+              without
+              rel="noopener noreferrer"
               href="https://forms.gle/w8iWovVznoCJZKdq5
               "
               target="_blank"
@@ -276,7 +277,8 @@ export class IdeaStorm extends Component {
           <p>To participate in Idea-Storm 2019 register here.</p>
           <center>
             <a
-              without rel="noopener noreferrer"
+              without
+              rel="noopener noreferrer"
               href="https://forms.gle/w8iWovVznoCJZKdq5
               "
               target="_blank"

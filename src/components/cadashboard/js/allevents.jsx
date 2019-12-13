@@ -21,7 +21,7 @@ export default class Allevents extends Component {
     console.log('hello')
 
     let token = localStorage.getItem('user_token')
-    
+
     axios
       .get(BASE_URL + `/v1/api/event/${id}/apply`, {
         headers: {
@@ -32,7 +32,7 @@ export default class Allevents extends Component {
         if (res.status === 200) window.location.href = '/dashboard/Events'
         console.log(res)
       })
-      .catch(response => { })
+      .catch(response => {})
   }
   infoMenushow = index => {
     document.getElementById(
@@ -82,27 +82,27 @@ export default class Allevents extends Component {
                   {event.status === 'Upcomming' ? (
                     <div className="caevents-coming-soon">COMING SOON</div>
                   ) : (
-                      <div>
-                        <div className="caevents-earnedcoupons-deadline">
-                                            Deadline: {event.deadline}
-                                        </div>
-
-                        <div className="caevents-earnedcoupons-child-button">
-                          <button
-                            id={'dashboard-events-apply' + index}
-                            onClick={() => this.applyEvent(event.id)}
-                          >
-                            APPLY
-                        </button>
-                          <button
-                            className="caofferb01"
-                            onClick={() => this.infoMenushow(index)}
-                          >
-                            INFO
-                        </button>
-                        </div>
+                    <div>
+                      <div className="caevents-earnedcoupons-deadline">
+                        Deadline: {event.deadline}
                       </div>
-                    )}
+
+                      <div className="caevents-earnedcoupons-child-button">
+                        <button
+                          id={'dashboard-events-apply' + index}
+                          onClick={() => this.applyEvent(event.id)}
+                        >
+                          APPLY
+                        </button>
+                        <button
+                          className="caofferb01"
+                          onClick={() => this.infoMenushow(index)}
+                        >
+                          INFO
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div
                   className="caevents-earnedcoupons-child-parent-parent"

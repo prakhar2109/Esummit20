@@ -28,9 +28,8 @@ export default class Caleader extends Component {
     return (
       <div className="caleaderboard-parent">
         <div>
-        <div className="caleader-heading">Leaderboard</div>
+          <div className="caleader-heading">Leaderboard</div>
         </div>
-        
 
         <div className="caleader-board-parent">
           <table id="ca01">

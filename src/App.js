@@ -42,9 +42,7 @@ class App extends Component {
         <Switch>
         <Route path="/dashboard/" component={DashboardIndex} />
         <Route path="/" component={HomeLanding}/>
-
         </Switch>
-
         </BrowserRouter>
       </div>
     )

@@ -8,14 +8,13 @@ import Appliedevents from './appliedevents'
 /* eslint-disable react/prop-types */
 
 export default class Events extends Component {
-  constructor(props)
-  {
-  super(props);
-  this.state = {
-    appliedevents: [],
-    status: [],
-    events:props.events
-  }
+  constructor(props) {
+    super(props)
+    this.state = {
+      appliedevents: [],
+      status: [],
+      events: props.events
+    }
   }
 
   componentDidMount() {
@@ -42,7 +41,7 @@ export default class Events extends Component {
         })
         console.log(this.state.status, 'dnfnnjndnnjnj')
       })
-      .catch(response => { })
+      .catch(response => {})
   }
   discardEvent = id => {
     // console.log("hello")
@@ -58,9 +57,8 @@ export default class Events extends Component {
         if (res.status === 200) window.location.href = '/dashboard/Events'
         // console.log(res)
       })
-      .catch(response => { })
+      .catch(response => {})
   }
- 
 
   render() {
     return (
@@ -73,9 +71,16 @@ export default class Events extends Component {
           </>
         ) : null}
         <div className="caevents-earnedcoupons-rowparent1">
-          {this.state.appliedevents && this.state.appliedevents.map((event, index) => (
-            <Appliedevents key={event.id} event={event} index={index} status={this.state.status} discardEvent={this.discardEvent}/>
-          ))}
+          {this.state.appliedevents &&
+            this.state.appliedevents.map((event, index) => (
+              <Appliedevents
+                key={event.id}
+                event={event}
+                index={index}
+                status={this.state.status}
+                discardEvent={this.discardEvent}
+              />
+            ))}
         </div>
 
         <div className="ca-events-parent-heading2 caeventsparent-font">
