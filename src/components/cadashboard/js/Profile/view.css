@@ -322,7 +322,7 @@ font-size: 11.42px;
     height: 14.62vh;
     max-width: 14.62vh;
     max-height: 14.62vh;
-    text-transform: lowercase;
+    text-transform: uppercase;
     /* padding-left: 5.4vh; */
     text-align: center;
     /* padding-top: 1.5vh; */
@@ -666,7 +666,7 @@ display:none;}
     /* padding-left: 5rem;
     padding-top: 3rem; */
     text-align: center;
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-size: 6rem;
     font-weight: 500;
     border-top-left-radius: 50%;

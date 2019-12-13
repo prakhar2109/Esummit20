@@ -92,7 +92,7 @@ export default class Viewprofile extends Component {
 
     axios({
       method: 'post',
-      url: BASE_URL + '/v1/api/user/edit-profile/',
+      url: BASE_URL + '/v1/api/user/edit-profile',
       data: data,
       headers: {
         Authorization: `Token ${token}`

@@ -135,14 +135,14 @@ class caLeaderboard extends Component {
             </a>
 
             <div className="side-navbar-details">
-              <div id="dropShape">{name[0]}A</div>
-              <p id="name">{name}Prakhar</p>
+              <div id="dropShape">{name[0]}</div>
+              <p id="name">{name}</p>
 
               <p id="dashboard-typename">{profile_display}</p>
               {is_ca && (
                 <div className="sidebar-dashboard-esummit">
                   <span id="scoreWritten">SCORE</span>
-                  <span id="scoreValue">{score}123/10000</span>
+                  <span id="scoreValue">{score}/10000</span>
                 </div>
               )}
               {/* {is_ca && (
@@ -159,7 +159,7 @@ class caLeaderboard extends Component {
                 <div className="sidebar-dashboard-esummit">
                   <span id="sidebar-dashboard-esummitId">E-Summit’19 ID</span>
                   <span id="sidebar-dashboard-esummitId-value">
-                    {data.esummit_id}ES12122
+                    {data.esummit_id}
                   </span>
                 </div>
               </div>

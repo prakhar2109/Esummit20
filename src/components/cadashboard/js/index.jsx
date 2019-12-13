@@ -25,7 +25,7 @@ class App extends Component {
     // let token = localStorage.getItem('user_token')
     localStorage.setItem(
       'user_token',
-      '6c12e42608d40120c94fe7d488426b6fdb0e9c3c'
+      '2c2081ce8f34e1a689cac1c2f1cbc5128544b90a'
     )
   }
   render() {
