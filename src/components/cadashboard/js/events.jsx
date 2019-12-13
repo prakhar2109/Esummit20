@@ -22,8 +22,7 @@ export default class Events extends Component {
     let appliedevents = []
     let status = []
 
-    // let token = localStorage.getItem('user_token')
-    let token = "6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
+    let token = localStorage.getItem('user_token')
     axios
       .get(BASE_URL + '/v1/api/user/events', {
         headers: {
@@ -47,8 +46,7 @@ export default class Events extends Component {
   }
   discardEvent = id => {
     // console.log("hello")
-    // let token = localStorage.getItem('user_token')
-    let token = "6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
+    let token = localStorage.getItem('user_token')
 
     axios
       .get(BASE_URL + `/v1/api/event/${id}/unregister`, {

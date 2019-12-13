@@ -1,16 +1,20 @@
 .caprofile-container{
     top: 0;
-    left: 18%;
+    left: 16.5%;
     height: fit-content;
     padding-bottom: 4vh;
-    background-color: #F7F8F9;
-    width: 82%;
+    background-color: #070F12;
+    width: 83.5%;
     position: absolute;
 }
 .caprofile-container-heading{
     margin-top: 3.33vh;
-    margin-left: 1.875vw;
-    font-family:"ProximaNova-Semibold" !important;
+    margin-left: 2.24%;
+    color: rgba(255, 255, 255, 0.87);
+    border-bottom: 2px solid #359D9A;
+    font-size: 20px;
+    width: fit-content;
+    font-family: Poppins-Bold !important;
 
 }
 .ant-modal-content{
@@ -25,12 +29,13 @@
     text-align: center;
     font-size: 12px;
     letter-spacing: 0.09em;
-    color: #F39423;
-    border: 2px solid #F39423;
     box-sizing: border-box;
-    border-radius: 2px;
-    background-color: transparent;
+    background: transparent;
+    border: 1px solid #359D9A;
+    color: #359D9A;
     cursor: pointer;
+    font-family: "Poppins-Regular";
+    font-weight: 600;
 }
 #caprofile-b02{
     margin-top: 5vh;
@@ -42,11 +47,10 @@
     font-size: 10px;
     letter-spacing: 0.09em;
     color: #FFFFFF;
-    border: 2px solid #F39423;
+    border: 1px solid #359D9A;
     box-sizing: border-box;
-    border-radius: 2px;
-    background: #F39423;
-    border-radius: 2px; 
+    background: transparent;    
+    color: #359D9A;
     cursor: pointer;
 }
 .caprofile-line1 {
@@ -65,9 +69,7 @@ padding-bottom: 4vh;
 margin-top: 2.22vh;
 margin-left: 1.875vw;
 height: fit-content;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
-border-radius: 8px;
+background:  #0D1719;
 width: 72.135vw;
 display: flex;
 flex-direction: row;
@@ -80,9 +82,7 @@ margin-top: 3.33vh;
 margin-left: 1.875vw;
 height: fit-content;
 padding-bottom: 4vh;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
-border-radius: 8px 8px 8px 8px;
+background:  #0D1719;
 width: 72.135vw;
 
 }
@@ -110,18 +110,28 @@ height: 75.30%;
     margin-top: 4.44vh;
     text-align: center;
     font-size: 9.94px;
-    color: #4F4F4F;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
     margin-bottom: 2.59vh;
 
 }
 #profile-dashboard-esummitId{
-color: #4F4F4F;
+color: rgba(255, 255, 255, 0.87);
+font-family: "Poppins-Regular";
+font-weight: 600;
+font-size: 11.42px;
+
 }
 
 #profile-dashboard-esummitId-value{
 	float: right;
   
-    color: #1A4D66;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11.42px;
+    text-align: center;
+    color: #09C9C3;
 }
 .profile-dashboard-esummit{
 
@@ -151,10 +161,10 @@ margin-left:6%;
 
     
     line-height: normal;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: "Poppins-Bold" !important;
     margin-bottom: 4vh;
-    color: #4F4F4F;
-    font-family:"ProximaNova-Semibold" !important;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .caprofile-parent1-child3{
@@ -210,26 +220,26 @@ color: #4F4F4F; */
 color: #4F4F4F; */
 }
 #caprofile-scoreValue{
-    line-height: normal;
-font-size: 1rem;
-float: right;
-letter-spacing: 0.02em;
-
-color: #4F4F4F;
+    font-size: 11.42px;
+    float: right;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #09C9C3;
 
 
 }
 
 #caprofile-scoreWritten{
 
-    line-height: normal;
-font-size: 16px;
+line-height: normal;
 text-align: center;
 letter-spacing: 0.02em;
-
-color: rgba(79, 79, 79, 0.44);
-
-
+color: rgba(255, 255, 255, 0.87);
+font-family: "Poppins-Regular";
+font-weight: 600;
+font-size: 11.42px;
 }
 
 
@@ -244,10 +254,11 @@ color: rgba(79, 79, 79, 0.44);
 }
 
 .caprofile-parent2-heading{
-    color: #4F4F4F;
     line-height: normal;
-    font-size: 18px;
-    font-family:"ProximaNova-Semibold" !important;
+    font-size: 20px;
+    font-family: "Poppins-Bold" !important;
+    margin-bottom: 4vh;
+    color: rgba(255, 255, 255, 0.87);
 
 }
 .caprofile-parent3-child2-collegename-heading{
@@ -263,18 +274,21 @@ color: rgba(79, 79, 79, 0.44);
 
 .caprofile-heading{
     line-height: normal;
-    font-size:19.88px;
+    font-size:17.14px;
     margin-top: 4.44vh;
-    color: #B2B2B2;
-    font-family:"ProximaNova-Semibold" !important;
+    color: rgba(255, 255, 255, 0.87);
+    font-family:"Poppins-Regular" !important;
+    font-weight:600;
 }
 
 .caprofile-data{
     word-break: break-all;
     line-height: normal;
-    font-size: 17.04px;
+    font-size: 17.14px;
     margin-top: 1.22vh;
-    color: #4F4F4F;
+    font-family:"Poppins-Regular" !important;
+    color: rgba(255, 255, 255, 0.87);
+
 
 }
 
@@ -301,10 +315,9 @@ color: rgba(79, 79, 79, 0.44);
 
 }
 .caprofile-dropshape{
-    margin-top: 6%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #F39423;
+    background: #359D9A;
     color: white;
     height: 14.62vh;
     max-width: 14.62vh;
@@ -315,10 +328,10 @@ color: rgba(79, 79, 79, 0.44);
     /* padding-top: 1.5vh; */
     font-size: 6rem;
     font-weight: 500;
-    border-top-left-radius: 6vh;
-    border-top-right-radius: 55vh;
-    border-bottom-left-radius: 50vh;
-    border-bottom-right-radius: 55vh;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,33 +365,37 @@ color: rgba(79, 79, 79, 0.44);
 
 #caprofile01{
     outline: none !important;
+    margin-top: 0 !important;
     width: 90%;
-    border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 4px;
-height: 4.44vh;
-padding: 1vh;
-background: white;
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 4.44vh;
+    padding: 5px;
+    background:#0d1719;
 }
 
 #caprofile02{
     outline: none !important;
     width: 91%;
-    border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 4px;
-height: 4.44vh;
-padding: 1.11vh;
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background:#0D1719;
+    height: 4.44vh;
+    padding: 1.11vh;
 }
 
 #caprofile03{
     outline: none !important;
     width: 81%;
-    border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 4px;
-height: 4.44vh;
-padding: 1.11vh;
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 4.44vh;
+    padding: 1.11vh;
+    background:#0D1719;
 }
 
 
@@ -444,6 +461,21 @@ display:none;}
 display:none}
 }
 @media (min-width: 1820px) and (max-width: 2560px){
+    #caprofile-scoreValue{
+        font-size: 16px;
+    }
+    #profile-dashboard-esummitId-value{
+        font-size: 16px;
+    }
+    #profile-dashboard-esummitId{
+        font-size: 16px;
+    }
+    #caprofile-b01{
+        font-size: 16px;
+    }
+    #caprofile-scoreWritten{
+        font-size: 16px;
+    }
 .caprofile-parent1-child1-heading{
     font-size: 28px;
 }
@@ -461,7 +493,7 @@ display:none}
 font-size: 28px;
 }
 .caprofile-container-heading{
-font-size:20px;
+font-size:28px;
 
 }
 .caprofile-socialaccounts-child-heading{
@@ -486,9 +518,10 @@ font-size:24px;
     	left:0;
    	height: -webkit-fit-content;
 	height: -moz-fit-content;
-	height: fit-content;
+    height: fit-content;
+    margin-top: 6vh;
 	padding-bottom: 2rem	;
-	background-color: #F7F8F9;
+    background-color: #070F12;
 	width: 100%;
 	position: relative; 
 }
@@ -527,9 +560,9 @@ font-size:24px;
     line-height: normal;
     font-size: 1.286rem;
     margin-top: 1.42rem;
-    font-weight: 500;
-    color: #B2B2B2;
-    font-family:"ProximaNova-Semibold" !important;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular" !important;
+    font-weight: 600;
 }
 .caprofile-data {
     line-height: normal;
@@ -544,9 +577,8 @@ font-size:24px;
     line-height: normal;
     font-size: 18px;
     margin-bottom: 1.71rem;
-    color: #4F4F4F;
-    font-weight: 500;
-    font-family:"ProximaNova-Semibold" !important;
+    font-family: "Poppins-Bold" !important;
+    color: rgba(255, 255, 255, 0.87);
 }
 .ca-profilescore {
     margin-top: 1.14rem;
@@ -565,11 +597,12 @@ font-size:24px;
 }
 .caprofile-parent2-heading {
     text-align: center;
-    color: #4F4F4F;
     line-height: normal;
     font-size: 18px;
     font-weight: 500;
-    font-family:"ProximaNova-Semibold" !important;
+    font-family: "Poppins-Bold" !important;
+    margin-bottom: 4vh;
+    color: rgba(255, 255, 255, 0.87);
 }
 .caprofile-parent2-child2-collegename-heading{
 
@@ -604,18 +637,19 @@ margin-top:1.71rem;
 #caprofilemobile-b01 {
     height: 2.857rem;
     width: 8.5rem;
-    margin-left: 55vw;
+    margin-left: auto;
+    margin-right: .857rem;
     margin-top: 1.35rem;
      
     text-align: center;
     font-size: 12px;
     letter-spacing: 0.09em;
-    color: #F39423;
-    border: 2px solid #F39423;
-    box-sizing: border-box;
-    border-radius: 2px;
-    background-color: transparent;
+    background: transparent;
+    border: 1px solid #359D9A;
+    color: #359D9A;
     cursor: pointer;
+    font-family: "Poppins-Regular";
+    font-weight: 600;
 }
 #caprofile-b01{
 display:none;}
@@ -624,7 +658,7 @@ display:none;}
     margin-top: 6%;
     margin-left: auto;
     margin-left: auto;
-    background-color: #F39423;
+    background: #359D9A;
     color: white;
     height: 11.28rem;
     max-width: 11.28rem;
@@ -635,28 +669,38 @@ display:none;}
     text-transform: lowercase;
     font-size: 6rem;
     font-weight: 500;
-    border-top-left-radius: 6vh;
-    border-top-right-radius: 55vh;
-    border-bottom-left-radius: 50vh;
-    border-bottom-right-radius: 55vh;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 #profile-dashboard-esummitId-value {
     float: right;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11.42px;
+    text-align: center;
+    color: #09C9C3;
+
+}
+#caprofile-scoreWritten{
     font-size: 14px;
-    color: #1A4D66;
-    font-family: "ProximaNova-Semibold";
+
 }
 #profile-dashboard-esummitId {
-    color: #4F4F4F;
     font-size: 14px;
-    font-family: "Proxima-nova-regular";
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
+    font-weight: 600;
     
 }
 .profile-dashboard-type {
     margin-top: 2.44vh;
     text-align: center;
     font-size: 14px;
-    color: #4F4F4F;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
     margin-bottom: 2.59vh;
 }
 .caprofile-containter-parent {
@@ -671,15 +715,16 @@ display:none;}
 display:none;}
 #caprofilemobile-b02{
 display:none;
-background: #F39423;
-color: #F7F8F9;
+border: 1px solid #359D9A;
+box-sizing: border-box;
+background: transparent;
+color: #359D9A;
 height:2.57rem;
 padding:.857rem;
 margin: auto;
 margin-top: 2vh;
 font-size: .857rem;
-border: none;
-font-family: "ProximaNova-Semibold" !important;
+font-family: "Poppins-Semibold" !important;
 }
 .caprofile-socialaccounts-child{
     display: flex;
@@ -725,10 +770,11 @@ font-family: "ProximaNova-Semibold" !important;
     width: 100%;
     height: 2.28rem;
     padding: 4px;
-    border: 1px solid #808080;
-    border-radius: 2px;
     font-size: 16px;
-    color: #4F4F4F;
-    background: white;
+    color: rgba(255, 255, 255, 0.87);
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #0D1719;
 }
 }

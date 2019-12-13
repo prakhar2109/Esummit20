@@ -90,12 +90,12 @@
 }
 
 .taskchild-weeklyuploads {
-    margin-top: 2vh;
-    margin-left: 3vh;
-    margin-right: 2vh;
+    margin-top: 3.33vh;
+    margin-left: 2.24%;
     color: rgba(255, 255, 255, 0.87);
     border-bottom: 2px solid #359D9A;
-    font-size: 1.75rem;
+    font-size: 20px;
+    font-family: Poppins-Bold !important;
 
 }
 
@@ -180,7 +180,9 @@
         font-size: 16px;
 
     }
-
+    .taskchild-weeklyuploads{
+        font-size: 28px;
+    }
 
 }
 
@@ -216,13 +218,14 @@
     left:0;
     width:100%;
     min-height: 100vh;
+    margin-top: 6vh;
     padding-bottom: 2vh;
-    background-color: #F7F8F9;
+    background: #070F12;
     }
 
     .taskchild {
 
-        background: #FFFFFF;
+        background: #0D1719;
         height: auto;
 
         align-self: center;
@@ -238,7 +241,6 @@
 
 
     .taskchild-weeklyuploads {
-        font-size: 13px;
 
     }
 

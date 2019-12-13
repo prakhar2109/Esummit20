@@ -5,7 +5,7 @@
     color: black;
     position: absolute;
     top: 0;
-    padding-top: 2.59%;
+    padding-top: 3.33vh;
     left: 16.5%;
     height: fit-content; 
     min-height: 100vh;
@@ -20,7 +20,7 @@
 }
 .caevents-earnedcoupons-child{
     position: relative;
-    height: 33.1vh;
+    height: 27.77vh;
     width: 30.27%; 
     margin-left: 2.24%;  
     margin-bottom: 3.148vh; 
@@ -35,7 +35,7 @@
 .ca-events-parent-heading1{
 
     margin-left: 2.24%;
-    margin-bottom: 5.55%;
+    margin-bottom: 5.55vh;
     line-height: normal;
     color: rgba(255, 255, 255, 0.87);
     width: fit-content;
@@ -53,7 +53,7 @@
 
 .ca-events-parent-heading2{
     margin-left: 2.24%;
-    margin-bottom: 5.55%;
+    margin-bottom: 5.55vh;
     line-height: normal;
     color: rgba(255, 255, 255, 0.87);
     width: fit-content;
@@ -63,8 +63,9 @@
 .caevents-earnedcoupons-child-heading{
     line-height: 2rem;
     color: rgba(255, 255, 255, 0.87);
-    font-size: 1.5rem;
-    font-family: "ProximaNova-Semibold" !important;
+    font-size: 17.14px;
+    font-family: "Poppins-Regular" !important;
+    font-weight: 600;
     display: flex;
     position: relative;
 
@@ -76,9 +77,10 @@
     margin-top: 1.85vh;
     color: rgba(255, 255, 255, 0.6);
     word-break: break-all;
-    min-height: 8vh;
-    font-family: "ProximaNova-Light";
-    font-size: 1.25rem;
+    max-height: 7vh;
+    overflow: auto;
+    font-family: "Poppins-Regular";
+    font-size: 14.28px;
 
 }
 
@@ -87,7 +89,9 @@ position: absolute;
 bottom: 2.962vh;
 }
 .caevents-earnedcoupons-child-button button{
-    font-size: 12.78px;
+    font-family:"Poppins-Regular" !important;
+    font-weight: 600;
+    font-size: 12px;
     border-radius: 4.28px;
     text-align: center;
     height: 3.70vh;
@@ -104,8 +108,9 @@ bottom: 2.962vh;
 }
 
 .caeventsparent-font{
-    font-size: 1.75rem;
-    font-family:"ProximaNova-Semibold" !important;
+    font-size: 20px;
+    font-family:"Poppins-Bold" !important;
+
 }
 
 .caeventsheading-font{
@@ -124,9 +129,10 @@ bottom: 2.962vh;
 
     color: #359D9A;
     font-size: 1rem;
-    font-family: "Proxima-nova-regular";
+    font-family: "Poppins-Regular";
+    font-weight: 600;
     line-height: normal;
-    font-size: 17.04px;
+    font-size: 12px;
     margin-top: 1vh;
     position: absolute;
     bottom: 8vh;
@@ -174,18 +180,23 @@ overflow-x:hidden;
     font-size: 14.2px;
     color: rgba(255, 255, 255, 0.6);    
     line-height: 2.40vh;
-    font-family: "ProximaNova-Light";
+    overflow: auto;
+    font-family: "Poppins-Regular";
 
 }
 .caevents-registration-status{
     font-size: 14.2px;
-    font-family: "ProximaNova-Light";
     color: rgba(255, 255, 255,.87);
     display: flex;
     align-items: center;
 }
 .caevents-registration-status div{
     color: rgba(255, 255, 255,.87);
+    font-family: "Poppins-Regular";
+    display: flex;
+    align-self: center;
+    margin-right: 5px;
+
 
 }
 .caevents-earnedcoupons-child-reddotpic{
@@ -217,8 +228,8 @@ overflow-x:hidden;
 @media (min-width: 1620px) and (max-width: 2560px){
 
 .caeventsparent-font{
-    font-size: 1.75rem;
-    font-family:"ProximaNova-Semibold" !important;
+    font-size: 28px;
+    font-family:"Poppins-Bold" !important;
 }
 
 .caeventsheading-font{
@@ -238,7 +249,7 @@ overflow-x:hidden;
 }
 .caevents-earnedcoupons-child-button button{
     font-size: 1rem;
-    font-family:"ProximaNova-Semibold" !important;
+    width: 5.81vw;
     
 }
 
@@ -248,14 +259,16 @@ overflow-x:hidden;
 
 
 }
-
+.caevents-earnedcoupons-child-heading{ 
+    font-size: 24px;
+}
 .caevents-earnedcoupons-child-info{
-    font-size: 1.25rem;
+    font-size: 20px;
     height: 20vh;
 
 }
 .caevents-earnedcoupons-child-description{
-    font-size: 1.25rem;
+    font-size: 20px;
     
 
 }
@@ -270,8 +283,9 @@ overflow-x:hidden;
     left:0;
     width:100%;
     height: fit-content;
+    margin-top: 6vh;
     padding-bottom: 2vh;
-    background-color: #F7F8F9;
+    background: #070F12;
     
 }
 .caevents-earnedcoupons-rowparent1 {
@@ -293,6 +307,7 @@ overflow-x:hidden;
 .caevents-earnedcoupons-child-description {
     line-height: normal;
     color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2vh  ;
     width: 100%;
     min-height: 0;
 }
@@ -332,7 +347,6 @@ overflow-x:hidden;
 
     font-size: 18px;
     position: unset;
-    margin-top: 5vh;
     margin-bottom: 1vh;
 
 }

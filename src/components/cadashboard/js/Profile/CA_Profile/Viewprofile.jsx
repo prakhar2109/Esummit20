@@ -24,8 +24,7 @@ export default class Viewprofile extends Component {
   }
 
   componentDidMount = () => {
-    // let token = localStorage.getItem('user_token')
-    let token="6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
+    let token = localStorage.getItem('user_token')
     axios
       .get(BASE_URL + '/v1/api/user/profile', {
         headers: {
@@ -129,7 +128,6 @@ export default class Viewprofile extends Component {
       <div className="caprofile-container">
         <div className="caprofile-container-heading">PROFILE</div>
 
-        <div className="caprofile-line1" />
 
         <button id="caprofile-b01" onClick={this.showModal}>
           Edit Profile
@@ -174,7 +172,6 @@ export default class Viewprofile extends Component {
             </div>
           </div>
 
-          <div className="caprofile-parent1-childline" />
 
           <div
             className="caprofile-containter-parent"
@@ -500,7 +497,6 @@ export default class Viewprofile extends Component {
                   <span id="profile-dashboard-esummitId-value">CN 2</span>
                 </div> */}
               </div>
-              <div className="caprofile-parent1-childline" />
 
               <div className="caprofile-containter-parent">
                 <div className="caprofile-containter-parent-child1">

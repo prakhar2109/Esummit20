@@ -25,9 +25,8 @@ background-color: #070F12;
     margin-left: 2.24%;
     color: rgba(255, 255, 255, 0.87);
     width: fit-content;
-    font-size:1.45rem;
-    line-height: 2.625rem;
-    font-family:"ProximaNova-Semibold" !important; 
+    font-size: 20px;
+    font-family:"Poppins-Bold" !important; 
     border-bottom: 2px solid #09C9C3;
 }
 
@@ -60,14 +59,16 @@ table#ca01 td{
  
     padding-top: 2.60vh;
     color: rgba(255, 255, 255, 0.87);
-    font-size: 14.2px;
-    font-family:"ProximaNova-Semibold" !important; 
+    font-size: 17.14px;
+    font-family:"Poppins-Semibold" !important; 
  
 }
 table#ca01 th{
     padding-bottom: 5vh;
     color: rgba(255, 255, 255, 0.87);
-    font-size: 1rem ;
+    font-family:"Poppins-Regular";
+    font-weight: 600;
+    font-size: 9.41px;
 }
 th#carank{
 
@@ -209,7 +210,7 @@ border-right:1px solid #DDDDDD;
 table#ca01 th{
     padding-bottom: 5vh;
     color: rgba(255, 255, 255, 0.87);
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .caleader-heading{
@@ -217,7 +218,7 @@ table#ca01 th{
     margin-top: 3.33vh;
     margin-left: 2.24%;
     color: rgba(255, 255, 255, 0.87);
-    font-size:1.45rem; 
+    font-size:28px; 
 }
 table#ca01 td{
 
@@ -226,8 +227,7 @@ table#ca01 td{
 
     padding-top: 2.60vh;
     color: rgba(255, 255, 255, 0.87);
-    font-size: 1.25rem;
-    font-family:"ProximaNova-Semibold" !important; 
+    font-size: 24px;
  
 }
 table#ca01 td::first-letter{
@@ -249,8 +249,9 @@ display:none;
     left:0;
     width:100%;
     min-height: 100vh;
+    margin-top: 6vh;
     padding-bottom: 2vh;
-    background-color: #F7F8F9;
+    background-color: #070F12;
 }
 
 .caleader-heading {
@@ -272,7 +273,7 @@ table#ca01 th {
 .caleader-board-mobileparent{
  padding: 1.028rem 2vw;
  margin-top: 2rem;
- background: #fff;
+ background: #0D1719;
  width: 95.52%;
  height: fit-content;
  margin-left: 2.24%;

@@ -9,7 +9,7 @@ import CATaskBoard from './catask'
 // import CAcontingent from './payment/paymentwithworkshop'//edit afterwards
 // import CAInvite from './cainvite'
 import CALeader from './caleader'
-import CAnewcontigent from './cacontigent'
+import CAnewcontigent from './Contigent/cacontigent'
 import CAevents from './events'
 // import { BASE_URL } from  './../../../../utils/urls'
 import axios from 'axios'
@@ -22,7 +22,8 @@ class App extends Component {
     this.state = {}
   }
   componentDidMount = () => {
-    let token = localStorage.getItem('user_token')
+    // let token = localStorage.getItem('user_token')
+    localStorage.setItem('user_token', "6c12e42608d40120c94fe7d488426b6fdb0e9c3c");
   }
   render() {
     let { dashboardProps } = this.props

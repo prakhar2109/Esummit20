@@ -1,5 +1,9 @@
 .caheader {
-    
+    background: #0D1719;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 
 }
 
@@ -15,7 +19,7 @@
     color: #1a4d66;
 }
 .caheader-parent{
-   box-shadow:0px 2px 8px rgba(0, 0, 0, 0.09);
+    background: #0D1719;
     padding: 15px;
 
 }
@@ -43,7 +47,7 @@
 .caheader #droperShape {
     margin-top: 10%;
     margin-left: 4%;
-    background-color: #f39423;
+    background-color: #359E9A;
     color: white;
     display: grid;
     align-items: center;
@@ -55,6 +59,7 @@
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
 }
 
 .caheader .progress {
@@ -96,15 +101,15 @@
 @media only screen and (max-width: 900px){
 #optionsToggle{
 	
-	border: 2px solid #F2F2F2;
    	box-sizing: border-box;
-    	border-radius: 4px;
+    border-radius: 4px;
 	box-shadow:none;
 	margin-top:36px;
 	font-size: 20px;
-	height: fit-content;
-    	max-height: fit-content;
-    	padding: 2.28rem 0;
+    height: fit-content;
+    color: rgba(255, 255, 255, 0.38);
+    max-height: fit-content;
+    padding: 2.28rem 0;
 }
 #mobile-navbar-dashboard-logout{
     display: none;
@@ -132,7 +137,8 @@
    
 }
 .linkEventson{
-color:#333333 !important;
+    background: linear-gradient(270deg, #0F9DB1 53.24%, rgba(15, 157, 177, 0.2) 100%);
+    color: #359D9A !important;
 text-decoration:none !important;
 }
 
@@ -188,6 +194,41 @@ margin-bottom: 2vh;
     float: right;
     color: #1A4D66;
 }
-
-
+.new-navbar-i{  
+    padding: 16px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position:fixed;
+    top:10px;
+    right:20px;
+    cursor:pointer;
+    z-index:500;
+}
+.new-navbar-i >span{
+    user-select:none;
+    transition:all 0.6s;
+    border-bottom:2px solid white; 
+    display:block;
+    width:23px;
+    height:5px;
+    z-index:300;
+}
+.span-cross > span:nth-child(1){
+    transition:all 0.6s;
+    transform:rotate(45deg);
+}
+.span-cross > span:nth-child(2){
+    transition:all 0.6s;
+    transform:rotate(-45deg) translate(2px,-6px);
+}
+.span-cross > span:nth-child(3){
+    display:none;
+}
+.linkEventson-inactive {
+    color: rgba(255, 255, 255, 0.38);
+    /* font-family: "ProximaNova-Semibold" !important; */
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+}
 }

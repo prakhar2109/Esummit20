@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import '../css/catask.css'
 import axios from 'axios'
 import { BASE_URL } from './../../../utils/urls'
-// let token = localStorage.getItem('user_token')
+let token = localStorage.getItem('user_token')
 
-let token="6c12e42608d40120c94fe7d488426b6fdb0e9c3c"
 /* eslint-disable react/prop-types */
 
 export default class CATaskBoard extends Component {

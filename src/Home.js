@@ -20,7 +20,6 @@ import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 import 'antd/dist/antd.css'
-import HomeLanding from './Home'
 const register = Loadable({
   loader: () => import('./components/registration/index.js'),
   loading: () => <Loading />
@@ -31,7 +30,7 @@ const Registration_profiletype = Loadable({
   loading: () => <Loading />
 })
 
-class App extends Component {
+class HomeLanding extends Component {
   constructor(props) {
     super(props)
   }
@@ -39,16 +38,27 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-        <Switch>
-        <Route path="/dashboard/" component={DashboardIndex} />
-        <Route path="/" component={HomeLanding}/>
-
-        </Switch>
-
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route
+              exact
+              path="/campus-ambassador"
+              component={CampusAmbassador}
+            />
+            <Route path="/register" component={Profiletype} />
+            <Route path="/ca-registration" component={Registration} />
+            <Route path="/personal-detail" component={Personaldetail} />
+            <Route path="/register-success" component={Success} />
+            <Route path="/register-failure" component={Failuremessage} />
+            <Route path="/Ideastorm" component={Ideastorm} />
+            {/* <Route path="*" component={} /> */}
+          </Switch>
+          <Footer />
         </BrowserRouter>
       </div>
     )
   }
 }
 
-export default App
+export default HomeLanding
