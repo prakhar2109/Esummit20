@@ -28,7 +28,7 @@
 
     .navbar-items {
       @include desktop-320-767 {
-        margin-right: $gutterWidth *0.8;
+        margin-right: $gutterWidth *0.2;
 
       }
 
