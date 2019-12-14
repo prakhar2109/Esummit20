@@ -69,7 +69,7 @@ class Registration extends Component {
           city: data.city,
           country: data.country,
           state: data.state,
-          email:data.email,
+          email: data.email,
           phone: data.phone,
           college: data.college,
           tshirt_size: data.tshirt_size
