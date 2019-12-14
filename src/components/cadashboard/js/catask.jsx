@@ -119,7 +119,7 @@ class CATask extends Component {
           <div className="taskchild-heading">{task.name}</div>
 
           <div className="taskchild-description">{task.description}</div>
-
+          <div className="Uploading-task">
           <div
             id={`Uploaded-Task${task.id}`}
             className={
@@ -153,6 +153,7 @@ class CATask extends Component {
               className="filesvg"
               onChange={e => this.fileUploadHandler(e.target.files, task)}
             />
+          </div>
           </div>
         </div>
       </div>

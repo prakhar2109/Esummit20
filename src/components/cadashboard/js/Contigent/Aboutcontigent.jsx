@@ -28,6 +28,8 @@ class Aboutcontigent extends Component {
             After individual registration, contingent leader creates a
             contingent from his dashboard submitting details of each member.
             <br />
+            Minimum four members are required to register for contingent
+            <br />
             A unique ID will be generated using which other contingent member
             can join their respective contingents
             <br />

@@ -506,6 +506,11 @@ right:45px;
     align-items: center;
     text-align: center;
 }
+.loadingUserformParent{
+	color: red;
+	font-size: 14px;
+	font-family: Poppins-Regular;
+}
 @media (min-width: 0px) and (max-width: 900px){
 .ant-modal {
 width:90px !important;
@@ -737,6 +742,10 @@ right:15px;
 
 }
 @media (min-width: 1820px) and (max-width: 2560px){
+.loadingUserformParent{
+		color: red;
+		font-size: 20px;
+}
 .cacontigent-congratsparent-child1{
 font-size:24px;
 }
