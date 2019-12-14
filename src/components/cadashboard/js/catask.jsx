@@ -16,7 +16,7 @@ export default class CATaskBoard extends Component {
   }
   componentDidMount = () => {
     axios
-      .get(BASE_URL + '/v1/api/task/list/', {
+      .get(BASE_URL + '/v1/api/task/list', {
         headers: {
           Authorization: `Token ${token}`
         }
@@ -88,7 +88,7 @@ class CATask extends Component {
       formData.append('file', file[0])
       formData.append('task', task.id)
       axios
-        .post(BASE_URL + `/v1/api/task/${task.id}/submit/`, formData, {
+        .post(BASE_URL + `/v1/api/task/${task.id}/submit`, formData, {
           headers: {
             Authorization: `Token ${token}`,
             'Content-Type': 'multipart/formdata '

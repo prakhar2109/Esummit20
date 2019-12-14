@@ -3,6 +3,7 @@ import './failure.css'
 import Button from '../button/register_button.js'
 import Navbar from '../../navbar/navbar.js'
 import PropTypes from 'prop-types'
+/* eslint-disable react/prop-types */
 
 class Failuremessage extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class Failuremessage extends Component {
           ></div>
           <div className="success_content">
             Your Registration could not be completed. <br />
+           
             Please Register Again.
           </div>
           <div className="closeButton">
@@ -59,3 +61,4 @@ export default Failuremessage
 Failuremessage.propTypes = {
   history: PropTypes.func
 }
+/* eslint-disable react/prop-types */

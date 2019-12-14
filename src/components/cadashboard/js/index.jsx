@@ -7,7 +7,7 @@ import CATaskBoard from './catask'
 // import CAOffers from './payment'
 // import CAPayment from './payment/paymentwithoutworkshop'
 // import CAcontingent from './payment/paymentwithworkshop'//edit afterwards
-// import CAInvite from './cainvite'
+import CAInvite from './cainvite'
 import CALeader from './caleader'
 import CAnewcontigent from './Contigent/cacontigent'
 import CAevents from './events'
@@ -45,7 +45,7 @@ class App extends Component {
             <Route exact path="/dashboard/task" component={CATaskBoard} />
             {/* <Route exact path="/dashboard/offers" component={CAOffers} /> */}
             {/* <Route path="/dashboard/payment" render={() => <CAPayment {...this.props} />} /> */}
-            {/* <Route exact path="/dashboard/invite" component={CAInvite} /> */}
+            <Route exact path="/dashboard/invite" component={CAInvite} />
             <Route exact path="/dashboard/leader" component={CALeader} />
             <Route
               exact

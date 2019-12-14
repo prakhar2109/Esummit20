@@ -1,14 +1,15 @@
-@font-face {
-    font-family: "Proxima Nova";
+/* @font-face {
+    font-family: ""Poppins-Regular"";
     src: url('../../..//fonts/ProximaNova-Regular.otf') format('opentype')
-}
+} */
 .cainvite-linkparent-parent-parent{
-    font-family: Proxima Nova; 
+    font-family: "Poppins-Regular"; 
     /* padding-left: 0px !important; */
     /* padding-right: 0px !important; */
     /* padding-top: 0px !important; */
     
-    background: #FFFFFF;
+ 
+    background: #0D1719;
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
     border-radius: 8px;
     height:auto;
@@ -30,15 +31,14 @@
     /* padding */
     /* padding-left:1vw !important; */
     /* padding-top: 1vh; */
-    background: #FFFFFF;
+    background: #0D1719;
     /* box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08); */
-    border-radius: 8px;
     height:auto;
     /* margin-left: auto; */
     /* margin-right: auto; */
     display: flex;
     padding-top: 1.2vh;
-    padding-left: 1vw;
+    padding-left: 2.96vh;
     padding-bottom: 1.2vh;
     flex-direction: column;
     flex-wrap: wrap;
@@ -55,16 +55,18 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-family: Proxima Nova;
+    font-family: "Poppins-Regular";
 
 }
 .cainvite-paymentstatus-text2-paymentdone{
-    font-family: Proxima Nova;
+    font-family: "Poppins-Regular";
     line-height: normal;
     font-size: 18px;
     text-align: center;
+    display: flex;
     letter-spacing: 0.02em;
-    color: #4F4F4F;
+    color: rgba(255, 255, 255, 0.87);
+
     margin-right:4vw;
 }
 .cainvite-paymentstatus-text2-paymentdone svg{
@@ -73,12 +75,13 @@
     width: 20px;
 }
 .cainvite-paymentstatus-text2-paymentnotdone{
-    font-family: Proxima Nova;
+    font-family: "Poppins-Regular";
     line-height: normal;
     font-size: 18px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #4F4F4F;
+    display: flex;
+    color: rgba(255, 255, 255, 0.87);
     /* margin-right:20vw; */
 }
 .cainvite-paymentstatus-text2-paymentnotdone svg{
@@ -87,12 +90,12 @@
     width: 20px;
 }
 .cainvite-paymentstatus-viewlist{
-    font-family: Proxima Nova;
+    font-family: "Poppins-Regular";
     line-height: normal;
     font-size: 15px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #F39423;
+    color: #359D9A;
     margin-left: 20vw;
     /* justify-content: flex-end; */
     /* display: flex;
@@ -105,6 +108,9 @@
     height: 1vh;
 }
 .capayment-status table,.capayment-status td,.capayment-status th {  
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
+    font-weight: 600;
     border: 1px solid #ddd;
     text-align: left;
   }
@@ -119,25 +125,24 @@
   }
   
   .capayment-status th{
-    padding-left: 14vw;
     padding-top:1.5vh;
     padding-bottom: 1.5vh;
     border-left-width: 0px;
     border-top-width: 0px;
+    text-align: center;
   }
   .capayment-status th{
       font-size: 18px;
       font-weight: 500;
   }
   .capayment-status td{
-    font-family: Proxima Nova;
+    font-family: "Poppins-SemiBold";
+    font-weight: 600;
     line-height: normal;
     font-size: 17px;
-    text-align: left;
-    padding-left: 13vw;
-    color: #000000;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
     padding-top: 1.5vh;
-    opacity: 0.58;
     border-radius: 8px;
     border-left-width: 0px;
     border-bottom-width: 0px;
@@ -151,18 +156,18 @@
   
     @media (max-width: 900px){
         .cainvite-paymentstatus-viewlist{
-            font-family: Proxima Nova;
+            font-family: "Poppins-Regular";
             line-height: normal;
             font-size: 12px;
             text-align: center;
             letter-spacing: 0.02em;
-            color: #F39423;
+            color: #359D9A;
             margin-top: 3vh;
             margin-left: 20vw;
             cursor: pointer;
         }
         .cainvite-linkparent-parent-parent{
-            font-family: Proxima Nova;   
+            font-family: "Poppins-Regular";   
             background: #FFFFFF;
             box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
             border-radius: 8px;
@@ -178,23 +183,23 @@
             
         }
         .cainvite-paymentstatus-viewlist{
-            font-family: Proxima Nova;
+            font-family: "Poppins-Regular";
             line-height: normal;
             font-size: 12px;
             text-align: center;
             letter-spacing: 0.02em;
-            color: #F39423;
+            color: #359D9A;
             margin-top: 3vh;
             margin-left: 68vw;
             cursor: pointer;
         }
         .cainvite-paymentstatus-viewlist{
-            font-family: Proxima Nova;
+            font-family: "Poppins-Regular";
             line-height: normal;
             font-size: 15px;
             text-align: center;
             letter-spacing: 0.02em;
-            color: #F39423;
+            color: #359D9A;
             margin-left: 20vw;
             /* justify-content: flex-end; */
             /* display: flex;
@@ -208,7 +213,7 @@
         }
         
         .cainvite-paymentstatus-text2-paymentdone{
-            font-family: Proxima Nova;
+            font-family: "Poppins-Regular";
             line-height: normal;
             font-size: 14px;
             text-align: center;
@@ -217,7 +222,7 @@
             margin-right:4vw;
         }
         .cainvite-paymentstatus-text2-paymentnotdone{
-            font-family: Proxima Nova;
+            font-family: "Poppins-Regular";
             line-height: normal;
             font-size: 14px;
             text-align: center;
@@ -251,12 +256,13 @@
               font-weight: 500;
           }
           .capayment-status td{
-            font-family: Proxima Nova;
+            font-family: "Poppins-Regular";
+            font-weight: 600;
             line-height: normal;
             font-size: 13px;
             text-align: left;
             padding-left: 13vw;
-            color: #000000;
+            color: rgba(255, 255, 255, 0.87);
             padding-top: 1.5vh;
             opacity: 0.58;
             border-radius: 8px;
@@ -275,7 +281,7 @@
             width: 20px;
         }
         .cainvite-paymentstatus-text2-paymentdone{
-            font-family: Proxima Nova;
+            font-family: "Poppins-Regular";
             line-height: normal;
             font-size: 14px;
             text-align: center;

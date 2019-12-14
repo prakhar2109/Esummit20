@@ -15,7 +15,7 @@ export default class Cacontigent extends Component {
   constructor() {
     super()
     this.state = {
-      contigent: false,
+      contigent: true,
       contingent_member: null,
       contingent_leader: null,
       contingent_data: [],
@@ -53,7 +53,7 @@ export default class Cacontigent extends Component {
       })
 
     axios
-      .get(BASE_URL + '/v1/api/contingent/info/', {
+      .get(BASE_URL + '/v1/api/contingent/info', {
         headers: {
           Authorization: `Token ${token}`
         }
@@ -73,7 +73,7 @@ export default class Cacontigent extends Component {
       })
 
     axios
-      .get(BASE_URL + '/v1/api/contingent/member/invite/list/', {
+      .get(BASE_URL + '/v1/api/contingent/member/invite/list', {
         headers: {
           Authorization: `Token ${token}`
         }
@@ -96,7 +96,7 @@ export default class Cacontigent extends Component {
   deleteContigent = () => {
     let token = localStorage.getItem('user_token')
     axios
-      .get(BASE_URL + '/v1/api/contingent/delete/', {
+      .get(BASE_URL + '/v1/api/contingent/delete', {
         headers: {
           Authorization: `Token ${token}`
         }
@@ -118,7 +118,7 @@ export default class Cacontigent extends Component {
   editContigent = () => {
     let token = localStorage.getItem('user_token')
     axios
-      .get(BASE_URL + '/v1/api/contingent/info/', {
+      .get(BASE_URL + '/v1/api/contingent/info', {
         headers: {
           Authorization: `Token ${token}`
         }
@@ -152,7 +152,7 @@ export default class Cacontigent extends Component {
     let token = localStorage.getItem('user_token')
     let es_idmember
     axios
-      .get(BASE_URL + '/v1/api/contingent/info/', {
+      .get(BASE_URL + '/v1/api/contingent/info', {
         headers: {
           Authorization: `Token ${token}`
         }
@@ -196,14 +196,14 @@ export default class Cacontigent extends Component {
 
     axios({
       method: 'post',
-      url: BASE_URL + '/v1/api/contingent/member/join/',
+      url: BASE_URL + `/v1/api/contingent/member/join/${es_id}`,
       data: data,
       headers: {
         Authorization: `Token ${token}`
       }
     })
       .then(res => {
-        if (res.status === 200) {
+        if (res.status === 200 || res.status === 204) {
           window.location.href = '/dashboard/contingent'
           this.setState({ contigent: false })
 
@@ -220,7 +220,7 @@ export default class Cacontigent extends Component {
 
     axios({
       method: 'post',
-      url: BASE_URL + '/v1/api/contingent/member/decline/',
+      url: BASE_URL + `/v1/api/contingent/member/decline/${es_id}`,
       data: data,
       headers: {
         Authorization: `Token ${token}`
@@ -237,13 +237,13 @@ export default class Cacontigent extends Component {
   leaveContigent = () => {
     let token = localStorage.getItem('user_token')
     axios
-      .get(BASE_URL + '/v1/api/contingent/member/leave/', {
+      .get(BASE_URL + '/v1/api/contingent/member/leave', {
         headers: {
           Authorization: `Token ${token}`
         }
       })
       .then(res => {
-        if (res.status == 200) {
+        if (res.status == 200 || res.status == 204) {
           this.setState({ contingent_member: null })
           window.location.href = '/dashboard/contingent'
         }
@@ -793,7 +793,7 @@ class AddUserForm extends Component {
   // 	})
 
   // }
-  onChange = e => {
+  onBlur = e => {
     this.setState({
       es_id: e.target.value
     })
@@ -807,7 +807,7 @@ class AddUserForm extends Component {
     }
     axios({
       method: 'post',
-      url: BASE_URL + '/v1/api/contingent/member/delete/',
+      url: BASE_URL + `/v1/api/contingent/member/delete/${data.esummit_id}`,
 
       data: data,
       headers: {
@@ -849,7 +849,7 @@ class AddUserForm extends Component {
 
     axios({
       method: 'post',
-      url: BASE_URL + '/v1/api/contingent/member/invite/',
+      url: BASE_URL + `/v1/api/contingent/member/invite/${data.esummit_id}`,
 
       data: data,
       headers: {
@@ -890,7 +890,7 @@ class AddUserForm extends Component {
 
     axios({
       method: 'post',
-      url: BASE_URL + '/v1/api/contingent/user/name/',
+      url: BASE_URL + '/v1/api/contingent/user/name',
       data: data,
       headers: {
         Authorization: `Token ${token}`
@@ -945,8 +945,8 @@ class AddUserForm extends Component {
                 className="contigent-adduserform-input"
                 id={'contigent-adduserform-input' + this.props.index}
                 defaultValue={this.state.es_id}
-                onChange={e => {
-                  this.onChange(e)
+                onBlur={e => {
+                  this.onBlur(e)
                 }}
                 required
               />
@@ -982,7 +982,7 @@ class AddUserForm extends Component {
                       this.handleSubmit(this.props.index)
                     }}
                   >
-                    Submit
+                    Send
                   </div>
                 </div>
                 <div

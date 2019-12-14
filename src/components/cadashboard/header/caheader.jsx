@@ -180,9 +180,9 @@ export default class ComingSoon extends Component {
         </div>
         <div id="phone" className="mob_menu">
           <div className="dashboard-mobile-navbar">
-            <div id="droperShape">{name[0]}p</div>
+            <div id="droperShape">{name[0]}</div>
             <div className="headerdata">
-              <p id="nms">{name}Prakhar</p>
+              <p id="nms">{name}</p>
               <p id="typeofdashboard">{profile_display}</p>
               <Link to="/dashboard/Viewprofile" onClick={this.hide_menu}>
                 View Profile

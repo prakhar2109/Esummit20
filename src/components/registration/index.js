@@ -3,6 +3,10 @@ import FacebookLogin from './account_setup/accountsetup.js'
 import Personaldetails from './personal_details/personal_details.js'
 import PropTypes from 'prop-types'
 import FetchApi from '../../utils/fetchAPI'
+import Registersucess from './popup/success/success'
+import Registerfailure from './popup/failure/failure'
+/* eslint-disable react/prop-types */
+
 class Registration extends Component {
   constructor(props) {
     super(props)
@@ -38,7 +42,16 @@ class Registration extends Component {
     }))
   }
   handleFullSubmit = () => {
-    FetchApi('POST', '/v1/api/user/signup/', this.state, null)
+    const query=new URLSearchParams(this.props.location.search);
+    let ref=null;
+    for(let param of query.entries())
+      ref=param[1];
+
+
+    let endpoint = ref === null ? "/v1/api/user/signup/" : `/v1/api/user/signup/?ref=${ref}`
+
+
+    FetchApi('POST', endpoint, this.state, null)
       .then(res => {
         if (res.data) {
           this.setState({ success: true, activeStep: 0 })
@@ -46,10 +59,11 @@ class Registration extends Component {
       })
       .catch(error => {
         this.setState({
-          activeStep: 0,
-          error: true
+          active_step: 0,
+          error: true,
+          error_bool:error
         })
-        console.log(error)
+       
       })
   }
   responseFacebook = response => {
@@ -104,8 +118,12 @@ class Registration extends Component {
             email={email}
           />
         ) : null}
-        {success ? this.props.history.push('/register-success') : null}
-        {error ? this.props.history.push('/register-failure') : null}
+
+
+        {/* {success ? this.props.history.push('/register-success') : null}
+        {error ? this.props.history.push('/register-failure') : null} */}
+          {success ? <Registersucess/>: null}
+        {error ? <Registerfailure/>: null}
       </React.Fragment>
     )
   }
@@ -114,3 +132,4 @@ export default Registration
 Registration.propTypes = {
   history: PropTypes.func
 }
+/* eslint-disable react/prop-types */

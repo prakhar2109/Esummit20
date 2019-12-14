@@ -1,5 +1,5 @@
 import './../css/paymentstatus.css'
-import PaymentStatusTable from './../../../components/js/paymentstatustable'
+import PaymentStatusTable from './paymentstatustable'
 import React, { Component } from 'react'
 import { BASE_URL } from './../../../utils/urls'
 import axios from 'axios'
@@ -56,7 +56,7 @@ export default class PaymentStatus extends Component {
             'block'
           document.getElementById(
             'cainvite-linkparentstatic-subparent'
-          ).style.backgroundColor = ' #FFFAF4'
+          ).style.backgroundColor = ' #070F12'
         }
       )
     } else {
@@ -71,7 +71,7 @@ export default class PaymentStatus extends Component {
             'none'
           document.getElementById(
             'cainvite-linkparentstatic-subparent'
-          ).style.backgroundColor = 'white'
+          ).style.backgroundColor = '#0D1719'
         }
       )
     }

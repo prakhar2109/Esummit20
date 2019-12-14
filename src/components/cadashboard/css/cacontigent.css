@@ -172,7 +172,7 @@
 
 
 #cacontigent5789 {
-	background: #FFFAF4;
+	background:  #070F12;
 	margin-left: 0;
 	width: 100%;
 
@@ -181,7 +181,7 @@
 .Createcontigent-parentbody {
 	width: 60vw;
 	margin-left: 2.24%;
-	background: #fff;
+	background: #121C1D;
 	height: fit-content;
 	padding-bottom:5.92vh;
 }
@@ -191,10 +191,10 @@
 	
 }
 .cacontigent-aboutparent-head{
-	font-size: 17.04px;
-	color: #000000;
+	font-size: 17.14px;
+	color: rgba(255, 255, 255, 0.87);
 	margin-bottom:1.96vh;
- 	font-family: "ProximaNova-Semibold";
+ 	font-family: "Poppins-Regular";
 	margin-top: 4.07vh;
 }
 
@@ -214,18 +214,23 @@
 }
 
 .contigent-adduserform-heading{
-	color: #B2B2B2;
-    font-size: 17.04px;
+	color: rgba(255, 255, 255, 0.87);
+    font-size: 17.14px;
 }
 .contigent-adduserform-input{
+	margin-top: 0 !important;
 	width: 100%;
 	height:4.44vh;
-    border: 1px solid #000000;
+	background: #121C1D;
+	border: 2px solid rgba(255, 255, 255, 0.87);
+	border-radius: 2px;
 	padding:1.11vh;
-		color:#4F4F4F;
-		line-height: 20px;
-		display: flex;
-		align-items: center;
+	color: rgba(255, 255, 255, 0.87);
+	font-family: "Poppins-Regular";
+
+	line-height: 20px;
+	display: flex;
+	align-items: center;
 }
 .contigent-adduserform-input:focus{
 	border: 1px solid #2EA2F8 !important;
@@ -298,10 +303,11 @@ display:none;
 
 }
 .cacontigent-congratsparent-child2-heading{
-font-size: 19.88px;
+font-size: 17.14px;
 letter-spacing: 0.02em;
-font-family: "ProximaNova-Semibold";
-color: #000000;
+font-family: "Poppins-Regular";
+font-weight: 600;
+color: #FFFFFF;
 margin-top:2.59vh;
 margin-bottom:2.22vh;
 }
@@ -312,19 +318,19 @@ display:flex;
 }
 
 .cacontigent-congratsparent-child2-name{
-font-size: 14.2px;
+font-size: 17.14px;
 width: 50%;
 letter-spacing: 0.02em;
-color: #4F4F4F;
+color: rgba(255, 255, 255, 0.6);
+font-family: "Poppins-Regular";
 text-transform: lowercase;
 }
 .cacontigent-congratsparent-child2-id{
 width: 28%;
-font-size: 14.2px;
+font-size: 17.14px;
 letter-spacing: 0.02em;
-
-color: #1A4D66;
-
+color: rgba(255, 255, 255, 0.6);
+font-family: "Poppins-Regular";
 }
 #cacontigent-congratsparent-b01{
 background:transparent;
@@ -378,8 +384,8 @@ right:45px;
 	width: 20%;
 }
 #cacontignet-table-row2 td{
-	color:#000000;
-	font-family: "Proxima-nova-regular";
+	color: rgba(255, 255, 255, 0.6);
+	font-family: "Poppins-regular";
 	font-size: 17.75px;
 	padding: 1.4vh;
 }
@@ -409,11 +415,14 @@ right:45px;
 	width: 10% !important;
 }
 #cacontignet-td-b01{
-	background: #359D9A;
-	border: none;
-	color: #FFFFFF;
+	background: transparent;
+	border: 2px solid #359D9A;
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: #359D9A;
 	font-size: 12.78px;
-	font-family: "ProximaNova-Semibold";
+	font-family: "Poppins-Regular";
+	font-weight: 600;
 	padding: 1.11vh;
 	padding-right: 0;
 	width: 99%;
@@ -421,10 +430,11 @@ right:45px;
 }
 #cacontignet-td-b02{
 	background:transparent;
-	border: 1.5px solid rgba(130, 130, 130, 0.93);
-	color: #808080;
+	border: none;
+	color: #359D9A;
 	font-size: 12.78px;
-	font-family: "ProximaNova-Semibold";
+	font-family: "Poppins-Regular";
+	font-weight: 600;
 	padding: 1.11vh;
 	padding-right: 0;
 	width: 99%;
@@ -443,18 +453,23 @@ right:45px;
     text-align: right;
     cursor: pointer;
 	color: #359D9A;
-	font-size: 17.04px;
+	font-size: 12px;
 	align-self: center;
-	font-family: "Proxima-nova-regular";
+	font-family: "Poppins-regular";
+	font-weight: 600;
 	
 }
 .cacontigent-heading-deletecontigent{
 	right: 5%;
 	position: absolute;
 	letter-spacing: 0.02em;
-	font-family: "Proxima-nova-regular";
+	font-family: "Poppins-Regular";
 	color: #359D9A;
 	cursor: pointer;
+}
+.cacontigent-heading-deletecontigent div{
+	color: #359D9A;
+
 }
 .cacontigent-finish{
 	height: 4.44vh;
@@ -478,6 +493,7 @@ right:45px;
     color: #1A4D66;
 }
 .contigent-adduserform-cross{
+	color: #359D9A;
 	font-size: 26px;
     cursor: pointer;
     position: absolute;
@@ -744,10 +760,10 @@ font-size:28px;
 font-size:28px;
 }
 .cacontigent-congratsparent-child2-heading{
-font-size: 28px;
+font-size: 24px;
 }
 .cacontigent-congratsparent-child2-name{
-font-size: 20px;
+font-size: 24px;
 }
 .cacontigent-aboutparent-head{
 font-size: 24px;
@@ -801,13 +817,16 @@ font-size: 15px;
 }
 .cacontigent-Viewoption{
 	
-	font-size: 24px;
+	font-size: 16px;
 
 }
 .cacontigent-finish{
     font-size: 16px;
     width: 10rem;
     color: #359D9A;
+}
+.cacontigent-congratsparent-child2-id{
+	font-size: 24px;
 }
 }
 

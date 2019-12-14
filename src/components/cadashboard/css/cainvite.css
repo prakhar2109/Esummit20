@@ -1,26 +1,31 @@
 .cainvite-parent{
 
 
-    background-color: #F7F8F9;
+    background: #070F12;
     position: absolute;
     top: 0;
-    left: 18%;
-    width: 82%;
+    left: 16.5%;
+    width: 83.5%;
     height: fit-content;
     padding-bottom: 3vh;
+    min-height: 100vh;
 }
 
 .cainviteparent-heading{
-    font-size:14.2px;
+    font-size:20px;
     margin-top: 3.33vh;
-    margin-left: 2.24%; 
-    font-family:"ProximaNova-Semibold" !important; 
+    margin-left: 2.24%;
+    color: rgba(255, 255, 255, 0.87);
+    border-bottom: 2px solid #359D9A;
+    width: fit-content;
+    font-family: Poppins-Bold !important;
+
 }
 .cainvite-linkparent{
 
     margin-top: 5.92vh;
     margin-left: 2.24%;
-    background: #fff;
+    background: #0D1719;
     width: 86.70%;
     height: fit-content;
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
@@ -45,8 +50,7 @@
     margin-top: 3.33vh;
     height: fit-content;
     width: 86.70%;
-    background: #fff;
-    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
+    background: #0D1719;
     padding: 2.96vh;
 }
 
@@ -104,13 +108,19 @@ display: none;
 
 letter-spacing: 0.02em;
 font-size:19.91px;
-color: #000000;
-font-family:"ProximaNova-Semibold" !important; 
+color: rgba(255, 255, 255, 0.87);
+font-weight: 600;
+font-family:"Poppins-Regular" !important; 
 }
 
 #camyinput{
+    margin-top: 0 !important;
+    background: transparent;
+    padding-left: 2rem;
+    border: 2px solid #359D9A;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
 
-    border: 2px solid #C4C4C4;
     width: 88%;
     height: 5.92vh;
 }
@@ -122,9 +132,12 @@ font-family:"ProximaNova-Semibold" !important;
 
 #camyinputbutton{
     height: 5.92vh;
-    background: #F39423;
-    color: #fff;
-    border:0px;
+    background: transparent;
+    border: 1px solid #359D9A;
+    color: #359D9A;
+    cursor: pointer;
+    font-family: "Poppins-Regular";
+    font-weight: 600;
     font-size: 17.06px;
     width: 11.23%;
 }
@@ -156,25 +169,26 @@ font-family:"ProximaNova-Semibold" !important;
 .cainviteparent-perks-heading{
 
     letter-spacing: 0.02em;
-    color: #000000;
-    font-size:19.91px;
-    font-family:"ProximaNova-Semibold" !important; 
+    font-family: "Poppins-Regular";
+    font-weight: 600;
+    font-size: 17.14px;
+    color: rgba(255, 255, 255, 0.6);
 }
 .cainviteparent-perks-childparent{
 
-    color: #000000;
-    opacity: 0.58;
+    font-family: Poppins-Regular;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 3.33vh;
-    font-size: 14.22px;
+    font-size: 14.2px;
 }
 
 .cainviteparent-perks-child{
 
-    color: #4F4F4F;
-    opacity: 0.58;
+    font-family: Poppins-Regular;
+    color: rgba(255, 255, 255, 0.6);
     border-radius: 8px;
     margin-bottom: 1.48vh;
-    font-size: 14.22px;
+    font-size: 14.2px;
 }
 #pp{
     color:red;
@@ -220,16 +234,13 @@ display:flex;
 @media (min-width: 1820px) and (max-width: 2560px){
 
 .cainviteparent-heading{
-    font-size:16px;
-    font-family:"ProximaNova-Semibold" !important; 
+    font-size: 28px;
 }
 
 .cainvite-linkparent-heading{
 
 letter-spacing: 0.02em;
 font-size:28px;
-color: #000000;
-font-family:"ProximaNova-Semibold" !important; 
 }
 .cainvite-register-parent-heading{
     color: #000000;
@@ -253,9 +264,7 @@ font-family:"ProximaNova-Semibold" !important;
 .cainviteparent-perks-heading{
 
     letter-spacing: 0.02em;
-    color: #000000;
-    font-size:28px;
-    font-family:"ProximaNova-Semibold" !important; 
+    font-size:24px;
 }
 .cainviteparent-perks-childparent{
 
@@ -286,6 +295,8 @@ font-family:"ProximaNova-Semibold" !important;
 
 }
 #camyinput {
+    margin-top: 0 !important;
+
     border: 2px solid #C4C4C4;
     width: 68%;
     height: 5.92vh;
