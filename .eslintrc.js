@@ -16,15 +16,14 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  rules: {
+  rules: { 
     'no-unused-vars': [
       'off',
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false }
     ],
-    'no-console': 'off',
     'prettier/prettier': ['warn', { semi: false, singleQuote: true }]
   },
-  settings: {
+  settings: { 
     react: {
       createClass: 'createReactClass',
       pragma: 'React',

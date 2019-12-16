@@ -7,6 +7,7 @@
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
+    "antd": "^3.26.3",
     "axios": "^0.19.0",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
@@ -48,6 +49,7 @@
     "postcss-safe-parser": "4.0.1",
     "prettier": "^1.19.0",
     "react": "^16.12.0",
+    "react-addons-update": "^15.6.2",
     "react-app-polyfill": "^1.0.4",
     "react-dev-utils": "^9.1.0",
     "react-dom": "^16.12.0",
@@ -56,6 +58,7 @@
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scroll": "^1.7.14",
+    "react-select": "^3.0.8",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "resolve": "1.12.0",
@@ -88,7 +91,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "eslint src/ --fix",
+    "lint": "eslint src/**/*.jsx --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,json}\""
   },
   "eslintConfig": {
