@@ -11,10 +11,10 @@ class PaymentStatusRow extends Component {
     return (
       <React.Fragment>
         <tr className="cainvite-table-row">
-          <td>
+          <td id="cainviteth1">
             {id}. {name}
           </td>
-          <td>
+          <td id="cainviteth2">
             {status}{' '}
             {status === 'Success' ? (
               <svg

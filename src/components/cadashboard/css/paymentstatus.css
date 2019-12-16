@@ -94,7 +94,8 @@
     text-align: center;
     letter-spacing: 0.02em;
     color: #359D9A;
-    margin-left: 20vw;
+    margin-left: auto;
+    margin-right: 2.96vh;
     /* justify-content: flex-end; */
     /* display: flex;
      */
@@ -168,8 +169,9 @@
             text-align: center;
             letter-spacing: 0.02em;
             color: #359D9A;
+            margin-left: auto;
+              margin-right: 2.96vh;
             margin-top: 3vh;
-            margin-left: 20vw;
             cursor: pointer;
         }
         .cainvite-linkparent-parent-parent{
@@ -196,7 +198,8 @@
             letter-spacing: 0.02em;
             color: #359D9A;
             margin-top: 3vh;
-            margin-left: 68vw;
+            margin-left: auto;
+            margin-right: 2.96vh;
             cursor: pointer;
         }
         .cainvite-paymentstatus-viewlist{
@@ -206,16 +209,18 @@
             text-align: center;
             letter-spacing: 0.02em;
             color: #359D9A;
-            margin-left: 20vw;
+            margin: 0;
+         
             /* justify-content: flex-end; */
             /* display: flex;
              */
              /* order: 2; */
             /* align-content: flex-end; */
             cursor: pointer;
-            position: absolute;
-            left: 50vw;
-            top: 40vh;
+           
+        }
+        .cainvite-paymentstatus-text2{
+            justify-content: space-around;
         }
         
         .cainvite-paymentstatus-text2-paymentdone{
