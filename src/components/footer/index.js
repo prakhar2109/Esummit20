@@ -25,7 +25,7 @@ class Footer extends Component {
         <div className="footer-section-contact-container">
           <div className="footer-section-contact-heading">Phone no.</div>
           <div className="footer-section-contact-subheading">
-            Raghav : +91 7414 069 716 <br /> Gagneet : +91 9027014108
+            Raghav : +91 7414 069 716 <br /> Gagneet : +91 9027 014 108
           </div>
         </div>
         <div className="footer-section-contact-container">

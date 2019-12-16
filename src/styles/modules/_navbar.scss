@@ -28,10 +28,9 @@
 
     .navbar-items {
       @include desktop-320-767 {
-        margin-right: $gutterWidth *0.8;
-
+        margin-right: $gutterWidth *0.2;
       }
-
+      text-align: right;
       margin-right:$gutterWidth;
 
       &:last-child {
@@ -40,8 +39,14 @@
 
       .navbar-links {
         @include desktop-320-767 {
-          font-size: $normalFontSize*0.6;
-          line-height: $normaLineHeight*0.6;
+          font-size: $normalFontSize*0.5;
+          line-height: $normaLineHeight*0.4;
+
+        }
+
+        @include desktop-320 {
+          font-size: $normalFontSize*0.4;
+          line-height: $normaLineHeight*0.3;
         }
 
         font-size: $normalFontSize*0.8;
