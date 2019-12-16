@@ -54,7 +54,8 @@ export default class Events extends Component {
         }
       })
       .then(res => {
-        if (res.status === 200) window.location.href = '/dashboard/Events'
+        if (res.status === 200)
+          this.props.history.push({ path: '/dashboard/Events' })
         // console.log(res)
       })
       .catch(response => {})

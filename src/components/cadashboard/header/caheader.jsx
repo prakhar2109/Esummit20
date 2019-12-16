@@ -5,6 +5,7 @@ import axios from 'axios'
 import { BASE_URL } from '../../../utils/urls'
 import esummit from './static/logo.png'
 import './css/canavbar.css'
+import PropTypes from 'prop-types'
 // import ca_rulebook from "../../pdfs/ca_rulebook.pdf"
 
 // import Ca from "../caLeaderboard/js/caLeaderboard";
@@ -35,7 +36,7 @@ export default class ComingSoon extends Component {
         })
       })
       .catch(response => {
-        window.location.href = '/login'
+        this.props.history.push({ path: '/login' })
       })
   }
 
@@ -50,7 +51,7 @@ export default class ComingSoon extends Component {
   }
   handleLogout = () => {
     localStorage.removeItem('user_token')
-    window.location.href = '/login'
+    this.props.history.push({ path: '/login' })
   }
   handle_menu() {
     document.getElementById('phone').style.display = 'block'
@@ -99,7 +100,6 @@ export default class ComingSoon extends Component {
     }
 
     if (
-      2 == 2 ||
       this.state.data.user_type === 'AMB' ||
       this.state.data.user_type === 'CA'
     ) {
@@ -306,4 +306,8 @@ export default class ComingSoon extends Component {
       </div>
     )
   }
+}
+
+ComingSoon.propTypes = {
+  history: PropTypes.func
 }

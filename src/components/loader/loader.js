@@ -13,11 +13,11 @@ export default class LoaderIndex extends React.Component {
     return (
       <div id="loader" className="loader">
         <div className="pc_loader">
-          <img src={Loader} />
+          <img src={Loader} alt="loader" />
         </div>
 
         <div className="mobile">
-          <img src={Mobile} />
+          <img src={Mobile} alt="loader" />
         </div>
       </div>
     )

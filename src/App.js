@@ -34,15 +34,20 @@ const Registration_profiletype = Loadable({
 class App extends Component {
   constructor(props) {
     super(props)
+    // console.clear()
+    console.log(
+      '%cWelcome to ESummit IITR!',
+      'color: rgb(243,147,36); font-size:30px;'
+    )
   }
   render() {
     return (
       <div>
         <BrowserRouter>
-        <Switch>
-        <Route path="/dashboard/" component={DashboardIndex} />
-        <Route path="/" component={HomeLanding}/>
-        </Switch>
+          <Switch>
+            <Route path="/dashboard/" component={DashboardIndex} />
+            <Route path="/" component={HomeLanding} />
+          </Switch>
         </BrowserRouter>
       </div>
     )

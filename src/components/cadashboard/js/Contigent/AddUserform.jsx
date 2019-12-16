@@ -94,7 +94,7 @@ export default class AddUserForm extends Component {
       .then(res => {
         document.getElementById('loadingUserform').style.display = 'none'
 
-        if (res.data.detail == 'invitation already sent') {
+        if (res.data.detail === 'invitation already sent') {
           this.setState({
             contingent_error_messages: 'invitation already sent',
             contingent_error_bool: true
@@ -119,8 +119,9 @@ export default class AddUserForm extends Component {
       .catch(response => {
         document.getElementById('loadingUserform').style.display = 'none'
         let contingent_error_messages
-        if (this.state.es_id == '') contingent_error_messages = 'Field is empty'
-        else if (this.state.contingent_error_messages == 'Invalid Esummit ID')
+        if (this.state.es_id === '')
+          contingent_error_messages = 'Field is empty'
+        else if (this.state.contingent_error_messages === 'Invalid Esummit ID')
           contingent_error_messages = 'Invalid Esummit ID'
         else contingent_error_messages = 'User already a leader of a contingent'
 
@@ -155,7 +156,7 @@ export default class AddUserForm extends Component {
       .catch(response => {
         // this.props.form.name = "";
         let contingent_error_messages
-        if (es_id == '') contingent_error_messages = ''
+        if (es_id === '') contingent_error_messages = ''
         else contingent_error_messages = 'Invalid Esummit ID'
         this.setState({
           name: '',

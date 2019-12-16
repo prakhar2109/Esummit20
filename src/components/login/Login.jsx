@@ -52,23 +52,17 @@ class Login extends Component {
   // }
   loginresponseFacebook = response => {
     if (response.status !== 'unknown') {
-      console.log(response)
-      this.setState(
-        {
-          name: response.name,
-          accessToken: response.accessToken,
-          email: response.email,
-          image_url:
-            response.picture &&
-            response.picture.data &&
-            response.picture.data.url,
-          social_signup: true,
-          active_step: 1
-        },
-        () => {
-          console.log(this.state)
-        }
-      )
+      this.setState({
+        name: response.name,
+        accessToken: response.accessToken,
+        email: response.email,
+        image_url:
+          response.picture &&
+          response.picture.data &&
+          response.picture.data.url,
+        social_signup: true,
+        active_step: 1
+      })
     }
   }
   handleChange = e => {
@@ -96,25 +90,19 @@ class Login extends Component {
       }
     })
       .then(function(res) {
-        console.log(res)
         if (res !== undefined && res.data !== undefined) {
           if (res.data) {
             if (res.data.token) {
               localStorage.setItem('user_token', res.data.token)
             }
-            window.location.href = '/dashboard/task'
-            // document
-            //     .getElementById("loader")
-            //     .style
-            //     .display = "none";
-            // data = "";
+            this.props.history.push({ path: '/dashboard/task' })
           }
         }
       })
 
       .catch(response => {
-        alert('Please Register first')
-        window.location.href = '/register'
+        alert('Please Register first!')
+        this.props.history.push({ path: '/register' })
       })
   }
   render() {
@@ -134,8 +122,6 @@ class Login extends Component {
                   <div className="facebook_login">
                     <FacebookLogin
                       appId="630305827505065"
-                      // appId="613264019415150"
-                      // appId="2546035355673765"
                       size="medium"
                       autoLoad={false}
                       textButton="Facebook"

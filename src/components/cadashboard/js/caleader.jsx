@@ -18,7 +18,6 @@ export default class Caleader extends Component {
         }
       })
       .then(res => {
-        console.log(res.data)
         this.setState({ leaderboard: res.data })
       })
       .catch(response => {

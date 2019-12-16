@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../css/events.css'
 import { BASE_URL } from '../../../utils/urls'
 import Loader from '../../loader/loader'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 export default class Allevents extends Component {
   state = {
@@ -18,8 +19,6 @@ export default class Allevents extends Component {
     })
   }
   applyEvent = id => {
-    console.log('hello')
-
     let token = localStorage.getItem('user_token')
 
     axios
@@ -29,8 +28,8 @@ export default class Allevents extends Component {
         }
       })
       .then(res => {
-        if (res.status === 200) window.location.href = '/dashboard/Events'
-        console.log(res)
+        if (res.status === 200)
+          this.props.history.push({ path: '/dashboard/Events' })
       })
       .catch(response => {})
   }
@@ -56,7 +55,7 @@ export default class Allevents extends Component {
         <Loader />
         {this.state.events.map((event, index) => (
           <>
-            {event.sub_events.length == 0 ? (
+            {event.sub_events.length === 0 ? (
               <div
                 key={index}
                 className="caevents-earnedcoupons-child"
@@ -125,4 +124,8 @@ export default class Allevents extends Component {
       </div>
     )
   }
+}
+
+Allevents.propTypes = {
+  history: PropTypes.func
 }

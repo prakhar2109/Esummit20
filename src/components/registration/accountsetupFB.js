@@ -78,7 +78,8 @@ class Facebooklogin extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="facebook_login">aa
+        <div className="facebook_login">
+          aa
           <FacebookLogin
             // appId="630305827505065"
             // appId="613264019415150"

@@ -15,7 +15,7 @@ export default class Createcontigent extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.invitelist != this.props.invitelist) {
+    if (nextProps.invitelist !== this.props.invitelist) {
       this.setState({
         invitelist: nextProps.invitelist,
         invitesno: nextProps.invitesno
@@ -110,7 +110,7 @@ export default class Createcontigent extends Component {
               {this.state.invitelist &&
                 this.state.invitelist.map(
                   e =>
-                    e.status == 'P' && (
+                    e.status === 'P' && (
                       <tr id="cacontignet-table-row2">
                         <td>{e.contingent.leader.name}</td>
                         <td>{e.contingent.contingent_id}</td>

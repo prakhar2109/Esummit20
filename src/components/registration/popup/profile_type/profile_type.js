@@ -12,17 +12,15 @@ class Profiletype extends Component {
       profile_type: ''
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     // const query=new URLSearchParams(this.props.location.search);
     // // console.log(query)
     // console.log(query.entries())
     // for(let param of query.entries())
-    // { 
+    // {
     //   console.log(param[0],"wwwwww");
     //   console.log(param[1],"ddddddd");
     // }
-
-
   }
   onProfileChange = e => {
     this.setState({
@@ -39,23 +37,21 @@ class Profiletype extends Component {
     }
   }
   handleNext = () => {
-   
-    const query=new URLSearchParams(this.props.location.search);
+    const query = new URLSearchParams(this.props.location.search)
     // console.log(query)
-    for(let param of query.entries())
-    { 
-      console.log(param[0]);
-      console.log(param[1]);
+    for (let param of query.entries()) {
+      console.log(param[0])
+      console.log(param[1])
     }
-
 
     if (this.state.profile_type === 'others') {
       return (window.location.href =
         'https://docs.google.com/forms/d/e/1FAIpQLSdaJH9lppWdVlgjXDiw60KvkT1kQeUcn-4s-UHDL_BirextvQ/viewform?usp=sf_link')
     } else if (this.state.profile_type === 'CA') {
       this.props.history.push({
-        pathname:'/ca-registration',
-        search:this.props.location.search})
+        pathname: '/ca-registration',
+        search: this.props.location.search
+      })
     }
   }
   render() {

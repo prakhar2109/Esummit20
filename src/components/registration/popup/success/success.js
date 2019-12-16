@@ -11,7 +11,7 @@ class Successmessage extends Component {
   }
   navigateMain = () => {
     const { history } = this.props
-    window.location.href='/';
+    this.props.history.push({ path: '/' })
   }
   render() {
     return (

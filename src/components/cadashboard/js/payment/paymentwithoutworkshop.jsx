@@ -204,7 +204,7 @@ export default class Payment extends Component {
             }
           })
           .then(res => {
-            window.location.href = '/dashboard/payment'
+            this.props.history.push({ path: '/dashboard/payment' })
             // console.log(res.data, "data");
 
             let datePayed = res.data.date_created.substr(0, 10)

@@ -23,9 +23,6 @@ import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 
 class HomeLanding extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <div>

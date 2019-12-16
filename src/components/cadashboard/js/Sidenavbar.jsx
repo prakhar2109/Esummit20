@@ -5,12 +5,12 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Header from '../header/caheader'
 import { BASE_URL } from '../../../utils/urls'
-import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 
 class caLeaderboard extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       name: '',
       score: '0',
@@ -26,7 +26,7 @@ class caLeaderboard extends Component {
   }
   handleLogout = () => {
     localStorage.removeItem('user_token')
-    window.location.href = '/'
+    this.props.history.push({ path: '/' })
   }
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
@@ -49,9 +49,9 @@ class caLeaderboard extends Component {
           localStorage.setItem('invite', res.data.invite_url)
         })
         .catch(response => {
-          window.location.href = '/login'
+          this.props.history.push({ path: '/login' })
         })
-    } else window.location.href = '/login'
+    } else this.props.history.push({ path: '/login' })
   }
 
   render() {
@@ -65,7 +65,6 @@ class caLeaderboard extends Component {
     //   this.state.data.user_type === 'AMB' || this.state.data.user_type === 'CA'
 
     let is_ca = true
-    console.log(`${profile}aaaaa${is_ca}`, 'abdsmnbdasn')
 
     if (profile === 'AMB') {
       profile_display = 'CAMPUS AMBASSADOR'
@@ -259,6 +258,7 @@ class caLeaderboard extends Component {
                 <div id="leaderboardButton">
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
                   >
                     CA RULEBOOK
@@ -276,6 +276,10 @@ class caLeaderboard extends Component {
       </div>
     )
   }
+}
+
+caLeaderboard.propTypes = {
+  history: PropTypes.func
 }
 
 export default withRouter(caLeaderboard)
