@@ -39,13 +39,14 @@
     width: 62%;
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: auto;
     margin-left: 8%;
-    margin-bottom: 35px;
+    margin-bottom: auto;
 }
 
 .caheader #droperShape {
-    margin-top: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 4%;
     background-color: #359E9A;
     color: white;
@@ -109,14 +110,12 @@
     height: fit-content;
     color: rgba(255, 255, 255, 0.38);
     max-height: fit-content;
-    padding: 2.28rem 0;
+    padding: 1.28rem 0;
 }
 #mobile-navbar-dashboard-logout{
     display: none;
     color: #E2574C;
     font-size: 24px ;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 #mobile-navbar-submitButton button {
     cursor: pointer;
@@ -160,10 +159,12 @@ color: #F39423 !important;
     font-size: 12px;
 }
 .caheader #nms{
- font-family:"ProximaNova-Semibold" !important;
- font-size: 18px;
- letter-spacing: .02em;
- margin-bottom: 0;
+    font-size: 17.14px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.87);
+    margin-bottom: .4rem;
 }
 .dashboard-mobile-navbar{
 display:flex;
@@ -176,10 +177,21 @@ margin-bottom: 2vh;
        padding-top:12px;
 }
 #typeofdashboard{
-    color: #4F4F4F;
     font-size: 10px;
-    letter-spacing: .02em;
-    font-family: "ProximaNova-Light";
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    margin-bottom: .8rem;
+    color: rgba(255, 255, 255, 0.87);
+}
+.link-mobile-viewprofile {
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.6);
 }
 .mobile-profile-dashboard-esummit2{
     font-size: 14px;
@@ -188,11 +200,20 @@ margin-bottom: 2vh;
     padding-bottom:12px;
 }
 #mobileprofile-dashboard-esummitId{
-    color: #4F4F4F;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
 }
 #mobileprofile-dashboard-esummitId-value{
     float: right;
-    color: #1A4D66;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #359D9A;
 }
 .new-navbar-i{  
     padding: 16px;
@@ -227,6 +248,7 @@ margin-bottom: 2vh;
 .linkEventson-inactive {
     color: rgba(255, 255, 255, 0.38);
     /* font-family: "ProximaNova-Semibold" !important; */
+    font-size: 16px;
     font-family: Poppins-Regular;
     font-style: normal;
     font-weight: 600;

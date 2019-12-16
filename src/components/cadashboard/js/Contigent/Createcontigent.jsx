@@ -104,7 +104,7 @@ export default class Createcontigent extends Component {
                         <tbody>
                             <tr id="cacontignet-table-row1">
                                 <th id="cacontignet-th-1">LEADER NAME</th>
-                                <th id="cacontignet-th-2">E-SUMMIT ID</th>
+                                <th id="cacontignet-th-2">CONTINGENT_ID</th>
                                 <th id="cacontignet-th-3">JOINED</th>
                                 <th id="cacontignet-th-4"></th>
                                 <th id="cacontignet-th-5"></th>
@@ -115,14 +115,14 @@ export default class Createcontigent extends Component {
                                     e =>
                                         e.status == 'P' && (
                                             <tr id="cacontignet-table-row2">
-                                                <td>{e.user.name}</td>
-                                                <td>{e.user.esummit_id}</td>
+                                                <td>{e.contingent.leader.name}</td>
+                                                <td>{e.contingent.contingent_id}</td>
                                                 <td>{e.accepted_users}</td>
                                                 <td id="cacontignet-td-4">
                                                     <button
                                                         id="cacontignet-td-b01"
                                                         onClick={() => {
-                                                            this.props.acceptInvitation(e.contingent)
+                                                            this.props.acceptInvitation(e.contingent.contingent_id)
                                                         }}
                                                     >
                                                         ACCEPT
@@ -132,7 +132,7 @@ export default class Createcontigent extends Component {
                                                     <button
                                                         id="cacontignet-td-b02"
                                                         onClick={() => {
-                                                            this.props.declineInvitation(e.contingent)
+                                                            this.props.declineInvitation(e.contingent.contingent_id)
                                                         }}
                                                     >
                                                         DECLINE

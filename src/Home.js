@@ -9,7 +9,7 @@ import Success from './components/registration/popup/success/success.js'
 import Loadable from 'react-loadable'
 import Registration from './components/registration/index.js'
 import Personaldetail from './components/registration/personal_details/personal_details.js'
-import Facebooklogin from './components/registration/account_setup/accountsetup.js'
+// import Facebooklogin from './components/registration/account_setup/accountsetup.js'
 import Profiletype from './components/registration/popup/profile_type/profile_type.js'
 import Navbar from './components/navbar'
 import Home from './components/home/Home.js'
@@ -19,16 +19,8 @@ import './styles/main.scss'
 import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
+import Login from './components/login/Login'
 import 'antd/dist/antd.css'
-const register = Loadable({
-  loader: () => import('./components/registration/index.js'),
-  loading: () => <Loading />
-})
-const Registration_profiletype = Loadable({
-  loader: () =>
-    import('./components/registration/popup/profile_type/profile_type.js'),
-  loading: () => <Loading />
-})
 
 class HomeLanding extends Component {
   constructor(props) {
@@ -47,6 +39,8 @@ class HomeLanding extends Component {
               component={CampusAmbassador}
             />
             <Route path="/register" component={Profiletype} />
+            <Route path="/login" component={Login} />
+
             <Route path="/ca-registration" component={Registration} />
             <Route path="/personal-detail" component={Personaldetail} />
             <Route path="/register-success" component={Success} />

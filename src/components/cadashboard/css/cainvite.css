@@ -108,7 +108,7 @@ display: none;
 
 letter-spacing: 0.02em;
 font-size:19.91px;
-color: rgba(255, 255, 255, 0.87);
+color: rgba(255, 255, 255, 0.6);
 font-weight: 600;
 font-family:"Poppins-Regular" !important; 
 }
@@ -118,6 +118,7 @@ font-family:"Poppins-Regular" !important;
     background: transparent;
     padding-left: 2rem;
     border: 2px solid #359D9A;
+    border-right: 0px;
     color: rgba(255, 255, 255, 0.87);
     font-family: "Poppins-Regular";
 
@@ -132,9 +133,10 @@ font-family:"Poppins-Regular" !important;
 
 #camyinputbutton{
     height: 5.92vh;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.87);
-    color: #359D9A;
+    background: #359D9A;
+    border: 1px solid #359D9A;
+    color: rgba(255, 255, 255, 0.87);
+
     cursor: pointer;
     font-family: "Poppins-Regular";
     font-weight: 600;
@@ -287,7 +289,8 @@ font-size:28px;
     width:100%;
     min-height: 100vh;
     padding-bottom: 2vh;
-    background-color: #F7F8F9;
+    margin-top: 9vh;
+    background: #070F12;
 }
 .cainviteparent-heading{
     margin-top:0;
@@ -296,9 +299,11 @@ font-size:28px;
 }
 #camyinput {
     margin-top: 0 !important;
-
-    border: 2px solid #C4C4C4;
+    padding-left: 5px;
+    border: 1px solid #C4C4C4;
+    border-right: 0px;
     width: 68%;
+    font-size: 12px;
     height: 5.92vh;
 }
 .cainvite-linkparent{
@@ -311,11 +316,12 @@ font-size:28px;
 }
 #camyinputbutton {
     height: 5.92vh;
-    background: #F39423;
-    color: #fff;
-    border: 0px;
+    color: #FFFFFF;
     font-size: 12px;
-	font-family:"ProximaNova-Semibold" !important; 
+    border: 1px solid #359D9A;
+    box-sizing: border-box;
+    background: #359D9A;
+    cursor: pointer;
     width: 25.23%;
 }
 .cainvite-linkparent-heading{

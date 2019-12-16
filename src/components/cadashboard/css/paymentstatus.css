@@ -28,14 +28,12 @@
     /* width:100%; */
 
 #cainvite-linkparentstatic-subparent{
-    /* padding */
-    /* padding-left:1vw !important; */
-    /* padding-top: 1vh; */
+   
     background: #0D1719;
-    /* box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08); */
     height:auto;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
     display: flex;
     padding-top: 1.2vh;
     padding-left: 2.96vh;
@@ -111,6 +109,7 @@
     color: rgba(255, 255, 255, 0.87);
     font-family: "Poppins-Regular";
     font-weight: 600;
+    width: 50%;
     border: 1px solid #ddd;
     text-align: left;
   }
@@ -152,7 +151,14 @@
     display: none;
 }
 
-    
+#cainviteth1  {
+    border-left-width: 0;
+}
+
+#cainviteth2{
+    border-left-width: 0;
+    border-right-width: 0;
+}
   
     @media (max-width: 900px){
         .cainvite-paymentstatus-viewlist{
@@ -168,7 +174,7 @@
         }
         .cainvite-linkparent-parent-parent{
             font-family: "Poppins-Regular";   
-            background: #FFFFFF;
+            background: #0D1719;
             box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.08);
             border-radius: 8px;
             height:auto;
@@ -218,7 +224,8 @@
             font-size: 14px;
             text-align: center;
             letter-spacing: 0.02em;
-            color: #4F4F4F;
+                color: rgba(255, 255, 255, 0.87);
+
             margin-right:4vw;
         }
         .cainvite-paymentstatus-text2-paymentnotdone{
@@ -227,7 +234,8 @@
             font-size: 14px;
             text-align: center;
             letter-spacing: 0.02em;
-            color: #4F4F4F;
+                color: rgba(255, 255, 255, 0.87);
+
             /* margin-right:20vw; */
         }
         .capayment-status table,.capayment-status td,.capayment-status th {  
@@ -286,7 +294,8 @@
             font-size: 14px;
             text-align: center;
             letter-spacing: 0.02em;
-            color: #4F4F4F;
+            color: rgba(255, 255, 255, 0.87);
+
             margin-right:4vw;
             margin-bottom: 1vh;
         }

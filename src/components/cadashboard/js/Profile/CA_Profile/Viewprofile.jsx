@@ -32,6 +32,7 @@ export default class Viewprofile extends Component {
         }
       })
       .then(res => {
+        console.log(res.data)
         this.setState({
           score: res.data.score,
           name: res.data.name,
@@ -98,8 +99,8 @@ export default class Viewprofile extends Component {
         Authorization: `Token ${token}`
       }
     })
-      .then(r => {})
-      .catch(r => {})
+      .then(r => { })
+      .catch(r => { })
     this.handleOk()
   }
   getTshirt = () => {
@@ -257,6 +258,14 @@ export default class Viewprofile extends Component {
                       data.gender = e.target.value
                     }}
                   >
+                     {!data.gender && (
+                          <>
+                            <option value="" selected></option>
+                            <option value="M" >M</option>
+                            <option value="F">F</option>
+                            <option value="O">O</option>
+                          </>
+                        )}
                     {data.gender === 'M' && (
                       <>
                         <option value="M" selected>
@@ -319,6 +328,18 @@ export default class Viewprofile extends Component {
                       data.tshirt_size = event.target.value
                     }}
                   >
+                     {!data.tshirt_size && (
+                          <>
+                            <option value="" selected></option>
+                            <option value="XS">
+                              XS
+                             </option>
+                            <option value="S">S</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                          </>
+                        )}
                     {data.tshirt_size === 'XS' && (
                       <>
                         <option value="XS" selected>
@@ -528,9 +549,42 @@ export default class Viewprofile extends Component {
                         }}
                         id="caprofile01"
                       >
-                        <option value="M">M</option>
-                        <option value="F">F</option>
-                        <option value="O">O</option>
+                        {!data.gender && (
+                          <>
+                            <option value="" selected></option>
+                            <option value="M" >M</option>
+                            <option value="F">F</option>
+                            <option value="O">O</option>
+                          </>
+                        )}
+                        {data.gender === 'M' && (
+                          <>
+                            <option value="M" selected>
+                              M
+                        </option>
+                            <option value="F">F</option>
+                            <option value="O">O</option>
+                          </>
+                        )}
+
+                        {data.gender === 'F' && (
+                          <>
+                            <option value="M">M</option>
+                            <option value="F" selected>
+                              F
+                        </option>
+                            <option value="O">O</option>
+                          </>
+                        )}
+                        {data.gender === 'O' && (
+                          <>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            <option value="O" selected>
+                              O
+                        </option>
+                          </>
+                        )}
                       </select>
                     </div>
                   </div>
@@ -566,11 +620,79 @@ export default class Viewprofile extends Component {
                           data.tshirt_size = event.target.value
                         }}
                       >
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                        <option value="XXL">XXL</option>
+                        {!data.tshirt_size && (
+                          <>
+                            <option value="" selected></option>
+                            <option value="XS">
+                              XS
+                             </option>
+                            <option value="S">S</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                          </>
+                        )}
+                        {data.tshirt_size === 'XS' && (
+                          <>
+                            <option value="XS" selected>
+                              XS
+                        </option>
+                            <option value="S">S</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                          </>
+                        )}
+                        {data.tshirt_size === 'S' && (
+                          <>
+                            <option value="XS">XS</option>
+                            <option value="S" selected>
+                              S
+                        </option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                          </>
+                        )}
+                        {data.tshirt_size === 'L' && (
+                          <>
+                            <option value="XS" selected>
+                              XS
+                        </option>
+                            <option value="S">S</option>
+                            <option value="L" selected>
+                              L
+                        </option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                          </>
+                        )}
+                        {data.tshirt_size === 'XL' && (
+                          <>
+                            <option value="XS" selected>
+                              XS
+                        </option>
+                            <option value="S">S</option>
+                            <option value="L">L</option>
+                            <option value="XL" selected>
+                              XL
+                        </option>
+                            <option value="XXL">XXL</option>
+                          </>
+                        )}
+                        {data.tshirt_size === 'XXL' && (
+                          <>
+                            <option value="XS" selected>
+                              XS
+                        </option>
+                            <option value="S">S</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL" selected>
+                              XXL
+                        </option>
+                          </>
+                        )}
                       </select>
 
                       {/* <input type="text" 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FacebookLogin from './account_setup/accountsetup.js'
+import FacebookLoginCom from './account_setup/accountsetup.js'
 import Personaldetails from './personal_details/personal_details.js'
 import PropTypes from 'prop-types'
 import FetchApi from '../../utils/fetchAPI'
@@ -20,7 +20,7 @@ class Registration extends Component {
       city: '',
       countrt: '',
       state: '',
-      profile_type: 'CA',
+      user_type: "CA",
       college: '',
       tshirt_size: '',
       success: false,
@@ -54,7 +54,15 @@ class Registration extends Component {
     FetchApi('POST', endpoint, this.state, null)
       .then(res => {
         if (res.data) {
-          this.setState({ success: true, activeStep: 0 })
+          // this.setState({ success: true, active_step: 0 })
+          // console.log(res.data)
+          if (res.data.token) {
+            localStorage.setItem("user_token", res.data.token);
+          window.location.href='/dashboard/task';
+          }
+          else 
+          this.setState({ success: true, active_step: 0 })
+
         }
       })
       .catch(error => {
@@ -104,7 +112,7 @@ class Registration extends Component {
     return (
       <React.Fragment>
         {active_step === 1 ? (
-          <FacebookLogin
+          <FacebookLoginCom
             handleProfile={this.responseFacebook}
             profile_type={profile_type}
           />
@@ -123,7 +131,7 @@ class Registration extends Component {
         {/* {success ? this.props.history.push('/register-success') : null}
         {error ? this.props.history.push('/register-failure') : null} */}
           {success ? <Registersucess/>: null}
-        {error ? <Registerfailure/>: null}
+          {error ? <Registerfailure/>: null}
       </React.Fragment>
     )
   }

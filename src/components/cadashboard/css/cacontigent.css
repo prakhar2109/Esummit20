@@ -424,7 +424,6 @@ right:45px;
 	font-family: "Poppins-Regular";
 	font-weight: 600;
 	padding: 1.11vh;
-	padding-right: 0;
 	width: 99%;
 	border-radius: 4px;
 }
@@ -490,7 +489,7 @@ right:45px;
 	width: 20%;
     font-size: 14.2px;
     letter-spacing: 0.02em;
-    color: #1A4D66;
+    color: #359D9A;
 }
 .contigent-adduserform-cross{
 	color: #359D9A;
@@ -541,7 +540,8 @@ width:90px !important;
     position: unset;
     height: 2rem;
     display: flex;
-    justify-content: center;
+	justify-content: center;
+	border: 1px solid #359D9A;
     align-items: center;
 }
 #cacontignet-td-b01{
@@ -574,7 +574,7 @@ width:90px !important;
     left:0;
     width:100%;
 	min-height: 100vh;
-	margin-top: 6vh;
+	margin-top: 9vh;
     padding-bottom: 2vh;
     background-color: #070F12;
 }
@@ -718,9 +718,11 @@ font-size: 14px;
     align-self: center;
     width: 100%;
     height: 2rem;
-    border: 1px solid #000000;
+	background: #121C1D;
+    border: 1px solid rgba(255, 255, 255, 0.87);
     padding: 1rem;
-    color: #4F4F4F;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
     line-height: 12px;
 }
 .cacontigent-congratsparent-editcontigent{

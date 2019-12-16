@@ -13,6 +13,7 @@ import CAnewcontigent from './Contigent/cacontigent'
 import CAevents from './events'
 // import { BASE_URL } from  './../../../../utils/urls'
 import axios from 'axios'
+import ComingSoon from '../js/Comingsoon'
 
 /* eslint-disable react/prop-types */
 
@@ -22,11 +23,11 @@ class App extends Component {
     this.state = {}
   }
   componentDidMount = () => {
-    // let token = localStorage.getItem('user_token')
-    localStorage.setItem(
-      'user_token',
-      '2c2081ce8f34e1a689cac1c2f1cbc5128544b90a'
-    )
+    let token = localStorage.getItem('user_token')
+    // localStorage.setItem(
+    //   'user_token',
+    //   '1c76b5c8f0cf53480b9951466abb86171647c1c9'
+    // )
   }
   render() {
     let { dashboardProps } = this.props
@@ -45,6 +46,8 @@ class App extends Component {
             <Route exact path="/dashboard/task" component={CATaskBoard} />
             {/* <Route exact path="/dashboard/offers" component={CAOffers} /> */}
             {/* <Route path="/dashboard/payment" render={() => <CAPayment {...this.props} />} /> */}
+            <Route path="/dashboard/payment" component={ComingSoon} />
+
             <Route exact path="/dashboard/invite" component={CAInvite} />
             <Route exact path="/dashboard/leader" component={CALeader} />
             <Route

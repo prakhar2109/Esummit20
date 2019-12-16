@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import '../css/catask.css'
 import axios from 'axios'
 import { BASE_URL } from './../../../utils/urls'
+import CATaskUploading from './cataskuploading'
+import CATaskSummary from './catasksummary'
 let token = localStorage.getItem('user_token')
 
 /* eslint-disable react/prop-types */
@@ -11,7 +13,8 @@ export default class CATaskBoard extends Component {
     super()
     this.state = {
       isfileUploaded: false,
-      fileUploaded: null
+      fileUploaded: null,
+      task_bool:"tasks"
     }
   }
   componentDidMount = () => {
@@ -22,15 +25,19 @@ export default class CATaskBoard extends Component {
         }
       })
       .then(res => {
+        console.log(res.data,"gggg");
         if (res && res.data) {
           this.setState({ tasks: res.data })
         }
       })
       .catch(function(response) {
-        alert(response)
+        // alert(response)
       })
   }
-
+  tasksChangeHandler = (variable) =>
+  {
+    this.setState({task_bool:variable})
+  }
   render() {
     let { tasks } = this.state
     let today = new Date()
@@ -50,11 +57,18 @@ export default class CATaskBoard extends Component {
     return (
       <div className="taskparent">
         <div className="taskchildheaderrow">
-          <div className="taskchild-weeklyuploads">Tasks</div>
+          <div className="taskchild-weeklyuploads" onClick={()=>this.tasksChangeHandler("tasks")}>Tasks</div>
+          <div className="taskchild-weeklyuploads" id="task-summary-title" onClick={()=>this.tasksChangeHandler("tasksum")}> Tasks Summary</div>
         </div>
+        {this.state.task_bool==="tasks"?
         <div className="taskchildrow">
           {tasks && tasks.map(e => <CATask key={e.id} task={e} />)}
-        </div>
+        </div>:null}
+
+        {this.state.task_bool==="tasksum"?
+        <CATaskSummary tasks={tasks}/>
+        :null
+        }
       </div>
     )
   }
@@ -64,96 +78,38 @@ class CATask extends Component {
   constructor() {
     super()
     this.state = {
-      isfileUploaded: false,
-      fileUploaded: null
+     
     }
   }
   state = {
     visible: true
   }
 
-  fileUploadHandler = (file, task) => {
-    let name = document.getElementById(`fileInput${task.id}`)
-    if (name.files.item(0)) {
-      let fileUploaded = file
-      let isfileUploaded = true
-      this.setState(
-        {
-          fileUploaded,
-          isfileUploaded
-        },
-        () => {}
-      )
-      let formData = new FormData()
-      formData.append('file', file[0])
-      formData.append('task', task.id)
-      axios
-        .post(BASE_URL + `/v1/api/task/${task.id}/submit`, formData, {
-          headers: {
-            Authorization: `Token ${token}`,
-            'Content-Type': 'multipart/formdata '
-          }
-        })
-        .then(() => {
-          // alert(resData) //do something with this and show the user that the file has
-          // been uploaded !
-          document.getElementById(
-            `nameOfFileUploadedForTask${task.id}`
-          ).innerHTML = name.files.item(0).name
-          document.getElementById(`filestatus${task.id}`).innerHTML =
-            'Uploaded '
+  taskuploader=(id)=>{
+    document.getElementById(`taskuploaded${id}`).style.display="none";
+    document.getElementById(`taskuploading${id}`).style.display="block";
 
-          var element = document.getElementById(`Uploaded-Task${task.id}`)
-          element.className = element.className.replace(
-            'taskchild-uploadedfiles',
-            'taskchild-filesupload'
-          )
-        })
-    }
   }
   render() {
     let task = this.props.task
+    console.log(task)
+
     return (
       <div className="taskchild">
-        <div className="taskchild-body">
+        <div className="taskchild-body taskuploaded" id={`taskuploaded${task.id}`}>
           <div className="taskchild-heading">{task.name}</div>
+          <div className="taskchild-description">{task.description}</div>
+          <div className="taskchild-points">Max Points:{task.max_points}</div>
 
+          <button className="uploading-button" onClick={()=>this.taskuploader(task.id)}>Upload</button>
+        </div>
+
+
+        <div className="taskchild-body taskuploading" id={`taskuploading${task.id}`}>
+          <div className="taskchild-heading">{task.name}</div>
           <div className="taskchild-description">{task.description}</div>
           <div className="Uploading-task">
-          <div
-            id={`Uploaded-Task${task.id}`}
-            className={
-              task.sub === null || task.sub === undefined
-                ? 'taskchild-uploadedfiles'
-                : 'taskchild-filesupload'
-            }
-          >
-            <div className="Selectfilesvg">
-              <p
-                id={`nameOfFileUploadedForTask${task.id}`}
-                className="taskName1"
-              ></p>
-
-              <p id={`filestatus${task.id}`} className="taskName2">
-                {task.sub === null || task.sub === undefined ? (
-                  <p className="taskchild-uploadedfiles-p">
-                    Uploaded files shown here
-                  </p>
-                ) : (
-                  <p className="taskchild-filesupload-p">Uploaded</p>
-                )}
-              </p>
-            </div>
-          </div>
-
-          <div className="taskchild-fileupload">
-            <input
-              id={`fileInput${task.id}`}
-              type="file"
-              className="filesvg"
-              onChange={e => this.fileUploadHandler(e.target.files, task)}
-            />
-          </div>
+          <CATaskUploading task={task}/>
           </div>
         </div>
       </div>

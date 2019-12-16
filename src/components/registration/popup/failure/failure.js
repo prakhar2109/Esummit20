@@ -11,12 +11,10 @@ class Failuremessage extends Component {
     this.state = {}
   }
   navigateMain = () => {
-    const { history } = this.props
-    history.push('/')
+    window.location.href='/';
   }
   navigateRegister = () => {
-    const { history } = this.props
-    history.push('/register')
+    window.location.href='/register';
   }
   render() {
     return (
@@ -31,8 +29,7 @@ class Failuremessage extends Component {
           ></div>
           <div className="success_content">
             Your Registration could not be completed. <br />
-           
-            Please Register Again.
+            User already registered
           </div>
           <div className="closeButton">
             <Button

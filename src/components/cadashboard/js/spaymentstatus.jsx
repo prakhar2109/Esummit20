@@ -162,8 +162,8 @@ export default class PaymentStatus extends Component {
         >
           <table>
             <tr>
-              <th>NAME</th>
-              <th>STATUS</th>
+              <th id="cainviteth1">NAME</th>
+              <th id="cainviteth2">STATUS</th>
             </tr>
             <PaymentStatusTable
               noOfMembers={noOfMembers}

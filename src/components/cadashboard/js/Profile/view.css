@@ -41,16 +41,15 @@
     margin-top: 5vh;
     height: 4.08vh;
     width: 7.774vw;
-    margin-left: 64.236vw;
-    margin-top: 1.85vh;
+    margin-left: 62.8vw;
+    margin-top: 3.5vh;
     text-align: center;
     font-size: 10px;
     letter-spacing: 0.09em;
     color: #FFFFFF;
     border: 1px solid #359D9A;
     box-sizing: border-box;
-    background: transparent;    
-    color: #359D9A;
+    background: #359D9A;    
     cursor: pointer;
 }
 .caprofile-line1 {
@@ -338,7 +337,7 @@ font-size: 11.42px;
 }
 
 .ca-profile-modalparent1{
-    margin-left: 0 !important;
+    margin-left: -1.5vw !important;
 }
 
 .ca-profile-modalparent2{
@@ -519,7 +518,7 @@ font-size:24px;
    	height: -webkit-fit-content;
 	height: -moz-fit-content;
     height: fit-content;
-    margin-top: 6vh;
+    margin-top: 9vh;
 	padding-bottom: 2rem	;
     background-color: #070F12;
 	width: 100%;
@@ -640,7 +639,6 @@ margin-top:1.71rem;
     margin-left: auto;
     margin-right: .857rem;
     margin-top: 1.35rem;
-     
     text-align: center;
     font-size: 12px;
     letter-spacing: 0.09em;

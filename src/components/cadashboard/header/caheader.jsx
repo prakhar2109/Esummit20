@@ -13,7 +13,7 @@ export default class ComingSoon extends Component {
   state = {
     name: '',
     score: '0',
-    activeState: '',
+    activeState: 'task',
     data: []
   }
 
@@ -35,7 +35,7 @@ export default class ComingSoon extends Component {
         })
       })
       .catch(response => {
-        // window.location.href = "/login";
+        window.location.href = "/login";
       })
   }
 
@@ -184,7 +184,7 @@ export default class ComingSoon extends Component {
             <div className="headerdata">
               <p id="nms">{name}</p>
               <p id="typeofdashboard">{profile_display}</p>
-              <Link to="/dashboard/Viewprofile" onClick={this.hide_menu}>
+              <Link to="/dashboard/Viewprofile" onClick={this.hide_menu} className="link-mobile-viewprofile">
                 View Profile
               </Link>
               {(this.state.data.user_type === 'AMB' ||

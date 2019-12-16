@@ -10,6 +10,7 @@ export default class Caleader extends Component {
 
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
+    
     axios
       .get(BASE_URL + '/v1/api/leaderboard/', {
         headers: {
@@ -17,6 +18,7 @@ export default class Caleader extends Component {
         }
       })
       .then(res => {
+        console.log(res.data)
         this.setState({ leaderboard: res.data })
       })
       .catch(response => {
@@ -47,7 +49,7 @@ export default class Caleader extends Component {
                     <td id="caranktd">{key + 1}</td>
                     <td id="canametd">{data.name}</td>
                     <td id="cacollegenametd">{data.college}</td>
-                    <td id="capointstd">{data.tot_score}</td>
+                    <td id="capointstd">{data.t_score}</td>
                   </tr>
                 )
               })}
@@ -74,7 +76,7 @@ export default class Caleader extends Component {
                       <span id="cacollegespan">{data.college}</span>
                     </td>
 
-                    <td id="capointstd">{data.tot_score}</td>
+                    <td id="capointstd">{data.t_score}</td>
                   </tr>
                 )
               })}
