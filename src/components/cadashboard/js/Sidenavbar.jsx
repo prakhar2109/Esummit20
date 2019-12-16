@@ -49,11 +49,9 @@ class caLeaderboard extends Component {
           localStorage.setItem('invite', res.data.invite_url)
         })
         .catch(response => {
-          window.location.href = "/login";
+          window.location.href = '/login'
         })
-    }
-    else
-    window.location.href = "/login";
+    } else window.location.href = '/login'
   }
 
   render() {

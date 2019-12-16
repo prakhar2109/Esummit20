@@ -99,8 +99,8 @@ export default class Viewprofile extends Component {
         Authorization: `Token ${token}`
       }
     })
-      .then(r => { })
-      .catch(r => { })
+      .then(r => {})
+      .catch(r => {})
     this.handleOk()
   }
   getTshirt = () => {
@@ -258,14 +258,14 @@ export default class Viewprofile extends Component {
                       data.gender = e.target.value
                     }}
                   >
-                     {!data.gender && (
-                          <>
-                            <option value="" selected></option>
-                            <option value="M" >M</option>
-                            <option value="F">F</option>
-                            <option value="O">O</option>
-                          </>
-                        )}
+                    {!data.gender && (
+                      <>
+                        <option value="" selected></option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                        <option value="O">O</option>
+                      </>
+                    )}
                     {data.gender === 'M' && (
                       <>
                         <option value="M" selected>
@@ -328,18 +328,16 @@ export default class Viewprofile extends Component {
                       data.tshirt_size = event.target.value
                     }}
                   >
-                     {!data.tshirt_size && (
-                          <>
-                            <option value="" selected></option>
-                            <option value="XS">
-                              XS
-                             </option>
-                            <option value="S">S</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                            <option value="XXL">XXL</option>
-                          </>
-                        )}
+                    {!data.tshirt_size && (
+                      <>
+                        <option value="" selected></option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                      </>
+                    )}
                     {data.tshirt_size === 'XS' && (
                       <>
                         <option value="XS" selected>
@@ -552,7 +550,7 @@ export default class Viewprofile extends Component {
                         {!data.gender && (
                           <>
                             <option value="" selected></option>
-                            <option value="M" >M</option>
+                            <option value="M">M</option>
                             <option value="F">F</option>
                             <option value="O">O</option>
                           </>
@@ -561,7 +559,7 @@ export default class Viewprofile extends Component {
                           <>
                             <option value="M" selected>
                               M
-                        </option>
+                            </option>
                             <option value="F">F</option>
                             <option value="O">O</option>
                           </>
@@ -572,7 +570,7 @@ export default class Viewprofile extends Component {
                             <option value="M">M</option>
                             <option value="F" selected>
                               F
-                        </option>
+                            </option>
                             <option value="O">O</option>
                           </>
                         )}
@@ -582,7 +580,7 @@ export default class Viewprofile extends Component {
                             <option value="F">F</option>
                             <option value="O" selected>
                               O
-                        </option>
+                            </option>
                           </>
                         )}
                       </select>
@@ -623,9 +621,7 @@ export default class Viewprofile extends Component {
                         {!data.tshirt_size && (
                           <>
                             <option value="" selected></option>
-                            <option value="XS">
-                              XS
-                             </option>
+                            <option value="XS">XS</option>
                             <option value="S">S</option>
                             <option value="L">L</option>
                             <option value="XL">XL</option>
@@ -636,7 +632,7 @@ export default class Viewprofile extends Component {
                           <>
                             <option value="XS" selected>
                               XS
-                        </option>
+                            </option>
                             <option value="S">S</option>
                             <option value="L">L</option>
                             <option value="XL">XL</option>
@@ -648,7 +644,7 @@ export default class Viewprofile extends Component {
                             <option value="XS">XS</option>
                             <option value="S" selected>
                               S
-                        </option>
+                            </option>
                             <option value="L">L</option>
                             <option value="XL">XL</option>
                             <option value="XXL">XXL</option>
@@ -658,11 +654,11 @@ export default class Viewprofile extends Component {
                           <>
                             <option value="XS" selected>
                               XS
-                        </option>
+                            </option>
                             <option value="S">S</option>
                             <option value="L" selected>
                               L
-                        </option>
+                            </option>
                             <option value="XL">XL</option>
                             <option value="XXL">XXL</option>
                           </>
@@ -671,12 +667,12 @@ export default class Viewprofile extends Component {
                           <>
                             <option value="XS" selected>
                               XS
-                        </option>
+                            </option>
                             <option value="S">S</option>
                             <option value="L">L</option>
                             <option value="XL" selected>
                               XL
-                        </option>
+                            </option>
                             <option value="XXL">XXL</option>
                           </>
                         )}
@@ -684,13 +680,13 @@ export default class Viewprofile extends Component {
                           <>
                             <option value="XS" selected>
                               XS
-                        </option>
+                            </option>
                             <option value="S">S</option>
                             <option value="L">L</option>
                             <option value="XL">XL</option>
                             <option value="XXL" selected>
                               XXL
-                        </option>
+                            </option>
                           </>
                         )}
                       </select>

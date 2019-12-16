@@ -14,7 +14,7 @@ export default class CATaskBoard extends Component {
     this.state = {
       isfileUploaded: false,
       fileUploaded: null,
-      task_bool:"tasks"
+      task_bool: 'tasks'
     }
   }
   componentDidMount = () => {
@@ -25,7 +25,7 @@ export default class CATaskBoard extends Component {
         }
       })
       .then(res => {
-        console.log(res.data,"gggg");
+        console.log(res.data, 'gggg')
         if (res && res.data) {
           this.setState({ tasks: res.data })
         }
@@ -34,9 +34,8 @@ export default class CATaskBoard extends Component {
         // alert(response)
       })
   }
-  tasksChangeHandler = (variable) =>
-  {
-    this.setState({task_bool:variable})
+  tasksChangeHandler = variable => {
+    this.setState({ task_bool: variable })
   }
   render() {
     let { tasks } = this.state
@@ -57,18 +56,30 @@ export default class CATaskBoard extends Component {
     return (
       <div className="taskparent">
         <div className="taskchildheaderrow">
-          <div className="taskchild-weeklyuploads" onClick={()=>this.tasksChangeHandler("tasks")}>Tasks</div>
-          <div className="taskchild-weeklyuploads" id="task-summary-title" onClick={()=>this.tasksChangeHandler("tasksum")}> Tasks Summary</div>
+          <div
+            className="taskchild-weeklyuploads"
+            onClick={() => this.tasksChangeHandler('tasks')}
+          >
+            Tasks
+          </div>
+          <div
+            className="taskchild-weeklyuploads"
+            id="task-summary-title"
+            onClick={() => this.tasksChangeHandler('tasksum')}
+          >
+            {' '}
+            Tasks Summary
+          </div>
         </div>
-        {this.state.task_bool==="tasks"?
-        <div className="taskchildrow">
-          {tasks && tasks.map(e => <CATask key={e.id} task={e} />)}
-        </div>:null}
+        {this.state.task_bool === 'tasks' ? (
+          <div className="taskchildrow">
+            {tasks && tasks.map(e => <CATask key={e.id} task={e} />)}
+          </div>
+        ) : null}
 
-        {this.state.task_bool==="tasksum"?
-        <CATaskSummary tasks={tasks}/>
-        :null
-        }
+        {this.state.task_bool === 'tasksum' ? (
+          <CATaskSummary tasks={tasks} />
+        ) : null}
       </div>
     )
   }
@@ -77,18 +88,15 @@ export default class CATaskBoard extends Component {
 class CATask extends Component {
   constructor() {
     super()
-    this.state = {
-     
-    }
+    this.state = {}
   }
   state = {
     visible: true
   }
 
-  taskuploader=(id)=>{
-    document.getElementById(`taskuploaded${id}`).style.display="none";
-    document.getElementById(`taskuploading${id}`).style.display="block";
-
+  taskuploader = id => {
+    document.getElementById(`taskuploaded${id}`).style.display = 'none'
+    document.getElementById(`taskuploading${id}`).style.display = 'block'
   }
   render() {
     let task = this.props.task
@@ -96,20 +104,30 @@ class CATask extends Component {
 
     return (
       <div className="taskchild">
-        <div className="taskchild-body taskuploaded" id={`taskuploaded${task.id}`}>
+        <div
+          className="taskchild-body taskuploaded"
+          id={`taskuploaded${task.id}`}
+        >
           <div className="taskchild-heading">{task.name}</div>
           <div className="taskchild-description">{task.description}</div>
           <div className="taskchild-points">Max Points:{task.max_points}</div>
 
-          <button className="uploading-button" onClick={()=>this.taskuploader(task.id)}>Upload</button>
+          <button
+            className="uploading-button"
+            onClick={() => this.taskuploader(task.id)}
+          >
+            Upload
+          </button>
         </div>
 
-
-        <div className="taskchild-body taskuploading" id={`taskuploading${task.id}`}>
+        <div
+          className="taskchild-body taskuploading"
+          id={`taskuploading${task.id}`}
+        >
           <div className="taskchild-heading">{task.name}</div>
           <div className="taskchild-description">{task.description}</div>
           <div className="Uploading-task">
-          <CATaskUploading task={task}/>
+            <CATaskUploading task={task} />
           </div>
         </div>
       </div>

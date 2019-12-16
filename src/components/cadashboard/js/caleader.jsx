@@ -10,7 +10,7 @@ export default class Caleader extends Component {
 
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
-    
+
     axios
       .get(BASE_URL + '/v1/api/leaderboard/', {
         headers: {

@@ -93,7 +93,7 @@ export default class Cacontigent extends Component {
           this.setState({ invitelist: res.data, invitesno: invites })
         }
       })
-      .catch(response => { })
+      .catch(response => {})
   }
 
   deleteContigent = () => {
@@ -110,7 +110,7 @@ export default class Cacontigent extends Component {
           window.location.href = '/dashboard/contingent'
         }
       })
-      .catch(response => { })
+      .catch(response => {})
   }
   createContigent = () => {
     document.getElementById('createcontigent').style.display = 'none'
@@ -146,7 +146,7 @@ export default class Cacontigent extends Component {
       })
   }
   createContigentSubmit = () => {
-    console.log(this.state.no_contingent, "createcontigentsubmit")
+    console.log(this.state.no_contingent, 'createcontigentsubmit')
     let isempty = false
     this.state.no_contingent.map((e, index) =>
       e.esummit_id === '' || e.name === '' ? (isempty = true) : null
@@ -213,7 +213,7 @@ export default class Cacontigent extends Component {
           // this.props.form.name = res.data.name;
         }
       })
-      .catch(response => { })
+      .catch(response => {})
   }
   declineInvitation = es_id => {
     let token = localStorage.getItem('user_token')
@@ -235,7 +235,7 @@ export default class Cacontigent extends Component {
           window.location.href = '/dashboard/contingent'
         }
       })
-      .catch(response => { })
+      .catch(response => {})
   }
   leaveContigent = () => {
     let token = localStorage.getItem('user_token')
@@ -251,7 +251,7 @@ export default class Cacontigent extends Component {
           window.location.href = '/dashboard/contingent'
         }
       })
-      .catch(response => { })
+      .catch(response => {})
   }
 
   yourContigent() {
@@ -315,7 +315,13 @@ export default class Cacontigent extends Component {
           <div className="cacontigent-parent">
             <Loader />
             <div className="cacontigent-parent-heading1">Create Contingent</div>
-            <Createcontigent createContigent={this.createContigent} invitesno={this.state.invitesno} invitelist={this.state.invitelist} acceptInvitation={this.acceptInvitation} declineInvitation={this.declineInvitation} />
+            <Createcontigent
+              createContigent={this.createContigent}
+              invitesno={this.state.invitesno}
+              invitelist={this.state.invitelist}
+              acceptInvitation={this.acceptInvitation}
+              declineInvitation={this.declineInvitation}
+            />
 
             <Modal
               visible={visible}
@@ -398,247 +404,246 @@ export default class Cacontigent extends Component {
             </Modal>
           </div>
         ) : (
-            <div className="cacontigent-parent">
-              <Loader />
-              <div className="cacontigent-innerparent" id="congratscontigent">
-                <div className="cacontigent-parent-heading1">
-                  Create Contingent
+          <div className="cacontigent-parent">
+            <Loader />
+            <div className="cacontigent-innerparent" id="congratscontigent">
+              <div className="cacontigent-parent-heading1">
+                Create Contingent
               </div>
 
-                <div className="cacontigent-congratsparent">
-                  <div className="cacontigent-congratsparent-child1">
-                    <div style={{ display: 'flex', alignSelf: 'center' }}>
-                      <Svgcorrect />
-                    </div>
-                    {this.state.contingent_member ? (
-                      <div>Congrats! Contingent successfully joined </div>
-                    ) : (
-                        <div>Congrats! Contingent successfully created</div>
-                      )}
+              <div className="cacontigent-congratsparent">
+                <div className="cacontigent-congratsparent-child1">
+                  <div style={{ display: 'flex', alignSelf: 'center' }}>
+                    <Svgcorrect />
                   </div>
                   {this.state.contingent_member ? (
-                    <div className="cacontigent-congratsparent-child2">
-                      Your Contingent No. is{' '}
-                      <strong>{this.state.contingent_data.contingent_id} </strong>
-                      .
-                  </div>
+                    <div>Congrats! Contingent successfully joined </div>
                   ) : (
-                      <div className="cacontigent-congratsparent-child2">
-                        Your contingent has been succesfully created Contingent No.{' '}
-                        <strong>{this.state.contingent_data.contingent_id} </strong>
-                        . A mail with the contingent no and unique password has been
-                        send to all members. Their names will be shown here as soon
-                        as they join the contingent. If you want to edit the members
-                        an edit option
+                    <div>Congrats! Contingent successfully created</div>
+                  )}
+                </div>
+                {this.state.contingent_member ? (
+                  <div className="cacontigent-congratsparent-child2">
+                    Your Contingent No. is{' '}
+                    <strong>{this.state.contingent_data.contingent_id} </strong>
+                    .
                   </div>
-                    )}
-                  <button
-                    onClick={this.yourContigent}
-                    id="cacontigent-congratsparent-b01"
-                  >
-                    DONE
+                ) : (
+                  <div className="cacontigent-congratsparent-child2">
+                    Your contingent has been succesfully created Contingent No.{' '}
+                    <strong>{this.state.contingent_data.contingent_id} </strong>
+                    . A mail with the contingent no and unique password has been
+                    send to all members. Their names will be shown here as soon
+                    as they join the contingent. If you want to edit the members
+                    an edit option
+                  </div>
+                )}
+                <button
+                  onClick={this.yourContigent}
+                  id="cacontigent-congratsparent-b01"
+                >
+                  DONE
                 </button>
-                </div>
               </div>
-              <div className="cacontigent-innerparent" id="yourcontigent">
-                <div className="cacontigent-parent-heading1">
-                  Contingent Details
-              </div>
-
-                <div className="cacontigent-congratsparent">
-                  {this.state.contingent_member && (
-                    <div>
-                      <div className="cacontigent-congratsparent-child1">
-                        <div>Your Contingent</div>
-                        <div
-                          className="cacontigent-congratsparent-editcontigent"
-                          onClick={this.leaveContigent}
-                        >
-                          Leave
-                      </div>
-                      </div>
-
-                      <div className="cacontigent-congratsparent-child2">
-                        <div className="cacontigent-congratsparent-child2-heading">
-                          Leader
-                      </div>
-                        <div className="cacontigent-congratsparent-child2-parent">
-                          <div className="cacontigent-congratsparent-child2-name">
-                            {this.state.contingent_data.leader
-                              ? this.state.contingent_data.leader.name
-                              : null}
-                          </div>
-                          <div className="cacontigent-congratsparent-child2-id">
-                            {this.state.contingent_data.leader
-                              ? this.state.contingent_data.leader.esummit_id
-                              : null}
-                          </div>
-                        </div>
-
-                        <div className="cacontigent-congratsparent-child2-heading">
-                          Members
-                      </div>
-                        {this.state.contingent_data.members &&
-                          this.state.contingent_data.members.map(
-                            e =>
-                              e.status == 'A' && (
-                                <div className="cacontigent-congratsparent-child2-parent">
-                                  <div className="cacontigent-congratsparent-child2-name">
-                                    {e.name}
-                                  </div>
-                                  <div className="cacontigent-congratsparent-child2-id">
-                                    {e.esummit_id}
-                                  </div>
-                                </div>
-                              )
-                          )}
-                      </div>
-                    </div>
-                  )}
-
-                  {!this.state.contingent_member && (
-                    <div>
-                      <div className="cacontigent-congratsparent-child1">
-                        <div>Your Contingent</div>
-
-                        <div
-                          className="cacontigent-congratsparent-editcontigent"
-                          onClick={this.editContigent}
-                        >
-                          Edit
-                      </div>
-                      </div>
-
-                      <div className="cacontigent-congratsparent-child2">
-                        <div className="cacontigent-congratsparent-child2-heading">
-                          Leader
-                      </div>
-                        <div className="cacontigent-congratsparent-child2-parent">
-                          <div className="cacontigent-congratsparent-child2-name">
-                            {this.state.contingent_data.leader
-                              ? this.state.contingent_data.leader.name
-                              : null}
-                          </div>
-                          <div className="cacontigent-congratsparent-child2-id">
-                            {this.state.contingent_data.leader
-                              ? this.state.contingent_data.leader.esummit_id
-                              : null}
-                          </div>
-                        </div>
-
-                        <div className="cacontigent-congratsparent-child2-heading">
-                          Members
-                      </div>
-                        {this.state.contingent_data.members &&
-                          this.state.contingent_data.members.map(e => (
-                            <div
-                              className="cacontigent-congratsparent-child2-parent"
-                              key={e.esummit_id}
-                            >
-                              <div className="cacontigent-congratsparent-child2-name">
-                                {e.name}
-                              </div>
-                              <div className="cacontigent-congratsparent-child2-id">
-                                {e.esummit_id}
-                              </div>
-                              <div className="cacontigent-congratsparent-child3-id">
-                                {e.status == 'P' ? 'Pending' : null}
-                                {e.status == 'A' ? 'Accepted' : null}
-                                {e.status == 'D' ? 'Declined' : null}
-                              </div>
-                            </div>
-                          ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <Aboutcontigent />
-
-              <Modal
-                visible={visible}
-                style={modalstyle}
-                width={width}
-                bodyStyle={bodyStyle}
-                onOk={this.handleOk}
-                closable={false}
-                footer={null}
-              >
-                <div className="Createcontigent-parentbody" id="submitcontigent">
-                  <div className="cacontigent-createparent" id="cacontigent5789">
-                    <div className="cacontigent-heading">Edit Contingent</div>
-                    <div
-                      className="cacontigent-heading-deletecontigent"
-                      onClick={this.deleteContigent}
-                    >
-                      Delete Contingent
-                  </div>
-                  </div>
-
-                  <div className="createcontigent-body">
-                    <div className="cacontigent-aboutparent-para">
-                      If you create a contingent you become leader of the
-                      contingent.
-                  </div>
-
-                    <div className="cacontigent-aboutparent-head">Leader</div>
-
-                    <div className="contigent-adduserform">
-                      <div className="contigent-adduserform-child">
-                        <div className="contigent-adduserform-heading">
-                          E-Summit ID
-                      </div>
-                        <div className="contigent-adduserform-input" required>
-                          {data.esummit_id}
-                        </div>
-                      </div>
-                      <div className="contigent-adduserform-child">
-                        <div className="contigent-adduserform-heading"> Name</div>
-
-                        <div className="contigent-adduserform-input">
-                          {data.name}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="cacontigent-aboutparent-head">Members</div>
-                    <div className="loadingUserformParent">
-                      {this.state.contingent_error_message}
-                    </div>
-
-                    {this.state.no_contingent.map((e, index) => (
-                      <div key={index}>
-                        {/* {console.log(this.state.no_contingent,index,"In parent render map")} */}
-                        <AddUserForm
-                          index={index}
-                          form={e}
-                          deleterow={this.handleDeleteRow}
-                          no_contigent={this.state.no_contingent}
-                        />
-                      </div>
-                    ))}
-                    <div
-                      className="cacontigent-aboutparent-head-addmember"
-                      onClick={this.addContingent}
-                    >
-                      {' '}
-                      Add member
-                  </div>
-                    <button
-                      className="cacontigent-finish"
-                      onClick={this.createContigentSubmit}
-                    >
-                      SAVE CHANGES
-                  </button>
-                  </div>
-                </div>
-              </Modal>
             </div>
-          )}
+            <div className="cacontigent-innerparent" id="yourcontigent">
+              <div className="cacontigent-parent-heading1">
+                Contingent Details
+              </div>
+
+              <div className="cacontigent-congratsparent">
+                {this.state.contingent_member && (
+                  <div>
+                    <div className="cacontigent-congratsparent-child1">
+                      <div>Your Contingent</div>
+                      <div
+                        className="cacontigent-congratsparent-editcontigent"
+                        onClick={this.leaveContigent}
+                      >
+                        Leave
+                      </div>
+                    </div>
+
+                    <div className="cacontigent-congratsparent-child2">
+                      <div className="cacontigent-congratsparent-child2-heading">
+                        Leader
+                      </div>
+                      <div className="cacontigent-congratsparent-child2-parent">
+                        <div className="cacontigent-congratsparent-child2-name">
+                          {this.state.contingent_data.leader
+                            ? this.state.contingent_data.leader.name
+                            : null}
+                        </div>
+                        <div className="cacontigent-congratsparent-child2-id">
+                          {this.state.contingent_data.leader
+                            ? this.state.contingent_data.leader.esummit_id
+                            : null}
+                        </div>
+                      </div>
+
+                      <div className="cacontigent-congratsparent-child2-heading">
+                        Members
+                      </div>
+                      {this.state.contingent_data.members &&
+                        this.state.contingent_data.members.map(
+                          e =>
+                            e.status == 'A' && (
+                              <div className="cacontigent-congratsparent-child2-parent">
+                                <div className="cacontigent-congratsparent-child2-name">
+                                  {e.name}
+                                </div>
+                                <div className="cacontigent-congratsparent-child2-id">
+                                  {e.esummit_id}
+                                </div>
+                              </div>
+                            )
+                        )}
+                    </div>
+                  </div>
+                )}
+
+                {!this.state.contingent_member && (
+                  <div>
+                    <div className="cacontigent-congratsparent-child1">
+                      <div>Your Contingent</div>
+
+                      <div
+                        className="cacontigent-congratsparent-editcontigent"
+                        onClick={this.editContigent}
+                      >
+                        Edit
+                      </div>
+                    </div>
+
+                    <div className="cacontigent-congratsparent-child2">
+                      <div className="cacontigent-congratsparent-child2-heading">
+                        Leader
+                      </div>
+                      <div className="cacontigent-congratsparent-child2-parent">
+                        <div className="cacontigent-congratsparent-child2-name">
+                          {this.state.contingent_data.leader
+                            ? this.state.contingent_data.leader.name
+                            : null}
+                        </div>
+                        <div className="cacontigent-congratsparent-child2-id">
+                          {this.state.contingent_data.leader
+                            ? this.state.contingent_data.leader.esummit_id
+                            : null}
+                        </div>
+                      </div>
+
+                      <div className="cacontigent-congratsparent-child2-heading">
+                        Members
+                      </div>
+                      {this.state.contingent_data.members &&
+                        this.state.contingent_data.members.map(e => (
+                          <div
+                            className="cacontigent-congratsparent-child2-parent"
+                            key={e.esummit_id}
+                          >
+                            <div className="cacontigent-congratsparent-child2-name">
+                              {e.name}
+                            </div>
+                            <div className="cacontigent-congratsparent-child2-id">
+                              {e.esummit_id}
+                            </div>
+                            <div className="cacontigent-congratsparent-child3-id">
+                              {e.status == 'P' ? 'Pending' : null}
+                              {e.status == 'A' ? 'Accepted' : null}
+                              {e.status == 'D' ? 'Declined' : null}
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <Aboutcontigent />
+
+            <Modal
+              visible={visible}
+              style={modalstyle}
+              width={width}
+              bodyStyle={bodyStyle}
+              onOk={this.handleOk}
+              closable={false}
+              footer={null}
+            >
+              <div className="Createcontigent-parentbody" id="submitcontigent">
+                <div className="cacontigent-createparent" id="cacontigent5789">
+                  <div className="cacontigent-heading">Edit Contingent</div>
+                  <div
+                    className="cacontigent-heading-deletecontigent"
+                    onClick={this.deleteContigent}
+                  >
+                    Delete Contingent
+                  </div>
+                </div>
+
+                <div className="createcontigent-body">
+                  <div className="cacontigent-aboutparent-para">
+                    If you create a contingent you become leader of the
+                    contingent.
+                  </div>
+
+                  <div className="cacontigent-aboutparent-head">Leader</div>
+
+                  <div className="contigent-adduserform">
+                    <div className="contigent-adduserform-child">
+                      <div className="contigent-adduserform-heading">
+                        E-Summit ID
+                      </div>
+                      <div className="contigent-adduserform-input" required>
+                        {data.esummit_id}
+                      </div>
+                    </div>
+                    <div className="contigent-adduserform-child">
+                      <div className="contigent-adduserform-heading"> Name</div>
+
+                      <div className="contigent-adduserform-input">
+                        {data.name}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="cacontigent-aboutparent-head">Members</div>
+                  <div className="loadingUserformParent">
+                    {this.state.contingent_error_message}
+                  </div>
+
+                  {this.state.no_contingent.map((e, index) => (
+                    <div key={index}>
+                      {/* {console.log(this.state.no_contingent,index,"In parent render map")} */}
+                      <AddUserForm
+                        index={index}
+                        form={e}
+                        deleterow={this.handleDeleteRow}
+                        no_contigent={this.state.no_contingent}
+                      />
+                    </div>
+                  ))}
+                  <div
+                    className="cacontigent-aboutparent-head-addmember"
+                    onClick={this.addContingent}
+                  >
+                    {' '}
+                    Add member
+                  </div>
+                  <button
+                    className="cacontigent-finish"
+                    onClick={this.createContigentSubmit}
+                  >
+                    SAVE CHANGES
+                  </button>
+                </div>
+              </div>
+            </Modal>
+          </div>
+        )}
       </div>
     )
   }
 }
-
 
 /* eslint-disable react/prop-types */
