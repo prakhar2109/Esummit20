@@ -183,6 +183,8 @@ class Personaldetail extends Component {
               state_error: 'State Name cannot be empty'
             })
             break
+          default:
+            break
         }
       }.bind(this),
       1000

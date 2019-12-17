@@ -26,7 +26,7 @@ class caLeaderboard extends Component {
   }
   handleLogout = () => {
     localStorage.removeItem('user_token')
-    this.props.history.push({ path: '/' })
+    this.props.history.push('/')
   }
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
@@ -49,9 +49,9 @@ class caLeaderboard extends Component {
           localStorage.setItem('invite', res.data.invite_url)
         })
         .catch(response => {
-          this.props.history.push({ path: '/login' })
+          this.props.history.push('/login')
         })
-    } else this.props.history.push({ path: '/login' })
+    } else this.props.history.push('/login')
   }
 
   render() {

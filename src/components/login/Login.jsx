@@ -68,9 +68,7 @@ class Login extends Component {
   handleChange = e => {
     let change = {}
     change[e.target.name] = e.target.value
-    this.setState(change, () => {
-      console.log(this.state)
-    })
+    this.setState(change)
   }
 
   loginSubmit = () => {
@@ -95,14 +93,14 @@ class Login extends Component {
             if (res.data.token) {
               localStorage.setItem('user_token', res.data.token)
             }
-            this.props.history.push({ path: '/dashboard/task' })
+            this.props.history.push('/dashboard/task')
           }
         }
       })
 
       .catch(response => {
         alert('Please Register first!')
-        this.props.history.push({ path: '/register' })
+        this.props.history.push('/register')
       })
   }
   render() {
@@ -124,7 +122,7 @@ class Login extends Component {
                       appId="630305827505065"
                       size="medium"
                       autoLoad={false}
-                      textButton="Facebook"
+                      textButton="Sign in with Facebook"
                       fields="name,email,picture"
                       callback={this.loginresponseFacebook}
                     />

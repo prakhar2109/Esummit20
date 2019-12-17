@@ -28,8 +28,7 @@ export default class Allevents extends Component {
         }
       })
       .then(res => {
-        if (res.status === 200)
-          this.props.history.push({ path: '/dashboard/Events' })
+        if (res.status === 200) this.props.history.push('/dashboard/Events')
       })
       .catch(response => {})
   }

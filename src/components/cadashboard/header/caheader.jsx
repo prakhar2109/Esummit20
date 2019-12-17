@@ -36,7 +36,7 @@ export default class ComingSoon extends Component {
         })
       })
       .catch(response => {
-        this.props.history.push({ path: '/login' })
+        this.props.history.push('/login')
       })
   }
 
@@ -51,7 +51,7 @@ export default class ComingSoon extends Component {
   }
   handleLogout = () => {
     localStorage.removeItem('user_token')
-    this.props.history.push({ path: '/login' })
+    this.props.history.push('/login')
   }
   handle_menu() {
     document.getElementById('phone').style.display = 'block'

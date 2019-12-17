@@ -2,7 +2,7 @@
   .accountsetup_popup {
     height: 26.29vh !important;
     /* width: 380px !important; */
-   
+
     background: #ffffff;
   }
   .accountsetup_popup_content {
@@ -20,12 +20,12 @@
   }
 }
 
-
 .signup-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 4rem;
 }
 
 .signupcircle_marker {
@@ -101,6 +101,7 @@
   top: 254px;
   background: #ffffff;
   border-radius: 4px;
+  width: 90%;
 }
 .accountsetup_popup_title {
   width: 100%;
@@ -120,7 +121,7 @@
   letter-spacing: 0.02em;
   color: #ffffff;
   border-radius: 4px 4px 0px 0px;
-  padding-left:12.5px ;
+  padding-left: 12.5px;
 }
 .account_popup_data {
   /* width: 371px; */
@@ -143,28 +144,19 @@
   margin-right: auto;
 }
 
-.accountsetup_popup_content
-{
-  padding-left:12.5px ;
+.accountsetup_popup_content {
+  padding-left: 12.5px;
   display: flex;
-    flex-direction: column;
-}
-.accountsetup_popup {
-  height: 26.29vh;
-  width: 90%;
-}
-@media only screen and (max-device-width: 1800px) {
-.accountsetup_popup_content
-.accountsetup_popup_title {
-    padding-left: 34.28px;
-  }
- 
-}
-@media only screen and (min-device-width: 1800px) and (max-device-width: 2560px) {
-  
-.accountsetup_popup_content
-.accountsetup_popup_title {
-  padding-left: 48px;
+  flex-direction: column;
 }
 
+@media only screen and (max-device-width: 1800px) {
+  .accountsetup_popup_content .accountsetup_popup_title {
+    padding-left: 34.28px;
+  }
+}
+@media only screen and (min-device-width: 1800px) and (max-device-width: 2560px) {
+  .accountsetup_popup_content .accountsetup_popup_title {
+    padding-left: 48px;
+  }
 }

@@ -204,8 +204,7 @@ export default class Payment extends Component {
             }
           })
           .then(res => {
-            this.props.history.push({ path: '/dashboard/payment' })
-            // console.log(res.data, "data");
+            this.props.history.push('/dashboard/payment')
 
             let datePayed = res.data.date_created.substr(0, 10)
             let totAmtPayed = res.data.amount_paid

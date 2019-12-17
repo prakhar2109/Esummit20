@@ -11,10 +11,10 @@ class Failuremessage extends Component {
     this.state = {}
   }
   navigateMain = () => {
-    this.props.history.push({ path: '/' })
+    this.props.history.push('/')
   }
   navigateRegister = () => {
-    this.props.history.push({ path: '/register' })
+    this.props.history.push('/register')
   }
   render() {
     return (

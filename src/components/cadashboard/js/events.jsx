@@ -54,9 +54,7 @@ export default class Events extends Component {
         }
       })
       .then(res => {
-        if (res.status === 200)
-          this.props.history.push({ path: '/dashboard/Events' })
-        // console.log(res)
+        if (res.status === 200) this.props.history.push('/dashboard/Events')
       })
       .catch(response => {})
   }
