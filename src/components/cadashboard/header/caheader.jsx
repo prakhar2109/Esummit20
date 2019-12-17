@@ -51,7 +51,7 @@ export default class ComingSoon extends Component {
   }
   handleLogout = () => {
     localStorage.removeItem('user_token')
-    this.props.history.push('/login')
+    window.location.href = '/login'
   }
   handle_menu() {
     document.getElementById('phone').style.display = 'block'

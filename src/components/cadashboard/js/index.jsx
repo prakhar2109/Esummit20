@@ -25,17 +25,7 @@ import ComingSoon from '../js/Comingsoon'
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      enter: false
-    }
-  }
-  componentDidMount = () => {
-    let token = localStorage.getItem('user_token')
-    if (token) {
-      this.setState({
-        enter: true
-      })
-    }
+    this.state = {}
   }
   render() {
     const { enter } = this.state
@@ -43,31 +33,25 @@ class App extends Component {
       <div>
         <Switch>
           <React.Fragment>
-            {enter ? (
-              <>
-                <Route path="/dashboard" component={LeaderBoard} />
-                <Route
-                  exact
-                  path="/dashboard/Viewprofile"
-                  component={Viewprofile}
-                />
-                <Route exact path="/dashboard/task" component={CATaskBoard} />
-                {/* <Route exact path="/dashboard/offers" component={CAOffers} /> */}
-                {/* <Route path="/dashboard/payment" render={() => <CAPayment {...this.props} />} /> */}
-                <Route path="/dashboard/payment" component={ComingSoon} />
+            <Route path="/dashboard" component={LeaderBoard} />
+            <Route
+              exact
+              path="/dashboard/Viewprofile"
+              component={Viewprofile}
+            />
+            <Route exact path="/dashboard/task" component={CATaskBoard} />
+            {/* <Route exact path="/dashboard/offers" component={CAOffers} /> */}
+            {/* <Route path="/dashboard/payment" render={() => <CAPayment {...this.props} />} /> */}
+            <Route path="/dashboard/payment" component={ComingSoon} />
 
-                <Route exact path="/dashboard/invite" component={CAInvite} />
-                <Route exact path="/dashboard/leader" component={CALeader} />
-                <Route
-                  exact
-                  path="/dashboard/contingent"
-                  component={CAnewcontigent}
-                />
-                <Route exact path="/dashboard/events" component={CAevents} />
-              </>
-            ) : (
-              <Redirect to="/login" />
-            )}
+            <Route exact path="/dashboard/invite" component={CAInvite} />
+            <Route exact path="/dashboard/leader" component={CALeader} />
+            <Route
+              exact
+              path="/dashboard/contingent"
+              component={CAnewcontigent}
+            />
+            <Route exact path="/dashboard/events" component={CAevents} />
           </React.Fragment>
         </Switch>
       </div>

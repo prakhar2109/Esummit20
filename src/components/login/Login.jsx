@@ -87,17 +87,16 @@ class Login extends Component {
         }
       }
     })
-      .then(function(res) {
+      .then(res => {
         if (res !== undefined && res.data !== undefined) {
           if (res.data) {
             if (res.data.token) {
               localStorage.setItem('user_token', res.data.token)
+              window.location.href = '/dashboard/task'
             }
-            this.props.history.push('/dashboard/task')
           }
         }
       })
-
       .catch(response => {
         alert('Please Register first!')
         this.props.history.push('/register')

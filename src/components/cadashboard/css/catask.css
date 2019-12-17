@@ -33,7 +33,7 @@
 } */
 
 .taskuploaded {
-  height: 22.87vh;
+  /* height: 22.87vh; */
   position: relative;
 }
 .taskuploading {
@@ -42,7 +42,7 @@
 }
 
 .uploading-button {
-  padding-top: 1rem;
+  margin-top: 1rem;
   bottom: 1.11vh;
   background: transparent;
   color: #359d9a;
@@ -265,11 +265,13 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
-    margin-top: 9vh;
+    margin-top: 12vh;
     padding-bottom: 2vh;
     background: #070f12;
   }
-
+  #task-summary-title {
+    display: none;
+  }
   .taskchild {
     background: #0d1719;
     height: auto;

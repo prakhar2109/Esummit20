@@ -31,8 +31,7 @@ export default class CATaskSummary extends Component {
                 POINTS AWARDED
               </th>
             </tr>
-
-            {this.state.tasks &&
+            {this.state.tasks.length > 0 &&
               this.state.tasks.map(tsk => {
                 return (
                   <tr key={tsk.id}>
