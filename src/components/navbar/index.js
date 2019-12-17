@@ -24,6 +24,11 @@ class index extends Component {
               <button className="navbar-register-button">Register</button>
             </Link>
           </li>
+          <li className="navbar-items">
+            <Link to="/login" className="navbar-links">
+              <button className="navbar-register-button">Login</button>
+            </Link>
+          </li>
         </ul>
       </div>
     )
