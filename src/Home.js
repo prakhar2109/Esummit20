@@ -21,6 +21,7 @@ import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
+import NonCARegistration from './components/registration/Noncaregister/index'
 
 class HomeLanding extends Component {
   constructor(props) {
@@ -42,6 +43,8 @@ class HomeLanding extends Component {
             <Route path="/login" component={Login} />
 
             <Route path="/ca-registration" component={Registration} />
+            <Route path="/noncaregister" component={NonCARegistration} />
+
             <Route path="/personal-detail" component={Personaldetail} />
             <Route path="/register-success" component={Success} />
             <Route path="/register-failure" component={Failuremessage} />

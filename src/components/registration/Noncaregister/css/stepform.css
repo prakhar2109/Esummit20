@@ -1,0 +1,514 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.esummit-common-parent{
+    background:  #1A4D66;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+}
+.esummit-register-parent{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+.esummit-register-parent-login{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+.MuiPaper-root-17{
+    background-color: #153D50 !important;
+}
+.MuiStepConnector-line-116{
+    border-color: #153D50 !important;
+}
+.MuiStepIcon-text-61{
+    font-family: Montserrat !important;
+}
+.MuiStepIcon-root-60.MuiStepIcon-completed-63{
+    border-radius: 50% !important;
+    background: white !important;
+}
+.esummit-register-form-parent{
+    width: 80%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+.esummit-register-form-heading{
+    width: 100%;
+    background-color:#eef3f4;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.esummit-regsiter-form-heading-child{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #1A4D66;
+}
+.esummit-regsiter-form-heading-child-second{
+    margin-top: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: normal;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: #1A4D66;
+}
+.tushar{
+    border-radius: 0px !important;
+    padding: 0px 40px 0px 5px !important;
+}
+.tushar span{
+    padding: 0px 15px 0px 0px !important;
+    font-size:calc(.27548vw + 12.71074px) !important;
+    font-weight: 600 !important;
+    font-family: Montserrat !important;
+}
+.tushar:hover{
+    opacity: 1 !important;
+}
+.tushar div{
+    margin-right:  calc(2.34435vw + 3.38843px) !important;
+    padding: 10px 10px 10px 10px !important;
+}
+.kep-login-facebook{
+    /* color: rebeccapurple !important; */
+    /* display: none !important; */
+    text-transform: capitalize !important;
+    font-family: Montserrat !important;
+    padding: 10px 40px 10px 20px !important;
+    font-weight: 600 !important;
+}
+.kep-login-facebook i::before{
+    height: 10px !important;
+    width: 10px !important;
+}
+.kep-login-facebook .fa {
+    margin-right: calc(2.34435vw + 8.38843px) !important;
+}
+.esummit-register-form-body-parent{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+}
+.esummit-register-form-orsection{
+    display: flex;
+    width: 100%;
+    margin-top: 8%;
+}
+.esummit-register-form-orsection hr{
+    background-color: #B2B2B2;
+    height: 0px;
+    margin: 0;
+}
+.esummit-register-form-orsection-hr{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    margin-left: auto;
+}
+.esummit-register-form-orsection-hr-s{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    margin-right: auto;
+}
+.esummit-register-form-orsection span{
+    font-family: Montserrat;
+    line-height: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #4F4F4F;
+    padding: 0px 10px;
+}
+.esummit-register-form-body-social{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.esummit-register-form-input-section{
+    margin: 5% 0%;
+}
+.esummit-register-form-input-specific{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.esummit-register-form-input-specific label{
+    color:  #4F4F4F;
+    margin-bottom: 0.5rem;
+}
+.esummit-register-form-input-specific input{
+    border: none;
+    border-bottom: 1px solid #B2B2B2;
+    padding: 0px 0px 5px 0px;
+    outline: none;
+    color: #B2B2B2;
+    width: 100%;
+    min-height: 38px;
+    
+}
+.esummit-register-form-field-error-text{
+    border-bottom: 1px solid #E2574C !important;
+}
+.esummit-register-form-field-error{
+    font-size: 12px;
+    color: #E2574C;
+    height: 12px;
+}
+.esummit-register-form-field-error-svg img{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: -15px;
+    top: 10px;
+}
+.esummit-register-form-input-specific-inner{
+    display: flex;
+    position: relative;
+}
+
+
+.esummit-register-form-input-specific-eye{
+    display: flex;
+    position: relative;
+}
+.esummit-register-form-input-specific-eye input{
+    width: 100%;
+}
+.esummit-register-form-input-specific-eye-svg{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.esummit-register-form-input-specific-eye img:hover{
+    cursor: pointer;
+}
+.esummit-register-form-input-specific input:focus{
+    border: none;
+    border-bottom: 1px solid #4F4F4F;
+    padding: 0px 0px 5px 0px;
+    outline: none;
+    color: #4F4F4F;
+}
+.esummit-register-form-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 8%;
+    margin-top: 8%;
+}
+.esummit-register-form-button-back{
+    background-color: #F39423;
+    border-radius: 4px;
+    padding: 10px 18px;
+    color: white;
+    border: 2px solid #F39423;
+    cursor: pointer;
+    font-weight: 600;
+}
+.esummit-register-form-button button{
+    background-color: #F39423;
+    border-radius: 2px;
+    padding: 8px 35px;
+    cursor: pointer;
+    border: 1px solid #F39423;
+    color :white;
+    font-weight: 600;
+    outline: none;
+}
+.esummit-resgiter-form-profile-type-heading{
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.esummit-resgiter-form-profile-type-body{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.esummit-resgiter-form-profile-type-body{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.esummit-profile-type-container{
+    position: relative;
+    margin-top: 15px;
+}
+.esummit-profile-type-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .esummit-profile-type-checkmark {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border: 1px solid #B2B2B2;
+    border-radius: 50%;
+  }
+  
+  .esummit-profile-type-container:hover input ~ .esummit-profile-type-input-text{
+    line-height: normal;
+    letter-spacing: 0.02em;
+    color: #4F4F4F;
+}
+
+  .esummit-profile-type-container input:checked ~ .esummit-profile-type-checkmark {
+    background-color: white;
+  }
+  .esummit-profile-type-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .esummit-profile-type-container:hover input ~ .esummit-profile-type-checkmark {
+    background-color: #F39423;
+    border: 1px solid #F39423;
+    cursor: pointer;
+  }
+  .esummit-profile-type-container input:checked ~ .esummit-profile-type-checkmark:after{
+    display: block; 
+  }
+  .esummit-profile-type-container input:checked ~ .esummit-profile-type-input-text{
+    color: #4F4F4F;
+  }
+  .esummit-profile-type-input-text{
+    margin-left: 20%;
+    color: #B2B2B2;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .esummit-profile-type-input-text:hover{
+      cursor: pointer;
+  }
+  .esummit-profile-type-container .esummit-profile-type-checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #F39423;
+  }
+  .css-vj8t7z{
+    border: none !important;
+    border-bottom: 1px solid #B2B2B2 !important;
+    outline: none !important;
+    height: 30px;
+  }
+  .css-vj8t7z .css-xp4uvy{
+    color:#B2B2B2 !important;
+  }
+  .css-2o5izw{
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #B2B2B2 !important;
+    color:#B2B2B2 !important;
+    border-radius: none !important;
+    height: 30px !important;
+  }
+  .css-1hwfws3{
+    padding-left: 0px !important;
+  }
+  .css-1492t68{
+    color:#B2B2B2 !important;
+  }
+  .css-10nd86i{
+    width: 100% !important;
+  }
+  .css-15k3avv{
+  }
+  .esummit-register-form-body-parent-heading-first{
+    line-height: normal;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    font-weight:600;
+    color: #1A4D66;
+    padding: 0px 0px 20px 0px;
+  }
+  .esummit-register-form-body-parent-heading-second{
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #4F4F4F;
+    padding: 20px;
+  }
+  .esummit-register-form-footer{
+      text-align: center;
+      margin-bottom: 40px;
+  }
+  .esummit-register-form-footer span{
+    line-height: normal;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    padding: 2px;
+    color: #FFFFFF;
+  }
+  .esummit-register-form-footer span:nth-child(2){
+      color:#F6AF5A;
+  }
+  .esummit-register-form-footer a{
+      text-decoration: none;
+      color:#F6AF5A;
+      font-weight: 600;
+}
+.esummit-register-form-footer a:hover{
+    color:#F6AF5A !important;
+}
+.esummit-register-form-successfull-parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.esummit-register-form-successfull-grand-parent{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 8%; */
+}
+.esummit-register-form-resend-otp-field{
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    color: #F39423;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.esummit-register-form-message-verification{
+    color:green;
+    font-size: 13px;
+}
+.esummit-register-form-arrow-box {
+	position: relative;
+    border: 1px solid #4F4F4F;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    color:#4F4F4F;
+}
+.esummit-register-form-arrow-box:after, .esummit-register-form-arrow-box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.esummit-register-form-arrow-box:after {
+	border-bottom-color: white;
+	border-width: 10px;
+	margin-left: -30px;
+}
+.esummit-register-form-arrow-box:before {
+	border-bottom-color: #4F4F4F;
+	border-width: 13px;
+	margin-left: -33px;
+}
+.esummit-register-form-forgot-password-text{
+    margin-top: 5px;
+}
+.esummit-register-form-forgot-password-text a{
+    text-decoration: none;
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    color: #F39423;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+.esummit-register-form-forgot-password-text a:hover{
+    color: #F39423 !important;
+}
+.esummit-register-form-error-message-handle{
+    font-size: 13px;
+    color: red;
+    padding: 4px 0px;
+}
+.esummit-register-form-go-to-name{
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.75;
+}
+@media (max-width:768px){
+    .esummit-register-form-body-social{
+        display: flex;
+        flex-direction: column;
+    }
+    .esummit-register-parent{
+        width: 100%;
+        margin-top: 33%;
+    }
+    .esummit-register-parent-login{
+        width: 100%;
+        margin-top: 10%;
+    }
+    .esummit-register-form-parent{
+        width: 100%;
+    }
+    .kep-login-facebook.medium{
+        width: 100% !important;
+    }
+    .tushar{
+        margin: 10px 0px !important;
+    }
+    .tushar div{
+        margin-left: 17vw;
+    }
+    .esummit-resgiter-form-profile-type-body{
+        width: 83%;
+    }
+    .esummit-regsiter-form-heading-child-second{
+        text-align: center;
+        line-height: 1.2em;
+    }
+    .esummit-common-second-child span{
+        padding: 5px;
+    }
+}

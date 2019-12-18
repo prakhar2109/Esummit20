@@ -133,9 +133,9 @@ class Login extends Component {
                   </div>
                   <div className="facebook_login">
                     <FacebookLogin
-                      appId="630305827505065"
+                      // appId="630305827505065"
                       // appId="613264019415150"
-                      // appId="2546035355673765"
+                      appId="2546035355673765"
                       size="medium"
                       autoLoad={false}
                       textButton="Facebook"
