@@ -18,21 +18,24 @@ class CAAbout extends Component {
         </div>
         <div className="ca-section-content-container">
           <img src={perksHeading} className="section-image-heading" alt="" />
-          <div className="ca-section-paragraph">
-            1. For every successful payment from the participants who have
-            registered from the referral link, the CA would be awarded Rs.150
-            off on the registration plus accommodation fees for E - Summit 2020.
+          <div className="ca-section-paragraph-small">
+            <b>1.</b>&nbsp; For every successful payment from the participants
+            who have registered from the referral link, the CA would be awarded
+            Rs.150 off on the registration plus accommodation fees for E -
+            Summit 2020.
           </div>
-          <div className="ca-section-paragraph">
-            2. An official certificate from E - Summit IIT Roorkee will be
-            provided as an acknowledgment of your work as a CA for the same.
+          <div className="ca-section-paragraph-small">
+            <b>2.</b>&nbsp; An official certificate from E - Summit IIT Roorkee
+            will be provided as an acknowledgment of your work as a CA for the
+            same.
           </div>
-          <div className="ca-section-paragraph">
-            3. Endorsement of your LinkedIn profile by E - Summit IIT Roorkee.
+          <div className="ca-section-paragraph-small">
+            <b>3.</b>&nbsp; Endorsement of your LinkedIn profile by E - Summit
+            IIT Roorkee.
           </div>
-          <div className="ca-section-paragraph">
-            4. Other additional goodies and benefits will be awarded to the top
-            performing CAs.
+          <div className="ca-section-paragraph-small">
+            <b>4.</b>&nbsp; Other additional goodies and benefits will be
+            awarded to the top performing CAs.
           </div>
         </div>
       </div>

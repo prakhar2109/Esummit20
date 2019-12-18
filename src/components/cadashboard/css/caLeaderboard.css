@@ -1,0 +1,360 @@
+ 
+
+#container{
+    background-color:#F7F8F9;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 0px;
+    padding:0px;
+    height: 100vh;
+    width: 100%;
+}
+#leftPane{
+    max-width: 16.5%;
+    background-color: #030D0F;
+    padding-bottom: 3.5%; 
+    height: 100%;
+    width: 16.5%;
+    position: fixed;
+    /* display: inline; */
+    
+}
+
+.leftpane-esummit-logo{
+    background: url('../header/static/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 64%;
+    background-position: center;
+    height: 5.62%;
+    background-size: contain;
+    margin-top: 2.59%;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+#logo{
+    max-width: 100%;
+    padding: 12%;
+  
+}
+#line1{
+    margin-top: 0%;
+    margin-left: 6%;
+    margin-right: 6%;
+    color: #F2F2F2;
+    height: 2px;
+    margin-bottom: 0%;
+}
+#viewProfile{
+    padding: 0%;
+    color: #F39423 !important;
+    margin-left: 59%;
+    margin-right: 8%;
+    font-size:60%;
+}
+#dropShape{
+   
+    margin-top:10%; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #359E9A;;
+    color: white;
+    text-transform: uppercase;
+    max-width: 8.79vh;
+    height: 8.79vh;
+    width: 8.79vh;
+    max-height: 20vh;
+    /* padding-left: 2.5vh;
+    padding-top: 0.6vh; */
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    /* height: 20%; */
+    text-decoration: none;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius:50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#name{
+    padding-top: 10%;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size:17.14px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: none !important;
+}
+#scoreWritten{
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11.42px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+#scoreValue{
+    float: right;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9.94px;
+    text-align: center;
+
+    color: #09C9C3;
+}
+.progress{
+    margin-top: 5%;
+    margin-left: 7.54%;
+    width: 27vh;
+    height: 5px !important;
+    
+}
+
+.bg-custom{
+    background-color: #359D9A !important;
+
+}
+#optionsToggle{
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    text-align: left;
+    margin: 4.44% 0;
+    font-size: 14.28px;
+    line-height: 250%;
+    color: rgba(255, 255, 255, 0.38);;
+    max-height: 41vh;
+    height: fit-content;    
+    box-shadow: none !important;
+    font-family:"Poppins-Semibold" !important; 
+    
+
+}
+#optionsToggle::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#optionsToggle::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+#optionsToggle::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #359D9A;
+}
+.linkEventson-inactive{
+
+    /* padding-left: 11.3%; */
+    padding: 1% 11.3%;
+
+}
+#optionsToggle a{
+    color: rgba(255, 255, 255, 0.38);
+/* font-family:"ProximaNova-Semibold" !important;  */
+font-family: Poppins-Regular;
+font-style: normal;
+font-weight: 600;
+padding: .9% 0;
+
+}
+
+#optionsToggle a:hover{
+color:#359D9A !important;
+text-decoration:none !important;
+
+}
+
+#rightPane{
+    display: inline;   
+}
+#tasksButton{
+    color: #333333;
+}
+#leaderboardButton{
+    color: rgba(189, 189, 189, 0.38);
+    padding-left: 11.3%;
+}
+#submitButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#submitButton button{
+    cursor: pointer;
+    color: #359D9A;
+    font-weight: 500;
+    font-size: 14.2px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding-top: 10px;
+    background: none;
+}
+
+.linkEventson{
+    /* padding-left: 11.3%; */
+    padding: 1% 11.3%;
+    background: linear-gradient(270deg, #0F9DB1 53.24%, rgba(15, 157, 177, 0.2) 100%);
+    color: #359D9A !important;
+    text-decoration:none !important;
+    font-family:"Poppins-Bold" !important; 
+
+}
+.linkEventson a{
+    color: #359D9A !important;
+
+}
+#sidebar-dashboard-esummitId {
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
+}
+#sidebar-dashboard-esummitId-value{
+    float: right;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #359D9A;
+
+}
+.sidebar-dashboard-esummit {
+    font-size: 11.42px;
+    padding: 1rem 0;
+    font-family: Poppins-Regular;
+    font-weight: 600;
+    margin-left: 7.54%;
+    margin-right:7.54%;
+}
+
+#dashboard-typename{
+    font-size: 10px;
+    text-align:center;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    text-align: center;
+
+color: rgba(255, 255, 255, 0.87);
+}
+.link-viewprofile{
+    text-align: center;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 1.25rem 0;
+}
+
+.side-navbar-details{
+    background: #0D1719;
+    margin: 5%;
+    overflow: auto;
+}
+@media only screen and (max-width: 900px){
+
+
+    #container {
+        display: none;
+    }
+    #optionsToggle{
+        display: none;
+    }
+    .progress{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1820px) and (max-width: 2560px){
+.link-viewprofile{
+    font-size: 16px;
+}
+#optionsToggle{
+font-size: 20px;
+height: fit-content;  
+
+}
+#dashboard-typename{
+    font-size: 12px;
+}
+.sidebar-dashboard-esummit {
+    font-size:1rem;
+    line-height: 1.5rem;
+    padding: 1rem 0;
+
+}
+#scoreWritten{
+font-size: 1rem;
+}
+
+#scoreValue{
+font-size: 1rem;
+}
+#submitButton button{
+    cursor: pointer;
+    color:#359D9A;
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding-top: 10px;
+    background: none;
+}
+#name{
+    padding-top: 10%;
+    text-align: center;
+    font-size:24px;
+    text-decoration: none !important;
+}
+#scoreValue{
+    font-size: 1rem;
+}
+}
+@media (max-width: 1500px){
+    #leftPane{
+
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    #leftPane::-webkit-scrollbar {
+        width: 2px;
+      }
+      
+      /* Track */
+      #leftPane::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+       
+      /* Handle */
+      #leftPane::-webkit-scrollbar-thumb {
+        background: #359D9A; 
+      }
+      
+      /* Handle on hover */
+      #leftPane::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+}

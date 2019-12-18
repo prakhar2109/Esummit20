@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
-import './success.css'
 import Button from '../button/register_button.js'
-import Navbar from '../../navbar/navbar.js'
 import PropTypes from 'prop-types'
+import './success.css'
 
 class Successmessage extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
   navigateMain = () => {
     const { history } = this.props
     history.push('/')

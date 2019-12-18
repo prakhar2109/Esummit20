@@ -1,0 +1,358 @@
+
+ 
+.caevents-parent{
+
+    color: black;
+    position: absolute;
+    top: 0;
+    padding-top: 3.33vh;
+    left: 16.5%;
+    height: fit-content; 
+    min-height: 100vh;
+    background: #070F12;     
+    width: 83.5%;
+}
+.caevents-earnedcoupons-rowparent1{
+
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+.caevents-earnedcoupons-child{
+    position: relative;
+    height: 27.77vh;
+    width: 30.27%; 
+    margin-left: 2.24%;  
+    margin-bottom: 3.148vh; 
+    padding: 2.962vh;    
+    background: #0D1719;
+    padding-right: 6.67vh;
+    box-sizing: border-box;       
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+}
+
+.ca-events-parent-heading1{
+
+    margin-left: 2.24%;
+    margin-bottom: 5.55vh;
+    line-height: normal;
+    color: rgba(255, 255, 255, 0.87);
+    width: fit-content;
+    border-bottom: 2px solid #359D9A;
+}
+.caevents-line1 {
+    flex-basis: 65vw;
+    height: 0.3vh;
+    background-color: #E0E0E0;
+    /* position: absolute; */
+    margin-top: -1.4vh;
+    width: 83%;
+    margin-left: 12vw;
+}
+
+.ca-events-parent-heading2{
+    margin-left: 2.24%;
+    margin-bottom: 5.55vh;
+    line-height: normal;
+    color: rgba(255, 255, 255, 0.87);
+    width: fit-content;
+    border-bottom:2px solid #359D9A;
+}
+
+.caevents-earnedcoupons-child-heading{
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 17.14px;
+    font-family: "Poppins-Regular" !important;
+    font-weight: 600;
+    display: flex;
+    position: relative;
+
+}
+
+.caevents-earnedcoupons-child-description{
+
+    line-height: normal;
+    margin-top: 1.85vh;
+    color: rgba(255, 255, 255, 0.6);
+    word-break: break-all;
+    max-height: 7vh;
+    overflow: auto;
+    font-family: "Poppins-Regular";
+    font-size: 14.28px;
+
+}
+
+.caevents-earnedcoupons-child-button{
+position: absolute;
+bottom: 2.962vh;
+}
+.caevents-earnedcoupons-child-button button{
+    font-family:"Poppins-Regular" !important;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4.28px;
+    text-align: center;
+    height: 3.70vh;
+    width: 7.81vw;
+    cursor: pointer;
+    color: #359D9A;
+    background: transparent;
+    border: 2px solid #359D9A;
+}
+
+.caofferb01{
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.caeventsparent-font{
+    font-size: 20px;
+    font-family:"Poppins-Bold" !important;
+
+}
+
+.caeventsheading-font{
+    font-size: 22.72px;
+    font-family:"ProximaNova-Semibold" !important;
+
+}
+
+.caeventsdecription-font{
+
+    font-size: 14.22px;
+   
+}
+
+.caevents-earnedcoupons-deadline{
+
+    color: #359D9A;
+    font-size: 1rem;
+    font-family: "Poppins-Regular";
+    font-weight: 600;
+    line-height: normal;
+    font-size: 12px;
+    margin-top: 1vh;
+    position: absolute;
+    bottom: 8vh;
+}
+
+.caevents-earnedcoupons-child-description-sucess{
+    line-height: normal;
+    
+    color: #4F4F4F;
+    opacity: 0.58;
+    width:100%;
+}
+.caevents-earnedcoupons-child-parent-parent::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .caevents-earnedcoupons-child-parent-parent::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .caevents-earnedcoupons-child-parent-parent::-webkit-scrollbar-thumb {
+    background: #F39423; 
+  }
+  
+  /* Handle on hover */
+  .caevents-earnedcoupons-child-parent-parent::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.caevents-earnedcoupons-child-parent-parent{
+display: none;
+overflow:auto;
+height:20vh;    
+overflow-x:hidden;
+} 
+#caevents-earnedcoupons-child-parent2{
+    display: none;
+    height: 30vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.caevents-earnedcoupons-child-info{
+    font-size: 14.2px;
+    color: rgba(255, 255, 255, 0.6);    
+    line-height: 2.40vh;
+    overflow: auto;
+    font-family: "Poppins-Regular";
+
+}
+.caevents-registration-status{
+    font-size: 14.2px;
+    color: rgba(255, 255, 255,.87);
+    display: flex;
+    align-items: center;
+}
+.caevents-registration-status div{
+    color: rgba(255, 255, 255,.87);
+    font-family: "Poppins-Regular";
+    display: flex;
+    align-self: center;
+    margin-right: 5px;
+
+
+}
+.caevents-earnedcoupons-child-reddotpic{
+    background: url('../png/reddots.png');
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    align-self: center;
+    position: absolute;
+    right: 0;
+}
+.caevents-earnedcoupons-child-greendotpic{
+    background: url('../png/greendots.png');
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    align-self: center;
+    position: absolute;
+    right: 3vh;
+    top: 3vh;
+}
+.caevents-coming-soon{
+    color: #5A5A5A;
+    font-family:"ProximaNova-Semibold" !important;
+    font-size: 16px;
+    position: absolute;
+    bottom: 5vh;
+}
+@media (min-width: 1620px) and (max-width: 2560px){
+
+.caeventsparent-font{
+    font-size: 28px;
+    font-family:"Poppins-Bold" !important;
+}
+
+.caeventsheading-font{
+    font-size: 28px;
+    font-family:"ProximaNova-Semibold" !important;
+
+}
+
+.caeventsdecription-font{
+
+    font-size: 16px;
+   
+}
+.caevents-registration-status {
+    font-size: 16px;
+    font-family: "ProximaNova-Light";
+}
+.caevents-earnedcoupons-child-button button{
+    font-size: 1rem;
+    width: 5.81vw;
+    
+}
+
+.caevents-earnedcoupons-deadline{
+
+    font-size: 1rem;
+
+
+}
+.caevents-earnedcoupons-child-heading{ 
+    font-size: 24px;
+}
+.caevents-earnedcoupons-child-info{
+    font-size: 20px;
+    height: 20vh;
+
+}
+.caevents-earnedcoupons-child-description{
+    font-size: 20px;
+    
+
+}
+
+}
+@media (max-width: 900px){
+
+.caevents-parent{
+    color: black;
+    position: relative;
+    top: 0;
+    left:0;
+    width:100%;
+    height: fit-content;
+    margin-top: 9vh;
+    padding-bottom: 2vh;
+    background: #070F12;
+    
+}
+.caevents-earnedcoupons-rowparent1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.caevents-earnedcoupons-child {
+    position: relative;
+    
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.148vh;
+  
+}
+.caevents-earnedcoupons-child-description {
+    line-height: normal;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2vh  ;
+    width: 100%;
+    min-height: 0;
+}
+.caevents-earnedcoupons-child-button button {
+    font-size: 11.37px;
+    border-radius: 4.28px;
+    text-align: center;
+    color: #359D9A;
+    height: 3.70vh;
+    width: 40%;
+    background: transparent;
+    border: 2px solid #359D9A;
+
+}
+.caevents-earnedcoupons-child-button {
+    position: absolute;
+    bottom: 2.962vh;
+    width: 50%;
+}
+.ca-events-parent-heading1 {
+    padding-top: 3.33vh;
+    margin-top: 0;
+}
+.caevents-line1 {
+    flex-basis: 65vw;
+    height: 0.3vh;
+    background-color: #E0E0E0;
+    /* position: absolute; */
+    margin-top: -1.4vh;
+    width: 64%;
+    margin-left: 31%;
+}
+.caevents-earnedcoupons-child{
+    height: fit-content;
+}
+.caevents-earnedcoupons-deadline{
+
+    font-size: 18px;
+    position: unset;
+    margin-bottom: 1vh;
+
+}
+.caevents-earnedcoupons-child-button {
+    position: unset;
+    bottom: 2.962vh;
+    width: 50%;
+}
+}

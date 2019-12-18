@@ -1,33 +1,28 @@
 @font-face {
-  font-family: "Proxima-nova-regular";
+  font-family: "Poppins-regular";
   
-  src:url('./fonts/ProximaNova-Regular.otf')  format('truetype');
+  src:url('./fonts/Poppins-Regular.ttf')  format('truetype');
     
   }
 @font-face {
-  font-family: "ProximaNova-Light";
+  font-family: "Poppins-Medium";
   
-  src:url('./fonts/ProximaNova-Light.otf')  format('truetype');
+  src:url('./fonts/Poppins-Medium.ttf')  format('truetype');
+    
+  }
+
+
+@font-face {
+  font-family: "Poppins-Bold";
+  
+  src:url('./fonts/Poppins-Bold.ttf')  format('truetype');
     
   }
 
 @font-face {
-  font-family: "Proxima-nova-regular";
+  font-family: "Poppins-Semibold";
   
-  src:url('./fonts/ProximaNova-Regular.otf')  format('truetype');
-    
-  }
-@font-face {
-  font-family: "ProximaNova-Bold";
-  
-  src:url('./fonts/ProximaNova-Bold.otf')  format('truetype');
-    
-  }
-
-@font-face {
-  font-family: "ProximaNova-Semibold";
-  
-  src:url('./fonts/ProximaNova-Semibold.otf')  format('truetype');
+  src:url('./fonts/Poppins-SemiBold.ttf')  format('truetype');
     
   }
 

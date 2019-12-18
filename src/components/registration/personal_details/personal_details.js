@@ -74,11 +74,11 @@ class Personaldetail extends Component {
     else if (this.state.phone && this.state.phone_error_bool)
       return this.phonevalidate()
 
-    if (this.state.college == '') return this.emptyValidate('college')
+    if (this.state.college === '') return this.emptyValidate('college')
     else if (this.state.college !== '' && this.state.college_error_bool)
       return this.college_validate()
 
-    if (this.state.country == '') return this.emptyValidate('country')
+    if (this.state.country === '') return this.emptyValidate('country')
     else if (this.state.country !== '' && this.state.country_error_bool)
       return this.country_validate()
 
@@ -86,7 +86,7 @@ class Personaldetail extends Component {
     //   return this.emptyValidate("city ")
     // }
 
-    if (this.state.state == '') return this.emptyValidate('state')
+    if (this.state.state === '') return this.emptyValidate('state')
     else if (this.state.state !== '' && this.state.state_error_bool)
       return this.state_validate()
     if (!this.state.tshirt_size) return this.emptyValidate('tshirt')
@@ -182,6 +182,8 @@ class Personaldetail extends Component {
               state_error_bool: true,
               state_error: 'State Name cannot be empty'
             })
+            break
+          default:
             break
         }
       }.bind(this),

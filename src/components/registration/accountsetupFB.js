@@ -79,8 +79,10 @@ class Facebooklogin extends Component {
     return (
       <React.Fragment>
         <div className="facebook_login">
+          aa
           <FacebookLogin
-            appId="630305827505065"
+            // appId="630305827505065"
+            // appId="613264019415150"
             size="medium"
             autoLoad={true}
             textButton="Facebook"

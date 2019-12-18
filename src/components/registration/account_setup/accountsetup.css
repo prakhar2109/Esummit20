@@ -1,7 +1,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .accountsetup_popup {
-    height: 220px !important;
-    width: 380px !important;
+    height: 26.29vh !important;
+    /* width: 380px !important; */
 
     background: #ffffff;
   }
@@ -19,11 +19,13 @@
     margin: 20px 0 0 0 !important;
   }
 }
+
 .signup-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 4rem;
 }
 
 .signupcircle_marker {
@@ -94,12 +96,12 @@
   color: rgba(1, 12, 15, 0.87);
 }
 .accountsetup_popup {
-  width: 556px;
-  height: 284px;
+  /* width: 556px; */
   left: 450px;
   top: 254px;
   background: #ffffff;
   border-radius: 4px;
+  width: 90%;
 }
 .accountsetup_popup_title {
   width: 100%;
@@ -119,11 +121,12 @@
   letter-spacing: 0.02em;
   color: #ffffff;
   border-radius: 4px 4px 0px 0px;
+  padding-left: 12.5px;
 }
 .account_popup_data {
-  width: 371px;
+  /* width: 371px; */
   height: 50px;
-  margin-left: 92px;
+  /* margin-left: 92px; */
   margin-top: 58px;
   font-family: Poppins;
   font-style: normal;
@@ -135,6 +138,25 @@
   color: rgba(1, 12, 15, 0.75);
 }
 .facebook_login {
-  margin-left: 200px;
-  margin-top: 43px;
+  /* margin-left: 200px; */
+  margin: 43px auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accountsetup_popup_content {
+  padding-left: 12.5px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-device-width: 1800px) {
+  .accountsetup_popup_content .accountsetup_popup_title {
+    padding-left: 34.28px;
+  }
+}
+@media only screen and (min-device-width: 1800px) and (max-device-width: 2560px) {
+  .accountsetup_popup_content .accountsetup_popup_title {
+    padding-left: 48px;
+  }
 }

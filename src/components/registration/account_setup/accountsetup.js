@@ -4,7 +4,7 @@ import FacebookLogin from 'react-facebook-login'
 import PropTypes from 'prop-types'
 import Navbar from '../navbar/navbar.js'
 import './accountsetup.css'
-class Facebooklogin extends Component {
+class FacebookloginCom extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -59,6 +59,7 @@ class Facebooklogin extends Component {
 
   responseFacebook = response => {
     if (response.status !== 'unknown') {
+      console.log(response)
       this.setState({
         name: response.name,
         accessToken: response.accessToken,
@@ -129,5 +130,5 @@ class Facebooklogin extends Component {
   }
 }
 
-export default Facebooklogin
+export default FacebookloginCom
 FacebookLogin.propTypes = { handleProfile: PropTypes.func }

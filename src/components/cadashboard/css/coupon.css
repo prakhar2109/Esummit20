@@ -1,0 +1,36 @@
+.cacoupon-parent{
+    border-style: solid;
+    height: 13vh;
+    border:1px solid #B2B2B2;
+}
+.cacoupon-toprow{
+    margin-left: 0.5vw;
+    margin-top: 1.5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cacoupon-radiobtn{
+    margin-top: 0.5vh;    
+}
+.cacoupon-couponcodewrapper{
+    padding-left: 0.5vw;
+    border: 1px dashed #B2B2B2;
+    height: 3vh;
+    padding-top: 0.5vh;
+    color:  #70BF48;
+    width: 3vw;
+    margin-left: 0.5vw;
+    font-size: 10px;
+}
+.coupon-cashback{
+    margin-top: 1vh;
+    margin-left: 1.9vw;
+    font-size: 12px;
+}
+.cacoupon-validtill{
+    margin-top:0.5vh;
+    margin-left: 1.9vw;
+    font-size: 12px;
+    color: black;
+}

@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
-import FacebookLogin from './account_setup/accountsetup.js'
+import FacebookLoginCom from './account_setup/accountsetup.js'
 import Personaldetails from './personal_details/personal_details.js'
 import PropTypes from 'prop-types'
 import FetchApi from '../../utils/fetchAPI'
+import Registersucess from './popup/success/success'
+import Registerfailure from './popup/failure/failure'
+/* eslint-disable react/prop-types */
+
 class Registration extends Component {
   constructor(props) {
     super(props)
@@ -16,7 +20,7 @@ class Registration extends Component {
       city: '',
       countrt: '',
       state: '',
-      profile_type: 'CA',
+      user_type: 'CA',
       college: '',
       tshirt_size: '',
       success: false,
@@ -38,18 +42,31 @@ class Registration extends Component {
     }))
   }
   handleFullSubmit = () => {
-    FetchApi('POST', '/v1/api/user/signup/', this.state, null)
+    const query = new URLSearchParams(this.props.location.search)
+    let ref = null
+    for (let param of query.entries()) ref = param[1]
+
+    let endpoint =
+      ref === null ? '/v1/api/user/signup/' : `/v1/api/user/signup/?ref=${ref}`
+
+    FetchApi('POST', endpoint, this.state, null)
       .then(res => {
         if (res.data) {
-          this.setState({ success: true, activeStep: 0 })
+          this.setState({ success: true, active_step: 0 })
+          // if (res.data.token) {
+          //   localStorage.setItem("user_token", res.data.token);
+          // window.location.href='/dashboard/task';
+          // }
+          // else
+          // this.setState({ success: true, active_step: 0 })
         }
       })
       .catch(error => {
         this.setState({
-          activeStep: 0,
-          error: true
+          active_step: 0,
+          error: true,
+          error_bool: error
         })
-        console.log(error)
       })
   }
   responseFacebook = response => {
@@ -90,7 +107,7 @@ class Registration extends Component {
     return (
       <React.Fragment>
         {active_step === 1 ? (
-          <FacebookLogin
+          <FacebookLoginCom
             handleProfile={this.responseFacebook}
             profile_type={profile_type}
           />
@@ -104,8 +121,11 @@ class Registration extends Component {
             email={email}
           />
         ) : null}
-        {success ? this.props.history.push('/register-success') : null}
-        {error ? this.props.history.push('/register-failure') : null}
+
+        {/* {success ? this.props.history.push('/register-success') : null}
+        {error ? this.props.history.push('/register-failure') : null} */}
+        {success ? <Registersucess /> : null}
+        {error ? <Registerfailure /> : null}
       </React.Fragment>
     )
   }
@@ -114,3 +134,4 @@ export default Registration
 Registration.propTypes = {
   history: PropTypes.func
 }
+/* eslint-disable react/prop-types */
