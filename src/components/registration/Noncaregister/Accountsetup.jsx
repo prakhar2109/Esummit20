@@ -297,6 +297,7 @@ export default class AccountSetup extends Component {
                             autoLoad={false}
                             textButton="Facebook"
                             fields="name,email,picture"
+                            disableMobileRedirect={true}
                             cssClass="kep-login-facebook"
                             icon="fa-facebook"
                             callback={this.responseFacebook}
