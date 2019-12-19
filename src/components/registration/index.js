@@ -52,9 +52,11 @@ class Registration extends Component {
     FetchApi('POST', endpoint, this.state, null)
       .then(res => {
         if (res.data) {
-          this.setState({ success: true, active_step: 0 })
-          // if (res.data.token) {
-          //   localStorage.setItem("user_token", res.data.token);
+          if (res.data.token) {
+            localStorage.setItem("user_token", res.data.token);
+            this.setState({ success: true, active_step: 0 })
+
+          }
           // window.location.href='/dashboard/task';
           // }
           // else
@@ -124,8 +126,8 @@ class Registration extends Component {
 
         {/* {success ? this.props.history.push('/register-success') : null}
         {error ? this.props.history.push('/register-failure') : null} */}
-        {success ? <Registersucess /> : null}
-        {error ? <Registerfailure /> : null}
+        {success ? <Registersucess {...this.props} /> : null}
+        {error ? <Registerfailure {...this.props} /> : null}
       </React.Fragment>
     )
   }

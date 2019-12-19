@@ -22,7 +22,7 @@ import ComingSoon from '../js/Comingsoon'
 
 /* eslint-disable react/prop-types */
 
-class App extends Component {
+class DashboardIndex extends Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -30,7 +30,6 @@ class App extends Component {
   render() {
     const { enter } = this.state
     return (
-      <div>
         <Switch>
           <React.Fragment>
             <Route path="/dashboard" component={LeaderBoard} />
@@ -43,7 +42,6 @@ class App extends Component {
             {/* <Route exact path="/dashboard/offers" component={CAOffers} /> */}
             {/* <Route path="/dashboard/payment" render={() => <CAPayment {...this.props} />} /> */}
             <Route path="/dashboard/payment" component={ComingSoon} />
-
             <Route exact path="/dashboard/invite" component={CAInvite} />
             <Route exact path="/dashboard/leader" component={CALeader} />
             <Route
@@ -54,11 +52,9 @@ class App extends Component {
             <Route exact path="/dashboard/events" component={CAevents} />
           </React.Fragment>
         </Switch>
-      </div>
-      // </Router>
     )
   }
 }
 
-export default App
+export default DashboardIndex
 /* eslint-disable react/prop-types */

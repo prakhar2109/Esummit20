@@ -68,7 +68,7 @@ class PaymentStatusRow extends Component {
 }
 /* eslint-disable react/prop-types */
 
-export default class PaymentStatusTable extends Component {
+export default class  PaymentStatusTable extends Component {
   constructor() {
     super()
     this.state = {
@@ -79,6 +79,8 @@ export default class PaymentStatusTable extends Component {
 
   render() {
     let { noOfMembers, membersList } = this.props
+    console.log(noOfMembers,"noOfMembers");
+    console.log(membersList,"membersList")
     let i = 0
     let PEN = 'Pending'
     let SUC = 'Success'
@@ -87,7 +89,7 @@ export default class PaymentStatusTable extends Component {
         {noOfMembers
           ? membersList.map((member, i) => {
               i++
-              if (member.status === 'PEN') {
+              if (member.status === 'PEN'||member.status==='IIT') {
                 return (
                   <PaymentStatusRow
                     id={i}

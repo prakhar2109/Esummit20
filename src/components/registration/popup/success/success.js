@@ -5,8 +5,7 @@ import './success.css'
 
 class Successmessage extends Component {
   navigateMain = () => {
-    const { history } = this.props
-    history.push('/')
+    window.location.href='/dashboard/invite'
   }
   render() {
     return (
@@ -20,15 +19,14 @@ class Successmessage extends Component {
             }}
           ></div>
           <div className="success_content">
-            You have successfully registered. The link to the dashboard will be
-            uploaded soon.
+            You have successfully registered. 
           </div>
           <div className="closeButton">
             <Button
-              name="CLOSE"
+              name="go to Dashboard"
               style={{
                 fontFamily: 'Poppins',
-                width: '104px',
+                width: 'fitContent',
                 letterSpacing: '2px',
                 fontWeight: 'bold',
                 fontSize: '16px',
