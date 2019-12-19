@@ -16,8 +16,8 @@ class SideNavbar extends Component {
       score: '0',
       activeState: '',
       data: [],
-      contingent:false,
-      contingentid:''
+      contingent: false,
+      contingentid: ''
     }
   }
 
@@ -28,7 +28,7 @@ class SideNavbar extends Component {
   }
   handleLogout = () => {
     localStorage.removeItem('user_token')
-    window.location.href='/'
+    window.location.href = '/'
   }
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
@@ -54,8 +54,7 @@ class SideNavbar extends Component {
           this.props.history.push('/login')
         })
 
-
-        axios
+      axios
         .get(BASE_URL + '/v1/api/contingent/info', {
           headers: {
             Authorization: `Token ${token}`
@@ -65,15 +64,14 @@ class SideNavbar extends Component {
           if (res.status === 200) {
             {
               console.log(res)
-              this.setState({contingentid:res.data.contingent_id,contingent:true})
+              this.setState({
+                contingentid: res.data.contingent_id,
+                contingent: true
+              })
             }
           }
         })
-        .catch(response => {
-        })
-
-
-
+        .catch(response => {})
     } else this.props.history.push('/login')
   }
 
@@ -185,14 +183,14 @@ class SideNavbar extends Component {
                   </span>
                 </div>
               </div>
-              {profile!=='IIT' && this.state.contingent ?
-              <div className="sidebar-dashboard-esummit">
-                <span id="sidebar-dashboard-esummitId">
-                  Contingent No
-                </span>
-                <span id="sidebar-dashboard-esummitId-value">{this.state.contingentid}</span>
-              </div>
-              :null}
+              {profile !== 'IIT' && this.state.contingent ? (
+                <div className="sidebar-dashboard-esummit">
+                  <span id="sidebar-dashboard-esummitId">Contingent No</span>
+                  <span id="sidebar-dashboard-esummitId-value">
+                    {this.state.contingentid}
+                  </span>
+                </div>
+              ) : null}
               <Link to="/dashboard/Viewprofile">
                 <div
                   className="link-viewprofile"

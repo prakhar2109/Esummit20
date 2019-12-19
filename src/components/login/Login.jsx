@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import FacebookLogin from 'react-facebook-login'
 import { BASE_URL } from '../../utils/urls'
 import './login.css'
-import color_eye from "../registration/Noncaregister/svg/color-eye.svg"
-import eye from "../registration/Noncaregister/svg/eye.svg"
-import correct from "../registration/Noncaregister/svg/correct.svg"
-import wrong from "../registration/Noncaregister/svg/wrong.svg"
+import color_eye from '../registration/Noncaregister/svg/color-eye.svg'
+import eye from '../registration/Noncaregister/svg/eye.svg'
+import correct from '../registration/Noncaregister/svg/correct.svg'
+import wrong from '../registration/Noncaregister/svg/wrong.svg'
 import axios from 'axios'
 
 /* eslint-disable react/prop-types */
@@ -17,12 +17,12 @@ class Login extends Component {
       active_step: 0,
       toggleEye: false,
       toggleConfirmEye: false,
-      email: "",
-      password: "",
-      email_error: "",
-      email_error_bool: "",
-      pass_error: "",
-      pass_error_bool: "",
+      email: '',
+      password: '',
+      email_error: '',
+      email_error_bool: '',
+      pass_error: '',
+      pass_error_bool: '',
       error_message: ''
     }
   }
@@ -65,9 +65,10 @@ class Login extends Component {
     this.setState({
       toggleEye: !this.state.toggleEye
     })
-    if (document.getElementById("inputPassword").type === "password") { document.getElementById("inputPassword").type = "text" }
-    else {
-      document.getElementById("inputPassword").type = "password"
+    if (document.getElementById('inputPassword').type === 'password') {
+      document.getElementById('inputPassword').type = 'text'
+    } else {
+      document.getElementById('inputPassword').type = 'password'
     }
   }
   loginresponseFacebook = response => {
@@ -97,14 +98,11 @@ class Login extends Component {
       data = {
         email: this.state.email,
         password: this.state.password
-
       }
-    }
-    else {
+    } else {
       data = {
         email: this.state.email,
-        access_token: this.state.accessToken,
-
+        access_token: this.state.accessToken
       }
     }
 
@@ -132,60 +130,70 @@ class Login extends Component {
         alert('Please Register first!')
 
         this.setState({
-          error_message: "Email/Password is invalid",
-          email: "",
-          password: "",
-          email_error_bool: "",
-          pass_error_bool: ""
+          error_message: 'Email/Password is invalid',
+          email: '',
+          password: '',
+          email_error_bool: '',
+          pass_error_bool: ''
         })
-
 
         this.props.history.push('/register')
       })
   }
 
   emailvalidate = () => {
-
-    setTimeout(function () {
-      var re = /\S+@\S+\.\S+/
-      if (!this.state.email.match(re)) {
-        this.setState({
-          email_error_bool: "true",
-          email_error: "Email is not valid"
-        })
-
-      } else {
-        this.setState({
-          email_error_bool: "false",
-          email_error: ""
-        })
-      }
-    }.bind(this), 1000)
+    setTimeout(
+      function() {
+        var re = /\S+@\S+\.\S+/
+        if (!this.state.email.match(re)) {
+          this.setState({
+            email_error_bool: 'true',
+            email_error: 'Email is not valid'
+          })
+        } else {
+          this.setState({
+            email_error_bool: 'false',
+            email_error: ''
+          })
+        }
+      }.bind(this),
+      1000
+    )
   }
   passvalidate = () => {
-    setTimeout(function () {
-      if (this.state.password.length < 7) {
-        this.setState({
-          pass_error_bool: "true",
-          pass_error: "Password should be more than 8 letters"
-        })
-
-      } else {
-        this.setState({
-          pass_error_bool: "false",
-          pass_error: ""
-        })
-      }
-    }.bind(this), 1000)
+    setTimeout(
+      function() {
+        if (this.state.password.length < 7) {
+          this.setState({
+            pass_error_bool: 'true',
+            pass_error: 'Password should be more than 8 letters'
+          })
+        } else {
+          this.setState({
+            pass_error_bool: 'false',
+            pass_error: ''
+          })
+        }
+      }.bind(this),
+      1000
+    )
   }
-  onChange = (e) => {
-    const name = e.target.name;
-    let value = e.target.value;
-    this.setState({ [name]: value });
+  onChange = e => {
+    const name = e.target.name
+    let value = e.target.value
+    this.setState({ [name]: value })
   }
 
   render() {
-    const { email, password, toggleEye, email_error, email_error_bool, pass_error, pass_error_bool } = this.state
+    const {
+      email,
+      password,
+      toggleEye,
+      email_error,
+      email_error_bool,
+      pass_error,
+      pass_error_bool
+    } = this.state
 
     return (
       <React.Fragment>
@@ -223,7 +231,11 @@ class Login extends Component {
                         <input
                           id="inputEmail"
                           type="email"
-                          className={email_error === "" ? null : "esummit-register-form-field-error-text"}
+                          className={
+                            email_error === ''
+                              ? null
+                              : 'esummit-register-form-field-error-text'
+                          }
                           placeholder="Enter your mail ID"
                           name="email"
                           autoCorrect="off"
@@ -238,12 +250,23 @@ class Login extends Component {
                           required
                         />
                         <span className="esummit-register-form-field-error-svg">
-                          {email_error_bool === "" ? null :
-                            <img alt="correc/wrong" src={email_error_bool === "true" ? wrong : email_error_bool === "false" ? correct : null} />
-                          }
+                          {email_error_bool === '' ? null : (
+                            <img
+                              alt="correc/wrong"
+                              src={
+                                email_error_bool === 'true'
+                                  ? wrong
+                                  : email_error_bool === 'false'
+                                  ? correct
+                                  : null
+                              }
+                            />
+                          )}
                         </span>
                       </div>
-                      <div className="esummit-register-form-field-error">{email_error}</div>
+                      <div className="esummit-register-form-field-error">
+                        {email_error}
+                      </div>
                     </div>
                     <div className="esummit-register-form-input-specific">
                       <label htmlFor="inputPassword">PASSWORD</label>
@@ -251,7 +274,11 @@ class Login extends Component {
                         <input
                           id="inputPassword"
                           type="password"
-                          className={pass_error === "" ? null : "esummit-register-form-field-error-text"}
+                          className={
+                            pass_error === ''
+                              ? null
+                              : 'esummit-register-form-field-error-text'
+                          }
                           placeholder="Enter password"
                           name="password"
                           autoCorrect="off"
@@ -265,20 +292,39 @@ class Login extends Component {
                           spellCheck="false"
                           required
                         />
-                        <span onClick={this.handleToggle}><img alt="" className="esummit-register-form-input-specific-eye-svg" src={!toggleEye ? eye : color_eye} /></span>
+                        <span onClick={this.handleToggle}>
+                          <img
+                            alt=""
+                            className="esummit-register-form-input-specific-eye-svg"
+                            src={!toggleEye ? eye : color_eye}
+                          />
+                        </span>
                         <span className="esummit-register-form-field-error-svg">
-                          {pass_error_bool === "" ? null :
-                            <img alt="correc/wrong" src={pass_error_bool === "true" ? wrong : pass_error_bool === "false" ? correct : null} />
-                          }
+                          {pass_error_bool === '' ? null : (
+                            <img
+                              alt="correc/wrong"
+                              src={
+                                pass_error_bool === 'true'
+                                  ? wrong
+                                  : pass_error_bool === 'false'
+                                  ? correct
+                                  : null
+                              }
+                            />
+                          )}
                         </span>
                       </div>
-                      <div className="esummit-register-form-field-error">{pass_error}</div>
-                      <div className="loginformSubmit" onClick={this.loginSubmit}>
+                      <div className="esummit-register-form-field-error">
+                        {pass_error}
+                      </div>
+                      <div
+                        className="loginformSubmit"
+                        onClick={this.loginSubmit}
+                      >
                         Login
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             ) : null}

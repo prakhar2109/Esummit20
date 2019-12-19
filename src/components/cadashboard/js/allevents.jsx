@@ -26,7 +26,7 @@ export default class Allevents extends Component {
         headers: {
           Authorization: `Token ${token}`
         }
-      })  
+      })
       .then(res => {
         if (res.status === 200) window.location.href = '/dashboard/Events'
       })

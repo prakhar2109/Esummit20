@@ -7,7 +7,7 @@ import ProfessProfile from './Professonal_Profile/Viewprofile'
 
 export default class Profile extends Component {
   render() {
-    let profile = localStorage.getItem("profile");
+    let profile = localStorage.getItem('profile')
     // let profile = 'CA'
 
     if (profile === 'AMB') {
