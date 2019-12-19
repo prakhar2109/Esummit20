@@ -258,6 +258,7 @@ export default class AccountSetup extends Component {
     //     social_signup: true
     // })
     // let { name, email, image_url, social_signup } = this.state
+    // console.log(response)
     let data = {
       name: response.profileObj.name,
       email: response.profileObj.email,
@@ -314,14 +315,14 @@ export default class AccountSetup extends Component {
       <div>
         <div className="esummit-register-form-body-parent">
           <div className="esummit-register-form-body-social">
-            <GoogleLogin
+            {/* <GoogleLogin
               clientId="73234389568-ad4s6dav417kmlut5n7n0gmrbpfkb44i.apps.googleusercontent.com"
               buttonText="Google"
               onSuccess={this.responseGoogle}
               onFailure={this.responseGoogle}
               className="tushar"
               theme="dark"
-            />
+            /> */}
             <FacebookLogin
               // appId="1971509613151179"
               // appId="2546035355673765"

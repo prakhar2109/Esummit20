@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import FacebookLogin from 'react-facebook-login'
+import GoogleLogin from 'react-google-login'
+
 import { BASE_URL } from '../../utils/urls'
 import './login.css'
 import color_eye from '../registration/Noncaregister/svg/color-eye.svg'
@@ -85,6 +87,29 @@ class Login extends Component {
         active_step: 1
       })
     }
+  }
+
+  responseLoginGoogle = response => {
+    // this.setState({
+    //     name: response.profileObj.name,
+    //     email: response.profileObj.email,
+    //     image_url: response.profileObj.imageUrl,
+    //     social_signup: true
+    // })
+    // let { name, email, image_url, social_signup } = this.state
+    console.log(response)
+  
+    this.setState({
+      name: response.profileObj.name,
+      accessToken: response.accessToken,
+      email:  response.profileObj.email,
+      social_signup: true,
+    },()=>this.loginSubmit())
+
+    
+    // this.props.handleGoogle(data)
+    // this.namevalidate()
+    // this.emailvalidate()
   }
   handleChange = e => {
     let change = {}
@@ -209,6 +234,14 @@ class Login extends Component {
                     You will be given tasks which requires facebook sign-up.
                   </div>
                   <div className="facebook_login">
+                  {/* <GoogleLogin
+                      clientId="73234389568-ad4s6dav417kmlut5n7n0gmrbpfkb44i.apps.googleusercontent.com"
+                      buttonText="Google"
+                      onSuccess={this.responseLoginGoogle}
+                      onFailure={this.responseLoginGoogle}
+                      className="tushar"
+                      theme="dark"
+                    /> */}
                     <FacebookLogin
                       // appId="630305827505065"
                       appId="613264019415150"
@@ -339,7 +372,7 @@ class Login extends Component {
                   registered)
                 </div>
                 <div className="login-emailinputfield">
-                  <input
+                  <input className="login-emailinputfield"
                     id="inputEmail"
                     type="email"
                     name="email"
