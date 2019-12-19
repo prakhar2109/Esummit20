@@ -20,7 +20,7 @@ class Registration extends Component {
       city: '',
       countrt: '',
       state: '',
-      user_type: "CA",
+      user_type: 'CA',
       college: '',
       tshirt_size: '',
       success: false,
@@ -42,36 +42,31 @@ class Registration extends Component {
     }))
   }
   handleFullSubmit = () => {
-    const query=new URLSearchParams(this.props.location.search);
-    let ref=null;
-    for(let param of query.entries())
-      ref=param[1];
+    const query = new URLSearchParams(this.props.location.search)
+    let ref = null
+    for (let param of query.entries()) ref = param[1]
 
-
-    let endpoint = ref === null ? "/v1/api/user/signup/" : `/v1/api/user/signup/?ref=${ref}`
-
+    let endpoint =
+      ref === null ? '/v1/api/user/signup/' : `/v1/api/user/signup/?ref=${ref}`
 
     FetchApi('POST', endpoint, this.state, null)
       .then(res => {
         if (res.data) {
           this.setState({ success: true, active_step: 0 })
-          console.log(res.data)
           // if (res.data.token) {
           //   localStorage.setItem("user_token", res.data.token);
           // window.location.href='/dashboard/task';
           // }
-          // else 
+          // else
           // this.setState({ success: true, active_step: 0 })
-
         }
       })
       .catch(error => {
         this.setState({
           active_step: 0,
           error: true,
-          error_bool:error
+          error_bool: error
         })
-       
       })
   }
   responseFacebook = response => {
@@ -127,11 +122,10 @@ class Registration extends Component {
           />
         ) : null}
 
-
         {/* {success ? this.props.history.push('/register-success') : null}
         {error ? this.props.history.push('/register-failure') : null} */}
-          {success ? <Registersucess/>: null}
-          {error ? <Registerfailure/>: null}
+        {success ? <Registersucess {...this.props} /> : null}
+        {error ? <Registerfailure {...this.props} /> : null}
       </React.Fragment>
     )
   }

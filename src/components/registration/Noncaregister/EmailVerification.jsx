@@ -27,6 +27,30 @@ export default class EmailVerification extends Component {
             otp_expired: false
         }
     }
+    componentDidMount=()=>{
+        let otp=""
+        let response = {
+            email: this.props.email,
+        }
+        axios({
+            method: "post",
+            url: BASE_URL + "/v1/api/verification/",
+            data: response
+        }).then((r) => {
+                otp= r.data.one_time_pass;
+                this.setState({otp});
+            
+            // document
+            //     .getElementById("loader")
+            //     .style
+            //     .display = "none";
+        }).catch((response) => {
+            // document
+            //     .getElementById("loader")
+            //     .style
+            //     .display = "none";
+        });
+    }
     onChange = (e) => {
         const name = e.target.name;
         let value = e.target.value;
@@ -191,7 +215,7 @@ export default class EmailVerification extends Component {
             <div className="esummit-register-form-body-parent">
                 {resend_otp ? null :
                     <div>
-                        {!otp_expired ? <div className="esummit-register-form-message-verification">OTP has been successfully sent to your email.</div> : <div className="esummit-register-form-message-verification"><span style={{ color: "red", fontSize: "13px" }}>OTP is expired.</span> Click on resend otp to resend the one time password</div>}
+                        {!otp_expired ? <div className="esummit-register-form-message-verification">OTP has been successfully sent to your email.</div> : <div className="esummit-register-form-message-verification"><span style={{ color: "#cb4c4c", fontSize: "13px" }}>OTP is expired.</span> Click on resend otp to resend the one time password</div>}
                     </div>
                 }
                 {resend_otp && otp_expired ? null :

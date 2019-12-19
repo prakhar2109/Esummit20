@@ -42,14 +42,11 @@ input[type=number]::-webkit-outer-spin-button {
     height: 100%;
     margin-right: auto;
     margin-left: auto;
-    background-color: white;
     margin-top: 5%;
     margin-bottom: 8%;
 }
 .esummit-register-form-heading{
     width: 100%;
-    background-color:#eef3f4;
-    padding: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -58,10 +55,12 @@ input[type=number]::-webkit-outer-spin-button {
     margin-left: auto;
     margin-right: auto;
     line-height: normal;
-    font-size: 18px;
+    font-size: 25.71px;
     font-weight: 700;
+    font-family: "Poppins-Regular";
+    color: rgba(255, 255, 255, 0.87);
+    font-weight: 600;
     letter-spacing: 0.01em;
-    color: #1A4D66;
 }
 .esummit-regsiter-form-heading-child-second{
     margin-top: 5px;
@@ -69,46 +68,72 @@ input[type=number]::-webkit-outer-spin-button {
     margin-left: auto;
     margin-right: auto;
     line-height: normal;
-    font-size: 14px;
+    font-family: "Poppins-Regular";
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 11.42px;
     letter-spacing: 0.04em;
-    color: #1A4D66;
 }
 .tushar{
-    border-radius: 0px !important;
-    padding: 0px 40px 0px 5px !important;
-}
-.tushar span{
-    padding: 0px 15px 0px 0px !important;
-    font-size:calc(.27548vw + 12.71074px) !important;
-    font-weight: 600 !important;
-    font-family: Montserrat !important;
-}
-.tushar:hover{
+    /* border-radius: 0px !important;
+    padding: 0px 40px 0px 5px !important; */
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.87) !important;
+    color: rgba(255, 255, 255, 0.87) !important;
+
+    box-sizing: border-box;
+    border-radius: 2px;
     opacity: 1 !important;
 }
+
 .tushar div{
-    margin-right:  calc(2.34435vw + 3.38843px) !important;
-    padding: 10px 10px 10px 10px !important;
+    background: transparent !important;
+}
+.tushar span{
+    /* padding: 0px 15px 0px 0px !important;
+    font-size:calc(.27548vw + 12.71074px) !important;
+    font-weight: 600 !important;
+    font-family: Montserrat !important; */
+    font-family: "Poppins-Regular" !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 14.28px !important;
+    line-height: 30px !important    ;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87) !important;
+}
+.tushar:hover{
+    /* opacity: 1 !important; */
+}
+.tushar div{
+    /* margin-right:  calc(2.34435vw + 3.38843px) !important;
+    padding: 10px 10px 10px 10px !important; */
 }
 .kep-login-facebook{
     /* color: rebeccapurple !important; */
     /* display: none !important; */
     text-transform: capitalize !important;
-    font-family: Montserrat !important;
-    padding: 10px 40px 10px 20px !important;
+    font-family:"Poppins-Regular" !important;
+    color: rgba(255, 255, 255, 0.87) !important;
+    /* padding: 10px 40px 10px 20px !important; */
+    background: transparent !important;
+    border: 2px solid rgba(255, 255, 255, 0.87) !important;
     font-weight: 600 !important;
+    opacity: 1 !important;
 }
-.kep-login-facebook i::before{
+
+.kep-login-facebook span{
+    padding: 10px 10px 10px 0px !important; 
+}
+/* .kep-login-facebook i::before{
     height: 10px !important;
     width: 10px !important;
 }
 .kep-login-facebook .fa {
     margin-right: calc(2.34435vw + 8.38843px) !important;
-}
+} */
 .esummit-register-form-body-parent{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+
     margin-top: 8%;
 }
 .esummit-register-form-orsection{
@@ -117,7 +142,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 8%;
 }
 .esummit-register-form-orsection hr{
-    background-color: #B2B2B2;
+    background-color: rgba(255, 255, 255, 0.6);
     height: 0px;
     margin: 0;
 }
@@ -136,13 +161,13 @@ input[type=number]::-webkit-outer-spin-button {
     margin-right: auto;
 }
 .esummit-register-form-orsection span{
-    font-family: Montserrat;
+    font-family: "Poppins-Regular";
     line-height: normal;
     font-weight: 500;
     font-size: 14px;
     text-align: center;
     letter-spacing: 0.06em;
-    color: #4F4F4F;
+    color: rgba(255, 255, 255, 0.6);
     padding: 0px 10px;
 }
 .esummit-register-form-body-social{
@@ -160,15 +185,18 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 5%;
 }
 .esummit-register-form-input-specific label{
-    color:  #4F4F4F;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Poppins-Regular;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 .esummit-register-form-input-specific input{
-    border: none;
-    border-bottom: 1px solid #B2B2B2;
-    padding: 0px 0px 5px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius:2px ;
     outline: none;
-    color: #B2B2B2;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
     width: 100%;
     min-height: 38px;
     
@@ -178,6 +206,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .esummit-register-form-field-error{
     font-size: 12px;
+    font-family: "Poppins-Regular";
     color: #E2574C;
     height: 12px;
 }
@@ -185,8 +214,8 @@ input[type=number]::-webkit-outer-spin-button {
     height: 15px;
     width: 15px;
     position: absolute;
-    right: -15px;
-    top: 10px;
+    right: -28px;
+    top: 17px;
 }
 .esummit-register-form-input-specific-inner{
     display: flex;
@@ -206,38 +235,37 @@ input[type=number]::-webkit-outer-spin-button {
     width: 15px;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 25px;
 }
 .esummit-register-form-input-specific-eye img:hover{
     cursor: pointer;
 }
 .esummit-register-form-input-specific input:focus{
-    border: none;
-    border-bottom: 1px solid #4F4F4F;
-    padding: 0px 0px 5px 0px;
     outline: none;
-    color: #4F4F4F;
 }
 .esummit-register-form-button{
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: space-around;
+    font-family:"Poppins-Regular";
     margin-bottom: 8%;
     margin-top: 8%;
 }
 .esummit-register-form-button-back{
-    background-color: #F39423;
+    background-color: #359D9A;
     border-radius: 4px;
     padding: 10px 18px;
+    font-family:"Poppins-Regular";
     color: white;
-    border: 2px solid #F39423;
+    border: 2px solid #359D9A;
     cursor: pointer;
     font-weight: 600;
 }
 .esummit-register-form-button button{
-    background-color: #F39423;
+    background-color: #359D9A;
     border-radius: 2px;
     padding: 8px 35px;
+    font-family:"Poppins-Regular";
     cursor: pointer;
     border: 1px solid #F39423;
     color :white;
@@ -361,16 +389,17 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     letter-spacing: 0.02em;
     font-weight:600;
-    color: #1A4D66;
-    padding: 0px 0px 20px 0px;
+    color: rgba(255, 255, 255, 0.6);
+
+    padding: 0px 0px 10px 0px;
   }
   .esummit-register-form-body-parent-heading-second{
     line-height: normal;
     font-size: 18px;
     text-align: center;
-    letter-spacing: 0.02em;
-    color: #4F4F4F;
-    padding: 20px;
+    
+    color: rgba(255, 255, 255, 0.38);
+    padding: 10px;
   }
   .esummit-register-form-footer{
       text-align: center;
@@ -416,7 +445,7 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 .esummit-register-form-message-verification{
-    color:green;
+    color:#56a256;
     font-size: 13px;
 }
 .esummit-register-form-arrow-box {
@@ -469,6 +498,18 @@ input[type=number]::-webkit-outer-spin-button {
     color: red;
     padding: 4px 0px;
 }
+.css-2b097c-container{
+    width: 100% !important;
+    outline: none !important;   
+}
+.css-v2329v-control{
+    border: 2px solid rgba(255, 255, 255, 0.6) !important;
+
+}
+.css-1wa3eu0-placeholder{
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-family: "Poppins-Regular" !important;
+}
 .esummit-register-form-go-to-name{
     text-align: center;
     padding: 20px 0px 0px 0px;
@@ -476,10 +517,15 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: 600;
     opacity: 0.75;
 }
+.esummit-register-form-timer{
+    color: rgba(255, 255, 255, 0.87);
+
+}
 @media (max-width:768px){
     .esummit-register-form-body-social{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
     }
     .esummit-register-parent{
         width: 100%;
@@ -495,12 +541,12 @@ input[type=number]::-webkit-outer-spin-button {
     .kep-login-facebook.medium{
         width: 100% !important;
     }
-    .tushar{
+    /* .tushar{
         margin: 10px 0px !important;
     }
     .tushar div{
         margin-left: 17vw;
-    }
+    } */
     .esummit-resgiter-form-profile-type-body{
         width: 83%;
     }
@@ -510,5 +556,51 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .esummit-common-second-child span{
         padding: 5px;
+    }
+    .esummit-regsiter-form-heading-child{
+        font-size: 18px;
+    }
+}
+
+
+
+@media only screen and (min-device-width: 1800px) and (max-device-width: 2520px) {
+    .esummit-regsiter-form-heading-child{
+        font-size: 36px;
+    }
+
+
+
+    .esummit-regsiter-form-heading-child-second{
+        font-size: 16px;
+    }
+    .tushar{
+        border: 2px solid rgba(255, 255, 255, 0.87) !important;
+        border-radius: 4px !important;
+
+    }
+    .tushar span{
+        font-size: 20px !important;
+    }
+    .kep-login-facebook{
+        border: 2px solid rgba(255, 255, 255, 0.87) !important;
+        opacity: 1 !important;
+        border-radius: 4px;
+
+
+    }
+    .esummit-register-form-input-specific input{
+
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+    }
+    .esummit-register-form-field-error {
+        font-size: 16px;
+        font-family: "Poppins-Regular";
+        color: #cb4c4c;
+        height: 12px;
+    }
+    .esummit-register-form-input-specific input{
+        font-size: 18px;
     }
 }

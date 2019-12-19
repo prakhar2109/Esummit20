@@ -11,6 +11,8 @@ import about_option from "./json/about_esummit.json"
 import gender_option from "./json/gender.json"
 import tshirt_option from "./json/tshirt_option.json"
 import programmes from "./json/programmes.json"
+import "./css/stepform.css"
+
 import year_option from "./json/year.json"
 
 // const custom_styles = {
@@ -21,7 +23,7 @@ import year_option from "./json/year.json"
 //     }),
 // }
 const custom_styles={
-    control: styles => ({ ...styles, backgroundColor: 'white',width:'10vw' }),
+    control: styles => ({ ...styles, background: 'transparent',padding:'10px'}),
 }
    
    
@@ -550,11 +552,11 @@ class PersonalDetails extends Component {
         return (
             <div className="esummit-register-form-body-parent">
                 <div className="esummit-register-form-body-parent-heading-first">
-                    {this.state.profile_type === "iitr_student" ? "IITR STUDENT" :
-                        this.state.profile_type === "non_iitr_student" ?
-                            "NON IITR STUDENT" : this.state.profile_type === "ca" ? "CAMPUS AMBASSADOR" :
-                                this.state.profile_type === "professional" ? "PROFESSIONAL" :
-                                    this.state.profile_type === "professor" ? "PROFESSOR" : null}
+                    {this.state.profile_type === "iitr_student" ? "IITR STUDENT" :null}
+                       { this.state.profile_type === "non_iitr_student" ? "NON IITR STUDENT" :null}
+                       { this.state.profile_type === "ca" ? "CAMPUS AMBASSADOR" :null}
+                        {this.state.profile_type === "professional" ? "PROFESSIONAL" : null}
+                        {this.state.profile_type === "professor" ? "PROFESSOR" : null}
                 </div>
                 <div className="esummit-register-form-body-parent-heading-second">
                     Please fill all the fields as mentioned below

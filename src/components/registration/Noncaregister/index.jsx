@@ -125,8 +125,8 @@ class NonCARegistration extends React.Component {
         // }
         var url_string = window.location.href
         var url = new URL(url_string);
-        var ref = url.searchParams.get("ref");
-        console.log(ref);
+        // var ref = url.searchParams.get("ref");
+        // console.log(ref);
         var profile_type = url.searchParams.get("profile_type");
         this.setState({profile_type})
     }
@@ -173,6 +173,8 @@ class NonCARegistration extends React.Component {
         },()=>{
             console.log(this.state)
         })
+
+        
     }
 
 
@@ -352,6 +354,7 @@ class NonCARegistration extends React.Component {
 
     }
     handleDetails = (data) => {
+   
         this.setState({
             phone_no: data.phone_no,
             gender: data.gender.value,
@@ -495,15 +498,7 @@ class NonCARegistration extends React.Component {
                                 {activeStep ===3 ?
                                     <div className="esummit-register-form-successfull-grand-parent">
                                         <div className="esummit-register-form-successfull-parent">
-                                            <div style={{
-                                                backgroundImage: `url(${sample_image})`,
-                                                backgroundPosition: "center",
-                                                backgroundSize: "cover",
-                                                width: "100%",
-                                                height: "200px",
-                                                borderRadius: "2px",
-                                                padding: "20px"
-                                            }}></div>
+                                          
                                         </div>
                                         <div className="esummit-register-form-go-to-name">
                                             {this.state.name}

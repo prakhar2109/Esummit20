@@ -61,7 +61,7 @@ export default class Cacontigent extends Component {
         }
       })
       .then(res => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           this.setState({
             contigent: false,
             contingent_data: res.data,
@@ -82,11 +82,11 @@ export default class Cacontigent extends Component {
       })
       .then(res => {
         console.log(res.data)
-        if (res.status == 200) {
+        if (res.status === 200) {
           res.data.map(e => {
-            if (e.status == 'P') {
+            if (e.status === 'P') {
               invites = invites + 1
-            } else if (e.status == 'A') {
+            } else if (e.status === 'A') {
               this.setState({ contigent: false, contingent_member: true })
             }
           })
@@ -105,7 +105,7 @@ export default class Cacontigent extends Component {
         }
       })
       .then(res => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           this.setState({ contigent: null })
           window.location.href = '/dashboard/contingent'
         }
@@ -230,7 +230,7 @@ export default class Cacontigent extends Component {
       }
     })
       .then(res => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           this.setState({ contigent: true })
           window.location.href = '/dashboard/contingent'
         }
@@ -246,7 +246,7 @@ export default class Cacontigent extends Component {
         }
       })
       .then(res => {
-        if (res.status == 200 || res.status == 204) {
+        if (res.status === 200 || res.status === 204) {
           this.setState({ contingent_member: null })
           window.location.href = '/dashboard/contingent'
         }
@@ -268,7 +268,7 @@ export default class Cacontigent extends Component {
     }, 300)
   }
   handleDeleteRow = index => {
-    if (index == this.state.no_contingent.length - 1) {
+    if (index === this.state.no_contingent.length - 1) {
       this.setState(prevState => {
         // pass callback in setState to avoid race condition
         let newData = prevState.no_contingent.slice() //copy array from prevState
@@ -487,7 +487,7 @@ export default class Cacontigent extends Component {
                       {this.state.contingent_data.members &&
                         this.state.contingent_data.members.map(
                           e =>
-                            e.status == 'A' && (
+                            e.status === 'A' && (
                               <div className="cacontigent-congratsparent-child2-parent">
                                 <div className="cacontigent-congratsparent-child2-name">
                                   {e.name}
@@ -548,9 +548,9 @@ export default class Cacontigent extends Component {
                               {e.esummit_id}
                             </div>
                             <div className="cacontigent-congratsparent-child3-id">
-                              {e.status == 'P' ? 'Pending' : null}
-                              {e.status == 'A' ? 'Accepted' : null}
-                              {e.status == 'D' ? 'Declined' : null}
+                              {e.status === 'P' ? 'Pending' : null}
+                              {e.status === 'A' ? 'Accepted' : null}
+                              {e.status === 'D' ? 'Declined' : null}
                             </div>
                           </div>
                         ))}

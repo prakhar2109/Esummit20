@@ -204,7 +204,7 @@ export default class AccountSetup extends Component {
         }.bind(this), 1000)
     }
 
-    responseFacebook = (response) => {
+    responseNoncaFacebook = (response) => {
         // this.setState({
         //     name: response.name,
         //     email: response.email,
@@ -218,14 +218,25 @@ export default class AccountSetup extends Component {
         //     image_url: image_url,
         //     social_signup: social_signup
         // }
+        console.log(response)
         if(!response.email)
         {
             alert('EmailID not registered in Facebook')
         }
         else
         {
-        // console.log(response)
-        this.props.handleFacebook(response)
+        axios({
+            method: "post",
+            url: BASE_URL + "/v1/api/user/check-email/",
+            data: response.email
+        }).then((r) => {
+            if (r.status === 200) {
+                this.props.handleFacebook(response)
+            }
+        }).catch((response) => {
+            alert('EmailID already registered')
+            
+        });
         }
         
     }
@@ -300,7 +311,7 @@ export default class AccountSetup extends Component {
                             disableMobileRedirect={true}
                             cssClass="kep-login-facebook"
                             icon="fa-facebook"
-                            callback={this.responseFacebook}
+                            callback={this.responseNoncaFacebook}
                         />
                     </div>
                     <div className="esummit-register-form-orsection">

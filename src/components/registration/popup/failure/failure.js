@@ -11,10 +11,10 @@ class Failuremessage extends Component {
     this.state = {}
   }
   navigateMain = () => {
-    window.location.href='/';
+    this.props.history.push('/')
   }
   navigateRegister = () => {
-    window.location.href='/register';
+    this.props.history.push('/register')
   }
   render() {
     return (

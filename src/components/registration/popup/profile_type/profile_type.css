@@ -1,40 +1,10 @@
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .profiletype_outer {
-  }
-  .navbar_content {
-    font-size: 20px;
-  }
-  .profiletype_main {
-    height: 250px !important;
 
-    width: 380px !important;
-    background: #ffffff;
-    border-radius: 5px;
-    font-family: 'Poppins';
-  }
-  .profiletype_list_selection {
-    padding: 0 !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .profiletype_container {
-    width: 360px;
-  }
-  .profiletype_extra_info {
-    margin-left: 40px !important;
-  }
-  .profiletype_button {
-    position: unset !important;
-    margin: 20px 0 0 0 !important;
-  }
-}
 .profiletype_outer {
   width: 100%;
-  height: 80vh;
+  height: fit-content;
+  min-height: 80vh;
   background: #010C0F;
+  padding: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,38 +12,38 @@
 }
 .profiletype_main {
   width: 556px;
-  height: 284px;
-  background: #ffffff;
+  height: fit-content;
+  background: #070F12;;
   border-radius: 5px;
   font-family: 'Poppins';
 }
 
 .profiletype_heading {
-  background-color: #09c9c3;
+  background: #070F12;
   height: 54px;
   text-align: center;
   border-radius: 4px 4px 0px 0px;
-  padding-top: 12px;
+  padding-top: 1.5rem;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 14.12px;
   line-height: 30px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.87);
 }
 .profiletype_list_selection {
-  font-family: 'Poppins';
-  padding-top: 34px;
-  padding-left: 100px;
+  font-family: 'Poppins-Regular';
+  padding: 3rem;
+ 
 }
 .profiletype_container {
-  font-family: 'Poppins';
+  font-family: 'Poppins-Regular';
   display: flex;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14.12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: rgba(1, 12, 15, 0.75);
+  color: rgba(255, 255, 255, 0.87);
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -83,7 +53,6 @@
   width: 93px;
   font-weight: bold;
   font-size: 16px;
-  position: absolute;
   margin-top: 26px;
   margin-left: 335px;
 }
@@ -103,8 +72,8 @@
 .profiletype_checkmark {
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 11.42px;
+  width: 11.42px;
   background-color: #eee;
   border-radius: 50%;
   margin-right: 15px;
@@ -131,14 +100,16 @@
   display: block;
   top: 0;
   left: 0;
-  height: 15px;
-  width: 15px;
+  height: 7.42px;
+  width: 7.42px;
   border-radius: 50%;
-  margin: 4px;
+  margin: 1px;
   position: relative;
+  background: #41494b;
+
 }
 
-/* Style the indicator (dot/circle) */
+/* Style the indicator (dot/circle)
 .profiletype_container .profiletype_checkmark:after {
   top: 9px;
   left: 9px;
@@ -146,11 +117,80 @@
   height: 8px;
   border-radius: 50%;
   background: #41494b;
-}
+} */
 .profiletype_extra_info {
   display: none;
   position: relative;
   margin-left: 80px;
   color: #009994;
   font-size: 12px;
+}
+
+
+.profiletype_letus{
+  font-family: Poppins-Regular;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+
+color: rgba(255, 255, 255, 0.87);
+
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 780px) {
+  .profiletype_outer {
+
+    padding: 3rem;
+    padding-top: 8rem;
+
+  }
+  .navbar_content {
+    font-size: 20px;
+  }
+  .profiletype_main {
+    height: fit-content;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Poppins';
+  }
+  .profiletype_list_selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .profiletype_container {
+    /* width: 360px; */
+    width: 100%;
+  }
+  .profiletype_extra_info {
+    margin-left: 40px !important;
+  }
+  .profiletype_button {
+    position: unset !important;
+    margin: 20px 0 0 0 !important;
+  }
+}
+@media only screen and (min-device-width: 1800px) and (max-device-width: 2520px) {
+  .profiletype_container {
+    font-size: 20px;
+  }
+  .profiletype_heading {
+
+    font-size: 20px;
+
+  }
+  .profiletype_letus{
+    font-size: 14px;
+
+  }
+  .profiletype_checkmark{
+
+    height: 16px;
+    width: 16px;
+    padding: 2px 0 0 2px;
+  }
 }

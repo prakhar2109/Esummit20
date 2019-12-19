@@ -12,17 +12,15 @@ class Profiletype extends Component {
       profile_type: ''
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     // const query=new URLSearchParams(this.props.location.search);
     // // console.log(query)
     // console.log(query.entries())
     // for(let param of query.entries())
-    // { 
+    // {
     //   console.log(param[0],"wwwwww");
     //   console.log(param[1],"ddddddd");
     // }
-
-
   }
   onProfileChange = e => {
     this.setState({
@@ -39,13 +37,11 @@ class Profiletype extends Component {
     }
   }
   handleNext = () => {
-   
-    const query=new URLSearchParams(this.props.location.search);
+    const query = new URLSearchParams(this.props.location.search)
     // console.log(query)
-    for(let param of query.entries())
-    { 
-      console.log(param[0]);
-      console.log(param[1]);
+    for (let param of query.entries()) {
+      console.log(param[0])
+      console.log(param[1])
     }
     console.log(this.props.location.search);
 
@@ -55,8 +51,9 @@ class Profiletype extends Component {
     }
     else if (this.state.profile_type === 'CA') {
       this.props.history.push({
-        pathname:'/ca-registration',
-        search:this.props.location.search})
+        pathname: '/ca-registration',
+        search: this.props.location.search
+      })
     }
     else
     {
@@ -75,6 +72,7 @@ class Profiletype extends Component {
         /> */}
         <div className="profiletype_main" id="profiletype_main_opacity">
           <div className="profiletype_heading">Profile Type</div>
+          <div className="profiletype_letus">Let us know who you are</div>
           <div className="profiletype_list_selection">
             <label className="profiletype_container">
               <input
@@ -138,17 +136,6 @@ class Profiletype extends Component {
               />
               <span className="profiletype_checkmark"></span>
               <span>PROFESSIONAL</span>
-            </label>
-            <label className="profiletype_container">
-              <input
-                type="radio"
-                name="radio"
-                value="IITR"
-                checked={this.state.profile_type === 'IITR' ? true : false}
-                onChange={this.onProfileChange}
-              />
-              <span className="profiletype_checkmark"></span>
-              <span>IITR</span>
             </label>
             <label className="profiletype_container">
               <input

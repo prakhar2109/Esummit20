@@ -107,7 +107,7 @@ class FacebookloginCom extends Component {
               </div>
               <div className="accountsetup_popup_content">
                 <div className="account_popup_data">
-                  You will be given tasks which requires facebook sign-up.
+                  You will be given tasks which requires facebook sign-up.s
                 </div>
                 <div className="facebook_login">
                   <FacebookLogin
@@ -115,15 +115,15 @@ class FacebookloginCom extends Component {
                     // appId="613264019415150"
                     appId="2546035355673765"
                     size="medium"
-                    autoLoad={true}
+                    autoLoad={false}
                     textButton="Facebook"
+                    icon="fa-facebook"
                     fields="name,email,picture"
                     callback={this.responseFacebook}
                   />
                 </div>
               </div>
             </div>
-          
           </div>
         </div>
       </React.Fragment>

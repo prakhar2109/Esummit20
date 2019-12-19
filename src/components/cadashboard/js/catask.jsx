@@ -25,7 +25,6 @@ export default class CATaskBoard extends Component {
         }
       })
       .then(res => {
-        console.log(res.data, 'gggg')
         if (res && res.data) {
           this.setState({ tasks: res.data })
         }
@@ -76,6 +75,17 @@ export default class CATaskBoard extends Component {
             {tasks && tasks.map(e => <CATask key={e.id} task={e} />)}
           </div>
         ) : null}
+        {tasks && tasks.length === 0 ? (
+          <div
+            style={{
+              fontSize: '1.6rem',
+              color: 'white',
+              paddingLeft: '1.5rem'
+            }}
+          >
+            No tasks!
+          </div>
+        ) : null}
 
         {this.state.task_bool === 'tasksum' ? (
           <CATaskSummary tasks={tasks} />
@@ -100,7 +110,6 @@ class CATask extends Component {
   }
   render() {
     let task = this.props.task
-    console.log(task)
 
     return (
       <div className="taskchild">

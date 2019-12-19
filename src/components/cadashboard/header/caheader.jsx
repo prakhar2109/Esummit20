@@ -5,6 +5,7 @@ import axios from 'axios'
 import { BASE_URL } from '../../../utils/urls'
 import esummit from './static/logo.png'
 import './css/canavbar.css'
+import PropTypes from 'prop-types'
 // import ca_rulebook from "../../pdfs/ca_rulebook.pdf"
 
 // import Ca from "../caLeaderboard/js/caLeaderboard";
@@ -78,8 +79,8 @@ export default class ComingSoon extends Component {
     let { score } = this.state
     let scorePercentage = (score / 10000) * 100 + ''
     let options
-    // let profile = this.state.data.user_type
-    let profile = 'CA'
+    let profile = this.state.data.user_type
+    // let profile = 'CA'
     let profile_display
     let { name, data } = this.state
     if (profile === 'AMB') {
@@ -99,7 +100,6 @@ export default class ComingSoon extends Component {
     }
 
     if (
-      2 == 2 ||
       this.state.data.user_type === 'AMB' ||
       this.state.data.user_type === 'CA'
     ) {
@@ -306,4 +306,8 @@ export default class ComingSoon extends Component {
       </div>
     )
   }
+}
+
+ComingSoon.propTypes = {
+  history: PropTypes.func
 }

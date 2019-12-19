@@ -24,9 +24,6 @@ import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
 
 class HomeLanding extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <div>

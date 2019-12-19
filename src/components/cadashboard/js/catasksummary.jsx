@@ -14,12 +14,11 @@ export default class CATaskSummary extends Component {
     }
   }
   componentWillReceiveProps = nextProps => {
-    if (nextProps.tasks != this.props.tasks) {
+    if (nextProps.tasks !== this.props.tasks) {
       this.setState({ tasks: nextProps.tasks })
     }
   }
   render() {
-    console.log(this.state.tasks, 'summaryy')
     return (
       <div className="catasksummary-parent">
         <table id="ca01">
@@ -32,8 +31,7 @@ export default class CATaskSummary extends Component {
                 POINTS AWARDED
               </th>
             </tr>
-
-            {this.state.tasks &&
+            {this.state.tasks.length > 0 &&
               this.state.tasks.map(tsk => {
                 return (
                   <tr key={tsk.id}>

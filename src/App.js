@@ -34,15 +34,17 @@ const Registration_profiletype = Loadable({
 class App extends Component {
   constructor(props) {
     super(props)
+    // console.clear()
+  
   }
   render() {
     return (
       <div>
         <BrowserRouter>
-        <Switch>
-        <Route path="/dashboard/" component={DashboardIndex} />
-        <Route path="/" component={HomeLanding}/>
-        </Switch>
+          <Switch>
+            <Route path="/dashboard/" component={DashboardIndex} />
+            <Route path="/" component={HomeLanding} />
+          </Switch>
         </BrowserRouter>
       </div>
     )
