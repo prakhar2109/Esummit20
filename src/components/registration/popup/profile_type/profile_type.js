@@ -92,7 +92,7 @@ class Profiletype extends Component {
             <span className="profiletype_extra_info" id="profile_ca_info">
               *CAs are required to register through Facebook{' '}
             </span>
-            <label className="profiletype_container">
+            {/* <label className="profiletype_container">
               <input
                 type="radio"
                 name="radio"
@@ -102,7 +102,7 @@ class Profiletype extends Component {
               />
               <span className="profiletype_checkmark"></span>
               <span>Others</span>
-            </label>
+            </label> */}
 
             <label className="profiletype_container">
               <input

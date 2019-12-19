@@ -30,7 +30,6 @@ class DashboardIndex extends Component {
   render() {
     const { enter } = this.state
     return (
-      <Router>
         <Switch>
           <React.Fragment>
             <Route path="/dashboard" component={LeaderBoard} />
@@ -53,7 +52,6 @@ class DashboardIndex extends Component {
             <Route exact path="/dashboard/events" component={CAevents} />
           </React.Fragment>
         </Switch>
-      </Router>
     )
   }
 }

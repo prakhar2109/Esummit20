@@ -1,5 +1,5 @@
 .register_button {
-  height: 40px;
+  height: fit-content;
   width: 120px;
   display: flex;
   justify-content: center;

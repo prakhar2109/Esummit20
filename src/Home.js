@@ -27,7 +27,6 @@ class HomeLanding extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
@@ -49,7 +48,6 @@ class HomeLanding extends Component {
             {/* <Route path="*" component={} /> */}
           </Switch>
           <Footer />
-        </BrowserRouter>
       </div>
     )
   }

@@ -80,7 +80,7 @@
     line-height: normal;
     font-size: 12px;
     letter-spacing: 0.02em;
-    color: rgba(79, 79, 79, 0.44);
+    color:rgba(255, 255, 255, 0.6);
 }
 
 .caheader #scoresValue {
@@ -89,7 +89,7 @@
     text-align: right;
     letter-spacing: 0.02em;
     float: right;
-    color: #4f4f4f;
+    color: rgba(255, 255, 255, 0.6)
 }
 
 @media only screen and (min-width: 900px) {
@@ -109,7 +109,6 @@
 	font-size: 20px;
     height: fit-content;
     color: rgba(255, 255, 255, 0.38);
-    max-height: fit-content;
     padding: 1.28rem 0;
 }
 #mobile-navbar-dashboard-logout{

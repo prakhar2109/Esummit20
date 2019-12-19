@@ -27,32 +27,7 @@ export default class EmailVerification extends Component {
       otp_expired: false
     }
   }
-  componentDidMount = () => {
-    let otp = ''
-    let response = {
-      email: this.props.email
-    }
-    axios({
-      method: 'post',
-      url: BASE_URL + '/v1/api/verification/',
-      data: response
-    })
-      .then(r => {
-        otp = r.data.one_time_pass
-        this.setState({ otp })
 
-        // document
-        //     .getElementById("loader")
-        //     .style
-        //     .display = "none";
-      })
-      .catch(response => {
-        // document
-        //     .getElementById("loader")
-        //     .style
-        //     .display = "none";
-      })
-  }
   onChange = e => {
     const name = e.target.name
     let value = e.target.value
@@ -187,13 +162,24 @@ export default class EmailVerification extends Component {
   }
 
   componentDidMount() {
-    const height = window.innerHeight
-    let push = 0 * height
-    window.scroll({ top: push, behavior: 'auto' })
-    this.setState({
-      email: this.props.email,
-      otp: this.props.handleOTP
+    let otp = ''
+    let response = {
+      email: this.props.email
+    }
+    axios({
+      method: 'post',
+      url: BASE_URL + '/v1/api/verification/',
+      data: response
     })
+      .then(r => {
+        otp = r.data.one_time_pass
+        this.setState({ otp })
+      })
+      .catch(response => {
+      })
+
+
+ 
     const timer = () => {
       if (this.state.time > 0) {
         this.setState({

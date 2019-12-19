@@ -384,6 +384,10 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .css-15k3avv{
   }
+  .css-1uccc91-singleValue{
+    color: rgba(255, 255, 255, 0.6) !important;
+
+  }
   .esummit-register-form-body-parent-heading-first{
     line-height: normal;
     font-size: 14px;

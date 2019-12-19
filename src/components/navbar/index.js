@@ -4,6 +4,11 @@ import { NavLink } from "react-router-dom";
 
 import esummitLogo from '../../assets/esummit-logo.svg'
 class index extends Component {
+
+
+  gotoDashboard=()=>{
+    window.location.href='/dashboard/invite';
+  }
   render() {
     let token = localStorage.getItem("user_token");
     let tabs
@@ -11,9 +16,9 @@ class index extends Component {
       tabs = (
           <>
              <li className="navbar-items">
-            <NavLink to="/dashboard" className="navbar-links">
+            <div className="navbar-links" onClick={this.gotoDashboard}> 
               <button className="navbar-register-button">DASHBOARD</button>
-            </NavLink>
+            </div>
           </li>
           </>
       )

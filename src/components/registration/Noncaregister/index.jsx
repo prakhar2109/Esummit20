@@ -354,7 +354,8 @@ class NonCARegistration extends React.Component {
         //     .getElementById("loader")
         //     .style
         //     .display = "none";
-        alert(response)
+        alert("Email id already registered")
+        window.location.href='/register'
       })
   }
   handleDetails = data => {

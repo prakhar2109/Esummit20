@@ -324,6 +324,8 @@ export default class AccountSetup extends Component {
               theme="dark"
             /> */}
             <FacebookLogin
+               appId="630305827505065"
+    
               // appId="1971509613151179"
               // appId="2546035355673765"
               appId="613264019415150"
@@ -331,6 +333,7 @@ export default class AccountSetup extends Component {
               autoLoad={false}
               textButton="Facebook"
               fields="name,email,picture"
+              isMobile={true}
               disableMobileRedirect={true}
               cssClass="kep-login-facebook"
               icon="fa-facebook"

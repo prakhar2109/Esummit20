@@ -243,11 +243,13 @@ class Login extends Component {
                       theme="dark"
                     /> */}
                     <FacebookLogin
-                      // appId="630305827505065"
-                      appId="613264019415150"
+                      appId="630305827505065"
+                      // appId="613264019415150"
                       // appId="2546035355673765"
                       size="medium"
                       autoLoad={false}
+                      disableMobileRedirect={true}
+                      isMobile={true}
                       textButton="Sign in with Facebook"
                       fields="name,email,picture"
                       callback={this.loginresponseFacebook}
