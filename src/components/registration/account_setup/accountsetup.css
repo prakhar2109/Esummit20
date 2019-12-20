@@ -1,23 +1,14 @@
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .accountsetup_popup {
-    height: 26.29vh !important;
-    /* width: 380px !important; */
 
-    background: #ffffff;
-  }
-  .accountsetup_popup_content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .account_popup_data {
-    margin: 20px 0 0 0 !important;
-  }
-  .facebook_login {
-    position: unset !important;
-    margin: 20px 0 0 0 !important;
-  }
+.caregister-facebook{
+  background: #1890ff !important;
+  text-transform: capitalize !important;
+  font-family:"Poppins-Regular-Regukar-Regular" !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+  /* padding: 10px 40px 10px 20px !important; */
+  border: 2px solid rgba(255, 255, 255, 0.87) !important;
+  font-weight: 600 !important;
+  padding: calc(.34435vw + 8.38843px) calc(.34435vw + 13.38843px);
+  opacity: 1 !important;
 }
 
 .signup-container {
@@ -50,7 +41,7 @@
   height: 28px;
   border-radius: 28px;
   background-color: #09c9c3;
-  font-family: Poppins;
+  font-family: Poppins-Regular-Regukar;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -67,7 +58,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #00151b;
+  background: #010C0F;
 }
 .between_line {
   position: absolute;
@@ -85,7 +76,7 @@
   left: 288px;
   border-radius: 30px;
   background: #ffffff;
-  font-family: Poppins;
+  font-family: Poppins-Regular-Regukar;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -99,17 +90,18 @@
   /* width: 556px; */
   left: 450px;
   top: 254px;
-  background: #ffffff;
+  background: #070F12;
   border-radius: 4px;
   width: 90%;
+  padding: 3rem;
 }
 .accountsetup_popup_title {
   width: 100%;
   height: 54px;
   left: 472px;
   top: 254px;
-  background: #09c9c3;
-  font-family: Poppins;
+  background: #070F12;
+  font-family: Poppins-Regular-Regukar;
   display: flex;
   font-style: normal;
   font-weight: 600;
@@ -128,19 +120,21 @@
   height: 50px;
   /* margin-left: 92px; */
   margin-top: 58px;
-  font-family: Poppins;
+  font-family: Poppins-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.02em;
-  color: rgba(1, 12, 15, 0.75);
+  color: rgba(255, 255, 255, 0.87);
 }
 .facebook_login {
   /* margin-left: 200px; */
   margin: 43px auto;
   margin-left: auto;
+
+
   margin-right: auto;
 }
 
@@ -158,5 +152,29 @@
 @media only screen and (min-device-width: 1800px) and (max-device-width: 2560px) {
   .accountsetup_popup_content .accountsetup_popup_title {
     padding-left: 48px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 780px) {
+  .accountsetup_popup {
+    /* width: 380px !important; */
+
+    background: #070F12;
+  }
+  .accountsetup_popup_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .signup-container {
+    padding: 0;
+  }
+  .account_popup_data {
+    margin: 20px 0 0 0 !important;
+    font-size: 12px;
+  }
+  .facebook_login {
+    position: unset !important;
+    margin: 20px 0 0 0 !important;
   }
 }

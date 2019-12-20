@@ -21,6 +21,7 @@ import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 import 'antd/dist/antd.css'
 import HomeLanding from './Home'
+import CAInvite from './components/cadashboard/js/cainvite';
 const register = Loadable({
   loader: () => import('./components/registration/index.js'),
   loading: () => <Loading />
@@ -35,10 +36,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     // console.clear()
-    console.log(
-      '%cWelcome to ESummit IITR!',
-      'color: rgb(243,147,36); font-size:30px;'
-    )
+  
   }
   render() {
     return (

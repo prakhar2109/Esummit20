@@ -115,7 +115,7 @@ bottom: 2.962vh;
 
 .caeventsheading-font{
     font-size: 22.72px;
-    font-family:"ProximaNova-Semibold" !important;
+    font-family:"Poppins-Semibold" !important;
 
 }
 
@@ -180,6 +180,7 @@ overflow-x:hidden;
     font-size: 14.2px;
     color: rgba(255, 255, 255, 0.6);    
     line-height: 2.40vh;
+    word-wrap: break-word;
     overflow: auto;
     font-family: "Poppins-Regular";
 
@@ -220,7 +221,7 @@ overflow-x:hidden;
 }
 .caevents-coming-soon{
     color: #5A5A5A;
-    font-family:"ProximaNova-Semibold" !important;
+    font-family:"Poppins-Semibold" !important;
     font-size: 16px;
     position: absolute;
     bottom: 5vh;
@@ -234,7 +235,7 @@ overflow-x:hidden;
 
 .caeventsheading-font{
     font-size: 28px;
-    font-family:"ProximaNova-Semibold" !important;
+    font-family:"Poppins-Semibold" !important;
 
 }
 
@@ -245,7 +246,7 @@ overflow-x:hidden;
 }
 .caevents-registration-status {
     font-size: 16px;
-    font-family: "ProximaNova-Light";
+    font-family: "Poppins-Light";
 }
 .caevents-earnedcoupons-child-button button{
     font-size: 1rem;
@@ -283,7 +284,7 @@ overflow-x:hidden;
     left:0;
     width:100%;
     height: fit-content;
-    margin-top: 9vh;
+    margin-top: 5rem;
     padding-bottom: 2vh;
     background: #070F12;
     

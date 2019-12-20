@@ -8,14 +8,16 @@ import { BASE_URL } from '../../../utils/urls'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 
-class caLeaderboard extends Component {
+class SideNavbar extends Component {
   constructor(props) {
     super(props)
     this.state = {
       name: '',
       score: '0',
       activeState: '',
-      data: []
+      data: [],
+      contingent: false,
+      contingentid: ''
     }
   }
 
@@ -26,7 +28,7 @@ class caLeaderboard extends Component {
   }
   handleLogout = () => {
     localStorage.removeItem('user_token')
-    this.props.history.push('/')
+    window.location.href = '/'
   }
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
@@ -44,27 +46,46 @@ class caLeaderboard extends Component {
             name: res.data.name,
             data: res.data
           })
-
+          console.log(res)
           localStorage.setItem('profile', res.data.user_type)
           localStorage.setItem('invite', res.data.invite_url)
         })
         .catch(response => {
           this.props.history.push('/login')
         })
+
+      axios
+        .get(BASE_URL + '/v1/api/contingent/info', {
+          headers: {
+            Authorization: `Token ${token}`
+          }
+        })
+        .then(res => {
+          if (res.status === 200) {
+            {
+              console.log(res)
+              this.setState({
+                contingentid: res.data.contingent_id,
+                contingent: true
+              })
+            }
+          }
+        })
+        .catch(response => {})
     } else this.props.history.push('/login')
   }
 
   render() {
     let { name, score, data } = this.state
-    // let profile = this.state.data.user_type
-    let profile = 'CA'
+    let profile = this.state.data.user_type
+    // let profile = 'CA'
     let profile_display
     let scorePercentage = (score / 10000) * 100 + ''
     let options
-    // let is_ca =
-    //   this.state.data.user_type === 'AMB' || this.state.data.user_type === 'CA'
+    let is_ca =
+      this.state.data.user_type === 'AMB' || this.state.data.user_type === 'CA'
 
-    let is_ca = true
+    // let is_ca = true
 
     if (profile === 'AMB') {
       profile_display = 'CAMPUS AMBASSADOR'
@@ -162,14 +183,14 @@ class caLeaderboard extends Component {
                   </span>
                 </div>
               </div>
-
-              <div className="sidebar-dashboard-esummit">
-                <span id="sidebar-dashboard-esummitId">
-                  Contingent No (Leader)
-                </span>
-                <span id="sidebar-dashboard-esummitId-value">CN 2</span>
-              </div>
-
+              {profile !== 'IIT' && this.state.contingent ? (
+                <div className="sidebar-dashboard-esummit">
+                  <span id="sidebar-dashboard-esummitId">Contingent No</span>
+                  <span id="sidebar-dashboard-esummitId-value">
+                    {this.state.contingentid}
+                  </span>
+                </div>
+              ) : null}
               <Link to="/dashboard/Viewprofile">
                 <div
                   className="link-viewprofile"
@@ -278,8 +299,8 @@ class caLeaderboard extends Component {
   }
 }
 
-caLeaderboard.propTypes = {
+SideNavbar.propTypes = {
   history: PropTypes.func
 }
 
-export default withRouter(caLeaderboard)
+export default withRouter(SideNavbar)

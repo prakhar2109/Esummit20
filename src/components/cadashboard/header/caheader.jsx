@@ -36,7 +36,7 @@ export default class ComingSoon extends Component {
         })
       })
       .catch(response => {
-        this.props.history.push('/login')
+        window.location.href = '/login'
       })
   }
 
@@ -79,8 +79,8 @@ export default class ComingSoon extends Component {
     let { score } = this.state
     let scorePercentage = (score / 10000) * 100 + ''
     let options
-    // let profile = this.state.data.user_type
-    let profile = 'CA'
+    let profile = this.state.data.user_type
+    // let profile = 'CA'
     let profile_display
     let { name, data } = this.state
     if (profile === 'AMB') {

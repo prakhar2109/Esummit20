@@ -17,7 +17,7 @@
 .cacontigent-parent-heading1 {
 	margin-top: 3.33vh;
 	margin-left: 2.24%;
-	font-family: Poppins-Bold;
+	font-family: "Poppins-Bold" !important;
     font-style: normal;
     width: -moz-fit-content;
     width: fit-content;
@@ -62,7 +62,7 @@
 .cacontigent-parent-heading2 {
 	margin-top: 5.92vh;
 	margin-left: 2.24%;
-	font-family: Poppins-Bold;
+	font-family: Poppins-Bold !important;
 	font-style: normal;
 	width: fit-content;
 	font-size: 20px;
@@ -574,7 +574,7 @@ width:90px !important;
     left:0;
     width:100%;
 	min-height: 100vh;
-	margin-top: 9vh;
+	margin-top: 5rem;
     padding-bottom: 2vh;
     background-color: #070F12;
 }

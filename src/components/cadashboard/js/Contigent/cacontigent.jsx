@@ -107,7 +107,7 @@ export default class Cacontigent extends Component {
       .then(res => {
         if (res.status === 200) {
           this.setState({ contigent: null })
-          this.props.history.push('/dashboard/contingent')
+          window.location.href = '/dashboard/contingent'
         }
       })
       .catch(response => {})
@@ -164,7 +164,7 @@ export default class Cacontigent extends Component {
         if (this.state.no_contingent.length > 3 && !isempty) {
           this.setState({ contigent: false })
           this.handleOk()
-          this.props.history.push('/dashboard/contingent')
+          window.location.href = '/dashboard/contingent'
         } else {
           if (this.state.no_contingent.length < 5) {
             this.setState({
@@ -207,7 +207,7 @@ export default class Cacontigent extends Component {
     })
       .then(res => {
         if (res.status === 200 || res.status === 204) {
-          this.props.history.push('/dashboard/contingent')
+          window.location.href = '/dashboard/contingent'
           this.setState({ contigent: false })
 
           // this.props.form.name = res.data.name;
@@ -232,7 +232,7 @@ export default class Cacontigent extends Component {
       .then(res => {
         if (res.status === 200) {
           this.setState({ contigent: true })
-          this.props.history.push('/dashboard/contingent')
+          window.location.href = '/dashboard/contingent'
         }
       })
       .catch(response => {})
@@ -248,7 +248,7 @@ export default class Cacontigent extends Component {
       .then(res => {
         if (res.status === 200 || res.status === 204) {
           this.setState({ contingent_member: null })
-          this.props.history.push('/dashboard/contingent')
+          window.location.href = '/dashboard/contingent'
         }
       })
       .catch(response => {})
@@ -283,7 +283,7 @@ export default class Cacontigent extends Component {
           newData.splice(index, 1) // remove element
           return { no_contingent: newData } // update state
         })
-        this.props.history.push('/dashboard/contingent')
+        window.location.href = '/dashboard/contingent'
       } else {
         this.setState({
           contingent_error_message: 'Minimum four members required!'
