@@ -19,6 +19,7 @@ import './styles/main.scss'
 import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
+import StartupExpo from './components/startupExpo/startupexpo.jsx'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 
@@ -43,6 +44,10 @@ class HomeLanding extends Component {
             <Route path="/register-success" component={Success} />
             <Route path="/register-failure" component={Failuremessage} />
             <Route path="/Ideastorm" component={Ideastorm} />
+            <Route
+              path="/startupexpo"
+              component={props => <StartupExpo {...props} />}
+            />
             {/* <Route path="*" component={} /> */}
           </Switch>
           <Footer />
