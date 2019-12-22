@@ -6,6 +6,28 @@ import esummitLogo from '../../assets/esummit-logo.svg'
 import './src/navbar.css'
 // import Navbar from '../registration/navbar/navbar'
 class index extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMobile: false
+    }
+  }
+  componentDidMount() {
+    if (window.innerWidth <= 768) {
+      this.setState({
+        isMobile: true,
+        displayNavbar: false
+      })
+    }
+  }
+  showNavbar = e => {
+    this.setState({
+      displayNavbar: !this.state.displayNavbar
+    })
+    var x = document.getElementById('nav-icon1')
+    x.classList.toggle('active')
+  }
+
   gotoDashboard = () => {
     window.location.href = '/dashboard/invite'
   }

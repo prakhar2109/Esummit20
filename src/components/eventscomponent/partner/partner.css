@@ -1,0 +1,38 @@
+.partners-head {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  margin-left: 150px;
+  color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 30px;
+}
+.partners-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.each-partner {
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.partner-logo-wrap {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 20px;
+}
+.partner-name {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+
+  color: rgba(255, 255, 255, 0.87);
+}
