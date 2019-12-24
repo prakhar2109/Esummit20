@@ -354,8 +354,8 @@ class NonCARegistration extends React.Component {
         //     .getElementById("loader")
         //     .style
         //     .display = "none";
-        alert("Email id already registered")
-        window.location.href='/register'
+        alert('Email id already registered')
+        window.location.href = '/register'
       })
   }
   handleDetails = data => {
@@ -507,7 +507,10 @@ class NonCARegistration extends React.Component {
                     <div className="esummit-register-form-go-to-name">
                       {this.state.name}
                     </div>
-                    <div className="esummit-register-form-button" style={{justifyContent:"center"}}>
+                    <div
+                      className="esummit-register-form-button"
+                      style={{ justifyContent: 'center' }}
+                    >
                       <div
                         className="esummit-register-form-button-back"
                         onClick={this.goToDashboard}

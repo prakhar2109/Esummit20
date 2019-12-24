@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import ecellLogo from '../../../assets/ecell-logo.svg'
 import disruptionText from '../../../assets/disruption-text.svg'
 class Intro extends Component {
-  gotoDashboard=()=>{
-    window.location.href='/dashboard/invite';
+  gotoDashboard = () => {
+    window.location.href = '/dashboard/invite'
   }
   render() {
-    let token = localStorage.getItem("user_token");
+    let token = localStorage.getItem('user_token')
     let tabs
-    if (token !== undefined && token !== null && token !== "") {
+    if (token !== undefined && token !== null && token !== '') {
       tabs = (
         <>
           <div className="home-section-intro-link" onClick={this.gotoDashboard}>
@@ -16,9 +16,7 @@ class Intro extends Component {
           </div>
         </>
       )
-    }
-
-    else {
+    } else {
       tabs = (
         <>
           <a href="/register" className="home-section-intro-link">

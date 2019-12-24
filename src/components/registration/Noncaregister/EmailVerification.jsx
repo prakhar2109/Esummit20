@@ -175,11 +175,8 @@ export default class EmailVerification extends Component {
         otp = r.data.one_time_pass
         this.setState({ otp })
       })
-      .catch(response => {
-      })
+      .catch(response => {})
 
-
- 
     const timer = () => {
       if (this.state.time > 0) {
         this.setState({

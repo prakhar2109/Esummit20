@@ -21,7 +21,7 @@ import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 import 'antd/dist/antd.css'
 import HomeLanding from './Home'
-import CAInvite from './components/cadashboard/js/cainvite';
+import CAInvite from './components/cadashboard/js/cainvite'
 const register = Loadable({
   loader: () => import('./components/registration/index.js'),
   loading: () => <Loading />
@@ -36,7 +36,6 @@ class App extends Component {
   constructor(props) {
     super(props)
     // console.clear()
-  
   }
   render() {
     return (
