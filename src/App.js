@@ -1,24 +1,54 @@
-import React from 'react'
-// import logo from './logo.svg'
-import theme from './assets/theme.png'
-import './App.css'
+/* eslint-disable react/display-name */
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <React.Fragment>
-      <div className="app-parent">
-        <img src={theme} alt="theme" />
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdaJH9lppWdVlgjXDiw60KvkT1kQeUcn-4s-UHDL_BirextvQ/viewform?usp=sf_link"
-          className="register-now-button"
-        >
-          Register Now
-        </a>
+// import logo from './logo.svg'
+import Loading from './assets/loading.gif'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import theme from './assets/theme.png'
+import Success from './components/registration/popup/success/success.js'
+import Loadable from 'react-loadable'
+import Registration from './components/registration/index.js'
+import Personaldetail from './components/registration/personal_details/personal_details.js'
+import Facebooklogin from './components/registration/account_setup/accountsetup.js'
+import Profiletype from './components/registration/popup/profile_type/profile_type.js'
+import Navbar from './components/navbar'
+import Home from './components/home/Home.js'
+import Footer from './components/footer'
+import CampusAmbassador from './components/ca/CampusAmbassador'
+import './styles/main.scss'
+import Failuremessage from './components/registration/popup/failure/failure.js'
+import DashboardIndex from './components/cadashboard/js/index'
+import 'antd/dist/antd.css'
+import HomeLanding from './Home'
+import CAInvite from './components/cadashboard/js/cainvite';
+const register = Loadable({
+  loader: () => import('./components/registration/index.js'),
+  loading: () => <Loading />
+})
+const Registration_profiletype = Loadable({
+  loader: () =>
+    import('./components/registration/popup/profile_type/profile_type.js'),
+  loading: () => <Loading />
+})
+
+class App extends Component {
+  constructor(props) {
+    super(props)
+    // console.clear()
+  
+  }
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/dashboard/" component={DashboardIndex} />
+            <Route path="/" component={HomeLanding} />
+          </Switch>
+        </BrowserRouter>
       </div>
-    </React.Fragment>
-  )
+    )
+  }
 }
 
 export default App

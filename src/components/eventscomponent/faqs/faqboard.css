@@ -1,0 +1,22 @@
+.faq-land-para {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 48px;
+  color: rgba(255, 255, 255, 0.87);
+}
+.faq-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  width: 88px;
+  height: 40px;
+  margin-bottom: 56px;
+  color: rgba(255, 255, 255, 0.87);
+}

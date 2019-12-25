@@ -1,0 +1,255 @@
+.caheader {
+    background: #0D1719;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.caheader .esummit_logo img {
+    height: 4rem;
+}
+
+.caheader i {
+    float: right;
+    padding-top: 2vh;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #1a4d66;
+}
+.caheader-parent{
+    background: #0D1719;
+    padding: 15px;
+
+}
+.caheader .mob_menu {
+    flex-wrap:wrap;
+    display: none;
+    margin-top: 5vh;
+    -webkit-box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
+          box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.caheader #close_button {
+    display: none;
+}
+
+.caheader .headerdata {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-left: 8%;
+    margin-bottom: auto;
+}
+
+.caheader #droperShape {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 4%;
+    background-color: #359E9A;
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 3em;
+    font-weight: 500;
+    height: 2em;
+    width: 2em;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+.caheader .progress {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 7px !important;
+}
+
+.caheader #nms {
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #4f4f4f;
+}
+
+.caheader #scoresWritten {
+    line-height: normal;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color:rgba(255, 255, 255, 0.6);
+}
+
+.caheader #scoresValue {
+    line-height: normal;
+    font-size: 12px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    float: right;
+    color: rgba(255, 255, 255, 0.6)
+}
+
+@media only screen and (min-width: 900px) {
+    .caheader {
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 900px){
+#optionsToggle{
+	
+   	box-sizing: border-box;
+    border-radius: 4px;
+	box-shadow:none;
+	margin-top:36px;
+	font-size: 20px;
+    height: fit-content;
+    color: rgba(255, 255, 255, 0.38);
+    padding: 1.28rem 0;
+}
+#mobile-navbar-dashboard-logout{
+    display: none;
+    color: #E2574C;
+    font-size: 24px ;
+}
+#mobile-navbar-submitButton button {
+    cursor: pointer;
+    color: #E24F3B;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding-top: 10px;
+    background: none;
+}
+#mobile-navbar-submitButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#leaderboardButton {
+    color: rgba(189, 189, 189, 0.55);
+   
+}
+.linkEventson{
+    background: linear-gradient(270deg, #0F9DB1 53.24%, rgba(15, 157, 177, 0.2) 100%);
+    color: #359D9A !important;
+text-decoration:none !important;
+}
+
+.caheader .mob_menu{
+    flex-wrap: wrap;
+    padding: 2.28rem;
+    padding-bottom:0;
+    box-shadow:none;
+    margin-top:0;
+}
+#viewProfile a{
+
+color: #F39423 !important;
+}
+#viewProfile{
+    margin-left:0 !important;
+    width: 100%;
+    margin-right: 8%;
+    font-size: 12px;
+}
+.caheader #nms{
+    font-size: 17.14px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.87);
+    margin-bottom: .4rem;
+}
+.dashboard-mobile-navbar{
+display:flex;
+margin-bottom: 2vh;
+
+}
+.mobile-profile-dashboard-esummit1{
+    font-size: 14px;
+        border-top: 2px solid #F2F2F2; 
+       padding-top:12px;
+}
+#typeofdashboard{
+    font-size: 10px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    margin-bottom: .8rem;
+    color: rgba(255, 255, 255, 0.87);
+}
+.link-mobile-viewprofile {
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+.mobile-profile-dashboard-esummit2{
+    font-size: 14px;
+    border-bottom: 2px solid #F2F2F2; 
+    padding-top:8px;
+    padding-bottom:12px;
+}
+#mobileprofile-dashboard-esummitId{
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
+}
+#mobileprofile-dashboard-esummitId-value{
+    float: right;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #359D9A;
+}
+.new-navbar-i{  
+    padding: 16px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position:fixed;
+    top:10px;
+    right:20px;
+    cursor:pointer;
+    z-index:500;
+}
+.new-navbar-i >span{
+    user-select:none;
+    transition:all 0.6s;
+    border-bottom:2px solid white; 
+    display:block;
+    width:23px;
+    height:5px;
+    z-index:300;
+}
+.span-cross > span:nth-child(1){
+    transition:all 0.6s;
+    transform:rotate(45deg);
+}
+.span-cross > span:nth-child(2){
+    transition:all 0.6s;
+    transform:rotate(-45deg) translate(2px,-6px);
+}
+.span-cross > span:nth-child(3){
+    display:none;
+}
+.linkEventson-inactive {
+    color: rgba(255, 255, 255, 0.38);
+    /* font-family: "ProximaNova-Semibold" !important; */
+    font-size: 16px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+}
+}

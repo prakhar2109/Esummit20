@@ -1,0 +1,36 @@
+.round {
+  text-align: left;
+}
+.round p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 180%;
+  font-size: 1.5rem;
+  font-family: 'Poppins';
+  font-weight: normal;
+  font-style: normal;
+}
+.round p:nth-child(1) {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins';
+}
+
+.round ol {
+  list-style: decimal;
+}
+.round ol li {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 180%;
+  font-size: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .round p {
+    font-size: 1rem;
+  }
+  .round ol li {
+    font-size: 1rem;
+  }
+}

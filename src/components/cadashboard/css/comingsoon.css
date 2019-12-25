@@ -1,0 +1,35 @@
+.comingsoon-parent-abcd{
+
+
+    background-color: #F7F8F9;
+    position: absolute;
+    top: 0;
+    left: 18%;
+    width: 82%;
+    height: fit-content;
+    padding-bottom: 3vh;
+}
+.comingsoon-heading-abcd{
+    font-size:14.2px;
+    margin-top: 3.33vh;
+    margin-left: 2.24%; 
+    font-family:"ProximaNova-Semibold" !important; 
+}
+
+@media only screen and (max-width: 900px){
+    .comingsoon-parent-abcd {
+        color: black;
+        position: relative;
+        top: 0;
+        left:0;
+        width:100%;
+        min-height: 100vh;
+        padding-bottom: 2vh;
+        background-color: #F7F8F9;
+    }
+    .comingsoon-heading-abcd{
+        margin-top:0;
+        padding-top:3.33vh;
+    
+    }
+}

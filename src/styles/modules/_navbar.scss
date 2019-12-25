@@ -1,0 +1,71 @@
+.navbar-container {
+  @include desktop-320-767 {
+    padding: $gutterWidth;
+  }
+
+  @include display-row();
+  padding: $gutterWidth $gutterWidth*6;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $primaryBackgroundColor;
+  z-index: 10;
+
+  .navbar-logo-link {
+    .navbar-logo {
+      @include desktop-320-767 {
+        width: $gutterWidth*4;
+      }
+    }
+  }
+
+  .navbar-content {
+    @include display-row();
+    justify-content: center;
+    align-items: center;
+
+
+    .navbar-items {
+      @include desktop-320-767 {
+        margin-right: $gutterWidth *0.2;
+      }
+      text-align: right;
+      margin-right:$gutterWidth;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      .navbar-links {
+        @include desktop-320-767 {
+          font-size: $normalFontSize*0.5;
+          line-height: $normaLineHeight*0.4;
+
+        }
+
+        @include desktop-320 {
+          font-size: $normalFontSize*0.4;
+          line-height: $normaLineHeight*0.3;
+        }
+
+        font-size: $normalFontSize*0.8;
+        line-height: $normaLineHeight*0.8;
+        text-align: center;
+        color: #FFFFFF;
+
+        .navbar-register-button {
+          @include desktop-320-767 {
+            @include btn-standard(0.6);
+
+          }
+
+          @include btn-standard(0.8);
+          width: $gutterWidth*4;
+        }
+      }
+
+
+    }
+  }
+}

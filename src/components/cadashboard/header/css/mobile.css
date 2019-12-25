@@ -1,0 +1,27 @@
+.header {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
+          box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  width: 100vw;
+}
+
+.mobile_menu {
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+}
+
+.esummit_logo img {
+  height: 4rem;
+}
+
+.links {
+  display: none;
+}
+
+.ecell_logo {
+  display: none;
+}
+/*# sourceMappingURL=mobile.css.map */
