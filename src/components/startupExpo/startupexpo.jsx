@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './startupexpo.css'
-import Eligibility from './Eligibility/eligibility'
-import Rules from './rules/rules'
-import Header from './Header/header'
-import Timeline from './Timeline/timeline'
+import Eligibility from './startupExpoEligibility/eligibility'
+import Rules from './startupExporules/rules'
+import Header from './startupExpoHeader/header'
+import Timeline from './startupExpoTimeline/timeline'
 import PropTypes from 'prop-types'
 
 export default class StartupExpo extends Component {

@@ -1,7 +1,6 @@
 .timeline {
   padding: 6rem 17%;
   display: block;
-  border-bottom: 1px solid #b2b2b2;
   background: #070f12;
 }
 @media (max-width: 1200px) {

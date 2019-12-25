@@ -38,17 +38,20 @@ class HomeLanding extends Component {
           <Route path="/ca-registration" component={Registration} />
           <Route path="/noncaregister" component={NonCARegistration} />
 
-            <Route path="/personal-detail" component={Personaldetail} />
-            <Route path="/register-success" component={Success} />
-            <Route path="/register-failure" component={Failuremessage} />
-            <Route path="/Ideastorm" component={Ideastorm} />
-            <Route
-              path="/startupexpo"
-              component={props => <StartupExpo {...props} />}
-            />
-            {/* <Route path="*" component={} /> */}
-          </Switch>
-          <Footer />
+          <Route path="/personal-detail" component={Personaldetail} />
+          <Route path="/register-success" component={Success} />
+          <Route path="/register-failure" component={Failuremessage} />
+          <Route
+            path="/ideastorm"
+            component={props => <Ideastorm {...props} />}
+          />
+          <Route
+            path="/startupexpo"
+            component={props => <StartupExpo {...props} />}
+          />
+          {/* <Route path="*" component={} /> */}
+        </Switch>
+        <Footer />
       </div>
     )
   }
