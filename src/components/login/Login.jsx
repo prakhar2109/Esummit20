@@ -98,15 +98,17 @@ class Login extends Component {
     // })
     // let { name, email, image_url, social_signup } = this.state
     console.log(response)
-  
-    this.setState({
-      name: response.profileObj.name,
-      accessToken: response.accessToken,
-      email:  response.profileObj.email,
-      social_signup: true,
-    },()=>this.loginSubmit())
 
-    
+    this.setState(
+      {
+        name: response.profileObj.name,
+        accessToken: response.accessToken,
+        email: response.profileObj.email,
+        social_signup: true
+      },
+      () => this.loginSubmit()
+    )
+
     // this.props.handleGoogle(data)
     // this.namevalidate()
     // this.emailvalidate()
@@ -234,7 +236,7 @@ class Login extends Component {
                     You will be given tasks which requires facebook sign-up.
                   </div>
                   <div className="facebook_login">
-                  {/* <GoogleLogin
+                    {/* <GoogleLogin
                       clientId="73234389568-ad4s6dav417kmlut5n7n0gmrbpfkb44i.apps.googleusercontent.com"
                       buttonText="Google"
                       onSuccess={this.responseLoginGoogle}
@@ -374,7 +376,8 @@ class Login extends Component {
                   registered)
                 </div>
                 <div className="login-emailinputfield">
-                  <input className="login-emailinputfield"
+                  <input
+                    className="login-emailinputfield"
                     id="inputEmail"
                     type="email"
                     name="email"

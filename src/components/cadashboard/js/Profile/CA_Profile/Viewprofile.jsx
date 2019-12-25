@@ -40,7 +40,8 @@ export default class Viewprofile extends Component {
         })
       })
       .catch(response => {
-        alert(response)
+        window.location.href = '/login'
+        // alert(response)
       })
   }
 

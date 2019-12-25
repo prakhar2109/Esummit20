@@ -46,7 +46,8 @@ export default class Cainvite extends Component {
           this.setState({ invite_link: res.data.invite_url })
         })
         .catch(response => {
-          //   window.location.href = "/login";
+          localStorage.removeItem('user_token')
+          window.location.href = '/login'
         })
     }
   }

@@ -5,7 +5,7 @@ import './success.css'
 
 class Successmessage extends Component {
   navigateMain = () => {
-    window.location.href='/dashboard/invite'
+    window.location.href = '/dashboard/invite'
   }
   render() {
     return (
@@ -19,7 +19,7 @@ class Successmessage extends Component {
             }}
           ></div>
           <div className="success_content">
-            You have successfully registered. 
+            You have successfully registered.
           </div>
           <div className="closeButton">
             <Button

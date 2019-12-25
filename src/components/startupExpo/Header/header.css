@@ -1,0 +1,106 @@
+.headerSection {
+  background: #030d0f;
+  /* width: 100vw; */
+  min-height: 59.8125rem;
+  height: auto;
+  padding: 10rem 17%;
+}
+@media (max-width: 1200px) {
+  .headerSection {
+    min-height: 45rem;
+    padding: 6rem 14%;
+  }
+}
+.headerSection p:first-child {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 4.5rem;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .headerSection p:first-child {
+    font-size: 1.5rem;
+    padding-bottom: calc(0px + 1vh);
+    font-weight: bold;
+  }
+}
+
+.headerSection p:nth-child(2) {
+  font-size: 1.75rem;
+  line-height: 3rem;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: calc(0px + 3vh);
+}
+@media (max-width: 1200px) {
+  .headerSection p:nth-child(2) {
+    line-height: 0.9375rem;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding-bottom: 0;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.headerSection p:nth-child(6) {
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 2.625rem;
+  padding-bottom: 4.62vh;
+}
+@media (max-width: 1200px) {
+  .headerSection p:nth-child(6) {
+    line-height: 170%;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding-bottom: calc(15px + 3vh);
+  }
+}
+
+.headerSection p:nth-child(7) {
+  font-size: 1.625rem;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.6);
+  /* text-align: justify; */
+  margin-bottom: calc(10vh + 2rem);
+  line-height: 170%;
+}
+
+@media (max-width: 1200px) {
+  .headerSection p:nth-child(7) {
+    line-height: 1.125rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(6vh + 2rem);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.headerSection p {
+  text-align: left;
+  font-family: 'Poppins';
+}
+.headerSection .register a span {
+  padding: 0.875rem 1rem;
+  font-family: 'Poppins';
+  border: 2px solid #359d9a;
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #359d9a;
+}
+@media (max-width: 1200px) {
+  .headerSection .register a span {
+    font-size: 0.8rem;
+  }
+}
