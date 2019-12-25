@@ -54,7 +54,7 @@ export default class AccountSetup extends Component {
       toggleConfirmEye: !this.state.toggleConfirmEye
     })
     if (document.getElementById('inputConfirmPassword').type === 'password') {
-      document.getElementById('inputPassword').type = 'text'
+      document.getElementById('inputConfirmPassword').type = 'text'
     } else {
       document.getElementById('inputConfirmPassword').type = 'password'
     }
@@ -324,8 +324,7 @@ export default class AccountSetup extends Component {
               theme="dark"
             /> */}
             <FacebookLogin
-               appId="630305827505065"
-    
+              // appId="630305827505065"
               // appId="1971509613151179"
               // appId="2546035355673765"
               appId="613264019415150"

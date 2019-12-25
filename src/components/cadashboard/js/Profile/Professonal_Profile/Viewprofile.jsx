@@ -33,7 +33,8 @@ export default class Viewprofile extends Component {
         })
       })
       .catch(response => {
-        alert(response)
+        // alert(response)
+        window.location.href = '/login'
       })
   }
   showModal = () => {

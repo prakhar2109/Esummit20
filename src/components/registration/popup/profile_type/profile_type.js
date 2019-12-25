@@ -43,23 +43,24 @@ class Profiletype extends Component {
       console.log(param[0])
       console.log(param[1])
     }
-    console.log(this.props.location.search);
+    console.log(this.props.location.search)
 
     if (this.state.profile_type === 'others') {
       return (window.location.href =
         'https://docs.google.com/forms/d/e/1FAIpQLSdaJH9lppWdVlgjXDiw60KvkT1kQeUcn-4s-UHDL_BirextvQ/viewform?usp=sf_link')
-    }
-    else if (this.state.profile_type === 'CA') {
+    } else if (this.state.profile_type === 'CA') {
       this.props.history.push({
         pathname: '/ca-registration',
         search: this.props.location.search
       })
-    }
-    else
-    {
+    } else {
       this.props.history.push({
-        pathname:'/noncaregister',
-        search:this.props.location.search+'&profile_type='+this.state.profile_type})
+        pathname: '/noncaregister',
+        search:
+          this.props.location.search +
+          '&profile_type=' +
+          this.state.profile_type
+      })
     }
   }
   render() {
@@ -109,7 +110,9 @@ class Profiletype extends Component {
                 type="radio"
                 name="radio"
                 value="iitr_student"
-                checked={this.state.profile_type === 'iitr_student' ? true : false}
+                checked={
+                  this.state.profile_type === 'iitr_student' ? true : false
+                }
                 onChange={this.onProfileChange}
               />
               <span className="profiletype_checkmark"></span>
@@ -120,7 +123,9 @@ class Profiletype extends Component {
                 type="radio"
                 name="radio"
                 value="non_iitr_student"
-                checked={this.state.profile_type === 'non_iitr_student' ? true : false}
+                checked={
+                  this.state.profile_type === 'non_iitr_student' ? true : false
+                }
                 onChange={this.onProfileChange}
               />
               <span className="profiletype_checkmark"></span>
@@ -131,7 +136,9 @@ class Profiletype extends Component {
                 type="radio"
                 name="radio"
                 value="professional"
-                checked={this.state.profile_type === 'professional' ? true : false}
+                checked={
+                  this.state.profile_type === 'professional' ? true : false
+                }
                 onChange={this.onProfileChange}
               />
               <span className="profiletype_checkmark"></span>

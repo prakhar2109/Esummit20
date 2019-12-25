@@ -28,19 +28,15 @@ class HomeLanding extends Component {
   render() {
     return (
       <div>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route
-              exact
-              path="/campus-ambassador"
-              component={CampusAmbassador}
-            />
-            <Route path="/register" component={Profiletype} />
-            <Route path="/login" component={Login} />
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/campus-ambassador" component={CampusAmbassador} />
+          <Route path="/register" component={Profiletype} />
+          <Route path="/login" component={Login} />
 
-            <Route path="/ca-registration" component={Registration} />
-            <Route path="/noncaregister" component={NonCARegistration} />
+          <Route path="/ca-registration" component={Registration} />
+          <Route path="/noncaregister" component={NonCARegistration} />
 
             <Route path="/personal-detail" component={Personaldetail} />
             <Route path="/register-success" component={Success} />

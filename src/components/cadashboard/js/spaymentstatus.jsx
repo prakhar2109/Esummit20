@@ -39,7 +39,9 @@ export default class PaymentStatus extends Component {
         )
       })
       .catch(response => {
-        alert(response)
+        // alert(response)
+        // console.log("hello")
+        localStorage.removeItem('user_token')
       })
   }
 
