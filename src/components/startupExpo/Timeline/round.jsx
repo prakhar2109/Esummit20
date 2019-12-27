@@ -14,39 +14,43 @@ class Round extends Component {
     else roundNumber = 1
     return (
       <div className="round">
-        <p>Round {roundNumber}</p>
+        {/* <p>Round {roundNumber}</p> */}
         <br />
         <br />
         <p>
           {' '}
           Registration starts on :{' '}
-          <span style={{ color: '#359D9A' }}>12 December, 2018</span>
+          <span style={{ color: '#359D9A' }}>12 December, 2019</span>
         </p>
         <br />
         <p>
-          Round 1 submission deadline :{' '}
-          <span style={{ color: '#359D9A' }}>1 January, 2019</span>
+          Registration deadline :{' '}
+          <span style={{ color: '#359D9A' }}>7 January, 2019</span>
         </p>
         <br />
         <p>
-          In this round all the teams are required to submit an abstract of
-          their idea along with the answers to some basic questions which will
-          be evaluated by Industry Leaders on the basis of :
+          All startups willing to participate are required to fill the
+          application form before the Registration deadline after which a
+          confirmation email will be sent to all selected entries by{' '}
+          <span style={{ color: '#359D9A' }}> 9 January, 2019</span>
         </p>
-        <br />
-        <ol>
-          <li>The innovation in your idea</li>
-          <li>The real-world problem it mitigates </li>
-          <li>The innovation in your idea</li>
-        </ol>
         <br />
         <p>
-          The teams with the ideas which qualify the minimum eligibility
-          criteria would be allowed to progress to the next round.
+          In respond to the email, each entry has to confirm and finalize their
+          presence on the day of the event by{' '}
+          <span style={{ color: '#359D9A' }}> 12 January, 2019</span>
         </p>
         <br />
-        <p>Round 1 results will be announced in 1st week of January </p>
+        <p>
+          All entries are then expected to pay through the payment portal by <span style={{ color: '#359D9A' }}> 20 January, 2019</span>
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
+        
     )
   }
 }

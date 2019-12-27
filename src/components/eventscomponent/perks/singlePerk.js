@@ -4,6 +4,7 @@ import cashrewardPhoto from './assets/prize.png'
 import mediaPhoto from './assets/media.png'
 import networkingPhoto from './assets/network.png'
 import mentorPhoto from './assets/mentor.png'
+import Funding from './assets/4.png'
 import PropTypes from 'prop-types'
 
 export function SinglePerk(props) {
@@ -50,8 +51,8 @@ export default class EventPerks extends Component {
           {this.state.cashReward ? (
             <SinglePerk
               src={cashrewardPhoto}
-              perkTitle="Cash Rewards"
-              perkAbout="Cash Prize Of INR 2,00,000"
+              perkTitle="Incubation Opportunities"
+              perkAbout="An opportunity to get your startup incubated by renowked incubators"
             />
           ) : null}
           {this.state.mentorship ? (
@@ -71,7 +72,7 @@ export default class EventPerks extends Component {
           ) : null}
           {this.state.fundingOpportunity ? (
             <SinglePerk
-              src=""
+              src={Funding}
               style={{ width: '200px' }}
               perkTitle="Funding opportunities"
               perkAbout="An opportunity to raise real time funds"

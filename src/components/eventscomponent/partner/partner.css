@@ -4,28 +4,44 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 48px;
-  margin-left: 150px;
+  margin-left: 14vw;
   color: rgba(255, 255, 255, 0.87);
   margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  .partners-head {
+    font-size: 1.5rem;
+    margin-left: 14vw;
+  }
 }
 .partners-body {
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
+  padding: 50px 10vw;
+  
+  /* justify-content: space-evenly; */
+
 }
 .each-partner {
-  margin-left: 120px;
+  margin: 0px 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: justify;
   align-items: center;
+  z-index: 2;
+  
+  
 }
 .partner-logo-wrap {
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  /* border: 2px solid rgba(255, 255, 255, 0.6); */
   box-sizing: border-box;
   border-radius: 4px;
-  width: 180px;
   height: 180px;
   margin-bottom: 20px;
+  margin-top: 20px;
+  z-index: 3;
+  
 }
 .partner-name {
   font-family: Poppins;
@@ -33,6 +49,12 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 36px;
-
+  text-align: center;
   color: rgba(255, 255, 255, 0.87);
+}
+.partner-logo {
+  
+  height: 100%;
+  z-index: 4;
+  
 }

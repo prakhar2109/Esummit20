@@ -8,22 +8,22 @@ class Faqlist extends Component {
       faqlist: [
         {
           id: 1,
-          question: 'What is the last date of submission?',
+          question: 'What is the last date of form submission and payment?',
           answer:
-            '10th of January is the last date of submission of entries for the first round of the competition.'
+            '7th of January is the last date of form submission and payment should be done on or before 20th of January.'
         },
         {
           id: 2,
-          question: ' Is there a participation fee for Idea Storm?',
+          question: ' How much is the participation fee for Startup Expo?',
           answer:
-            'No, there is no participation fee for participation in the first round of Idea Storm.'
+            'The participation fee for participation for Startup Expo is 3000 Rupees.'
         },
 
         {
           id: 3,
-          question: ' How will the mentors be allocated?',
+          question: ' Can a person register for two startups?',
           answer:
-            'Your idea will be judged by a panel of experts and then mentors will be allocated to you based on the area of their expertise.'
+            'Yes, but finally only one startup will be selected by us and will be showcased on the final day.'
         },
 
         {
@@ -40,23 +40,25 @@ class Faqlist extends Component {
 
         {
           id: 5,
-          question: ' Is it compulsory to have a team to participate? ',
-          answer: 'Yes, you should atleast have a team size of 3 members.'
+          question:
+            ' How many people from a single startup can be there on the day of Startup Expo? ',
+          answer:
+            'You can have a maximum of two members present there with each startup on the day of Startup Expo. If they want, other members of the team can also join us for E-summit with their individual registration on our website.'
         },
 
         {
           id: 6,
-          question: ' Does my business model have to be technology related? ',
+          question: ' Does my startup has to be technology related? ',
           answer:
-            'No, we encourage all entries that can get mentorship,funding and be developed into a business venture.'
+            'No, we encourage all entries from all sectors that can get funding and be developed into a business venture.'
         },
 
         {
           id: 7,
           question:
-            '  Can a team consists of people from different college/companies? ',
+            'What are the accommodation facilities that a team is going to get? ',
           answer:
-            'Yes, team size should be in between 3 to 5. Individuals in the team can be from any organization'
+            'Accomodation is optional. Extra nominal fee is charged if you opt for accomodation otherwise you can also get accomodation on your own somewhere outside the campus if you are willing to. '
         }
       ]
     }

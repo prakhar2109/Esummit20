@@ -4,24 +4,27 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 48px;
-  margin-left: 120px;
+  margin-left: 14vw;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 150px;
   color: rgba(255, 255, 255, 0.87);
 }
 .coordinator-info {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  margin-left: 120px;
+  margin-left: 14vw;
   font-size: 20px;
   line-height: 180%;
   /* or 43px */
   color: rgba(255, 255, 255, 0.6);
+  margin-top:20px;
 }
 .coordinator-body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
 }

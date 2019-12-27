@@ -18,7 +18,7 @@ class Timeline extends Component {
         <div className="timelineHeader">
           <div className="title">TIMELINE</div>
           <div className="rounds">
-            <div>
+            {/* <div>
               <NavLink to={`${match.url}/round/1`} activeClassName="active">
                 ROUND 1
               </NavLink>
@@ -32,7 +32,7 @@ class Timeline extends Component {
               <NavLink activeClassName="active" to={`${match.url}/round/3`}>
                 ROUND 3
               </NavLink>
-            </div>
+            </div> */}
           </div>
         </div>
         <Switch>

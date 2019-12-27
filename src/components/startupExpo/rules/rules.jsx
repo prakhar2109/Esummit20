@@ -10,19 +10,18 @@ class Rules extends Component {
 
         <ol>
           <li>
-            Each team may consist of at least three to at most five members, who
-            need not belong to the same organization.
-          </li>
-
-          <li>
-            Multiple teams from the same university / organization are allowed
-            to participate in the event.
+            Each startup may consist of a maximum of three members, who will be
+            present their on the stall.
           </li>
 
           <li>
             The decision of the judges shall be final and binding, though in all
             the rounds, E-Cell IIT Roorkee retains the right to evaluate all
             ideas and choose the eligibility criteria.
+          </li>
+          <li>
+            The startups that will be joining us on the event day are expected
+            to bring their own promotional posters and standees.
           </li>
         </ol>
       </div>

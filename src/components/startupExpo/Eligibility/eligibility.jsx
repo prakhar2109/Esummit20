@@ -8,22 +8,18 @@ class Eligibility extends Component {
         <p>ELIGIBILITY CRITERIA</p>
         <ol>
           <li>
-            There is no restriction on any individual to participate. Members of
-            all educational and professional fraternities are welcome to
-            participate.
+            The participating Start-up should have been a registered Indian
+            entity in operation for at least 3 months.
+          </li>
+          <li>
+            The participating Start-up should be less than five years old.
+          </li>
+          <li>
+            Each participating Start-up should have an effective Business model
+            and Pitch deck that they will present in front of all the investors.
           </li>
 
-          <li>
-            Start-ups which have been incorporated more than a year ago (i.e.
-            registered on or before 1 December, 2017) are not eligible to
-            participate in the Idea Storm.
-          </li>
-          <li>
-            Ventures that have acquired funding from external investor-networks
-            (angels, VC&apos;s, etc) can not participate. We believe in
-            promoting startups that require assistance in the form of seed
-            capital, mentoring and various types of consultancies.
-          </li>
+          
         </ol>
       </div>
     )
