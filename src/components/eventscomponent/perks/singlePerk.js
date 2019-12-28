@@ -44,7 +44,7 @@ export default class EventPerks extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="perk-parent">
         <div className="perk-head">PERKS</div>
 
         <div className="perk-board">

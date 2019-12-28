@@ -3,7 +3,7 @@ import React from 'react'
 import './partner.css'
 export default function Partners(props) {
   return (
-    <div>
+    <div className="partner-parent">
       <div className="partners-head">PARTNERS</div>
       <div className="partners-body">
         {props.partners.map(partner => (

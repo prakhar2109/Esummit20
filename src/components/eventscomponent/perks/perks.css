@@ -6,6 +6,9 @@
   margin: 150px 150px;
   
 }
+.perk-parent{
+  padding: 6rem 14%;
+}
 .perk-title {
   font-family: Poppins;
   font-style: normal;
@@ -44,22 +47,25 @@
   font-weight: bold;
   width: 99px;
   height: 40px;
-  margin-left: 17vw;
   margin-bottom: 50px;
   color: rgba(255, 255, 255, 0.87);
   font-family: 'Poppins';
   font-size: 2rem;
   line-height: 3rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 700px) {
   .perk-head {
     font-size: 1.5rem;
-    margin-left: 14vw;
+    
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
   .single-perk {
-    margin-left: 50px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .perk-board{
+    margin: 0;
   }
 }

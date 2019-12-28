@@ -3,7 +3,7 @@ import React from 'react'
 import './eventCord.css'
 export default function EventCoordinator(props) {
   return (
-    <div>
+    <div className="coordinator-parent">
       <div className="coordinator-head">EVENT CO-ORDINATOR </div>
       <p className="coordinator-body">
         {props.coordinatorInfo.map(eachInfo => (

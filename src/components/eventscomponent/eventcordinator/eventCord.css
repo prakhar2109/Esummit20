@@ -4,10 +4,12 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 48px;
-  margin-left: 14vw;
   margin-bottom: 20px;
   margin-top: 150px;
   color: rgba(255, 255, 255, 0.87);
+}
+.coordinator-parent{
+  padding: 6rem 14%;
 }
 .coordinator-info {
   font-family: Poppins;
