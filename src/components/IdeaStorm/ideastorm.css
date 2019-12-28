@@ -1,4 +1,4 @@
-.Eventsheader {
+/* .Eventsheader {
   display: none;
 }
 .es{
@@ -12,19 +12,21 @@
 }
 .ideastorm {
   padding-top: 50px;
+} */
+.ideastorm {
+  background: #010c0f;
 }
-
-.ideastorm .header {
-  background: #010C0F;
+.header {
+  background: #010c0f;
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-grid-columns: 20% 80%;
-      grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 80%;
   padding: 0 10vw;
   position: fixed;
   top: 0;
@@ -34,11 +36,7 @@
   height: 100px;
 }
 
-@media (max-width: 1200px) {
-  .ideastorm .header {
-    display: none;
-  }
-}
+
 
 .ideastorm .header img {
   height: 100px;
@@ -46,25 +44,25 @@
 
 .ideastorm .header .head_array {
   -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
 
 .ideastorm .header .head_array span {
-  font-family: "ProximaNova-Semibold";
+  font-family: 'ProximaNova-Semibold';
   font-size: 20px;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 40px;
 }
 
-.ideastorm .idea {
+/* .ideastorm .idea {
   background: url("./static/1920.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* width: 100vw; */
+  width: 100vw; 
   min-height: 65rem;
   height: auto;
   padding: 100px 10vw;
@@ -290,7 +288,7 @@
 @media (max-width: 1200px) {
   .ideastorm .register_mobile {
     display: block;
-    background: #010C0F;
+    background: #010c0f;
     padding: 44px 32px;
   }
   .ideastorm .register_mobile p {
@@ -298,8 +296,8 @@
     font-size: 14px;
     text-align: center;
     letter-spacing: 0.1em;
-    font-family: "ProximaNova-Semibold";
-    color: #FFFFFF;
+    font-family: 'ProximaNova-Semibold';
+    color: #ffffff;
   }
   .ideastorm .register_mobile span {
     line-height: 15px;
@@ -307,22 +305,22 @@
     text-align: center;
     width: 190px;
     height: 48px;
-    font-family: "ProximaNova-Bold";
+    font-family: 'ProximaNova-Bold';
     letter-spacing: 0.09em;
     padding: 0;
     padding-top: 15px;
-    border: 2px solid #E1E2E2;
+    border: 2px solid #e1e2e2;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     border-radius: 2px;
-    color: #FFFFFF;
+    color: #ffffff;
     display: block;
     margin: 16px 0;
   }
   .ideastorm .register_mobile .register_now {
     font-size: 24px;
     letter-spacing: 0.1em;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -561,7 +559,7 @@
     font-size: 22.72px;
   }
 }
-/*# sourceMappingURL=ideastorm.css.map */
+# sourceMappingURL=ideastorm.css.map 
 
 .ideastorm #faq {
   border-bottom: 1px solid #B2B2B2;
@@ -642,4 +640,9 @@
     padding-bottom: 4.62vh;
   }
 
+} */
+@media (max-width: 1200px) {
+  .ideastorm .header {
+    display: none;
+  }
 }
