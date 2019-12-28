@@ -9,6 +9,11 @@
 .land_faq {
   background-color: #070f12;
 }
+
+.faq-parent{
+  padding: 6rem 14%;
+
+}
 .faq_unit {
   border-bottom: 2px solid rgba(255, 255, 255, 0.38);
   margin-bottom: 1rem;

@@ -22,7 +22,7 @@ class FAQBoard extends Component {
     // }
     return (
       <Element id="faq" name="faq">
-        <section id="faq">
+        <section id="faq" className="faq-parent">
           <div className="land_faq">
             <p className="faq-title">FAQ</p>
             <p className="faq-land-para">

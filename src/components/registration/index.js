@@ -53,9 +53,8 @@ class Registration extends Component {
       .then(res => {
         if (res.data) {
           if (res.data.token) {
-            localStorage.setItem("user_token", res.data.token);
+            localStorage.setItem('user_token', res.data.token)
             this.setState({ success: true, active_step: 0 })
-
           }
           // window.location.href='/dashboard/task';
           // }

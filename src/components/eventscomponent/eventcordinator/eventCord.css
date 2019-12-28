@@ -5,7 +5,6 @@
   font-size: 32px;
   line-height: 48px;
   margin-bottom: 20px;
-  margin-top: 150px;
   color: rgba(255, 255, 255, 0.87);
 }
 .coordinator-parent{
@@ -29,4 +28,11 @@
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 50px;
+}
+
+@media (max-width: 700px) {
+  .coordinator-head {
+    font-size: 1.5rem;
+    
+  }
 }

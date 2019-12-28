@@ -20,7 +20,7 @@
   flex-wrap: wrap;
   z-index: 1;
   
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
 
 }
 .each-partner {

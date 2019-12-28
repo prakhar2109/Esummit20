@@ -402,16 +402,16 @@
   @include section();
   @include display-row();
   justify-content: space-between;
-  padding: $gutterWidth * 3 $gutterWidth * 6;
+  padding: 6rem 14%;
   background-color: $primaryBackgroundColor;
   align-items: flex-start;
 
   @include desktop-1025-1280 {
-    padding: $gutterWidth * 3 $gutterWidth * 2 0 $gutterWidth * 2;
+    padding: 6rem 14%;
   }
 
   @include desktop-768-1024 {
-    padding: $gutterWidth * 2 $gutterWidth * 2 0 $gutterWidth * 2;
+    padding: 6rem 14%;
     @include display-column();
     min-height: fit-content;
   }
@@ -419,7 +419,7 @@
   @include desktop-320-767 {
     @include display-column();
     min-height: fit-content;
-    padding: $gutterWidth * 2 0 0 $gutterWidth;
+    padding: 6rem 14%;
   }
 
   .footer-section-logo {

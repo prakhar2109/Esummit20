@@ -37,7 +37,7 @@ class index extends Component {
     if (token !== undefined && token !== null && token !== '') {
       tabs = (
         <>
-          <li className="navbar-items">
+          <li className="navbar-items navbar-mobile-items">
             <div className="navbar-links" onClick={this.gotoDashboard}>
               <button className="navbar-register-button">DASHBOARD</button>
             </div>
@@ -47,12 +47,12 @@ class index extends Component {
     } else {
       tabs = (
         <>
-          <li className="navbar-items">
+          <li className="navbar-items navbar-mobile-items">
             <Link to="/register" className="navbar-links">
               <button className="navbar-register-button">Register</button>
             </Link>
           </li>
-          <li className="navbar-items">
+          <li className="navbar-items navbar-mobile-items">
             <Link to="/login" className="navbar-links">
               <button className="navbar-register-button">Login</button>
             </Link>
@@ -115,10 +115,39 @@ class index extends Component {
               </Link>
             </li>
             <li className="navbar-mobile-items">
+
+              <Link
+                to="/ideastorm"
+                className="navbar-links"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ideastorm
+              </Link>
+            </li>
+            <li className="navbar-mobile-items">
+
+              <Link
+                to="/startupexpo"
+                className="navbar-links"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Startupexpo
+              </Link>
+            
+            </li>
+            {/* <li className="navbar-mobile-items">
               <Link to="/register" className="navbar-links">
                 <button className="navbar-register-button">Register</button>
               </Link>
             </li>
+            <li className="navbar-mobile-items">
+              <Link to="/login" className="navbar-links">
+                <button className="navbar-register-button">Login</button>
+              </Link>
+            </li> */}
+            {tabs}
           </ul>
         </div>
       </div>
