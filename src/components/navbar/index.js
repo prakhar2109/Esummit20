@@ -85,6 +85,26 @@ class index extends Component {
               Campus Ambassador
             </Link>
           </li>
+          <li className="navbar-items">
+            <Link
+              to="/ideastorm"
+              className="navbar-links"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ideastorm
+            </Link>
+          </li>
+          <li className="navbar-items">
+            <Link
+              to="/startupexpo"
+              className="navbar-links"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Startupexpo
+            </Link>
+          </li>
           {tabs}
         </ul>
 

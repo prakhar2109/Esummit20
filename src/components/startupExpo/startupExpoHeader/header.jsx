@@ -16,6 +16,7 @@ class Header extends Component {
         <br />
         <br />
         <br />
+        <p></p>
         {/* <p>CASH PRIZE WORTH INR 2,50,000</p> */}
 
         <p>
@@ -31,7 +32,12 @@ class Header extends Component {
         </p>
         <br />
         <div className="register">
-          <a without rel="noopener noreferrer" href="http://bit.ly/StartupExpo2020" target="_blank">
+          <a
+            without
+            rel="noopener noreferrer"
+            href="http://bit.ly/StartupExpo2020"
+            target="_blank"
+          >
             <span>APPLY FOR STARTUPEXPO</span>
           </a>
         </div>

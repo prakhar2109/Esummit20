@@ -9,18 +9,18 @@ import Faqlist from '../eventscomponent/faqs/index.js'
 import PropTypes from 'prop-types'
 import EventPerks from '../eventscomponent/perks/singlePerk.js'
 import Partners from '../eventscomponent/partner/partner'
-import Tides from "../eventscomponent/partner/assets/tides.png"
-import Boudhik from "../eventscomponent/partner/assets/boudhik_ventures.png"
-import ThousandX from "../eventscomponent/partner/assets/100X_VC.png"
-import Ah from "../eventscomponent/partner/assets/ah_ventures.png"
-import Nexus from "../eventscomponent/partner/assets/nexus_venture.png"
-import Oyo from "../eventscomponent/partner/assets/oyo.png"
-import Hq from "../eventscomponent/partner/assets/hqdefault.jpg"
-import Zenfold from "../eventscomponent/partner/assets/zenfold.svg"
-import Kolkata from "../eventscomponent/partner/assets/kolkata_ventures.jpg"
-import Marwari  from "../eventscomponent/partner/assets/marwari_catalysts.png"
-import AWP from "../eventscomponent/partner/assets/amazing_worksspaces.png"
-import HunchCircle from "../eventscomponent/partner/assets/hunch_circle.png"
+import Tides from '../eventscomponent/partner/assets/tides.png'
+import Boudhik from '../eventscomponent/partner/assets/boudhik_ventures.png'
+import ThousandX from '../eventscomponent/partner/assets/100X_VC.png'
+import Ah from '../eventscomponent/partner/assets/ah_ventures.png'
+import Nexus from '../eventscomponent/partner/assets/nexus_venture.png'
+import Oyo from '../eventscomponent/partner/assets/oyo.png'
+import Hq from '../eventscomponent/partner/assets/hqdefault.jpg'
+import Zenfold from '../eventscomponent/partner/assets/zenfold.svg'
+import Kolkata from '../eventscomponent/partner/assets/kolkata_ventures.jpg'
+import Marwari from '../eventscomponent/partner/assets/marwari_catalysts.png'
+import AWP from '../eventscomponent/partner/assets/amazing_worksspaces.png'
+import HunchCircle from '../eventscomponent/partner/assets/hunch_circle.png'
 
 import EventCoordinator from '../eventscomponent/eventcordinator/eventCord'
 export default class StartupExpo extends Component {
@@ -85,7 +85,6 @@ export default class StartupExpo extends Component {
           name: 'Murari Kumar',
           email: 'm_Kumar@ts.iitr.ac.in',
           phone: ' +91 8826 287 678'
-        
         },
         {
           id: 2,
@@ -100,7 +99,7 @@ export default class StartupExpo extends Component {
     return (
       <div className="startupexpo">
         <Header />
-        <Timeline {...this.props} />
+        {/* <Timeline {...this.props} /> */}
         <Rules />
         <Eligibility />
         <EventPerks

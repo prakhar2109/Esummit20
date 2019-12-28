@@ -18,8 +18,6 @@ class Eligibility extends Component {
             Each participating Start-up should have an effective Business model
             and Pitch deck that they will present in front of all the investors.
           </li>
-
-          
         </ol>
       </div>
     )

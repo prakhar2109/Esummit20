@@ -10,12 +10,12 @@ export default class Allevents extends Component {
   }
 
   componentDidMount() {
-    document.getElementById('loader').style.display = 'grid'
+    // document.getElementById('loader').style.display = 'grid'
     axios.get(BASE_URL + '/v1/api/events/').then(res => {
       this.setState({
         events: res.data
       })
-      document.getElementById('loader').style.display = 'none'
+      // document.getElementById('loader').style.display = 'none'
     })
   }
   applyEvent = id => {
@@ -51,7 +51,6 @@ export default class Allevents extends Component {
   render() {
     return (
       <div className="caevents-earnedcoupons-rowparent1">
-        <Loader />
         {this.state.events.map((event, index) => (
           <>
             {event.sub_events.length === 0 ? (
