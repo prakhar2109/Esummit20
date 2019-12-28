@@ -46,7 +46,6 @@ class SideNavbar extends Component {
             name: res.data.name,
             data: res.data
           })
-          console.log(res)
           localStorage.setItem('profile', res.data.user_type)
           localStorage.setItem('invite', res.data.invite_url)
         })
@@ -63,7 +62,6 @@ class SideNavbar extends Component {
         .then(res => {
           if (res.status === 200) {
             {
-              console.log(res)
               this.setState({
                 contingentid: res.data.contingent_id,
                 contingent: true
