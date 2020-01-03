@@ -211,7 +211,7 @@ export default class ComingSoon extends Component {
             </div>
           </div>
           <div className="mobile-profile-dashboard-esummit1">
-            <span id="mobileprofile-dashboard-esummitId">E-Summit’19 ID</span>
+            <span id="mobileprofile-dashboard-esummitId">E-Summit’20 ID</span>
             <span id="mobileprofile-dashboard-esummitId-value">
               {data.esummit_id}
             </span>
@@ -289,7 +289,8 @@ export default class ComingSoon extends Component {
                 without
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
+                // href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
+                href="https://drive.google.com/file/d/1_E8seQecjY77O0CrAlRR9hHgZcFS5jaE/view?usp=sharing"
               >
                 CA RULEBOOK
               </a>

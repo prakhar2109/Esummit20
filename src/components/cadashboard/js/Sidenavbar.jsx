@@ -175,7 +175,7 @@ class SideNavbar extends Component {
               )} */}
               <div className="sidebar-dashboard-box">
                 <div className="sidebar-dashboard-esummit">
-                  <span id="sidebar-dashboard-esummitId">E-Summit’19 ID</span>
+                  <span id="sidebar-dashboard-esummitId">E-Summit’20 ID</span>
                   <span id="sidebar-dashboard-esummitId-value">
                     {data.esummit_id}
                   </span>
@@ -278,7 +278,9 @@ class SideNavbar extends Component {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
+                    // href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1_E8seQecjY77O0CrAlRR9hHgZcFS5jaE/view?usp=sharing"
+                    
                   >
                     CA RULEBOOK
                   </a>
