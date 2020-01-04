@@ -1,0 +1,71 @@
+.perk-board {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-evenly;
+  margin: 150px 150px;
+  
+}
+.perk-parent{
+  padding: 6rem 14%;
+}
+.perk-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
+  margin-top: 30px;
+}
+
+.single-perk {
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.perk-about {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  /* identical to box height, or 28px */
+  width: 300px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+.perk-head {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  width: 99px;
+  height: 40px;
+  margin-bottom: 50px;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins';
+  font-size: 2rem;
+  line-height: 3rem;
+}
+@media (max-width: 700px) {
+  .perk-head {
+    font-size: 1.5rem;
+    
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
+  .single-perk {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .perk-board{
+    margin: 0;
+  }
+}

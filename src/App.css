@@ -1,0 +1,31 @@
+.app-parent {
+  height: 100vh;
+  width: 100vw;
+  background: #0c0d14;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.app-parent img {
+  height: 100vh;
+  margin: auto;
+}
+.register-now-button {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  position: absolute;
+  color: white;
+  top: 74vh;
+  font-family: Poppins;
+}
+@media only screen and (max-width: 768px) {
+  .register-now-button {
+    top: 80vh;
+  }
+  .app-parent img {
+    height: 51vh;
+    margin: auto;
+  }
+}
