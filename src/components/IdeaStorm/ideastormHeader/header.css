@@ -1,17 +1,16 @@
-.headerSection {
+.ideastormHeaderSection {
   background: #030d0f;
-  /* width: 100vw; */
-  min-height: 59.8125rem;
+  min-height: 69.8125rem;
   height: auto;
-  padding: 10rem 17%;
+  padding: 10rem 17% 0 17%;
 }
 @media (max-width: 1200px) {
-  .headerSection {
+  .ideastormHeaderSection {
     min-height: 45rem;
     padding: 6rem 14%;
   }
 }
-.headerSection p:first-child {
+.ideastormHeaderSection p:first-child {
   font-size: 3rem;
   letter-spacing: 0.1em;
   padding-bottom: 0;
@@ -21,14 +20,14 @@
   font-weight: bold;
 }
 @media (max-width: 1200px) {
-  .headerSection p:first-child {
+  .ideastormHeaderSection p:first-child {
     font-size: 1.5rem;
     padding-bottom: calc(0px + 1vh);
     font-weight: bold;
   }
 }
 
-.headerSection p:nth-child(2) {
+.ideastormHeaderSection p:nth-child(2) {
   font-size: 1.75rem;
   line-height: 3rem;
   letter-spacing: 0.1em;
@@ -38,7 +37,7 @@
   padding-bottom: calc(0px + 3vh);
 }
 @media (max-width: 1200px) {
-  .headerSection p:nth-child(2) {
+  .ideastormHeaderSection p:nth-child(2) {
     line-height: 0.9375rem;
     font-size: 1rem;
     letter-spacing: 0.1em;
@@ -47,7 +46,7 @@
   }
 }
 
-.headerSection p:nth-child(6) {
+.ideastormHeaderSection p:nth-child(6) {
   font-size: 1.75rem;
   font-weight: 600;
   font-style: normal;
@@ -56,7 +55,7 @@
   padding-bottom: 4.62vh;
 }
 @media (max-width: 1200px) {
-  .headerSection p:nth-child(6) {
+  .ideastormHeaderSection p:nth-child(6) {
     line-height: 170%;
     font-size: 1rem;
     letter-spacing: 0.1em;
@@ -64,7 +63,7 @@
   }
 }
 
-.headerSection p:nth-child(7) {
+.ideastormHeaderSection p:nth-child(7) {
   font-size: 1.625rem;
   letter-spacing: 0.1em;
   font-family: 'Poppins';
@@ -75,7 +74,7 @@
 }
 
 @media (max-width: 1200px) {
-  .headerSection p:nth-child(7) {
+  .ideastormHeaderSection p:nth-child(7) {
     line-height: 1.125rem;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
@@ -83,11 +82,11 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
-.headerSection p {
+.ideastormHeaderSection p {
   text-align: left;
   font-family: 'Poppins';
 }
-.headerSection .register a span {
+.ideastormHeaderSection .register a span {
   padding: 0.875rem 1rem;
   font-family: 'Poppins';
   border: 2px solid #359d9a;
@@ -100,7 +99,7 @@
   color: #359d9a;
 }
 @media (max-width: 1200px) {
-  .headerSection .register a span {
+  .ideastormHeaderSection .register a span {
     font-size: 0.8rem;
   }
 }

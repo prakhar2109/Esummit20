@@ -7,12 +7,11 @@
   line-height: 36px;
 }
 .land_faq {
-  background-color: #070f12;
+  background-color: #030d0f;
 }
 
-.faq-parent{
-  padding: 6rem 14%;
-
+.faq-parent {
+  padding: 10rem 17% 0 17%;
 }
 .faq_unit {
   border-bottom: 2px solid rgba(255, 255, 255, 0.38);

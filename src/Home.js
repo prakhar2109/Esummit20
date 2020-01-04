@@ -15,6 +15,7 @@ import Navbar from './components/navbar'
 import Home from './components/home/Home.js'
 import Footer from './components/footer'
 import CampusAmbassador from './components/ca/CampusAmbassador'
+import Sponsors from './components/sponsors/sponsors'
 import './styles/main.scss'
 import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
@@ -32,6 +33,7 @@ class HomeLanding extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/campus-ambassador" component={CampusAmbassador} />
+          <Route exact path="/sponsors" component={Sponsors} />
           <Route path="/register" component={Profiletype} />
           <Route path="/login" component={Login} />
 

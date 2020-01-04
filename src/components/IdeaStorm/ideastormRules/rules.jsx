@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Header from '../../IdeaStorm/Vector/vector'
+// import Header from '../../IdeaStorm/Vector/vector'
 import './rules.css'
 
 class Rules extends Component {
   render() {
     return (
-      <div className="Rules">
+      <div className="ideastormRules">
         <p>RULES & REGULATIONS </p>
 
         <ol>

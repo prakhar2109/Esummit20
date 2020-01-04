@@ -4,7 +4,7 @@ import './eligibility.css'
 class Eligibility extends Component {
   render() {
     return (
-      <div className="eligiblity">
+      <div className="ideastormEligibility">
         <p>ELIGIBILITY CRITERIA</p>
         <ol>
           <li>
