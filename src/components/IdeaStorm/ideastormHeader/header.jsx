@@ -8,7 +8,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <div className="headerSection">
+      <div className="ideastormHeaderSection">
         <p>Ideastorm</p>
 
         <p>B-PLAN COMPETITION</p>

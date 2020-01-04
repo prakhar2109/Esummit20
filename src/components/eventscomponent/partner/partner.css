@@ -7,8 +7,10 @@
   color: rgba(255, 255, 255, 0.87);
   margin-bottom: 30px;
 }
-.partner-parent{
-  padding: 6rem 14%;
+.partner-parent {
+  padding: 10rem 17% 0 17%;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 1200px) {
   .partners-head {
@@ -18,20 +20,17 @@
 .partners-body {
   display: flex;
   flex-wrap: wrap;
-  z-index: 1;
-  
-  justify-content: space-evenly;
-
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .each-partner {
-  margin: 0px 60px;
+  margin: 0px 40px;
   display: flex;
   flex-direction: column;
   justify-content: justify;
   align-items: center;
   z-index: 2;
-  
-  
 }
 .partner-logo-wrap {
   /* border: 2px solid rgba(255, 255, 255, 0.6); */
@@ -40,8 +39,6 @@
   height: 180px;
   margin-bottom: 20px;
   margin-top: 20px;
-  z-index: 3;
-  
 }
 .partner-name {
   font-family: Poppins;
@@ -53,22 +50,41 @@
   color: rgba(255, 255, 255, 0.87);
 }
 .partner-logo {
-  
   height: 100%;
   z-index: 4;
-  
+  max-width: 250px;
 }
-
-
-@media (max-width: 700px)
-{
+.partners-footer {
+  margin-top: 3rem;
+  align-self: center;
+}
+.partners-footer .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 0.5rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.active {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot:hover {
+  background-color: #717171;
+}
+@media (max-width: 700px) {
   .partner-logo-wrap {
-  
-  height: 100px;
+    height: 100px;
   }
 
-  .partners-body{
+  .partners-body {
     justify-content: space-evenly;
   }
-
 }

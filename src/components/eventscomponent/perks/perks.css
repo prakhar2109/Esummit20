@@ -1,13 +1,12 @@
 .perk-board {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   align-items: baseline;
   justify-content: space-evenly;
-  margin: 150px 150px;
-  
 }
-.perk-parent{
-  padding: 6rem 14%;
+.perk-parent {
+  padding: 10rem 17% 0 17%;
 }
 .perk-title {
   font-family: Poppins;
@@ -21,13 +20,11 @@
 }
 
 .single-perk {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
 }
 
 .perk-about {
@@ -56,7 +53,6 @@
 @media (max-width: 700px) {
   .perk-head {
     font-size: 1.5rem;
-    
   }
 }
 
@@ -65,7 +61,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .perk-board{
+  .perk-board {
     margin: 0;
   }
 }

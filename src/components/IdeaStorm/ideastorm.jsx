@@ -50,8 +50,8 @@ export class IdeaStorm extends Component {
         },
         {
           id: 5,
-          logo: AWP,
-          name: 'Amazing Workspaces'
+          logo: Oyo,
+          name: 'Oyo Ventures'
         },
         {
           id: 6,
@@ -75,8 +75,8 @@ export class IdeaStorm extends Component {
         },
         {
           id: 10,
-          logo: Oyo,
-          name: 'Oyo Ventures'
+          logo: AWP,
+          name: 'Amazing Workspaces'
         }
       ],
       coordinatorInfo: [
@@ -154,7 +154,7 @@ export class IdeaStorm extends Component {
         </div> */}
 
         <Header />
-        {/* <Timeline {...this.props} /> */}
+        <Timeline {...this.props} />
         <Rules />
         <Eligibility />
         <EventPerks

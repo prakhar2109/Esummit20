@@ -1,0 +1,63 @@
+.sponsorsLanding {
+  padding: 12.875rem 17.5% 0 17.5%;
+  background: #030d0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.sponsorTitle {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  color: rgba(255, 255, 255, 0.87);
+  align-self: center;
+}
+.titleSponsor {
+  align-self: center;
+  margin: 4rem 2.1rem;
+}
+.titleSponsor img {
+  width: 230px;
+  height: 230px;
+}
+.titleSponsor p {
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+.normalSponsors img {
+  width: 200px;
+  height: 200px;
+}
+.normalSponsors .sponsorimage {
+  margin: 4rem 2.1rem;
+}
+.normalSponsors .sponsorimage p {
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: rgba(255, 255, 255, 0.87);
+  margin-top: 1.5rem;
+}
+.normalSponsors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 769px) {
+  .normalSponsors {
+    justify-content: center;
+  }
+}
