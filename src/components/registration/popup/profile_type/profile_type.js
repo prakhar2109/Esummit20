@@ -71,6 +71,10 @@ class Profiletype extends Component {
             opacity: '0.5'
           }}
         /> */}
+        <div className="profiletype-left">
+          <div className="profiletype-left-heading">BECOME A PART OF SOMETHING DISRUPTIVE</div>
+          <div className="profiletype-left-subHeading">Join hundreds of startup enthusiasts and embark on a journey from zero to one.</div>
+        </div>
         <div className="profiletype_main" id="profiletype_main_opacity">
           <div className="profiletype_heading">Profile Type</div>
           <div className="profiletype_letus">Let us know who you are</div>

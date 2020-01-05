@@ -2,20 +2,40 @@
 .profiletype_outer {
   width: 100%;
   height: fit-content;
-  min-height: 80vh;
+  min-height: 70vh;
   background: #010C0F;
   padding: 10rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+.profiletype-left {
+  width: 60%;
+}
+
+.profiletype-left-subHeading {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+}
+
+.profiletype-left-heading {
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+
 .profiletype_main {
-  width: 556px;
+  /*background: rgba();*/
+  width: 40%;
   height: fit-content;
-  background: #070F12;;
+  background: #070F12;
   border-radius: 5px;
   font-family: 'Poppins';
+  padding: 3% 0;
 }
 
 .profiletype_heading {
@@ -53,8 +73,8 @@
   width: 93px;
   font-weight: bold;
   font-size: 16px;
-  margin-top: 26px;
-  margin-left: 335px;
+  margin-top: 5%;
+  margin-left: 40%;
 }
 .profiletype_button > div {
   color: #ffffff !important;
