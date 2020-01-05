@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import '../css/catask.css'
-import axios from 'axios'
-import { BASE_URL } from './../../../utils/urls'
-let token = localStorage.getItem('user_token')
 
 /* eslint-disable react/prop-types */
 
@@ -19,6 +16,7 @@ export default class CATaskSummary extends Component {
     }
   }
   render() {
+    const { tasks } = this.state
     return (
       <div className="catasksummary-parent">
         <table id="ca01">
@@ -31,13 +29,21 @@ export default class CATaskSummary extends Component {
                 POINTS AWARDED
               </th>
             </tr>
-            {this.state.tasks.length > 0 &&
-              this.state.tasks.map(tsk => {
+            {tasks.length > 0 &&
+              tasks.map(task => {
                 return (
-                  <tr key={tsk.id}>
-                    <td id="cacollegenametd">{tsk.description}</td>
-                    {tsk.sub && <td id="capointstd">{tsk.sub.points}</td>}
-                    {!tsk.sub && <td id="capointstd">0</td>}
+                  <tr key={task.id}>
+                    <td id="cacollegenametd">{task.description}</td>
+                    <td id="capointstd">
+                      {task.submissions &&
+                        task.submissions.map((submission, index) => (
+                          <div key={index}>
+                            {submission.file.substring(50)} -{' '}
+                            {submission.points}
+                          </div>
+                        ))}
+                      {task.submissions.length === 0 ? <div>0</div> : <></>}
+                    </td>
                   </tr>
                 )
               })}
