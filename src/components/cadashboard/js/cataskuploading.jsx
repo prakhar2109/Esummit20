@@ -12,7 +12,8 @@ export default class CATaskUploading extends Component {
     this.state = {
       isfileUploaded: false,
       fileUploaded: null,
-      task: props.task
+      task: props.task,
+      currentFiles: []
     }
   }
   fileUploadHandler = (file, task) => {
@@ -20,13 +21,10 @@ export default class CATaskUploading extends Component {
     if (name.files.item(0)) {
       let fileUploaded = file
       let isfileUploaded = true
-      this.setState(
-        {
-          fileUploaded,
-          isfileUploaded
-        },
-        () => {}
-      )
+      this.setState({
+        fileUploaded,
+        isfileUploaded
+      })
       let formData = new FormData()
       formData.append('file', file[0])
       formData.append('task', task.id)
@@ -38,30 +36,34 @@ export default class CATaskUploading extends Component {
           }
         })
         .then(() => {
+          let tempArr = this.state.currentFiles
+          tempArr.push(file[0].name)
+          this.setState({
+            currentFiles: tempArr
+          })
           // alert(resData) //do something with this and show the user that the file has
           // been uploaded !
-          document.getElementById(
-            `nameOfFileUploadedForTask${task.id}`
-          ).innerHTML = name.files.item(0).name
-          document.getElementById(`filestatus${task.id}`).innerHTML =
-            'Uploaded '
-
-          var element = document.getElementById(`Uploaded-Task${task.id}`)
-          element.className = element.className.replace(
-            'taskchild-uploadedfiles',
-            'taskchild-filesupload'
-          )
+          // document.getElementById(
+          //   `nameOfFileUploadedForTask${task.id}`
+          // ).innerHTML = name.files.item(0).name
+          // document.getElementById(`filestatus${task.id}`).innerHTML =
+          //   'Uploaded '
+          // var element = document.getElementById(`Uploaded-Task${task.id}`)
+          // element.className = element.className.replace(
+          //   'taskchild-uploadedfiles',
+          //   'taskchild-filesupload'
+          // )
         })
     }
   }
   render() {
-    let { task } = this.state
+    let { task, currentFiles } = this.state
     return (
       <>
         <div
           id={`Uploaded-Task${task.id}`}
           className={
-            task.sub === null || task.sub === undefined
+            task.submissions === null || task.submissions === undefined
               ? 'taskchild-uploadedfiles'
               : 'taskchild-filesupload'
           }
@@ -71,16 +73,32 @@ export default class CATaskUploading extends Component {
               id={`nameOfFileUploadedForTask${task.id}`}
               className="taskName1"
             ></p>
-
-            <p id={`filestatus${task.id}`} className="taskName2">
-              {task.sub === null || task.sub === undefined ? (
-                <p className="taskchild-uploadedfiles-p">
+            <div id={`filestatus${task.id}`} className="taskName2">
+              {task.submissions && task.submissions.length === 0 ? (
+                <div className="taskchild-uploadedfiles-p">
                   Uploaded files shown here
-                </p>
+                </div>
               ) : (
-                <p className="taskchild-filesupload-p">Uploaded</p>
+                <>
+                  <div className="taskchild-filesupload-p heading-backgroung">
+                    Uploaded Files
+                  </div>
+                  {task.submissions &&
+                    task.submissions.length > 0 &&
+                    task.submissions.map((file, index) => (
+                      <div key={index} className="taskchild-filesupload-p">
+                        {file.file.substring(50)}
+                      </div>
+                    ))}
+                  {currentFiles.length > 0 &&
+                    currentFiles.map((file, index) => (
+                      <div key={index} className="taskchild-filesupload-p">
+                        {file}
+                      </div>
+                    ))}
+                </>
               )}
-            </p>
+            </div>
           </div>
         </div>
 

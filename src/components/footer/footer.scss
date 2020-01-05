@@ -10,6 +10,7 @@
     width: 40%;
   }
   .new-footer-container-child {
+    padding: 1rem;
     .new-footer-form {
       width: 75%;
       margin: auto;
@@ -89,7 +90,8 @@
       }
       .logo-container {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
+        width: 85%;
         flex-wrap: wrap;
       }
       .new-footer-section-contact-subheading {
@@ -100,6 +102,7 @@
         word-wrap: break-word;
         .new-footer-section-contact-link {
           margin-left: 1rem;
+          margin-top: 0.5rem;
           .new-footer-section-contact-logo {
             height: 1.75rem;
           }
