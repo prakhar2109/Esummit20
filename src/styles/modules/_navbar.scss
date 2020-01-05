@@ -41,17 +41,17 @@
       .navbar-links {
         @include desktop-320-767 {
           font-size: $normalFontSize*0.5;
-          line-height: $normaLineHeight*0.4;
+          line-height: $normalLineHeight*0.4;
 
         }
 
         @include desktop-320 {
           font-size: $normalFontSize*0.4;
-          line-height: $normaLineHeight*0.3;
+          line-height: $normalLineHeight*0.3;
         }
 
         font-size: $normalFontSize*0.8;
-        line-height: $normaLineHeight*0.8;
+        line-height: $normalLineHeight*0.8;
         text-align: center;
         color: #FFFFFF;
 

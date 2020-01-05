@@ -6,7 +6,6 @@
   background-size: 95vh;
   mix-blend-mode: hard-light;
   margin-top: $gutterWidth * 2;
-  background-color: $primaryBackgroundColor;
 
   .home-section-intro {
     @include display-column();
@@ -24,7 +23,7 @@
 
   .home-section-paragraph {
     font-size: $normalFontSize;
-    line-height: $normaLineHeight;
+    line-height: $normalLineHeight;
     text-align: center;
     font-weight: $heading;
     color: #ffffff;
@@ -41,9 +40,7 @@
 
 .home-section-about-container {
   @include section();
-  padding: $gutterWidth 0;
   position: relative;
-  background: url('../../assets/wave-ripple.svg') no-repeat center;
   background-size: cover;
 
   .home-section-content-container {
@@ -61,11 +58,14 @@
 
 .home-section-event-container {
   @include section();
-  padding: $gutterWidth * 2 $gutterWidth * 4;
-  background-color: $primaryBackgroundColor;
 
-  .section-image-heading {
-    margin-top: $gutterWidth * 2;
+  .section-image-heading-container {
+    justify-content: flex-start;
+    margin-left: 0.9375vw;
+
+    .section-image-heading {
+      margin-left: 0;
+    }
   }
 
   .home-section-event-card-container {
@@ -74,8 +74,7 @@
     margin: $gutterWidth 0;
 
     @include desktop-1281-1920() {
-      width: calc((#{$cardWidth} + #{$gutterWidth}) * 4);
-      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-columns: 33.33% 33.33% 33.33%;
     }
 
     @include desktop-1025-1280 {
@@ -93,24 +92,23 @@
 
     .home-section-event-card {
       @include display-column();
+      flex-direction: column-reverse;
       justify-content: space-between;
       align-items: center;
       position: relative;
       width: $cardWidth;
       height: $cardHeight;
       overflow: hidden;
-      margin: 0 auto $gutterWidth auto;
+      margin: 0 0.9375vw $gutterWidth 0.9375vw;
 
       .home-section-event-card-background-tint {
         position: absolute;
         z-index: 1;
         width: $cardWidth;
         height: $cardHeight;
-        background: linear-gradient(
-          180deg,
-          #000000 -53.27%,
-          rgba(0, 0, 0, 0.3) 132.69%
-        );
+        background: linear-gradient(180deg,
+            #000000 -53.27%,
+            rgba(0, 0, 0, 0.3) 132.69%);
       }
 
       .home-section-event-card-background {
@@ -138,13 +136,12 @@
       }
     }
   }
+
+
 }
 
-.previous-speakers-section-container {
+.speakers-section-container {
   @include section();
-  padding: $gutterWidth * 2 $gutterWidth * 10;
-  background: url('../../assets/wave-ripple.svg') no-repeat center;
-  background-size: cover;
 
   @include desktop-768-1024 {
     padding: $gutterWidth * 2 $gutterWidth * 3;
@@ -154,13 +151,24 @@
     padding: $gutterWidth * 2 $gutterWidth * 6;
   }
 
-  .previous-speakers-section-card-container {
-    z-index: 2;
+  .section-image-heading-container {
+    justify-content: flex-start;
+    margin-left: 0.9375vw;
 
-    display: grid;
+    .section-image-heading {
+      margin-left: 0;
+    }
+  }
+
+  .speakers-section-card-container {
+    z-index: 2;
+    @include display-row();
+    // display: grid;
     width: 100%;
     margin: $gutterWidth 0;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    // grid-template-columns: 33.33% 33.33% 33.33%;
+    white-space: nowrap;
+    overflow-x: scroll;
 
     @include desktop-1025-1280 {
       grid-template-columns: 33.33% 33.33% 33.33%;
@@ -175,7 +183,7 @@
       align-items: center;
     }
 
-    .previous-speakers-section-card {
+    .speakers-section-card {
       @include desktop-320-767 {
         @include display-row();
         width: 100%;
@@ -186,26 +194,35 @@
       @include display-column();
       justify-content: center;
       align-items: center;
-      margin: $gutterWidth * 1.6;
+      margin: $gutterWidth * 2;
+      width: $cardWidth;
 
-      .previous-speakers-section-card-image {
+      &:first-child {
+        margin-left: 0 !important;
+      }
+
+      &:last-child {
+        margin-right: 0 !important
+      }
+
+      .speakers-section-card-image {
         @include desktop-320-767 {
           margin: 0;
         }
 
         border-radius: 50%;
-        width: $cardWidth * 0.5;
+        width: $cardWidth*0.6;
         background-color: $secondaryBackgroundColor;
         margin-bottom: $gutterWidth * 0.8;
       }
 
-      .previous-speakers-section-card-content {
+      .speakers-section-card-content {
         @include desktop-320-767 {
           width: 100%;
           padding: 0 $gutterWidth;
         }
 
-        .previous-speakers-section-card-heading {
+        .speakers-section-card-heading {
           @include desktop-320-767 {
             @include display-row();
             text-align: left;
@@ -213,19 +230,133 @@
 
           font-weight: bold;
           font-size: $normalFontSize * 1.2;
-          line-height: $normaLineHeight;
+          line-height: $normalLineHeight;
           text-align: center;
           color: $whiteText;
         }
 
-        .previous-speakers-section-card-subheading {
+        .speakers-section-card-subheading {
           @include desktop-320-767 {
             @include display-row();
             text-align: left;
           }
 
           font-size: $normalFontSize * 0.8;
-          line-height: $normaLineHeight;
+          line-height: $normalLineHeight;
+          text-align: center;
+          color: $whiteText;
+        }
+      }
+    }
+  }
+}
+
+.sponsors-section-container {
+  @include section();
+
+  @include desktop-768-1024 {
+    padding: $gutterWidth * 2 $gutterWidth * 3;
+  }
+
+  @include desktop-1025-1280 {
+    padding: $gutterWidth * 2 $gutterWidth * 6;
+  }
+
+  .section-image-heading-container {
+    justify-content: flex-start;
+    margin-left: 0.9375vw;
+
+    .section-image-heading {
+      margin-left: 0;
+    }
+  }
+
+  .sponsors-section-card-container {
+    z-index: 2;
+    @include display-row();
+    // display: grid;
+    width: 100%;
+    margin: $gutterWidth 0;
+    // grid-template-columns: 33.33% 33.33% 33.33%;
+    white-space: nowrap;
+    overflow-x: scroll;
+
+    @include desktop-1025-1280 {
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    @include desktop-768-1024 {
+      grid-template-columns: 50% 50%;
+    }
+
+    @include desktop-320-767 {
+      @include display-column();
+      align-items: center;
+    }
+
+    .sponsors-section-card {
+      @include desktop-320-767 {
+        @include display-row();
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 $gutterWidth 0 $gutterWidth * 2;
+      }
+
+      @include display-column();
+      justify-content: center;
+      align-items: center;
+      margin: $gutterWidth * 2;
+      width: $cardWidth;
+
+      &:first-child {
+        margin-left: 0 !important;
+      }
+
+      &:last-child {
+        margin-right: 0 !important
+      }
+
+      .sponsors-section-card-image {
+        @include desktop-320-767 {
+          margin: 0;
+        }
+
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: $cardWidth*0.6;
+        height: $cardWidth*0.6;
+        background-color: $backgroundImageColor;
+        margin-bottom: $gutterWidth * 0.8;
+      }
+
+      .sponsors-section-card-content {
+        @include desktop-320-767 {
+          width: 100%;
+          padding: 0 $gutterWidth;
+        }
+
+        .sponsors-section-card-heading {
+          @include desktop-320-767 {
+            @include display-row();
+            text-align: left;
+          }
+
+          font-weight: bold;
+          font-size: $normalFontSize * 1.2;
+          line-height: $normalLineHeight;
+          text-align: center;
+          color: $whiteText;
+        }
+
+        .sponsors-section-card-subheading {
+          @include desktop-320-767 {
+            @include display-row();
+            text-align: left;
+          }
+
+          font-size: $normalFontSize * 0.8;
+          line-height: $normalLineHeight;
           text-align: center;
           color: $whiteText;
         }
@@ -271,6 +402,7 @@
   .ca-section-intro-flex-column {
     display: flex;
     flex-direction: column;
+
     .ca-section-intro-heading {
       @include desktop-320-767 {
         height: $gutterWidth * 0.8;
@@ -283,10 +415,11 @@
 
     .ca-section-intro-paragraph {
       margin: 2rem 0;
+
       @include desktop-320-767 {
         padding: 0 $gutterWidth;
         font-size: $normalFontSize;
-        line-height: $normaLineHeight;
+        line-height: $normalLineHeight;
       }
 
       @include desktop-768-1024 {
@@ -304,7 +437,7 @@
       font-size: $normalFontSize * 1.6;
       font-style: normal;
       font-weight: normal;
-      line-height: $normaLineHeight * 1.6;
+      line-height: $normalLineHeight * 1.6;
       text-align: center;
       padding: 0 $gutterWidth * 8;
     }
@@ -329,7 +462,6 @@
 
 .ca-section-about-container {
   @include section();
-  padding: $gutterWidth 0;
   position: relative;
   background: url('../../assets/wave-ripple.svg') no-repeat center;
   background-size: cover;
@@ -342,6 +474,7 @@
     @include desktop-768-1024 {
       padding: 0 $gutterWidth * 2;
     }
+
     @include desktop-1025-1400 {
       padding: 0 $gutterWidth * 2;
       font-size: 1.4rem;
@@ -364,7 +497,7 @@
     .ca-section-paragraph {
       @include desktop-320-767 {
         font-size: $normalFontSize;
-        line-height: $normaLineHeight;
+        line-height: $normalLineHeight;
       }
 
       @include desktop-1025-1400 {
@@ -375,13 +508,14 @@
       font-style: normal;
       font-weight: normal;
       font-size: $normalFontSize * 1.4;
-      line-height: $normaLineHeight * 1.2;
+      line-height: $normalLineHeight * 1.2;
       color: #ffffff;
     }
+
     .ca-section-paragraph-small {
       @include desktop-320-767 {
         font-size: $normalFontSize;
-        line-height: $normaLineHeight;
+        line-height: $normalLineHeight;
       }
 
       @include desktop-1025-1400 {
@@ -391,11 +525,236 @@
       font-style: normal;
       font-weight: normal;
       font-size: $normalFontSize * 1.4;
-      line-height: $normaLineHeight * 1.2;
+      line-height: $normalLineHeight * 1.2;
       color: #ffffff;
     }
   }
 }
+
+.testemonial-section-container {
+
+  .ant-carousel .slick-slide {
+    @include display-column();
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+    height: 48rem !important;
+    // background: #364d79 !important;
+    overflow: hidden !important;
+    padding: $gutterWidth*4 17.5vw;
+  }
+
+  .ant-carousel {
+
+    .slick-dots {
+      bottom: 6rem;
+
+      li {
+        margin: 0 2.25rem;
+
+        button {
+          width: 12px !important;
+          height: 12px !important;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+
+  .ant-carousel .slick-slide .testemonial-card {
+    @include display-column();
+    background-color: $cardBackgroundColor;
+    border-radius: 4px;
+    height: 30rem;
+    padding: $gutterWidth*4 8.23vw;
+    position: relative;
+    align-items: center;
+
+    .testemonial-card-image {
+      width: 8rem;
+      position: absolute;
+      height: 8rem;
+      top: -4rem;
+      border-radius: 50%;
+    }
+
+    .testemonial-card-heading {
+      font-size: $normalFontSize;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.87);
+      margin: $gutterWidth*0.2;
+    }
+
+    .testemonial-card-subheading {
+      font-size: $normalFontSize*0.8;
+      color: rgba(255, 255, 255, 0.87);
+      margin: $gutterWidth*0.1;
+
+    }
+
+    .testemonial-card-horizontal-line {
+      border: 1px solid $primaryColor;
+      margin: $gutterWidth 0;
+      width: 100%;
+    }
+
+    .testemonial-card-content {
+      color: rgba(255, 255, 255, 0.6);
+      margin: $gutterWidth 0;
+      font-size: $normalFontSize*0.9;
+      line-height: $normalLineHeight*0.8;
+    }
+  }
+}
+
+.faq-section-container {
+  @include section();
+
+  .section-image-heading-container {
+    justify-content: flex-start;
+
+    .section-image-heading {
+      margin-left: 0;
+    }
+  }
+
+  .faq-section-content-container {
+    @include display-column();
+    justify-content: flex-start;
+    width: 100%;
+
+    .section-paragraph {
+      text-align: left;
+      color: #ffffff;
+      padding: 0;
+      margin: $gutterWidth 0;
+    }
+
+    .question-container {
+      position: relative;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.38);
+      ;
+
+      &:first-child {
+        border-top: 3px solid rgba(255, 255, 255, 0.38);
+        ;
+      }
+
+      .question-items-checkbox {
+        @include desktop-0-1281() {
+          height: $gutterWidth * 3;
+        }
+
+        position: absolute;
+        opacity: 0 !important;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        pointer-events: all;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        height: $gutterWidth * 2.4;
+        cursor: pointer;
+
+        &:checked {
+          +.question-items-container {
+            padding-bottom: $gutterWidth;
+
+            .question-items-container-question {
+              color: #fff;
+
+              .plus-container {
+                .dash {
+                  &:first-child {
+                    transform: rotate(135deg);
+                  }
+                  &:last-child {
+                    transform: rotate(45deg);
+                  }
+                }
+              }
+            }
+
+            >.question-items-answer {
+              color: #fff;
+
+
+              @include desktop-0-1281() {
+                height: 70vh;
+              }
+
+              opacity: 1;
+              height: 30vh;
+            }
+          }
+        }
+      }
+
+      .question-items-container {
+        @include display-column();
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        .question-items-container-question {
+          @include desktop-0-1281() {
+            font-size: $headerFontSize * 0.8;
+          }
+
+          @include display-row();
+          padding: $gutterWidth * 0.8 0;
+          justify-content: space-between;
+          align-items: center;
+          color: rgba(255, 255, 255, 0.38);
+          font-weight: bold;
+          transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+          font-size: $normalFontSize;
+          padding-left: $gutterWidth;
+
+          .plus-container {
+            width: 20px;
+            height: 21px;
+            @include display-column();
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .dash {
+              border: 0;
+              margin: 0;
+              width: 20px;
+              height: 3px;
+              background: rgba(255, 255, 255, 0.38);
+              transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+              &:first-child {
+                position: absolute;
+                transform: rotate(90deg);
+                left: 0;
+              }
+            }
+          }
+        }
+
+        .question-items-answer {
+          @include desktop-0-1281() {
+            font-size: $headerFontSize * 0.8;
+            padding-left: 0;
+          }
+
+          font-size: $normalFontSize;
+          height: 0;
+          transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+          padding-left: $gutterWidth;
+        }
+      }
+    }
+
+  }
+}
+
+
 
 .footer-section-container {
   z-index: 2;
@@ -471,7 +830,7 @@
     @include display-column();
     justify-content: space-between;
     font-size: $normalFontSize;
-    line-height: $normaLineHeight;
+    line-height: $normalLineHeight;
     text-align: left;
     width: fit-content;
     margin: 0 $gutterWidth * 1.4;
@@ -495,8 +854,7 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {
-      }
+      @include desktop-320-767 {}
 
       font-weight: normal;
       color: $whiteText;
@@ -516,33 +874,56 @@
   }
 }
 
-.section-image-heading {
-  @include desktop-320-767 {
-    height: $gutterWidth * 0.8;
+.section-image-heading-container {
+  @include display-row();
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: $gutterWidth*4;
+
+  .section-image-heading {
+    @include desktop-320-767 {
+      height: $gutterWidth * 0.8;
+    }
+
+    font-family: $generalFontFamily !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: $headerFontSize * 1.4;
+    color: #ffffff;
+    margin: $gutterWidth;
   }
 
-  height: $gutterWidth;
-  margin: $gutterWidth;
+  .section-image-heading-background {
+    position: absolute;
+    top: 0;
+    height: $gutterWidth*4;
+
+  }
 }
 
 .section-paragraph {
-  @include desktop-320-767 {
-    padding: 0 $gutterWidth;
-  }
 
-  @include desktop-768-1024 {
-    padding: 0 $gutterWidth * 3;
-  }
-
-  @include desktop-1025-1280 {
-    padding: 0 $gutterWidth * 6;
-  }
-
+  padding: 0 17.5vw;
   font-style: normal;
   font-weight: normal;
   font-size: $normalFontSize;
-  line-height: $normaLineHeight;
+  line-height: $normalLineHeight;
   text-align: center;
   color: $whiteText;
-  padding: 0 $gutterWidth * 12;
+}
+
+.section-button {
+  @include btn-standard-outline(1);
+
+  button {
+    padding: 0 $gutterWidth;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }

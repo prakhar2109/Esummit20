@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import aboutHeading from '../../../assets/about.svg'
+import aboutHeadingBackground from '../../../assets/about-heading-background.svg'
 import themeHeading from '../../../assets/theme.svg'
+import themeHeadingBackground from '../../../assets/theme-heading-background.svg'
 class About extends Component {
   render() {
     return (
       <div className="home-section-about-container">
         <div className="home-section-content-container">
-          <img src={aboutHeading} className="section-image-heading" alt="" />
+          <div className="section-image-heading-container">
+            <div className="section-image-heading">ABOUT E - SUMMIT</div>
+            <img
+              src={aboutHeadingBackground}
+              className="section-image-heading-background"
+              alt=""
+            />
+          </div>
           <div className="section-paragraph">
             E-Summit being the flagship event of ECell, is held annually brings
             together the academic community, venture capitalists, new age
@@ -18,7 +27,14 @@ class About extends Component {
           </div>
         </div>
         <div className="home-section-content-container">
-          <img src={themeHeading} className="section-image-heading" alt="" />
+          <div className="section-image-heading-container">
+            <div className="section-image-heading">THEME</div>
+            <img
+              src={themeHeadingBackground}
+              className="section-image-heading-background"
+              alt=""
+            />
+          </div>
           <div className="section-paragraph">
             Create impact and keep on innovating. In a startup journey there are
             three major stages: 0, 1 and n. At 0, you are just beginning and
