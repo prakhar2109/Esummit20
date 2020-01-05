@@ -13,8 +13,9 @@
     min-height: 100vh;
     height: 100%;
     width: 100vw;
-    padding: 0;
   }
+
+  padding: $gutterWidth 17.5vw;
 
   @include display-column();
   width: 100%;
@@ -35,6 +36,8 @@
   min-width: 6rem;
   width: -moz-fit-content;
   width: fit-content;
+  transition: all 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+
 }
 
 
@@ -66,14 +69,16 @@
   }
 }
 
-@mixin btn-standard-transparent($scale:1) {
+@mixin btn-standard-outline($scale:1) {
   @include btn($scale);
   color: $primaryColor;
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid $primaryColor;
+  border: 3px solid $primaryColor;
 
   &:hover {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    color: #ffffff;
+    background-color: $primaryColor;
+
   }
 
   &:hover:active,

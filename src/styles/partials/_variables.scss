@@ -7,16 +7,17 @@
 // @include font-YesevaOne('YesevaOne', 'YesevaOne-Regular');
 /*========THEME============*/
 //highlighter black bg
-$primaryColor: #09C9C3;
+$primaryColor: #359D9A;
 $primaryColorDark: #009994;
 $primaryDisabledColor: #555555;
-$primaryBackgroundColor:#010C0F;
+$primaryBackgroundColor:#030D0F;
 $secondaryBackgroundColor:#00151B;
 $primaryBlueColor:#1883C6;
 $gutterWidth: 1.75rem;
-$whiteText:#DFE0E1;//white color for text
+$whiteText:#DFE0E1; //white color for text
 $blackText: #2b2b2b; //black color for text
 $backgroundImageColor: #c4c4c4;
+$cardBackgroundColor:#0D1719;
 /*========FONTS============*/
 //highlighter black bg
 $generalFontFamily: Poppins;
@@ -28,7 +29,7 @@ $text: 500;
 $heading: 600;
 $thinHeading: 400;
 $letterSpacing: 0.04rem;
-$normaLineHeight: 2.4rem;
+$normalLineHeight: 2.4rem;
 $headerLineHeight: 4.875rem;
 $normalFontSize: 1.25rem;
 $headerFontSize: 2rem;
@@ -40,5 +41,5 @@ $mobileNormaLineHeight: 1.8rem;
 $mobileHeaderLineHeight: 3.6rem;
 
 
-$cardWidth:20rem;
-$cardHeight:20rem;
+$cardWidth:24.5rem;
+$cardHeight:32.75rem;
