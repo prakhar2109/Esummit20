@@ -1,0 +1,448 @@
+.heading {
+    font-size: 100px;
+    color: blue;
+    height: 100px;
+    width: 100px;
+}
+#footerinfo{
+color:white;
+    margin-top: 12px;
+
+}
+.landingpagefooter {
+    background: url('../landingfooter.png');
+    background-size: cover;
+    height: fit-content;
+    padding-top: 14.07vh;
+}
+
+.landingpagefooterparent {
+    height: fit-content;
+
+}
+
+.footerparent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 5rem;
+
+    /* background: yellow; */
+}
+
+.footerform {
+
+
+    height: fit-content;
+    width: 50vw;
+    /* background: green; */
+}
+
+.footercontact {
+
+
+    height: fit-content;
+    /* background: red; */
+    width: 50%;
+    padding-left: 13.41%;
+    padding-right: 10%;
+}
+
+.footerform-heading {
+    font-family: "ProximaNova-Bold", sans-serif;
+    font-size: 25.56px;
+    line-height: 36px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.footer-logo {
+
+    height: 8.41vh;
+    width: 17.44vw;
+    background: url('../ecelllogo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.landing-footer-icons {
+
+
+    margin-top: 3.37vh;
+    height: 2.63vh;
+    margin-bottom: 2.96vh;
+}
+
+.landing-footer-icons i {
+    background: #292B2A;
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-left: 28px;
+
+
+}
+
+.landing-footer-icons .fa-facebook {
+
+    margin-left: 0 !important;
+}
+
+.landing-footer-heading {
+
+    color: #F49D35;
+    font-family: "ProximaNova-Semibold", sans-serif;
+    font-size: 25.56px;
+    text-align: left;
+}
+
+
+.landing-footer-details {
+
+    margin-top: 1.59vh;
+    margin-bottom: 4.92vh;
+    color: #FFFFFF;
+    font-family: "Proxima-nova-regular", sans-serif;
+    font-size: 22.72px;
+    text-align: left;
+}
+
+.footerformfiels {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20%;
+    padding-top: 2.8vh;
+}
+
+
+#ladingpageinput {
+    display: flex;
+    outline: none !important;
+    height: 7.40vh;
+    width: 80%;
+    color: #B5B9B9;
+    font-size: 17.04px;
+    margin-bottom: 2.8vh;
+    padding: 2%;
+    background: transparent;
+    border-radius: 4px;
+    border: 2px solid #4A4B4B;
+    font-family: Proxima-nova-regular, sans-serif !important;
+}
+
+#ladingpageinput:focus {
+    background: #FFFFFF;
+    color: #0D1313;
+}
+
+#ladingpagetextinput {
+    display: flex;
+    outline: none !important;
+    height: 34.35vh;
+    width: 80%;
+    font-family: Proxima-nova-regular, sans-serif !important;
+    color: #B5B9B9;
+    font-size: 17.04px;
+    margin-bottom: 2.8vh;
+    padding: 2%;
+    background: transparent;
+    border-radius: 4px;
+    border: 2px solid #4A4B4B;
+}
+
+#ladingpagetextinput:focus {
+    background: #FFFFFF;
+    color: #0D1313;
+}
+
+#ladingpagebuttonb01 {
+    background: #F49D35;
+    height: 7.40vh;
+    width: 80%;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-family: Proxima-nova-regular, sans-serif !important;
+    font-size: 17.04px;
+    border:none;
+    font-weight : 600;
+
+}
+
+.landing-footer-adddetails {
+    margin-bottom: 0 !important;
+
+}
+
+.landing-footer-esummitteam {
+
+    color: #F49D35;
+    font-family: "Proxima-nova-regular", sans-serif;
+    font-size: 17.04px;
+    letter-spacing: 0.04em;
+    margin-bottom: 6vh;
+    margin-left: 3vw;
+
+
+}
+
+.landing-footer-inspiring {
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    font-size: 14.2px;
+    margin-left: 1vw;
+    font-family: "ProximaNova-Light", sans-serif;
+    padding-left:10%;
+}
+
+::placeholder {
+    color: #B5B9B9;
+    opacity: 1;
+}
+
+.landing-pagefooterbottom {
+    background: #242626;
+    padding-bottom: 8.148vh;
+}
+
+.landing-pagefooterbottom img{
+    margin-top:-30px;
+    padding-bottom: 6vh;
+    cursor: pointer;
+}
+.landing-bottomfooter-heading {
+
+    font-family: "Proxima-nova-regular", sans-serif;
+    font-size: 31.24px;
+    text-align: center;
+    color: #FFFFFF;
+
+
+}
+
+.landing-bottomfooter-mail {
+
+    font-family: "Proxima-nova-regular", sans-serif;
+    margin-top: 2.58vh;
+    font-size: 22.72px;
+    text-align: center;
+    color: #F49D35;
+}
+
+@media (min-width: 900px) {
+    .landing-pagefooterbottom-mobile {
+        display: none;
+    }
+
+    .landingpagefooter-mobile {
+        display: none;
+    }
+
+
+
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+
+
+    .footerform-heading {
+        font-size: 36px;
+
+    }
+
+
+    #ladingpageinput {
+
+        font-size: 24px;
+    }
+
+    .landing-footer-inspiring {
+        font-size: 20px;
+        margin-left: 3vw;
+    }
+
+    .landing-footer-esummitteam {
+        font-size: 24px;
+        margin-left: 1vw;
+    }
+
+    .landing-footer-heading {
+        font-size: 36px;
+    }
+
+    .landing-footer-details {
+        font-size: 32px
+    }
+
+    #ladingpagetextinput {
+        font-size: 24px;
+    }
+
+    #ladingpagebuttonb01 {
+        font-size: 24px;
+    }
+
+    .landing-bottomfooter-heading {
+        font-size: 44px;
+    }
+
+    .landing-bottomfooter-mail {
+        font-size: 32px;
+
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .landingpagefooter-mobile {
+        background: url('../landingfooter.png');
+        background-size: cover;
+        height: fit-content;
+        width: 100vw;
+        padding:1rem;
+
+      
+    }
+
+    .landing-pagefooterbottom-mobile {
+        background: #242626;
+        
+        text-align: center;
+   
+        padding-bottom: 2.85rem;
+        display: inline-block;
+        width: 100vw;
+        
+
+
+
+
+
+    }
+    .landing-pagefooterbottom-mobile img{
+        margin-top:-35px;
+        margin-bottom: 1rem;
+
+    }
+
+    .landing-pagefooterbottom {
+        display: none;
+    }
+
+    .landingpagefooter {
+        display: none;
+    }
+
+    #ladingpageinput {
+        width: 100%;
+        font-size: 16px;
+        font-family: "ProximaNova-Semibold", sans-serif;
+        margin-bottom: 1.42rem;
+        height: 3.42rem;
+
+    }
+
+    #ladingpagetextinput {
+        width: 100%;
+        font-size: 16px;
+        font-family: "ProximaNova-Semibold", sans-serif;
+        margin-bottom: 1.42rem;
+        height: 17.71rem;
+
+    }
+
+    #ladingpagebuttonb01 {
+        width: 100%;
+        font-size: 16px;
+        font-family: "ProximaNova-Semibold", sans-serif;
+        height: 3rem;
+
+    }
+
+    .footerparent {
+
+        flex-direction: column;
+
+    }
+
+    .footer-logo {
+        width: 100%;
+        background-position: center;
+        margin-top: 7.92rem;
+        height: 5.71rem;
+    }
+
+    .footerform {
+        padding: 32px;
+        width: 100%;
+        min-height: 45rem;
+
+    }
+
+    .footercontact {
+        width: 100%;
+        padding-left: 32px;
+        padding-right: 32px;
+        display: inline-block;
+        min-height: 42rem;
+         
+
+
+    }
+
+    .footerformfiels {
+        padding-right: 0;
+        padding-top: 1.71rem;
+    }
+
+    .footerform-heading {
+        font-size: 18px;
+    }
+
+    .landing-footer-heading {
+        font-size: 18px;
+    }
+
+
+    .landing-footer-details {
+        font-size: 15px;
+        margin-top: .64rem;
+        margin-bottom: 2.28rem;
+    }
+
+
+
+    .landing-footer-inspiring {
+        font-size: 12px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .landing-footer-icons {
+        text-align: center;
+        margin-top: 1.71rem;
+        margin-bottom: 2.57rem;
+    }
+
+
+    .landing-footer-esummitteam {
+        font-size: 16px;
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .landing-bottomfooter-heading {
+        font-size: 18px;
+    }
+
+    .landing-bottomfooter-mail {
+        font-size: 16px;
+        margin-top: 1.71rem;
+    }
+
+
+
+
+
+
+}

@@ -1,0 +1,642 @@
+
+@mixin mobile {
+    @media(max-width: 1200px) {
+        @content;
+    }
+
+}
+
+.Eventsheader {
+
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+
+}
+
+.ideastorm {
+    padding-top: 50px;
+
+    .header {
+        background: #0D1313;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+        display: grid;
+        align-items: center;
+        grid-template-columns: 20% 80%;
+        padding: 0 10vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100000000000000000;
+
+        height: 10vh !important;
+
+        @include mobile {
+            display: none;
+        }
+
+        img {
+            height: 4vh;
+            margin-top: 10px;
+        }
+
+        .head_array {
+
+            justify-self: end;
+            margin-top: 10px;
+
+            span {
+                font-family: "ProximaNova-Semibold", sans-serif;
+                font-size: 20px;
+                text-align: center;
+                letter-spacing: 0.06em;
+                cursor: pointer;
+                color: #FFFFFF;
+                margin-left: 40px;
+            }
+
+
+        }
+    }
+
+    .esummit-idea {
+        // background: url("./static/1920.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        padding: 4% 10vw;
+        margin:0;
+        max-height: 100vh;
+        @include mobile {
+            padding: 44px 32px;
+            padding-top: 60px;
+            // background: url("./static/mobileIS.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90vh;
+        }
+        .ignite-first-page-scroll {
+        #ignite-first-page-scroll-child {
+
+            p{
+                font-size: 14px ;
+                color:white;
+                text-align: center;
+                @include mobile {
+                    font-size: 8px;
+                    // padding-bottom: calc(0px + 1vh);
+    
+                }
+            }
+        }
+        }
+       
+.ignite-first-page-scroll{
+    margin-top: 10px;
+}
+        .esummit-header_idea {
+            font-size: 48px;
+            letter-spacing: 0.1em;
+            padding-bottom: 0;
+	        margin-bottom:0;
+            color: #FFFFFF;
+            font-family: "ProximaNova-Bold", sans-serif;
+
+            @include mobile {
+                font-size: 16px;
+                padding-bottom: calc(0px + 1vh);
+
+            }
+        }
+
+        p:nth-child(2) {
+            line-height: 41px;
+            font-size: 24px;
+            letter-spacing: 0.1em;
+            color: #FFFFFF;
+            font-family: "ProximaNova-Light", sans-serif;
+            padding-bottom: calc(0px + 3vh);
+
+            @include mobile {
+                line-height: 15px;
+                font-size: 10px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                padding-bottom: 0;
+                color: #FFFFFF;
+
+            }
+        }
+        p:nth-child(6) {
+            line-height: 41px;
+            font-size: 24px;
+            letter-spacing: 0.1em;
+            color: #FFFFFF;
+            font-family: "ProximaNova-Bold", sans-serif;
+            padding-bottom: calc(0px + 3vh);
+
+            @include mobile {
+                line-height: 15px;
+                font-size: 10px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                padding-bottom: 0;
+                color: #FFFFFF;
+
+            }
+        }
+	 p:nth-child(7) {
+
+	font-size: 26px;
+        font-family: "ProximaNova-Light", sans-serif;
+    color: #FFFFFF;
+    padding-top: 4vh;
+	padding-bottom:4.62vh;
+		@include mobile {
+                line-height: 16px;
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                padding-bottom: calc(15px + 3vh);
+                
+		}
+	}
+        p:nth-child(8) {
+            line-height: 46px;
+            font-size: 24px;
+            letter-spacing: 0.1em;
+            font-family: "Proxima-nova-regular", sans-serif;
+            color: #FFFFFF;
+            text-align: justify;
+            margin-bottom: calc(10vh + 5rem);
+
+            @include mobile {
+                line-height: 18px;
+                font-size: 12px;
+                text-align: justify;
+                letter-spacing: 0.1em;
+                margin-bottom: calc(6vh + 2rem);
+                color: #FFFFFF;
+
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .register_button {
+
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 2px;
+            padding: 14px 16px;
+            font-family: "ProximaNova-Bold";
+            line-height: normal;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 0.06em;
+            background: none;
+            color: white;
+
+            @include mobile {
+                line-height: 15px;
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 0.09em;
+
+                color: #FFFFFF;
+
+            }
+        }
+    }
+
+    // .timeline,{
+    //     padding: 120px 10vw;
+
+    //     @include mobile {
+    //         padding: 32px;}
+    // }
+
+    .Rules,
+    .eligiblity,
+        {
+        padding: 120px 10vw;
+        display: block;
+        border-bottom: 1px solid #B2B2B2;
+
+        @include mobile {
+            padding: 32px;
+        }
+        .head1 {
+            color: #B2b2b2;
+            font-family: "ProximaNova-Bold", sans-serif ;
+        }
+
+        .head1 {
+            color: #1A4D66;
+            font-family: "ProximaNova-Bold", sans-serif ;
+        }
+
+        ol {
+            padding-top: 72px;
+            font-family: "Proxima-nova-regular", sans-serif;
+            list-style-type: decimal;
+
+            @include mobile {
+                padding-top: 24px;
+            }
+
+            li {
+                line-height: 41px;
+                font-size: 24px;
+                letter-spacing: 0.1em;
+                font-family: "Proxima-nova-regular", sans-serif;
+                color: #000000;
+
+                @include mobile {
+                    line-height: 21px;
+                    font-size: 14px;
+                    letter-spacing: 0.1em;
+
+                    color: #000000;
+                }
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .register {
+
+        background: #F49D35;
+        padding: 96px 10vw;
+
+        @include mobile {
+            display: none;
+        }
+
+        .register_now {
+            font-size: 40px;
+            font-family: "ProximaNova-Semibold", sans-serif;
+        }
+
+        p {
+            font-family: "Proxima-nova-regular", sans-serif;
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 48px;
+            line-height: 41px;
+            font-size: 28px;
+            text-align: center;
+            letter-spacing: 0.1em;
+
+            color: #FFFFFF;
+
+        }
+
+        span {
+            padding: 14px 16px;
+            font-family: "ProximaNova-Bold", sans-serif;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 2px;
+            margin-right: 16px;
+            color: white;
+            cursor: pointer;
+
+
+        }
+    }
+
+    .register_mobile {
+        display: none;
+
+        @include mobile {
+            display: block;
+            background: #F49D35;
+            padding: 44px 32px;
+
+            p {
+
+                line-height: 17px;
+                font-size: 14px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                font-family: "ProximaNova-Semibold", sans-serif;
+                color: #FFFFFF;
+            }
+
+            span {
+                line-height: 15px;
+                font-size: 12px;
+                text-align: center;
+                width: 190px;
+                height: 48px;
+                font-family: "ProximaNova-Bold", sans-serif;
+                letter-spacing: 0.09em;
+                padding: 0;
+                padding-top: 15px;
+                border: 2px solid #E1E2E2;
+                box-sizing: border-box;
+                border-radius: 2px;
+                color: #FFFFFF;
+                display: block;
+                margin: 16px 0;
+
+            }
+
+            .register_now {
+                font-size: 24px;
+                letter-spacing: 0.1em;
+
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .view_all {
+        display: none;
+    }
+
+    #faq {
+        border-bottom: 1px solid #B2B2B2;
+    }
+
+    .coordinator {
+        padding: 120px 10vw;
+        display: block;
+        border-bottom: 1px solid #B2B2B2;
+
+        @include mobile {
+            padding: 44px 32px;
+        }
+
+        .head1 {
+            color: #1A4D66;
+            font-family: "ProximaNova-Bold", sans-serif;
+        }
+
+        .coordinator_grid {
+            display: grid;
+            grid-column-gap: 20px;
+            grid-template-columns: 30% 30% 30%;
+            padding-top: 72px;
+            font-family: "Proxima-nova-regular", sans-serif;
+
+            @include mobile {
+                display: block;
+                padding-top: 24px;
+            }
+
+            .esummit-coordinator_unit {
+
+                @include mobile {
+                    margin: 16px 0;
+                }
+
+                p {
+                    line-height: 28px;
+                    font-size: 20px;
+                    letter-spacing: 0.04em;
+                    margin: 0;
+                    padding: 0;
+                    color: #000000;
+                   
+
+
+                    @include mobile {
+                        line-height: 18px;
+                        font-size: 14px;
+                        letter-spacing: 0.1em;
+
+                        color: #000000;
+
+                    }
+                }
+
+                p:first-child {
+                    font-family: "ProximaNova-Bold", sans-serif;
+                }
+            }
+        }
+    }
+
+    .es {
+        padding: 64px;
+        background: #242626;
+
+        a,
+        p {
+            font-size: 32px;
+            margin-top: 48px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            color: #F39423;
+            text-decoration: none;
+            font-family: Proxima-nova-regular, sans-serif !important;
+
+            @include mobile {
+
+                font-size: 20px;
+                letter-spacing: 0.1em;
+
+                color: #F39423;
+            }
+        }
+    }
+
+    .timeline {
+
+        display: block;
+
+        height: fit-content;
+
+        background: #1A4D66;
+
+       
+    }
+
+    .ant-steps-item-finish>.ant-steps-item-content>.ant-steps-item-title {
+        color: white;
+    }
+
+    .erks {
+
+        padding: 120px 10vw;
+
+        @include mobile {
+            padding: 32px;
+        }
+
+        .head1 {
+            color: #1A4D66;
+            
+        }
+
+        .perks_array {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-row-gap: 40px;
+            grid-column-gap: 90px;
+            padding-top: 72px;
+
+            @include mobile {
+                grid-template-columns: 90%;
+            }
+
+            .perks_unit {
+                line-height: 41px;
+                font-size: 20px;
+                letter-spacing: 0.1em;
+                font-family: "Proxima-nova-regular", sans-serif;
+                color: #4F4F4F;
+
+                @include mobile {
+                    line-height: 21px;
+                    font-size: 14px;
+
+                    letter-spacing: 0.1em;
+
+                    color: #4F4F4F;
+
+                }
+
+                img {
+                    display: block;
+                    height: 20vh;
+                }
+
+                span {
+                    display: block;
+                    line-height: 44px;
+                    font-size: 26px;
+
+
+                    letter-spacing: 0.1em;
+                    padding: 20px 0;
+                    color: #F49D35;
+                    font-weight: 600;
+
+                    @include mobile {
+                        line-height: 24px;
+                        font-size: 16px;
+                        letter-spacing: 0.1em;
+                        font-family: "ProximaNova-Semibold", sans-serif;
+                        color: #F39423;
+
+
+
+                    }
+
+
+                }
+            }
+        }
+
+
+    }
+}
+@media (min-width: 1500px) {
+    .ideastorm .esummit-idea{
+        background-size: cover;
+    }
+    .ideastorm .esummit-idea p{
+        font-size: 28px;
+        color: white;
+        padding: 10px;
+        margin-top: 2%;
+    }
+    .ideastorm .esummit-idea .ignite-first-page-scroll{
+        margin-top:10%;
+    }
+    .ideastorm .esummit-idea .esummit-header_idea{
+        letter-spacing: 0.04em;
+        font-size: 52px;
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+    .ideastorm .header .head_array span {
+        font-size: 14.2px;
+
+}
+.esummit-idea {
+    // background: url("./static/1366.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px 10vw;
+}
+.ideastorm .esummit-idea p:nth-child(2){
+padding-bottom: 0;
+font-size: 19.88px;
+}
+
+.ideastorm .esummit-idea .esummit-cash-prize {
+
+	font-size: 19.88px;
+    font-family: "ProximaNova-Semibold", sans-serif;
+    color: #FFFFFF;
+    padding: 10px 0px;
+}
+
+
+    .ideastorm .esummit-idea .esummit-header_idea {
+        font-size: 36px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        letter-spacing: 0.04em;
+    }
+
+    .ideastorm .esummit-idea p:nth-child(4) {
+        font-size: 20px;
+        padding: 40px 0px 20px 0px;
+        color: white;
+    }
+
+    .ideastorm .erks .perks_array .perks_unit .esummit-perks-heading {
+        font-size: 19.88px;
+        padding: 0px 0px;
+    }
+
+    .ideastorm .Rules ol li,
+    .ideastorm .eligiblity ol li {
+        font-size: 19.88px;
+        letter-spacing: 0.04em;
+    }
+
+    .ideastorm .register .register_now {
+        font-size: 34.08px;
+    }
+
+    .ideastorm .register p {
+        font-size: 19.88px;
+    }
+
+    .land_faq p {
+        font-size: 19.88px;
+    }
+
+    .faq_unit .question {
+        font-size: 22.72px;
+    }
+}
+@media (max-width:768px){
+    .ideastorm .esummit-idea p{
+        color: white;
+    }
+    .esummit-cash-prize{
+        color: white;
+    }
+}

@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 import axios from "axios"
 import { BASE_URL } from "../../utils/urls"
 import Events from './Events/EventComponent/Index'
+import Events2 from './Events2/EventComponent/Index'
 /* eslint-disable react/prop-types */
 
 
@@ -57,9 +58,11 @@ export default class EventsMainIndex extends Component {
     render() {
         return (
             <React.Fragment>
-                {this.state.data.event_type2 === "TYPE1" ?
-                    <Route exact path="/events/:id" render={props => (<Events {...props} data={this.state.data} />)} /> 
-                        : null
+                {this.state.data.event_type2 === "TYPE2" ?
+                    <Route exact path="/events/:id" render={props => (<Events {...props} data={this.state.data} />)} /> :
+                    this.state.data.event_type2 === "TYPE1" ?
+                    <Route exact path="/events/:id" render={props => (<Events2 {...props} faq={this.state.faq} data={this.state.data} />)} />
+                    : null
                 }
 
              
