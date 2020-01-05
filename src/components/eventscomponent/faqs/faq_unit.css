@@ -11,7 +11,8 @@
 }
 
 .faq-parent {
-  padding: 10rem 17% 0 17%;
+  /* padding: 10rem 17% 0 17%; */
+  background: #030d0f;
 }
 .faq_unit {
   border-bottom: 2px solid rgba(255, 255, 255, 0.38);

@@ -14,26 +14,25 @@
   margin: 0 0 7% 0;
 }
 @media (max-width: 1200px) {
-	.guest-lecture-heading {
-    	font-size: 1.5rem;
-  	}
-} 
+  .guest-lecture-heading {
+    font-size: 1.5rem;
+  }
+}
 
 @media (max-width: 1200px) {
   .guest-container {
-    padding: 6rem ;
+    padding: 6rem;
   }
 }
 
 .guest-list-card-content {
-	width: 80%;
+  width: 80%;
 }
 
-
 @media (max-width: 60px) {
-	.guest-list-card-content {
-		width: 100%;
-	}
+  .guest-list-card-content {
+    width: 100%;
+  }
 }
 
 .guest-list-card-heading {
@@ -52,7 +51,7 @@
 }
 
 .guest-list-card-subheading {
-  line-height: 2Srem;
+  line-height: 2srem;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
   font-family: 'Poppins';
@@ -67,49 +66,44 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
-.guest-list-card-subheading
-
-.guest-format {
+.guest-list-card-subheading .guest-format {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
 .guest-list-card {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	margin-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 5%;
 }
 
 .guest-list-card-image {
-	width: 15rem;
+  width: 15rem;
 }
 
 @media (max-width: 1600px) {
-	.guest-list-card-image {
-		width: 10rem;
-		height: 10rem;
-	}
+  .guest-list-card-image {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 @media (max-width: 900px) {
-	.guest-list-card-image {
-		width: 7rem;
-		height: 7rem;
-	}
+  .guest-list-card-image {
+    width: 7rem;
+    height: 7rem;
+  }
 }
 
 @media (max-width: 600px) {
-	.guest-list-card-image {
-		width: 15rem;
-		height: 15rem;
-	}
+  .guest-list-card-image {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 .guest-list-card-content {
-	padding: 0 0 0 4%;
+  padding: 0 0 0 4%;
 }
-
-
-

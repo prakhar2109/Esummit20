@@ -1,12 +1,12 @@
 .panel-format {
-  padding: 10rem 0 5rem 0;
+  padding: 0 0 5rem 0;
   display: block;
   background: #030d0f;
 }
 
 @media (max-width: 1200px) {
   .panel-format {
-    padding: 6rem ;
+    padding: 6rem;
   }
 }
 
@@ -23,7 +23,7 @@
   .panel-format .heading {
     font-size: 1.5rem;
   }
-} 
+}
 .panel-format div {
   padding-top: 4.5rem;
   font-family: 'Proxima-nova-regular';
@@ -34,7 +34,6 @@
     padding-top: 1.5rem;
   }
 }
-
 
 .panel-format div p {
   line-height: 2.5625rem;
@@ -64,21 +63,21 @@
 
 @media (max-width: 1200px) {
   .content {
-  	font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 
 .panel-container {
-  padding: 10rem 17%;
+  padding: 10rem 17% 0 17%;
   display: block;
   background: #030d0f;
 }
 
 .panel-list-card-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .panel-list-container p {
@@ -90,34 +89,34 @@
   font-weight: bold;
 }
 @media (max-width: 1200px) {
-	.panel-list-container p {
-    	font-size: 1.5rem;
-  	}
+  .panel-list-container p {
+    font-size: 1.5rem;
+  }
 }
 
 .topic {
-	font-weight: bold;
-	color: rgba(255, 255, 255, 0.87)
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .panel-list-card {
-	width: 15rem;
+  width: 15rem;
 }
 
 .panel-list-card img {
-	width: 80%;
-	padding: 0 auto;
-	margin: 0 0 10% 0;
+  width: 80%;
+  padding: 0 auto;
+  margin: 0 0 10% 0;
 }
 
 .panel-list-card-content {
-	font-size: 1.5rem;
-	line-height: 3rem;
-	color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .panel-list-card-subheading {
-	color: rgba(255, 255, 255, 0.6);
-	line-height: 3rem;
-	font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 3rem;
+  font-size: 1rem;
 }

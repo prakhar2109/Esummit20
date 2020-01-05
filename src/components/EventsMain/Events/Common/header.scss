@@ -13,19 +13,19 @@
   position: relative;
 }
 
-.head1 {
+.head1-title {
   font-size: 2rem !important ;
   letter-spacing: 0.05em;
-  color: #feffff;
+  color: rgba(255, 255, 255, 0.87);
   font-weight: bold !important;
   display: inline-block;
-  margin-left: -1.8rem;
   z-index: 3;
   position: relative;
-  font-family: ProximaNova-Bold, sans-serif;
+  font-family: 'Poppins-Bold';
+  line-height: 3rem;
 
   @include fhd {
-    font-size: 1.5rem !important;
+    font-size: 2.5rem !important;
   }
 
   @include mobile {

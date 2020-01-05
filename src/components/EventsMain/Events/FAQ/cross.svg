@@ -1,5 +1,9 @@
-<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16.9814" r="15" stroke="#FF2F2F" stroke-width="2"/>
 <line x1="20.2527" y1="12.7292" x2="11.7471" y2="21.2348" stroke="#FF2F2F" stroke-width="2" stroke-linecap="round"/>
 <line x1="20.253" y1="21.2344" x2="11.7474" y2="12.7287" stroke="#FF2F2F" stroke-width="2" stroke-linecap="round"/>
+</svg> -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.5998 7.05025L13.65 12L18.5998 16.9497L16.9498 18.5997L12.0001 13.6499L7.05035 18.5997L5.40043 16.9497L10.3502 12L5.40043 7.05025L7.05035 5.40034L12.0001 10.3501L16.9498 5.40034L18.5998 7.05025Z" fill="white" fill-opacity="0.87"/>
 </svg>
+

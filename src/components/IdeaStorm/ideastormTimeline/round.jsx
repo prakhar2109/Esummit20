@@ -14,7 +14,7 @@ class Round extends Component {
     else roundNumber = 1
     return (
       <div className="round">
-        {/* <p>Round {roundNumber}</p> */}
+        <p>Round {roundNumber}</p>
         <br />
         <br />
         <p>

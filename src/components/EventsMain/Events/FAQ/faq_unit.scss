@@ -11,9 +11,9 @@
 }
 
 .land_faq {
-  padding: 7.6% 13.6vw;
+  padding: 10rem 17% 0 17%;
   z-index: 2;
-  background: white;
+  background: #010c0f;
 
   @include mobile {
     padding: 32px;
@@ -22,12 +22,12 @@
   }
 
   .head1 {
-    color: #1a4d66 !important;
-    font-family: "ProximaNova-Bold", sans-serif;
+    color: #1a4d66;
+    font-family: 'Poppins-Bold';
   }
 
   @include fhd {
-    padding: 100px 13.6vw;
+    padding: 10rem 17% 0 17%;
   }
 
   .esummit-landing-faq-land-para {
@@ -35,8 +35,8 @@
     font-size: 1.75rem;
     letter-spacing: 0.04em;
     margin-bottom: 4.5rem;
-    color: #000000;
-    font-family: "Proxima-nova-regular", sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: 'Poppins-Medium';
 
     @include mobile {
       line-height: 20px;
@@ -62,10 +62,10 @@
 }
 
 .faq_unit {
-  border-bottom: 4px solid #f7f8f9;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.38);
   margin-bottom: 1rem;
 
-  font-family: Proxima-nova-regular !important;
+  font-family: 'Poppins-regular';
   @include mobile {
     border-bottom: 2px solid #f7f8f9;
   }
@@ -78,7 +78,7 @@
     letter-spacing: 0.02em;
 
     color: #b2b2b2;
-    background: #f7f8f9;
+    background: #010c0f;
     cursor: pointer;
     @include mobile {
       line-height: normal;

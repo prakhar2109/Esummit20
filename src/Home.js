@@ -21,6 +21,7 @@ import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 import StartupExpo from './components/startupExpo/startupexpo.jsx'
+import StartupIgnite from './components/ignite/startupIgnite'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
@@ -48,14 +49,18 @@ class HomeLanding extends Component {
             path="/ideastorm"
             component={props => <Ideastorm {...props} />}
           />
-           <Route
-                  exact
-                  path="/events/:id"
-                  render={props => <EventsMain {...props} />}
-                />
+          <Route
+            exact
+            path="/events/:id"
+            render={props => <EventsMain {...props} />}
+          />
           <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
+          />
+          <Route
+            path="/startupignite"
+            component={props => <StartupIgnite {...props} />}
           />
           {/* <Route path="*" component={} /> */}
         </Switch>
