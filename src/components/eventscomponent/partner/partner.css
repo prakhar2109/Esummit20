@@ -1,5 +1,5 @@
 .partners-head {
-  font-family: Poppins;
+  font-family: 'Poppins-Bold' !important;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -11,6 +11,7 @@
   padding: 10rem 17% 0 17%;
   display: flex;
   flex-direction: column;
+  background: #030d0f;
 }
 @media (max-width: 1200px) {
   .partners-head {

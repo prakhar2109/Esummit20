@@ -12,7 +12,7 @@
 
 .ideastormEligibility p {
   color: rgba(255, 255, 255, 0.87);
-  font-family: 'Poppins';
+  font-family: 'Poppins-Bold' !important;
   font-size: 2rem;
   line-height: 3rem;
   font-style: normal;

@@ -8,7 +8,7 @@
   color: rgba(255, 255, 255, 0.87);
 }
 .faq-title {
-  font-family: Poppins;
+  font-family: 'Poppins-Bold';
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -23,7 +23,6 @@
 @media (max-width: 1200px) {
   .faq-title {
     font-size: 1.5rem;
-    
   }
 }
 
@@ -32,14 +31,13 @@
     line-height: 1.3125rem;
     font-size: 1rem;
     letter-spacing: 0.1em;
-    
   }
-  .faq-land-para{
+  .faq-land-para {
     line-height: 1.3125rem;
     font-size: 0.875rem;
     letter-spacing: 0.1em;
   }
-  .esummit-landing-faq-update-question{
+  .esummit-landing-faq-update-question {
     line-height: 1.3125rem;
     font-size: 0.875rem;
     letter-spacing: 0.1em;
