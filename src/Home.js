@@ -24,6 +24,7 @@ import StartupExpo from './components/startupExpo/startupexpo.jsx'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
+import EventsMain from './components/EventsMain/index'
 
 class HomeLanding extends Component {
   render() {
@@ -47,6 +48,11 @@ class HomeLanding extends Component {
             path="/ideastorm"
             component={props => <Ideastorm {...props} />}
           />
+           <Route
+                  exact
+                  path="/events/:id"
+                  render={props => <EventsMain {...props} />}
+                />
           <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
