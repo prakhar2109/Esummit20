@@ -1,11 +1,12 @@
 import axios from 'axios'
 
 const FetchApi = (method, url, params, TokenValue) => {
-  if (process.env.REACT_APP_SERVER_ENVIORNMENT === 'dev') {
-    url = 'http://localhost:' + process.env.REACT_APP_SERVER_PORT + url
-  } else {
-    url = 'https://api.esummit.in/' + url
-  }
+  // if (process.env.REACT_APP_SERVER_ENVIORNMENT === 'dev') {
+  //   url = 'http://localhost:' + process.env.REACT_APP_SERVER_PORT + url
+  // } else {
+  //   url = 'https://api.esummit.in/' + url
+  // }
+  url = 'http://localhost:8000/' + url
   return new Promise((resolve, reject) => {
     if (TokenValue) {
       axios({
