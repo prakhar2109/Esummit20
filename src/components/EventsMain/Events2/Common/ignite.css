@@ -43,29 +43,43 @@ text-align:center;
 .suignite-parent-childparent{
 display:flex;
 flex-direction:column;
+    background: #030d0f;
+    padding: 3%;
 }
 
 .suignite-parent-child1{
-height:39.81vh;
+/*height:39.81vh;
 padding-top:12.31vh;
-    padding-right: 3.75%;
+padding-right: 3.75%;
 text-align:right;
 position: sticky;
 top: 50px;
-width:25.72%;
+width:25.72%;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 17%;
+    justify-content: space-around;
+    margin: 0;
 }
 .suignite-parent-child1 div{
 cursor:pointer;
-padding: 0px 15px;
+padding: 0% 15px;
+/*width: 33.3%;*/
+}
+
+.suignite-parent-child1 p{
+padding: 1% 0px;
 }
 .suignite-parent-child1-active{
-color:#F39423;
+color: rgba(255, 255, 255, 0.87);
 font-size:14.2px;
-padding: 0px 15px;
+padding: 5px 15px;
 font-family: "ProximaNova-Semibold";
+border-bottom: 4px solid rgb(53, 157, 154);
 }
 .suignite-parent-child1-inactive{
-color:#B2B2B2;
+color: rgba(255, 255, 255, 0.6);
 font-size:14.2px;
 padding: 0px 15px;
 font-family: "ProximaNova-Semibold";
@@ -474,11 +488,13 @@ font-size: 28px;
 }
 
 @media (max-width: 900px){
+    .suignite-parent-child1 {
+        height: 10vh !important;
+        padding: 0;
+    }
     .suignite-parent-child1-inactive{
-        padding: 0px 50px 0px 0px !important;
     }
     .suignite-parent-child1-active{
-        padding: 0px 50px 0px 0px !important;
     }
     .suignite-parent-child2-applyparent-heading{
         font-size: 20px;
@@ -531,8 +547,8 @@ font-size: 28px;
     }
     .suignite-parent-child1 {
         /* height: 39.81vh; */
-        height: 25vh;
-        padding-top: 12.31vh;
+        height: 0vh;
+        padding-top: 5vh;
         overflow-x: scroll;
         overflow-y: hidden;
         padding-right: 3.75%;
