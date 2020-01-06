@@ -7,14 +7,19 @@ export default class SmallEventData extends Component {
     render() {
         return (
             <React.Fragment>
-                <p className="suignite-topic-heading">
+                <p className="content topic">
                     {this.props.data && this.props.data.heading}
                 </p>
+               
                 {this.props.data.para === "yes" ?
-                    <p className="suignite-topic-para">
+                    <p className="content">
                         {this.props.data && parse(this.props.data.paragraph)}
                     </p>
                     : null}
+
+                {this.props.data.bullets === "no" && this.props.data.array === "no"  && this.props.data.speaker_2.length === 0 ?
+                <><br/><br/></>:null    
+                }
                 {this.props.data && this.props.data.bullets === "yes" ?
                     <ul>
                         {this.props.data && this.props.data.bullets_data && this.props.data.bullets_data.map((e, index) =>
@@ -26,14 +31,16 @@ export default class SmallEventData extends Component {
                     : null
                 }
                 {this.props.data && this.props.data.array === "yes" ?
-                    <div className="suignite-panelists-img-parent">
+                    <div className="panel-list-card-container">
                         {this.props.data && this.props.data.array_data && this.props.data.array_data.map((e, index) =>
-                            <div key={index} className="suignite-panelists-img-child">
+                            <div key={index} className="panel-list-card">
                                 <div className="suignite-panelists-img1" style={{
                                     backgroundImage: `url(${BASE_URL + e.photo})`
                                 }}></div>
-                                <div className="panelists-name">{e.name}</div>
-                                <div className="panelists-company">{e.designation}, {e.companay_name}</div>
+                                <div className="panel-list-card-content">
+                                <div className="panel-list-card-heading">{e.name}</div>
+                                <div className="panel-list-card-subheading">{e.designation}, {e.companay_name}</div>
+                                </div>
                             </div>
                         )}
                     </div>
@@ -45,12 +52,15 @@ export default class SmallEventData extends Component {
                             <div className="suignite-guestlecture-child1 back-jaipur-second" style={{
                                 backgroundImage: `url(${BASE_URL + speaker.photo})`
                             }}></div>
-                            <div className="suignite-guestlecture-child2">
-                                <p>{speaker.name}</p>
-                                <p>{speaker.designation}, {speaker.companay_name}</p>
-                                <p>Topic : {speaker.topic}</p>
-                                <p>{speaker.description}</p>
-                            </div>
+                            
+                               
+                                <div className="guest-list-card-content">
+                                    <div className="guest-list-card-heading">{speaker.name}</div>
+                                    <div className="guest-list-card-subheading">{speaker.designation}, {speaker.companay_name}</div>
+                                    <div className="guest-list-card-heading">Topic : {speaker.topic}</div>
+                                    <div className="guest-list-card-subheading">{speaker.description}</div>
+			                    </div>
+                           
                         </div>
                     )
                     : null}

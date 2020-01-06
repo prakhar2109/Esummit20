@@ -13,12 +13,13 @@ export default class SmallEventIndex extends Component {
         return (
             data.map((datum,index) => <React.Fragment key ={index} >
                 {datum ?
-                    <div id={datum.heading === "Event Coordinators" ? "coordinators" : null} className="suignite-parent-child2-panel">
+                    <div id={datum.heading === "Event Coordinators" ? "coordinators" : null} className="panel-format">
                         {datum && datum.heading ?
-                            <div>
-                                <img className="suignite-vector" src={Vector} alt="vector" />
-                                <div className="suignite-head1">{datum.heading}</div>
-                            </div>
+                            // <div>
+                            //     <img className="suignite-vector" src={Vector} alt="vector" />
+                            //     <div className="suignite-head1">{datum.heading}</div>
+                            // </div>
+                            <div className="heading">{datum.heading}</div>
                             : null}
 
                         {datum && datum.data && datum.data.map((e, index) =>

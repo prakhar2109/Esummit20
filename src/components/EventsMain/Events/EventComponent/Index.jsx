@@ -42,7 +42,7 @@ class EventComponentIndex extends Component {
       .then(r => {
         this.setState({
           data: r.data,
-        });
+        },()=>console.log(this.state.data,"Event1data"));
         // document
         //     .getElementById("loader")
         //     .style

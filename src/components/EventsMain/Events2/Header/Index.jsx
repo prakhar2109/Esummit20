@@ -20,4 +20,4 @@ export default class HeaderEvents2 extends Component {
     }
 }
 
-/* eslint-disable react/prop-types */
+    /* eslint-disable react/prop-types */

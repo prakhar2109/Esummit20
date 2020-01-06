@@ -42,7 +42,7 @@ export default class EventsMainIndex extends Component {
                 faq: r.data
             })
 
-            console.log(r,"data")
+            console.log(r.data,"data")
             // document
             //     .getElementById("loader")
             //     .style
@@ -58,9 +58,9 @@ export default class EventsMainIndex extends Component {
     render() {
         return (
             <React.Fragment>
-                {this.state.data.event_type2 === "TYPE2" ?
+                {this.state.data.event_type2 === "TYPE1" ?
                     <Route exact path="/events/:id" render={props => (<Events {...props} data={this.state.data} />)} /> :
-                    this.state.data.event_type2 === "TYPE1" ?
+                    this.state.data.event_type2 === "TYPE2" ?
                     <Route exact path="/events/:id" render={props => (<Events2 {...props} faq={this.state.faq} data={this.state.data} />)} />
                     : null
                 }

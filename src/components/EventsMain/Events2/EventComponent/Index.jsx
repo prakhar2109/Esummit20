@@ -12,6 +12,9 @@ import { BASE_URL } from "../../../../utils/urls"
 import "../../Events/Common/ideastorm.scss"
 import Body from "../Body/Index"
 import { NavLink } from "react-router-dom"; 
+import Rules from '../../Events/Rules/Index'
+import Eligibility from '../../Events/Eligibility/Index'
+import Perks from '../../Events/Perks/Index'
 import jump from "jump.js"
 // import Faq from "../FAQ/Index"
 /* eslint-disable react/prop-types */
@@ -139,6 +142,15 @@ class EventComponentIndex extends Component {
                     </p>
                 </div> */}
                 {/* <Eventfooter /> */}
+                {this.state.data.rules ? <Rules data={this.state.data.rules} /> : null}
+
+
+                {this.state.data.elligiblity ? (
+                <Eligibility data={this.state.data.elligiblity} />
+                ) : null}
+
+
+                {this.state.data.perks ? <Perks data={this.state.data.perks} /> : null}
             </React.Fragment>
         );
     }

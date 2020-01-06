@@ -1,5 +1,5 @@
 .panel-format {
-  padding: 0 0 5rem 0;
+  padding: 10rem 0 0 0;
   display: block;
   background: #030d0f;
 }
@@ -25,13 +25,13 @@
   }
 }
 .panel-format div {
-  padding-top: 4.5rem;
+  /* padding-top: 4.5rem; */
   font-family: 'Proxima-nova-regular';
 }
 
 @media (max-width: 1200px) {
   .panel-format div {
-    padding-top: 1.5rem;
+    /* padding-top: 1.5rem; */
   }
 }
 
@@ -45,7 +45,7 @@
 
 @media (max-width: 1200px) {
   .panel-format div p {
-    pne-height: 1.3125rem;
+    line-height: 1.3125rem;
     font-size: 0.875rem;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.6);

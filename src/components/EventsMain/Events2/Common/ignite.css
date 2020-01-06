@@ -42,7 +42,7 @@ text-align:center;
 
 .suignite-parent-childparent{
 display:flex;
-flex-direction:row;
+flex-direction:column;
 }
 
 .suignite-parent-child1{
@@ -73,7 +73,8 @@ font-family: "ProximaNova-Semibold";
 
 .suignite-parent-child2{
 height:fit-content;
-width:48.54%;
+padding: 10rem 17% 0 17%;
+background: #030d0f;
 
 }
 
@@ -178,10 +179,11 @@ width:19.44vh;
 background-size: cover;
 background-position: center;
 margin-right: 3.2vw;
-border-top-right-radius: 4px;
+margin-bottom: 10%;
+/* border-top-right-radius: 4px;
 border-top-left-radius: 15px;
 border-bottom-right-radius: 16px;
-border-bottom-left-radius: 4px;
+border-bottom-left-radius: 4px; */
 }
 
 
@@ -203,6 +205,7 @@ margin-top:6.66vh;
 height:27.87vh;
 width:27.87vh;
 background:#C4C4C4;
+border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
@@ -307,7 +310,7 @@ margin-bottom:0;
 }
 .suignite-parent-child2-applyparent{
     height: 15.18vh;
-    background: #F49D35;
+   
     align-items: center;
     display: flex;
     flex-direction: column;

@@ -445,6 +445,13 @@ class NonCARegistration extends React.Component {
     const { otp, social_signup, activeStep, email, profile_type } = this.state
     return (
       <div className="profiletype_outer">
+
+        <div className="profiletype-left">
+          <div className="profiletype-left-heading">BECOME A PART OF SOMETHING DISRUPTIVE</div>
+          <div className="profiletype-left-subHeading">Join hundreds of startup enthusiasts and embark on a journey from zero to one.</div>
+        </div>
+
+
         <div className="profiletype_main">
           <div className="esummit-register-form-parent">
             <div className="esummit-register-form-heading">
