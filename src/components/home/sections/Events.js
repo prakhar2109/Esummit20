@@ -24,7 +24,9 @@ class Events extends Component {
           <img
             src={eventHeadingBackground}
             className="section-image-heading-background"
+            id="section-image-heading-background-events"
             alt=""
+            // style={{ width: 'auto' }}
           />
         </div>
         <div className="home-section-event-card-container">

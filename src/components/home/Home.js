@@ -17,7 +17,7 @@ class Home extends Component {
         <About />
         <Events />
         <Speakers />
-        <Sponsors />
+        {/* <Sponsors /> */}
         <Testemonials />
         <FAQ />
       </div>

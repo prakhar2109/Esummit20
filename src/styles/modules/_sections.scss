@@ -42,7 +42,9 @@
   @include section();
   position: relative;
   background-size: cover;
-
+  @include desktop-320-767 {
+    padding: 1.75rem 10vw;
+  }
   .home-section-content-container {
     @include display-column();
     justify-content: center;
@@ -106,9 +108,11 @@
         z-index: 1;
         width: $cardWidth;
         height: $cardHeight;
-        background: linear-gradient(180deg,
-            #000000 -53.27%,
-            rgba(0, 0, 0, 0.3) 132.69%);
+        background: linear-gradient(
+          180deg,
+          #000000 -53.27%,
+          rgba(0, 0, 0, 0.3) 132.69%
+        );
       }
 
       .home-section-event-card-background {
@@ -136,8 +140,6 @@
       }
     }
   }
-
-
 }
 
 .speakers-section-container {
@@ -181,16 +183,10 @@
     @include desktop-320-767 {
       @include display-column();
       align-items: center;
+      overflow-x: hidden;
     }
 
     .speakers-section-card {
-      @include desktop-320-767 {
-        @include display-row();
-        width: 100%;
-        justify-content: flex-start;
-        padding: 0 $gutterWidth 0 $gutterWidth * 2;
-      }
-
       @include display-column();
       justify-content: center;
       align-items: center;
@@ -198,20 +194,32 @@
       width: $cardWidth;
 
       &:first-child {
-        margin-left: 0 !important;
+        margin-left: 0;
       }
 
       &:last-child {
-        margin-right: 0 !important
+        margin-right: 0;
       }
+      @include desktop-320-767 {
+        @include display-column();
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 $gutterWidth 0 $gutterWidth * 2;
+        &:first-child {
+          margin: $gutterWidth * 2;
+        }
 
+        &:last-child {
+          margin: $gutterWidth * 2;
+        }
+      }
       .speakers-section-card-image {
         @include desktop-320-767 {
           margin: 0;
         }
 
         border-radius: 50%;
-        width: $cardWidth*0.6;
+        width: $cardWidth * 0.6;
         background-color: $secondaryBackgroundColor;
         margin-bottom: $gutterWidth * 0.8;
       }
@@ -226,6 +234,7 @@
           @include desktop-320-767 {
             @include display-row();
             text-align: left;
+            font-size: 1rem;
           }
 
           font-weight: bold;
@@ -239,6 +248,7 @@
           @include desktop-320-767 {
             @include display-row();
             text-align: left;
+            font-size: 1rem;
           }
 
           font-size: $normalFontSize * 0.8;
@@ -292,16 +302,10 @@
     @include desktop-320-767 {
       @include display-column();
       align-items: center;
+      overflow-x: hidden;
     }
 
     .sponsors-section-card {
-      @include desktop-320-767 {
-        @include display-row();
-        width: 100%;
-        justify-content: flex-start;
-        padding: 0 $gutterWidth 0 $gutterWidth * 2;
-      }
-
       @include display-column();
       justify-content: center;
       align-items: center;
@@ -309,13 +313,25 @@
       width: $cardWidth;
 
       &:first-child {
-        margin-left: 0 !important;
+        margin-left: 0;
       }
 
       &:last-child {
-        margin-right: 0 !important
+        margin-right: 0;
       }
+      @include desktop-320-767 {
+        @include display-column();
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 $gutterWidth 0 $gutterWidth * 2;
+        &:first-child {
+          margin-left: $gutterWidth * 2;
+        }
 
+        &:last-child {
+          margin-right: $gutterWidth * 2;
+        }
+      }
       .sponsors-section-card-image {
         @include desktop-320-767 {
           margin: 0;
@@ -324,8 +340,8 @@
         border: 2px solid rgba(255, 255, 255, 0.6);
         box-sizing: border-box;
         border-radius: 4px;
-        width: $cardWidth*0.6;
-        height: $cardWidth*0.6;
+        width: $cardWidth * 0.6;
+        height: $cardWidth * 0.6;
         background-color: $backgroundImageColor;
         margin-bottom: $gutterWidth * 0.8;
       }
@@ -532,7 +548,6 @@
 }
 
 .testemonial-section-container {
-
   .ant-carousel .slick-slide {
     @include display-column();
     justify-content: center;
@@ -541,13 +556,12 @@
     height: 48rem !important;
     // background: #364d79 !important;
     overflow: hidden !important;
-    padding: $gutterWidth*4 17.5vw;
+    padding: $gutterWidth * 4 17.5vw;
   }
 
   .ant-carousel {
-
     .slick-dots {
-      bottom: 6rem;
+      // bottom: 6rem;
 
       li {
         margin: 0 2.25rem;
@@ -561,13 +575,12 @@
     }
   }
 
-
   .ant-carousel .slick-slide .testemonial-card {
     @include display-column();
     background-color: $cardBackgroundColor;
     border-radius: 4px;
-    height: 30rem;
-    padding: $gutterWidth*4 8.23vw;
+    height: fit-content;
+    padding: $gutterWidth * 4 8.23vw;
     position: relative;
     align-items: center;
 
@@ -583,14 +596,13 @@
       font-size: $normalFontSize;
       font-weight: 600;
       color: rgba(255, 255, 255, 0.87);
-      margin: $gutterWidth*0.2;
+      margin: $gutterWidth * 0.2;
     }
 
     .testemonial-card-subheading {
-      font-size: $normalFontSize*0.8;
+      font-size: $normalFontSize * 0.8;
       color: rgba(255, 255, 255, 0.87);
-      margin: $gutterWidth*0.1;
-
+      margin: $gutterWidth * 0.1;
     }
 
     .testemonial-card-horizontal-line {
@@ -602,8 +614,8 @@
     .testemonial-card-content {
       color: rgba(255, 255, 255, 0.6);
       margin: $gutterWidth 0;
-      font-size: $normalFontSize*0.9;
-      line-height: $normalLineHeight*0.8;
+      font-size: $normalFontSize * 0.9;
+      line-height: $normalLineHeight * 0.8;
     }
   }
 }
@@ -634,11 +646,8 @@
     .question-container {
       position: relative;
       border-bottom: 3px solid rgba(255, 255, 255, 0.38);
-      ;
-
       &:first-child {
         border-top: 3px solid rgba(255, 255, 255, 0.38);
-        ;
       }
 
       .question-items-checkbox {
@@ -659,7 +668,7 @@
         cursor: pointer;
 
         &:checked {
-          +.question-items-container {
+          + .question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -677,9 +686,8 @@
               }
             }
 
-            >.question-items-answer {
+            > .question-items-answer {
               color: #fff;
-
 
               @include desktop-0-1281() {
                 height: 70vh;
@@ -750,11 +758,8 @@
         }
       }
     }
-
   }
 }
-
-
 
 .footer-section-container {
   z-index: 2;
@@ -854,7 +859,8 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {}
+      @include desktop-320-767 {
+      }
 
       font-weight: normal;
       color: $whiteText;
@@ -880,11 +886,12 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: $gutterWidth*4;
+  height: $gutterWidth * 4;
 
   .section-image-heading {
     @include desktop-320-767 {
       height: $gutterWidth * 0.8;
+      font-size: 2.3rem;
     }
 
     font-family: $generalFontFamily !important;
@@ -898,14 +905,46 @@
   .section-image-heading-background {
     position: absolute;
     top: 0;
-    height: $gutterWidth*4;
+    height: $gutterWidth * 4;
+    width: 100%;
+  }
 
+  #section-image-heading-background-events {
+    width: auto;
+  }
+  #section-image-heading-background-events {
+    @include desktop-320-767 {
+      width: 100%;
+    }
+  }
+  #section-image-heading-background-speaker {
+    width: auto;
+  }
+  #section-image-heading-background-speaker {
+    @include desktop-320-767 {
+      width: 100%;
+    }
+  }
+  #section-image-heading-background-sponsor {
+    width: auto;
+  }
+  #section-image-heading-background-sponsor {
+    @include desktop-320-767 {
+      width: 100%;
+    }
+  }
+  #section-image-heading-background-faq {
+    width: auto;
+  }
+  #section-image-heading-background-faq {
+    @include desktop-320-767 {
+      width: 100%;
+    }
   }
 }
 
 .section-paragraph {
-
-  padding: 0 17.5vw;
+  padding: 0 0;
   font-style: normal;
   font-weight: normal;
   font-size: $normalFontSize;
