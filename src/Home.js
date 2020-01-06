@@ -23,6 +23,8 @@ import StartupExpo from './components/startupExpo/startupexpo.jsx'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
+import ForgotPassword from './components/forgot-password/forgot-password'
+import SetNewPassword from './components/forgot-password/set-new-password'
 
 class HomeLanding extends Component {
   render() {
@@ -34,7 +36,8 @@ class HomeLanding extends Component {
           <Route exact path="/campus-ambassador" component={CampusAmbassador} />
           <Route path="/register" component={Profiletype} />
           <Route path="/login" component={Login} />
-
+          <Route path="/forgot-password" component={ForgotPassword} />
+          <Route path="/set-new-password/:uuid/" component={SetNewPassword} />
           <Route path="/ca-registration" component={Registration} />
           <Route path="/noncaregister" component={NonCARegistration} />
 

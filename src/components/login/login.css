@@ -41,6 +41,16 @@
   margin-top: 3vh;
   cursor: pointer;
 }
+.form-forgot-password-text {
+  margin: 1rem 0 0 0;
+}
+
+.form-forgot-password-text a {
+  color: #09c9c3;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
 @media only screen and (max-device-width: 900px) {
   .login-emailfield {
     padding-top: 12.5px;

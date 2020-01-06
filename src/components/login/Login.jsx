@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import FacebookLogin from 'react-facebook-login'
-import GoogleLogin from 'react-google-login'
-
+import { Link } from 'react-router-dom'
 import { BASE_URL } from '../../utils/urls'
 import './login.css'
 import color_eye from '../registration/Noncaregister/svg/color-eye.svg'
@@ -247,7 +246,7 @@ class Login extends Component {
                     <FacebookLogin
                       appId="630305827505065"
                       // appId="613264019415150"
-                      // appId="2546035355673765"  
+                      // appId="2546035355673765"
                       size="medium"
                       autoLoad={false}
                       disableMobileRedirect={true}
@@ -353,6 +352,10 @@ class Login extends Component {
                       </div>
                       <div className="esummit-register-form-field-error">
                         {pass_error}
+                      </div>
+
+                      <div className="form-forgot-password-text">
+                        <Link to="/forgot-password">Forgot Password?</Link>
                       </div>
                       <div
                         className="loginformSubmit"
