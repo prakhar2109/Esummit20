@@ -160,7 +160,6 @@ class NonCARegistration extends React.Component {
   }
 
   responseFacebook = response => {
-    console.log(response)
     this.setState(
       {
         name: response.name,

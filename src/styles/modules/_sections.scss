@@ -757,20 +757,7 @@
 
 
 .footer-section-container {
-  z-index: 2;
-  @include section();
-  @include display-row();
-  justify-content: space-between;
-  padding: 6rem 14%;
-  background-color: $primaryBackgroundColor;
-  align-items: flex-start;
-
-  @include desktop-1025-1280 {
-    padding: 6rem 14%;
-  }
-
   @include desktop-768-1024 {
-    padding: 6rem 14%;
     @include display-column();
     min-height: fit-content;
   }
@@ -778,8 +765,15 @@
   @include desktop-320-767 {
     @include display-column();
     min-height: fit-content;
-    padding: 6rem 14%;
   }
+
+  z-index: 2;
+  @include section();
+  @include display-row();
+  justify-content: space-between;
+  padding: 6rem 6%;
+  background-color: $primaryBackgroundColor;
+  align-items: flex-start;
 
   .footer-section-logo {
     @include desktop-320-767 {
@@ -795,7 +789,19 @@
       margin-bottom: $gutterWidth * 2;
     }
 
-    width: $gutterWidth * 10;
+    width: $gutterWidth * 7;
+  }
+
+  .footer-section-child-one {
+    width: 25%;
+  }
+
+  .footer-section-child-two {
+    width: 30%;
+  }
+
+  .footer-section-child-three {
+    width: 35%;
   }
 
   .footer-section-contact-container {
@@ -833,8 +839,7 @@
     line-height: $normalLineHeight;
     text-align: left;
     width: fit-content;
-    margin: 0 $gutterWidth * 1.4;
-
+    margin: 0;
     .footer-section-contact-heading {
       @include desktop-320-767 {
         width: 30%;
@@ -850,7 +855,7 @@
 
       font-weight: bold;
       color: $primaryColor;
-      margin: 0 0 $gutterWidth 0;
+      margin: 1rem 0 0 0;
     }
 
     .footer-section-contact-subheading {

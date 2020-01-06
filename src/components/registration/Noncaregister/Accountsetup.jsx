@@ -60,7 +60,6 @@ export default class AccountSetup extends Component {
     }
   }
   handleSubmit = () => {
-    console.log(this.state)
     if (this.state.name !== '') {
       if (this.state.email !== '') {
         let data_email = {
@@ -230,7 +229,6 @@ export default class AccountSetup extends Component {
     //     image_url: image_url,
     //     social_signup: social_signup
     // }
-    console.log(response)
     if (!response.email) {
       alert('EmailID not registered in Facebook')
     } else {

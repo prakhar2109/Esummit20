@@ -280,7 +280,6 @@ class SideNavbar extends Component {
                     rel="noopener noreferrer"
                     // href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
                     href="https://drive.google.com/file/d/1_E8seQecjY77O0CrAlRR9hHgZcFS5jaE/view?usp=sharing"
-                    
                   >
                     CA RULEBOOK
                   </a>
