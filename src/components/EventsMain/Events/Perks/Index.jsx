@@ -5,10 +5,11 @@ import { BASE_URL } from '../../../../utils/urls';
 export function SinglePerk(props) {
     return (
         <div className="single-perk">
-            <img src={props.src} style={props.style} alt="Perk Photo" />
-            <p className="perk-title">{props.perkTitle}</p>
-            <p className="perk-about">{props.perkAbout}</p>
+            {/* <img src={props.src} style={props.style} alt="Perk Photo" /> */}
+            <div className="perk-title">{props.perkTitle} &nbsp;&nbsp;:&nbsp;&nbsp; </div>
+            <div className="perk-about">{props.perkAbout}</div>
         </div>
+
     )
 }
 
@@ -20,6 +21,7 @@ export default class PerksSection extends Component {
 
                 <div className="perk-board">
                     {this.props.data.map((perks, index) =>
+                        <>
                         <SinglePerk
                             key={index}
                             src={BASE_URL + perks.image}
@@ -27,6 +29,9 @@ export default class PerksSection extends Component {
                             perkTitle={perks.heading}
                             perkAbout={perks.description}
                         />
+                        
+                        <br/>
+                        </>
                     )}
                 </div>
             </div>

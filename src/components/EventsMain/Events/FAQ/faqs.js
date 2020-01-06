@@ -48,12 +48,12 @@ class FAQBoard extends Component {
             {faqList.map(update => (
               <SingleFAQ key={update.id} update={update} />
             ))}
-            <center>
+            {/* <center>
               <NavLink to="/faq">
                 {' '}
                 <button className="view_all"> VIEW ALL </button>
               </NavLink>
-            </center>
+            </center> */}
           </div>
         </section>
       </Element>

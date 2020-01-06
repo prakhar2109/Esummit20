@@ -12,12 +12,12 @@
 }
 .ideastorm {
   padding-top: 50px;
-} */
-.ideastorm {
-  background: #010c0f;
+/* } */
+/* .ideastorm {
+  background: #030d0f;
 }
 .header {
-  background: #010c0f;
+  background: #030d0f;
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   display: -ms-grid;
@@ -55,7 +55,7 @@
   cursor: pointer;
   color: #ffffff;
   margin-left: 40px;
-}
+} */ 
 
 /* .ideastorm .idea {
   background: url("./static/1920.png");

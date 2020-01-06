@@ -13,6 +13,7 @@ import { BASE_URL } from "../../../../utils/urls";
 import { NavLink } from "react-router-dom";
 import esummit from "../Common/es.png";
 import EventHeader from "../Common/Navbar/header";
+import Partners from '../Partners/Partners'
 import './index.css'
 /* eslint-disable react/prop-types */
 
@@ -116,10 +117,10 @@ class EventComponentIndex extends Component {
         ) : null}
 
 
-        {this.state.data.rules ? <Rules data={this.state.data.rules} /> : null}
+        {this.state.data.rules&&this.state.data.rules.length > 0 ? <Rules data={this.state.data.rules} /> : null}
 
 
-        {this.state.data.elligiblity ? (
+        {this.state.data.elligiblity && this.state.data.elligiblity.length > 0 ? (
           <Eligibility data={this.state.data.elligiblity} />
         ) : null}
 
@@ -136,7 +137,7 @@ class EventComponentIndex extends Component {
         ) : null} */}
 
 
-        
+        {/* <Partners/> */}
         {this.state.data.faq && this.state.data.faq.length > 0 ? <FAQ data={this.state.data.faq} /> : null}
 
 

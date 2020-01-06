@@ -1,9 +1,9 @@
 .perk-board {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   align-items: baseline;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 .perk-parent {
   padding: 10rem 17% 0 17%;
@@ -12,30 +12,32 @@
   font-family: 'Poppins-regular';
   font-style: normal;
   font-weight: 600;
+  margin-bottom: 0;
+  white-space: nowrap;
   font-size: 22px;
   line-height: 36px;
-  text-align: center;
+  /* text-align: center; */
   color: rgba(255, 255, 255, 0.87);
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .single-perk {
-  margin: 3rem 2rem;
+  /* margin: 3rem 2rem; */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .perk-about {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 140%;
+  font-size: 22px;
+  line-height: 36px;
   /* identical to box height, or 28px */
-  width: 300px;
-  text-align: center;
+  /* width: 300px; */
+  /* text-align: center; */
   color: rgba(255, 255, 255, 0.6);
 }
 .perk-head {
