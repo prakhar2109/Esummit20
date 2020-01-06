@@ -10,6 +10,7 @@ class FAQ extends Component {
           <img
             src={faqHeadingBackground}
             className="section-image-heading-background"
+            id="section-image-heading-background-faq"
             alt=""
           />
         </div>

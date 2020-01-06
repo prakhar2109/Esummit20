@@ -15,6 +15,7 @@ class Sponsors extends Component {
           <img
             src={sponsorsHeadingBackground}
             className="section-image-heading-background"
+            id="section-image-heading-background-sponsor"
             alt=""
           />
         </div>

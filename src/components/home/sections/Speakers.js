@@ -15,6 +15,7 @@ class Speakers extends Component {
           <img
             src={speakersHeadingBackground}
             className="section-image-heading-background"
+            id="section-image-heading-background-speaker"
             alt=""
           />
         </div>

@@ -77,9 +77,26 @@ class index extends Component {
         >
           <li className="navbar-items">
             <Link
+              to="/events"
+              className="navbar-links"
+              rel="noopener noreferrer"
+            >
+              Events
+            </Link>
+          </li>
+          <li className="navbar-items">
+            <Link
+              to="/Speakers"
+              className="navbar-links"
+              rel="noopener noreferrer"
+            >
+              Speakers
+            </Link>
+          </li>
+          <li className="navbar-items">
+            <Link
               to="/campus-ambassador"
               className="navbar-links"
-              target="_blank"
               rel="noopener noreferrer"
             >
               Campus Ambassador
@@ -87,24 +104,22 @@ class index extends Component {
           </li>
           <li className="navbar-items">
             <Link
-              to="/ideastorm"
+              to="/startupignite"
               className="navbar-links"
-              target="_blank"
               rel="noopener noreferrer"
             >
-              Ideastorm
+              Startup Ignite
             </Link>
           </li>
-          <li className="navbar-items">
+          {/* <li className="navbar-items">
             <Link
-              to="/startupexpo"
+              to="/Sponsors"
               className="navbar-links"
-              target="_blank"
               rel="noopener noreferrer"
             >
-              Startupexpo
+              Sponsors
             </Link>
-          </li>
+          </li> */}
           {tabs}
         </ul>
 
@@ -135,7 +150,6 @@ class index extends Component {
               </Link>
             </li>
             <li className="navbar-mobile-items">
-
               <Link
                 to="/ideastorm"
                 className="navbar-links"
@@ -146,7 +160,6 @@ class index extends Component {
               </Link>
             </li>
             <li className="navbar-mobile-items">
-
               <Link
                 to="/startupexpo"
                 className="navbar-links"
@@ -155,7 +168,6 @@ class index extends Component {
               >
                 Startupexpo
               </Link>
-            
             </li>
             {/* <li className="navbar-mobile-items">
               <Link to="/register" className="navbar-links">
