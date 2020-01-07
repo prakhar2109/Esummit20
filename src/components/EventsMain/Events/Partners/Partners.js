@@ -6,8 +6,15 @@ import sponsorsHeadingBackground from '../../../../assets/sponsors-heading-backg
 // import tarunCard from '../../../assets/tarun.png'
 // import gulzarCard from '../../../assets/gulzar.png'
 // import sharadCard from '../../../assets/sharad.png'
+import { BASE_URL } from "../../../../utils/urls"
+
 import './partners.css'
+/* eslint-disable react/prop-types */
+
 class Partners extends Component {
+  componentDidMount(){
+    console.log(this.props.data)
+  }
   render() {
     return (
       <div className="sponsors-section-container events-partners-parent">
@@ -21,13 +28,17 @@ class Partners extends Component {
         </div> */}
         <div className="events-partner-head">Partners</div>
         <div className="sponsors-section-card-container">
-          <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+          {this.props.data.map((partner,index)=>
+            <div className="sponsors-section-card" key={index}>
+            <img src={BASE_URL+partner.logo} alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Kamal Bali</div>
+              <div className="sponsors-section-card-heading">{partner.name}</div>
             </div>
           </div>
-          <div className="sponsors-section-card">
+          
+          )}
+          
+          {/* <div className="sponsors-section-card">
             <img src="" alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
               <div className="sponsors-section-card-heading">
@@ -60,7 +71,7 @@ class Partners extends Component {
             <div className="sponsors-section-card-content">
               <div className="sponsors-section-card-heading">Sharad Sagar</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     )
@@ -68,3 +79,4 @@ class Partners extends Component {
 }
 
 export default Partners
+/* eslint-disable react/prop-types */

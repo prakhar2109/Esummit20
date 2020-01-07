@@ -21,45 +21,63 @@ export default class EventsMainIndex extends Component {
             faq: ''
         }
     } 
+  
     componentDidMount() {
         // document 
         //     .getElementById("loader")
         //     .style
         //     .display = "grid";
+    
         console.log(this.props,"maaaaaaaaaaaxxxxxxxxxxxxxxxx")
         let event_name = this.props.match.params.id.charAt(0).toUpperCase() + this.props.match.params.id.slice(1)
         console.log(event_name,"maaaaaaaaaaaxxxxxxxxxxxxxxxx")
         let data = {
             event_name: event_name
         }
-        axios({
-            method: "post",
-            url: BASE_URL + "/v1/api/eventdetail/",
-            data: data
-        }).then((r) => {
-            this.setState({
-                data: r.data.event_data[0],
-                faq: r.data
-            })
+        
 
-            console.log(r.data,"data")
-            // document
-            //     .getElementById("loader")
-            //     .style
-            //     .display = "none";
-        }).catch((response) => {
-            // document
-            //     .getElementById("loader")
-            //     .style
-            //     .display = "none";
-            // window.location.href = "/"
-        });
+        axios.get(BASE_URL + '/v1/api/events/').then(res => {
+            console.log(res.data,"events")
+              // document.getElementById('loader').style.display = 'none'
+            //   for(const event of res.data)
+            //   {
+            //       if(event.title===data.event_name)
+            //       id=event.id
+            //   }
+            let id = res.data.find((event) => event.title == event_name).id
+            return axios({
+                method: "get",
+                url: BASE_URL + `/v1/api/event_details/${id}/`,
+            })
+            .then((r) => {
+                this.setState({
+                    data: r.data.event_data,
+                    faq: r.data,
+                    event1data:r.data
+                })
+    
+                console.log(r.data,"data")
+                // document
+                //     .getElementById("loader")
+                //     .style
+                //     .display = "none";
+            }).catch((response) => {
+                // document
+                //     .getElementById("loader")
+                //     .style
+                //     .display = "none";
+                // window.location.href = "/"
+            });
+        })
+
+
+        
     }
     render() {
         return (
             <React.Fragment>
                 {this.state.data.event_type2 === "TYPE1" ?
-                    <Route exact path="/events/:id" render={props => (<Events {...props} data={this.state.data} />)} /> :
+                    <Route exact path="/events/:id" render={props => (<Events {...props} data={this.state.event1data} />)} /> :
                     this.state.data.event_type2 === "TYPE2" ?
                     <Route exact path="/events/:id" render={props => (<Events2 {...props} faq={this.state.faq} data={this.state.data} />)} />
                     : null

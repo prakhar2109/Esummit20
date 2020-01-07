@@ -25,7 +25,7 @@
   }
 }
 .timelineHeader .title {
-  font-family: 'Poppins';
+  font-family: 'Poppins-Bold' !important;
   font-style: normal;
   font-weight: bold;
   font-size: 2rem;
@@ -42,27 +42,37 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.timelineHeader .rounds > div > a {
+.timelineInactive{
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.875rem;
   margin-left: 5.125rem;
   color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.Active{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin-left: 5.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
 @media (max-width: 1200px) {
-  .timelineHeader .rounds > div > a {
+  .timelineInactive {
     font-size: 1rem;
     margin-left: 2.125rem;
   }
 }
 @media (max-width: 500px) {
-  .timelineHeader .rounds > div > a {
+  .timelineInactive {
     font-size: 1rem;
     margin-left: 1.125rem;
   }
 }
-.timelineHeader .rounds .active {
+.timelineHeader .rounds .Active {
   border-bottom: 2px solid #359d9a;
   color: rgba(255, 255, 255, 0.87);
 }

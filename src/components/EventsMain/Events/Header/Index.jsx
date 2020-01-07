@@ -69,7 +69,7 @@ export default class HeaderSection extends Component {
               <a
                 without
                 rel="noopener noreferrer"
-                href={this.props.applydata[0].registration_url}
+                href={this.props.applydata.registration_url}
                 target="_blank"
               >
                <span style={{ textTransform: "uppercase" }}>
