@@ -27,7 +27,7 @@ class FAQ extends Component {
               />
               <div className="question-items-container ">
                 <div className="question-items-container-question">
-                  How to reach IIT Roorkee ?
+                  What is Esummit?
                   <div className="plus-container">
                     <hr className="dash" />
                     <hr className="dash" />
@@ -35,7 +35,7 @@ class FAQ extends Component {
                 </div>
 
                 <div className="question-items-answer">
-                  eSummit being the flagship event of ECell, is held annually
+                  ESummit being the flagship event of ECell, is held annually
                   brings together the academic community, venture capitalists,
                   new age entrepreneurs and all those passionate about
                   entrepreneurship to common grounds.

@@ -15,6 +15,7 @@ import recreationalNightCard from '../../../assets/recreational.png'
 import schoolEventsCard from '../../../assets/school.png'
 import startupCard from '../../../assets/startup.png'
 import workshopsCard from '../../../assets/workshops.png'
+import {Link} from 'react-router-dom'
 class Events extends Component {
   render() {
     return (
@@ -30,6 +31,8 @@ class Events extends Component {
           />
         </div>
         <div className="home-section-event-card-container">
+        <Link to='/events/Ideastorm'>
+
           <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
             <img
@@ -39,6 +42,10 @@ class Events extends Component {
             />
             <div className="home-section-event-card-heading">Ideastorm</div>
           </div>
+          </Link>
+
+          <Link to='/events/Hardwareproductathon'>
+
           <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
             <img
@@ -46,8 +53,25 @@ class Events extends Component {
               className="home-section-event-card-background"
               alt=""
             />
-            <div className="home-section-event-card-heading">Productathon</div>
+            <div className="home-section-event-card-heading">Hardware Productathon</div>
           </div>
+          </Link>
+
+          <Link to='/events/Softwareproductathon'>
+
+<div className="home-section-event-card">
+  <div className="home-section-event-card-background-tint" />
+  <img
+    src={productathonCard}
+    className="home-section-event-card-background"
+    alt=""
+  />
+  <div className="home-section-event-card-heading">Software Productathon</div>
+</div>
+</Link>
+<Link to='/events/Investorvista'>
+
+
           <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
             <img
@@ -59,6 +83,9 @@ class Events extends Component {
               Investor’s Vista
             </div>
           </div>
+          </Link>
+          <Link to='/events/Startupexpo'>
+
           <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
             <img
@@ -66,8 +93,11 @@ class Events extends Component {
               className="home-section-event-card-background"
               alt=""
             />
+
             <div className="home-section-event-card-heading">Startup Expo</div>
           </div>
+          </Link>
+
           <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
             <img
@@ -77,7 +107,7 @@ class Events extends Component {
             />
             <div className="home-section-event-card-heading">Conclaves</div>
           </div>
-          <div className="home-section-event-card">
+          {/* <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
             <img
               src={leadershipCard}
@@ -87,11 +117,11 @@ class Events extends Component {
             <div className="home-section-event-card-heading">
               Leadership Series
             </div>
-          </div>
+          </div> */}
         </div>
-        <a href="#" className="section-button">
+        <Link to ='/events' className="section-button">
           <button>view all events</button>
-        </a>
+        </Link>
       </div>
     )
   }

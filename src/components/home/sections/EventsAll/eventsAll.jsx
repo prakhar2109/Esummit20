@@ -15,6 +15,8 @@ import recreationalNightCard from '../../../../assets/recreational.png'
 import schoolEventsCard from '../../../../assets/school.png'
 import startupCard from '../../../../assets/startup.png'
 import workshopsCard from '../../../../assets/workshops.png'
+import { Link } from 'react-router-dom'
+
 import './eventsAll.css'
 class Events extends Component {
   render() {
@@ -35,7 +37,9 @@ class Events extends Component {
             />
           </div>
           <div className="home-section-event-card-container">
+          <Link to='/events/Ideastorm'>
             <div className="home-section-event-card">
+            
               <div className="home-section-event-card-background-tint" />
               <img
                 src={ideastormCard}
@@ -43,8 +47,11 @@ class Events extends Component {
                 alt=""
               />
               <div className="home-section-event-card-heading">Ideastorm</div>
+             
             </div>
-            <div className="home-section-event-card">
+            </Link>
+            <Link to='/events/Softwareproductathon'>
+              <div className="home-section-event-card">
               <div className="home-section-event-card-background-tint" />
               <img
                 src={productathonCard}
@@ -52,9 +59,24 @@ class Events extends Component {
                 alt=""
               />
               <div className="home-section-event-card-heading">
-                Productathon
+                Software Productathon
               </div>
             </div>
+            </Link>
+            <Link to='/events/Hardwareproductathon'>
+              <div className="home-section-event-card">
+              <div className="home-section-event-card-background-tint" />
+              <img
+                src={productathonCard}
+                className="home-section-event-card-background"
+                alt=""
+              />
+              <div className="home-section-event-card-heading">
+               Hardware Productathon
+              </div>
+            </div>
+            </Link>
+            <Link to='/events/Investorvista'>
             <div className="home-section-event-card">
               <div className="home-section-event-card-background-tint" />
               <img
@@ -66,6 +88,8 @@ class Events extends Component {
                 Investor’s Vista
               </div>
             </div>
+            </Link>
+            <Link to='/events/Startupexpo'>
             <div className="home-section-event-card">
               <div className="home-section-event-card-background-tint" />
               <img
@@ -77,6 +101,9 @@ class Events extends Component {
                 Startup Expo
               </div>
             </div>
+            </Link>
+            
+
             <div className="home-section-event-card">
               <div className="home-section-event-card-background-tint" />
               <img
@@ -86,6 +113,7 @@ class Events extends Component {
               />
               <div className="home-section-event-card-heading">Conclaves</div>
             </div>
+           
             <div className="home-section-event-card">
               <div className="home-section-event-card-background-tint" />
               <img

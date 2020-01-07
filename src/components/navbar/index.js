@@ -84,7 +84,7 @@ class index extends Component {
               Events
             </Link>
           </li>
-          <li className="navbar-items">
+          {/* <li className="navbar-items">
             <Link
               to="/Speakers"
               className="navbar-links"
@@ -92,7 +92,7 @@ class index extends Component {
             >
               Speakers
             </Link>
-          </li>
+          </li> */}
           <li className="navbar-items">
             <Link
               to="/campus-ambassador"
@@ -104,11 +104,22 @@ class index extends Component {
           </li>
           <li className="navbar-items">
             <Link
-              to="/startupignite"
+              to="/events/Startupexpo"
+              target='_blank'
               className="navbar-links"
               rel="noopener noreferrer"
             >
-              Startup Ignite
+              Startup Expo
+            </Link>
+          </li>
+          <li className="navbar-items">
+            <Link
+              to="/events/Ideastorm"
+              target='_blank'
+              className="navbar-links"
+              rel="noopener noreferrer"
+            >
+              Ideastorm
             </Link>
           </li>
           {/* <li className="navbar-items">
@@ -141,6 +152,16 @@ class index extends Component {
           >
             <li className="navbar-mobile-items">
               <Link
+                to="/events"
+                className="navbar-links"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Events
+              </Link>
+            </li>
+            <li className="navbar-mobile-items">
+              <Link
                 to="/campus-ambassador"
                 className="navbar-links"
                 target="_blank"
@@ -161,7 +182,7 @@ class index extends Component {
             </li>
             <li className="navbar-mobile-items">
               <Link
-                to="/startupexpo"
+                to="/events/Startupexpo"
                 className="navbar-links"
                 target="_blank"
                 rel="noopener noreferrer"
