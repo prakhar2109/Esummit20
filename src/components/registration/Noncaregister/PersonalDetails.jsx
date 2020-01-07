@@ -874,7 +874,7 @@ class PersonalDetails extends Component {
                   </div>
                   {profile_type !== 'professional' ? (
                     <div className="esummit-register-form-input-specific">
-                      <label htmlFor="inputCollege">COLLEGEss</label>
+                      <label htmlFor="inputCollege">COLLEGE</label>
                       <div className="esummit-register-form-input-specific-inner">
                         <CreatableSelect
                           styles={custom_styles}
@@ -912,7 +912,7 @@ class PersonalDetails extends Component {
                 </div>
               ) : profile_type !== 'professional' ? (
                 <div className="esummit-register-form-input-specific">
-                  <label htmlFor="inputCollege">COLLEGEssssssss</label>
+                  <label htmlFor="inputCollege">COLLEGE</label>
                   <div className="esummit-register-form-input-specific-inner">
                     <input
                       id="inputCollege"

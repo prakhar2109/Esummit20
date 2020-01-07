@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 /* eslint-disable react/prop-types */
 
 export default class ApplyNowIdenx extends Component {
@@ -15,7 +15,7 @@ export default class ApplyNowIdenx extends Component {
               href={this.props.data[0].registration_url}
               target="_blank"
             >
-              <span style={{ textTransform: "uppercase" }}>
+              <span style={{ textTransform: 'uppercase' }}>
                 APPLY FOR {this.props.name}
               </span>
             </a>
@@ -32,15 +32,15 @@ export default class ApplyNowIdenx extends Component {
               href={this.props.data[0].registration_url}
               target="_blank"
             >
-              {" "}
-              <span style={{ textTransform: "uppercase" }}>
+              {' '}
+              <span style={{ textTransform: 'uppercase' }}>
                 APPLY FOR {this.props.name}
               </span>
             </a>
           </center>
         </div>
       </React.Fragment>
-    );
+    )
   }
 }
 /* eslint-disable react/prop-types */

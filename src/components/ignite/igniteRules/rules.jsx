@@ -10,17 +10,21 @@ class Rules extends Component {
 
         <ol>
           <li>
-            Each team may consist of atleast three to atmost five members, who need not belong to the same organization.
+            Each team may consist of atleast three to atmost five members, who
+            need not belong to the same organization.
           </li>
 
           <li>
-            Multiple teams from the same organization are allowed to participate in the event.
+            Multiple teams from the same organization are allowed to participate
+            in the event.
           </li>
           <li>
-            Multiple teams from the same organization are allowed to participate in the event.
+            Multiple teams from the same organization are allowed to participate
+            in the event.
           </li>
           <li>
-            Multiple teams from the same organization are allowed to participate in the event.
+            Multiple teams from the same organization are allowed to participate
+            in the event.
           </li>
         </ol>
       </div>

@@ -1,46 +1,38 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import esummit from "./static/es.png";
-import { withRouter } from "react-router-dom";
-import "./css/nav.scss";
-import { HashLink } from "react-router-hash-link";
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+import esummit from './static/es.png'
+import { withRouter } from 'react-router-dom'
+import './css/nav.scss'
+import { HashLink } from 'react-router-hash-link'
 
 class Nav extends Component {
   componentDidMount() {
-    var height = document.getElementById("nav").offsetHeight;
-    height = height - 5;
-    height = height + "px";
+    var height = document.getElementById('nav').offsetHeight
+    height = height - 5
+    height = height + 'px'
 
-    document.getElementById("body").style.paddingTop = height;
+    document.getElementById('body').style.paddingTop = height
   }
-
 
   componentWillUnmount() {
-    document.getElementById("body").style.paddingTop = 0;
-
+    document.getElementById('body').style.paddingTop = 0
   }
   render() {
+    let token = localStorage.getItem('user_token')
 
-    let token = localStorage.getItem("user_token");
+    let tabs
 
-    let tabs;
-
-    if (token !== undefined && token !== null && token !== "") {
+    if (token !== undefined && token !== null && token !== '') {
       tabs = (
-
         <span>
           <NavLink to="/dashboard/invite">
-            <span style={{ marginLeft: "3vw" }} className="login">Dashboard</span>
+            <span style={{ marginLeft: '3vw' }} className="login">
+              Dashboard
+            </span>
           </NavLink>
-
-
-
         </span>
-
       )
-    }
-
-    else {
+    } else {
       tabs = (
         <span>
           <NavLink to="/login">
@@ -55,16 +47,13 @@ class Nav extends Component {
     return (
       <>
         <section id="nav" className="nav_pc">
-
           <span>
             <HashLink to="/#events">Events</HashLink>
           </span>
 
-
           <span>
             <HashLink to="/#speakers">Speakers</HashLink>
           </span>
-
 
           <span>
             <HashLink to="/#sponsors">Partners </HashLink>
@@ -79,7 +68,7 @@ class Nav extends Component {
           </span>
           <span className="eslogo">
             <NavLink to="/">
-              <img style={{ height: "7vh" }} alt="ESummit Logo" src={esummit} />
+              <img style={{ height: '7vh' }} alt="ESummit Logo" src={esummit} />
             </NavLink>
           </span>
           <span>
@@ -89,13 +78,11 @@ class Nav extends Component {
             <NavLink to="/ignite">Startup Ignite</NavLink>
           </span>
 
-          <span>
-            {tabs}
-          </span>
+          <span>{tabs}</span>
         </section>
       </>
-    );
+    )
   }
 }
 
-export default withRouter(Nav);
+export default withRouter(Nav)

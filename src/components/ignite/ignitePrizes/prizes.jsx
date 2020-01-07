@@ -8,13 +8,14 @@ class Prizes extends Component {
         <p>PRIZES</p>
         <ol>
           <li>
-            There is no restriction on any individual to participate Members of all educational and professional fraternities are welcome to participate
+            There is no restriction on any individual to participate Members of
+            all educational and professional fraternities are welcome to
+            participate
           </li>
+          <li>The participating Start-up should be more than one years old.</li>
           <li>
-            The participating Start-up should be more than one years old.
-          </li>
-          <li>
-            Ventures which acquired funding from external investor network cannot participate.
+            Ventures which acquired funding from external investor network
+            cannot participate.
           </li>
         </ol>
       </div>

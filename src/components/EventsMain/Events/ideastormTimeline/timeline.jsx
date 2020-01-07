@@ -9,27 +9,35 @@ class Timeline extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      activestate:1,
-      roundcontent:null
+      activestate: 1,
+      roundcontent: null
     }
   }
-  setActive=(data)=>{
-    this.setState({activestate:data.round_number})
+  setActive = data => {
+    this.setState({ activestate: data.round_number })
   }
   render() {
     // const match = this.props.match
-    console.log(this.props.data,"timeline")
+    console.log(this.props.data, 'timeline')
     return (
       <div className="timeline">
         <div className="timelineHeader">
           <div className="title">TIMELINE</div>
           <div className="rounds">
-              {this.props.data.map((round,index)=>
-                <div key={index} className={this.state.activestate===round.rounds_details[0].round_number?"Active":"timelineInactive"} 
-                onClick={()=>this.setActive(round.rounds_details[0])}>
+            {this.props.data.map((round, index) => (
+              <div
+                key={index}
+                className={
+                  this.state.activestate ===
+                  round.rounds_details[0].round_number
+                    ? 'Active'
+                    : 'timelineInactive'
+                }
+                onClick={() => this.setActive(round.rounds_details[0])}
+              >
                 ROUND {round.rounds_details[0].round_number}
               </div>
-              )}
+            ))}
           </div>
         </div>
         {/* <Switch>
@@ -42,8 +50,9 @@ class Timeline extends Component {
             component={props => <Round {...props} />}
           />
         </Switch> */}
-        {this.props.data.length>0 ? <Round round_number={this.state.activestate} data={this.props.data}/>:null}
-
+        {this.props.data.length > 0 ? (
+          <Round round_number={this.state.activestate} data={this.props.data} />
+        ) : null}
       </div>
     )
   }

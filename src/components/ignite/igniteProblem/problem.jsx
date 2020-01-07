@@ -5,7 +5,9 @@ class ProblemStatement extends Component {
     return (
       <div className="format">
         <p className="heading">PROBLEM STATEMENT</p>
-        <p className="content">To view the problem statement click <a>click here</a></p>
+        <p className="content">
+          To view the problem statement click <a>click here</a>
+        </p>
       </div>
     )
   }

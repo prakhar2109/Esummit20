@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "./style.css";
-import Header from "../Common/header";
+import React, { Component } from 'react'
+import './style.css'
+import Header from '../Common/header'
 /* eslint-disable react/prop-types */
 
 export default class EventCoordinatorSection extends Component {
@@ -9,7 +9,6 @@ export default class EventCoordinatorSection extends Component {
       <div className="coordinator-parent">
         <div className="coordinator-head">EVENT CO-ORDINATOR </div>
         <p className="coordinator-body">
-
           {this.props.data.map((cordinate, index) => (
             <div key={index} className="coordinator-info">
               {cordinate.name}
@@ -21,7 +20,7 @@ export default class EventCoordinatorSection extends Component {
           ))}
         </p>
       </div>
-    );
+    )
   }
 }
 /* eslint-disable react/prop-types */

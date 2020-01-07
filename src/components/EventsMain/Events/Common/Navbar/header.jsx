@@ -1,79 +1,79 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import { BASE_URL } from "../../../../../utils/urls";
+import { BASE_URL } from '../../../../../utils/urls'
 
-import "./header.css";
-import jump from "jump.js";
+import './header.css'
+import jump from 'jump.js'
 /* eslint-disable react/prop-types */
 
 export default class ComingSoon extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       displaynavbar: false,
       navdisplay: true,
-      isActive: window.location.pathname.substring(1),
-    };
+      isActive: window.location.pathname.substring(1)
+    }
   }
   componentDidMount() {
     if (window.innerWidth >= 768) {
-      this.setState({ navdisplay: false });
+      this.setState({ navdisplay: false })
     }
   }
 
   timeline = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump(".timeline", { offset: -70 });
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('.timeline', { offset: -70 })
+  }
   register = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump(".register");
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('.register')
+  }
 
   Rules = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump(".Rules", { offset: -70 });
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('.Rules', { offset: -70 })
+  }
 
   erks = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump(".erks", { offset: -70 });
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('.erks', { offset: -70 })
+  }
 
   faq_idea = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump("#faq_idea", { offset: -70 });
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('#faq_idea', { offset: -70 })
+  }
 
   register = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump(".register");
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('.register')
+  }
   coordinator = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump(".coordinator");
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('.coordinator')
+  }
 
   eligiblity = () => {
     this.setState({
-      displaynavbar: !this.state.displaynavbar,
-    });
-    jump(".eligiblity");
-  };
+      displaynavbar: !this.state.displaynavbar
+    })
+    jump('.eligiblity')
+  }
 
   render() {
     return (
@@ -82,9 +82,9 @@ export default class ComingSoon extends Component {
           className="idealogo"
           style={{
             backgroundImage: `url(${BASE_URL + this.props.logo[0].logo})`,
-            backgroundPosition: "center",
-            backgroundSize: "40%",
-            backgroundRepeat: "no-repeat",
+            backgroundPosition: 'center',
+            backgroundSize: '40%',
+            backgroundRepeat: 'no-repeat'
           }}
         />
 
@@ -93,12 +93,12 @@ export default class ComingSoon extends Component {
             <div
               className={
                 !this.state.displaynavbar
-                  ? "new-navbarevent-i"
-                  : "new-navbarevent-i span-cross"
+                  ? 'new-navbarevent-i'
+                  : 'new-navbarevent-i span-cross'
               }
               onClick={() =>
                 this.setState({
-                  displaynavbar: !this.state.displaynavbar,
+                  displaynavbar: !this.state.displaynavbar
                 })
               }
             >
@@ -117,27 +117,27 @@ export default class ComingSoon extends Component {
             <div
               className={
                 this.state.displaynavbar
-                  ? "ecell-mobile-navbarevent-active"
-                  : "ecell-mobile-navbar-inactive"
+                  ? 'ecell-mobile-navbarevent-active'
+                  : 'ecell-mobile-navbar-inactive'
               }
             >
               <div
                 onClick={this.timeline}
                 className={
                   this.state.displaynavbar
-                    ? "navbar-show ecell-mobile-menuback"
-                    : "navbar-hide ecell-mobile-menuback"
+                    ? 'navbar-show ecell-mobile-menuback'
+                    : 'navbar-hide ecell-mobile-menuback'
                 }
               >
                 <p
                   className={
-                    this.state.isActive === "timeline"
-                      ? "esummit-navbarevent-cto-active"
-                      : "esummit-navbarevent-cto-inactive"
+                    this.state.isActive === 'timeline'
+                      ? 'esummit-navbarevent-cto-active'
+                      : 'esummit-navbarevent-cto-inactive'
                   }
                   onClick={() =>
                     this.setState({
-                      isActive: "timeline",
+                      isActive: 'timeline'
                     })
                   }
                 >
@@ -148,18 +148,18 @@ export default class ComingSoon extends Component {
               <div
                 onClick={this.Rules}
                 className={
-                  this.state.displaynavbar ? "navbar-show" : "navbar-hide"
+                  this.state.displaynavbar ? 'navbar-show' : 'navbar-hide'
                 }
               >
                 <p
                   className={
-                    this.state.isActive === "rules"
-                      ? "esummit-navbarevent-cto-active"
-                      : "esummit-navbarevent-cto-inactive"
+                    this.state.isActive === 'rules'
+                      ? 'esummit-navbarevent-cto-active'
+                      : 'esummit-navbarevent-cto-inactive'
                   }
                   onClick={() =>
                     this.setState({
-                      isActive: "rules",
+                      isActive: 'rules'
                     })
                   }
                 >
@@ -170,18 +170,18 @@ export default class ComingSoon extends Component {
               <div
                 onClick={this.eligiblity}
                 className={
-                  this.state.displaynavbar ? "navbar-show" : "navbar-hide"
+                  this.state.displaynavbar ? 'navbar-show' : 'navbar-hide'
                 }
               >
                 <p
                   className={
-                    this.state.isActive === "eligible"
-                      ? "esummit-navbarevent-cto-active"
-                      : "esummit-navbarevent-cto-inactive"
+                    this.state.isActive === 'eligible'
+                      ? 'esummit-navbarevent-cto-active'
+                      : 'esummit-navbarevent-cto-inactive'
                   }
                   onClick={() =>
                     this.setState({
-                      isActive: "eligible",
+                      isActive: 'eligible'
                     })
                   }
                 >
@@ -192,7 +192,7 @@ export default class ComingSoon extends Component {
           ) : null}
         </span>
       </div>
-    );
+    )
   }
 }
 /* eslint-disable react/prop-types */
