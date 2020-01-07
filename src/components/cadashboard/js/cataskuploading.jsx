@@ -58,6 +58,7 @@ export default class CATaskUploading extends Component {
   }
   render() {
     let { task, currentFiles } = this.state
+    console.log(this.state)
     return (
       <>
         <div
@@ -74,8 +75,10 @@ export default class CATaskUploading extends Component {
               className="taskName1"
             ></p>
             <div id={`filestatus${task.id}`} className="taskName2">
-              {task.submissions && task.submissions.length === 0 ? (
-                <div className="taskchild-uploadedfiles-p">
+              {task.submissions &&
+              task.submissions.length === 0 &&
+              currentFiles.length === 0 ? (
+                <div className="taskchild-uploadedfiles-p heading-backgroung">
                   Uploaded files shown here
                 </div>
               ) : (
@@ -90,14 +93,14 @@ export default class CATaskUploading extends Component {
                         {file.file.substring(50)}
                       </div>
                     ))}
-                  {currentFiles.length > 0 &&
-                    currentFiles.map((file, index) => (
-                      <div key={index} className="taskchild-filesupload-p">
-                        {file}
-                      </div>
-                    ))}
                 </>
               )}
+              {currentFiles.length > 0 &&
+                currentFiles.map((file, index) => (
+                  <div key={index} className="taskchild-filesupload-p">
+                    {file}
+                  </div>
+                ))}
             </div>
           </div>
         </div>

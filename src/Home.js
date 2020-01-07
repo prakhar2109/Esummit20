@@ -27,6 +27,8 @@ import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
 import EventsMain from './components/EventsMain/index'
 import Events from './components/home/sections/EventsAll/eventsAll'
+import ForgotPassword from './components/forgot-password/forgot-password'
+import SetNewPassword from './components/forgot-password/set-new-password'
 
 class HomeLanding extends Component {
   render() {
@@ -40,7 +42,8 @@ class HomeLanding extends Component {
           <Route exact path="/events" component={Events} />
           <Route path="/register" component={Profiletype} />
           <Route path="/login" component={Login} />
-
+          <Route path="/forgot-password" component={ForgotPassword} />
+          <Route path="/set-new-password/:uuid/" component={SetNewPassword} />
           <Route path="/ca-registration" component={Registration} />
           <Route path="/noncaregister" component={NonCARegistration} />
 
