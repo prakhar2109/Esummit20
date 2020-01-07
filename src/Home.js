@@ -26,6 +26,7 @@ import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
 import EventsMain from './components/EventsMain/index'
+import Events from './components/home/sections/EventsAll/eventsAll'
 
 class HomeLanding extends Component {
   render() {
@@ -36,6 +37,7 @@ class HomeLanding extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/campus-ambassador" component={CampusAmbassador} />
           <Route exact path="/sponsors" component={Sponsors} />
+          <Route exact path="/events" component={Events} />
           <Route path="/register" component={Profiletype} />
           <Route path="/login" component={Login} />
 
