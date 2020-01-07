@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 
-import { Intro, About, Events, PreviousSpeakers } from './sections/'
+import {
+  Intro,
+  About,
+  Events,
+  Speakers,
+  Sponsors,
+  Testemonials,
+  FAQ
+} from './sections/'
 class Home extends Component {
   render() {
     return (
@@ -8,7 +16,10 @@ class Home extends Component {
         <Intro />
         <About />
         <Events />
-        <PreviousSpeakers />
+        <Speakers />
+        {/* <Sponsors /> */}
+        <Testemonials />
+        <FAQ />
       </div>
     )
   }

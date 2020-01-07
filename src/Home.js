@@ -15,14 +15,18 @@ import Navbar from './components/navbar'
 import Home from './components/home/Home.js'
 import Footer from './components/footer'
 import CampusAmbassador from './components/ca/CampusAmbassador'
+import Sponsors from './components/sponsors/sponsors'
 import './styles/main.scss'
 import Ideastorm from './components/IdeaStorm/ideastorm'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 import StartupExpo from './components/startupExpo/startupexpo.jsx'
+import StartupIgnite from './components/ignite/startupIgnite'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
+import EventsMain from './components/EventsMain/index'
+import Events from './components/home/sections/EventsAll/eventsAll'
 import ForgotPassword from './components/forgot-password/forgot-password'
 import SetNewPassword from './components/forgot-password/set-new-password'
 
@@ -34,6 +38,8 @@ class HomeLanding extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/campus-ambassador" component={CampusAmbassador} />
+          <Route exact path="/sponsors" component={Sponsors} />
+          <Route exact path="/events" component={Events} />
           <Route path="/register" component={Profiletype} />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
@@ -49,8 +55,17 @@ class HomeLanding extends Component {
             component={props => <Ideastorm {...props} />}
           />
           <Route
+            exact
+            path="/events/:id"
+            render={props => <EventsMain {...props} />}
+          />
+          <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
+          />
+          <Route
+            path="/startupignite"
+            component={props => <StartupIgnite {...props} />}
           />
           {/* <Route path="*" component={} /> */}
         </Switch>

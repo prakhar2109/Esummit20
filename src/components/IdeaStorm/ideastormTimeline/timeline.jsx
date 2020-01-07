@@ -18,21 +18,21 @@ class Timeline extends Component {
         <div className="timelineHeader">
           <div className="title">TIMELINE</div>
           <div className="rounds">
-            {/* <div>
-              <NavLink to={`${match.url}/round/1`} activeClassName="active">
+            <div>
+              <NavLink to={`${match.url}/round/1`} activeClassName="Active">
                 ROUND 1
               </NavLink>
             </div>
             <div>
-              <NavLink activeClassName="active" to={`${match.url}/round/2`}>
+              <NavLink activeClassName="Active" to={`${match.url}/round/2`}>
                 ROUND 2
               </NavLink>
             </div>
             <div>
-              <NavLink activeClassName="active" to={`${match.url}/round/3`}>
+              <NavLink activeClassName="Active" to={`${match.url}/round/3`}>
                 ROUND 3
               </NavLink>
-            </div> */}
+            </div>
           </div>
         </div>
         <Switch>

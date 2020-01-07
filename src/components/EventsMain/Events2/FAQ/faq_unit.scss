@@ -1,0 +1,137 @@
+@mixin mobile {
+    @media(max-width: 1000px) {
+        @content;
+    }
+}
+
+
+@mixin fhd {
+    @media  (min-width:1000px) and (max-width: 1600px) {
+        @content ;
+    }
+
+}
+
+.land_faq {
+
+    padding: 7.6% 13.6vw;
+    z-index: 2;
+    background: white;
+
+    @include mobile {
+        padding: 32px;
+        padding-top: 50px;
+        padding-bottom: 125px;
+    }
+
+    .head1 {
+        color: #1A4D66 !important;
+        font-family: "ProximaNova-Bold", sans-serif;
+    }
+
+    @include fhd{
+        padding: 100px 13.6vw;
+    }
+
+    .esummit-landing-faq-land-para {
+        line-height:35px;
+        font-size: 1.75rem;
+        letter-spacing: 0.04em;
+        margin-bottom: 4.5rem;
+        color: #000000;
+        font-family: "Proxima-nova-regular", sans-serif;
+
+        @include mobile {
+            line-height: 20px;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            // padding-top: 10px;
+            position: relative;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        @include fhd{
+            font-size: 1.5rem;
+            padding-top: 2rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+}
+
+.esummit-landing-faq-update-question{
+    line-height: 20px;
+    letter-spacing: 0.02em;
+}
+
+.faq_unit {
+    border-bottom: 4px solid #F7F8F9;
+    margin-bottom: 1rem;
+
+    font-family: Proxima-nova-regular !important;
+    @include mobile {
+        border-bottom: 2px solid #F7F8F9;
+
+    }
+
+    .answer {
+        display: none;
+        padding: 1.25rem 2.5rem;
+        line-height: 128%;
+        font-size: 22px;
+        letter-spacing: 0.02em;
+
+        color: #B2B2B2;
+        background: #F7F8F9;
+        cursor: pointer;
+        @include mobile{
+            line-height: normal;
+            font-size: 0.875rem;
+            padding: 0rem 0.625rem 1.25rem 0.625rem ;
+
+        }
+
+        @include fhd{
+            font-size: 1.125rem;
+        }
+
+
+
+    }
+
+    .question {
+        cursor: pointer;
+        line-height: normal;
+        font-size: 24px;
+        padding: 1.25rem 2.5rem;
+        color: #4F4F4F;
+
+        @include mobile {
+            line-height: normal;
+            font-size: 16px;
+            padding: 20px 45px 20px 10px;
+            color: #4F4F4F;
+            position: relative;
+
+        }
+
+        @include fhd{
+            font-size: 1.5rem;
+        }
+
+        img {
+            float: right;
+
+            @include mobile{
+                height:20px;
+                position: absolute;
+                right: 0px;
+            }
+        }
+        .crox {
+            display: none;
+        }
+
+    }
+
+}

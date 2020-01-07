@@ -2,20 +2,46 @@
 .profiletype_outer {
   width: 100%;
   height: fit-content;
-  min-height: 80vh;
+  min-height: 70vh;
   background: #010C0F;
   padding: 10rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(55.86% 99.31% at 55.86% 50%, rgba(0, 0, 0, 0) 0%, #030D0F 100%);
+  background: url('../../../../assets/register-back.png');
+  background-size: cover;
 }
+.profiletype-left {
+  width: 60%;
+  padding: 0;
+  
+}
+
+
+.profiletype-left-subHeading {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+}
+
+.profiletype-left-heading {
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+
 .profiletype_main {
-  width: 556px;
+  /*background: rgba();*/
+  width: 40%;
   height: fit-content;
-  background: #070F12;;
+  background: #070F12;
   border-radius: 5px;
   font-family: 'Poppins';
+  padding: 3% 0;
 }
 
 .profiletype_heading {
@@ -53,8 +79,8 @@
   width: 93px;
   font-weight: bold;
   font-size: 16px;
-  margin-top: 26px;
-  margin-left: 335px;
+  margin-top: 5%;
+  margin-left: 40%;
 }
 .profiletype_button > div {
   color: #ffffff !important;
@@ -150,7 +176,7 @@ color: rgba(255, 255, 255, 0.87);
     font-size: 20px;
   }
   .profiletype_main {
-    height: fit-content;
+    /*height: fit-content;*/
     width: 100%;
     border-radius: 5px;
     font-family: 'Poppins';

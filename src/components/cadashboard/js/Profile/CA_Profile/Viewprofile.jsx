@@ -428,7 +428,7 @@ export default class Viewprofile extends Component {
               </div>
             </div>
 
-            <div className="caprofile-parent2-innerchild2-parent">
+            {/* <div className="caprofile-parent2-innerchild2-parent">
               <div className="caprofile-parent2-child2-Yearheading caprofile-heading">
                 Year
               </div>
@@ -436,7 +436,7 @@ export default class Viewprofile extends Component {
               <div className="caprofile-parent2-child2-year caprofile-data">
                 {data.year}
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="caprofile-parent3-innerchild">
