@@ -1,26 +1,34 @@
 .panel-format {
-  padding: 10rem 0 0 0;
+  padding: 0;
   display: block;
   background: #030d0f;
 }
 
 @media (max-width: 1200px) {
   .panel-format {
-    padding: 6rem;
+    padding: 0;
   }
 }
 
 .panel-format .heading {
+  margin-bottom: 5%;
+  position: relative;
+}
+.panel-format .heading .heading-background-image {
+  width: 100%;
+}
+.panel-format .heading .heading-content {
   color: rgba(255, 255, 255, 0.87);
   font-family: 'Poppins';
   font-size: 2rem;
   line-height: 3rem;
   font-style: normal;
   font-weight: bold;
-  margin-bottom: 5%;
+  position: absolute;
+  top: 20%;
 }
 @media (max-width: 1200px) {
-  .panel-format .heading {
+  .panel-format .heading .heading-content {
     font-size: 1.5rem;
   }
 }

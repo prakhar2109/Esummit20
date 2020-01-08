@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './header.css'
+import ignite from './assets/ignite.svg'
 
 class Header extends Component {
   constructor(props) {
@@ -9,15 +10,15 @@ class Header extends Component {
   render() {
     return (
       <div className="igniteHeaderSection">
-        <p>Ideastorm</p>
+        <div>
+          <img src={ignite} alt="" />
+        </div>
 
-        <p>B-PLAN COMPETITION</p>
+        <p>Startup Ignite</p>
+
+        <p>Be a part of something bigger</p>
 
         <br />
-        <br />
-        <br />
-        <p>CASH PRIZE WORTH INR 2,50,000</p>
-
         <p>
           Idea Storm is the annual business plan competition,conducted as a part
           of Entrepreneurship Summit, the flagship event of Entrepreneurship
@@ -28,17 +29,6 @@ class Header extends Component {
           acumen. This would be a perfect stage for you, If you want to turn
           your ideas into an entrepreneurial ventures
         </p>
-        <div className="register">
-          <a
-            without
-            rel="noopener noreferrer"
-            href="https://forms.gle/w8iWovVznoCJZKdq5
-              "
-            target="_blank"
-          >
-            <span>APPLY FOR IDEASTORM</span>
-          </a>
-        </div>
       </div>
     )
   }

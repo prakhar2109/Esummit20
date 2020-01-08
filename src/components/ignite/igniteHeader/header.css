@@ -1,16 +1,15 @@
 .igniteHeaderSection {
   background: #030d0f;
-  min-height: 69.8125rem;
-  height: auto;
+  height: fit-content;
   padding: 10rem 17% 0 17%;
 }
 @media (max-width: 1200px) {
   .igniteHeaderSection {
-    min-height: 45rem;
-    padding: 6rem 14%;
+    padding: 10rem 17% 0 17%;
+    height: auto;
   }
 }
-.igniteHeaderSection p:first-child {
+.igniteHeaderSection p:nth-child(2) {
   font-size: 3rem;
   letter-spacing: 0.1em;
   padding-bottom: 0;
@@ -18,16 +17,18 @@
   color: rgba(255, 255, 255, 0.87);
   line-height: 4.5rem;
   font-weight: bold;
+  margin-top: 2rem;
 }
 @media (max-width: 1200px) {
-  .igniteHeaderSection p:first-child {
-    font-size: 1.5rem;
+  .igniteHeaderSection p:nth-child(2) {
+    font-size: 2rem;
     padding-bottom: calc(0px + 1vh);
     font-weight: bold;
+    margin-top: 0.5rem;
   }
 }
 
-.igniteHeaderSection p:nth-child(2) {
+.igniteHeaderSection p:nth-child(3) {
   font-size: 1.75rem;
   line-height: 3rem;
   letter-spacing: 0.1em;
@@ -37,16 +38,16 @@
   padding-bottom: calc(0px + 3vh);
 }
 @media (max-width: 1200px) {
-  .igniteHeaderSection p:nth-child(2) {
+  .igniteHeaderSection p:nth-child(3) {
     line-height: 0.9375rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     letter-spacing: 0.1em;
     padding-bottom: 0;
     color: rgba(255, 255, 255, 0.6);
   }
 }
 
-.igniteHeaderSection p:nth-child(6) {
+/* .igniteHeaderSection p:nth-child(6) {
   font-size: 1.75rem;
   font-weight: 600;
   font-style: normal;
@@ -61,24 +62,22 @@
     letter-spacing: 0.1em;
     padding-bottom: calc(15px + 3vh);
   }
-}
+} */
 
-.igniteHeaderSection p:nth-child(7) {
+.igniteHeaderSection p:nth-child(5) {
   font-size: 1.625rem;
   letter-spacing: 0.1em;
   font-family: 'Poppins';
   color: rgba(255, 255, 255, 0.6);
   /* text-align: justify; */
-  margin-bottom: calc(10vh + 2rem);
   line-height: 170%;
 }
 
 @media (max-width: 1200px) {
-  .igniteHeaderSection p:nth-child(7) {
+  .igniteHeaderSection p:nth-child(5) {
     line-height: 1.125rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     letter-spacing: 0.1em;
-    margin-bottom: calc(6vh + 2rem);
     color: rgba(255, 255, 255, 0.6);
   }
 }
