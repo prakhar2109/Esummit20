@@ -1,5 +1,5 @@
+/* eslint-disable no-lone-blocks */
 import React, { Component } from 'react'
-import logo from '../header/static/logo.png'
 import './../css/caLeaderboard.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -13,7 +13,8 @@ class SideNavbar extends Component {
     super(props)
     this.state = {
       name: '',
-      score: '0',
+      score: 0,
+      totalScore: 0,
       activeState: '',
       data: [],
       contingent: false,
@@ -31,6 +32,10 @@ class SideNavbar extends Component {
     window.location.href = '/'
   }
   componentDidMount = () => {
+    this.setState({
+      activeState: window.location.pathname.substring(11)
+    })
+
     let token = localStorage.getItem('user_token')
 
     if (token !== undefined) {
@@ -42,6 +47,7 @@ class SideNavbar extends Component {
         })
         .then(res => {
           this.setState({
+            totalScore: res.data.total_score,
             score: res.data.score,
             name: res.data.name,
             data: res.data
@@ -74,7 +80,7 @@ class SideNavbar extends Component {
   }
 
   render() {
-    let { name, score, data } = this.state
+    let { name, score, data, totalScore } = this.state
     let profile = this.state.data.user_type
     // let profile = 'CA'
     let profile_display
@@ -143,27 +149,28 @@ class SideNavbar extends Component {
       options = null
     }
     return (
-      <div>
+      <>
         <Header />
-        <div id="container">
-          <div id="leftPane">
-            <a href="/">
-              {/* <img id="logo" src={logo} alt="" /> */}
-              <div className="leftpane-esummit-logo"></div>
-            </a>
+        <div id="leftPane">
+          <a href="/">
+            {/* <img id="logo" src={logo} alt="" /> */}
+            <div className="leftpane-esummit-logo"></div>
+          </a>
 
-            <div className="side-navbar-details">
-              <div id="dropShape">{name[0]}</div>
-              <p id="name">{name}</p>
+          <div className="side-navbar-details">
+            <div id="dropShape">{name[0]}</div>
+            <p id="name">{name}</p>
 
-              <p id="dashboard-typename">{profile_display}</p>
-              {is_ca && (
-                <div className="sidebar-dashboard-esummit">
-                  <span id="scoreWritten">SCORE</span>
-                  <span id="scoreValue">{score}/10000</span>
-                </div>
-              )}
-              {/* {is_ca && (
+            <p id="dashboard-typename">{profile_display}</p>
+            {is_ca && (
+              <div className="sidebar-dashboard-esummit">
+                <span id="scoreWritten">SCORE</span>
+                <span id="scoreValue">
+                  {score}/{totalScore}
+                </span>
+              </div>
+            )}
+            {/* {is_ca && (
                 <div className="progress">
                   <div
                     className="progress-bar bg-custom"
@@ -173,127 +180,126 @@ class SideNavbar extends Component {
                   />
                 </div>
               )} */}
-              <div className="sidebar-dashboard-box">
-                <div className="sidebar-dashboard-esummit">
-                  <span id="sidebar-dashboard-esummitId">E-Summit’20 ID</span>
-                  <span id="sidebar-dashboard-esummitId-value">
-                    {data.esummit_id}
-                  </span>
-                </div>
+            <div className="sidebar-dashboard-box">
+              <div className="sidebar-dashboard-esummit">
+                <span id="sidebar-dashboard-esummitId">E-Summit’20 ID</span>
+                <span id="sidebar-dashboard-esummitId-value">
+                  {data.esummit_id}
+                </span>
               </div>
-              {profile !== 'IIT' && this.state.contingent ? (
-                <div className="sidebar-dashboard-esummit">
-                  <span id="sidebar-dashboard-esummitId">Contingent No</span>
-                  <span id="sidebar-dashboard-esummitId-value">
-                    {this.state.contingentid}
-                  </span>
-                </div>
-              ) : null}
-              <Link to="/dashboard/Viewprofile">
-                <div
-                  className="link-viewprofile"
-                  onClick={() => {
-                    this.setActive('Viewprofile')
-                  }}
-                >
-                  ViewProfile
-                </div>
+            </div>
+            {profile !== 'IIT' && this.state.contingent ? (
+              <div className="sidebar-dashboard-esummit">
+                <span id="sidebar-dashboard-esummitId">Contingent No</span>
+                <span id="sidebar-dashboard-esummitId-value">
+                  {this.state.contingentid}
+                </span>
+              </div>
+            ) : null}
+            <Link to="/dashboard/Viewprofile">
+              <div
+                className="link-viewprofile"
+                onClick={() => {
+                  this.setActive('Viewprofile')
+                }}
+              >
+                ViewProfile
+              </div>
+            </Link>
+          </div>
+          <div id="optionsToggle">
+            {options}
+            <div
+              className={
+                this.state.activeState === 'payment'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
+            >
+              <Link
+                to="/dashboard/payment"
+                onClick={() => {
+                  this.setActive('payment')
+                }}
+              >
+                PAYMENT
               </Link>
+              <br />
             </div>
-            <div id="optionsToggle">
-              {options}
+            <div
+              className={
+                this.state.activeState === 'invite'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
+            >
+              <Link
+                to="/dashboard/invite"
+                onClick={() => {
+                  this.setActive('invite')
+                }}
+              >
+                INVITE
+              </Link>
+              <br />
+            </div>
+            {profile !== 'IIT' && (
               <div
                 className={
-                  this.state.activeState === 'payment'
+                  this.state.activeState === 'contigent'
                     ? 'linkEventson'
                     : 'linkEventson-inactive'
                 }
               >
                 <Link
-                  to="/dashboard/payment"
+                  to="/dashboard/contingent"
                   onClick={() => {
-                    this.setActive('payment')
+                    this.setActive('contigent')
                   }}
                 >
-                  PAYMENT
+                  CONTINGENT
                 </Link>
                 <br />
               </div>
-              <div
-                className={
-                  this.state.activeState === 'invite'
-                    ? 'linkEventson'
-                    : 'linkEventson-inactive'
-                }
+            )}
+            <div
+              className={
+                this.state.activeState === 'Events'
+                  ? 'linkEventson'
+                  : 'linkEventson-inactive'
+              }
+            >
+              <Link
+                to="/dashboard/Events"
+                onClick={() => {
+                  this.setActive('Events')
+                }}
               >
-                <Link
-                  to="/dashboard/invite"
-                  onClick={() => {
-                    this.setActive('invite')
-                  }}
-                >
-                  INVITE
-                </Link>
-                <br />
-              </div>
-              {profile !== 'IIT' && (
-                <div
-                  className={
-                    this.state.activeState === 'contigent'
-                      ? 'linkEventson'
-                      : 'linkEventson-inactive'
-                  }
-                >
-                  <Link
-                    to="/dashboard/contingent"
-                    onClick={() => {
-                      this.setActive('contigent')
-                    }}
-                  >
-                    CONTINGENT
-                  </Link>
-                  <br />
-                </div>
-              )}
-              <div
-                className={
-                  this.state.activeState === 'Events'
-                    ? 'linkEventson'
-                    : 'linkEventson-inactive'
-                }
-              >
-                <Link
-                  to="/dashboard/Events"
-                  onClick={() => {
-                    this.setActive('Events')
-                  }}
-                >
-                  EVENTS
-                </Link>
-                <br />
-              </div>
-              {/*<span id="leaderboardButton">LeaderBoard</span>*/}
-              {is_ca && (
-                <div id="leaderboardButton">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    // href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
-                    href="https://drive.google.com/file/d/1_E8seQecjY77O0CrAlRR9hHgZcFS5jaE/view?usp=sharing"
-                  >
-                    CA RULEBOOK
-                  </a>
-                </div>
-              )}
+                EVENTS
+              </Link>
+              <br />
             </div>
-            <div id="submitButton">
-              <button type="submit" onClick={this.handleLogout}>
-                Log Out
-              </button>
-            </div>
+            {/*<span id="leaderboardButton">LeaderBoard</span>*/}
+            {is_ca && (
+              <div id="leaderboardButton">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  // href="https://drive.google.com/a/iitr.ac.in/file/d/10xdhHFS-OVZVYh6fIJRm-XSMuPga4TqX/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1_E8seQecjY77O0CrAlRR9hHgZcFS5jaE/view?usp=sharing"
+                >
+                  CA RULEBOOK
+                </a>
+              </div>
+            )}
+          </div>
+          <div id="submitButton">
+            <button type="submit" onClick={this.handleLogout}>
+              Log Out
+            </button>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }

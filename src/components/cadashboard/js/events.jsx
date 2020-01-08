@@ -39,7 +39,6 @@ export default class Events extends Component {
           appliedevents: appliedevents,
           status: status
         })
-        console.log(this.state.status, 'dnfnnjndnnjnj')
       })
       .catch(response => {})
   }
