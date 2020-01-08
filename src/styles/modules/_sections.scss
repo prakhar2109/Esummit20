@@ -42,9 +42,11 @@
   @include section();
   position: relative;
   background-size: cover;
+
   @include desktop-320-767 {
     padding: 1.75rem 10vw;
   }
+
   .home-section-content-container {
     @include display-column();
     justify-content: center;
@@ -108,11 +110,9 @@
         z-index: 1;
         width: $cardWidth;
         height: $cardHeight;
-        background: linear-gradient(
-          180deg,
-          #000000 -53.27%,
-          rgba(0, 0, 0, 0.3) 132.69%
-        );
+        background: linear-gradient(180deg,
+            #000000 -53.27%,
+            rgba(0, 0, 0, 0.3) 132.69%);
       }
 
       .home-section-event-card-background {
@@ -126,7 +126,7 @@
       .home-section-event-card-heading {
         z-index: 2;
         font-style: normal;
-        font-weight: 500;
+        font-weight: bold;
         font-size: $headerFontSize * 0.8;
         line-height: $headerLineHeight * 0.8;
         text-align: center;
@@ -154,7 +154,7 @@
   }
 
   .section-image-heading-container {
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-left: 0.9375vw;
 
     .section-image-heading {
@@ -200,11 +200,13 @@
       &:last-child {
         margin-right: 0;
       }
+
       @include desktop-320-767 {
         @include display-column();
         width: 100%;
         justify-content: flex-start;
         padding: 0 $gutterWidth 0 $gutterWidth * 2;
+
         &:first-child {
           margin: $gutterWidth * 2;
         }
@@ -213,6 +215,7 @@
           margin: $gutterWidth * 2;
         }
       }
+
       .speakers-section-card-image {
         @include desktop-320-767 {
           margin: 0;
@@ -273,7 +276,7 @@
   }
 
   .section-image-heading-container {
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-left: 0.9375vw;
 
     .section-image-heading {
@@ -319,11 +322,13 @@
       &:last-child {
         margin-right: 0;
       }
+
       @include desktop-320-767 {
         @include display-column();
         width: 100%;
         justify-content: flex-start;
         padding: 0 $gutterWidth 0 $gutterWidth * 2;
+
         &:first-child {
           margin-left: $gutterWidth * 2;
         }
@@ -332,6 +337,7 @@
           margin-right: $gutterWidth * 2;
         }
       }
+
       .sponsors-section-card-image {
         @include desktop-320-767 {
           margin: 0;
@@ -646,6 +652,7 @@
     .question-container {
       position: relative;
       border-bottom: 3px solid rgba(255, 255, 255, 0.38);
+
       &:first-child {
         border-top: 3px solid rgba(255, 255, 255, 0.38);
       }
@@ -668,7 +675,7 @@
         cursor: pointer;
 
         &:checked {
-          + .question-items-container {
+          +.question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -679,6 +686,7 @@
                   &:first-child {
                     transform: rotate(135deg);
                   }
+
                   &:last-child {
                     transform: rotate(45deg);
                   }
@@ -686,7 +694,7 @@
               }
             }
 
-            > .question-items-answer {
+            >.question-items-answer {
               color: #fff;
 
               @include desktop-0-1281() {
@@ -845,6 +853,7 @@
     text-align: left;
     width: fit-content;
     margin: 0;
+
     .footer-section-contact-heading {
       @include desktop-320-767 {
         width: 30%;
@@ -864,8 +873,7 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {
-      }
+      @include desktop-320-767 {}
 
       font-weight: normal;
       color: $whiteText;
@@ -917,30 +925,37 @@
   #section-image-heading-background-events {
     width: auto;
   }
+
   #section-image-heading-background-events {
     @include desktop-320-767 {
       width: 100%;
     }
   }
+
   #section-image-heading-background-speaker {
     width: auto;
   }
+
   #section-image-heading-background-speaker {
     @include desktop-320-767 {
       width: 100%;
     }
   }
+
   #section-image-heading-background-sponsor {
     width: auto;
   }
+
   #section-image-heading-background-sponsor {
     @include desktop-320-767 {
       width: 100%;
     }
   }
+
   #section-image-heading-background-faq {
     width: auto;
   }
+
   #section-image-heading-background-faq {
     @include desktop-320-767 {
       width: 100%;
@@ -969,5 +984,31 @@
     width: 100%;
     height: 100%;
     border: 0;
+  }
+}
+
+.section-horizontal-navigate-container {
+  .section-horizontal-navigate-arrow {
+    color: white;
+    font-size: $normalFontSize;
+    margin: 0 $gutterWidth;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.arrow-left {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      background-color: $primaryColor;
+    }
+
   }
 }
