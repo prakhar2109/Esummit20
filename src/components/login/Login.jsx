@@ -3,7 +3,7 @@ import FacebookLogin from 'react-facebook-login'
 import { Link } from 'react-router-dom'
 import { BASE_URL } from '../../utils/urls'
 import './login.css'
-import color_eye from '../registration/Noncaregister/svg/color-eye.svg'
+import hidden from '../registration/Noncaregister/svg/hidden.svg'
 import eye from '../registration/Noncaregister/svg/eye.svg'
 import correct from '../registration/Noncaregister/svg/correct.svg'
 import wrong from '../registration/Noncaregister/svg/wrong.svg'
@@ -15,53 +15,20 @@ class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      active_step: 0,
+      activeStep: 0,
       toggleEye: false,
+      loader: false,
       toggleConfirmEye: false,
+      accessToken: '',
       email: '',
       password: '',
-      email_error: '',
-      email_error_bool: '',
-      pass_error: '',
-      pass_error_bool: '',
-      error_message: ''
+      emailError: '',
+      emailErrorBool: '',
+      passError: '',
+      passErrorBool: '',
+      errorMessage: ''
     }
   }
-
-  //   handleFullSubmit = () => {
-  //     const query=new URLSearchParams(this.props.location.search);
-  //     let ref=null;
-  //     for(let param of query.entries())
-  //       ref=param[1];
-
-  //     let endpoint = ref === null ? "/v1/api/user/signup/" : `/v1/api/user/signup/?ref=${ref}`
-
-  //     FetchApi('POST', endpoint, this.state, null)
-  //       .then(res => {
-  //         if (res.data) {
-  //           this.setState({ success: true, active_step: 0 })
-  //         }
-  //       })
-  //       .catch(error => {
-  //         this.setState({
-  //           active_step: 0,
-  //           error: true,
-  //           error_bool:error
-  //         })
-
-  //       })
-  //   }
-  // responseFacebook = response => {
-  //   this.setState({
-  //     name: response.name,
-  //     email: response.email,
-  //     fb_access_token: response.accessToken,
-  //     image_url: response.image_url,
-  //     social_signup: response.social_signup,
-  //   },()=>{
-  //       console.log(this.state)
-  //   })
-  // }
   handleToggle = () => {
     this.setState({
       toggleEye: !this.state.toggleEye
@@ -83,35 +50,11 @@ class Login extends Component {
           response.picture.data &&
           response.picture.data.url,
         social_signup: true,
-        active_step: 1
+        activeStep: 1
       })
     }
   }
 
-  responseLoginGoogle = response => {
-    // this.setState({
-    //     name: response.profileObj.name,
-    //     email: response.profileObj.email,
-    //     image_url: response.profileObj.imageUrl,
-    //     social_signup: true
-    // })
-    // let { name, email, image_url, social_signup } = this.state
-    console.log(response)
-
-    this.setState(
-      {
-        name: response.profileObj.name,
-        accessToken: response.accessToken,
-        email: response.profileObj.email,
-        social_signup: true
-      },
-      () => this.loginSubmit()
-    )
-
-    // this.props.handleGoogle(data)
-    // this.namevalidate()
-    // this.emailvalidate()
-  }
   handleChange = e => {
     let change = {}
     change[e.target.name] = e.target.value
@@ -119,33 +62,35 @@ class Login extends Component {
   }
 
   loginSubmit = () => {
+    const { accessToken, email, password, loader } = this.state
     let data
-    if (!this.state.accessToken) {
+    if (!accessToken) {
       data = {
-        email: this.state.email,
-        password: this.state.password
+        email: email,
+        password: password
       }
     } else {
       data = {
-        email: this.state.email,
-        access_token: this.state.accessToken
+        email: email,
+        access_token: accessToken
       }
     }
 
+    this.setState({
+      loader: true
+    })
     axios({
       method: 'post',
       url: BASE_URL + '/v1/api/user/login',
-      data: data,
-      config: {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      }
+      data: data
     })
       .then(res => {
         if (res !== undefined && res.data !== undefined) {
           if (res.data) {
             if (res.data.token) {
+              this.setState({
+                loader: false
+              })
               localStorage.setItem('user_token', res.data.token)
               window.location.href = '/dashboard/task'
             }
@@ -153,17 +98,12 @@ class Login extends Component {
         }
       })
       .catch(response => {
-        alert('Please Register first!')
-
         this.setState({
-          error_message: 'Email/Password is invalid',
-          email: '',
-          password: '',
-          email_error_bool: '',
-          pass_error_bool: ''
+          loader: false,
+          errorMessage: 'Email/Password is invalid',
+          emailErrorBool: '',
+          passErrorBool: ''
         })
-
-        this.props.history.push('/register')
       })
   }
 
@@ -173,13 +113,13 @@ class Login extends Component {
         var re = /\S+@\S+\.\S+/
         if (!this.state.email.match(re)) {
           this.setState({
-            email_error_bool: 'true',
-            email_error: 'Email is not valid'
+            emailErrorBool: 'true',
+            emailError: 'Email is not valid'
           })
         } else {
           this.setState({
-            email_error_bool: 'false',
-            email_error: ''
+            emailErrorBool: 'false',
+            emailError: ''
           })
         }
       }.bind(this),
@@ -191,13 +131,13 @@ class Login extends Component {
       function() {
         if (this.state.password.length < 7) {
           this.setState({
-            pass_error_bool: 'true',
-            pass_error: 'Password should be more than 8 letters'
+            passErrorBool: 'true',
+            passError: 'Password should be more than 8 letters'
           })
         } else {
           this.setState({
-            pass_error_bool: 'false',
-            pass_error: ''
+            passErrorBool: 'false',
+            passError: ''
           })
         }
       }.bind(this),
@@ -212,20 +152,23 @@ class Login extends Component {
 
   render() {
     const {
+      loader,
+      activeStep,
       email,
       password,
       toggleEye,
-      email_error,
-      email_error_bool,
-      pass_error,
-      pass_error_bool
+      emailError,
+      emailErrorBool,
+      passError,
+      passErrorBool,
+      errorMessage
     } = this.state
 
     return (
       <React.Fragment>
         <div className="account_setup">
           <div className="signup-container">
-            {this.state.active_step === 0 ? (
+            {activeStep === 0 ? (
               <div className="accountsetup_popup">
                 <div className="accountsetup_popup_title">
                   <p>Account Setup</p>
@@ -235,18 +178,8 @@ class Login extends Component {
                     You will be given tasks which requires facebook sign-up.
                   </div>
                   <div className="facebook_login">
-                    {/* <GoogleLogin
-                      clientId="73234389568-ad4s6dav417kmlut5n7n0gmrbpfkb44i.apps.googleusercontent.com"
-                      buttonText="Google"
-                      onSuccess={this.responseLoginGoogle}
-                      onFailure={this.responseLoginGoogle}
-                      className="tushar"
-                      theme="dark"
-                    /> */}
                     <FacebookLogin
                       appId="630305827505065"
-                      // appId="613264019415150"
-                      // appId="2546035355673765"
                       size="medium"
                       autoLoad={false}
                       disableMobileRedirect={true}
@@ -259,7 +192,7 @@ class Login extends Component {
 
                   <div className="esummit-register-form-body-parent">
                     <div className="esummit-register-form-error-message-handle">
-                      {this.state.error_message}
+                      {errorMessage}
                     </div>
                     <div className="esummit-register-form-input-specific">
                       <label htmlFor="inputEmail">E-MAIL ID</label>
@@ -268,7 +201,7 @@ class Login extends Component {
                           id="inputEmail"
                           type="email"
                           className={
-                            email_error === ''
+                            emailError === ''
                               ? null
                               : 'esummit-register-form-field-error-text'
                           }
@@ -286,13 +219,13 @@ class Login extends Component {
                           required
                         />
                         <span className="esummit-register-form-field-error-svg">
-                          {email_error_bool === '' ? null : (
+                          {emailErrorBool === '' ? null : (
                             <img
                               alt="correc/wrong"
                               src={
-                                email_error_bool === 'true'
+                                emailErrorBool === 'true'
                                   ? wrong
-                                  : email_error_bool === 'false'
+                                  : emailErrorBool === 'false'
                                   ? correct
                                   : null
                               }
@@ -301,7 +234,7 @@ class Login extends Component {
                         </span>
                       </div>
                       <div className="esummit-register-form-field-error">
-                        {email_error}
+                        {emailError}
                       </div>
                     </div>
                     <div className="esummit-register-form-input-specific">
@@ -311,7 +244,7 @@ class Login extends Component {
                           id="inputPassword"
                           type="password"
                           className={
-                            pass_error === ''
+                            passError === ''
                               ? null
                               : 'esummit-register-form-field-error-text'
                           }
@@ -332,17 +265,17 @@ class Login extends Component {
                           <img
                             alt=""
                             className="esummit-register-form-input-specific-eye-svg"
-                            src={!toggleEye ? eye : color_eye}
+                            src={!toggleEye ? eye : hidden}
                           />
                         </span>
                         <span className="esummit-register-form-field-error-svg">
-                          {pass_error_bool === '' ? null : (
+                          {passErrorBool === '' ? null : (
                             <img
                               alt="correc/wrong"
                               src={
-                                pass_error_bool === 'true'
+                                passErrorBool === 'true'
                                   ? wrong
-                                  : pass_error_bool === 'false'
+                                  : passErrorBool === 'false'
                                   ? correct
                                   : null
                               }
@@ -351,7 +284,7 @@ class Login extends Component {
                         </span>
                       </div>
                       <div className="esummit-register-form-field-error">
-                        {pass_error}
+                        {passError}
                       </div>
 
                       <div className="form-forgot-password-text">
@@ -368,7 +301,7 @@ class Login extends Component {
                 </div>
               </div>
             ) : null}
-            {this.state.active_step === 1 ? (
+            {activeStep === 1 ? (
               <div className="accountsetup_popup">
                 <div className="accountsetup_popup_title">
                   <p>Welcome {this.state.name}</p>
@@ -397,7 +330,13 @@ class Login extends Component {
                 </div>
 
                 <div className="loginformSubmit" onClick={this.loginSubmit}>
-                  Login
+                  {loader ? (
+                    <>
+                      <i className="fa fa-circle-o-notch fa-spin"></i>
+                    </>
+                  ) : (
+                    <>Login</>
+                  )}
                 </div>
               </div>
             ) : null}

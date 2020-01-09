@@ -3,7 +3,6 @@ import '../view.css'
 import axios from 'axios'
 import { BASE_URL } from '../../../../../utils/urls'
 import { Modal } from 'antd'
-import Select from 'react-select'
 
 const custom_styles = {
   menuList: base => ({
@@ -19,7 +18,8 @@ export default class Viewprofile extends Component {
       loading: false,
       name: '',
       score: '',
-      data: []
+      data: [],
+      totalScore: 0
     }
   }
 
@@ -32,9 +32,9 @@ export default class Viewprofile extends Component {
         }
       })
       .then(res => {
-        console.log(res.data)
         this.setState({
           score: res.data.score,
+          totalScore: res.data.total_score,
           name: res.data.name,
           data: res.data
         })
@@ -111,7 +111,7 @@ export default class Viewprofile extends Component {
     }))
   }
   render() {
-    const { visible } = this.state
+    const { visible, totalScore } = this.state
     const modalstyle = {
       left: '20vw',
       margin: '0',
@@ -122,10 +122,9 @@ export default class Viewprofile extends Component {
       padding: 0
     }
 
-    console.log(Tshirtsize, 'sssssss')
     const width = 900
     let { score, name, data } = this.state
-    let scorePercentage = (score / 360) * 100 + ''
+    let scorePercentage = (score / totalScore) * 100 + ''
     return (
       <div className="caprofile-container">
         <div className="caprofile-container-heading">PROFILE</div>
@@ -151,17 +150,11 @@ export default class Viewprofile extends Component {
                 {data.esummit_id}
               </span>
             </div>
-            {/*}
-            <div className="profile-dashboard-esummit">
-              <span id="profile-dashboard-esummitId">
-                Contingent No (Leader)
-              </span>
-              <span id="profile-dashboard-esummitId-value">CN 2</span>
-            </div>
-    */}
             <div className="ca-profilescore">
               <span id="caprofile-scoreWritten">Score</span>
-              <span id="caprofile-scoreValue">{this.state.score}/360</span>
+              <span id="caprofile-scoreValue">
+                {this.state.score}/{totalScore}
+              </span>
             </div>
             <div className="progressline">
               <div
