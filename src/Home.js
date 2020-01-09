@@ -22,6 +22,7 @@ import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 import StartupExpo from './components/startupExpo/startupexpo.jsx'
 import StartupIgnite from './components/ignite/startupIgnite'
+import Speakers from './components/speakers/speakers'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
 import NonCARegistration from './components/registration/Noncaregister/index'
@@ -40,6 +41,7 @@ class HomeLanding extends Component {
           <Route exact path="/campus-ambassador" component={CampusAmbassador} />
           <Route exact path="/sponsors" component={Sponsors} />
           <Route exact path="/events" component={Events} />
+          <Route exact path="/speakers" component={Speakers} />
           <Route path="/register" component={Profiletype} />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
