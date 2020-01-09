@@ -6,6 +6,7 @@ import samironCard from '../../../assets/samiron.png'
 import tarunCard from '../../../assets/tarun.png'
 import gulzarCard from '../../../assets/gulzar.png'
 import sharadCard from '../../../assets/sharad.png'
+import arrow from '../../../assets/arrow.svg'
 class Speakers extends Component {
   render() {
     return (
@@ -18,8 +19,23 @@ class Speakers extends Component {
             id="section-image-heading-background-speaker"
             alt=""
           />
+          <div className="section-horizontal-navigate-container">
+            <img
+              src={arrow}
+              alt=""
+              className="section-horizontal-navigate-arrow arrow-left"
+            />
+            <img
+              src={arrow}
+              alt=""
+              className="section-horizontal-navigate-arrow arrow-right"
+            />
+          </div>
         </div>
-        <div className="speakers-section-card-container">
+        <div
+          className="speakers-section-card-container"
+          data-scroll="horizontal"
+        >
           <div className="speakers-section-card">
             <img
               src={kamalCard}
