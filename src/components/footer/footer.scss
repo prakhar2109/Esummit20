@@ -125,7 +125,7 @@
 @media only screen and (max-width: 768px) {
   .new-footer-container {
     flex-direction: column;
-    padding: 1rem;
+    padding: 14%;
     .width-30 {
       width: 100%;
     }
@@ -134,6 +134,7 @@
     }
     .new-footer-container-child {
       margin-top: 2rem;
+      padding: 0;
       .new-footer-section-ecell-logo {
         background-position: center;
       }

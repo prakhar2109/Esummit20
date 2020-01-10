@@ -19,9 +19,7 @@
     background: white;
 
     @include mobile {
-        padding: 32px;
-        padding-top: 50px;
-        padding-bottom: 125px;
+        padding: 6rem 14%;
     }
 
     .head1 {

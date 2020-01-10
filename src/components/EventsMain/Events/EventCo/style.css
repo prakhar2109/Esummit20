@@ -31,7 +31,14 @@
 }
 
 @media (max-width: 700px) {
+  .coordinator-parent{
+    padding:6rem 14%;
+  }
   .coordinator-head {
     font-size: 1.5rem;
+  }
+  .coordinator-info{
+    font-size: 16px;
+    letter-spacing: 0.02em;
   }
 }
