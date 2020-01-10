@@ -1,0 +1,73 @@
+.speakers-page-section-card img {
+  width: 16rem;
+  height: 16rem;
+}
+
+.speaker-page-container {
+  	padding: 10rem 17%;
+  	background: #030d0f;
+}
+
+.section-page-image-heading-container {
+	padding: 5rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+.section-page-image-heading {
+	text-align: center;
+}
+
+.section-page-image-heading-container img{
+	margin: -80px 0 0 0;
+}
+
+.section-page-image-heading {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins';
+  font-size: 4rem;
+  line-height: 3rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+	.section-page-image-heading {
+	  color: rgba(255, 255, 255, 0.87);
+	  font-family: 'Poppins';
+	  font-size: 3rem;
+	  line-height: 3rem;
+	  font-style: normal;
+	  font-weight: bold;
+}
+}
+
+.speakers-page-section-card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.speakers-page-section-card {
+	margin: 5% 4%;
+} 
+
+.speakers-page-section-card-heading {
+  padding: 2% 0 1% 0; 
+  line-height: 2.5625rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.speakers-page-section-card-subheading {
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.6);
+}

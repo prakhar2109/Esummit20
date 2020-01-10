@@ -22,6 +22,7 @@ import Kolkata from '../eventscomponent/partner/assets/kolkata_ventures.jpg'
 import Marwari from '../eventscomponent/partner/assets/marwari_catalysts.png'
 import AWP from '../eventscomponent/partner/assets/amazing_worksspaces.png'
 import HunchCircle from '../eventscomponent/partner/assets/hunch_circle.png'
+import ContentIndex from '../EventsMain/Events2/Body/content.jsx'
 
 class StartupIgnite extends Component {
   constructor(props) {
@@ -98,8 +99,9 @@ class StartupIgnite extends Component {
 
   render() {
     return (
-      <div className="startupIgnite">
+      <div className="startupIgnite" style={{ backgroundColor: '#030d0f' }}>
         <Header />
+        <ContentIndex />
         <Panel />
         <Guest />
         <WitBid />

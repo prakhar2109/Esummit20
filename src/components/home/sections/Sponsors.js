@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import sponsorsHeadingBackground from '../../../assets/sponsors-heading-background.svg'
-import kamalCard from '../../../assets/kamal.png'
-import ajayCard from '../../../assets/ajay.png'
-import samironCard from '../../../assets/samiron.png'
-import tarunCard from '../../../assets/tarun.png'
-import gulzarCard from '../../../assets/gulzar.png'
-import sharadCard from '../../../assets/sharad.png'
+import {Link} from 'react-router-dom'
+import linkedinlocal from '../../../assets/sponsors/linkedinlocal.jpg'
+import Dribble from '../../../assets/sponsors/dribble.svg'
+import thecollegefever from '../../../assets/sponsors/Thecollegefever.png'
+import tides from '../../../assets/sponsors/tides.png'
+import hackerearth from '../../../assets/sponsors/hackerearth.png'
+import Devfolio from '../../../assets/sponsors/devfolio.png'
+import CBlock from '../../../assets/sponsors/CBlock.png'
+import AmarUjala from '../../../assets/sponsors/amarujala.webp'
+
 class Sponsors extends Component {
   render() {
     return (
@@ -21,49 +25,61 @@ class Sponsors extends Component {
         </div>
         <div className="sponsors-section-card-container">
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img src={linkedinlocal} alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Kamal Bali</div>
+              <div className="sponsors-section-card-heading">LinkedIn Local</div>
             </div>
           </div>
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img src={Dribble} alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
               <div className="sponsors-section-card-heading">
-                Ajay Prakash Sawhney
+                Dribble
               </div>
             </div>
           </div>
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img src={Devfolio} alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
               <div className="sponsors-section-card-heading">
-                Samiron Ghoshal
+                Devfolio
               </div>
             </div>
           </div>
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img src={AmarUjala} alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Tarun Katiyal</div>
+              <div className="sponsors-section-card-heading">Amar Ujala</div>
             </div>
           </div>
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img src={tides} alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Gulzar Azad</div>
+              <div className="sponsors-section-card-heading">Tides</div>
             </div>
           </div>
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img src={CBlock} alt="" className="sponsors-section-card-image" />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Sharad Sagar</div>
+              <div className="sponsors-section-card-heading">Coding Blocks</div>
+            </div>
+          </div>
+          <div className="sponsors-section-card">
+            <img src={thecollegefever} alt="" className="sponsors-section-card-image" />
+            <div className="sponsors-section-card-content">
+              <div className="sponsors-section-card-heading">The College Fever</div>
+            </div>
+          </div>
+          <div className="sponsors-section-card">
+            <img src={hackerearth} alt="" className="sponsors-section-card-image" />
+            <div className="sponsors-section-card-content">
+              <div className="sponsors-section-card-heading">HackerEarth</div>
             </div>
           </div>
         </div>
-        <a href="#" className="section-button">
+        <Link to ='/sponsors' className="section-button">
           <button>view all sponsors</button>
-        </a>
+        </Link>
       </div>
     )
   }

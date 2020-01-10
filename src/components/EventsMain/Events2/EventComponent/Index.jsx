@@ -16,6 +16,10 @@ import Rules from '../../Events/Rules/Index'
 import Eligibility from '../../Events/Eligibility/Index'
 import Perks from '../../Events/Perks/Index'
 import jump from 'jump.js'
+import '../css/eligibility.css'
+import '../css/header.css'
+import '../css/panel.css'
+import '../css/guest.css'
 // import Faq from "../FAQ/Index"
 /* eslint-disable react/prop-types */
 

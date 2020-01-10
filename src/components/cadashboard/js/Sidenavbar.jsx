@@ -215,15 +215,14 @@ class SideNavbar extends Component {
                   ? 'linkEventson'
                   : 'linkEventson-inactive'
               }
+              onClick={() => {
+                this.setActive('payment')
+              }}
             >
-              <Link
-                to="/dashboard/payment"
-                onClick={() => {
-                  this.setActive('payment')
-                }}
-              >
+              <a href= "https://www.thecollegefever.com/events/e-summit-2020-iit-roorkee">
+               
                 PAYMENT
-              </Link>
+                </a>
               <br />
             </div>
             <div

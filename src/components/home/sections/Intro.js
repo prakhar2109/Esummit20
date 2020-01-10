@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ecellLogo from '../../../assets/ecell-logo.svg'
+import ecellLogo from '../../../assets/footer-logo.svg'
 import disruptionText from '../../../assets/disruption-text.svg'
 class Intro extends Component {
   gotoDashboard = () => {

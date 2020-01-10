@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#010C0F" />
-    <meta name="description" content="E-Summit 2020 Official Website" />
-    <meta property="og:title" content="E-Summit '20 " />
-    <meta property="og:site_name" content="WoC" />
-    <meta property="og:url" content="https://esummit.in/" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:Keywords"
-      content="esummit, ecelliitr, ecell, e-cell, roorkee, iit"
-    />
-    <meta property="og:creator" content="E-Cell, IIT Roorkee" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
 
-    <!--
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#010C0F" />
+  <meta name="description" content="E-Summit 2020 Official Website" />
+  <meta property="og:title" content="E-Summit '20 " />
+  <meta property="og:site_name" content="WoC" />
+  <meta property="og:url" content="https://esummit.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:Keywords" content="esummit, ecelliitr, ecell, e-cell, roorkee, iit" />
+  <meta property="og:creator" content="E-Cell, IIT Roorkee" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -38,12 +30,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Esummit 2020</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>Esummit 2020</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -53,5 +46,54 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  var horizontal_div_width = 0
+  var isIgnoreLeft = false;
+  var isIgnoreRight = false;
+  $("img.arrow-right").on("click", function (e) {
+    e.preventDefault();
+    var container = $(this).parent().parent().parent().prop("className")
+    var horizontal_div = $('.' + container + ' div[data-scroll="horizontal"]');
+  
+    if (isIgnoreRight && horizontal_div.scrollLeft() == horizontal_div.width())
+      return;
+    isIgnoreRight = true;
+
+    if (horizontal_div.scrollLeft() <= horizontal_div.width()) {
+      horizontal_div_width += horizontal_div.width()
+      horizontal_div.animate(
+        {
+          scrollLeft:
+            horizontal_div_width
+        },
+        500
+      );
+      isIgnoreRight = false;
+
+    }
+  });
+  $("img.arrow-left").on("click", function (e) {
+    e.preventDefault();
+    var container = $(this).parent().parent().parent().prop("className")
+    var horizontal_div = $('.' + container + ' div[data-scroll="horizontal"]');
+    if (isIgnoreLeft && horizontal_div.scrollLeft() == 0)
+      return;
+    isIgnoreLeft = true;
+
+    if (horizontal_div.scrollLeft() > 0) {
+      horizontal_div_width -= horizontal_div.width()
+      horizontal_div.animate(
+        {
+          scrollLeft:
+            horizontal_div_width
+        },
+        500
+      );
+      isIgnoreLeft = false;
+    }
+  });
+</script>
+
 </html>
