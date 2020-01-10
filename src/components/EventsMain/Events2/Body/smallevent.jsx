@@ -22,7 +22,7 @@ export default class SmallEventIndex extends Component {
               //     <img className="suignite-vector" src={Vector} alt="vector" />
               //     <div className="suignite-head1">{datum.heading}</div>
               // </div>
-              <div className="heading">{datum.heading}</div>
+              <div className="su-ignite-heading">{datum.heading}</div>
             ) : null}
 
             {datum &&
