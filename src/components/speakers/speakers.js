@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import speakersHeadingBackground from '../../assets/speakers-heading-background.svg'
-import samironCard from '../../assets/samiron.png'
+import karthik from '../../assets/speakers/karthik-reddy.jpg'
+import coming from '../../assets/speakers/download.png'
+import abhishek from '../../assets/speakers/abhishek-prabhuda.jpeg'
 import './speakers.css'
 
 class Speakers extends Component {
@@ -19,68 +21,43 @@ class Speakers extends Component {
 	        	</div>
 	        </div>
 	        <div className="speakers-page-section-card-container">
-	          	<div className="speakers-page-section-card">
+	          	
+		         <div className="speakers-page-section-card">
 	       			<img
-		              	src={samironCard}
+		              	src={karthik}
 		              	alt=""
 		              	className="speakers-page-section-card-image"
 	            	/>
 		            <div className="speakers-page-section-card-content">
-		              	<div className="speakers-page-section-card-heading">Kamal Bali</div>
+		              	<div className="speakers-page-section-card-heading">Karthik Reddy</div>
 			              	<div className="speakers-page-section-card-subheading">
-			               		CEO & MD, Volvo India
+			               		Blume Ventures
 			              	</div>
 		         	</div>
 		         </div>
 		         <div className="speakers-page-section-card">
 	       			<img
-		              	src={samironCard}
+		              	src={abhishek}
 		              	alt=""
 		              	className="speakers-page-section-card-image"
 	            	/>
 		            <div className="speakers-page-section-card-content">
-		              	<div className="speakers-page-section-card-heading">Kamal Bali</div>
+		              	<div className="speakers-page-section-card-heading">Abhishek Prabhuda</div>
 			              	<div className="speakers-page-section-card-subheading">
-			               		CEO & MD, Volvo India
+			               		Co-Head at Delhivery
 			              	</div>
 		         	</div>
 		         </div>
 		         <div className="speakers-page-section-card">
 	       			<img
-		              	src={samironCard}
+		              	src={coming}
 		              	alt=""
 		              	className="speakers-page-section-card-image"
 	            	/>
 		            <div className="speakers-page-section-card-content">
-		              	<div className="speakers-page-section-card-heading">Kamal Bali</div>
+		              	<div className="speakers-page-section-card-heading">Coming Soon</div>
 			              	<div className="speakers-page-section-card-subheading">
-			               		CEO & MD, Volvo India
-			              	</div>
-		         	</div>
-		         </div>
-		         <div className="speakers-page-section-card">
-	       			<img
-		              	src={samironCard}
-		              	alt=""
-		              	className="speakers-page-section-card-image"
-	            	/>
-		            <div className="speakers-page-section-card-content">
-		              	<div className="speakers-page-section-card-heading">Kamal Bali</div>
-			              	<div className="speakers-page-section-card-subheading">
-			               		CEO & MD, Volvo India
-			              	</div>
-		         	</div>
-		         </div>
-		         <div className="speakers-page-section-card">
-	       			<img
-		              	src={samironCard}
-		              	alt=""
-		              	className="speakers-page-section-card-image"
-	            	/>
-		            <div className="speakers-page-section-card-content">
-		              	<div className="speakers-page-section-card-heading">Kamal Bali</div>
-			              	<div className="speakers-page-section-card-subheading">
-			               		CEO & MD, Volvo India
+			               		
 			              	</div>
 		         	</div>
 		         </div>
