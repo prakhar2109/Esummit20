@@ -28,7 +28,11 @@ class Intro extends Component {
     return (
       <div className="home-section-intro-container">
         <div className="home-section-intro">
-          <img src={ecellLogo} alt="" />
+          <img
+            src={ecellLogo}
+            alt=""
+            className="home-section-intro-ecellLogo"
+          />
           <div className="home-section-paragraph">presents</div>
           <img
             src={disruptionText}

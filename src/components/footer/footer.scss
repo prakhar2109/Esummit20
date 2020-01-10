@@ -90,7 +90,6 @@
       }
       .logo-container {
         display: flex;
-        justify-content: space-evenly;
         width: 85%;
         flex-wrap: wrap;
       }
@@ -101,7 +100,7 @@
         font-size: 1.2rem;
         word-wrap: break-word;
         .new-footer-section-contact-link {
-          margin-left: 1rem;
+          margin-right: 2rem;
           margin-top: 0.5rem;
           .new-footer-section-contact-logo {
             height: 1.75rem;

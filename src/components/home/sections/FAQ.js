@@ -44,6 +44,9 @@ class FAQ extends Component {
             </div>
           </div>
         </div>
+        <a href="#" className="section-button">
+          <button>view all</button>
+        </a>
       </div>
     )
   }

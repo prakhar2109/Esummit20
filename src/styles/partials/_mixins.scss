@@ -9,13 +9,19 @@
 }
 
 @mixin section() {
+
+  @include desktop-768-1024 {
+    padding: $gutterWidth;
+
+  }
   @include desktop-320-767() {
     min-height: fit-content;
+    padding: $gutterWidth;
     height: 100%;
     width: 100vw;
   }
 
-  padding: $gutterWidth 17.5vw;
+  padding: $gutterWidth*2 17.5vw;
 
   @include display-column();
   width: 100%;

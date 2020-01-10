@@ -7,6 +7,23 @@
   margin-top: $gutterWidth * 2;
 
   .home-section-intro {
+    @include desktop-0-1281() {
+      height: $gutterWidth * 14;
+    }
+
+    .home-section-background-disruption {
+      @include desktop-0-1281() {
+        height: $gutterWidth*3.8;
+
+      }
+    }
+
+    .home-section-intro-ecellLogo {
+      @include desktop-0-1281() {
+        height: $gutterWidth*2;
+      }
+    }
+
     @include display-column();
     align-items: center;
     justify-content: space-between;
@@ -14,12 +31,15 @@
     margin-bottom: $gutterWidth * 2;
   }
 
-  @include desktop-1025-1400 {
+  <<<<<<< HEAD @include desktop-1025-1400 {
     .home-section-intro {
       height: $gutterWidth * 12;
     }
   }
-  .home-section-paragraph {
+
+  =======>>>>>>>responsive fixes .home-section-paragraph {
+    @include desktop-0-1281() {}
+
     font-size: $normalFontSize;
     line-height: $normalLineHeight;
     text-align: center;
@@ -53,6 +73,10 @@
     z-index: 2;
 
     .section-paragraph {
+      @include desktop-0-1281() {
+        margin: 0;
+      }
+
       margin: $gutterWidth;
     }
   }
@@ -66,7 +90,15 @@
     margin-left: 0.9375vw;
 
     .section-image-heading {
+      @include desktop-320-767 {
+        padding-left: 0
+      }
+
       margin-left: 0;
+    }
+
+    .section-image-heading-background {
+      left: 0;
     }
   }
 
@@ -99,28 +131,46 @@
       align-items: center;
       position: relative;
       width: $cardWidth;
+      border-radius: 4px;
       height: $cardHeight;
       overflow: hidden;
       margin: 0 0.9375vw $gutterWidth 0.9375vw;
+
+      .home-section-event-card-link {
+        position: absolute;
+        width: $cardWidth;
+        height: $cardHeight;
+        border-radius: 4px;
+        z-index: 3;
+
+        &:hover {
+          ~.home-section-event-card-background {
+            transform: scale(1.2);
+
+          }
+        }
+      }
 
       .home-section-event-card-background-tint {
         position: absolute;
         z-index: 1;
         width: $cardWidth;
         height: $cardHeight;
-        background: linear-gradient(
-          180deg,
-          #000000 -53.27%,
-          rgba(0, 0, 0, 0.3) 132.69%
-        );
+        background: linear-gradient(180deg, #000000 -15.17%, rgba(0, 0, 0, 0.3) 132.69%);
+        mix-blend-mode: multiply;
+        opacity: 0.4;
+        border-radius: 4px;
       }
 
       .home-section-event-card-background {
         position: absolute;
         width: $cardWidth;
+        border-radius: 4px;
         height: $cardHeight;
         z-index: 0;
+        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
         background-color: $backgroundImageColor;
+
       }
 
       .home-section-event-card-heading {
@@ -158,17 +208,17 @@
     margin-left: 0.9375vw;
 
     .section-image-heading {
+      padding-left: 0;
       margin-left: 0;
     }
   }
 
+
   .speakers-section-card-container {
     z-index: 2;
     @include display-row();
-    // display: grid;
     width: 100%;
     margin: $gutterWidth 0;
-    // grid-template-columns: 33.33% 33.33% 33.33%;
     white-space: nowrap;
     overflow-x: scroll;
 
@@ -184,6 +234,7 @@
       @include display-column();
       align-items: center;
       overflow-x: hidden;
+      margin: 0;
     }
 
     .speakers-section-card {
@@ -205,14 +256,14 @@
         @include display-column();
         width: 100%;
         justify-content: flex-start;
-        padding: 0 $gutterWidth 0 $gutterWidth * 2;
+        padding: 0 $gutterWidth;
 
         &:first-child {
-          margin: $gutterWidth * 2;
+          margin: $gutterWidth;
         }
 
-        &:last-child {
-          margin: $gutterWidth * 2;
+        &:not(:first-child) {
+          display: none;
         }
       }
 
@@ -229,15 +280,16 @@
 
       .speakers-section-card-content {
         @include desktop-320-767 {
+          @include display-column();
           width: 100%;
           padding: 0 $gutterWidth;
+          margin: $gutterWidth 0;
         }
 
         .speakers-section-card-heading {
           @include desktop-320-767 {
-            @include display-row();
-            text-align: left;
-            font-size: 1rem;
+            text-align: center;
+            font-size: $normalFontSize;
           }
 
           font-weight: bold;
@@ -249,8 +301,7 @@
 
         .speakers-section-card-subheading {
           @include desktop-320-767 {
-            @include display-row();
-            text-align: left;
+            align-items: center;
             font-size: 1rem;
           }
 
@@ -554,22 +605,73 @@
 }
 
 .testemonial-section-container {
-  .ant-carousel .slick-slide {
-    @include display-column();
-    justify-content: center;
-    align-items: center;
-    text-align: center !important;
-    height: 48rem !important;
-    // background: #364d79 !important;
-    overflow: hidden !important;
-    padding: $gutterWidth * 4 17.5vw;
-  }
 
   .ant-carousel {
-    .slick-dots {
-      // bottom: 6rem;
+    .slick-slide {
+      @include desktop-320-767 {
+        height: 72rem !important;
+      }
 
+      .testemonial-card {
+        @include display-column();
+        background-color: $cardBackgroundColor;
+        border-radius: 4px;
+        height: fit-content;
+        padding: $gutterWidth * 4 8.23vw;
+        position: relative;
+        align-items: center;
+
+        .testemonial-card-image {
+          width: 8rem;
+          position: absolute;
+          height: 8rem;
+          top: -4rem;
+          border-radius: 50%;
+        }
+
+        .testemonial-card-heading {
+          font-size: $normalFontSize;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.87);
+          margin: $gutterWidth * 0.2;
+        }
+
+        .testemonial-card-subheading {
+          font-size: $normalFontSize * 0.8;
+          color: rgba(255, 255, 255, 0.87);
+          margin: $gutterWidth * 0.1;
+        }
+
+        .testemonial-card-horizontal-line {
+          border: 1px solid $primaryColor;
+          margin: $gutterWidth 0;
+          width: 100%;
+        }
+
+        .testemonial-card-content {
+          color: rgba(255, 255, 255, 0.6);
+          margin: $gutterWidth 0;
+          font-size: $normalFontSize * 0.9;
+          line-height: $normalLineHeight * 0.8;
+        }
+      }
+
+      @include display-column();
+      justify-content: center;
+      align-items: center;
+      text-align: center !important;
+      height: 48rem !important;
+      overflow: hidden !important;
+      padding: $gutterWidth * 4 17.5vw;
+    }
+
+    .slick-dots {
       li {
+        @include desktop-320-767 {
+          margin: 0 $gutterWidth;
+
+        }
+
         margin: 0 2.25rem;
 
         button {
@@ -580,59 +682,18 @@
       }
     }
   }
-
-  .ant-carousel .slick-slide .testemonial-card {
-    @include display-column();
-    background-color: $cardBackgroundColor;
-    border-radius: 4px;
-    height: fit-content;
-    padding: $gutterWidth * 4 8.23vw;
-    position: relative;
-    align-items: center;
-
-    .testemonial-card-image {
-      width: 8rem;
-      position: absolute;
-      height: 8rem;
-      top: -4rem;
-      border-radius: 50%;
-    }
-
-    .testemonial-card-heading {
-      font-size: $normalFontSize;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.87);
-      margin: $gutterWidth * 0.2;
-    }
-
-    .testemonial-card-subheading {
-      font-size: $normalFontSize * 0.8;
-      color: rgba(255, 255, 255, 0.87);
-      margin: $gutterWidth * 0.1;
-    }
-
-    .testemonial-card-horizontal-line {
-      border: 1px solid $primaryColor;
-      margin: $gutterWidth 0;
-      width: 100%;
-    }
-
-    .testemonial-card-content {
-      color: rgba(255, 255, 255, 0.6);
-      margin: $gutterWidth 0;
-      font-size: $normalFontSize * 0.9;
-      line-height: $normalLineHeight * 0.8;
-    }
-  }
 }
 
 .faq-section-container {
   @include section();
+  justify-content: unset;
 
   .section-image-heading-container {
     justify-content: flex-start;
+    margin-left: 0.9375vw;
 
     .section-image-heading {
+      padding-left: 0;
       margin-left: 0;
     }
   }
@@ -641,12 +702,13 @@
     @include display-column();
     justify-content: flex-start;
     width: 100%;
+    margin: $gutterWidth 0;
 
     .section-paragraph {
       text-align: left;
       color: #ffffff;
       padding: 0;
-      margin: $gutterWidth 0;
+      margin-bottom: $gutterWidth;
     }
 
     .question-container {
@@ -675,7 +737,7 @@
         cursor: pointer;
 
         &:checked {
-          + .question-items-container {
+          +.question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -694,11 +756,13 @@
               }
             }
 
-            > .question-items-answer {
+            >.question-items-answer {
               color: #fff;
 
               @include desktop-0-1281() {
-                height:fit-content;
+                <<<<<<< HEAD height: fit-content;
+                =======height: 60vh;
+                >>>>>>>responsive fixes
               }
 
               opacity: 1;
@@ -715,7 +779,8 @@
 
         .question-items-container-question {
           @include desktop-0-1281() {
-            font-size: $headerFontSize * 0.8;
+            font-size: $normalFontSize;
+            padding-left: 0;
           }
 
           @include display-row();
@@ -755,8 +820,9 @@
 
         .question-items-answer {
           @include desktop-0-1281() {
-            font-size: $headerFontSize * 0.8;
+            font-size: $normalFontSize;
             padding-left: 0;
+            line-height: $normalLineHeight;
           }
 
           font-size: $normalFontSize;
@@ -873,8 +939,7 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {
-      }
+      @include desktop-320-767 {}
 
       font-weight: normal;
       color: $whiteText;
@@ -904,8 +969,7 @@
 
   .section-image-heading {
     @include desktop-320-767 {
-      height: $gutterWidth * 0.8;
-      font-size: 2.3rem;
+      font-size: $headerFontSize;
     }
 
     font-family: $generalFontFamily !important;
@@ -913,55 +977,22 @@
     text-transform: uppercase;
     font-size: $headerFontSize * 1.4;
     color: #ffffff;
-    margin: $gutterWidth;
+    padding: $gutterWidth;
   }
 
+
   .section-image-heading-background {
+    @include desktop-320-767 {
+      height: $gutterWidth*2;
+      top: 16px;
+
+    }
+
     position: absolute;
     top: 0;
     height: $gutterWidth * 4;
-    width: 100%;
   }
 
-  #section-image-heading-background-events {
-    width: auto;
-  }
-
-  #section-image-heading-background-events {
-    @include desktop-320-767 {
-      width: 100%;
-    }
-  }
-
-  #section-image-heading-background-speaker {
-    width: auto;
-  }
-
-  #section-image-heading-background-speaker {
-    @include desktop-320-767 {
-      width: 100%;
-    }
-  }
-
-  #section-image-heading-background-sponsor {
-    width: auto;
-  }
-
-  #section-image-heading-background-sponsor {
-    @include desktop-320-767 {
-      width: 100%;
-    }
-  }
-
-  #section-image-heading-background-faq {
-    width: auto;
-  }
-
-  #section-image-heading-background-faq {
-    @include desktop-320-767 {
-      width: 100%;
-    }
-  }
 }
 
 .section-paragraph {
@@ -989,6 +1020,10 @@
 }
 
 .section-horizontal-navigate-container {
+  @include desktop-320-767 {
+    display: none;
+  }
+
   .section-horizontal-navigate-arrow {
     color: white;
     font-size: $normalFontSize;
