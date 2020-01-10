@@ -70,11 +70,7 @@
 }
 
 .taskchild-description {
-<<<<<<< HEAD
   height: 13.05vh;
-=======
-  height: 10vh;
->>>>>>> 75145f24a8adfd059368b170cd834228686e0241
   width: 100%;
   word-break: break-word;
   overflow: auto;
