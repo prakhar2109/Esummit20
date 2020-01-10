@@ -19,6 +19,9 @@ import { Link } from 'react-router-dom'
 
 import './eventsAll.css'
 class Events extends Component {
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div id="home-section-event-container-main">

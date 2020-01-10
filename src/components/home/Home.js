@@ -10,6 +10,9 @@ import {
   FAQ
 } from './sections/'
 class Home extends Component {
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="home-container">
@@ -17,7 +20,7 @@ class Home extends Component {
         <About />
         <Events />
         <Speakers />
-        {/* <Sponsors /> */}
+        <Sponsors /> 
         <Testemonials />
         <FAQ />
       </div>
