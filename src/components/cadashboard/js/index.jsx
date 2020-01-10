@@ -7,7 +7,7 @@ import {
   Redirect
 } from 'react-router-dom'
 import Viewprofile from './Profile/profile'
-import LeaderBoard from './Sidenavbar'
+import Sidenavbar from './Sidenavbar'
 import CATaskBoard from './catask'
 // import CAOffers from './payment'
 // import CAPayment from './payment/paymentwithoutworkshop'
@@ -32,7 +32,7 @@ class DashboardIndex extends Component {
     return (
       <Switch>
         <React.Fragment>
-          <Route path="/dashboard" component={LeaderBoard} />
+          <Route path="/dashboard" component={Sidenavbar} />
           <Route exact path="/dashboard/Viewprofile" component={Viewprofile} />
           <Route exact path="/dashboard/task" component={CATaskBoard} />
           {/* <Route exact path="/dashboard/offers" component={CAOffers} /> */}
