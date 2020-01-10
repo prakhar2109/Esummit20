@@ -122,6 +122,32 @@ class Events extends Component {
                 Leadership Series
               </div>
             </div>
+            <Link to="/events/E-Conference">
+              <div className="home-section-event-card">
+                <div className="home-section-event-card-background-tint" />
+                <img
+                  src={eConferenceCard}
+                  className="home-section-event-card-background"
+                  alt=""
+                />
+                <div className="home-section-event-card-heading">
+                  E-Conference
+                </div>
+              </div>
+            </Link>
+            <Link to="/events/Nurture-Entrepreneurship">
+              <div className="home-section-event-card">
+                <div className="home-section-event-card-background-tint" />
+                <img
+                  src={schoolEventsCard}
+                  className="home-section-event-card-background"
+                  alt=""
+                />
+                <div className="home-section-event-card-heading">
+                  Nurture-Entrepreneurship
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
