@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import roleHeading from '../../../assets/role.svg'
+import './caAbout.css'
 import perksHeading from '../../../assets/perks.svg'
 class CAAbout extends Component {
   render() {

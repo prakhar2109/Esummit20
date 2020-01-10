@@ -110,9 +110,11 @@
         z-index: 1;
         width: $cardWidth;
         height: $cardHeight;
-        background: linear-gradient(180deg,
-            #000000 -53.27%,
-            rgba(0, 0, 0, 0.3) 132.69%);
+        background: linear-gradient(
+          180deg,
+          #000000 -53.27%,
+          rgba(0, 0, 0, 0.3) 132.69%
+        );
       }
 
       .home-section-event-card-background {
@@ -675,7 +677,7 @@
         cursor: pointer;
 
         &:checked {
-          +.question-items-container {
+          + .question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -694,7 +696,7 @@
               }
             }
 
-            >.question-items-answer {
+            > .question-items-answer {
               color: #fff;
 
               @include desktop-0-1281() {
@@ -873,7 +875,8 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {}
+      @include desktop-320-767 {
+      }
 
       font-weight: normal;
       color: $whiteText;
@@ -1009,6 +1012,5 @@
     &:hover {
       background-color: $primaryColor;
     }
-
   }
 }
