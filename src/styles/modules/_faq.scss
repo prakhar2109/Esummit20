@@ -1,4 +1,164 @@
 .faq-container {
-  padding-top: $gutterWidth*6;
+  @include section();
+
+  font-family: $generalFontFamily;
+
+  padding-top: $gutterWidth * 6;
   background-color: $primaryBackgroundColor;
+  .faq-content-container {
+    width: 100%;
+    .faq-paragraph {
+      color: white; /* Stuck somewhere? We’re here to help you! */
+
+      font-size: $normalFontSize;
+      line-height: $normalLineHeight;
+
+      color: rgba(255, 255, 255, 0.87);
+    }
+    .ant-tabs-bar {
+      border: 0;
+      .ant-tabs-tab-arrow-show {
+        color: white;
+      }
+    }
+    .ant-tabs-ink-bar {
+      border: 2px solid #359d9a;
+    }
+    .ant-tabs-nav-scroll {
+      margin-top: $gutterWidth;
+      .ant-tabs-tab {
+        font-weight: bold;
+        font-size: $headerFontSize;
+        line-height: $headerLineHeight;
+
+        color: rgba(255, 255, 255, 0.38);
+      }
+      .ant-tabs-tab-active {
+        color: rgba(255, 255, 255, 0.87);
+      }
+    }
+    .tab-question-container {
+      margin-top: $gutterWidth * 2;
+      .question-container {
+        position: relative;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.38);
+
+        &:first-child {
+          border-top: 3px solid rgba(255, 255, 255, 0.38);
+        }
+
+        .question-items-checkbox {
+          @include desktop-0-1281() {
+            height: $gutterWidth * 3;
+          }
+
+          position: absolute;
+          opacity: 0 !important;
+          margin: 0;
+          padding: 0;
+          top: 0;
+          pointer-events: all;
+          z-index: 10;
+          display: block;
+          width: 100%;
+          height: $gutterWidth * 2.4;
+          cursor: pointer;
+
+          &:checked {
+            + .question-items-container {
+              padding-bottom: $gutterWidth;
+
+              .question-items-container-question {
+                color: $whiteText;
+                font-weight: bold;
+
+                .plus-container {
+                  .dash {
+                    &:first-child {
+                      transform: rotate(135deg);
+                    }
+
+                    &:last-child {
+                      transform: rotate(45deg);
+                    }
+                  }
+                }
+              }
+
+              > .question-items-answer {
+                color: #fff;
+
+                @include desktop-0-1281() {
+                  height: 60vh;
+                }
+
+                opacity: 1;
+                height: 30vh;
+              }
+            }
+          }
+        }
+
+        .question-items-container {
+          @include display-column();
+          overflow: hidden;
+          transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+          .question-items-container-question {
+            @include desktop-0-1281() {
+              font-size: $normalFontSize;
+              padding-left: 0;
+            }
+
+            @include display-row();
+            padding: $gutterWidth * 0.8 0;
+            justify-content: space-between;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.38);
+            font-weight: bold;
+            transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+            font-size: $normalFontSize;
+            padding-left: $gutterWidth;
+
+            .plus-container {
+              width: 20px;
+              height: 21px;
+              @include display-column();
+              justify-content: center;
+              align-items: center;
+              position: relative;
+
+              .dash {
+                border: 0;
+                margin: 0;
+                width: 20px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.38);
+                transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+                &:first-child {
+                  position: absolute;
+                  transform: rotate(90deg);
+                  left: 0;
+                }
+              }
+            }
+          }
+
+          .question-items-answer {
+            @include desktop-0-1281() {
+              font-size: $normalFontSize;
+              padding-left: 0;
+              line-height: $normalLineHeight;
+            }
+
+            font-size: $normalFontSize;
+            height: 0;
+            transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+            padding-left: $gutterWidth;
+          }
+        }
+      }
+    }
+  }
 }
