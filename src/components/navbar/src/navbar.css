@@ -67,3 +67,14 @@
 #mobile-content {
   display: none;
 }
+
+.navbar-register-button {
+  border-radius: 2px;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 0.96rem;
+  background-color: #359D9A;
+  color: #fff;
+  border: 0;
+  width: 7rem;
+}

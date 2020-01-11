@@ -84,7 +84,7 @@ class index extends Component {
               Events
             </Link>
           </li>
-          {/* <li className="navbar-items">
+          { <li className="navbar-items">
             <Link
               to="/Speakers"
               className="navbar-links"
@@ -92,7 +92,7 @@ class index extends Component {
             >
               Speakers
             </Link>
-          </li> */}
+          </li> }
           <li className="navbar-items">
             <Link
               to="/campus-ambassador"
@@ -104,22 +104,21 @@ class index extends Component {
           </li>
           <li className="navbar-items">
             <Link
-              to="/events/Startupexpo"
-              target='_blank'
+              to="#"
               className="navbar-links"
               rel="noopener noreferrer"
             >
-              Startup Expo
+              Startup Ignite
             </Link>
           </li>
           <li className="navbar-items">
             <Link
-              to="/events/Ideastorm"
+              to="/sponsors"
               target='_blank'
               className="navbar-links"
               rel="noopener noreferrer"
             >
-              Ideastorm
+              Sponsors
             </Link>
           </li>
           {/* <li className="navbar-items">
