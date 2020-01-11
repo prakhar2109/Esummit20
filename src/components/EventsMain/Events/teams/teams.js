@@ -1,4 +1,3 @@
-
 import './teams.css'
 
 <div className="team-container">
