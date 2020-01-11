@@ -18,14 +18,28 @@
     @include desktop-320-767 {
       margin: 0;
       height: $gutterWidth * 17.4;
+    }
 
+    @include desktop-768-1024 {
+      height: $gutterWidth*14;
+    }
+
+    @include desktop-1025-1400 {
+      height: $gutterWidth*16;
     }
 
     .home-section-background-disruption {
+
       @include desktop-320-767 {
-
         height: $gutterWidth*3;
+      }
 
+      @include desktop-768-1024 {
+        height: $gutterWidth*2.8;
+      }
+
+      @include desktop-1025-1400 {
+        height: $gutterWidth*2.6;
       }
     }
 
@@ -34,11 +48,33 @@
 
         height: $gutterWidth*2.8;
       }
+
+      @include desktop-320-767 {
+        height: $gutterWidth*3;
+      }
+
+      @include desktop-768-1024 {
+        height: $gutterWidth*2.8;
+      }
+
+      @include desktop-1025-1400 {
+        height: $gutterWidth*2.6;
+
+      }
     }
 
     .home-section-intro-content {
       @include desktop-320-767 {
         height: $gutterWidth * 10;
+      }
+
+      @include desktop-768-1024 {
+        height: $gutterWidth * 10;
+
+      }
+
+      @include desktop-1025-1400 {
+        height: $gutterWidth * 12;
       }
 
       @include display-column();
@@ -137,7 +173,7 @@
     display: grid;
     width: 100%;
     margin: $gutterWidth 0;
-
+  
     @include desktop-1281-1920() {
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
@@ -156,21 +192,42 @@
     }
 
     .home-section-event-card {
+      @include desktop-320-767 {
+        width: $cardWidth*0.5;
+        height: $cardHeight*0.5;
+      }
+
+      @include desktop-768-1024 {
+        width: $cardWidth*0.6;
+        height: $cardHeight*0.6;
+        margin: 0 auto $gutterWidth auto;
+      }
+
+      @include desktop-1025-1400 {
+        width: $cardWidth*0.7;
+        height: $cardHeight*0.7;
+      }
+
+      @include desktop-1401-1600 {
+        width: $cardWidth*0.85;
+        height: $cardHeight*0.85;
+      }
+
       @include display-column();
       flex-direction: column-reverse;
       justify-content: space-between;
       align-items: center;
       position: relative;
       width: $cardWidth;
-      border-radius: 4px;
       height: $cardHeight;
+      border-radius: 4px;
       overflow: hidden;
       margin: 0 0.9375vw $gutterWidth 0.9375vw;
 
       .home-section-event-card-link {
         position: absolute;
-        width: $cardWidth;
-        height: $cardHeight;
+        width: inherit;
+        height: inherit;
         border-radius: 4px;
         z-index: 3;
 
@@ -185,8 +242,8 @@
       .home-section-event-card-background-tint {
         position: absolute;
         z-index: 1;
-        width: $cardWidth;
-        height: $cardHeight;
+        width: inherit;
+        height: inherit;
         background: linear-gradient(180deg, #000000 -15.17%, rgba(0, 0, 0, 0.3) 132.69%);
         mix-blend-mode: multiply;
         opacity: 0.4;
@@ -195,9 +252,9 @@
 
       .home-section-event-card-background {
         position: absolute;
-        width: $cardWidth;
         border-radius: 4px;
-        height: $cardHeight;
+        width: inherit;
+        height: inherit;
         z-index: 0;
         transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
         background-color: $backgroundImageColor;

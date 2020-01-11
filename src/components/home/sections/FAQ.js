@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import faqHeadingBackground from '../../../assets/faq-heading-background.svg'
-
+import { Link } from 'react-router-dom';
 class FAQ extends Component {
   render() {
     return (
@@ -44,9 +44,9 @@ class FAQ extends Component {
             </div>
           </div>
         </div>
-        <a href="#" className="section-button">
+        <Link to="/faqs" className="section-button">
           <button>view all</button>
-        </a>
+        </Link>
       </div>
     )
   }
