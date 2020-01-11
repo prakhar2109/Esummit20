@@ -22,6 +22,7 @@ export default class EventsMainIndex extends Component {
   }
 
   componentDidMount() {
+    
     document
         .getElementById("loader")
         .style
@@ -50,7 +51,7 @@ export default class EventsMainIndex extends Component {
       })
         .then(r => {
           document.getElementById('loader').style.display = 'none'
-
+          window.scrollTo(0, 0)
           this.setState({
             data: r.data.event_data,
             faq: r.data,

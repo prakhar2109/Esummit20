@@ -17,7 +17,7 @@ export default class LoaderIndex extends React.Component {
         </div>
 
         <div className="mobile">
-          <img src={Mobile} alt="loader" />
+          <img src={Loader} alt="loader" />
         </div>
       </div>
     )

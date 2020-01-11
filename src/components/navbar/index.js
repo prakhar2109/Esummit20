@@ -114,7 +114,6 @@ class index extends Component {
           <li className="navbar-items">
             <Link
               to="/sponsors"
-              target='_blank'
               className="navbar-links"
               rel="noopener noreferrer"
             >
@@ -153,7 +152,6 @@ class index extends Component {
               <Link
                 to="/events"
                 className="navbar-links"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Events
@@ -172,7 +170,6 @@ class index extends Component {
               <Link
                 to="/campus-ambassador"
                 className="navbar-links"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Campus Ambassador
