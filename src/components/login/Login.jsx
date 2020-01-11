@@ -29,7 +29,7 @@ class Login extends Component {
       errorMessage: ''
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     document.getElementById('loader').style.display = 'none'
   }
   handleToggle = () => {
@@ -78,7 +78,7 @@ class Login extends Component {
         access_token: accessToken
       }
     }
-    document.getElementById("loader").style.display = "grid";
+    document.getElementById('loader').style.display = 'grid'
     axios({
       method: 'post',
       url: BASE_URL + '/v1/api/user/login',
@@ -88,7 +88,7 @@ class Login extends Component {
         if (res !== undefined && res.data !== undefined) {
           if (res.data) {
             if (res.data.token) {
-               document.getElementById('loader').style.display = 'none'
+              document.getElementById('loader').style.display = 'none'
               localStorage.setItem('user_token', res.data.token)
               window.location.href = '/dashboard/task'
             }
@@ -96,13 +96,14 @@ class Login extends Component {
         }
       })
       .catch(response => {
-        this.setState({
-          loader: false,
-          errorMessage: 'Email/Password is invalid',
-          emailErrorBool: '',
-          passErrorBool: ''
-        },()=>
-        document.getElementById('loader').style.display = 'none'
+        this.setState(
+          {
+            loader: false,
+            errorMessage: 'Email/Password is invalid',
+            emailErrorBool: '',
+            passErrorBool: ''
+          },
+          () => (document.getElementById('loader').style.display = 'none')
         )
       })
   }
@@ -167,7 +168,7 @@ class Login extends Component {
     return (
       <React.Fragment>
         <div className="account_setup">
-          <Loader/>
+          <Loader />
           <div className="signup-container">
             {activeStep === 0 ? (
               <div className="accountsetup_popup">
@@ -181,8 +182,7 @@ class Login extends Component {
                   <div className="facebook_login">
                     <FacebookLogin
                       // appId="630305827505065"
-              appId="2546035355673765"
-
+                      appId="2546035355673765"
                       size="medium"
                       autoLoad={false}
                       disableMobileRedirect={true}

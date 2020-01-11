@@ -18,7 +18,7 @@ export default class HeaderSection extends Component {
     jump('.Rules', { offset: -130 })
   }
   componentDidMount() {
-    console.log(this.props,"this.props")
+    console.log(this.props, 'this.props')
 
     this.setState({
       data: this.props.data[0]

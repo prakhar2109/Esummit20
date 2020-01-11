@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 /* eslint-disable react/prop-types */
 
 export default class ApplyNowIdenx extends Component {
-
   render() {
-    console.log(this.props,"this.props")
+    console.log(this.props, 'this.props')
     return (
       <React.Fragment>
         <div className="register">

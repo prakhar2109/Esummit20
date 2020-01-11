@@ -20,9 +20,10 @@ export default class Caleader extends Component {
         }
       })
       .then(res => {
-        this.setState({ leaderboard: res.data },()=>
-    document.getElementById('loader').style.display = 'none'
-    )
+        this.setState(
+          { leaderboard: res.data },
+          () => (document.getElementById('loader').style.display = 'none')
+        )
       })
       .catch(response => {
         document.getElementById('loader').style.display = 'none'
@@ -34,7 +35,7 @@ export default class Caleader extends Component {
   render() {
     return (
       <div className="caleaderboard-parent">
-        <Loader/>
+        <Loader />
         <div>
           <div className="caleader-heading">Leaderboard</div>
         </div>

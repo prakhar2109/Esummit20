@@ -57,8 +57,8 @@ class Sponsors extends Component {
     super(props)
     this.state = {}
   }
-  componentDidMount(){
-    window.scrollTo(0, 0);
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
   render() {
     return (
@@ -140,11 +140,19 @@ class Sponsors extends Component {
           </div>
           <div className="sponsorimage">
             <img src={FDC} alt="sorry" />
-            <p>FACEBOOK<br />DEVELOPMENT CIRCLES</p>
+            <p>
+              FACEBOOK
+              <br />
+              DEVELOPMENT CIRCLES
+            </p>
           </div>
           <div className="sponsorimage">
             <img src={GDG} alt="sorry" />
-            <p>GOOGLE<br />DEVELOPER GROUPS</p>
+            <p>
+              GOOGLE
+              <br />
+              DEVELOPER GROUPS
+            </p>
           </div>
           <div className="sponsorimage">
             <img src={geekforgeeks} alt="sorry" />
@@ -276,7 +284,11 @@ class Sponsors extends Component {
           </div>
           <div className="sponsorimage">
             <img src={zomato} alt="sorry" />
-            <p>ZOMATO<br />FEEDING INDIA</p>
+            <p>
+              ZOMATO
+              <br />
+              FEEDING INDIA
+            </p>
           </div>
         </div>
       </div>

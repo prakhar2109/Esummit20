@@ -22,11 +22,7 @@ export default class EventsMainIndex extends Component {
   }
 
   componentDidMount() {
-    
-    document
-        .getElementById("loader")
-        .style
-        .display = "grid";
+    document.getElementById('loader').style.display = 'grid'
 
     console.log(this.props, 'maaaaaaaaaaaxxxxxxxxxxxxxxxx')
     let event_name =
@@ -76,7 +72,7 @@ export default class EventsMainIndex extends Component {
   render() {
     return (
       <React.Fragment>
-        <Loader/>
+        <Loader />
         {this.state.data.event_type2 === 'TYPE1' ? (
           <Route
             exact

@@ -41,16 +41,16 @@ export default class Events extends Component {
         status = res.data.map(eventlist => {
           return eventlist.status
         })
-        this.setState({
-          appliedevents: appliedevents,
-          status: status
-        },()=>
-    document.getElementById('loader').style.display = 'none'
-    )
+        this.setState(
+          {
+            appliedevents: appliedevents,
+            status: status
+          },
+          () => (document.getElementById('loader').style.display = 'none')
+        )
       })
       .catch(response => {
         document.getElementById('loader').style.display = 'none'
-
       })
   }
   discardEvent = id => {
@@ -72,7 +72,7 @@ export default class Events extends Component {
   render() {
     return (
       <div className="caevents-parent">
-        <Loader/>
+        <Loader />
         {this.state.appliedevents && this.state.appliedevents.length > 0 ? (
           <>
             <div className="ca-events-parent-heading1 caeventsparent-font">
