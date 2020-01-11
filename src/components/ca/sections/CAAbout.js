@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import roleHeadingBackground from '../../../assets/ROLE.png'
+import roleHeadingBackground from '../../../assets/ROLE.png'
 import './caAbout.css'
-// import perksHeadingBackground from '../../../assets/PERKS.png'
+import perksHeadingBackground from '../../../assets/PERKS.png'
 class CAAbout extends Component {
   render() {
     return (
@@ -9,7 +9,7 @@ class CAAbout extends Component {
         <div className="section-image-heading-container" id="role-container">
           <div className="section-image-heading">ROLES</div>
           <img
-            src=""
+            src={roleHeadingBackground}
             className="section-image-heading-background"
             alt=""
             id="role-CA"
@@ -27,7 +27,7 @@ class CAAbout extends Component {
         <div className="section-image-heading-container" id="perk-container">
           <div className="section-image-heading">THE EXCITING PERKS</div>
           <img
-            src=""
+            src={perksHeadingBackground}
             className="section-image-heading-background"
             alt=""
             id="PERKS-CA"
