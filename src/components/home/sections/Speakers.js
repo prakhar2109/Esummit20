@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import speakersHeadingBackground from '../../../assets/speakers-heading-background.svg'
 import kamalCard from '../../../assets/kamal.png'
 import ajayCard from '../../../assets/ajay.png'
@@ -44,11 +44,7 @@ class Speakers extends Component {
           data-scroll="horizontal"
         >
           <div className="speakers-section-card">
-            <img
-              src={karthik}
-              alt=""
-              className="speakers-section-card-image"
-            />
+            <img src={karthik} alt="" className="speakers-section-card-image" />
             <div className="speakers-section-card-content">
               <div className="speakers-section-card-heading">Karthik Reddy</div>
               <div className="speakers-section-card-subheading">
@@ -72,21 +68,14 @@ class Speakers extends Component {
             </div>
           </div>
           <div className="speakers-section-card">
-            <img
-              src={coming}
-              alt=""
-              className="speakers-section-card-image"
-            />
+            <img src={coming} alt="" className="speakers-section-card-image" />
             <div className="speakers-section-card-content">
-              <div className="speakers-section-card-heading">
-                Coming Soon
-              </div>
-              <div className="speakers-section-card-subheading">
-              </div>
+              <div className="speakers-section-card-heading">Coming Soon</div>
+              <div className="speakers-section-card-subheading"></div>
             </div>
           </div>
         </div>
-        <Link to ='/speakers' className="section-button">
+        <Link to="/speakers" className="section-button">
           <button>view all speakers</button>
         </Link>
       </div>

@@ -56,13 +56,13 @@
     e.preventDefault();
     var container = $(this).parent().parent().parent().prop("className")
     var horizontal_div = $('.' + container + ' div[data-scroll="horizontal"]');
-  
+
     if (isIgnoreRight && horizontal_div.scrollLeft() == horizontal_div.width())
       return;
     isIgnoreRight = true;
 
     if (horizontal_div.scrollLeft() <= horizontal_div.width()) {
-      horizontal_div_width += horizontal_div.width()
+      horizontal_div_width += (horizontal_div.width() + 540.96)
       horizontal_div.animate(
         {
           scrollLeft:
@@ -83,7 +83,7 @@
     isIgnoreLeft = true;
 
     if (horizontal_div.scrollLeft() > 0) {
-      horizontal_div_width -= horizontal_div.width()
+      horizontal_div_width -= (horizontal_div.width() + 540.96)
       horizontal_div.animate(
         {
           scrollLeft:
