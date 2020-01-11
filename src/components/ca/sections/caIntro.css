@@ -1,0 +1,13 @@
+.ca-section-intro-paragraph {
+  text-align: left !important;
+}
+.ca-title {
+  color: white;
+  z-index: 2;
+  font-size: 34px;
+  font-weight: 200;
+  margin-left: 13%;
+}
+.ca-section-intro-container {
+  background-image: url(../../../assets/ca-intro1.png) !important;
+}
