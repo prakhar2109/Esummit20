@@ -1,6 +1,6 @@
 .speakers-page-section-card img {
   width: 16rem;
-  height: 16rem;
+  border-radius: 50%;
 }
 
 .speaker-page-container {
@@ -70,4 +70,8 @@
   font-size: 1rem;
   font-family: 'Poppins';
   color: rgba(255, 255, 255, 0.6);
+}
+
+.speakers-page-section-card-content {
+  text-align: center;
 }

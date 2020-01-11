@@ -84,7 +84,7 @@ class index extends Component {
               Events
             </Link>
           </li>
-          {/* <li className="navbar-items">
+          { <li className="navbar-items">
             <Link
               to="/Speakers"
               className="navbar-links"
@@ -92,7 +92,7 @@ class index extends Component {
             >
               Speakers
             </Link>
-          </li> */}
+          </li> }
           <li className="navbar-items">
             <Link
               to="/campus-ambassador"
@@ -104,22 +104,21 @@ class index extends Component {
           </li>
           <li className="navbar-items">
             <Link
-              to="/events/Startupexpo"
-              target='_blank'
+              to="#"
               className="navbar-links"
               rel="noopener noreferrer"
             >
-              Startup Expo
+              Startup Ignite
             </Link>
           </li>
           <li className="navbar-items">
             <Link
-              to="/events/Ideastorm"
+              to="/sponsors"
               target='_blank'
               className="navbar-links"
               rel="noopener noreferrer"
             >
-              Ideastorm
+              Sponsors
             </Link>
           </li>
           {/* <li className="navbar-items">
@@ -162,6 +161,15 @@ class index extends Component {
             </li>
             <li className="navbar-mobile-items">
               <Link
+                to="/speakers"
+                className="navbar-links"
+                rel="noopener noreferrer"
+              >
+                Speakers
+              </Link>
+            </li>
+            <li className="navbar-mobile-items">
+              <Link
                 to="/campus-ambassador"
                 className="navbar-links"
                 target="_blank"
@@ -172,22 +180,20 @@ class index extends Component {
             </li>
             <li className="navbar-mobile-items">
               <Link
-                to="/ideastorm"
+                to="#"
                 className="navbar-links"
-                target="_blank"
                 rel="noopener noreferrer"
               >
-                Ideastorm
+                Startup Ignite
               </Link>
             </li>
             <li className="navbar-mobile-items">
               <Link
-                to="/events/Startupexpo"
+                to="/sponsors"
                 className="navbar-links"
-                target="_blank"
                 rel="noopener noreferrer"
               >
-                Startupexpo
+                Sponsors
               </Link>
             </li>
             {/* <li className="navbar-mobile-items">
