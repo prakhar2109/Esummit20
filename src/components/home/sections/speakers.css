@@ -1,3 +1,7 @@
 .speakers-section-card img {
 	height: 14rem;
 }
+
+.speakers-section-card-subheading {
+	text-align: center;
+}

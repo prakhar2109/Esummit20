@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 // import logo from './logo.svg'
 import Loading from './assets/loading.gif'
-import { BrowserRouter, Route, Switch,Redirect } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import theme from './assets/theme.png'
 import Success from './components/registration/popup/success/success.js'
 import Loadable from 'react-loadable'
@@ -30,7 +30,7 @@ import EventsMain from './components/EventsMain/index'
 import Events from './components/home/sections/EventsAll/eventsAll'
 import ForgotPassword from './components/forgot-password/forgot-password'
 import SetNewPassword from './components/forgot-password/set-new-password'
-
+import FAQs from './components/faq';
 class HomeLanding extends Component {
   render() {
     return (
@@ -48,6 +48,7 @@ class HomeLanding extends Component {
           <Route path="/set-new-password/:uuid/" component={SetNewPassword} />
           <Route path="/ca-registration" component={Registration} />
           <Route path="/noncaregister" component={NonCARegistration} />
+          <Route path="/faqs" component={FAQs} />
 
           <Route path="/personal-detail" component={Personaldetail} />
           <Route path="/register-success" component={Success} />
@@ -56,19 +57,19 @@ class HomeLanding extends Component {
             path="/ideastorm"
             component={props => <Ideastorm {...props} />}
           /> */}
-           <Route
-                  path="/ideastorm"
-                  render={() => <Redirect to="/events/ideastorm" />}
-                />
+          <Route
+            path="/ideastorm"
+            render={() => <Redirect to="/events/ideastorm" />}
+          />
           <Route
             exact
             path="/events/:id"
             render={props => <EventsMain {...props} />}
           />
-            <Route
-                  path="/startupexpo"
-                  render={() => <Redirect to="/events/Startupexpo" />}
-                />
+          <Route
+            path="/startupexpo"
+            render={() => <Redirect to="/events/Startupexpo" />}
+          />
           {/* <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}

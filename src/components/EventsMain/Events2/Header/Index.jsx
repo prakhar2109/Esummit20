@@ -8,7 +8,7 @@ import ignite from '../../../ignite/igniteHeader/assets/ignite.svg'
 export default class HeaderEvents2 extends Component {
   render() {
     return (
-      <div className="igniteHeaderSection">
+      <div className="igniteheaderSection">
         <div>
           <img src={ignite} alt="" />
         </div>

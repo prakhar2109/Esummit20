@@ -8,6 +8,7 @@ import wrong from './svg/wrong.svg'
 import './css/stepform.css'
 import axios from 'axios'
 import { BASE_URL } from '../../../utils/urls'
+import Loader from '../../loader/loader'
 // import axios from "axios"
 /* eslint-disable react/prop-types */
 
@@ -65,20 +66,14 @@ export default class AccountSetup extends Component {
         let data_email = {
           email: this.state.email
         }
-        // document
-        //     .getElementById("loader")
-        //     .style
-        //     .display = "grid";
+        document.getElementById('loader').style.display = 'grid'
         axios({
           method: 'post',
           url: BASE_URL + '/v1/api/user/check-email/',
           data: data_email
         })
           .then(r => {
-            // document
-            //     .getElementById("loader")
-            //     .style
-            //     .display = "none";
+            document.getElementById('loader').style.display = 'none'
             if (r.status === 200) {
               if (this.state.pass !== '') {
                 if (this.state.password === this.state.confirm_password) {
@@ -118,10 +113,7 @@ export default class AccountSetup extends Component {
             }
           })
           .catch(response => {
-            // document
-            //     .getElementById("loader")
-            //     .style
-            //     .display = "none";
+            document.getElementById('loader').style.display = 'none'
             this.setState({
               email_error_bool: 'true',
               email_error: 'This email is already registered'
@@ -270,6 +262,7 @@ export default class AccountSetup extends Component {
 
   componentDidMount() {
     const height = window.innerHeight
+    document.getElementById('loader').style.display = 'none'
 
     let push = 0 * height
     window.scroll({ top: push, behavior: 'auto' })
@@ -312,6 +305,7 @@ export default class AccountSetup extends Component {
     return (
       <div>
         <div className="esummit-register-form-body-parent">
+          <Loader />
           <div className="esummit-register-form-body-social">
             {/* <GoogleLogin
               clientId="73234389568-ad4s6dav417kmlut5n7n0gmrbpfkb44i.apps.googleusercontent.com"

@@ -4,6 +4,8 @@ import axios from 'axios'
 import { BASE_URL } from './../../../utils/urls'
 import CATaskUploading from './cataskuploading'
 import CATaskSummary from './catasksummary'
+import Loader from '../../loader/loader'
+
 let token = localStorage.getItem('user_token')
 
 /* eslint-disable react/prop-types */
@@ -18,6 +20,8 @@ export default class CATaskBoard extends Component {
     }
   }
   componentDidMount = () => {
+    document.getElementById('loader').style.display = 'grid'
+
     axios
       .get(BASE_URL + '/v1/api/task/list', {
         headers: {
@@ -25,11 +29,14 @@ export default class CATaskBoard extends Component {
         }
       })
       .then(res => {
+        document.getElementById('loader').style.display = 'none'
         if (res && res.data) {
           this.setState({ tasks: res.data })
         }
       })
       .catch(function(response) {
+        document.getElementById('loader').style.display = 'none'
+
         // alert(response)
       })
   }
@@ -54,6 +61,7 @@ export default class CATaskBoard extends Component {
         : '29 Jan - 2 Feb 2019'
     return (
       <div className="taskparent">
+        <Loader />
         <div className="taskchildheaderrow">
           <div
             className="taskchild-weeklyuploads"

@@ -4,6 +4,7 @@ import PaymentStatus from './spaymentstatus'
 import InviteBenefits from './invitebenefits'
 import { BASE_URL } from '../../../utils/urls'
 import axios from 'axios'
+import Loader from '../../loader/loader'
 
 export default class Cainvite extends Component {
   state = {
@@ -34,6 +35,7 @@ export default class Cainvite extends Component {
 
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
+    document.getElementById('loader').style.display = 'grid'
 
     if (token !== undefined) {
       axios
@@ -43,9 +45,13 @@ export default class Cainvite extends Component {
           }
         })
         .then(res => {
-          this.setState({ invite_link: res.data.invite_url })
+          this.setState(
+            { invite_link: res.data.invite_url },
+            () => (document.getElementById('loader').style.display = 'none')
+          )
         })
         .catch(response => {
+          document.getElementById('loader').style.display = 'none'
           localStorage.removeItem('user_token')
           window.location.href = '/login'
         })
@@ -58,6 +64,7 @@ export default class Cainvite extends Component {
 
     return (
       <div className="cainvite-parent">
+        <Loader />
         <div className="cainviteparent-heading">Invites here</div>
         <div className="cainvite-linkparent">
           <div className="cainvite-linkparent-heading">Invite link</div>

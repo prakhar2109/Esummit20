@@ -18,6 +18,8 @@ export default class HeaderSection extends Component {
     jump('.Rules', { offset: -130 })
   }
   componentDidMount() {
+    console.log(this.props, 'this.props')
+
     this.setState({
       data: this.props.data[0]
     })
@@ -69,7 +71,7 @@ export default class HeaderSection extends Component {
             target="_blank"
           >
             <span style={{ textTransform: 'uppercase' }}>
-              APPLY FOR {this.props.name}
+              APPLY FOR {this.props.applydata.title}
             </span>
           </a>
         </div>
