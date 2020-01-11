@@ -18,21 +18,17 @@
     @include desktop-320-767 {
       margin: 0;
       height: $gutterWidth * 17.4;
-
     }
 
     .home-section-background-disruption {
       @include desktop-320-767 {
-
-        height: $gutterWidth*3;
-
+        height: $gutterWidth * 3;
       }
     }
 
     .home-section-intro-ecellLogo {
       @include desktop-320-767 {
-
-        height: $gutterWidth*2.8;
+        height: $gutterWidth * 2.8;
       }
     }
 
@@ -56,9 +52,8 @@
 
   .home-section-paragraph {
     @include desktop-320-767 {
-
-      font-size: $normalFontSize*0.6;
-      line-height: $normalLineHeight*0.6;
+      font-size: $normalFontSize * 0.6;
+      line-height: $normalLineHeight * 0.6;
     }
 
     font-size: $normalFontSize;
@@ -122,7 +117,7 @@
 
     .section-image-heading {
       @include desktop-320-767 {
-        padding-left: 0
+        padding-left: 0;
       }
 
       margin-left: 0;
@@ -175,9 +170,8 @@
         z-index: 3;
 
         &:hover {
-          ~.home-section-event-card-background {
+          ~ .home-section-event-card-background {
             transform: scale(1.2);
-
           }
         }
       }
@@ -187,7 +181,11 @@
         z-index: 1;
         width: $cardWidth;
         height: $cardHeight;
-        background: linear-gradient(180deg, #000000 -15.17%, rgba(0, 0, 0, 0.3) 132.69%);
+        background: linear-gradient(
+          180deg,
+          #000000 -15.17%,
+          rgba(0, 0, 0, 0.3) 132.69%
+        );
         mix-blend-mode: multiply;
         opacity: 0.4;
         border-radius: 4px;
@@ -201,7 +199,6 @@
         z-index: 0;
         transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
         background-color: $backgroundImageColor;
-
       }
 
       .home-section-event-card-heading {
@@ -228,7 +225,6 @@
 
   @include desktop-320-767() {
     min-height: fit-content;
-
   }
 
   @include desktop-768-1024 {
@@ -248,7 +244,6 @@
       margin-left: 0;
     }
   }
-
 
   .speakers-section-card-container {
     z-index: 2;
@@ -357,7 +352,6 @@
 
   @include desktop-320-767() {
     min-height: fit-content;
-
   }
 
   @include desktop-768-1024 {
@@ -514,7 +508,6 @@
     width: 100%;
     height: inherit;
     top: 0;
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.3) 149.7%);
   }
 
   .ca-section-intro-flex-column {
@@ -650,7 +643,6 @@
 }
 
 .testemonial-section-container {
-
   .ant-carousel {
     .slick-slide {
       @include desktop-320-767 {
@@ -690,7 +682,6 @@
         .testemonial-card-horizontal-line {
           @include desktop-320-767() {
             width: 60%;
-
           }
 
           border: 1px solid $primaryColor;
@@ -707,7 +698,7 @@
       }
 
       @include desktop-320-767() {
-        padding: $gutterWidth*4 $gutterWidth;
+        padding: $gutterWidth * 4 $gutterWidth;
       }
 
       @include display-column();
@@ -723,7 +714,6 @@
       li {
         @include desktop-320-767 {
           margin: 0 $gutterWidth;
-
         }
 
         margin: 0 2.25rem;
@@ -791,7 +781,7 @@
         cursor: pointer;
 
         &:checked {
-          +.question-items-container {
+          + .question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -810,7 +800,7 @@
               }
             }
 
-            >.question-items-answer {
+            > .question-items-answer {
               color: #fff;
 
               @include desktop-0-1281() {
@@ -991,7 +981,8 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {}
+      @include desktop-320-767 {
+      }
 
       font-weight: normal;
       color: $whiteText;
@@ -1032,19 +1023,16 @@
     padding: $gutterWidth;
   }
 
-
   .section-image-heading-background {
     @include desktop-320-767 {
-      height: $gutterWidth*2;
+      height: $gutterWidth * 2;
       top: 16px;
-
     }
 
     position: absolute;
     top: 0;
     height: $gutterWidth * 4;
   }
-
 }
 
 .section-paragraph {
