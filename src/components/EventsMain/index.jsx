@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-
+import Loader from '../loader/loader'
 import axios from 'axios'
 import { BASE_URL } from '../../utils/urls'
 import Events from './Events/EventComponent/Index'
@@ -22,10 +22,10 @@ export default class EventsMainIndex extends Component {
   }
 
   componentDidMount() {
-    // document
-    //     .getElementById("loader")
-    //     .style
-    //     .display = "grid";
+    document
+        .getElementById("loader")
+        .style
+        .display = "grid";
 
     console.log(this.props, 'maaaaaaaaaaaxxxxxxxxxxxxxxxx')
     let event_name =
@@ -38,7 +38,6 @@ export default class EventsMainIndex extends Component {
 
     axios.get(BASE_URL + '/v1/api/events/').then(res => {
       console.log(res.data, 'events')
-      // document.getElementById('loader').style.display = 'none'
       //   for(const event of res.data)
       //   {
       //       if(event.title===data.event_name)
@@ -50,6 +49,8 @@ export default class EventsMainIndex extends Component {
         url: BASE_URL + `/v1/api/event_details/${id}/`
       })
         .then(r => {
+          document.getElementById('loader').style.display = 'none'
+
           this.setState({
             data: r.data.event_data,
             faq: r.data,
@@ -74,6 +75,7 @@ export default class EventsMainIndex extends Component {
   render() {
     return (
       <React.Fragment>
+        <Loader/>
         {this.state.data.event_type2 === 'TYPE1' ? (
           <Route
             exact

@@ -5,3 +5,18 @@
 .ca-section-paragraph-small {
   margin-top: 15px;
 }
+.section-paragraph {
+  text-align: left !important;
+  margin-top: 1.3%;
+  width: 60%;
+  margin-left: -10%;
+}
+.section-image-heading-container {
+  justify-content: flex-start !important;
+  margin-left: 24%;
+  margin-top: 5%;
+  float: left;
+}
+#PERKS-CA {
+  width: 80%;
+}

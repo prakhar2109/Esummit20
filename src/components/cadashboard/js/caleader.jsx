@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../css/caleader.css'
 import { BASE_URL } from '../../../utils/urls'
 import axios from 'axios'
+import Loader from '../../loader/loader'
 
 export default class Caleader extends Component {
   state = {
@@ -10,6 +11,7 @@ export default class Caleader extends Component {
 
   componentDidMount = () => {
     let token = localStorage.getItem('user_token')
+    document.getElementById('loader').style.display = 'grid'
 
     axios
       .get(BASE_URL + '/v1/api/leaderboard/', {
@@ -18,9 +20,13 @@ export default class Caleader extends Component {
         }
       })
       .then(res => {
-        this.setState({ leaderboard: res.data })
+        this.setState({ leaderboard: res.data },()=>
+    document.getElementById('loader').style.display = 'none'
+    )
       })
       .catch(response => {
+        document.getElementById('loader').style.display = 'none'
+
         alert(response)
       })
   }
@@ -28,6 +34,7 @@ export default class Caleader extends Component {
   render() {
     return (
       <div className="caleaderboard-parent">
+        <Loader/>
         <div>
           <div className="caleader-heading">Leaderboard</div>
         </div>
