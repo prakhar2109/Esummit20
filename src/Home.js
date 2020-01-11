@@ -30,7 +30,7 @@ import EventsMain from './components/EventsMain/index'
 import Events from './components/home/sections/EventsAll/eventsAll'
 import ForgotPassword from './components/forgot-password/forgot-password'
 import SetNewPassword from './components/forgot-password/set-new-password'
-
+import FAQs from './components/faq';
 class HomeLanding extends Component {
   render() {
     return (
@@ -48,6 +48,7 @@ class HomeLanding extends Component {
           <Route path="/set-new-password/:uuid/" component={SetNewPassword} />
           <Route path="/ca-registration" component={Registration} />
           <Route path="/noncaregister" component={NonCARegistration} />
+          <Route path="/faqs" component={FAQs} />
 
           <Route path="/personal-detail" component={Personaldetail} />
           <Route path="/register-success" component={Success} />
