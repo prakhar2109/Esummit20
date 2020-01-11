@@ -2,10 +2,10 @@
   @include section();
 
   @include desktop-320-767 {
-    background-position: 50% 5vh;
+    background-position: 50% 50px;
     background-size: 120vw;
     justify-content: flex-end;
-    min-height: 76vh !important;
+    min-height: 620px !important;
   }
 
   height: 100vh;
@@ -17,7 +17,7 @@
   .home-section-intro {
     @include desktop-320-767 {
       margin: 0;
-      height: $gutterWidth * 16;
+      height: $gutterWidth * 17.4;
 
     }
 
