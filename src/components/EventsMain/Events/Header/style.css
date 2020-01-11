@@ -7,7 +7,7 @@
   @media (max-width: 1200px) {
     .ideastormHeaderSection {
       min-height: 45rem;
-      padding: 6rem 14%;
+      padding: 8rem 14%;
     }
   }
   .ideastormHeaderSection p:first-child {
@@ -21,7 +21,7 @@
   }
   @media (max-width: 1200px) {
     .ideastormHeaderSection p:first-child {
-      font-size: 1.5rem;
+      font-size: 2rem;
       padding-bottom: calc(0px + 1vh);
       font-weight: bold;
     }
@@ -39,7 +39,7 @@
   @media (max-width: 1200px) {
     .ideastormHeaderSection p:nth-child(2) {
       line-height: 0.9375rem;
-      font-size: 1rem;
+      font-size: 1.1rem;
       letter-spacing: 0.1em;
       padding-bottom: 0;
       color: rgba(255, 255, 255, 0.6);
@@ -57,7 +57,7 @@
   @media (max-width: 1200px) {
     .ideastormHeaderSection p:nth-child(6) {
       line-height: 170%;
-      font-size: 1rem;
+      font-size: 1.5rem;
       letter-spacing: 0.1em;
       padding-bottom: calc(15px + 3vh);
     }
@@ -75,8 +75,8 @@
   
   @media (max-width: 1200px) {
     .ideastormHeaderSection p:nth-child(7) {
-      line-height: 1.125rem;
-      font-size: 0.75rem;
+      line-height: 1.3125rem;
+      font-size: 1.1rem;
       letter-spacing: 0.1em;
       margin-bottom: calc(6vh + 2rem);
       color: rgba(255, 255, 255, 0.6);
