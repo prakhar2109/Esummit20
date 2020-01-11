@@ -56,11 +56,19 @@
   border: 0;
   width: 7rem;
 }
+@media (max-width: 1400px) {
+  .navbar-container {
+    padding: 2% !important;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-mobile-items {
     margin-top: 5%;
   }
 }
+
+
 .navbar-links {
   color: #fff;
 }

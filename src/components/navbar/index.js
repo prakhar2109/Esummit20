@@ -161,6 +161,15 @@ class index extends Component {
             </li>
             <li className="navbar-mobile-items">
               <Link
+                to="/speakers"
+                className="navbar-links"
+                rel="noopener noreferrer"
+              >
+                Speakers
+              </Link>
+            </li>
+            <li className="navbar-mobile-items">
+              <Link
                 to="/campus-ambassador"
                 className="navbar-links"
                 target="_blank"
@@ -171,22 +180,20 @@ class index extends Component {
             </li>
             <li className="navbar-mobile-items">
               <Link
-                to="/ideastorm"
+                to="#"
                 className="navbar-links"
-                target="_blank"
                 rel="noopener noreferrer"
               >
-                Ideastorm
+                Startup Ignite
               </Link>
             </li>
             <li className="navbar-mobile-items">
               <Link
-                to="/events/Startupexpo"
+                to="/sponsors"
                 className="navbar-links"
-                target="_blank"
                 rel="noopener noreferrer"
               >
-                Startupexpo
+                Sponsors
               </Link>
             </li>
             {/* <li className="navbar-mobile-items">
