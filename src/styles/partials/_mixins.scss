@@ -12,10 +12,9 @@
 
   @include desktop-768-1024 {
     padding: $gutterWidth;
-
   }
+
   @include desktop-320-767() {
-    min-height: fit-content;
     padding: $gutterWidth;
     height: 100%;
     width: 100vw;
@@ -79,6 +78,7 @@
   @include btn($scale);
   color: $primaryColor;
   border: 3px solid $primaryColor;
+  background-color: $primaryBackgroundColor;
 
   &:hover {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
