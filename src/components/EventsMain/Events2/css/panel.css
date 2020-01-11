@@ -3,15 +3,14 @@
   display: block;
   background: #030d0f;
 }
-.su-ignite-heading{
+.su-ignite-heading {
   color: rgba(255, 255, 255, 0.87);
-  font-family: 'Poppins';
+  font-family: 'Poppins-Bold';
   font-size: 2rem;
   line-height: 3rem;
   font-style: normal;
   font-weight: bold;
   margin-bottom: 5%;
-
 }
 @media (max-width: 1200px) {
   .panel-format {
@@ -19,8 +18,8 @@
   }
 }
 
-.panel-format{
-  margin-bottom: 5%;
+.panel-format {
+  margin: 5rem 0;
   position: relative;
 }
 /* .panel-format .heading .heading-background-image {
@@ -37,7 +36,7 @@
   top: 20%;
 } */
 @media (max-width: 1200px) {
-  .panel-format{
+  .panel-format {
     font-size: 1.5rem;
   }
 }
@@ -96,7 +95,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+@media (max-width: 700px) {
+  .panel-list-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .panel-list-container p {
   color: rgba(255, 255, 255, 0.6);
   font-family: 'Poppins';
