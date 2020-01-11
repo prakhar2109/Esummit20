@@ -1,5 +1,13 @@
 .home-section-intro-container {
   @include section();
+
+  @include desktop-320-767 {
+    background-position: 50% 5vh;
+    background-size: 120vw;
+    justify-content: flex-end;
+    min-height: 76vh !important;
+  }
+
   height: 100vh;
   position: relative;
   background: url('../../assets/wave-logo.png') no-repeat center;
@@ -7,38 +15,51 @@
   margin-top: $gutterWidth * 2;
 
   .home-section-intro {
-    @include desktop-0-1281() {
-      height: $gutterWidth * 14;
+    @include desktop-320-767 {
+      margin: 0;
+      height: $gutterWidth * 16;
+
     }
 
     .home-section-background-disruption {
-      @include desktop-0-1281() {
-        height: $gutterWidth*3.8;
+      @include desktop-320-767 {
+
+        height: $gutterWidth*3;
 
       }
     }
 
     .home-section-intro-ecellLogo {
-      @include desktop-0-1281() {
-        height: $gutterWidth*2;
+      @include desktop-320-767 {
+
+        height: $gutterWidth*2.8;
       }
+    }
+
+    .home-section-intro-content {
+      @include desktop-320-767 {
+        height: $gutterWidth * 10;
+      }
+
+      @include display-column();
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
     }
 
     @include display-column();
     align-items: center;
     justify-content: space-between;
-    height: $gutterWidth * 16;
+    height: $gutterWidth * 18;
     margin-bottom: $gutterWidth * 2;
   }
 
-  <<<<<<< HEAD @include desktop-1025-1400 {
-    .home-section-intro {
-      height: $gutterWidth * 12;
-    }
-  }
+  .home-section-paragraph {
+    @include desktop-320-767 {
 
-  =======>>>>>>>responsive fixes .home-section-paragraph {
-    @include desktop-0-1281() {}
+      font-size: $normalFontSize*0.6;
+      line-height: $normalLineHeight*0.6;
+    }
 
     font-size: $normalFontSize;
     line-height: $normalLineHeight;
@@ -49,7 +70,17 @@
   }
 
   .home-section-intro-link {
+    margin-top: $gutterWidth;
+
     .home-section-intro-button {
+      @include desktop-0-1281() {
+        @include btn-standard-outline();
+        padding: 0 $gutterWidth;
+        font-weight: 600;
+        background-color: $primaryBackgroundColor;
+      }
+
+      text-transform: uppercase;
       @include btn-standard();
       width: $gutterWidth * 6;
     }
@@ -195,6 +226,11 @@
 .speakers-section-container {
   @include section();
 
+  @include desktop-320-767() {
+    min-height: fit-content;
+
+  }
+
   @include desktop-768-1024 {
     padding: $gutterWidth * 2 $gutterWidth * 3;
   }
@@ -272,6 +308,7 @@
           margin: 0;
         }
 
+        object-fit: cover;
         border-radius: 50%;
         width: $cardWidth * 0.6;
         background-color: $secondaryBackgroundColor;
@@ -318,6 +355,11 @@
 .sponsors-section-container {
   @include section();
 
+  @include desktop-320-767() {
+    min-height: fit-content;
+
+  }
+
   @include desktop-768-1024 {
     padding: $gutterWidth * 2 $gutterWidth * 3;
   }
@@ -332,16 +374,15 @@
 
     .section-image-heading {
       margin-left: 0;
+      padding-left: 0;
     }
   }
 
   .sponsors-section-card-container {
     z-index: 2;
     @include display-row();
-    // display: grid;
     width: 100%;
     margin: $gutterWidth 0;
-    // grid-template-columns: 33.33% 33.33% 33.33%;
     white-space: nowrap;
     overflow-x: scroll;
 
@@ -357,13 +398,14 @@
       @include display-column();
       align-items: center;
       overflow-x: hidden;
+      margin: 0;
     }
 
     .sponsors-section-card {
       @include display-column();
       justify-content: center;
       align-items: center;
-      margin: $gutterWidth * 2;
+      margin: $gutterWidth * 2.76;
       width: $cardWidth;
 
       &:first-child {
@@ -378,14 +420,14 @@
         @include display-column();
         width: 100%;
         justify-content: flex-start;
-        padding: 0 $gutterWidth 0 $gutterWidth * 2;
+        padding: 0 $gutterWidth;
 
         &:first-child {
-          margin-left: $gutterWidth * 2;
+          margin: $gutterWidth;
         }
 
-        &:last-child {
-          margin-right: $gutterWidth * 2;
+        &:not(:first-child) {
+          display: none;
         }
       }
 
@@ -394,25 +436,28 @@
           margin: 0;
         }
 
+        object-fit: contain;
         border: 2px solid rgba(255, 255, 255, 0.6);
         box-sizing: border-box;
         border-radius: 4px;
         width: $cardWidth * 0.6;
         height: $cardWidth * 0.6;
-        background-color: $backgroundImageColor;
+        background-color: white;
         margin-bottom: $gutterWidth * 0.8;
       }
 
       .sponsors-section-card-content {
         @include desktop-320-767 {
+          @include display-column();
           width: 100%;
           padding: 0 $gutterWidth;
+          margin: $gutterWidth 0;
         }
 
         .sponsors-section-card-heading {
           @include desktop-320-767 {
-            @include display-row();
-            text-align: left;
+            text-align: center;
+            font-size: $normalFontSize;
           }
 
           font-weight: bold;
@@ -424,8 +469,8 @@
 
         .sponsors-section-card-subheading {
           @include desktop-320-767 {
-            @include display-row();
-            text-align: left;
+            align-items: center;
+            font-size: 1rem;
           }
 
           font-size: $normalFontSize * 0.8;
@@ -609,7 +654,7 @@
   .ant-carousel {
     .slick-slide {
       @include desktop-320-767 {
-        height: 72rem !important;
+        height: 64rem !important;
       }
 
       .testemonial-card {
@@ -632,17 +677,22 @@
         .testemonial-card-heading {
           font-size: $normalFontSize;
           font-weight: 600;
-          color: rgba(255, 255, 255, 0.87);
+          color: #ffffffde;
           margin: $gutterWidth * 0.2;
         }
 
         .testemonial-card-subheading {
           font-size: $normalFontSize * 0.8;
-          color: rgba(255, 255, 255, 0.87);
+          color: #ffffffde;
           margin: $gutterWidth * 0.1;
         }
 
         .testemonial-card-horizontal-line {
+          @include desktop-320-767() {
+            width: 60%;
+
+          }
+
           border: 1px solid $primaryColor;
           margin: $gutterWidth 0;
           width: 100%;
@@ -654,6 +704,10 @@
           font-size: $normalFontSize * 0.9;
           line-height: $normalLineHeight * 0.8;
         }
+      }
+
+      @include desktop-320-767() {
+        padding: $gutterWidth*4 $gutterWidth;
       }
 
       @include display-column();
@@ -760,9 +814,7 @@
               color: #fff;
 
               @include desktop-0-1281() {
-                <<<<<<< HEAD height: fit-content;
-                =======height: 60vh;
-                >>>>>>>responsive fixes
+                height: 60vh;
               }
 
               opacity: 1;

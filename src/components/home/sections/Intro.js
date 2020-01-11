@@ -20,7 +20,7 @@ class Intro extends Component {
       tabs = (
         <>
           <a href="/register" className="home-section-intro-link">
-            <button className="home-section-intro-button">Register</button>
+            <button className="home-section-intro-button">Register now</button>
           </a>
         </>
       )
@@ -28,18 +28,22 @@ class Intro extends Component {
     return (
       <div className="home-section-intro-container">
         <div className="home-section-intro">
-          <img
-            src={ecellLogo}
-            alt=""
-            className="home-section-intro-ecellLogo"
-          />
-          <div className="home-section-paragraph">presents</div>
-          <img
-            src={disruptionText}
-            className="home-section-background-disruption"
-            alt=""
-          />
-          <div className="home-section-paragraph">1st & 2nd February 2020</div>
+          <div className="home-section-intro-content">
+            <img
+              src={ecellLogo}
+              alt=""
+              className="home-section-intro-ecellLogo"
+            />
+            <div className="home-section-paragraph">presents</div>
+            <img
+              src={disruptionText}
+              className="home-section-background-disruption"
+              alt=""
+            />
+            <div className="home-section-paragraph">
+              1st & 2nd February 2020
+            </div>
+          </div>
           {tabs}
         </div>
       </div>
