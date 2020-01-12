@@ -91,7 +91,7 @@ class Profiletype extends Component {
                 }}
               />
               <span className="profiletype_checkmark"></span>
-              <span>Campus Ambassador</span>
+              <span className="profiletype_checkmark-value">Campus Ambassador</span>
               <br />
             </label>
             <span className="profiletype_extra_info" id="profile_ca_info">
@@ -120,7 +120,7 @@ class Profiletype extends Component {
                 onChange={this.onProfileChange}
               />
               <span className="profiletype_checkmark"></span>
-              <span>IITR student</span>
+              <span className="profiletype_checkmark-value">IITR student</span>
             </label>
             <label className="profiletype_container">
               <input
@@ -133,7 +133,7 @@ class Profiletype extends Component {
                 onChange={this.onProfileChange}
               />
               <span className="profiletype_checkmark"></span>
-              <span>NON IITR student</span>
+              <span className="profiletype_checkmark-value">NON IITR student</span>
             </label>
             <label className="profiletype_container">
               <input
@@ -146,7 +146,7 @@ class Profiletype extends Component {
                 onChange={this.onProfileChange}
               />
               <span className="profiletype_checkmark"></span>
-              <span>PROFESSIONAL</span>
+              <span className="profiletype_checkmark-value">PROFESSIONAL</span>
             </label>
             <label className="profiletype_container">
               <input
@@ -157,7 +157,7 @@ class Profiletype extends Component {
                 onChange={this.onProfileChange}
               />
               <span className="profiletype_checkmark"></span>
-              <span>PROFESSOR</span>
+              <span className="profiletype_checkmark-value">PROFESSOR</span>
             </label>
 
             <Button

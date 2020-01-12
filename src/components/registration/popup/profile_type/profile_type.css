@@ -12,12 +12,13 @@
   align-items: center;
   background: radial-gradient(55.86% 99.31% at 55.86% 50%, rgba(0, 0, 0, 0) 0%, #030D0F 100%);
   background: url('../../../../assets/register-back.png');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .profiletype-left {
   width: 60%;
   padding: 0;
-  
+
 }
 
 
@@ -51,14 +52,14 @@
   border-radius: 4px 4px 0px 0px;
   padding-top: 1.5rem;
   font-weight: 600;
-  font-size: 14.12px;
+  font-size: 2rem;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.87);
 }
 .profiletype_list_selection {
   font-family: 'Poppins-Regular';
   padding: 3rem;
- 
+
 }
 .profiletype_container {
   font-family: 'Poppins-Regular';
@@ -76,9 +77,10 @@
   margin-left: 0px;
 }
 .profiletype_button {
-  width: 93px;
+  width: 8rem;
+  height: 3.5rem;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.5rem;
   margin-top: 5%;
   margin-left: 40%;
 }
@@ -152,12 +154,19 @@
   font-size: 12px;
 }
 
+.profiletype_checkmark-value {
+  font-size: 1.25rem;
+}
+
+.profiletype-left-heading {
+  font-size: 3rem;
+}
 
 .profiletype_letus{
   font-family: Poppins-Regular;
 font-style: normal;
 font-weight: normal;
-font-size: 10px;
+font-size: 1rem;
 align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
@@ -168,8 +177,7 @@ color: rgba(255, 255, 255, 0.87);
 @media only screen and (min-device-width: 320px) and (max-device-width: 780px) {
   .profiletype_outer {
 
-    padding: 3rem;
-    padding-top: 8rem;
+    padding: 4rem;
 
   }
   .navbar_content {
@@ -198,6 +206,15 @@ color: rgba(255, 255, 255, 0.87);
   .profiletype_button {
     position: unset !important;
     margin: 20px 0 0 0 !important;
+  }
+
+  .profiletype-left-heading {
+    text-align: center;
+  }
+
+  .profiletype-left-subHeading {
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 }
 @media only screen and (min-device-width: 1800px) and (max-device-width: 2520px) {
