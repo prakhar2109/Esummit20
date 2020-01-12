@@ -14,28 +14,28 @@ class Timeline extends Component {
     }
   }
   setActive = data => {
-    this.setState({ activestate: data.round_number })
+    this.setState({ activestate: data})
   }
   render() {
     // const match = this.props.match
-    console.log(this.props.data, 'timeline')
+    console.log(this.props.data[0], 'timeline')
     return (
       <div className="timeline">
         <div className="timelineHeader">
           <div className="title">TIMELINE</div>
           <div className="rounds">
-            {this.props.data.map((round, index) => (
+            {this.props.data && this.props.data[0].rounds_details.map((round, index) => (
               <div
                 key={index}
                 className={
                   this.state.activestate ===
-                  round.rounds_details[0].round_number
+                  round.round_number
                     ? 'Active'
                     : 'timelineInactive'
                 }
-                onClick={() => this.setActive(round.rounds_details[0])}
+                onClick={() => this.setActive(round.round_number)}
               >
-                ROUND {round.rounds_details[0].round_number}
+                ROUND {round.round_number}
               </div>
             ))}
           </div>

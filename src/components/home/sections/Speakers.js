@@ -9,7 +9,7 @@ import gulzarCard from '../../../assets/gulzar.png'
 import sharadCard from '../../../assets/sharad.png'
 import arrow from '../../../assets/arrow.svg'
 import karthik from '../../../assets/speakers/karthik-reddy.jpg'
-import coming from '../../../assets/speakers/download.png'
+import coming from '../../../assets/speakers/download.jpeg'
 import abhishek from '../../../assets/speakers/abhishek-prabhuda.jpeg'
 
 import './speakers.css'

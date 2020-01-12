@@ -39,7 +39,7 @@
 }
 @media (max-width: 1200px) {
   .igniteHeaderSection p:nth-child(3) {
-    line-height: 0.9375rem;
+    line-height: 1rem;
     font-size: 1.3rem;
     letter-spacing: 0.1em;
     padding-bottom: 0;

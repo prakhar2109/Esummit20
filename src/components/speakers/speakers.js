@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import speakersHeadingBackground from '../../assets/speakers-heading-background.svg'
 import karthik from '../../assets/speakers/karthik-reddy.jpg'
-import coming from '../../assets/speakers/download.png'
+import coming from '../../assets/speakers/download.jpeg'
 import abhishek from '../../assets/speakers/abhishek-prabhuda.jpeg'
 import './speakers.css'
 
