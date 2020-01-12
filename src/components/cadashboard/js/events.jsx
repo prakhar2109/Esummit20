@@ -5,8 +5,6 @@ import axios from 'axios'
 import Allevents from './allevents'
 import App from '.'
 import Appliedevents from './appliedevents'
-import Loader from '../../loader/loader'
-
 /* eslint-disable react/prop-types */
 
 export default class Events extends Component {
@@ -24,8 +22,6 @@ export default class Events extends Component {
     let status = []
 
     let token = localStorage.getItem('user_token')
-    document.getElementById('loader').style.display = 'grid'
-
     axios
       .get(BASE_URL + '/v1/api/user/events', {
         headers: {
@@ -33,26 +29,18 @@ export default class Events extends Component {
         }
       })
       .then(res => {
-        document.getElementById('loader').style.display = 'none'
-
         appliedevents = res.data.map(eventlist => {
           return eventlist.event
         })
-        console.log(appliedevents, 'aditya')
         status = res.data.map(eventlist => {
           return eventlist.status
         })
-        this.setState(
-          {
-            appliedevents: appliedevents,
-            status: status
-          },
-          () => (document.getElementById('loader').style.display = 'none')
-        )
+        this.setState({
+          appliedevents: appliedevents,
+          status: status
+        })
       })
-      .catch(response => {
-        document.getElementById('loader').style.display = 'none'
-      })
+      .catch(response => {})
   }
   discardEvent = id => {
     // console.log("hello")
@@ -73,7 +61,6 @@ export default class Events extends Component {
   render() {
     return (
       <div className="caevents-parent">
-        <Loader />
         {this.state.appliedevents && this.state.appliedevents.length > 0 ? (
           <>
             <div className="ca-events-parent-heading1 caeventsparent-font">

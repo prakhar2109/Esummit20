@@ -13,6 +13,8 @@ class Profiletype extends Component {
     }
   }
   componentDidMount() {
+    window.scrollTo(0, 0)
+
     // const query=new URLSearchParams(this.props.location.search);
     // // console.log(query)
     // console.log(query.entries())
@@ -72,8 +74,13 @@ class Profiletype extends Component {
           }}
         /> */}
         <div className="profiletype-left">
-            <div className="profiletype-left-heading">BECOME A PART OF SOMETHING DISRUPTIVE</div>
-            <div className="profiletype-left-subHeading">Join hundreds of startup enthusiasts and embark on a journey from zero to one.</div>
+          <div className="profiletype-left-heading">
+            BECOME A PART OF SOMETHING DISRUPTIVE
+          </div>
+          <div className="profiletype-left-subHeading">
+            Join hundreds of startup enthusiasts and embark on a journey from
+            zero to one.
+          </div>
         </div>
         <div className="profiletype_main" id="profiletype_main_opacity">
           <div className="profiletype_heading">Profile Type</div>

@@ -147,7 +147,20 @@ class Events extends Component {
                   alt=""
                 />
                 <div className="home-section-event-card-heading">
-                  Nurture-Entrepreneurship
+                  Nurture Entrepreneurship
+                </div>
+              </div>
+            </Link>
+            <Link to="/events/Casechallenge">
+              <div className="home-section-event-card">
+                <div className="home-section-event-card-background-tint" />
+                <img
+                  src={caseStudyCard}
+                  className="home-section-event-card-background"
+                  alt=""
+                />
+                <div className="home-section-event-card-heading">
+                  Case Challenge
                 </div>
               </div>
             </Link>
