@@ -9,6 +9,9 @@ import Loader from '../loader/loader'
 /* eslint-disable react/prop-types */
 
 class Registration extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -29,10 +32,9 @@ class Registration extends Component {
       error: false
     }
   }
-  componentDidMount(){
-    window.scrollTo(0, 0);
+  componentDidMount() {
+    window.scrollTo(0, 0)
     document.getElementById('loader').style.display = 'none'
-    
   }
   handleBack = data => {
     if (this.state.activeStep === 2) {
@@ -54,7 +56,7 @@ class Registration extends Component {
 
     let endpoint =
       ref === null ? '/v1/api/user/signup/' : `/v1/api/user/signup/?ref=${ref}`
-      document.getElementById('loader').style.display = 'grid'
+    document.getElementById('loader').style.display = 'grid'
 
     FetchApi('POST', endpoint, this.state, null)
       .then(res => {
@@ -64,7 +66,7 @@ class Registration extends Component {
 
             localStorage.setItem('user_token', res.data.token)
             // this.setState({ success: true, active_step: 0 })
-            window.location.href='/dashboard/task';
+            window.location.href = '/dashboard/task'
           }
           // window.location.href='/dashboard/task';
           // }
@@ -119,7 +121,7 @@ class Registration extends Component {
     } = this.state
     return (
       <React.Fragment>
-        <Loader/>
+        <Loader />
         {active_step === 1 ? (
           <FacebookLoginCom
             handleProfile={this.responseFacebook}

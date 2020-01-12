@@ -20,7 +20,7 @@ export default class HeaderSection extends Component {
   }
   componentDidMount() {
     console.log(this.props, 'this.props')
-    console.log(BASE_URL + this.props.applydata.dashboard_image)
+
     this.setState({
       data: this.props.data[0]
     })

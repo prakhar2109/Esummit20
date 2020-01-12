@@ -15,10 +15,15 @@ export default class Allevents extends Component {
       this.setState({
         events: res.data
       })
+      console.log(this.state.events, 'asdfgh')
+
       // document.getElementById('loader').style.display = 'none'
     })
   }
   applyEvent = id => {
+    let googleForm = this.state.events.find(event => event.id === id)
+      .registration_url
+
     let token = localStorage.getItem('user_token')
 
     axios
@@ -29,6 +34,9 @@ export default class Allevents extends Component {
       })
       .then(res => {
         if (res.status === 200) window.location.href = '/dashboard/Events'
+        googleForm
+          ? window.open(googleForm, '_blank')
+          : console.log('no regist')
       })
       .catch(response => {})
   }
@@ -109,7 +117,10 @@ export default class Allevents extends Component {
                     {event.long_description}
                   </div>
 
-                  <div className="caevents-earnedcoupons-child-button">
+                  <div
+                    className="caevents-earnedcoupons-child-button"
+                    id="backbutton-dashboard"
+                  >
                     <button onClick={() => this.infoMenuhide(index)}>
                       BACK
                     </button>

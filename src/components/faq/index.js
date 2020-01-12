@@ -4,6 +4,9 @@ import { Tabs } from 'antd'
 const { TabPane } = Tabs
 
 class FAQs extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <div className="faq-container">

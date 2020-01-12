@@ -48,13 +48,15 @@ class index extends Component {
       tabs = (
         <>
           <li className="navbar-items navbar-mobile-items">
-            <Link to="/register" className="navbar-links">
-              <button className="navbar-register-button">Register</button>
+            <Link to="/login" className="navbar-links">
+              <div className="navbar-register-button">
+                <p>Login</p>
+              </div>
             </Link>
           </li>
           <li className="navbar-items navbar-mobile-items">
-            <Link to="/login" className="navbar-links">
-              <button className="navbar-register-button">Login</button>
+            <Link to="/register" className="navbar-links">
+              <button className="navbar-register-button">Register</button>
             </Link>
           </li>
         </>
@@ -84,15 +86,17 @@ class index extends Component {
               Events
             </Link>
           </li>
-          { <li className="navbar-items">
-            <Link
-              to="/Speakers"
-              className="navbar-links"
-              rel="noopener noreferrer"
-            >
-              Speakers
-            </Link>
-          </li> }
+          {
+            <li className="navbar-items">
+              <Link
+                to="/Speakers"
+                className="navbar-links"
+                rel="noopener noreferrer"
+              >
+                Speakers
+              </Link>
+            </li>
+          }
           <li className="navbar-items">
             <Link
               to="/campus-ambassador"
@@ -103,11 +107,7 @@ class index extends Component {
             </Link>
           </li>
           <li className="navbar-items">
-            <Link
-              to="#"
-              className="navbar-links"
-              rel="noopener noreferrer"
-            >
+            <Link to="#" className="navbar-links" rel="noopener noreferrer">
               Startup Ignite
             </Link>
           </li>
@@ -176,11 +176,7 @@ class index extends Component {
               </Link>
             </li>
             <li className="navbar-mobile-items">
-              <Link
-                to="#"
-                className="navbar-links"
-                rel="noopener noreferrer"
-              >
+              <Link to="#" className="navbar-links" rel="noopener noreferrer">
                 Startup Ignite
               </Link>
             </li>
