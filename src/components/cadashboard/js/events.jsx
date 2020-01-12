@@ -38,6 +38,7 @@ export default class Events extends Component {
         appliedevents = res.data.map(eventlist => {
           return eventlist.event
         })
+        console.log(appliedevents, 'aditya')
         status = res.data.map(eventlist => {
           return eventlist.status
         })
