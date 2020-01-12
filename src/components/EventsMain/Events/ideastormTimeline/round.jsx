@@ -7,7 +7,6 @@ class Round extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      round: props.data[0].rounds_details[0]
     }
   }
   componentDidMount() {
@@ -23,30 +22,30 @@ class Round extends Component {
     return (
       <React.Fragment>
         {this.props.data.length > 0 &&
-          this.props.data.map((round, index) => {
+          this.props.data[0].rounds_details.map((round, index) => {
             return this.props.round_number ===
-              round.rounds_details[0].round_number ? (
+              round.round_number ? (
               <div className="round" key={index}>
-                <p>Round {round.rounds_details[0].round_number} </p>
+                <p>Round {round.round_number} </p>
                 <br />
                 <br />
                 <p>
                   {' '}
                   Registration starts on :{' '}
                   <span style={{ color: '#359D9A' }}>
-                    {round.rounds_details[0].round_registration_date}
+                    {round.round_registration_date}
                   </span>
                 </p>
                 <br />
                 <p>
                   Registration deadline :{' '}
                   <span style={{ color: '#359D9A' }}>
-                    {round.rounds_details[0].round_submission_date}
+                    {round.round_submission_date}
                   </span>
                 </p>
                 <br />
 
-                <p>{round.rounds_details[0].round_description}</p>
+                <p>{round.round_description}</p>
                 {/* <br />
                   <p>
                     In respond to the email, each entry has to confirm and finalize their

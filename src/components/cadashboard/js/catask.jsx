@@ -61,7 +61,7 @@ export default class CATaskBoard extends Component {
         : '29 Jan - 2 Feb 2019'
     return (
       <div className="taskparent">
-        <Loader/>
+        <Loader />
         <div className="taskchildheaderrow">
           <div
             className="taskchild-weeklyuploads"

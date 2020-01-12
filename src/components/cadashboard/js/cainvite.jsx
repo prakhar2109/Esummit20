@@ -45,9 +45,10 @@ export default class Cainvite extends Component {
           }
         })
         .then(res => {
-          this.setState({ invite_link: res.data.invite_url },()=>
-        document.getElementById('loader').style.display = 'none'
-        )
+          this.setState(
+            { invite_link: res.data.invite_url },
+            () => (document.getElementById('loader').style.display = 'none')
+          )
         })
         .catch(response => {
           document.getElementById('loader').style.display = 'none'
@@ -63,7 +64,7 @@ export default class Cainvite extends Component {
 
     return (
       <div className="cainvite-parent">
-        <Loader/>
+        <Loader />
         <div className="cainviteparent-heading">Invites here</div>
         <div className="cainvite-linkparent">
           <div className="cainvite-linkparent-heading">Invite link</div>

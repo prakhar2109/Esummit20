@@ -4,6 +4,7 @@ import jump from 'jump.js'
 import { BASE_URL } from '../../../../utils/urls'
 
 import '../Common/scrollanimation.css'
+
 /* eslint-disable react/prop-types */
 
 export default class HeaderSection extends Component {
@@ -18,6 +19,8 @@ export default class HeaderSection extends Component {
     jump('.Rules', { offset: -130 })
   }
   componentDidMount() {
+    console.log(this.props, 'this.props')
+    console.log(BASE_URL + this.props.applydata.dashboard_image)
     this.setState({
       data: this.props.data[0]
     })
@@ -49,29 +52,37 @@ export default class HeaderSection extends Component {
       //     </center>
 
       // </div>
+      <div
+        className="eventDashboard-background-image"
+        style={{
+          backgroundImage: ` url(
+            ${BASE_URL + this.props.applydata.card_image}
+          )`
+        }}
+      >
+        <div className="ideastormHeaderSection">
+          <p> {this.state.data.heading}</p>
 
-      <div className="ideastormHeaderSection">
-        <p> {this.state.data.heading}</p>
+          <p>{this.state.data.subheading}</p>
 
-        <p>{this.state.data.subheading}</p>
+          <br />
+          <br />
+          <br />
+          <p>{this.state.data.prizes}</p>
 
-        <br />
-        <br />
-        <br />
-        <p>{this.state.data.prizes}</p>
-
-        <p>{this.state.data.description}</p>
-        <div className="register">
-          <a
-            without
-            rel="noopener noreferrer"
-            href={this.props.applydata.registration_url}
-            target="_blank"
-          >
-            <span style={{ textTransform: 'uppercase' }}>
-              APPLY FOR {this.props.name}
-            </span>
-          </a>
+          <p>{this.state.data.description}</p>
+          <div className="register">
+            <a
+              without
+              rel="noopener noreferrer"
+              href={this.props.applydata.registration_url}
+              target="_blank"
+            >
+              <span style={{ textTransform: 'uppercase' }}>
+                APPLY FOR {this.props.applydata.title}
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     )

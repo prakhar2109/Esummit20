@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import caHeading from '../../../assets/ca.svg'
 import { Link } from 'react-router-dom'
-// import './caIntro.css'
+import './caIntro.css'
 class CAIntro extends Component {
   render() {
     return (

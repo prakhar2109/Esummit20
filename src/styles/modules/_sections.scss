@@ -539,8 +539,9 @@
   @include section();
 
   @include desktop-320-767 {
-    padding: $gutterWidth 0;
+    padding: 8rem 0;
     min-height: 80vh;
+
     justify-content: unset;
   }
 
@@ -556,7 +557,6 @@
   height: 100vh;
   background: url('../../assets/ca-intro.png') no-repeat center;
   background-size: cover;
-  margin-top: $gutterWidth * 2;
   justify-content: space-between;
   padding: $gutterWidth * 8 0;
 
@@ -634,7 +634,9 @@
   position: relative;
   background: url('../../assets/wave-ripple.svg') no-repeat center;
   background-size: cover;
-
+  @include desktop-320-767 {
+    overflow: hidden;
+  }
   .ca-section-content-container {
     @include desktop-320-767 {
       padding: 0 $gutterWidth * 2;

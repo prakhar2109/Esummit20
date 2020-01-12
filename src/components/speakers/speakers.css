@@ -52,7 +52,8 @@
 }
 
 .speakers-page-section-card {
-	margin: 5% 4%;
+  margin: 5% 4%;
+  text-align: center;
 } 
 
 .speakers-page-section-card-heading {
