@@ -107,8 +107,8 @@ class index extends Component {
             </Link>
           </li>
           <li className="navbar-items">
-            <Link to="#" className="navbar-links" rel="noopener noreferrer">
-              Startup Ignite
+            <Link to="/faqs" className="navbar-links" rel="noopener noreferrer">
+              FAQs
             </Link>
           </li>
           <li className="navbar-items">
@@ -176,8 +176,8 @@ class index extends Component {
               </Link>
             </li>
             <li className="navbar-mobile-items">
-              <Link to="#" className="navbar-links" rel="noopener noreferrer">
-                Startup Ignite
+              <Link to="/faqs" className="navbar-links" rel="noopener noreferrer">
+                FAQs
               </Link>
             </li>
             <li className="navbar-mobile-items">

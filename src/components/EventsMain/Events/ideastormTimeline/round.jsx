@@ -57,11 +57,7 @@ class Round extends Component {
                     All entries are then expected to pay through the payment portal by{' '}
                     <span style={{ color: '#359D9A' }}> 20 January, 2019</span>
                   </p> */}
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+               
               </div>
             ) : null
           })}
