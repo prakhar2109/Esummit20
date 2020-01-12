@@ -23,6 +23,7 @@ export default class BodyIndex extends Component {
   }
   render() {
     return (
+      // <Content />
       <div className="suignite-parent-childparent">
         <div id="events" className="suignite-parent-child1">
           {this.props.data.sub_events.map((name, index) => (

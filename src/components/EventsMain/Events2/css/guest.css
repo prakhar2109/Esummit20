@@ -1,0 +1,122 @@
+.guest-container {
+  padding: 10rem 17%;
+  display: block;
+  background: #030d0f;
+}
+.guest-lecture-heading-container {
+  position: relative;
+  padding-bottom: 3rem;
+}
+.guest-lecture-heading {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins-Bold';
+  font-size: 2rem;
+  line-height: 3rem;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0 0 7% 0;
+  position: absolute;
+  top: 20%;
+}
+.guest-lecture-heading-container img {
+  width: 100%;
+  height: 75%;
+}
+@media (max-width: 1200px) {
+  .guest-lecture-heading {
+    font-size: 1.5rem;
+    top: 2%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .guest-container {
+    padding: 6rem;
+  }
+}
+
+.guest-list-card-content {
+  width: 100%;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .guest-list-card-content {
+    width: 100%;
+    padding: 1rem 0 0 0;
+  }
+}
+
+.guest-list-card-heading {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins-Regular';
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-style: normal;
+  font-weight: bold;
+  margin: 1% 0;
+}
+@media (max-width: 768px) {
+  .panel-format .heading {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .guest-list-card-heading {
+    text-align: center;
+  }
+}
+.guest-list-card-subheading {
+  line-height: 2srem;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  font-family: 'Poppins-Regular';
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .guest-list-card-subheading {
+    line-height: 1.3125rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+  }
+}
+.guest-list-card-subheading .guest-format {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.guest-list-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 5%;
+}
+
+.guest-list-card-image {
+  width: 15rem;
+}
+
+@media (max-width: 1600px) {
+  .guest-list-card-image {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .guest-list-card-image {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .guest-list-card-image {
+    width: 15rem;
+    height: 15rem;
+  }
+}

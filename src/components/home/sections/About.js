@@ -13,7 +13,7 @@ class About extends Component {
             <img
               src={aboutHeadingBackground}
               className="section-image-heading-background"
-              alt=""
+              alt="" id="about-esummit"
             />
           </div>
           <div className="section-paragraph">

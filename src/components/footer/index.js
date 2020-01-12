@@ -66,7 +66,7 @@ class Footer extends Component {
           >
             <div className="new-footer-section-esummit-logo" />
           </a>
-          <div className="padding-1rem">
+          <div>
             <div className="new-footer-section-contact-container">
               <div className="new-footer-section-contact-heading">
                 E-Mail ID
@@ -152,7 +152,7 @@ class Footer extends Component {
           >
             <div className="new-footer-section-ecell-logo" />
           </a>
-          <div className="padding-1rem">
+          <div>
             <div className="new-footer-section-contact-container">
               <div className="new-footer-section-contact-heading">
                 Phone no.

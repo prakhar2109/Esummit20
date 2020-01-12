@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import sponsorsHeadingBackground from '../../../assets/sponsors-heading-background.svg'
-import kamalCard from '../../../assets/kamal.png'
-import ajayCard from '../../../assets/ajay.png'
-import samironCard from '../../../assets/samiron.png'
-import tarunCard from '../../../assets/tarun.png'
-import gulzarCard from '../../../assets/gulzar.png'
-import sharadCard from '../../../assets/sharad.png'
+import { Link } from 'react-router-dom'
+import linkedinlocal from '../../../assets/sponsors/linkedinlocal.jpg'
+import Dribble from '../../../assets/sponsors/dribble.svg'
+import thecollegefever from '../../../assets/sponsors/Thecollegefever.png'
+import tides from '../../../assets/sponsors/tides.png'
+import hackerearth from '../../../assets/sponsors/hackerearth.png'
+import Devfolio from '../../../assets/sponsors/devfolio.png'
+import CBlock from '../../../assets/sponsors/CBlock.png'
+import AmarUjala from '../../../assets/sponsors/amarujala.webp'
+import arrow from '../../../assets/arrow.svg'
+
 class Sponsors extends Component {
   render() {
     return (
@@ -18,52 +23,99 @@ class Sponsors extends Component {
             id="section-image-heading-background-sponsor"
             alt=""
           />
-        </div>
-        <div className="sponsors-section-card-container">
-          <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Kamal Bali</div>
-            </div>
+          <div className="section-horizontal-navigate-container">
+            <img
+              src={arrow}
+              alt=""
+              className="section-horizontal-navigate-arrow arrow-left"
+            />
+            <img
+              src={arrow}
+              alt=""
+              className="section-horizontal-navigate-arrow arrow-right"
+            />
           </div>
+        </div>
+        <div
+          className="sponsors-section-card-container"
+          data-scroll="horizontal"
+        >
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img
+              src={linkedinlocal}
+              alt=""
+              className="sponsors-section-card-image"
+            />
             <div className="sponsors-section-card-content">
               <div className="sponsors-section-card-heading">
-                Ajay Prakash Sawhney
+                LinkedIn Local
               </div>
             </div>
           </div>
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img src={Dribble} alt="" className="sponsors-section-card-image" />
+            <div className="sponsors-section-card-content">
+              <div className="sponsors-section-card-heading">Dribble</div>
+            </div>
+          </div>
+          <div className="sponsors-section-card">
+            <img
+              src={Devfolio}
+              alt=""
+              className="sponsors-section-card-image"
+            />
+            <div className="sponsors-section-card-content">
+              <div className="sponsors-section-card-heading">Devfolio</div>
+            </div>
+          </div>
+          <div className="sponsors-section-card">
+            <img
+              src={AmarUjala}
+              alt=""
+              className="sponsors-section-card-image"
+            />
+            <div className="sponsors-section-card-content">
+              <div className="sponsors-section-card-heading">Amar Ujala</div>
+            </div>
+          </div>
+          <div className="sponsors-section-card">
+            <img src={tides} alt="" className="sponsors-section-card-image" />
+            <div className="sponsors-section-card-content">
+              <div className="sponsors-section-card-heading">Tides</div>
+            </div>
+          </div>
+          <div className="sponsors-section-card">
+            <img src={CBlock} alt="" className="sponsors-section-card-image" />
+            <div className="sponsors-section-card-content">
+              <div className="sponsors-section-card-heading">Coding Blocks</div>
+            </div>
+          </div>
+          <div className="sponsors-section-card">
+            <img
+              src={thecollegefever}
+              alt=""
+              className="sponsors-section-card-image"
+            />
             <div className="sponsors-section-card-content">
               <div className="sponsors-section-card-heading">
-                Samiron Ghoshal
+                The College Fever
               </div>
             </div>
           </div>
           <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
+            <img
+              src={hackerearth}
+              alt=""
+              className="sponsors-section-card-image"
+            />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Tarun Katiyal</div>
-            </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Gulzar Azad</div>
-            </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img src="" alt="" className="sponsors-section-card-image" />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Sharad Sagar</div>
+              <div className="sponsors-section-card-heading">HackerEarth</div>
             </div>
           </div>
         </div>
-        <a href="#" className="section-button">
+        <Link to="/sponsors" className="section-button">
           <button>view all sponsors</button>
-        </a>
+        </Link>
       </div>
     )
   }

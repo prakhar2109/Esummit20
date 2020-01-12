@@ -37,7 +37,11 @@ class DashboardIndex extends Component {
           <Route exact path="/dashboard/task" component={CATaskBoard} />
           {/* <Route exact path="/dashboard/offers" component={CAOffers} /> */}
           {/* <Route path="/dashboard/payment" render={() => <CAPayment {...this.props} />} /> */}
-          <Route path="/dashboard/payment" component={ComingSoon} />
+          {/* <Route path="/dashboard/payment" component={ComingSoon} /> */}
+          {/* <Route path='/dashboard/payment' component={() => { 
+              window.location.href = 'https://www.thecollegefever.com/events/e-summit-2020-iit-roorkee'; 
+              return null;
+          }}/> */}
           <Route exact path="/dashboard/invite" component={CAInvite} />
           <Route exact path="/dashboard/leader" component={CALeader} />
           <Route

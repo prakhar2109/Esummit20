@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 
 export default class ApplyNowIdenx extends Component {
   render() {
+    console.log(this.props, 'this.props')
     return (
       <React.Fragment>
         <div className="register">

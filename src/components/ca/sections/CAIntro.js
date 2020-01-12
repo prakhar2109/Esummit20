@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
 import caHeading from '../../../assets/ca.svg'
 import { Link } from 'react-router-dom'
+import './caIntro.css'
 class CAIntro extends Component {
   render() {
     return (
       <div className="ca-section-intro-container">
         <div className="ca-section-intro-background-tint" />
         <div className="ca-section-intro-flex-column">
-          <img
-            src={caHeading}
-            alt=""
-            className="section-image-heading ca-section-intro-heading"
-          />
+          <div className="ca-title">CAMPUS AMBASSADOR</div>
           <div className="ca-section-intro-paragraph">
             The CAP (Campus Ambassador Programme) is a pinion initiative of
             E-Summit IIT Roorkee, 2020 organized by the E-Cell, IIT Roorkee and

@@ -239,7 +239,7 @@ export default class ComingSoon extends Component {
             </div>
           </Link>
 
-          <Link to="/dashboard/payment">
+          <a href="https://www.thecollegefever.com/events/e-summit-2020-iit-roorkee">
             <div
               className={
                 this.state.activeState === 'payment'
@@ -252,7 +252,7 @@ export default class ComingSoon extends Component {
             >
               PAYMENT
             </div>
-          </Link>
+          </a>
           <Link to="/dashboard/contingent">
             <div
               className={
