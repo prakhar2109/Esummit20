@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.ideastormHeaderSection .register a span:hover {
+  background:#359d9a;
+  color: white;
+}
 
 @media (max-width: 1200px) {
   .ideastormHeaderSection {
@@ -104,6 +108,10 @@
   font-size: 1.25rem;
   line-height: 1.25rem;
   color: #359d9a;
+}
+.ideastormHeaderSection .register a span :hover {
+  background:#359d9a;
+  color: white;
 }
 @media (max-width: 1200px) {
   .ideastormHeaderSection .register a span {

@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom'
 import esummitLogo from '../../assets/esummit-logo.svg'
 import './src/navbar.css'
 // import Navbar from '../registration/navbar/navbar'
+/* eslint-disable react/prop-types */
+
 class index extends Component {
   constructor(props) {
     super(props)
@@ -33,6 +35,7 @@ class index extends Component {
   }
   render() {
     let token = localStorage.getItem('user_token')
+    console.log(this.props)
     let tabs
     if (token !== undefined && token !== null && token !== '') {
       tabs = (
@@ -49,14 +52,16 @@ class index extends Component {
         <>
           <li className="navbar-items navbar-mobile-items">
             <Link to="/login" className="navbar-links">
-              <div className="navbar-register-button">
+              <div className={this.props.location.pathname==='/login'? "active-navbar-register navbar-newregister-button":"navbar-newregister-button"}>
+
                 <p>Login</p>
               </div>
             </Link>
           </li>
           <li className="navbar-items navbar-mobile-items">
             <Link to="/register" className="navbar-links">
-              <button className="navbar-register-button">Register</button>
+              <button className={this.props.location.pathname==='/register'? "active-navbar-register navbar-newregister-button":"navbar-newregister-button"}>
+              Register</button>
             </Link>
           </li>
         </>
@@ -80,7 +85,7 @@ class index extends Component {
           <li className="navbar-items">
             <Link
               to="/events"
-              className="navbar-links"
+              className={this.props.location.pathname==='/events'? "active-navbar-links navbar-links":"navbar-links"}
               rel="noopener noreferrer"
             >
               Events
@@ -90,7 +95,7 @@ class index extends Component {
             <li className="navbar-items">
               <Link
                 to="/Speakers"
-                className="navbar-links"
+                className={this.props.location.pathname==='/Speakers'? "active-navbar-links navbar-links":"navbar-links"}
                 rel="noopener noreferrer"
               >
                 Speakers
@@ -100,21 +105,21 @@ class index extends Component {
           <li className="navbar-items">
             <Link
               to="/campus-ambassador"
-              className="navbar-links"
+              className={this.props.location.pathname==='/campus-ambassador'? "active-navbar-links navbar-links":"navbar-links"}
               rel="noopener noreferrer"
             >
               Campus Ambassador
             </Link>
           </li>
           <li className="navbar-items">
-            <Link to="/faqs" className="navbar-links" rel="noopener noreferrer">
+            <Link to="/faqs" className={this.props.location.pathname==='/faqs'? "active-navbar-links navbar-links":"navbar-links"} rel="noopener noreferrer">
               FAQs
             </Link>
           </li>
           <li className="navbar-items">
             <Link
               to="/sponsors"
-              className="navbar-links"
+              className={this.props.location.pathname==='/sponsors'? "active-navbar-links navbar-links":"navbar-links"}
               rel="noopener noreferrer"
             >
               Sponsors
@@ -123,7 +128,7 @@ class index extends Component {
           {/* <li className="navbar-items">
             <Link
               to="/Sponsors"
-              className="navbar-links"
+              className={this.props.location.pathname==='/events'? "active-navbar-links":"navbar-links"}
               rel="noopener noreferrer"
             >
               Sponsors
@@ -151,7 +156,7 @@ class index extends Component {
             <li className="navbar-mobile-items">
               <Link
                 to="/events"
-                className="navbar-links"
+                className={this.props.location.pathname==='/events'? "active-navbar-links navbar-links":"navbar-links"}
                 rel="noopener noreferrer"
               >
                 Events
@@ -160,7 +165,7 @@ class index extends Component {
             <li className="navbar-mobile-items">
               <Link
                 to="/speakers"
-                className="navbar-links"
+                className={this.props.location.pathname==='/speakers'? "active-navbar-links navbar-links":"navbar-links"}
                 rel="noopener noreferrer"
               >
                 Speakers
@@ -169,33 +174,33 @@ class index extends Component {
             <li className="navbar-mobile-items">
               <Link
                 to="/campus-ambassador"
-                className="navbar-links"
+                className={this.props.location.pathname==='/campus-ambassador'? "active-navbar-links navbar-links":"navbar-links"}
                 rel="noopener noreferrer"
               >
                 Campus Ambassador
               </Link>
             </li>
             <li className="navbar-mobile-items">
-              <Link to="/faqs" className="navbar-links" rel="noopener noreferrer">
+              <Link to="/faqs" className={this.props.location.pathname==='/events'? "active-navbar-links navbar-links":"navbar-links"} rel="noopener noreferrer">
                 FAQs
               </Link>
             </li>
             <li className="navbar-mobile-items">
               <Link
                 to="/sponsors"
-                className="navbar-links"
+                className={this.props.location.pathname==='/sponsors'? "active-navbar-links navbar-links":"navbar-links"}
                 rel="noopener noreferrer"
               >
                 Sponsors
               </Link>
             </li>
             {/* <li className="navbar-mobile-items">
-              <Link to="/register" className="navbar-links">
+              <Link to="/register" className={this.props.location.pathname==='/events'? "active-navbar-links":"navbar-links"}>
                 <button className="navbar-register-button">Register</button>
               </Link>
             </li>
             <li className="navbar-mobile-items">
-              <Link to="/login" className="navbar-links">
+              <Link to="/login" className={this.props.location.pathname==='/events'? "active-navbar-links":"navbar-links"}>
                 <button className="navbar-register-button">Login</button>
               </Link>
             </li> */}
@@ -208,3 +213,4 @@ class index extends Component {
 }
 
 export default index
+/* eslint-disable react/prop-types */
