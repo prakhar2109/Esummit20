@@ -56,7 +56,7 @@ export default class HeaderSection extends Component {
         className="eventDashboard-background-image"
         style={{
           backgroundImage: ` url(
-            ${BASE_URL + this.props.applydata.dashboard_image}
+            ${BASE_URL + this.props.applydata.card_image}
           )`
         }}
       >

@@ -1,8 +1,12 @@
 .ideastormHeaderSection {
-  background: #030d0f;
   min-height: 69.8125rem;
   height: auto;
   padding: 10rem 17% 0 17%;
+}
+.eventDashboard-background-image{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (max-width: 1200px) {
