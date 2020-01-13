@@ -8,7 +8,6 @@ import CBlock from '../../assets/sponsors/CBlock.png'
 import Circle from '../../assets/sponsors/circle.png'
 import Ctim from '../../assets/sponsors/Ctim.png'
 import Dare2compete from '../../assets/sponsors/dare2compete.png'
-import Devfolio from '../../assets/sponsors/devfolio.png'
 import Amazworkplace from '../../assets/sponsors/download.png'
 import Dribble from '../../assets/sponsors/dribble.svg'
 import DuAssassins from '../../assets/sponsors/du-assassins.png'
@@ -20,11 +19,11 @@ import GDG from '../../assets/sponsors/GDG.png'
 import geekforgeeks from '../../assets/sponsors/geekforgeeks.png'
 import grabon from '../../assets/sponsors/grabon.png'
 import hackerearth from '../../assets/sponsors/hackerearth.png'
-import IITRAM from '../../assets/sponsors/IITRAM.png'
+
 import inc42 from '../../assets/sponsors/inc42.png'
 import Indigram from '../../assets/sponsors/Indigram.png'
 import innovians from '../../assets/sponsors/innovians.png'
-import JetBrains from '../../assets/sponsors/JetBrains.png'
+import inventus '../../assets/sponsors/inventus.png'
 import kaggle from '../../assets/sponsors/kaggle.png'
 import Kolkata from '../../assets/sponsors/Kolkata.png'
 import kuku from '../../assets/sponsors/kuku.png'
@@ -38,7 +37,7 @@ import oyo from '../../assets/sponsors/oyo.png'
 import Revvx from '../../assets/sponsors/Revvx.png'
 import Rosenfeld from '../../assets/sponsors/Rosenfeld.png'
 import Savage from '../../assets/sponsors/Savage.png'
-import Siemens from '../../assets/sponsors/Siemens.png'
+
 import skillenza from '../../assets/sponsors/skillenza.png'
 import Slider from '../../assets/sponsors/Slider.jpg'
 import speciale from '../../assets/sponsors/speciale.png'
@@ -57,8 +56,8 @@ class Sponsors extends Component {
     super(props)
     this.state = {}
   }
-  componentDidMount(){
-    window.scrollTo(0, 0);
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
   render() {
     return (
@@ -110,10 +109,7 @@ class Sponsors extends Component {
             <img src={Dare2compete} alt="sorry" />
             <p>DARE2OMPETE</p>
           </div>
-          <div className="sponsorimage">
-            <img src={Devfolio} alt="sorry" />
-            <p>DEVFOLIO</p>
-          </div>
+
           <div className="sponsorimage">
             <img src={Amazworkplace} alt="sorry" />
             <p>AMAZING WORKPLACES</p>
@@ -140,11 +136,19 @@ class Sponsors extends Component {
           </div>
           <div className="sponsorimage">
             <img src={FDC} alt="sorry" />
-            <p>FACEBOOK<br />DEVELOPMENT CIRCLES</p>
+            <p>
+              FACEBOOK
+              <br />
+              DEVELOPMENT CIRCLES
+            </p>
           </div>
           <div className="sponsorimage">
             <img src={GDG} alt="sorry" />
-            <p>GOOGLE<br />DEVELOPER GROUPS</p>
+            <p>
+              GOOGLE
+              <br />
+              DEVELOPER GROUPS
+            </p>
           </div>
           <div className="sponsorimage">
             <img src={geekforgeeks} alt="sorry" />
@@ -158,10 +162,7 @@ class Sponsors extends Component {
             <img src={hackerearth} alt="sorry" />
             <p>HACKEREARTH</p>
           </div>
-          <div className="sponsorimage">
-            <img src={IITRAM} alt="sorry" />
-            <p>IITRAM</p>
-          </div>
+
           <div className="sponsorimage">
             <img src={inc42} alt="sorry" />
             <p>INC42</p>
@@ -174,10 +175,10 @@ class Sponsors extends Component {
             <img src={innovians} alt="sorry" />
             <p>INNOVIANS</p>
           </div>
-          <div className="sponsorimage">
-            <img src={JetBrains} alt="sorry" />
-            <p>JET BRAINS</p>
-          </div>
+          {/* <div className="sponsorimage">
+            <img src={inventus} alt="sorry" />
+            <p>INVENTUS INDIA</p>
+          </div> */}
           <div className="sponsorimage">
             <img src={kaggle} alt="sorry" />
             <p>KAGGLE</p>
@@ -230,10 +231,7 @@ class Sponsors extends Component {
             <img src={Savage} alt="sorry" />
             <p>SAVAGE HUMANS</p>
           </div>
-          <div className="sponsorimage">
-            <img src={Siemens} alt="sorry" />
-            <p>SIEMENS</p>
-          </div>
+
           <div className="sponsorimage">
             <img src={skillenza} alt="sorry" />
             <p>SKILLENZA</p>
@@ -276,7 +274,11 @@ class Sponsors extends Component {
           </div>
           <div className="sponsorimage">
             <img src={zomato} alt="sorry" />
-            <p>ZOMATO<br />FEEDING INDIA</p>
+            <p>
+              ZOMATO
+              <br />
+              FEEDING INDIA
+            </p>
           </div>
         </div>
       </div>

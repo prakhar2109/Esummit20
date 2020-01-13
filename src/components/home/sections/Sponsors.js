@@ -47,7 +47,7 @@ class Sponsors extends Component {
               className="sponsors-section-card-image"
             />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">
+              <div className="sponsors-sectio n-card-heading">
                 LinkedIn Local
               </div>
             </div>
