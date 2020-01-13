@@ -178,7 +178,8 @@
     display: grid;
     width: 100%;
     margin: $gutterWidth 0;
-  
+    
+    
     @include desktop-1281-1920() {
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
@@ -197,6 +198,8 @@
     }
 
     .home-section-event-card {
+
+      padding-left:2px;
       @include desktop-320-767 {
         width: $cardWidth*0.5;
         height: $cardHeight*0.5;
@@ -249,7 +252,7 @@
 
         width: inherit;
         height: inherit;
-        background: linear-gradient(180deg, #000000 -15.17%, rgba(0, 0, 0, 0.3) 132.69%);
+        background: linear-gradient( 180deg, #000000 -15.17%, rgba(0, 0, 0, 0.3) 132.69%);
         mix-blend-mode: multiply;
         opacity: 0.4;
         border-radius: 4px;
@@ -262,7 +265,7 @@
         height: inherit;
         z-index: 0;
         transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-        background-color: $backgroundImageColor;
+        background-color: $backgroundImageColor;        
       }
 
       .home-section-event-card-heading {
