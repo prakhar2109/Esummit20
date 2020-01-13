@@ -181,7 +181,7 @@ class index extends Component {
               </Link>
             </li>
             <li className="navbar-mobile-items">
-              <Link to="/faqs" className={this.props.location.pathname==='/events'? "active-navbar-links navbar-links":"navbar-links"} rel="noopener noreferrer">
+              <Link to="/faqs" className={this.props.location.pathname==='/faqs'? "active-navbar-links navbar-links":"navbar-links"} rel="noopener noreferrer">
                 FAQs
               </Link>
             </li>

@@ -20,7 +20,15 @@
   padding: 0;
 
 }
+@media(max-width:700px)
+{
+  .profiletype-left {
+    width: 100%;
+    padding-top: 3rem;
+  
+  }
 
+}
 
 .profiletype-left-subHeading {
   color: rgba(255, 255, 255, 0.6);

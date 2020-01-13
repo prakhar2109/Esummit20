@@ -571,7 +571,8 @@
   @include section();
 
   @include desktop-320-767 {
-    padding: 8rem 0;
+    padding: 8rem 0 0 0;
+
     min-height: 80vh;
 
     justify-content: unset;
@@ -582,7 +583,7 @@
   }
 
   @include desktop-1025-1400 {
-    padding: $gutterWidth * 2 0;
+    padding: 14rem;
   }
 
   position: relative;
@@ -590,7 +591,7 @@
   background: url('../../assets/ca-intro.png') no-repeat center;
   background-size: cover;
   justify-content: space-between;
-  padding: $gutterWidth * 8 0;
+  padding: $gutterWidth * 8;
 
   .ca-section-intro-background-tint {
     position: absolute;
@@ -618,7 +619,7 @@
       margin: 2rem 0;
 
       @include desktop-320-767 {
-        padding: 0 $gutterWidth;
+        padding: 0 2*$gutterWidth;
         font-size: $normalFontSize;
         line-height: $normalLineHeight;
       }
@@ -629,7 +630,6 @@
 
       @include desktop-1025-1400 {
         font-size: 1.4rem;
-        padding: 0 $gutterWidth * 2;
         line-height: 2.8rem;
       }
 
@@ -640,14 +640,12 @@
       font-weight: normal;
       line-height: $normalLineHeight * 1.6;
       text-align: center;
-      padding: 0 $gutterWidth * 8;
     }
 
     .ca-section-intro-link {
       z-index: 1;
       display: flex;
       margin: 2rem 0;
-      padding-left: 14rem;
 
 
       @include desktop-320-767 {
@@ -1134,7 +1132,6 @@
   font-weight: normal;
   font-size: $normalFontSize;
   line-height: $normalLineHeight;
-  text-align: center;
   color: $whiteText;
 }
 
