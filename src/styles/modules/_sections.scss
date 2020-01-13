@@ -180,12 +180,9 @@
 
   .section-image-heading-container {
     justify-content: flex-start;
-    margin-left: 0.9375vw;
 
     .section-image-heading {
-      @include desktop-320-767 {
         padding-left: 0;
-      }
 
       margin-left: 0;
     }
@@ -248,7 +245,7 @@
       height: $cardHeight;
       border-radius: 4px;
       overflow: hidden;
-      margin: 0 0.9375vw $gutterWidth 0.9375vw;
+      margin: 0 auto $gutterWidth auto;
 
       .home-section-event-card-link {
         position: absolute;
@@ -322,111 +319,117 @@
 
   .section-image-heading-container {
     justify-content: space-between;
-    margin-left: 0.9375vw;
-
-    .section-image-heading {
+      .section-image-heading {
       padding-left: 0;
       margin-left: 0;
     }
   }
 
-  .speakers-section-card-container {
-    z-index: 2;
-    @include display-row();
+  .speakers-section-card-scroll-container {
+    position: relative;
     width: 100%;
-    margin: $gutterWidth 0;
-    white-space: nowrap;
-    overflow-x: scroll;
-    justify-content: space-between;
+    overflow: hidden;
+    height: $cardHeight;
 
-    @include desktop-1025-1280 {
-      grid-template-columns: 33.33% 33.33% 33.33%;
-    }
+    .speakers-section-card-container {
+      @include display-row();
+      position: absolute;
+      left: 0;
+      z-index: 2;
+      width: fit-content;
+      min-width: 100%;
+      margin: $gutterWidth 0;
+      justify-content: space-between;
 
-    @include desktop-768-1024 {
-      grid-template-columns: 50% 50%;
-    }
-
-    @include desktop-320-767 {
-      @include display-column();
-      align-items: center;
-      overflow-x: hidden;
-      margin: 0;
-    }
-
-    .speakers-section-card {
-      @include display-column();
-      justify-content: center;
-      align-items: center;
-      margin: $gutterWidth * 2;
-      width: $cardWidth;
-
-      &:first-child {
-        margin-left: 0;
+      @include desktop-1025-1280 {
+        grid-template-columns: 33.33% 33.33% 33.33%;
       }
 
-      &:last-child {
-        margin-right: 0;
+      @include desktop-768-1024 {
+        grid-template-columns: 50% 50%;
       }
 
       @include desktop-320-767 {
         @include display-column();
-        width: 100%;
-        justify-content: flex-start;
-        padding: 0 $gutterWidth;
+        align-items: center;
+        overflow-x: hidden;
+        margin: 0;
+      }
+
+      .speakers-section-card {
+        @include display-column();
+        justify-content: center;
+        align-items: center;
+        margin: $gutterWidth * 2;
+        // width: $cardWidth;
 
         &:first-child {
-          margin: $gutterWidth;
+          margin-left: 0;
         }
 
-        &:not(:first-child) {
-          display: none;
-        }
-      }
-
-      .speakers-section-card-image {
-        @include desktop-320-767 {
-          margin: 0;
+        &:last-child {
+          margin-right: 0;
         }
 
-        object-fit: cover;
-        border-radius: 50%;
-        width: $cardWidth * 0.6;
-        background-color: $secondaryBackgroundColor;
-        margin-bottom: $gutterWidth * 0.8;
-      }
-
-      .speakers-section-card-content {
         @include desktop-320-767 {
           @include display-column();
           width: 100%;
+          justify-content: flex-start;
           padding: 0 $gutterWidth;
-          margin: $gutterWidth 0;
+
+          &:first-child {
+            margin: $gutterWidth;
+          }
+
+          &:not(:first-child) {
+            display: none;
+          }
         }
 
-        .speakers-section-card-heading {
+        .speakers-section-card-image {
           @include desktop-320-767 {
+            margin: 0;
+          }
+
+          object-fit: cover;
+          border-radius: 50%;
+          width: $cardWidth * 0.6;
+          background-color: $secondaryBackgroundColor;
+          margin-bottom: $gutterWidth * 0.8;
+        }
+
+        .speakers-section-card-content {
+          @include desktop-320-767 {
+            @include display-column();
+            width: 100%;
+            padding: 0 $gutterWidth;
+            margin: $gutterWidth 0;
+          }
+
+          .speakers-section-card-heading {
+            @include desktop-320-767 {
+              text-align: center;
+              font-size: $normalFontSize;
+            }
+
+            font-weight: bold;
+            font-size: $normalFontSize * 1.2;
+            line-height: $normalLineHeight;
             text-align: center;
-            font-size: $normalFontSize;
+            color: $whiteText;
           }
 
-          font-weight: bold;
-          font-size: $normalFontSize * 1.2;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
-        }
+          .speakers-section-card-subheading {
+            @include desktop-320-767 {
+              align-items: center;
+              font-size: 1rem;
+            }
 
-        .speakers-section-card-subheading {
-          @include desktop-320-767 {
-            align-items: center;
-            font-size: 1rem;
+            font-size: $normalFontSize * 0.8;
+            line-height: $normalLineHeight;
+            text-align: center;
+            color: $whiteText;
           }
-
-          font-size: $normalFontSize * 0.8;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
         }
       }
     }
@@ -450,7 +453,6 @@
 
   .section-image-heading-container {
     justify-content: space-between;
-    margin-left: 0.9375vw;
 
     .section-image-heading {
       margin-left: 0;
@@ -458,105 +460,107 @@
     }
   }
 
-  .sponsors-section-card-container {
-    z-index: 2;
-    @include display-row();
+  .sponsors-section-card-scroll-container {
+    position: relative;
     width: 100%;
-    margin: $gutterWidth 0;
-    white-space: nowrap;
-    overflow-x: scroll;
+    overflow: hidden;
+    height: $cardHeight;
 
-    @include desktop-1025-1280 {
-      grid-template-columns: 33.33% 33.33% 33.33%;
-    }
+    .sponsors-section-card-container {
+      @include display-row();
+      position: absolute;
+      left: 0;
+      z-index: 2;
+      width: fit-content;
+      margin: $gutterWidth 0;
 
-    @include desktop-768-1024 {
-      grid-template-columns: 50% 50%;
-    }
-
-    @include desktop-320-767 {
-      @include display-column();
-      align-items: center;
-      overflow-x: hidden;
-      margin: 0;
-    }
-
-    .sponsors-section-card {
-      @include display-column();
-      justify-content: center;
-      align-items: center;
-      margin: $gutterWidth * 2.76;
-      width: $cardWidth;
-
-      &:first-child {
-        margin-left: 0;
+      @include desktop-1025-1280 {
+        grid-template-columns: 33.33% 33.33% 33.33%;
       }
 
-      &:last-child {
-        margin-right: 0;
+      @include desktop-768-1024 {
+        grid-template-columns: 50% 50%;
       }
 
       @include desktop-320-767 {
         @include display-column();
-        width: 100%;
-        justify-content: flex-start;
-        padding: 0 $gutterWidth;
+        align-items: center;
+        overflow-x: hidden;
+        margin: 0;
+      }
+
+      .sponsors-section-card {
+        @include display-column();
+        justify-content: center;
+        align-items: center;
+        margin: $gutterWidth*2.4;
 
         &:first-child {
-          margin: $gutterWidth;
+          margin-left: 0;
         }
 
-        &:not(:first-child) {
-          display: none;
-        }
-      }
-
-      .sponsors-section-card-image {
-        @include desktop-320-767 {
-          margin: 0;
-        }
-
-        object-fit: contain;
-        border: 2px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        border-radius: 4px;
-        width: $cardWidth * 0.6;
-        height: $cardWidth * 0.6;
-        background-color: white;
-        margin-bottom: $gutterWidth * 0.8;
-      }
-
-      .sponsors-section-card-content {
         @include desktop-320-767 {
           @include display-column();
           width: 100%;
+          justify-content: flex-start;
           padding: 0 $gutterWidth;
-          margin: $gutterWidth 0;
+
+          &:first-child {
+            margin: $gutterWidth;
+          }
+
+          &:not(:first-child) {
+            display: none;
+          }
         }
 
-        .sponsors-section-card-heading {
+        .sponsors-section-card-image {
           @include desktop-320-767 {
+            margin: 0;
+          }
+
+          object-fit: contain;
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          box-sizing: border-box;
+          border-radius: 4px;
+          width: $cardWidth * 0.6;
+          height: $cardWidth * 0.6;
+          background-color: white;
+          margin-bottom: $gutterWidth * 0.8;
+        }
+
+        .sponsors-section-card-content {
+          @include desktop-320-767 {
+            @include display-column();
+            width: 100%;
+            padding: 0 $gutterWidth;
+            margin: $gutterWidth 0;
+          }
+
+          .sponsors-section-card-heading {
+            @include desktop-320-767 {
+              text-align: center;
+              font-size: $normalFontSize;
+            }
+
+            font-weight: bold;
+            font-size: $normalFontSize * 1.2;
+            line-height: $normalLineHeight;
             text-align: center;
-            font-size: $normalFontSize;
+            color: $whiteText;
           }
 
-          font-weight: bold;
-          font-size: $normalFontSize * 1.2;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
-        }
+          .sponsors-section-card-subheading {
+            @include desktop-320-767 {
+              align-items: center;
+              font-size: 1rem;
+            }
 
-        .sponsors-section-card-subheading {
-          @include desktop-320-767 {
-            align-items: center;
-            font-size: 1rem;
+            font-size: $normalFontSize * 0.8;
+            line-height: $normalLineHeight;
+            text-align: center;
+            color: $whiteText;
           }
-
-          font-size: $normalFontSize * 0.8;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
         }
       }
     }
@@ -825,7 +829,6 @@
 
   .section-image-heading-container {
     justify-content: flex-start;
-    margin-left: 0.9375vw;
 
     .section-image-heading {
       padding-left: 0;
