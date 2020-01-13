@@ -1,12 +1,16 @@
 .ideastormHeaderSection {
   min-height: 69.8125rem;
   height: auto;
-  padding: 10rem 17% 0 17%;
+  padding: 10rem 17% 2rem 17%;
 }
 .eventDashboard-background-image{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.ideastormHeaderSection .register a span:hover {
+  background:#359d9a;
+  color: white;
 }
 
 @media (max-width: 1200px) {
@@ -95,6 +99,8 @@
   padding: 0.875rem 1rem;
   font-family: 'Poppins';
   border: 2px solid #359d9a;
+  display: block;
+  width: fit-content;
   box-sizing: border-box;
   border-radius: 2px;
   cursor: pointer;
@@ -102,6 +108,10 @@
   font-size: 1.25rem;
   line-height: 1.25rem;
   color: #359d9a;
+}
+.ideastormHeaderSection .register a span :hover {
+  background:#359d9a;
+  color: white;
 }
 @media (max-width: 1200px) {
   .ideastormHeaderSection .register a span {
