@@ -3,8 +3,17 @@
     padding: $gutterWidth;
   }
 
+  @include desktop-768-1024 {
+    padding: $gutterWidth $gutterWidth;
+
+  }
+
+  @include desktop-1025-1400 {
+    padding: $gutterWidth $gutterWidth*3;
+  }
+
   @include display-row();
-  padding: $gutterWidth 11rem;
+  padding: $gutterWidth $gutterWidth*6;
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -30,6 +39,7 @@
         margin-right: $gutterWidth * 0.2;
         margin-top: 5%;
       }
+
       text-align: right;
       margin-right: $gutterWidth;
 

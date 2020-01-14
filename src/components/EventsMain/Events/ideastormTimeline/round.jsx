@@ -6,8 +6,7 @@ import './round.css'
 class Round extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-    }
+    this.state = {}
   }
   componentDidMount() {
     console.log(this.props.content, 'round_content')
@@ -23,8 +22,7 @@ class Round extends Component {
       <React.Fragment>
         {this.props.data.length > 0 &&
           this.props.data[0].rounds_details.map((round, index) => {
-            return this.props.round_number ===
-              round.round_number ? (
+            return this.props.round_number === round.round_number ? (
               <div className="round" key={index}>
                 <p>Round {round.round_number} </p>
                 <br />
@@ -57,11 +55,6 @@ class Round extends Component {
                     All entries are then expected to pay through the payment portal by{' '}
                     <span style={{ color: '#359D9A' }}> 20 January, 2019</span>
                   </p> */}
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
               </div>
             ) : null
           })}

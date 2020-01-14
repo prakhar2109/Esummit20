@@ -17,6 +17,11 @@
     }
     .ant-tabs-bar {
       border: 0;
+
+      .ant-tabs-tab-prev {
+        padding-top: $gutterWidth * 3;
+      }
+
       .ant-tabs-tab-arrow-show {
         color: white;
       }
@@ -93,7 +98,7 @@
                 }
 
                 opacity: 1;
-                height: 30vh;
+                height: 18vh;
               }
             }
           }
