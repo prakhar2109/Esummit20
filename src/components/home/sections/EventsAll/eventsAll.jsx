@@ -43,23 +43,15 @@ class Events extends Component {
           <div className="home-section-event-card-container">
             <Link to="/events/Ideastorm">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={ideastormCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint1" />
+                
                 <div className="home-section-event-card-heading">Ideastorm</div>
               </div>
             </Link>
             <Link to="/events/Softwareproductathon">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={softwareProductathonCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint2" />
+                
                 <div className="home-section-event-card-heading">
                   Software Productathon
                 </div>
@@ -67,12 +59,8 @@ class Events extends Component {
             </Link>
             <Link to="/events/Hardwareproductathon">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={hardwareProductathonCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint3" />
+                
                 <div className="home-section-event-card-heading">
                   Hardware Productathon
                 </div>
@@ -80,12 +68,8 @@ class Events extends Component {
             </Link>
             <Link to="/events/Investorvista">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={investorCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint4" />
+                
                 <div className="home-section-event-card-heading">
                   Investor’s Vista
                 </div>
@@ -93,12 +77,8 @@ class Events extends Component {
             </Link>
             <Link to="/events/Startupexpo">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={startupCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint5" />
+                
                 <div className="home-section-event-card-heading">
                   Startup Expo
                 </div>
@@ -106,34 +86,22 @@ class Events extends Component {
             </Link>
 
             <div className="home-section-event-card">
-              <div className="home-section-event-card-background-tint" />
-              <img
-                src={conclaveCard}
-                className="home-section-event-card-background"
-                alt=""
-              />
+              <div className="home-section-event-card-background-tint6" />
+             
               <div className="home-section-event-card-heading">Conclaves</div>
             </div>
 
             <div className="home-section-event-card">
-              <div className="home-section-event-card-background-tint" />
-              <img
-                src={leadershipCard}
-                className="home-section-event-card-background"
-                alt=""
-              />
+              <div className="home-section-event-card-background-tint7" />
+              
               <div className="home-section-event-card-heading">
                 Leadership Series
               </div>
             </div>
             <Link to="/events/E-Conference">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={eConferenceCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint8" />
+                
                 <div className="home-section-event-card-heading">
                   E-Conference
                 </div>
@@ -141,12 +109,8 @@ class Events extends Component {
             </Link>
             <Link to="/events/Nurture-Entrepreneurship">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={schoolEventsCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint9" />
+               
                 <div className="home-section-event-card-heading">
                   Nurture Entrepreneurship
                 </div>
@@ -154,12 +118,8 @@ class Events extends Component {
             </Link>
             <Link to="/events/Casechallenge">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint" />
-                <img
-                  src={caseStudyCard}
-                  className="home-section-event-card-background"
-                  alt=""
-                />
+                <div className="home-section-event-card-background-tint10" />
+              
                 <div className="home-section-event-card-heading">
                   Case Challenge
                 </div>
