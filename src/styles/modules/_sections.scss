@@ -21,36 +21,32 @@
     }
 
     @include desktop-768-1024 {
-      height: $gutterWidth*14;
+      height: $gutterWidth * 14;
     }
 
     @include desktop-1025-1400 {
-      height: $gutterWidth*16;
+      height: $gutterWidth * 16;
     }
 
     @include desktop-1401-1600 {
-      height: $gutterWidth*14;
-
+      height: $gutterWidth * 14;
     }
 
     .home-section-background-disruption {
-
       @include desktop-320-767 {
-        height: $gutterWidth*3;
+        height: $gutterWidth * 3;
       }
 
       @include desktop-768-1024 {
-        height: $gutterWidth*2.8;
+        height: $gutterWidth * 2.8;
       }
 
       @include desktop-1025-1400 {
-        height: $gutterWidth*3;
-
+        height: $gutterWidth * 3;
       }
 
       @include desktop-1401-1600 {
-        height: $gutterWidth*3.5;
-
+        height: $gutterWidth * 3.5;
       }
     }
 
@@ -60,21 +56,19 @@
       }
 
       @include desktop-320-767 {
-        height: $gutterWidth*3;
+        height: $gutterWidth * 3;
       }
 
       @include desktop-768-1024 {
-        height: $gutterWidth*2.8;
+        height: $gutterWidth * 2.8;
       }
 
       @include desktop-1025-1400 {
-        height: $gutterWidth*2.6;
-
+        height: $gutterWidth * 2.6;
       }
 
       @include desktop-1401-1600 {
-        height: $gutterWidth*3;
-
+        height: $gutterWidth * 3;
       }
     }
 
@@ -85,7 +79,6 @@
 
       @include desktop-768-1024 {
         height: $gutterWidth * 10;
-
       }
 
       @include desktop-1025-1400 {
@@ -94,7 +87,6 @@
 
       @include desktop-1401-1600 {
         height: $gutterWidth * 12;
-
       }
 
       @include display-column();
@@ -182,7 +174,7 @@
     justify-content: flex-start;
 
     .section-image-heading {
-        padding-left: 0;
+      padding-left: 0;
 
       margin-left: 0;
     }
@@ -214,27 +206,65 @@
     }
 
     .home-section-event-card {
-
-      padding-left:2px;
+      background: #000;
+      background: -moz-linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 60%,
+        #1883c6 80%,
+        #09c9c3 90%,
+        #1771aa 100%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 60%,
+        #1883c6 80%,
+        #09c9c3 90%,
+        #1771aa 100%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 20%,
+        #1883c6 90%,
+        #09c9c3 95%,
+        #1771aa 100%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background-size: 400% 400%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: flex;
+      width: 500px;
+      height: 500px;
+      max-width: 100vw;
+      max-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      position: relative;
+      cursor: pointer;
+      transition: 0.5s all;
+      padding-left: 2px;
       @include desktop-320-767 {
-        width: $cardWidth*0.5;
-        height: $cardHeight*0.5;
+        width: $cardWidth * 0.5;
+        height: $cardHeight * 0.5;
       }
 
       @include desktop-768-1024 {
-        width: $cardWidth*0.6;
-        height: $cardHeight*0.6;
+        width: $cardWidth * 0.6;
+        height: $cardHeight * 0.6;
         margin: 0 auto $gutterWidth auto;
       }
 
       @include desktop-1025-1400 {
-        width: $cardWidth*0.7;
-        height: $cardHeight*0.7;
+        width: $cardWidth * 0.7;
+        height: $cardHeight * 0.7;
       }
 
       @include desktop-1401-1600 {
-        width: $cardWidth*0.85;
-        height: $cardHeight*0.85;
+        width: $cardWidth * 0.85;
+        height: $cardHeight * 0.85;
       }
 
       @include display-column();
@@ -256,19 +286,114 @@
         z-index: 3;
 
         &:hover {
-          ~.home-section-event-card-background {
+          ~ .home-section-event-card-background {
             transform: scale(1.2);
           }
         }
+        &:hover {
+          ~ .home-section-event-card-background-tint1 {
+            z-index: 50 !important;
+            opacity: 0.2;
+            transition: 0.5s all;
+          }
+        }
+      }
+      &:hover {
+        transform: scale(1.2);
+        overflow: hidden;
+        background-position: 100% 100%;
+      }
+
+      &-background-tint1 {
+        
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Ideastorm-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/productathon-main.png') no-repeat
+          center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint3 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/hardware productathon-main.png')
+          no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint4 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Vista-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint5 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Expo-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint6 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Conclaves-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
       }
 
       .home-section-event-card-background-tint {
         position: absolute;
         z-index: 1;
-
         width: inherit;
         height: inherit;
-        background: linear-gradient( 180deg, #000000 -15.17%, rgba(0, 0, 0, 0.3) 132.69%);
+        background: linear-gradient(
+          180deg,
+          #000000 -15.17%,
+          rgba(0, 0, 0, 0.3) 132.69%
+        );
         mix-blend-mode: multiply;
         opacity: 0.4;
         border-radius: 4px;
@@ -281,7 +406,7 @@
         height: inherit;
         z-index: 0;
         transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-        background-color: $backgroundImageColor;        
+        background-color: $backgroundImageColor;
       }
 
       .home-section-event-card-heading {
@@ -320,7 +445,7 @@
 
   .section-image-heading-container {
     justify-content: space-between;
-      .section-image-heading {
+    .section-image-heading {
       padding-left: 0;
       margin-left: 0;
     }
@@ -494,7 +619,7 @@
         @include display-column();
         justify-content: center;
         align-items: center;
-        margin: $gutterWidth*2.4;
+        margin: $gutterWidth * 2.4;
 
         &:first-child {
           margin-left: 0;
@@ -620,7 +745,7 @@
       margin: 2rem 0;
 
       @include desktop-320-767 {
-        padding: 0 2*$gutterWidth;
+        padding: 0 2 * $gutterWidth;
         font-size: $normalFontSize;
         line-height: $normalLineHeight;
       }
@@ -647,7 +772,6 @@
       z-index: 1;
       display: flex;
       margin: 2rem 0;
-
 
       @include desktop-320-767 {
         margin: $gutterWidth * 2;
@@ -874,7 +998,7 @@
         cursor: pointer;
 
         &:checked {
-          +.question-items-container {
+          + .question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -893,7 +1017,7 @@
               }
             }
 
-            >.question-items-answer {
+            > .question-items-answer {
               color: #fff;
 
               @include desktop-0-1281() {
@@ -1074,7 +1198,8 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {}
+      @include desktop-320-767 {
+      }
 
       font-weight: normal;
       color: $whiteText;

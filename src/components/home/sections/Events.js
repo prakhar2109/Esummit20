@@ -37,12 +37,8 @@ class Events extends Component {
               to="/events/Ideastorm"
               className="home-section-event-card-link"
             />
-            <div className="home-section-event-card-background-tint" />
-            <img
-              src={ideastormCard}
-              className="home-section-event-card-background"
-              alt=""
-            />
+            <div className="home-section-event-card-background-tint1" />
+            
             <div className="home-section-event-card-heading">Ideastorm</div>
           </div>
 
@@ -51,12 +47,8 @@ class Events extends Component {
               to="/events/Hardwareproductathon"
               className="home-section-event-card-link"
             />
-            <div className="home-section-event-card-background-tint" />
-            <img
-              src={softwareProductathonCard}
-              className="home-section-event-card-background"
-              alt=""
-            />
+            <div className="home-section-event-card-background-tint2" />
+            
             <div className="home-section-event-card-heading">
               Hardware Productathon
             </div>
@@ -67,12 +59,8 @@ class Events extends Component {
               to="/events/Softwareproductathon"
               className="home-section-event-card-link"
             />
-            <div className="home-section-event-card-background-tint" />
-            <img
-              src={hardwareProductathonCard}
-              className="home-section-event-card-background"
-              alt=""
-            />
+            <div className="home-section-event-card-background-tint3" />
+        
             <div className="home-section-event-card-heading">
               Software Productathon
             </div>
@@ -82,12 +70,8 @@ class Events extends Component {
               to="/events/Investorvista"
               className="home-section-event-card-link"
             />
-            <div className="home-section-event-card-background-tint" />
-            <img
-              src={investorCard}
-              className="home-section-event-card-background"
-              alt=""
-            />
+            <div className="home-section-event-card-background-tint4" />
+           
             <div className="home-section-event-card-heading">
               Investor’s Vista
             </div>
@@ -97,23 +81,15 @@ class Events extends Component {
               to="/events/Startupexpo"
               className="home-section-event-card-link"
             />
-            <div className="home-section-event-card-background-tint" />
-            <img
-              src={startupCard}
-              className="home-section-event-card-background"
-              alt=""
-            />
+            <div className="home-section-event-card-background-tint5" />
+            
 
-            <div className="home-section-event-card-heading">Startup Expo</div>
+            <div className="home-section-event-card-heading">Startup Expo 2.0</div>
           </div>
 
           <div className="home-section-event-card">
-            <div className="home-section-event-card-background-tint" />
-            <img
-              src={conclaveCard}
-              className="home-section-event-card-background"
-              alt=""
-            />
+            <div className="home-section-event-card-background-tint6" />
+            
             <div className="home-section-event-card-heading">Conclaves</div>
           </div>
           {/* <div className="home-section-event-card">
