@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ecellLogo from '../../../assets/footer-logo.svg'
 import disruptionText from '../../../assets/disruption-text.svg'
+import waveLogo from '../../../assets/wave_circle.gif'
 class Intro extends Component {
   gotoDashboard = () => {
     window.location.href = '/dashboard/invite'

@@ -21,36 +21,32 @@
     }
 
     @include desktop-768-1024 {
-      height: $gutterWidth*14;
+      height: $gutterWidth * 14;
     }
 
     @include desktop-1025-1400 {
-      height: $gutterWidth*16;
+      height: $gutterWidth * 16;
     }
 
     @include desktop-1401-1600 {
-      height: $gutterWidth*14;
-
+      height: $gutterWidth * 14;
     }
 
     .home-section-background-disruption {
-
       @include desktop-320-767 {
-        height: $gutterWidth*3;
+        height: $gutterWidth * 3;
       }
 
       @include desktop-768-1024 {
-        height: $gutterWidth*2.8;
+        height: $gutterWidth * 2.8;
       }
 
       @include desktop-1025-1400 {
-        height: $gutterWidth*3;
-
+        height: $gutterWidth * 3;
       }
 
       @include desktop-1401-1600 {
-        height: $gutterWidth*3.5;
-
+        height: $gutterWidth * 3.5;
       }
     }
 
@@ -60,21 +56,19 @@
       }
 
       @include desktop-320-767 {
-        height: $gutterWidth*3;
+        height: $gutterWidth * 3;
       }
 
       @include desktop-768-1024 {
-        height: $gutterWidth*2.8;
+        height: $gutterWidth * 2.8;
       }
 
       @include desktop-1025-1400 {
-        height: $gutterWidth*2.6;
-
+        height: $gutterWidth * 2.6;
       }
 
       @include desktop-1401-1600 {
-        height: $gutterWidth*3;
-
+        height: $gutterWidth * 3;
       }
     }
 
@@ -85,7 +79,6 @@
 
       @include desktop-768-1024 {
         height: $gutterWidth * 10;
-
       }
 
       @include desktop-1025-1400 {
@@ -94,7 +87,6 @@
 
       @include desktop-1401-1600 {
         height: $gutterWidth * 12;
-
       }
 
       @include display-column();
@@ -182,7 +174,7 @@
     justify-content: flex-start;
 
     .section-image-heading {
-        padding-left: 0;
+      padding-left: 0;
 
       margin-left: 0;
     }
@@ -216,24 +208,24 @@
 
     .home-section-event-card {
       @include desktop-320-767 {
-        width: $cardWidth*0.5;
-        height: $cardHeight*0.5;
+        width: $cardWidth * 0.5;
+        height: $cardHeight * 0.5;
       }
 
       @include desktop-768-1024 {
-        width: $cardWidth*0.6;
-        height: $cardHeight*0.6;
+        width: $cardWidth * 0.6;
+        height: $cardHeight * 0.6;
         margin: 0 auto $gutterWidth auto;
       }
 
       @include desktop-1025-1400 {
-        width: $cardWidth*0.7;
-        height: $cardHeight*0.7;
+        width: $cardWidth * 0.7;
+        height: $cardHeight * 0.7;
       }
 
       @include desktop-1401-1600 {
-        width: $cardWidth*0.85;
-        height: $cardHeight*0.85;
+        width: $cardWidth * 0.85;
+        height: $cardHeight * 0.85;
       }
 
       @include display-column();
@@ -255,7 +247,7 @@
         z-index: 3;
 
         &:hover {
-          ~.home-section-event-card-background {
+          ~ .home-section-event-card-background {
             transform: scale(1.2);
           }
         }
@@ -267,7 +259,11 @@
 
         width: inherit;
         height: inherit;
-        background: linear-gradient(180deg, #000000 -15.17%, rgba(0, 0, 0, 0.3) 132.69%);
+        background: linear-gradient(
+          180deg,
+          #000000 -15.17%,
+          rgba(0, 0, 0, 0.3) 132.69%
+        );
         mix-blend-mode: multiply;
         opacity: 0.4;
         border-radius: 4px;
@@ -319,7 +315,7 @@
 
   .section-image-heading-container {
     justify-content: space-between;
-      .section-image-heading {
+    .section-image-heading {
       padding-left: 0;
       margin-left: 0;
     }
@@ -493,7 +489,7 @@
         @include display-column();
         justify-content: center;
         align-items: center;
-        margin: $gutterWidth*2.4;
+        margin: $gutterWidth * 2.4;
 
         &:first-child {
           margin-left: 0;
@@ -619,7 +615,7 @@
       margin: 2rem 0;
 
       @include desktop-320-767 {
-        padding: 0 2*$gutterWidth;
+        padding: 0 2 * $gutterWidth;
         font-size: $normalFontSize;
         line-height: $normalLineHeight;
       }
@@ -646,7 +642,6 @@
       z-index: 1;
       display: flex;
       margin: 2rem 0;
-
 
       @include desktop-320-767 {
         margin: $gutterWidth * 2;
@@ -873,7 +868,7 @@
         cursor: pointer;
 
         &:checked {
-          +.question-items-container {
+          + .question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -892,7 +887,7 @@
               }
             }
 
-            >.question-items-answer {
+            > .question-items-answer {
               color: #fff;
 
               @include desktop-0-1281() {
@@ -1073,7 +1068,8 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {}
+      @include desktop-320-767 {
+      }
 
       font-weight: normal;
       color: $whiteText;

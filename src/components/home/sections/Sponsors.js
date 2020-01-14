@@ -36,19 +36,21 @@ class Sponsors extends Component {
             />
           </div>
         </div>
-        <div
-          className="sponsors-section-card-container"
-          data-scroll="horizontal"
-        >
-          <div className="sponsors-section-card">
-            <img
-              src={linkedinlocal}
-              alt=""
-              className="sponsors-section-card-image"
-            />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-sectio n-card-heading">
-                LinkedIn Local
+        <div className="sponsors-section-card-scroll-container">
+          <div
+            className="sponsors-section-card-container"
+            data-scroll="horizontal"
+          >
+            <div className="sponsors-section-card">
+              <img
+                src={linkedinlocal}
+                alt=""
+                className="sponsors-section-card-image"
+              />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">
+                  LinkedIn Local
+                </div>
               </div>
             </div>
             <div className="sponsors-section-card">
@@ -61,7 +63,7 @@ class Sponsors extends Component {
                 <div className="sponsors-section-card-heading">Dribble</div>
               </div>
             </div>
-            <div className="sponsors-section-card">
+            {/* <div className="sponsors-section-card">
               <img
                 src={Devfolio}
                 alt=""
@@ -70,7 +72,7 @@ class Sponsors extends Component {
               <div className="sponsors-section-card-content">
                 <div className="sponsors-section-card-heading">Devfolio</div>
               </div>
-            </div>
+            </div> */}
             <div className="sponsors-section-card">
               <img
                 src={AmarUjala}
