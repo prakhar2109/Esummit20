@@ -13,24 +13,30 @@ import Dribble from '../../assets/sponsors/dribble.svg'
 import DuAssassins from '../../assets/sponsors/du-assassins.png'
 import duExpress from '../../assets/sponsors/du-express.png'
 import entrepreneurindia from '../../assets/sponsors/entrepreneurindia.jpg'
+
 import edtimes from '../../assets/sponsors/edtimes.jpg'
+import edufabrica from '../../assets/sponsors/edufabrica.jpg'
 import FDC from '../../assets/sponsors/FDC.png'
+import iitraa from '../../assets/sponsors/iitraa.gif'
+
+import faadventures from '../../assets/sponsors/faadventures.png'
 import GDG from '../../assets/sponsors/GDG.png'
 import geekforgeeks from '../../assets/sponsors/geekforgeeks.png'
 import grabon from '../../assets/sponsors/grabon.png'
 import hackerearth from '../../assets/sponsors/hackerearth.png'
-
+import horsestable from '../../assets/sponsors/horses-table.jpg'
 import inc42 from '../../assets/sponsors/inc42.png'
 import Indigram from '../../assets/sponsors/Indigram.png'
 import innovians from '../../assets/sponsors/innovians.png'
-import inventus '../../assets/sponsors/inventus.png'
+import inventus from '../../assets/sponsors/inventus.png'
 import kaggle from '../../assets/sponsors/kaggle.png'
+import kredx from '../../assets/sponsors/KredX.png'
 import Kolkata from '../../assets/sponsors/Kolkata.png'
 import kuku from '../../assets/sponsors/kuku.png'
 import KYT from '../../assets/sponsors/KYT.png'
 import linkedinlocal from '../../assets/sponsors/linkedinlocal.jpg'
 import marwari from '../../assets/sponsors/marwari.png'
-import msgi from '../../assets/sponsors/msgi.png'
+import msg91 from '../../assets/sponsors/ms91.jpg'
 import Napino from '../../assets/sponsors/Napino.png'
 import Nexus from '../../assets/sponsors/Nexus.png'
 import oyo from '../../assets/sponsors/oyo.png'
@@ -42,9 +48,17 @@ import skillenza from '../../assets/sponsors/skillenza.png'
 import Slider from '../../assets/sponsors/Slider.jpg'
 import speciale from '../../assets/sponsors/speciale.png'
 import startupBbuddy from '../../assets/sponsors/startup-buddy.png'
+import startupangel from '../../assets/sponsors/startupangel.jpg'
+import startupmonk from '../../assets/sponsors/startupmonk.jpg'
+import startupnews from '../../assets/sponsors/startupnews.png'
+
 import startuptaly from '../../assets/sponsors/startuptaly.png'
+import tinkeringlabs from '../../assets/sponsors/tinkeringlabs.png'
+
 import thecollegefever from '../../assets/sponsors/Thecollegefever.png'
 import tides from '../../assets/sponsors/tides.png'
+import unesco from '../../assets/sponsors/unesco.jpeg'
+
 import varta from '../../assets/sponsors/varta.png'
 import yourstory from '../../assets/sponsors/yourstory.png'
 import youth from '../../assets/sponsors/youth.png'
@@ -71,7 +85,7 @@ class Sponsors extends Component {
         <div className="normalSponsors">
           <div className="sponsorimage">
             <img src={iitr} alt="sorry" />
-            <p>IIT ROORKEE</p>
+            <p>IITRHF</p>
           </div>
           <div className="sponsorimage">
             <img src={Ah} alt="sorry" />
@@ -135,6 +149,14 @@ class Sponsors extends Component {
             <p>ED TIMES</p>
           </div>
           <div className="sponsorimage">
+            <img src={edufabrica} alt="sorry" />
+            <p>EDUFABRICA</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={faadventures} alt="sorry" />
+            <p>FAADVENTURES</p>
+          </div>
+          <div className="sponsorimage">
             <img src={FDC} alt="sorry" />
             <p>
               FACEBOOK
@@ -162,10 +184,21 @@ class Sponsors extends Component {
             <img src={hackerearth} alt="sorry" />
             <p>HACKEREARTH</p>
           </div>
-
+          <div className="sponsorimage">
+            <img src={horsestable} alt="sorry" />
+            <p>HORSES TABLE</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={iitraa} alt="sorry" />
+            <p>IITRAA</p>
+          </div>
           <div className="sponsorimage">
             <img src={inc42} alt="sorry" />
             <p>INC42</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={inventus} alt="sorry" />
+            <p>INVENTUS INDIA</p>
           </div>
           <div className="sponsorimage">
             <img src={Indigram} alt="sorry" />
@@ -188,6 +221,10 @@ class Sponsors extends Component {
             <p>KOLKATA VENTURES</p>
           </div>
           <div className="sponsorimage">
+            <img src={kredx} alt="sorry" />
+            <p>KREDx</p>
+          </div>
+          <div className="sponsorimage">
             <img src={kuku} alt="sorry" />
             <p>KUKU FM</p>
           </div>
@@ -204,8 +241,8 @@ class Sponsors extends Component {
             <p>MARWARI CATALYSTS</p>
           </div>
           <div className="sponsorimage">
-            <img src={msgi} alt="sorry" />
-            <p>MSGI</p>
+            <img src={msg91} alt="sorry" />
+            <p>MSG91</p>
           </div>
           <div className="sponsorimage">
             <img src={Napino} alt="sorry" />
@@ -245,6 +282,10 @@ class Sponsors extends Component {
             <p>SPECIALE INVEST</p>
           </div>
           <div className="sponsorimage">
+            <img src={startupangel} alt="sorry" />
+            <p>STARTUP ANGEL ASIA</p>
+          </div>
+          <div className="sponsorimage">
             <img src={startupBbuddy} alt="sorry" />
             <p>STARTUP BUDDY</p>
           </div>
@@ -253,12 +294,28 @@ class Sponsors extends Component {
             <p>STARTUP TALKY</p>
           </div>
           <div className="sponsorimage">
+            <img src={startupmonk} alt="sorry" />
+            <p>STARTUP MONK</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={startupnews} alt="sorry" />
+            <p>STARTUP NEWS</p>
+          </div>
+          <div className="sponsorimage">
             <img src={thecollegefever} alt="sorry" />
             <p>THE COLLEGE FEVER</p>
           </div>
           <div className="sponsorimage">
             <img src={tides} alt="sorry" />
             <p>TIDES</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={tinkeringlabs} alt="sorry" />
+            <p>TINKERING LABS</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={unesco} alt="sorry" />
+            <p>UNESCO</p>
           </div>
           <div className="sponsorimage">
             <img src={varta} alt="sorry" />
