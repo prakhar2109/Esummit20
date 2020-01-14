@@ -36,6 +36,7 @@ class Sponsors extends Component {
             />
           </div>
         </div>
+        <div className="sponsors-section-card-scroll-container">
         <div
           className="sponsors-section-card-container"
           data-scroll="horizontal"
@@ -47,10 +48,11 @@ class Sponsors extends Component {
               className="sponsors-section-card-image"
             />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-sectio n-card-heading">
+              <div className="sponsors-section-card-heading">
                 LinkedIn Local
               </div>
             </div>
+          </div>
             <div className="sponsors-section-card">
               <img
                 src={Dribble}
@@ -122,6 +124,7 @@ class Sponsors extends Component {
               </div>
             </div>
           </div>
+        
         </div>
         <Link to="/sponsors" className="section-button">
           <button>view all sponsors</button>
