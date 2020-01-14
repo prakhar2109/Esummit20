@@ -35,7 +35,7 @@ class HomeLanding extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/campus-ambassador" component={CampusAmbassador} />

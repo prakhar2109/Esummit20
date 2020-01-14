@@ -11,7 +11,7 @@
   height: 100vh;
   position: relative;
   background: url('../../assets/wave-logo.png') no-repeat center;
-  background-size: 95vh;
+  background-size: 100vh;
   margin-top: $gutterWidth * 2;
 
   .home-section-intro {
@@ -28,6 +28,11 @@
       height: $gutterWidth*16;
     }
 
+    @include desktop-1401-1600 {
+      height: $gutterWidth*14;
+
+    }
+
     .home-section-background-disruption {
 
       @include desktop-320-767 {
@@ -39,7 +44,12 @@
       }
 
       @include desktop-1025-1400 {
-        height: $gutterWidth*2.6;
+        height: $gutterWidth*3;
+
+      }
+
+      @include desktop-1401-1600 {
+        height: $gutterWidth*3.5;
 
       }
     }
@@ -61,6 +71,11 @@
         height: $gutterWidth*2.6;
 
       }
+
+      @include desktop-1401-1600 {
+        height: $gutterWidth*3;
+
+      }
     }
 
     .home-section-intro-content {
@@ -75,6 +90,11 @@
 
       @include desktop-1025-1400 {
         height: $gutterWidth * 12;
+      }
+
+      @include desktop-1401-1600 {
+        height: $gutterWidth * 12;
+
       }
 
       @include display-column();
@@ -109,6 +129,13 @@
 
     .home-section-intro-button {
       @include desktop-0-1281() {
+        @include btn-standard-outline();
+        padding: 0 $gutterWidth;
+        font-weight: 600;
+        background-color: $primaryBackgroundColor;
+      }
+
+      @include desktop-1281-1920() {
         @include btn-standard-outline();
         padding: 0 $gutterWidth;
         font-weight: 600;
@@ -153,12 +180,9 @@
 
   .section-image-heading-container {
     justify-content: flex-start;
-    margin-left: 0.9375vw;
 
     .section-image-heading {
-      @include desktop-320-767 {
         padding-left: 0;
-      }
 
       margin-left: 0;
     }
@@ -172,7 +196,7 @@
     display: grid;
     width: 100%;
     margin: $gutterWidth 0;
-  
+
     @include desktop-1281-1920() {
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
@@ -221,7 +245,7 @@
       height: $cardHeight;
       border-radius: 4px;
       overflow: hidden;
-      margin: 0 0.9375vw $gutterWidth 0.9375vw;
+      margin: 0 auto $gutterWidth auto;
 
       .home-section-event-card-link {
         position: absolute;
@@ -231,7 +255,7 @@
         z-index: 3;
 
         &:hover {
-          ~ .home-section-event-card-background {
+          ~.home-section-event-card-background {
             transform: scale(1.2);
           }
         }
@@ -295,110 +319,117 @@
 
   .section-image-heading-container {
     justify-content: space-between;
-    margin-left: 0.9375vw;
-
-    .section-image-heading {
+      .section-image-heading {
       padding-left: 0;
       margin-left: 0;
     }
   }
 
-  .speakers-section-card-container {
-    z-index: 2;
-    @include display-row();
+  .speakers-section-card-scroll-container {
+    position: relative;
     width: 100%;
-    margin: $gutterWidth 0;
-    white-space: nowrap;
-    overflow-x: scroll;
+    overflow: hidden;
+    height: $cardHeight;
 
-    @include desktop-1025-1280 {
-      grid-template-columns: 33.33% 33.33% 33.33%;
-    }
+    .speakers-section-card-container {
+      @include display-row();
+      position: absolute;
+      left: 0;
+      z-index: 2;
+      width: fit-content;
+      min-width: 100%;
+      margin: $gutterWidth 0;
+      justify-content: space-between;
 
-    @include desktop-768-1024 {
-      grid-template-columns: 50% 50%;
-    }
-
-    @include desktop-320-767 {
-      @include display-column();
-      align-items: center;
-      overflow-x: hidden;
-      margin: 0;
-    }
-
-    .speakers-section-card {
-      @include display-column();
-      justify-content: center;
-      align-items: center;
-      margin: $gutterWidth * 2;
-      width: $cardWidth;
-
-      &:first-child {
-        margin-left: 0;
+      @include desktop-1025-1280 {
+        grid-template-columns: 33.33% 33.33% 33.33%;
       }
 
-      &:last-child {
-        margin-right: 0;
+      @include desktop-768-1024 {
+        grid-template-columns: 50% 50%;
       }
 
       @include desktop-320-767 {
         @include display-column();
-        width: 100%;
-        justify-content: flex-start;
-        padding: 0 $gutterWidth;
+        align-items: center;
+        overflow-x: hidden;
+        margin: 0;
+      }
+
+      .speakers-section-card {
+        @include display-column();
+        justify-content: center;
+        align-items: center;
+        margin: $gutterWidth * 2;
+        // width: $cardWidth;
 
         &:first-child {
-          margin: $gutterWidth;
+          margin-left: 0;
         }
 
-        &:not(:first-child) {
-          display: none;
-        }
-      }
-
-      .speakers-section-card-image {
-        @include desktop-320-767 {
-          margin: 0;
+        &:last-child {
+          margin-right: 0;
         }
 
-        object-fit: cover;
-        border-radius: 50%;
-        width: $cardWidth * 0.6;
-        background-color: $secondaryBackgroundColor;
-        margin-bottom: $gutterWidth * 0.8;
-      }
-
-      .speakers-section-card-content {
         @include desktop-320-767 {
           @include display-column();
           width: 100%;
+          justify-content: flex-start;
           padding: 0 $gutterWidth;
-          margin: $gutterWidth 0;
+
+          &:first-child {
+            margin: $gutterWidth;
+          }
+
+          &:not(:first-child) {
+            display: none;
+          }
         }
 
-        .speakers-section-card-heading {
+        .speakers-section-card-image {
           @include desktop-320-767 {
+            margin: 0;
+          }
+
+          object-fit: cover;
+          border-radius: 50%;
+          width: $cardWidth * 0.6;
+          background-color: $secondaryBackgroundColor;
+          margin-bottom: $gutterWidth * 0.8;
+        }
+
+        .speakers-section-card-content {
+          @include desktop-320-767 {
+            @include display-column();
+            width: 100%;
+            padding: 0 $gutterWidth;
+            margin: $gutterWidth 0;
+          }
+
+          .speakers-section-card-heading {
+            @include desktop-320-767 {
+              text-align: center;
+              font-size: $normalFontSize;
+            }
+
+            font-weight: bold;
+            font-size: $normalFontSize * 1.2;
+            line-height: $normalLineHeight;
             text-align: center;
-            font-size: $normalFontSize;
+            color: $whiteText;
           }
 
-          font-weight: bold;
-          font-size: $normalFontSize * 1.2;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
-        }
+          .speakers-section-card-subheading {
+            @include desktop-320-767 {
+              align-items: center;
+              font-size: 1rem;
+            }
 
-        .speakers-section-card-subheading {
-          @include desktop-320-767 {
-            align-items: center;
-            font-size: 1rem;
+            font-size: $normalFontSize * 0.8;
+            line-height: $normalLineHeight;
+            text-align: center;
+            color: $whiteText;
           }
-
-          font-size: $normalFontSize * 0.8;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
         }
       }
     }
@@ -422,7 +453,6 @@
 
   .section-image-heading-container {
     justify-content: space-between;
-    margin-left: 0.9375vw;
 
     .section-image-heading {
       margin-left: 0;
@@ -430,105 +460,107 @@
     }
   }
 
-  .sponsors-section-card-container {
-    z-index: 2;
-    @include display-row();
+  .sponsors-section-card-scroll-container {
+    position: relative;
     width: 100%;
-    margin: $gutterWidth 0;
-    white-space: nowrap;
-    overflow-x: scroll;
+    overflow: hidden;
+    height: $cardHeight;
 
-    @include desktop-1025-1280 {
-      grid-template-columns: 33.33% 33.33% 33.33%;
-    }
+    .sponsors-section-card-container {
+      @include display-row();
+      position: absolute;
+      left: 0;
+      z-index: 2;
+      width: fit-content;
+      margin: $gutterWidth 0;
 
-    @include desktop-768-1024 {
-      grid-template-columns: 50% 50%;
-    }
-
-    @include desktop-320-767 {
-      @include display-column();
-      align-items: center;
-      overflow-x: hidden;
-      margin: 0;
-    }
-
-    .sponsors-section-card {
-      @include display-column();
-      justify-content: center;
-      align-items: center;
-      margin: $gutterWidth * 2.76;
-      width: $cardWidth;
-
-      &:first-child {
-        margin-left: 0;
+      @include desktop-1025-1280 {
+        grid-template-columns: 33.33% 33.33% 33.33%;
       }
 
-      &:last-child {
-        margin-right: 0;
+      @include desktop-768-1024 {
+        grid-template-columns: 50% 50%;
       }
 
       @include desktop-320-767 {
         @include display-column();
-        width: 100%;
-        justify-content: flex-start;
-        padding: 0 $gutterWidth;
+        align-items: center;
+        overflow-x: hidden;
+        margin: 0;
+      }
+
+      .sponsors-section-card {
+        @include display-column();
+        justify-content: center;
+        align-items: center;
+        margin: $gutterWidth*2.4;
 
         &:first-child {
-          margin: $gutterWidth;
+          margin-left: 0;
         }
 
-        &:not(:first-child) {
-          display: none;
-        }
-      }
-
-      .sponsors-section-card-image {
-        @include desktop-320-767 {
-          margin: 0;
-        }
-
-        object-fit: contain;
-        border: 2px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        border-radius: 4px;
-        width: $cardWidth * 0.6;
-        height: $cardWidth * 0.6;
-        background-color: white;
-        margin-bottom: $gutterWidth * 0.8;
-      }
-
-      .sponsors-section-card-content {
         @include desktop-320-767 {
           @include display-column();
           width: 100%;
+          justify-content: flex-start;
           padding: 0 $gutterWidth;
-          margin: $gutterWidth 0;
+
+          &:first-child {
+            margin: $gutterWidth;
+          }
+
+          &:not(:first-child) {
+            display: none;
+          }
         }
 
-        .sponsors-section-card-heading {
+        .sponsors-section-card-image {
           @include desktop-320-767 {
+            margin: 0;
+          }
+
+          object-fit: contain;
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          box-sizing: border-box;
+          border-radius: 4px;
+          width: $cardWidth * 0.6;
+          height: $cardWidth * 0.6;
+          background-color: white;
+          margin-bottom: $gutterWidth * 0.8;
+        }
+
+        .sponsors-section-card-content {
+          @include desktop-320-767 {
+            @include display-column();
+            width: 100%;
+            padding: 0 $gutterWidth;
+            margin: $gutterWidth 0;
+          }
+
+          .sponsors-section-card-heading {
+            @include desktop-320-767 {
+              text-align: center;
+              font-size: $normalFontSize;
+            }
+
+            font-weight: bold;
+            font-size: $normalFontSize * 1.2;
+            line-height: $normalLineHeight;
             text-align: center;
-            font-size: $normalFontSize;
+            color: $whiteText;
           }
 
-          font-weight: bold;
-          font-size: $normalFontSize * 1.2;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
-        }
+          .sponsors-section-card-subheading {
+            @include desktop-320-767 {
+              align-items: center;
+              font-size: 1rem;
+            }
 
-        .sponsors-section-card-subheading {
-          @include desktop-320-767 {
-            align-items: center;
-            font-size: 1rem;
+            font-size: $normalFontSize * 0.8;
+            line-height: $normalLineHeight;
+            text-align: center;
+            color: $whiteText;
           }
-
-          font-size: $normalFontSize * 0.8;
-          line-height: $normalLineHeight;
-          text-align: center;
-          color: $whiteText;
         }
       }
     }
@@ -539,7 +571,8 @@
   @include section();
 
   @include desktop-320-767 {
-    padding: 8rem 0;
+    padding: 8rem 0 0 0;
+
     min-height: 80vh;
 
     justify-content: unset;
@@ -550,7 +583,7 @@
   }
 
   @include desktop-1025-1400 {
-    padding: $gutterWidth * 2 0;
+    padding: 14rem;
   }
 
   position: relative;
@@ -558,7 +591,7 @@
   background: url('../../assets/ca-intro.png') no-repeat center;
   background-size: cover;
   justify-content: space-between;
-  padding: $gutterWidth * 8 0;
+  padding: $gutterWidth * 8;
 
   .ca-section-intro-background-tint {
     position: absolute;
@@ -586,7 +619,7 @@
       margin: 2rem 0;
 
       @include desktop-320-767 {
-        padding: 0 $gutterWidth;
+        padding: 0 2*$gutterWidth;
         font-size: $normalFontSize;
         line-height: $normalLineHeight;
       }
@@ -597,7 +630,6 @@
 
       @include desktop-1025-1400 {
         font-size: 1.4rem;
-        padding: 0 $gutterWidth * 2;
         line-height: 2.8rem;
       }
 
@@ -608,14 +640,13 @@
       font-weight: normal;
       line-height: $normalLineHeight * 1.6;
       text-align: center;
-      padding: 0 $gutterWidth * 8;
     }
 
     .ca-section-intro-link {
       z-index: 1;
       display: flex;
-      justify-content: center;
       margin: 2rem 0;
+
 
       @include desktop-320-767 {
         margin: $gutterWidth * 2;
@@ -634,9 +665,11 @@
   position: relative;
   background: url('../../assets/wave-ripple.svg') no-repeat center;
   background-size: cover;
+
   @include desktop-320-767 {
     overflow: hidden;
   }
+
   .ca-section-content-container {
     @include desktop-320-767 {
       padding: 0 $gutterWidth * 2;
@@ -794,7 +827,6 @@
 
   .section-image-heading-container {
     justify-content: flex-start;
-    margin-left: 0.9375vw;
 
     .section-image-heading {
       padding-left: 0;
@@ -841,7 +873,7 @@
         cursor: pointer;
 
         &:checked {
-          + .question-items-container {
+          +.question-items-container {
             padding-bottom: $gutterWidth;
 
             .question-items-container-question {
@@ -860,7 +892,7 @@
               }
             }
 
-            > .question-items-answer {
+            >.question-items-answer {
               color: #fff;
 
               @include desktop-0-1281() {
@@ -1041,8 +1073,7 @@
     }
 
     .footer-section-contact-subheading {
-      @include desktop-320-767 {
-      }
+      @include desktop-320-767 {}
 
       font-weight: normal;
       color: $whiteText;
@@ -1101,7 +1132,6 @@
   font-weight: normal;
   font-size: $normalFontSize;
   line-height: $normalLineHeight;
-  text-align: center;
   color: $whiteText;
 }
 

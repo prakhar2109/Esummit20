@@ -12,6 +12,9 @@ import Loader from '../loader/loader'
 /* eslint-disable react/prop-types */
 
 class Login extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   constructor(props) {
     super(props)
     this.state = {

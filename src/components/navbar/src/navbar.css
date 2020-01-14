@@ -5,6 +5,10 @@
 .navbar-mobile-off {
   display: none !important;
 }
+.navbar-logo {
+  width: 9rem !important;
+  margin-top: 2%;
+}
 .navbar-mobile {
   width: 100%;
 }
@@ -15,8 +19,11 @@
   top: 19%;
   left: 80%;
 }
+.nav-icon.active {
+  top: 6%;
+}
 .nav-icon.active:before {
-  margin-top: -3px !important;
+  margin-top: -3px;
 }
 .nav-icon:after,
 .nav-icon:before,
@@ -47,19 +54,34 @@
 
   /* display: none; */
 }
-.navbar-register-button {
-  border-radius: 2px;
-  align-items: center;
-  font-family: Poppins;
+.active-navbar-register{
+  background:#359D9A !important;
+  color: #fff !important;
+}
+.navbar-newregister-button {
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    font-family: Poppins;
+    font-size: 0.96rem;
+    height: 2.8rem;
+    justify-content: space-around;
+    margin: 0;
+    min-width: 6rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: all 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    background-color: transparent;
+    color: #359D9A;
+    border: 3px solid #359D9A;
+    font-weight: bold;
+    width: 7rem;
+}
+.navbar-newregister-button:hover{
   background-color: #359D9A;
   color: #fff;
-  border: 0;
-  width: 7rem;
-}
-@media (max-width: 1400px) {
-  .navbar-container {
-    padding: 2% !important;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -68,9 +90,11 @@
   }
 }
 
-
 .navbar-links {
   color: #fff;
+}
+.active-navbar-links{
+  color: #09c9c3 !important ;
 }
 .navbar-register-button {
   background-color: #09c9c3;

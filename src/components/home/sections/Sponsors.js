@@ -47,69 +47,79 @@ class Sponsors extends Component {
               className="sponsors-section-card-image"
             />
             <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">
+              <div className="sponsors-sectio n-card-heading">
                 LinkedIn Local
               </div>
             </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img src={Dribble} alt="" className="sponsors-section-card-image" />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Dribble</div>
-            </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img
-              src={Devfolio}
-              alt=""
-              className="sponsors-section-card-image"
-            />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Devfolio</div>
-            </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img
-              src={AmarUjala}
-              alt=""
-              className="sponsors-section-card-image"
-            />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Amar Ujala</div>
-            </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img src={tides} alt="" className="sponsors-section-card-image" />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Tides</div>
-            </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img src={CBlock} alt="" className="sponsors-section-card-image" />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">Coding Blocks</div>
-            </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img
-              src={thecollegefever}
-              alt=""
-              className="sponsors-section-card-image"
-            />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">
-                The College Fever
+            <div className="sponsors-section-card">
+              <img
+                src={Dribble}
+                alt=""
+                className="sponsors-section-card-image"
+              />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">Dribble</div>
               </div>
             </div>
-          </div>
-          <div className="sponsors-section-card">
-            <img
-              src={hackerearth}
-              alt=""
-              className="sponsors-section-card-image"
-            />
-            <div className="sponsors-section-card-content">
-              <div className="sponsors-section-card-heading">HackerEarth</div>
+            <div className="sponsors-section-card">
+              <img
+                src={Devfolio}
+                alt=""
+                className="sponsors-section-card-image"
+              />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">Devfolio</div>
+              </div>
+            </div>
+            <div className="sponsors-section-card">
+              <img
+                src={AmarUjala}
+                alt=""
+                className="sponsors-section-card-image"
+              />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">Amar Ujala</div>
+              </div>
+            </div>
+            <div className="sponsors-section-card">
+              <img src={tides} alt="" className="sponsors-section-card-image" />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">Tides</div>
+              </div>
+            </div>
+            <div className="sponsors-section-card">
+              <img
+                src={CBlock}
+                alt=""
+                className="sponsors-section-card-image"
+              />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">
+                  Coding Blocks
+                </div>
+              </div>
+            </div>
+            <div className="sponsors-section-card">
+              <img
+                src={thecollegefever}
+                alt=""
+                className="sponsors-section-card-image"
+              />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">
+                  The College Fever
+                </div>
+              </div>
+            </div>
+            <div className="sponsors-section-card">
+              <img
+                src={hackerearth}
+                alt=""
+                className="sponsors-section-card-image"
+              />
+              <div className="sponsors-section-card-content">
+                <div className="sponsors-section-card-heading">HackerEarth</div>
+              </div>
             </div>
           </div>
         </div>

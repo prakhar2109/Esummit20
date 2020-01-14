@@ -5,9 +5,15 @@
   color: white;
   z-index: 2;
   font-size: 34px;
-  font-weight: 200;
-  margin-left: 13%;
+  font-weight: 600;
 }
 .ca-section-intro-container {
   background-image: url(../../../assets/ca-intro1.png) !important;
+}
+
+@media(max-width:700px){
+  .ca-title {
+   text-align: center;
+   padding: 3.5rem;
+  }
 }
