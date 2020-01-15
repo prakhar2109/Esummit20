@@ -118,7 +118,7 @@ class Footer extends Component {
                 </a>
                 <a
                   className="new-footer-section-contact-link"
-                  href="https://twitter.com/EDC_IITRoorkee"
+                  href="https://twitter.com/ECell_IITR"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
