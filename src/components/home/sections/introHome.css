@@ -1,0 +1,9 @@
+@media (max-width: 900px) {
+  #background_intro {
+    background-size: 142vh !important;
+    margin-top:auto
+  }
+  #background_intro_content {
+    margin-top: 12%;
+  }
+}
