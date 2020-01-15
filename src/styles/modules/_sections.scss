@@ -188,7 +188,6 @@
     display: grid;
     width: 100%;
     margin: $gutterWidth 0;
-
     @include desktop-1281-1920() {
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
@@ -207,6 +206,46 @@
     }
 
     .home-section-event-card {
+      background: #000;
+      background: -moz-linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 80%,
+        #558daf 95%,
+        #42c5c1 98%,
+        #519bc9 100%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 80%,
+        #558daf 95%,
+        #42c5c1 98%,
+        #519bc9 100%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 80%,
+        #558daf 95%,
+        #42c5c1 98%,
+        #519bc9 100%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background-size: 400% 400%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: flex;
+      width: 500px;
+      height: 500px;
+      max-width: 100vw;
+      max-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      position: relative;
+      cursor: pointer;
+      transition: 0.5s all;
+      padding-left: 2px;
       @include desktop-320-767 {
         width: $cardWidth * 0.5;
         height: $cardHeight * 0.5;
@@ -251,12 +290,154 @@
             transform: scale(1.2);
           }
         }
+        &:hover {
+          ~ .home-section-event-card-background-tint1 {
+            z-index: 50 !important;
+            opacity: 0.2;
+            transition: 0.5s all;
+          }
+        }
+      }
+      &:hover {
+        transform: scale(1.05);
+        overflow: hidden;
+        background-position: 100% 100%;
+      }
+
+      &-background-tint1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Ideastorm-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/productathon-main.png') no-repeat
+          center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint3 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/hardware productathon-main.png')
+          no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint4 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Vista-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint5 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Expo-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint6 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Conclaves-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint7 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/Leadership Series-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint8 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/econ-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint9 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/nurture entre-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
+      }
+      &-background-tint10 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000 url('../../assets/case study-main.png') no-repeat center
+          center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: screen;
       }
 
       .home-section-event-card-background-tint {
         position: absolute;
         z-index: 1;
-
         width: inherit;
         height: inherit;
         background: linear-gradient(
