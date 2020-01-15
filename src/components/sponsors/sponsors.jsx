@@ -13,12 +13,12 @@ import Dribble from '../../assets/sponsors/dribble.svg'
 import DuAssassins from '../../assets/sponsors/du-assassins.png'
 import duExpress from '../../assets/sponsors/du-express.png'
 import entrepreneurindia from '../../assets/sponsors/entrepreneurindia.jpg'
-
+import Iitrhf from '../../assets/sponsors/iitrhf.png'
 import edtimes from '../../assets/sponsors/edtimes.jpg'
 import edufabrica from '../../assets/sponsors/edufabrica.jpg'
 import FDC from '../../assets/sponsors/FDC.png'
 import iitraa from '../../assets/sponsors/iitraa.gif'
-
+import AmazonLaunchpad from '../../assets/sponsors/amazon-launchpad.png'
 import faadventures from '../../assets/sponsors/faadventures.png'
 import GDG from '../../assets/sponsors/GDG.png'
 import geekforgeeks from '../../assets/sponsors/geekforgeeks.png'
@@ -84,80 +84,128 @@ class Sponsors extends Component {
         </div>
         <div className="normalSponsors">
           <div className="sponsorimage">
-            <img src={iitr} alt="sorry" />
-            <p>IITRHF</p>
+            <img src={Iitrhf} alt="sorry" className="sponsorImage-background" />
+            <p>IITR Heritage Fund</p>
           </div>
           <div className="sponsorimage">
-            <img src={Ah} alt="sorry" />
+            <img src={Ah} alt="sorry" className="sponsorImage-background" />
             <p>AH! VENTURES</p>
           </div>
           <div className="sponsorimage">
-            <img src={Aha} alt="sorry" />
+            <img src={Aha} alt="sorry" className="sponsorImage-background" />
             <p>AHA TAXIS</p>
           </div>
           <div className="sponsorimage">
-            <img src={Blogadda} alt="sorry" />
+            <img
+              src={Blogadda}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>BLOAGADDA</p>
           </div>
           <div className="sponsorimage">
-            <img src={AmarUjala} alt="sorry" />
+            <img
+              src={AmarUjala}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>AMAR UJALA</p>
           </div>
           <div className="sponsorimage">
-            <img src={Boudhik} alt="sorry" />
+            <img
+              src={Boudhik}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>BOUDHIK VENTURES</p>
           </div>
           <div className="sponsorimage">
-            <img src={CBlock} alt="sorry" />
+            <img src={CBlock} alt="sorry" className="sponsorImage-background" />
             <p>CODING BLOCKS</p>
           </div>
           <div className="sponsorimage">
-            <img src={Circle} alt="sorry" />
+            <img src={Circle} alt="sorry" className="sponsorImage-background" />
             <p>THE CIRCLE.WORK</p>
           </div>
           <div className="sponsorimage">
-            <img src={Ctim} alt="sorry" />
+            <img src={Ctim} alt="sorry" className="sponsorImage-background" />
             <p>CREATIVE TIM</p>
           </div>
           <div className="sponsorimage">
-            <img src={Dare2compete} alt="sorry" />
+            <img
+              src={Dare2compete}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>DARE2OMPETE</p>
           </div>
 
           <div className="sponsorimage">
-            <img src={Amazworkplace} alt="sorry" />
+            <img
+              src={Amazworkplace}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>AMAZING WORKPLACES</p>
           </div>
           <div className="sponsorimage">
-            <img src={Dribble} alt="sorry" />
+            <img
+              src={Dribble}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>DRIBBLE</p>
           </div>
           <div className="sponsorimage">
-            <img src={DuAssassins} alt="sorry" />
+            <img
+              src={DuAssassins}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>DU ASSASSINS</p>
           </div>
           <div className="sponsorimage">
-            <img src={duExpress} alt="sorry" />
+            <img
+              src={duExpress}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>DU EXPRESS</p>
           </div>
           <div className="sponsorimage">
-            <img src={entrepreneurindia} alt="sorry" />
+            <img
+              src={entrepreneurindia}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>ENTREPRENEUR INDIA</p>
           </div>
           <div className="sponsorimage">
-            <img src={edtimes} alt="sorry" />
+            <img
+              src={edtimes}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>ED TIMES</p>
           </div>
           <div className="sponsorimage">
-            <img src={edufabrica} alt="sorry" />
+            <img
+              src={edufabrica}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>EDUFABRICA</p>
           </div>
           <div className="sponsorimage">
-            <img src={faadventures} alt="sorry" />
+            <img
+              src={faadventures}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>FAADVENTURES</p>
           </div>
           <div className="sponsorimage">
-            <img src={FDC} alt="sorry" />
+            <img src={FDC} alt="sorry" className="sponsorImage-background" />
             <p>
               FACEBOOK
               <br />
@@ -165,7 +213,7 @@ class Sponsors extends Component {
             </p>
           </div>
           <div className="sponsorimage">
-            <img src={GDG} alt="sorry" />
+            <img src={GDG} alt="sorry" className="sponsorImage-background" />
             <p>
               GOOGLE
               <br />
@@ -173,169 +221,257 @@ class Sponsors extends Component {
             </p>
           </div>
           <div className="sponsorimage">
-            <img src={geekforgeeks} alt="sorry" />
+            <img
+              src={geekforgeeks}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>GEEKSFORGEEKS</p>
           </div>
           <div className="sponsorimage">
-            <img src={grabon} alt="sorry" />
+            <img src={grabon} alt="sorry" className="sponsorImage-background" />
             <p>GRABON</p>
           </div>
           <div className="sponsorimage">
-            <img src={hackerearth} alt="sorry" />
+            <img
+              src={hackerearth}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>HACKEREARTH</p>
           </div>
           <div className="sponsorimage">
-            <img src={horsestable} alt="sorry" />
+            <img
+              src={horsestable}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>HORSES TABLE</p>
           </div>
           <div className="sponsorimage">
-            <img src={iitraa} alt="sorry" />
+            <img src={iitraa} alt="sorry" className="sponsorImage-background" />
             <p>IITRAA</p>
           </div>
           <div className="sponsorimage">
-            <img src={inc42} alt="sorry" />
+            <img src={inc42} alt="sorry" className="sponsorImage-background" />
             <p>INC42</p>
           </div>
           <div className="sponsorimage">
-            <img src={inventus} alt="sorry" />
+            <img
+              src={inventus}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>INVENTUS INDIA</p>
           </div>
           <div className="sponsorimage">
-            <img src={Indigram} alt="sorry" />
+            <img
+              src={Indigram}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>INDIGRAM</p>
           </div>
           <div className="sponsorimage">
-            <img src={innovians} alt="sorry" />
+            <img
+              src={innovians}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>INNOVIANS</p>
           </div>
           {/* <div className="sponsorimage">
-            <img src={inventus} alt="sorry" />
+            <img src={inventus} alt="sorry" className="sponsorImage-background" />
             <p>INVENTUS INDIA</p>
           </div> */}
           <div className="sponsorimage">
-            <img src={kaggle} alt="sorry" />
+            <img src={kaggle} alt="sorry" className="sponsorImage-background" />
             <p>KAGGLE</p>
           </div>
           <div className="sponsorimage">
-            <img src={Kolkata} alt="sorry" />
+            <img
+              src={Kolkata}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>KOLKATA VENTURES</p>
           </div>
           <div className="sponsorimage">
-            <img src={kredx} alt="sorry" />
+            <img src={kredx} alt="sorry" className="sponsorImage-background" />
             <p>KREDx</p>
           </div>
           <div className="sponsorimage">
-            <img src={kuku} alt="sorry" />
+            <img src={kuku} alt="sorry" className="sponsorImage-background" />
             <p>KUKU FM</p>
           </div>
           <div className="sponsorimage">
-            <img src={KYT} alt="sorry" />
+            <img src={KYT} alt="sorry" className="sponsorImage-background" />
             <p>KYT VENTURES</p>
           </div>
           <div className="sponsorimage">
-            <img src={linkedinlocal} alt="sorry" />
+            <img
+              src={linkedinlocal}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>LINKEDIN LOCAL</p>
           </div>
           <div className="sponsorimage">
-            <img src={marwari} alt="sorry" />
+            <img
+              src={marwari}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>MARWARI CATALYSTS</p>
           </div>
           <div className="sponsorimage">
-            <img src={msg91} alt="sorry" />
+            <img src={msg91} alt="sorry" className="sponsorImage-background" />
             <p>MSG91</p>
           </div>
           <div className="sponsorimage">
-            <img src={Napino} alt="sorry" />
+            <img src={Napino} alt="sorry" className="sponsorImage-background" />
             <p>NAPINO</p>
           </div>
           <div className="sponsorimage">
-            <img src={Nexus} alt="sorry" />
+            <img src={Nexus} alt="sorry" className="sponsorImage-background" />
             <p>NEXUS VENTURES</p>
           </div>
           <div className="sponsorimage">
-            <img src={oyo} alt="sorry" />
+            <img src={oyo} alt="sorry" className="sponsorImage-background" />
             <p>OYO WORKPLACES</p>
           </div>
           <div className="sponsorimage">
-            <img src={Revvx} alt="sorry" />
+            <img src={Revvx} alt="sorry" className="sponsorImage-background" />
             <p>REVVX</p>
           </div>
           <div className="sponsorimage">
-            <img src={Rosenfeld} alt="sorry" />
+            <img
+              src={Rosenfeld}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>ROSENFELD</p>
           </div>
           <div className="sponsorimage">
-            <img src={Savage} alt="sorry" />
+            <img src={Savage} alt="sorry" className="sponsorImage-background" />
             <p>SAVAGE HUMANS</p>
           </div>
 
           <div className="sponsorimage">
-            <img src={skillenza} alt="sorry" />
+            <img
+              src={skillenza}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>SKILLENZA</p>
           </div>
           <div className="sponsorimage">
-            <img src={Slider} alt="sorry" />
+            <img src={Slider} alt="sorry" className="sponsorImage-background" />
             <p>SLIDER</p>
           </div>
           <div className="sponsorimage">
-            <img src={speciale} alt="sorry" />
+            <img
+              src={speciale}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>SPECIALE INVEST</p>
           </div>
           <div className="sponsorimage">
-            <img src={startupangel} alt="sorry" />
+            <img
+              src={startupangel}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>STARTUP ANGEL ASIA</p>
           </div>
           <div className="sponsorimage">
-            <img src={startupBbuddy} alt="sorry" />
+            <img
+              src={startupBbuddy}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>STARTUP BUDDY</p>
           </div>
           <div className="sponsorimage">
-            <img src={startuptaly} alt="sorry" />
+            <img
+              src={startuptaly}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>STARTUP TALKY</p>
           </div>
           <div className="sponsorimage">
-            <img src={startupmonk} alt="sorry" />
+            <img
+              src={startupmonk}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>STARTUP MONK</p>
           </div>
           <div className="sponsorimage">
-            <img src={startupnews} alt="sorry" />
+            <img
+              src={startupnews}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>STARTUP NEWS</p>
           </div>
           <div className="sponsorimage">
-            <img src={thecollegefever} alt="sorry" />
+            <img
+              src={thecollegefever}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>THE COLLEGE FEVER</p>
           </div>
           <div className="sponsorimage">
-            <img src={tides} alt="sorry" />
+            <img src={tides} alt="sorry" className="sponsorImage-background" />
             <p>TIDES</p>
           </div>
           <div className="sponsorimage">
-            <img src={tinkeringlabs} alt="sorry" />
+            <img
+              src={tinkeringlabs}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>TINKERING LABS</p>
           </div>
           <div className="sponsorimage">
-            <img src={unesco} alt="sorry" />
+            <img src={unesco} alt="sorry" className="sponsorImage-background" />
             <p>UNESCO</p>
           </div>
           <div className="sponsorimage">
-            <img src={varta} alt="sorry" />
+            <img src={varta} alt="sorry" className="sponsorImage-background" />
             <p>CAMPUS VARTA</p>
           </div>
           <div className="sponsorimage">
-            <img src={yourstory} alt="sorry" />
+            <img
+              src={yourstory}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
             <p>YOURSTORY</p>
           </div>
           <div className="sponsorimage">
-            <img src={youth} alt="sorry" />
+            <img src={youth} alt="sorry" className="sponsorImage-background" />
             <p>YOUTH</p>
           </div>
           <div className="sponsorimage">
-            <img src={zomato} alt="sorry" />
+            <img src={zomato} alt="sorry" className="sponsorImage-background" />
             <p>
               ZOMATO
               <br />
               FEEDING INDIA
             </p>
+          </div>
+          <div className="sponsorimage">
+            <img
+              src={AmazonLaunchpad}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
+            <p>Amazon Launchpad</p>
           </div>
         </div>
       </div>
