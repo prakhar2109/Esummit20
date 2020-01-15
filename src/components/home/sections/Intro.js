@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ecellLogo from '../../../assets/footer-logo.svg'
 import disruptionText from '../../../assets/disruption-text.svg'
 import waveLogo from '../../../assets/wave_circle.gif'
+import './introHome.css'
 class Intro extends Component {
   gotoDashboard = () => {
     window.location.href = '/dashboard/invite'
@@ -27,9 +28,9 @@ class Intro extends Component {
       )
     }
     return (
-      <div className="home-section-intro-container">
+      <div className="home-section-intro-container" id="background_intro">
         <div className="home-section-intro">
-          <div className="home-section-intro-content">
+          <div className="home-section-intro-content" id="background_intro_content">
             <img
               src={ecellLogo}
               alt=""
