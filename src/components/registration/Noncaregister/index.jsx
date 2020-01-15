@@ -475,7 +475,7 @@ class NonCARegistration extends React.Component {
                 </div>
               ) : (
                 <div className="esummit-regsiter-form-heading-child-second">
-                  Congrats! You have successfully registered for E-Summit’19
+                  Congrats! You have successfully registered for E-Summit’20
                 </div>
               )}
             </div>
