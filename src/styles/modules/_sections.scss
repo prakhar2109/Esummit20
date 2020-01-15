@@ -8,7 +8,7 @@
     min-height: 620px !important;
   }
 
-  height: 100vh;
+  height: 100vh !important;
   position: relative;
   background: url('../../assets/wave_circle_1.gif') no-repeat center;
   background-size: 200vh;
@@ -16,8 +16,8 @@
 
   .home-section-intro {
     @include desktop-320-767 {
-      margin: 0;
-      height: $gutterWidth * 17.4;
+      margin: 18vh;
+      // height: $gutterWidth * 17.4;
     }
 
     @include desktop-768-1024 {
@@ -117,7 +117,7 @@
   }
 
   .home-section-intro-link {
-    margin-top: $gutterWidth;
+    margin-top: 2rem;
 
     .home-section-intro-button {
       @include desktop-0-1281() {
@@ -386,8 +386,8 @@
         position: absolute;
         left: 0;
         top: 0;
-        background: #000 url('../../assets/Leadership Series-main.png') no-repeat center
-          center;
+        background: #000 url('../../assets/Leadership Series-main.png')
+          no-repeat center center;
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -412,8 +412,8 @@
         position: absolute;
         left: 0;
         top: 0;
-        background: #000 url('../../assets/nurture entre-main.png') no-repeat center
-          center;
+        background: #000 url('../../assets/nurture entre-main.png') no-repeat
+          center center;
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -425,8 +425,8 @@
         position: absolute;
         left: 0;
         top: 0;
-        background: #000 url('../../assets/case study-main.png') no-repeat center
-          center;
+        background: #000 url('../../assets/case study-main.png') no-repeat
+          center center;
         background-size: cover;
         width: 100%;
         height: 100%;

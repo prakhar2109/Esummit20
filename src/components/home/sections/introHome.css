@@ -1,9 +1,9 @@
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   #background_intro {
     background-size: 142vh !important;
-    margin-top:auto
+    margin-top: auto;
   }
   #background_intro_content {
-    margin-top: 12%;
+    margin-top: 3rem;
   }
 }

@@ -30,7 +30,10 @@ class Intro extends Component {
     return (
       <div className="home-section-intro-container" id="background_intro">
         <div className="home-section-intro">
-          <div className="home-section-intro-content" id="background_intro_content">
+          <div
+            className="home-section-intro-content"
+            id="background_intro_content"
+          >
             <img
               src={ecellLogo}
               alt=""
