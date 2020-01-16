@@ -33,16 +33,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 800px) {
-	.section-page-image-heading {
-	  color: rgba(255, 255, 255, 0.87);
-	  font-family: 'Poppins';
-	  font-size: 3rem;
-	  line-height: 3rem;
-	  font-style: normal;
-	  font-weight: bold;
-}
-}
+
 
 .speakers-page-section-card-container {
 	display: flex;
@@ -75,4 +66,21 @@
 
 .speakers-page-section-card-content {
   text-align: center;
+}
+
+@media (max-width: 800px) {
+	.section-page-image-heading {
+	  color: rgba(255, 255, 255, 0.87);
+	  font-family: 'Poppins';
+	  font-size: 3rem;
+	  line-height: 3rem;
+	  font-style: normal;
+	  font-weight: bold;
+}
+.speakers-page-section-card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 }

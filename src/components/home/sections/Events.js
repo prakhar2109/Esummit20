@@ -32,16 +32,17 @@ class Events extends Component {
           />
         </div>
         <div className="home-section-event-card-container">
-          <div className="home-section-event-card">
-            <Link
+        <Link
               to="/events/Ideastorm"
               className="home-section-event-card-link"
-            />
+            >
+          <div className="home-section-event-card">
+           
             <div className="home-section-event-card-background-tint1" />
             
             <div className="home-section-event-card-heading">Ideastorm</div>
           </div>
-
+        </Link>
           <div className="home-section-event-card">
             <Link
               to="/events/Softwareproductathon"

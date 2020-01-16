@@ -30,7 +30,7 @@ import EventsMain from './components/EventsMain/index'
 import Events from './components/home/sections/EventsAll/eventsAll'
 import ForgotPassword from './components/forgot-password/forgot-password'
 import SetNewPassword from './components/forgot-password/set-new-password'
-import FAQs from './components/faq';
+import FAQs from './components/faq'
 class HomeLanding extends Component {
   render() {
     return (

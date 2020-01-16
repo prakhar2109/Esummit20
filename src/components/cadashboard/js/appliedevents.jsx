@@ -41,12 +41,10 @@ export default class Appliedevents extends Component {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {console.log(this.state.appliedevents, 'helloboys')}
         <div id={'caevents-earnedcoupons-child-parent11' + index}>
           <div className="caevents-earnedcoupons-child-heading">
             {event.title}
           </div>
-          {console.log(this.state.status[index], 'asnkasjfjs')}
           <div className="caevents-registration-status">
             {this.state.status[index] === 'APP' ? (
               <>

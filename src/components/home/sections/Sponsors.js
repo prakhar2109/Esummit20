@@ -63,7 +63,7 @@ class Sponsors extends Component {
                 <div className="sponsors-section-card-heading">Dribbble</div>
               </div>
             </div>
-            <div className="sponsors-section-card">
+            {/* <div className="sponsors-section-card">
               <img
                 src={Devfolio}
                 alt=""
@@ -72,7 +72,7 @@ class Sponsors extends Component {
               <div className="sponsors-section-card-content">
                 <div className="sponsors-section-card-heading">Devfolio</div>
               </div>
-            </div>
+            </div> */}
             <div className="sponsors-section-card">
               <img
                 src={AmarUjala}
