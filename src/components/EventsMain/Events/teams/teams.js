@@ -12,7 +12,6 @@ import './teams.css'
           +919999999999
         </div>
         <div className="team-card-link">
-            
         </div>
       </div>
     </div>
