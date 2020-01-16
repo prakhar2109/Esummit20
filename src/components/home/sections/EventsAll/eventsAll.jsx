@@ -80,7 +80,7 @@ class Events extends Component {
                 <div className="home-section-event-card-background-tint5" />
                 
                 <div className="home-section-event-card-heading">
-                  Startup Expo
+                  Startup Expo 2.0
                 </div>
               </div>
             </Link>
@@ -88,14 +88,14 @@ class Events extends Component {
             <div className="home-section-event-card">
               <div className="home-section-event-card-background-tint6" />
              
-              <div className="home-section-event-card-heading">Conclaves</div>
+              <div className="home-section-event-card-heading">Conclaves<br/>(Coming Soon)</div>
             </div>
 
             <div className="home-section-event-card">
               <div className="home-section-event-card-background-tint7" />
               
               <div className="home-section-event-card-heading">
-                Leadership Series
+                Leadership Series<br/>(Coming Soon)
               </div>
             </div>
             <Link to="/events/E-Conference">

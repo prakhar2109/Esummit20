@@ -91,7 +91,8 @@ class Events extends Component {
           <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint6" />
             
-            <div className="home-section-event-card-heading">Conclaves</div>
+            <div className="home-section-event-card-heading">Conclaves<br/>
+            (Coming soon)</div>
           </div>
           {/* <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
