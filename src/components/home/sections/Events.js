@@ -32,25 +32,28 @@ class Events extends Component {
           />
         </div>
         <div className="home-section-event-card-container">
-          <div className="home-section-event-card">
-            <Link
+        <Link
               to="/events/Ideastorm"
               className="home-section-event-card-link"
-            />
+            >
+          <div className="home-section-event-card">
+           
             <div className="home-section-event-card-background-tint1" />
+            <div className="home-section-event-card-heading">
+              Ideastorm
+            </div>
             
-            <div className="home-section-event-card-heading">Ideastorm</div>
           </div>
-
+        </Link>
           <div className="home-section-event-card">
             <Link
               to="/events/Softwareproductathon"
               className="home-section-event-card-link"
             />
             <div className="home-section-event-card-background-tint2" />
-            
+
             <div className="home-section-event-card-heading">
-             Software Productathon
+              Software Productathon
             </div>
           </div>
 
@@ -60,7 +63,7 @@ class Events extends Component {
               className="home-section-event-card-link"
             />
             <div className="home-section-event-card-background-tint3" />
-        
+
             <div className="home-section-event-card-heading">
               Hardware Productathon
             </div>
@@ -71,7 +74,7 @@ class Events extends Component {
               className="home-section-event-card-link"
             />
             <div className="home-section-event-card-background-tint4" />
-           
+
             <div className="home-section-event-card-heading">
               Investor’s Vista
             </div>
@@ -82,15 +85,17 @@ class Events extends Component {
               className="home-section-event-card-link"
             />
             <div className="home-section-event-card-background-tint5" />
-            
 
-            <div className="home-section-event-card-heading">Startup Expo 2.0</div>
+            <div className="home-section-event-card-heading">
+              Startup Expo 2.0
+            </div>
           </div>
 
           <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint6" />
             
-            <div className="home-section-event-card-heading">Conclaves</div>
+            <div className="home-section-event-card-heading">Conclaves<br/>
+            (Coming soon)</div>
           </div>
           {/* <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />

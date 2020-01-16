@@ -13,10 +13,15 @@ class Aboutcontigent extends Component {
       <>
         <div className="cacontigent-parent-heading2">About Contigent</div>
         <div className="cacontigent-Aboutcontigent-parent">
-          <div className="cacontigent-heading">What is Contingent?</div>
+          <div className="cacontigent-heading">
+            {' '}
+            What is Contingent and Contingent model?
+          </div>
           <div className="cacontigent-aboutparent-para">
-            A group of people sharing a common feature, forming part of a larger
-            group.
+            Certain number of students registering together for E-Summit from
+            the same college would be a contingent. More than one contingent can
+            register from a college. Contingent model is the description of how
+            the fees of the contingent members would be waived.
           </div>
           <div className="cacontigent-heading cacontigent-headingabout">
             Steps to make a contingent

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import sponsorsHeadingBackground from '../../../assets/sponsors-heading-background.svg'
 import { Link } from 'react-router-dom'
 import linkedinlocal from '../../../assets/sponsors/linkedinlocal.jpg'
-import Dribble from '../../../assets/sponsors/dribble.svg'
+import Dribbble from '../../../assets/sponsors/dribble.svg'
 import thecollegefever from '../../../assets/sponsors/Thecollegefever.png'
 import tides from '../../../assets/sponsors/tides.png'
 import hackerearth from '../../../assets/sponsors/hackerearth.png'
@@ -55,12 +55,12 @@ class Sponsors extends Component {
             </div>
             <div className="sponsors-section-card">
               <img
-                src={Dribble}
+                src={Dribbble}
                 alt=""
                 className="sponsors-section-card-image"
               />
               <div className="sponsors-section-card-content">
-                <div className="sponsors-section-card-heading">Dribble</div>
+                <div className="sponsors-section-card-heading">Dribbble</div>
               </div>
             </div>
             {/* <div className="sponsors-section-card">

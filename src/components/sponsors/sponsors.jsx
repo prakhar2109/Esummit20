@@ -101,7 +101,7 @@ class Sponsors extends Component {
               alt="sorry"
               className="sponsorImage-background"
             />
-            <p>BLOAGADDA</p>
+            <p>BLOGADDA</p>
           </div>
           <div className="sponsorimage">
             <img
@@ -137,7 +137,7 @@ class Sponsors extends Component {
               alt="sorry"
               className="sponsorImage-background"
             />
-            <p>DARE2OMPETE</p>
+            <p>DARE2COMPETE</p>
           </div>
 
           <div className="sponsorimage">
@@ -154,7 +154,7 @@ class Sponsors extends Component {
               alt="sorry"
               className="sponsorImage-background"
             />
-            <p>DRIBBLE</p>
+            <p>DRIBBBLE</p>
           </div>
           <div className="sponsorimage">
             <img
@@ -194,7 +194,7 @@ class Sponsors extends Component {
               alt="sorry"
               className="sponsorImage-background"
             />
-            <p>EDUFABRICA</p>
+            <p>EDU FABRICA</p>
           </div>
           <div className="sponsorimage">
             <img
