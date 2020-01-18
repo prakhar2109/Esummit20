@@ -61,9 +61,7 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
-
   }
-}
 
 .ideastormHeaderSection p:nth-child(6) {
   font-size: 1.75rem;
@@ -82,6 +80,7 @@
     line-height: 2.625rem;
     padding-bottom: 4.62vh;
   }
+}
   @media (max-width: 1200px) {
     .ideastormHeaderSection p:nth-child(6) {
     line-height: 170%;
@@ -112,7 +111,7 @@
     margin-bottom: calc(10vh + 2rem);
     line-height: 170%;
   }
-  
+
   @media (max-width: 1200px) {
     .ideastormHeaderSection p:nth-child(7) {
       line-height: 1.3125rem;
