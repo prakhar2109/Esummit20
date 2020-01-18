@@ -18,8 +18,8 @@ export default class ContentIndex extends Component {
                     <div className="suexpo-city-image">
                       <img src={amity} alt="" />
                     </div>
-                    <div className="suignite-parent-child2-applyparent-heading">
-                      {/* {body.apply_now_description} */}
+                    {/* <div className="suignite-parent-child2-applyparent-heading">
+                      {body.apply_now_description}
                       <div className="content-child1">Amity University</div>
                       <div className="content-child2">
                         <span>
@@ -29,12 +29,12 @@ export default class ContentIndex extends Component {
                         <span>19-01-2019 </span>
                         <span>10:00 AM - 5:00 PM</span>
                       </div>
-                    </div>
-                    <a href={body.sub_event_reg_url} target="_blank">
+                    </div> */}
+                    {/* <a href={body.sub_event_reg_url} target="_blank">
                       <button id="suignite-parent-child2-applyparent-button">
                         APPLY
                       </button>
-                    </a>
+                    </a> */}
                   </div>
                 ) : null}
 
