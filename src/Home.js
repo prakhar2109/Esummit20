@@ -21,7 +21,7 @@ import './styles/main.scss'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 // import StartupExpo from './components/startupExpo/startupexpo.jsx'
-// import StartupIgnite from './components/ignite/startupIgnite'
+import StartupIgnite from './components/ignite/startupIgnite'
 import Speakers from './components/speakers/speakers'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
@@ -31,6 +31,7 @@ import Events from './components/home/sections/EventsAll/eventsAll'
 import ForgotPassword from './components/forgot-password/forgot-password'
 import SetNewPassword from './components/forgot-password/set-new-password'
 import FAQs from './components/faq'
+import Team from './components/EventsMain/Events/teams/teams'
 class HomeLanding extends Component {
   render() {
     return (
@@ -49,7 +50,7 @@ class HomeLanding extends Component {
           <Route path="/ca-registration" component={Registration} />
           <Route path="/noncaregister" component={NonCARegistration} />
           <Route path="/faqs" component={FAQs} />
-
+          <Route path="/team" component={Team} />
           <Route path="/personal-detail" component={Personaldetail} />
           <Route path="/register-success" component={Success} />
           <Route path="/register-failure" component={Failuremessage} />
@@ -74,10 +75,12 @@ class HomeLanding extends Component {
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
           /> */}
-          {/* <Route
-            path="/startupignite"
-            component={props => <StartupIgnite {...props} />}
-          /> */}
+
+            <Route
+              path="/startupignite"
+              component={props => <StartupIgnite {...props} />}
+            />
+
           {/* <Route path="*" component={} /> */}
         </Switch>
         <Footer />

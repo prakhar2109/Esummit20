@@ -1,174 +1,40 @@
+import React, { Component } from 'react'
+import cardImage from '../../../../assets/speakers/harsh-hande.jpeg'
+import TeamCard from './card'
+import { BASE_URL } from '../../../../utils/urls'
+import axios from 'axios'
 import './teams.css'
 
-<div className="team-container">
-  <p>OVERALL HEADS</p>,
-  <div className="team-card-container">
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-        </div>
-      </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-            
-        </div>
-      </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-           
-        </div>
-      </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-            
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+export default class Team extends Component {
+  constructor(props)
+  {
+    super(props)
+    this.state={
+      data:[]
+    }
+  }
+  componentDidMount() {
+    axios.get(BASE_URL + '/v1/api/team/')
+    .then(res => {
+      this.setState({data:res.data})
+      console.log(this.state.data, 'events')
+    })
+  }
 
-<div className="team-container">
-  <p>ESOC</p>,
-  <div className="team-card-container">
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-                
+
+  render() {
+    return (
+
+      <div>
+      <div className="team-container">
+        <div className="team-card-container">
+        {this.state.data&&this.state.data.map((image,id)=>
+        <TeamCard name={image.name} key={id} image={image.image} linkd={image.linkedin} position={image.position} phone={image.phone}/>
+      )}
+
         </div>
       </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-            
-        </div>
       </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-            
-        </div>
-      </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-            
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-<div className="team-container">
-  <p>CORPORATE AND RELATIONS</p>,
-  <div className="team-card-container">
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-              
-        </div>
-      </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-            
-        </div>
-      </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-            
-        </div>
-      </div>
-    </div>
-    <div className="team-card">
-      <img src={cardImage} alt="" className="team-card-image" />
-      <div className="team-card-content">
-        <div className="team-card-heading">Vedant Kumar</div>
-        <div className="team-card-subheading">
-          Overall Co-ordinator
-          +919999999999
-        </div>
-        <div className="team-card-link">
-           
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+)
+}
+}
