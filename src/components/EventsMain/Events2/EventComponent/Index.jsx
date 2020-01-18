@@ -64,60 +64,60 @@ class EventComponentIndex extends Component {
     let token = localStorage.getItem('user_token')
     let tabs
 
-    if (token !== undefined && token !== null && token !== '') {
-      tabs = (
-        <span>
-          <NavLink to="/dashboard/invite">
-            <span style={{ marginLeft: '3vw' }} className="login">
-              Dashboard
-            </span>
-          </NavLink>
-        </span>
-      )
-    } else {
-      tabs = (
-        <span>
-          <NavLink to="/login">
-            <span className="login" style={{ marginLeft: '0' }}>
-              Log in
-            </span>
-          </NavLink>
-          <NavLink to="/register">
-            <span className="register" style={{ padding: '10px 20px' }}>
-              Register
-            </span>
-          </NavLink>
-        </span>
-      )
-    }
+    // if (token !== undefined && token !== null && token !== '') {
+    //   tabs = (
+    //     <span>
+    //       <NavLink to="/dashboard/invite">
+    //         <span style={{ marginLeft: '3vw' }} className="login">
+    //           Dashboard
+    //         </span>
+    //       </NavLink>
+    //     </span>
+    //   )
+    // } else {
+    //   tabs = (
+    //     <span>
+    //       <NavLink to="/login">
+    //         <span className="login" style={{ marginLeft: '0' }}>
+    //           Log in
+    //         </span>
+    //       </NavLink>
+    //       <NavLink to="/register">
+    //         <span className="register" style={{ padding: '10px 20px' }}>
+    //           Register
+    //         </span>
+    //       </NavLink>
+    //     </span>
+    //   )
+    // }
     return (
-      <React.Fragment>
+      <React.Fragment>      
         <div className="ideastorm">
-          <div id="nav" className="header">
-            <span>
-              {this.state.data ? (
-                <img alt="IdeaStorm" src={BASE_URL + this.state.data.logo} />
-              ) : null}
-            </span>
-            <span className="head_array">
+          {/* <div id="nav" className="header"> */}
+            {/* <span> */}
+              {/* {this.state.data ? ( */}
+                {/* <img alt="IdeaStorm" src={BASE_URL + this.state.data.logo} /> */}
+              {/* ) : null} */}
+            {/* </span> */}
+            {/* <span className="head_array"> */}
               {/* <span onClick={this.timeline}>Timeline</span> */}
-              <span onClick={this.events}>Events</span>
+              {/* <span onClick={this.events}>Events</span> */}
               {/* <span onClick={this.eligiblity}>Eligiblity</span> */}
               {/* <span onClick={this.erks}>Perks</span> */}
               {/* <span onClick={this.register}>Apply</span> */}
-              <span onClick={this.faq_idea}>FAQs</span>
-              <span onClick={this.coordinator}>Contact Us</span>
-              <React.Fragment>
-                {tabs}
+              {/* <span onClick={this.faq_idea}>FAQs</span> */}
+              {/* <span onClick={this.coordinator}>Contact Us</span> */}
+              {/* <React.Fragment> */}
+                {/* {tabs} */}
                 {/* <Route
                   exact
                   path="/events/:id"
                   render={props => <Test {...props} />}
                 /> */}
-              </React.Fragment>
-            </span>
-            <span />
-          </div>
+              {/* </React.Fragment> */}
+            {/* </span> */}
+            {/* <span /> */}
+          {/* </div> */}
         </div>
         {/* <MobileNav logo={this.state.data.logo} /> */}
         {this.state.data ? <Header data={this.state.data} /> : null}
