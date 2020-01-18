@@ -219,9 +219,8 @@ class SideNavbar extends Component {
                 this.setActive('payment')
               }}
             >
-              <a href="https://www.thecollegefever.com/events/e-summit-2020-iit-roorkee">
-                PAYMENT
-              </a>
+              <Link to="/dashboard/payment"> PAYMENT</Link>
+
               <br />
             </div>
             <div
