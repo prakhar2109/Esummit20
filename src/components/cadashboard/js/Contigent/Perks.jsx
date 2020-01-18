@@ -22,10 +22,12 @@ class Perks extends Component {
           </div>
 
           <div className="cacontigent-aboutparent-para">
-            30 % Off on team size of 5-7 .<br />
-            40 % Off on team size of 8-10.
+            20 % Off on team size of 5-7 .<br />
+            30 % Off on team size of 8-10.
             <br />
-            50 % Off on team size of more than 10 .<br />
+            50 % Off on team size of more than 10 and registration fee of the
+            team leader will be completely waived. Accommodation will also be
+            waived for the campus ambassador for this case.
           </div>
         </div>
       </div>
