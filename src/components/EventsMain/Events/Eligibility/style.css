@@ -27,11 +27,13 @@
   padding-top: 4.5rem;
   font-family: 'Proxima-nova-regular';
   list-style-type: decimal;
+  margin: 0;
 }
 
 @media (max-width: 1200px) {
   .ideastormEligibility ol {
     padding-top: 1.5rem;
+    margin: 0;
   }
 }
 

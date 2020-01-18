@@ -84,7 +84,7 @@ export default class EventsMainIndex extends Component {
             exact
             path="/events/:id"
             render={props => (
-              <Events2 {...props} faq={this.state.faq} data={this.state.data} />
+              <Events2 {...props} faq={this.state.faq} data={this.state.event1data} />
             )}
           />
         ) : null}
