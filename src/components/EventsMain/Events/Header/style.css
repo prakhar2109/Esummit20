@@ -34,7 +34,7 @@
     padding-bottom: calc(0px + 1vh);
     font-weight: bold;
   }
-<<<<<<< HEAD
+
   @media (max-width: 1200px) {
     .ideastormHeaderSection p:first-child {
       font-size: 2rem;
@@ -46,7 +46,7 @@
 
   .ideastormHeaderSection p:nth-child(2) {
     line-height: 0.9375rem;
-    font-size: 1rem;
+    font-size: 2rem;
     letter-spacing: 0.1em;
     padding-bottom: 0;
     color: rgba(255, 255, 255, 0.6);
