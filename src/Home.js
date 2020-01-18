@@ -74,10 +74,12 @@ class HomeLanding extends Component {
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
           /> */}
-          <Route
-            path="/startupignite"
-            component={props => <StartupIgnite {...props} />}
-          />
+
+            <Route
+              path="/startupignite"
+              component={props => <StartupIgnite {...props} />}
+            />
+
           {/* <Route path="*" component={} /> */}
         </Switch>
         <Footer />
