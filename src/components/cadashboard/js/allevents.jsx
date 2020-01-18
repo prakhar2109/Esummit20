@@ -15,7 +15,6 @@ export default class Allevents extends Component {
       this.setState({
         events: res.data
       })
-      console.log(this.state.events, 'asdfgh')
 
       // document.getElementById('loader').style.display = 'none'
     })
@@ -93,12 +92,14 @@ export default class Allevents extends Component {
                       </div>
 
                       <div className="caevents-earnedcoupons-child-button">
-                        <button
+                        <a
                           id={'dashboard-events-apply' + index}
-                          onClick={() => this.applyEvent(event.id)}
+                          href={`${event.registration_url}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           APPLY
-                        </button>
+                        </a>
                         <button
                           className="caofferb01"
                           onClick={() => this.infoMenushow(index)}

@@ -61,7 +61,7 @@ export default class Events extends Component {
   render() {
     return (
       <div className="caevents-parent">
-        {this.state.appliedevents && this.state.appliedevents.length > 0 ? (
+        {/* {this.state.appliedevents && this.state.appliedevents.length > 0 ? (
           <>
             <div className="ca-events-parent-heading1 caeventsparent-font">
               Applied Events
@@ -79,7 +79,7 @@ export default class Events extends Component {
                 discardEvent={this.discardEvent}
               />
             ))}
-        </div>
+        </div> */}
 
         <div className="ca-events-parent-heading2 caeventsparent-font">
           All Events
