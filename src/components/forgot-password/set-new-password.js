@@ -31,11 +31,13 @@ class SetNewPassword extends Component {
     this.setState({
       loader: true
     })
+    console.log('here')
     axios({
       method: 'post',
       url: BASE_URL + '/v1/api/user/verify-code/' + match.params.uuid + '/'
     })
       .then(res => {
+        console.log(res, 'tushar')
         this.setState({
           loader: false
         })
