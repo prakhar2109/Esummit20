@@ -21,7 +21,7 @@ import './styles/main.scss'
 import Failuremessage from './components/registration/popup/failure/failure.js'
 import DashboardIndex from './components/cadashboard/js/index'
 // import StartupExpo from './components/startupExpo/startupexpo.jsx'
-// import StartupIgnite from './components/ignite/startupIgnite'
+import StartupIgnite from './components/ignite/startupIgnite'
 import Speakers from './components/speakers/speakers'
 import Login from './components/login/Login'
 import 'antd/dist/antd.css'
@@ -74,10 +74,10 @@ class HomeLanding extends Component {
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
           /> */}
-          {/* <Route
+          <Route
             path="/startupignite"
             component={props => <StartupIgnite {...props} />}
-          /> */}
+          />
           {/* <Route path="*" component={} /> */}
         </Switch>
         <Footer />
