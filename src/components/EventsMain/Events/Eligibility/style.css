@@ -6,13 +6,13 @@
 
 @media (max-width: 1200px) {
   .ideastormEligibility {
-    padding: 6rem 14%;
+    padding: 8rem 14%;
   }
 }
 
 .ideastormEligibility p {
   color: rgba(255, 255, 255, 0.87);
-  font-family: 'Poppins';
+  font-family: 'Poppins-bold';
   font-size: 2rem;
   line-height: 3rem;
   font-style: normal;
@@ -46,7 +46,7 @@
 @media (max-width: 1200px) {
   .ideastormEligibility ol li {
     line-height: 1.3125rem;
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.6);
   }
