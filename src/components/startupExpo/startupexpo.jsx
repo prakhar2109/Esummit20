@@ -99,7 +99,7 @@ export default class StartupExpo extends Component {
     return (
       <div className="startupexpo">
         <Header />
-        {/* <Timeline {...this.props} /> */}
+        <Timeline {...this.props} />
         <Rules />
         <Eligibility />
         <EventPerks

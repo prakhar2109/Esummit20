@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from '../../IdeaStorm/Vector/vector'
+// import Header from '../../IdeaStorm/Vector/vector'
 import './prizes.css'
 class Prizes extends Component {
   render() {

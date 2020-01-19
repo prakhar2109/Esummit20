@@ -14,6 +14,7 @@ import CATaskBoard from './catask'
 // import CAcontingent from './payment/paymentwithworkshop'//edit afterwards
 import CAInvite from './cainvite'
 import CALeader from './caleader'
+import Payment from './newPayment'
 import CAnewcontigent from './Contigent/cacontigent'
 import CAevents from './events'
 // import { BASE_URL } from  './../../../../utils/urls'
@@ -44,6 +45,8 @@ class DashboardIndex extends Component {
           }}/> */}
           <Route exact path="/dashboard/invite" component={CAInvite} />
           <Route exact path="/dashboard/leader" component={CALeader} />
+          <Route exact path="/dashboard/payment" component={Payment} />
+
           <Route
             exact
             path="/dashboard/contingent"

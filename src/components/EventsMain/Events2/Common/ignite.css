@@ -666,6 +666,10 @@ border-bottom-left-radius: 4px; */
     height: auto;
   }
 }
+.igniteHeader-image img {
+  width: 15rem;
+  height: 5rem;
+}
 .igniteheaderSection p:nth-child(2) {
   font-size: 3rem;
   letter-spacing: 0.1em;

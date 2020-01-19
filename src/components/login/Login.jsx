@@ -93,7 +93,7 @@ class Login extends Component {
             if (res.data.token) {
               document.getElementById('loader').style.display = 'none'
               localStorage.setItem('user_token', res.data.token)
-              window.location.href = '/dashboard/task'
+              window.location.href = '/dashboard/Events'
             }
           }
         }

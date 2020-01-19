@@ -6,28 +6,24 @@ import { BASE_URL } from '../../../../utils/urls'
 import ignite from '../../../ignite/igniteHeader/assets/ignite.svg'
 
 export default class HeaderEvents2 extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
   render() {
+    console.log(this.props.data, 'rahul')
     return (
       <div className="igniteheaderSection">
-        <div>
-          <img src={ignite} alt="" />
+        <div className="igniteHeader-image">
+          {/* <img src={BASE_URL + this.props.data.card_image} alt="" / */}
         </div>
 
-        <p>Startup Ignite</p>
+        <p>{this.props.data.title}</p>
 
-        <p>Be a part of something bigger</p>
+        <p>{this.props.data.short_description}</p>
 
         <br />
-        <p>
-          Idea Storm is the annual business plan competition,conducted as a part
-          of Entrepreneurship Summit, the flagship event of Entrepreneurship
-          Cell IIT Roorkee. The best Ideas get mentorship from experienced
-          entrepreneurs, cash rewards worth 2.5 lakhs and the impressive ones
-          even have opportunity to raise funding from the VCs. Gear up to
-          compete with the best minds of the country to prove your business
-          acumen. This would be a perfect stage for you, If you want to turn
-          your ideas into an entrepreneurial ventures
-        </p>
+        <p>{this.props.data.long_description}</p>
       </div>
       // <div
       //   className="suignite-parent"

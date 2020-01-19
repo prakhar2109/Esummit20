@@ -6,7 +6,8 @@
   /* justify-content: space-evenly; */
 }
 .perk-parent {
-  padding: 8rem 14% 0 14%;
+  padding: 10rem 17% 0 17%;
+  background: #030d0f;
 }
 .perk-title {
   font-family: 'Poppins-regular';

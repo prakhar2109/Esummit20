@@ -16,7 +16,7 @@
 }
 .caevents-earnedcoupons-child {
   position: relative;
-  height: 27.77vh;
+  /* height: 27.77vh; */
   width: 30.27%;
   margin-left: 2.24%;
   margin-bottom: 3.148vh;
@@ -78,17 +78,30 @@
   margin-top: 11%;
 }
 .caevents-earnedcoupons-child-button {
-  position: absolute;
-  bottom: 2.962vh;
+  /* position: absolute; */
+  /* bottom: 2.9vh; */
+  margin-top: 2vh;
 }
 .caevents-earnedcoupons-child-button button {
   font-family: 'Poppins-Regular' !important;
   font-weight: 600;
   font-size: 12px;
+  padding: 0.2rem 2rem;
   border-radius: 4.28px;
   text-align: center;
-  height: 3.7vh;
-  width: 7.81vw;
+  cursor: pointer;
+  color: #359d9a;
+  background: transparent;
+  border: 2px solid #359d9a;
+}
+
+.caevents-earnedcoupons-child-button a {
+  font-family: 'Poppins-Regular' !important;
+  padding: 0.2rem 2rem;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 4.28px;
+  text-align: center;
   cursor: pointer;
   color: #359d9a;
   background: transparent;
@@ -287,7 +300,6 @@
     border-radius: 4.28px;
     text-align: center;
     color: #359d9a;
-    height: 3.7vh;
     width: 40%;
     background: transparent;
     border: 2px solid #359d9a;

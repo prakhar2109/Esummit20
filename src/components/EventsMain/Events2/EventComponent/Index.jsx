@@ -63,88 +63,24 @@ class EventComponentIndex extends Component {
   render() {
     let token = localStorage.getItem('user_token')
     let tabs
-
-    if (token !== undefined && token !== null && token !== '') {
-      tabs = (
-        <span>
-          <NavLink to="/dashboard/invite">
-            <span style={{ marginLeft: '3vw' }} className="login">
-              Dashboard
-            </span>
-          </NavLink>
-        </span>
-      )
-    } else {
-      tabs = (
-        <span>
-          <NavLink to="/login">
-            <span className="login" style={{ marginLeft: '0' }}>
-              Log in
-            </span>
-          </NavLink>
-          <NavLink to="/register">
-            <span className="register" style={{ padding: '10px 20px' }}>
-              Register
-            </span>
-          </NavLink>
-        </span>
-      )
-    }
+    console.log(this.state.data,"events2")
+  
     return (
-      <React.Fragment>
+      <React.Fragment>      
         <div className="ideastorm">
-          <div id="nav" className="header">
-            <span>
-              {this.state.data ? (
-                <img alt="IdeaStorm" src={BASE_URL + this.state.data.logo} />
-              ) : null}
-            </span>
-            <span className="head_array">
-              {/* <span onClick={this.timeline}>Timeline</span> */}
-              <span onClick={this.events}>Events</span>
-              {/* <span onClick={this.eligiblity}>Eligiblity</span> */}
-              {/* <span onClick={this.erks}>Perks</span> */}
-              {/* <span onClick={this.register}>Apply</span> */}
-              <span onClick={this.faq_idea}>FAQs</span>
-              <span onClick={this.coordinator}>Contact Us</span>
-              <React.Fragment>
-                {tabs}
-                {/* <Route
-                  exact
-                  path="/events/:id"
-                  render={props => <Test {...props} />}
-                /> */}
-              </React.Fragment>
-            </span>
-            <span />
-          </div>
+         
         </div>
-        {/* <MobileNav logo={this.state.data.logo} /> */}
-        {this.state.data ? <Header data={this.state.data} /> : null}
-        {this.state.data ? <Body data={this.state.data} /> : null}
-        {/* {this.state.faq ?
-                    <Faq data={this.state.faq} />
-                    : null} */}
-        {/* <div className="es">
-                    <center>
-                        <NavLink to="/">
-                            <img alt="Esummit Logo" src={esummit} />
-                        </NavLink>
-                    </center>
+       
+        {this.state.data ? <Header data={this.state.data.event_data} /> : null}
+        {this.state.data ? <Body data={this.state.data.event_data} /> : null}
+       
+        {this.state.data.rules&&this.state.data.rules.length>0 ? <Rules data={this.state.data.rules} /> : null}
 
-                    <p>
-                        Go to &nbsp;
-            <NavLink to="/">esummit.in</NavLink>
-                    </p>
-                </div> */}
-        {/* <Eventfooter /> */}
-        {this.state.data.rules ? <Rules data={this.state.data.rules} /> : null}
-
-        {this.state.data.elligiblity ? (
+        {this.state.data.elligiblity&&this.state.data.elligiblity.length>0 ? (
           <Eligibility data={this.state.data.elligiblity} />
         ) : null}
 
-        {this.state.data.perks ? <Perks data={this.state.data.perks} /> : null}
+        {this.state.data.perks&&this.state.data.perks.length>0 ? <Perks data={this.state.data.perks} /> : null}
       </React.Fragment>
     )
   }

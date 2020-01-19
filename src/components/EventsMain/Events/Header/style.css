@@ -55,12 +55,29 @@
 @media (max-width: 1200px) {
   .ideastormHeaderSection p:nth-child(2) {
     line-height: 0.9375rem;
+<<<<<<< HEAD
     font-size: 1.1rem;
     letter-spacing: 0.1em;
     padding-bottom: 0;
     color: rgba(255, 255, 255, 0.6);
+=======
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    padding-bottom: 0;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: calc(0px + 3vh);
   }
-}
+  @media (max-width: 1200px) {
+    .ideastormHeaderSection p:nth-child(2) {
+      line-height: 0.9375rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      padding-bottom: 0;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+>>>>>>> 066a5ecb9bd06129a398115f61cdb1700f200ea3
+  }
 
 .ideastormHeaderSection p:nth-child(6) {
   font-size: 1.75rem;
@@ -80,8 +97,13 @@
     padding-bottom: 4.62vh;
   }
 }
+<<<<<<< HEAD
 @media (max-width: 1200px) {
   .ideastormHeaderSection p:nth-child(6) {
+=======
+  @media (max-width: 1200px) {
+    .ideastormHeaderSection p:nth-child(6) {
+>>>>>>> 066a5ecb9bd06129a398115f61cdb1700f200ea3
     line-height: 170%;
     font-size: 1rem;
     letter-spacing: 0.1em;
