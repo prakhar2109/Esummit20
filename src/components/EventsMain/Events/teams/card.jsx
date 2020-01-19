@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import linkdImage from '../../../../assets/linkd.svg'
 import cardImage from '../../../../assets/speakers/harsh-hande.jpeg'
+import { BASE_URL } from '../../../../utils/urls'
 /* eslint-disable react/prop-types */
 
 export default class TeamCard extends Component {
@@ -14,9 +15,10 @@ export default class TeamCard extends Component {
   }
 
   render() {
+
     return (
         <div className="team-card">
-          <img src={this.props.image} alt="" className="team-card-image" />
+          <img src={'https://api.esummit.in/' + this.props.image.slice(11)} alt="" className="team-card-image" />
           <div className="team-card-content">
             <div className="team-card-heading">{this.props.name}</div>
             <div className="team-card-subheading">
@@ -28,6 +30,7 @@ export default class TeamCard extends Component {
             <div className="team-card-linkd">
               <a href={this.props.linkd}><img src={linkdImage} alt="" className="card-linkd-icon" /></a>
             </div>
+
         </div>
       </div>
     )

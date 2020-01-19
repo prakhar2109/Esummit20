@@ -28,7 +28,7 @@ export default class Team extends Component {
       <div>
       <div className="team-container">
         <div className="team-card-container">
-        {this.state.data&&this.state.data.map((image,id)=>
+        {this.state.data&&this.state.data.map((image, id)=>
         <TeamCard name={image.name} key={id} image={image.image} linkd={image.linkedin} position={image.position} phone={image.phone}/>
       )}
 
