@@ -50,7 +50,6 @@ class HomeLanding extends Component {
           <Route path="/ca-registration" component={Registration} />
           <Route path="/noncaregister" component={NonCARegistration} />
           <Route path="/faqs" component={FAQs} />
-
           <Route path="/personal-detail" component={Personaldetail} />
           <Route path="/register-success" component={Success} />
           <Route path="/register-failure" component={Failuremessage} />
@@ -71,7 +70,8 @@ class HomeLanding extends Component {
             path="/startupexpo"
             render={() => <Redirect to="/events/Startupexpo" />}
           />
-          <Route path="/event/LeadershipSummit" component={LeadershipSummit} />
+          <Route path="/event/leadershipsummit" component={LeadershipSummit} />
+
           {/* <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
