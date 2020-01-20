@@ -6,11 +6,10 @@ import axios from 'axios'
 import './teams.css'
 
 export default class Team extends Component {
-  constructor(props)
-  {
+  constructor(props) {
     super(props)
-    this.state={
-      data:[]
+    this.state = {
+      data: []
     }
   }
   componentDidMount() {
@@ -51,24 +50,28 @@ export default class Team extends Component {
     })
   }
 
-
   render() {
    
 
 
     return (
-
       <div>
-      <div className="team-container">
-        <div className="team-card-container">
-        {this.state.data&&this.state.data.map((image,id)=>
-        <TeamCard name={image.name} key={id} image={image.image} linkd={image.linkedin} position={image.position} phone={image.phone}/>
-      )}
-
-         
+        <div className="team-container">
+          <div className="team-card-container">
+            {
+              this.state.data.map((image, id) => (
+                <TeamCard
+                  name={image.name}
+                  key={id}
+                  image={image.image}
+                  linkd={image.linkedin}
+                  position={image.position}
+                  phone={image.phone}
+                />
+              ))}
+          </div>
         </div>
       </div>
-      </div>
-)
-}
+    )
+  }
 }

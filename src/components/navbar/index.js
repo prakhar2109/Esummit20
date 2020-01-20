@@ -134,6 +134,15 @@ class index extends Component {
               Startup Ignite
             </Link>
           </li>
+          <li className="navbar-items">
+            <Link
+              to="/team"
+              className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"}
+              rel="noopener noreferrer"
+            >
+              Team
+            </Link>
+          </li>
           {/* <li className="navbar-items">
             <Link
               to="/Sponsors"
@@ -205,11 +214,20 @@ class index extends Component {
             </li>
             <li className="navbar-mobile-items">
               <Link
-                to="/sponsors"
-                className={this.props.location.pathname==='/sponsors'? "active-navbar-links navbar-links":"navbar-links"}
+                to="/events/Startupignite"
+                className={this.props.location.pathname==='/events/Startupignite'? "active-navbar-links navbar-links":"navbar-links"}
                 rel="noopener noreferrer"
               >
-                Sponsors
+                Startup Ignite
+              </Link>
+            </li>
+            <li className="navbar-mobile-items">
+              <Link
+                to="/team"
+                className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"}
+                rel="noopener noreferrer"
+              >
+                Team
               </Link>
             </li>
             {/* <li className="navbar-mobile-items">

@@ -74,13 +74,13 @@ class EventComponentIndex extends Component {
         {this.state.data ? <Header data={this.state.data.event_data} /> : null}
         {this.state.data ? <Body data={this.state.data.event_data} /> : null}
        
-        {this.state.data.rules&&this.state.data.rules.length>0 ? <Rules data={this.state.data.rules} /> : null}
+        {/* {this.state.data.rules&&this.state.data.rules.length>0 ? <Rules data={this.state.data.rules} /> : null}
 
         {this.state.data.elligiblity&&this.state.data.elligiblity.length>0 ? (
           <Eligibility data={this.state.data.elligiblity} />
         ) : null}
 
-        {this.state.data.perks&&this.state.data.perks.length>0 ? <Perks data={this.state.data.perks} /> : null}
+        {this.state.data.perks&&this.state.data.perks.length>0 ? <Perks data={this.state.data.perks} /> : null} */}
       </React.Fragment>
     )
   }

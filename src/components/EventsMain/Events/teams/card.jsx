@@ -6,7 +6,6 @@ import { BASE_URL } from '../../../../utils/urls'
 /* eslint-disable react/prop-types */
 
 export default class TeamCard extends Component {
-
   constructor(props) {
     super(props)
     this.state = {
