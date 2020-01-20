@@ -31,6 +31,7 @@ import Events from './components/home/sections/EventsAll/eventsAll'
 import ForgotPassword from './components/forgot-password/forgot-password'
 import SetNewPassword from './components/forgot-password/set-new-password'
 import FAQs from './components/faq'
+import LeadershipSummit from './components/EventsMain/EventLeadership'
 import Team from './components/EventsMain/Events/teams/teams'
 class HomeLanding extends Component {
   render() {
@@ -71,6 +72,8 @@ class HomeLanding extends Component {
             path="/startupexpo"
             render={() => <Redirect to="/events/Startupexpo" />}
           />
+          <Route path="/event/leadershipsummit" component={LeadershipSummit} />
+
           {/* <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}

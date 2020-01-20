@@ -67,8 +67,8 @@ export default class Events extends Component {
               Applied Events
             </div>
           </>
-        ) : null}
-        <div className="caevents-earnedcoupons-rowparent1">
+        ) : null} */}
+        {/* <div className="caevents-earnedcoupons-rowparent1">
           {this.state.appliedevents &&
             this.state.appliedevents.map((event, index) => (
               <Appliedevents
