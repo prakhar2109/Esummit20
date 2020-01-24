@@ -13,7 +13,7 @@ export default class Team extends Component {
     }
   }
   componentDidMount() {
-    
+
     axios.get(BASE_URL + '/v1/api/team/')
     .then(res => {
 
@@ -28,7 +28,7 @@ export default class Team extends Component {
       //   image.image&&image.image.substring(6, image.image.length));
 
       //   this.setState({data:result})
-      
+
 
       // let newimage=res.data.map((image,id)=>{
 
@@ -36,7 +36,7 @@ export default class Team extends Component {
       //     image.image&&image.image.substring(6, image.image.length)
       //   )
       // })
-      
+
       // let newarray
       // newarray.push(...res.data);
       // this.setState({
@@ -51,7 +51,7 @@ export default class Team extends Component {
   }
 
   render() {
-   
+
 
 
     return (

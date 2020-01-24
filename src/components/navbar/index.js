@@ -116,6 +116,7 @@ class index extends Component {
               FAQs
             </Link>
           </li>
+
           <li className="navbar-items">
             <Link
               to="/sponsors"
@@ -132,6 +133,11 @@ class index extends Component {
               rel="noopener noreferrer"
             >
               Startup Ignite
+            </Link>
+          </li>
+          <li className="navbar-items">
+            <Link to="/team" className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"} rel="noopener noreferrer">
+              Team
             </Link>
           </li>
           {/* <li className="navbar-items">
@@ -219,6 +225,15 @@ class index extends Component {
                 rel="noopener noreferrer"
               >
                 Startup Ignite
+              </Link>
+            </li>
+            <li className="navbar-mobile-items">
+              <Link
+                to="/team"
+                className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"}
+                rel="noopener noreferrer"
+              >
+                Team
               </Link>
             </li>
             {/* <li className="navbar-mobile-items">

@@ -15,6 +15,7 @@ export default class TeamCard extends Component {
   }
 
   render() {
+
     return (
         <div className="team-card">
           <img src={BASE_URL+this.props.image} alt="" className="team-card-image" />
@@ -29,6 +30,7 @@ export default class TeamCard extends Component {
             <div className="team-card-linkd">
               <a href={this.props.linkd}><img src={linkdImage} alt="" className="card-linkd-icon" /></a>
             </div>
+
         </div>
       </div>
     )
