@@ -31,6 +31,7 @@ import Events from './components/home/sections/EventsAll/eventsAll'
 import ForgotPassword from './components/forgot-password/forgot-password'
 import SetNewPassword from './components/forgot-password/set-new-password'
 import FAQs from './components/faq'
+import LeadershipSummit from './components/EventsMain/EventLeadership'
 import Team from './components/EventsMain/Events/teams/teams'
 class HomeLanding extends Component {
   render() {
@@ -54,6 +55,7 @@ class HomeLanding extends Component {
           <Route path="/personal-detail" component={Personaldetail} />
           <Route path="/register-success" component={Success} />
           <Route path="/register-failure" component={Failuremessage} />
+
           {/* <Route
             path="/ideastorm"
             component={props => <Ideastorm {...props} />}
@@ -71,14 +73,18 @@ class HomeLanding extends Component {
             path="/startupexpo"
             render={() => <Redirect to="/events/Startupexpo" />}
           />
+          <Route path="/event/leadershipsummit" component={LeadershipSummit} />
+
           {/* <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
           /> */}
-          <Route
-            path="/startupignite"
-            component={props => <StartupIgnite {...props} />}
-          />
+
+            <Route
+              path="/startupignite"
+              component={props => <StartupIgnite {...props} />}
+            />
+
           {/* <Route path="*" component={} /> */}
         </Switch>
         <Footer />

@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import linkdImage from '../../../../assets/linkd.svg'
 import cardImage from '../../../../assets/speakers/harsh-hande.jpeg'
 import { BASE_URL } from '../../../../utils/urls'
+
 /* eslint-disable react/prop-types */
 
 export default class TeamCard extends Component {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -18,7 +18,7 @@ export default class TeamCard extends Component {
 
     return (
         <div className="team-card">
-          <img src={'https://api.esummit.in/' + this.props.image.slice(11)} alt="" className="team-card-image" />
+          <img src={BASE_URL+this.props.image} alt="" className="team-card-image" />
           <div className="team-card-content">
             <div className="team-card-heading">{this.props.name}</div>
             <div className="team-card-subheading">

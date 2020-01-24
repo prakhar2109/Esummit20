@@ -116,6 +116,7 @@ class index extends Component {
               FAQs
             </Link>
           </li>
+
           <li className="navbar-items">
             <Link
               to="/sponsors"
@@ -125,6 +126,29 @@ class index extends Component {
               Sponsors
             </Link>
           </li>
+          <li className="navbar-items">
+            <Link
+              to="/events/Startupignite"
+              className={this.props.location.pathname==='/events/Startupignite'? "active-navbar-links navbar-links":"navbar-links"}
+              rel="noopener noreferrer"
+            >
+              Startup Ignite
+            </Link>
+          </li>
+          <li className="navbar-items">
+            <Link to="/team" className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"} rel="noopener noreferrer">
+              Team
+            </Link>
+          </li>
+          {/* <li className="navbar-items">
+            <Link
+              to="/team"
+              className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"}
+              rel="noopener noreferrer"
+            >
+              Team
+            </Link>
+          </li> */}
           {/* <li className="navbar-items">
             <Link
               to="/Sponsors"
@@ -194,6 +218,33 @@ class index extends Component {
                 Sponsors
               </Link>
             </li>
+            <li className="navbar-mobile-items">
+              <Link
+                to="/events/Startupignite"
+                className={this.props.location.pathname==='/events/Startupignite'? "active-navbar-links navbar-links":"navbar-links"}
+                rel="noopener noreferrer"
+              >
+                Startup Ignite
+              </Link>
+            </li>
+            <li className="navbar-mobile-items">
+              <Link
+                to="/team"
+                className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"}
+                rel="noopener noreferrer"
+              >
+                Team
+              </Link>
+            </li>
+            {/* <li className="navbar-mobile-items">
+              <Link
+                to="/team"
+                className={this.props.location.pathname==='/team'? "active-navbar-links navbar-links":"navbar-links"}
+                rel="noopener noreferrer"
+              >
+                Team
+              </Link>
+            </li> */}
             {/* <li className="navbar-mobile-items">
               <Link to="/register" className={this.props.location.pathname==='/events'? "active-navbar-links":"navbar-links"}>
                 <button className="navbar-register-button">Register</button>

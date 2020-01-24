@@ -380,7 +380,7 @@ border-bottom-left-radius: 4px; */
   font-family: 'Poppins-Semibold';
   border: 2px solid #359d9a;
   background: transparent;
-  margin-top: 1.85vh;
+  margin-top: 44.85vh;
   border-radius: 2px;
   cursor: pointer;
   font-weight: 600;
@@ -665,6 +665,10 @@ border-bottom-left-radius: 4px; */
     padding: 10rem 17% 0 17%;
     height: auto;
   }
+}
+.igniteHeader-image img {
+  width: 15rem;
+  height: 5rem;
 }
 .igniteheaderSection p:nth-child(2) {
   font-size: 3rem;

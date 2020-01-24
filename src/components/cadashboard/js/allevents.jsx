@@ -15,7 +15,6 @@ export default class Allevents extends Component {
       this.setState({
         events: res.data
       })
-      console.log(this.state.events, 'asdfgh')
 
       // document.getElementById('loader').style.display = 'none'
     })
@@ -23,22 +22,23 @@ export default class Allevents extends Component {
   applyEvent = id => {
     let googleForm = this.state.events.find(event => event.id === id)
       .registration_url
+    window.open(googleForm, '_blank')
 
-    let token = localStorage.getItem('user_token')
+    // let token = localStorage.getItem('user_token')
 
-    axios
-      .get(BASE_URL + `/v1/api/event/${id}/apply`, {
-        headers: {
-          Authorization: `Token ${token}`
-        }
-      })
-      .then(res => {
-        if (res.status === 200) window.location.href = '/dashboard/Events'
-        googleForm
-          ? window.open(googleForm, '_blank')
-          : console.log('no regist')
-      })
-      .catch(response => {})
+    // axios
+    //   .get(BASE_URL + `/v1/api/event/${id}/apply`, {
+    //     headers: {
+    //       Authorization: `Token ${token}`
+    //     }
+    //   })
+    //   .then(res => {
+    //     if (res.status === 200) window.location.href = '/dashboard/Events'
+    //     googleForm
+    //       ? window.open(googleForm, '_blank')
+    //       : console.log('no regist')
+    //   })
+    //   .catch(response => {})
   }
   infoMenushow = index => {
     document.getElementById(
@@ -93,12 +93,14 @@ export default class Allevents extends Component {
                       </div>
 
                       <div className="caevents-earnedcoupons-child-button">
-                        <button
+                        <a
                           id={'dashboard-events-apply' + index}
-                          onClick={() => this.applyEvent(event.id)}
+                          href={`${event.registration_url}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           APPLY
-                        </button>
+                        </a>
                         <button
                           className="caofferb01"
                           onClick={() => this.infoMenushow(index)}

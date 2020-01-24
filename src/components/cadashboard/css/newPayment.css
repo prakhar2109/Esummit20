@@ -1,0 +1,86 @@
+.payment-container {
+  background: #070f12;
+  position: absolute;
+  top: 0;
+  left: 16.5%;
+  width: 83.5%;
+  height: -moz-fit-content;
+  padding: 5vh 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+@media only screen and (max-width: 900px) {
+  .payment-container {
+    color: black;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 2vh;
+    margin-top: 5rem;
+    background: #070f12;
+  }
+}
+.new-payment {
+  margin-top: 3.33vh;
+  height: fit-content;
+  width: 86.7%;
+  background: #0d1719;
+  padding: 3vh 2.96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.new-payment-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+.new-payment-header span:nth-child(1) {
+  letter-spacing: 0.02em;
+  font-family: 'Poppins-Regular';
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.new-payment-header span:nth-child(2) {
+  letter-spacing: 0.02em;
+  font-family: 'Poppins-Regular';
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  color: #359d9a;
+}
+.new-payment-status-pay {
+  letter-spacing: 0.02em;
+  font-family: 'Poppins-Regular';
+  font-weight: 600;
+  font-size: 1rem;
+  color: #359d9a;
+  padding: 0.3rem 1.2rem;
+  border: 2px solid #359d9a;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.new-payment-status-paid {
+  letter-spacing: 0.02em;
+  font-family: 'Poppins-Bold';
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #359d9a;
+  opacity: 1;
+  padding: 0.2rem 1rem;
+  border: 2px solid #359d9a;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
