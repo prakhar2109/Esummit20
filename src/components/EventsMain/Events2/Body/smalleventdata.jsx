@@ -30,9 +30,11 @@ export default class SmallEventData extends Component {
             {this.props.data &&
               this.props.data.bullets_data &&
               this.props.data.bullets_data.map((e, index) => (
-                <li className="list-item" key={index}>
+                <ul  key={index} style={{listStyleType:"disc"}}>
+                <li className="list-item perk-about">
                   {e.data}
                 </li>
+                </ul>
               ))}
           </ul>
         ) : null}

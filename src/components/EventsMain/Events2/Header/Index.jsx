@@ -13,9 +13,11 @@ export default class HeaderEvents2 extends Component {
   render() {
     console.log(this.props.data, 'rahul')
     return (
-      <div className="igniteheaderSection">
+      
+      <div className="igniteheaderSection" style={{backgroundImage:`${BASE_URL+this.props.data.card_image}`}}>
         <div className="igniteHeader-image">
-          {/* <img src={BASE_URL + this.props.data.card_image} alt="" / */}
+         {/* <img src={BASE_URL + this.props.data.card_image} alt=""/> */}
+         aa
         </div>
 
         <p>{this.props.data.title}</p>

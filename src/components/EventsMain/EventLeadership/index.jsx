@@ -94,6 +94,30 @@ class LeadershipSummit extends Component {
               time="TIME: 10.30 AM"
               topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
             />
+            <SpeakerCard
+              SpeakerImage={harshCard}
+              SpeakerName="Harsh Hande"
+              speakerDesignation="Founder And Managing Partner,Blume Ventures"
+              date=" DATE: 1 February 2020"
+              time="TIME: 10.30 AM"
+              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
+            />
+            <SpeakerCard
+              SpeakerImage={harshCard}
+              SpeakerName="Harsh Hande"
+              speakerDesignation="Founder And Managing Partner,Blume Ventures"
+              date=" DATE: 1 February 2020"
+              time="TIME: 10.30 AM"
+              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
+            />
+            <SpeakerCard
+              SpeakerImage={harshCard}
+              SpeakerName="Harsh Hande"
+              speakerDesignation="Founder And Managing Partner,Blume Ventures"
+              date=" DATE: 1 February 2020"
+              time="TIME: 10.30 AM"
+              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
+            />
 
           </div>
         </div>

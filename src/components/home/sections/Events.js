@@ -90,12 +90,16 @@ class Events extends Component {
               Startup Expo 2.0
             </div>
           </div>
-
+          
           <div className="home-section-event-card">
+          <Link
+              to="/events/Conclaves"
+              className="home-section-event-card-link"
+            />
             <div className="home-section-event-card-background-tint6" />
             
-            <div className="home-section-event-card-heading">Conclaves<br/>
-            (Coming soon)</div>
+            <div className="home-section-event-card-heading">Conclaves
+            </div>
           </div>
           {/* <div className="home-section-event-card">
             <div className="home-section-event-card-background-tint" />
