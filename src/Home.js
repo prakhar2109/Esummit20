@@ -73,17 +73,17 @@ class HomeLanding extends Component {
             path="/startupexpo"
             render={() => <Redirect to="/events/Startupexpo" />}
           />
-          <Route path="/event/leadershipsummit" component={LeadershipSummit} />
+          <Route path="/event/leadershipseries" component={LeadershipSummit} />
 
           {/* <Route
             path="/startupexpo"
             component={props => <StartupExpo {...props} />}
           /> */}
 
-            <Route
-              path="/startupignite"
-              component={props => <StartupIgnite {...props} />}
-            />
+          <Route
+            path="/startupignite"
+            component={props => <StartupIgnite {...props} />}
+          />
 
           {/* <Route path="*" component={} /> */}
         </Switch>
