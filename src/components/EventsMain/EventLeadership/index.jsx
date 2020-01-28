@@ -4,6 +4,9 @@ import React, { Component } from 'react'
 import '../Events/Common/scrollanimation.css'
 import './style.css'
 import karthik from '../../../assets/speakers/karthik-reddy.jpg'
+import ramesh from '../../../assets/speakers/ramesh.jpg'
+import hansan from '../../../assets/speakers/hansan.jpg'
+import rajesh from '../../../assets/speakers/rajesh.jpg'
 import harshCard from '../../../assets/speakers/harsh-hande.jpeg'
 import abhishek from '../../../assets/speakers/abhishek-prabhuda.jpeg'
 import BackgroundImage from '../../../assets/leadershipBack.png'
@@ -24,7 +27,7 @@ function SpeakerCard(props) {
           {props.speakerDesignation}
         </div>
         <div className="leadership-speaker-date-time">
-          {props.date}{' '}
+          <span>{props.date} </span>
           <span className="leadership-speaker-time">{props.time}</span>
         </div>
         <div className="leadership-speaker-topic">{props.topic}</div>
@@ -36,26 +39,84 @@ function SpeakerCard(props) {
 class LeadershipSummit extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      leaderspeakers: [
+        {
+          image: karthik,
+          name: 'Karthik Reddy',
+          designation: 'Founder And Managing Partner,Blume Ventures',
+          date: ' DATE: 1st February 2020',
+          time: 'TIME: 11.00 AM',
+          topic: ''
+        },
+        {
+          image: abhishek,
+          name: 'Abhishek Prabhuda',
+          designation: 'Co-head at Delhivery',
+          date: ' DATE: 1st February 2020',
+          time: 'TIME: 2:00 PM',
+          topic: ''
+        },
+        {
+          image: hansan,
+          name: 'Hanson Hu',
+          designation: 'Investment Associate at Morningside Venture Capitals',
+          date: ' DATE: 1st February 2020',
+          time: 'TIME: 03:00 PM',
+          topic: ''
+        },
+
+        {
+          image: harshCard,
+          name: 'Harish Hande',
+          designation: 'CEO and Founder , SELCO-India',
+          date: ' DATE: 2nd February 2020',
+          time: 'TIME: 11:00 AM',
+          topic: ''
+        },
+        {
+          image: rajesh,
+          name: 'Rajesh Mane',
+          designation: 'Founding member and VP at Venture Catalysts',
+          date: ' DATE: 2nd February 2020',
+          time: 'TIME: 12:00 PM',
+          topic: ''
+        },
+
+        {
+          image: ramesh,
+          name: 'Ramesh Kumar',
+          designation: 'Chief Technology Officer at Eduquity',
+          date: ' DATE: 2nd February 2020',
+          time: 'TIME: 02:00 PM',
+          topic: ''
+        }
+      ]
+    }
+  }
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
   render() {
     return (
       <div>
         <div className="eventDashboard-background-image">
           <div className="ideastormHeaderSection">
-            <p> Leadership Summit</p>
+            <p> Leadership Series</p>
 
-            <p>This is a generic tagline !</p>
+            <p>The council of industry leads</p>
 
             <br />
             <br />
             <br />
 
             <p>
-              Some Description mentioning big words lianufhrn ouienvginhjvr
-              inwetvnluovrgjvbi donfsklcijhv newnvhnrwigwehciv ehugcnhi kj l;j
-              kcnhweuihcgej rkl nkwe kvniwenvgi jnrhklvmwklhrv f kns hfdv9
-              gjkasr ihnadlkvunhg597
+              The true mark of a leader is the willingness to stick with a bold
+              course of action — an unconventional business strategy, a unique
+              product-development roadmap, a marketing campaign. The leadership
+              series celebrates this ability of leaders. This sterling series is
+              our centre stage event that boasts of a council of impeccable
+              speakers, each an expert in his field
             </p>
           </div>
         </div>
@@ -70,55 +131,16 @@ class LeadershipSummit extends Component {
             />
           </div>
           <div className="leadership-speakers">
-            <SpeakerCard
-              SpeakerImage={karthik}
-              SpeakerName="Karthik Reddy"
-              speakerDesignation="Founder And Managing Partner,Blume Ventures"
-              date=" DATE: 1 February 2020"
-              time="TIME: 10.30 AM"
-              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
-            />
-            <SpeakerCard
-              SpeakerImage={abhishek}
-              SpeakerName="Abhishek Prabudha"
-              speakerDesignation="Founder And Managing Partner,Blume Ventures"
-              date=" DATE: 1 February 2020"
-              time="TIME: 10.30 AM"
-              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
-            />
-            <SpeakerCard
-              SpeakerImage={harshCard}
-              SpeakerName="Harsh Hande"
-              speakerDesignation="Founder And Managing Partner,Blume Ventures"
-              date=" DATE: 1 February 2020"
-              time="TIME: 10.30 AM"
-              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
-            />
-            <SpeakerCard
-              SpeakerImage={harshCard}
-              SpeakerName="Harsh Hande"
-              speakerDesignation="Founder And Managing Partner,Blume Ventures"
-              date=" DATE: 1 February 2020"
-              time="TIME: 10.30 AM"
-              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
-            />
-            <SpeakerCard
-              SpeakerImage={harshCard}
-              SpeakerName="Harsh Hande"
-              speakerDesignation="Founder And Managing Partner,Blume Ventures"
-              date=" DATE: 1 February 2020"
-              time="TIME: 10.30 AM"
-              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
-            />
-            <SpeakerCard
-              SpeakerImage={harshCard}
-              SpeakerName="Harsh Hande"
-              speakerDesignation="Founder And Managing Partner,Blume Ventures"
-              date=" DATE: 1 February 2020"
-              time="TIME: 10.30 AM"
-              topic="lfsdn ikjshvlnisfnios njsa ;n asdkinasv lkjas dvkasdv ;lksav "
-            />
-
+            {this.state.leaderspeakers.map(item => (
+              <SpeakerCard
+                key={item.id}
+                SpeakerImage={item.image}
+                SpeakerName={item.name}
+                speakerDesignation={item.designation}
+                date={item.date}
+                time={item.time}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ class Events extends Component {
               className="section-image-heading-background"
               id="section-image-heading-background-events"
               alt=""
-              // style={{ width: 'auto' }}
+            // style={{ width: 'auto' }}
             />
           </div>
           <div className="home-section-event-card-container">
@@ -94,83 +94,79 @@ class Events extends Component {
               </div>
             </Link>
             <Link to="/events/Conclaves">
-            <div className="home-section-event-card">
-              <div className="home-section-event-card-background-tint6" />
-
-              <div className="home-section-event-card-heading">
-                Conclaves
-                <br />
-              </div>
-            </div>
-            </Link>
-            <Link to ="/event/leadershipseries">
-            <div className="home-section-event-card">
-              <div className="home-section-event-card-background-tint7" />
-
-              <div className="home-section-event-card-heading">
-                Leadership Series
-              </div>
-            </div>
-            </Link>
-            <Link to="/events/E-Conference">
               <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint8" />
+                <div className="home-section-event-card-background-tint6" />
 
                 <div className="home-section-event-card-heading">
-                  E-Conference
+                  Conclaves
                 </div>
               </div>
             </Link>
-            <Link to="/events/Nurture-Entrepreneurship">
-              <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint9" />
+              <Link to="event/leadershipseries">
+                <div className="home-section-event-card">
+                  <div className="home-section-event-card-background-tint7" />
 
-                <div className="home-section-event-card-heading">
-                  Nurture Entrepreneurship
+                  <div className="home-section-event-card-heading">
+                    Leadership Series
+                  </div>
                 </div>
-              </div>
-            </Link>
-            <Link to="/events/Dribbblemeetup">
-              <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint11" />
+              </Link>
+              <Link to="/events/E-Conference">
+                <div className="home-section-event-card">
+                  <div className="home-section-event-card-background-tint8" />
 
-                <div className="home-section-event-card-heading">
-                  Dribbble Meetup
+                  <div className="home-section-event-card-heading">
+                    E-Conference
+                  </div>
                 </div>
-              </div>
-            </Link>
-            <Link to="/events/KaggleDaysMeetups">
-              <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint12" />
+              </Link>
+              <Link to="/events/Nurture-Entrepreneurship">
+                <div className="home-section-event-card">
+                  <div className="home-section-event-card-background-tint9" />
 
-                <div className="home-section-event-card-heading">
-                  Kaggle Days Meetups
+                  <div className="home-section-event-card-heading">
+                    Nurture Entrepreneurship
+                  </div>
                 </div>
-              </div>
-            </Link>
-            <Link to ="/events/Workshops">
-              <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint13" />
+              </Link>
+              <Link to="/events/Dribbblemeetup">
+                <div className="home-section-event-card">
+                  <div className="home-section-event-card-background-tint11" />
 
-                <div className="home-section-event-card-heading">
-                  Workshops
+                  <div className="home-section-event-card-heading">
+                    Dribbble Meetup
+                  </div>
                 </div>
-              </div>
-            </Link>
-            <Link to ="/events/Bhack">
-              <div className="home-section-event-card">
-                <div className="home-section-event-card-background-tint14" />
+              </Link>
+              <Link to="/events/KaggleDaysMeetups">
+                <div className="home-section-event-card">
+                  <div className="home-section-event-card-background-tint12" />
 
-                <div className="home-section-event-card-heading">
-                  Business hack
+                  <div className="home-section-event-card-heading">
+                    Kaggle Days Meetups
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+              <Link to="/events/Workshops">
+                <div className="home-section-event-card">
+                  <div className="home-section-event-card-background-tint13" />
+
+                  <div className="home-section-event-card-heading">Workshops</div>
+                </div>
+              </Link>
+              <Link to="/events/Bhack">
+                <div className="home-section-event-card">
+                    <div className="home-section-event-card-background-tint14" />
+                    <div className="home-section-event-card-heading">
+                      Business hack
+                    </div>
+                </div>
+              </Link>
+          </div>
           </div>
         </div>
-      </div>
-    )
-  }
-}
-
-export default Events
+        )
+      }
+    }
+    
+    export default Events

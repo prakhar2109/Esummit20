@@ -1,6 +1,5 @@
 .ideastormHeaderSection {
   min-height: 69.8125rem;
-  height: auto;
   padding: 10rem 17% 2rem 17%;
 }
 .eventDashboard-background-image {
@@ -8,6 +7,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+    top: 7rem;
 }
 .ideastormHeaderSection .register a span:hover {
   background: #359d9a;
@@ -19,8 +20,8 @@
   margin-top: 50px;
 }
 .leadership-speaker-image-each {
-  width: 250px;
-  border-radius: 250px 250px;
+  width: 220px;
+  border-radius: 220px 220px;
 }
 .leadership-speaker-details {
   padding: 46px;
@@ -64,14 +65,14 @@
     padding-left: 30px;
     flex-direction: column;
     align-items: center;
-
   }
   .leadership-speakers-name,
   .leadership-speaker-date-time {
     font-size: 15px;
     line-height: 25px;
+    display: flex;
+    flex-direction: column;
   }
-
 }
 @media (max-width: 1200px) {
   .ideastormHeaderSection {

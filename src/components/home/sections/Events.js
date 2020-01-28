@@ -32,19 +32,12 @@ class Events extends Component {
           />
         </div>
         <div className="home-section-event-card-container">
-        <Link
-              to="/events/Ideastorm"
-              className="home-section-event-card-link"
-            >
-          <div className="home-section-event-card">
-           
-            <div className="home-section-event-card-background-tint1" />
-            <div className="home-section-event-card-heading">
-              Ideastorm
+          <Link to="/events/Ideastorm" className="home-section-event-card-link">
+            <div className="home-section-event-card">
+              <div className="home-section-event-card-background-tint1" />
+              <div className="home-section-event-card-heading">Ideastorm</div>
             </div>
-            
-          </div>
-        </Link>
+          </Link>
           <div className="home-section-event-card">
             <Link
               to="/events/Softwareproductathon"
@@ -92,13 +85,15 @@ class Events extends Component {
           </div>
           
           <div className="home-section-event-card">
-          <Link
-              to="/events/Conclaves"
+            <Link
+              to="event/leadershipseries"
               className="home-section-event-card-link"
             />
-            <div className="home-section-event-card-background-tint6" />
-            
-            <div className="home-section-event-card-heading">Conclaves
+            <div className="home-section-event-card-background-tint7" />
+
+            <div className="home-section-event-card-heading">
+              Leadership Series
+              <br />
             </div>
           </div>
           {/* <div className="home-section-event-card">
