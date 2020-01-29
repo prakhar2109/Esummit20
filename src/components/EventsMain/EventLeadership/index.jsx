@@ -105,7 +105,7 @@ class LeadershipSummit extends Component {
             <p> Leadership Series</p>
 
             <p>The council of industry leads</p>
-
+            <p></p>
             <br />
             <br />
             <br />
