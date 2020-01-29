@@ -4,6 +4,10 @@ import Aha from '../../assets/sponsors/aha.png'
 import Blogadda from '../../assets/sponsors/blogadda.png'
 import AmarUjala from '../../assets/sponsors/amarujala.webp'
 import Boudhik from '../../assets/sponsors/Boudhik.png'
+import birac from '../../assets/sponsors/birac.png'
+import bugsee from '../../assets/sponsors/bugsee.png'
+import blume from '../../assets/sponsors/blume.png'
+
 import CBlock from '../../assets/sponsors/CBlock.png'
 import Circle from '../../assets/sponsors/circle.png'
 import Ctim from '../../assets/sponsors/Ctim.png'
@@ -54,6 +58,11 @@ import startupangel from '../../assets/sponsors/startupangel.jpg'
 import startupmonk from '../../assets/sponsors/startupmonk.jpg'
 import startupnews from '../../assets/sponsors/startupnews.png'
 import startupclub from '../../assets/sponsors/startupclub.webp'
+import venturecatalyst from '../../assets/sponsors/venturecatalyst.png'
+import focusu from '../../assets/sponsors/focus-u.png'
+import toi from '../../assets/sponsors/toi.jpeg'
+import wolfram from '../../assets/sponsors/wolframlanguage.jpeg'
+import startup4all from '../../assets/sponsors/startup4all.jpeg'
 
 import startuptaly from '../../assets/sponsors/startuptaly.png'
 import tinkeringlabs from '../../assets/sponsors/tinkeringlabs.png'
@@ -66,6 +75,8 @@ import varta from '../../assets/sponsors/varta.png'
 import yourstory from '../../assets/sponsors/yourstory.png'
 import youth from '../../assets/sponsors/youth.png'
 import zomato from '../../assets/sponsors/zomato.png'
+import zenfold from '../../assets/sponsors/bugsee.png'
+
 import iitr from '../../assets/sponsors/iitr.png'
 import './sponsors.css'
 class Sponsors extends Component {
@@ -101,7 +112,7 @@ class Sponsors extends Component {
           </div>
           <div className="sponsorimage">
             <img src={tides} alt="sorry" className="sponsorImage-background" />
-            <p>TIDES</p>
+            <p>TIDES INCUBATOR</p>
           </div>
           <div className="sponsorimage">
             <img src={iitraa} alt="sorry" className="sponsorImage-background" />
@@ -114,12 +125,20 @@ class Sponsors extends Component {
             <img src={Napino} alt="sorry" className="sponsorImage-background" />
             <p>NAPINO</p>
           </div>
+          <div className="sponsorimage">
+            <img src={tides} alt="sorry" className="sponsorImage-background" />
+            <p>TIDES INCUBATOR</p>
+          </div>
         </div>
         <div className="sponsorTitle">PATRONAGE</div>
         <div className="normalSponsors">
           <div className="sponsorimage">
             <img src={unesco} alt="sorry" className="sponsorImage-background" />
             <p>UNESCO</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={birac} alt="sorry" className="sponsorImage-background" />
+            <p>BIRAC</p>
           </div>
           <div className="sponsorimage">
             <img
@@ -170,6 +189,16 @@ class Sponsors extends Component {
             />
             <p>EDU FABRICA</p>
           </div>
+          <div className="normalSponsors">
+            <div className="sponsorimage">
+              <img
+                src={focusu}
+                alt="sorry"
+                className="sponsorImage-background"
+              />
+              <p>FOCUS U</p>
+            </div>
+          </div>
           <div className="sponsorimage">
             <img
               src={innovians}
@@ -186,6 +215,18 @@ class Sponsors extends Component {
             <p>AH! VENTURES</p>
           </div>
           <div className="sponsorimage">
+            <img src={blume} alt="sorry" className="sponsorImage-background" />
+            <p>BLUME VENTURE</p>
+          </div>
+          <div className="sponsorimage">
+            <img
+              src={venturecatalyst}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
+            <p>VENTURE CATALYST</p>
+          </div>
+          <div className="sponsorimage">
             <img
               src={Boudhik}
               alt="sorry"
@@ -200,6 +241,14 @@ class Sponsors extends Component {
               className="sponsorImage-background"
             />
             <p>FAADVENTURES</p>
+          </div>
+          <div className="sponsorimage">
+            <img
+              src={zenfold}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
+            <p>ZENFOLD VENTURE </p>
           </div>
           <div className="sponsorimage">
             <img
@@ -224,6 +273,14 @@ class Sponsors extends Component {
           <div className="sponsorimage">
             <img src={Nexus} alt="sorry" className="sponsorImage-background" />
             <p>NEXUS VENTURES</p>
+          </div>
+          <div className="sponsorimage">
+            <img
+              src={inventus}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
+            <p>INVENTUS INDIA</p>
           </div>
           <div className="sponsorimage">
             <img
@@ -270,6 +327,18 @@ class Sponsors extends Component {
               className="sponsorImage-background"
             />
             <p>AMAZING WORKPLACES</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={toi} alt="sorry" className="sponsorImage-background" />
+            <p>TIMES OF INDIA</p>
+          </div>
+          <div className="sponsorimage">
+            <img
+              src={startup4all}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
+            <p>STARTUP4ALL</p>
           </div>
           <div className="sponsorimage">
             <img
@@ -428,7 +497,7 @@ class Sponsors extends Component {
             <p>LINKEDIN LOCAL</p>
           </div>
         </div>
-        <div className="sponsorTitle">LEARNING PARTNER</div>
+        {/* <div className="sponsorTitle">LEARNING PARTNER</div>
         <div className="normalSponsors">
           <div className="sponsorimage">
             <img
@@ -438,9 +507,21 @@ class Sponsors extends Component {
             />
             <p>GEEKSFORGEEKS</p>
           </div>
-        </div>
+        </div> */}
         <div className="sponsorTitle"> EVENT PARTNER</div>
         <div className="normalSponsors">
+          <div className="sponsorimage">
+            <img
+              src={wolfram}
+              alt="sorry"
+              className="sponsorImage-background"
+            />
+            <p>WOLFRAALPHAM </p>
+          </div>
+          <div className="sponsorimage">
+            <img src={bugsee} alt="sorry" className="sponsorImage-background" />
+            <p>BUGSEE</p>
+          </div>
           <div className="sponsorimage">
             <img src={CBlock} alt="sorry" className="sponsorImage-background" />
             <p>CODING BLOCKS</p>
@@ -448,6 +529,10 @@ class Sponsors extends Component {
           <div className="sponsorimage">
             <img src={Ctim} alt="sorry" className="sponsorImage-background" />
             <p>CREATIVE TIM</p>
+          </div>
+          <div className="sponsorimage">
+            <img src={Revvx} alt="sorry" className="sponsorImage-background" />
+            <p>REVVX</p>
           </div>
           <div className="sponsorimage">
             <img
@@ -545,15 +630,9 @@ class Sponsors extends Component {
         </div>
         
        
-        {/* <div className="sponsorimage">
-            <img src={inventus} alt="sorry" className="sponsorImage-background" />
-            <p>INVENTUS INDIA</p>
-          </div> */}
-        {/*       
-        <div className="sponsorimage">
-          <img src={Revvx} alt="sorry" className="sponsorImage-background" />
-          <p>REVVX</p>
-        </div>
+         
+               
+        
 
         
 
