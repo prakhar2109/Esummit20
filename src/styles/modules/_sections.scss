@@ -160,6 +160,8 @@
     .section-paragraph {
       @include desktop-0-1281() {
         margin: 0;
+        text-align: center;
+        font-size: 1rem;
       }
 
       margin: $gutterWidth;
@@ -172,7 +174,9 @@
 
   .section-image-heading-container {
     justify-content: flex-start;
-
+    @include desktop-320-767 {
+      justify-content: center;
+    }
     .section-image-heading {
       padding-left: 0;
 
@@ -547,6 +551,9 @@
 
   .section-image-heading-container {
     justify-content: space-between;
+    @include desktop-320-767() {
+      justify-content: center;
+    }
     .section-image-heading {
       padding-left: 0;
       margin-left: 0;
@@ -681,6 +688,9 @@
 
   .section-image-heading-container {
     justify-content: space-between;
+    @include desktop-320-767() {
+      justify-content: center;
+    }
 
     .section-image-heading {
       margin-left: 0;
@@ -713,8 +723,9 @@
       @include desktop-320-767 {
         @include display-column();
         align-items: center;
+        position: unset;
         overflow-x: hidden;
-        margin: 0;
+        margin: 0 auto;
       }
 
       .sponsors-section-card {
@@ -1056,6 +1067,7 @@
 
   .section-image-heading-container {
     justify-content: flex-start;
+    
 
     .section-image-heading {
       padding-left: 0;
@@ -1334,6 +1346,7 @@
   .section-image-heading {
     @include desktop-320-767 {
       font-size: $headerFontSize;
+      padding: 0;
     }
 
     font-family: $generalFontFamily !important;
