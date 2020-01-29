@@ -4,6 +4,7 @@ import TeamCard from './card'
 import { BASE_URL } from '../../../../utils/urls'
 import axios from 'axios'
 import './teams.css'
+import Loader from '../../../loader/loader'
 
 export default class Team extends Component {
   constructor(props) {
@@ -13,11 +14,14 @@ export default class Team extends Component {
     }
   }
   componentDidMount() {
+    document.getElementById('loader').style.display = 'grid'
 
     axios.get(BASE_URL + '/v1/api/team/')
     .then(res => {
+      document.getElementById('loader').style.display = 'none'
 
       res.data.forEach(data => {
+        
         if(data.image)
         data.image = data.image.substring(10, data.image.length)
       })
@@ -57,6 +61,7 @@ export default class Team extends Component {
     return (
       <div>
         <div className="team-container">
+          <Loader/>
           <div className="team-card-container">
             {
               this.state.data.map((image, id) => (
