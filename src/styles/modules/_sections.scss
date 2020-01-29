@@ -862,12 +862,14 @@
       }
 
       z-index: 2;
-      color: #ffffff;
-      font-size: $normalFontSize * 1.6;
-      font-style: normal;
-      font-weight: normal;
-      line-height: $normalLineHeight * 1.6;
       text-align: center;
+      font-size: 1.625rem;
+      letter-spacing: 0.1em;
+      font-family: 'Poppins';
+      color: rgba(255, 255, 255, 0.6);
+      /* text-align: justify; */
+      margin-bottom: calc(10vh + 2rem);
+      line-height: 170%;
     }
 
     .ca-section-intro-link {
