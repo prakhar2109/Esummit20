@@ -1,0 +1,164 @@
+.ideastormHeaderSection {
+  min-height: 69.8125rem;
+  height: auto;
+  padding: 10rem 17% 2rem 17%;
+}
+.eventDashboard-background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ideastormHeaderSection .register a span:hover {
+  background: #359d9a;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .ideastormHeaderSection {
+    min-height: 45rem;
+    padding: 8rem 14%;
+  }
+
+.ideastormHeaderSection p:first-child {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 4.5rem;
+  font-weight: bold;
+}}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:first-child {
+    font-size: 1.5rem;
+    padding-bottom: calc(0px + 1vh);
+    font-weight: bold;
+  }
+}
+  @media (max-width: 1200px) {
+    .ideastormHeaderSection p:first-child {
+      font-size: 2rem;
+      padding-bottom: calc(0px + 1vh);
+      font-weight: bold;
+    }
+  }
+
+
+.ideastormHeaderSection p:nth-child(2) {
+  line-height: 0.9375rem;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  padding-bottom: 0;
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: calc(0px + 3vh);
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:nth-child(2) {
+    line-height: 0.9375rem;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    padding-bottom: 0;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: calc(0px + 3vh);
+  }}
+  @media (max-width: 1200px) {
+    .ideastormHeaderSection p:nth-child(2) {
+      line-height: 0.9375rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      padding-bottom: 0;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+  }
+
+.ideastormHeaderSection p:nth-child(6) {
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 2.625rem;
+  padding-bottom: 4.62vh;
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:nth-child(6) {
+    font-size: 1.75rem;
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.87);
+    line-height: 2.625rem;
+    padding-bottom: 4.62vh;
+  }
+}
+  @media (max-width: 1200px) {
+    .ideastormHeaderSection p:nth-child(6) {
+    line-height: 170%;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding-bottom: calc(15px + 3vh);
+  }
+}
+
+.ideastormHeaderSection p:nth-child(7) {
+  font-size: 1.625rem;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.6);
+  /* text-align: justify; */
+  margin-bottom: calc(10vh + 2rem);
+  line-height: 170%;
+}
+
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:nth-child(7) {
+    line-height: 1.125rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(6vh + 2rem);
+    color: rgba(255, 255, 255, 0.6);
+    /* text-align: justify; */
+    margin-bottom: calc(10vh + 2rem);
+    line-height: 170%;
+  }
+
+  @media (max-width: 1200px) {
+    .ideastormHeaderSection p:nth-child(7) {
+      line-height: 1.3125rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      margin-bottom: calc(6vh + 2rem);
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  .ideastormHeaderSection p {
+    text-align: left;
+    font-family: 'Poppins';
+  }
+}
+.ideastormHeaderSection p {
+  text-align: left;
+  font-family: 'Poppins';
+}
+.ideastormHeaderSection .register a span {
+  padding: 0.875rem 1rem;
+  font-family: 'Poppins';
+  border: 2px solid #359d9a;
+  display: block;
+  width: fit-content;
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #359d9a;
+}
+.ideastormHeaderSection .register a span :hover {
+  background: #359d9a;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection .register a span {
+    font-size: 0.8rem;
+  }
+}

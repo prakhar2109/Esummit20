@@ -1,0 +1,779 @@
+.caprofile-container{
+    top: 0;
+    left: 16.5%;
+    height: fit-content;
+    min-height: 100vh;
+    padding-bottom: 4vh;
+    background-color: #070F12;
+    width: 83.5%;
+    position: absolute;
+}
+.caprofile-container-heading{
+    margin-top: 3.33vh;
+    margin-left: 2.24%;
+    color: rgba(255, 255, 255, 0.87);
+    border-bottom: 2px solid #359D9A;
+    font-size: 20px;
+    width: fit-content;
+    font-family: Poppins-Bold !important;
+
+}
+.ant-modal-content{
+    background: none !important;
+}
+#caprofile-b01{
+    margin-top: 5vh;
+    height: 4.08vh;
+    width: 7.774vw;
+    margin-left: 66.236vw;
+    margin-top: 1.85vh;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #359D9A;
+    color: #359D9A;
+    cursor: pointer;
+    font-family: "Poppins-Regular";
+    font-weight: 600;
+}
+#caprofile-b02{
+    margin-top: 5vh;
+    height: 4.08vh;
+    width: 7.774vw;
+    margin-left: 62.8vw;
+    margin-top: 3.5vh;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.09em;
+    color: #FFFFFF;
+    border: 1px solid #359D9A;
+    box-sizing: border-box;
+    background: #359D9A;    
+    cursor: pointer;
+}
+.caprofile-line1 {
+  flex-basis: 68vw;
+    height: 0.4vh;
+    background-color: #E0E0E0;
+    /* position: absolute; */
+    margin-top: -2vh;
+    width: 87%;
+    margin-left: 8vw;
+}
+.caprofile-parent1{
+    padding-top: 4.44vh;
+    padding-left: 1.67vw;
+padding-bottom: 4vh;
+margin-top: 2.22vh;
+margin-left: 1.875vw;
+height: fit-content;
+background:  #0D1719;
+width: 72.135vw;
+display: flex;
+flex-direction: row;
+
+}
+.caprofile-parent2{
+padding-top: 4.44vh;
+padding-left: 1.67vw;
+margin-top: 3.33vh;
+margin-left: 1.875vw;
+height: fit-content;
+padding-bottom: 4vh;
+background:  #0D1719;
+width: 72.135vw;
+
+}
+
+.caprofile-parent1-child1{
+width: 22.39%;
+height: 75.30%;
+
+
+}
+
+
+.progressline{
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+    margin-top: 5%;
+    width: 100%;
+    height: 5px !important;
+}
+.profile-dashboard-type{
+    margin-top: 4.44vh;
+    text-align: center;
+    font-size: 9.94px;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
+    margin-bottom: 2.59vh;
+
+}
+#profile-dashboard-esummitId{
+color: rgba(255, 255, 255, 0.87);
+font-family: "Poppins-Regular";
+font-weight: 600;
+font-size: 11.42px;
+
+}
+
+#profile-dashboard-esummitId-value{
+	float: right;
+  
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11.42px;
+    text-align: center;
+    color: #09C9C3;
+}
+.profile-dashboard-esummit{
+
+
+    font-size: 9.94px;
+
+}
+.caprofile-parent1-childline{
+
+    width: 2px;
+    margin-left: 1%;
+
+    background: #E0E0E0;
+    margin-top: 7vh;
+}
+.caprofile-parent1-child2{
+
+    width: 34.07%;
+height: 100%;
+margin-left:6%;
+
+}
+.footer-parent2-innerchild{
+    display: flex;
+}
+.caprofile-parent1-child1-heading{
+
+    
+    line-height: normal;
+    font-size: 20px;
+    font-family: "Poppins-Bold" !important;
+    margin-bottom: 4vh;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.caprofile-parent1-child3{
+
+    width: 34.07%;
+    height: 100%;
+
+
+}
+
+.caprofile-parent1-child2-name-heading{
+  
+    
+    color: #B2B2B2;
+    margin-top: 7.22vh !important;
+    
+
+}
+
+.caprofile-parent1-child2-name{
+  
+/* margin-top: 1.22vh;
+color: #4F4F4F; */
+}
+
+.caprofile-parent1-child2-emailheading{
+  
+    /* margin-top: 8.61vh !important;
+    color: #B2B2B2; */
+
+}
+
+.caprofile-parent1-child2-email{
+   
+    /* margin-top: 1.22vh;
+color: #4F4F4F; */
+
+
+
+}
+
+.caprofile-parent1-child3-phoneheading{
+
+  
+    /* margin-top: 19.5vh !important;
+    color: #B2B2B2; */
+    
+
+}
+.caprofile-parent1-child3-phone{
+    
+/* margin-top: 1.22vh;
+color: #4F4F4F; */
+}
+#caprofile-scoreValue{
+    font-size: 11.42px;
+    float: right;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #09C9C3;
+
+
+}
+
+#caprofile-scoreWritten{
+
+line-height: normal;
+text-align: center;
+letter-spacing: 0.02em;
+color: rgba(255, 255, 255, 0.87);
+font-family: "Poppins-Regular";
+font-weight: 600;
+font-size: 11.42px;
+}
+
+
+.caprofile-parent2-innerchild{
+    display: flex;
+    flex-direction: row;
+}
+
+.caprofile-parent3-innerchild{
+    display: flex;
+    flex-direction: row;
+}
+
+.caprofile-parent2-heading{
+    line-height: normal;
+    font-size: 20px;
+    font-family: "Poppins-Bold" !important;
+    margin-bottom: 4vh;
+    color: rgba(255, 255, 255, 0.87);
+
+}
+.caprofile-parent3-child2-collegename-heading{
+
+    
+}
+.ca-profilescore{
+
+    margin-top: 3.55vh;
+}
+
+
+
+.caprofile-heading{
+    line-height: normal;
+    font-size:17.14px;
+    margin-top: 4.44vh;
+    color: rgba(255, 255, 255, 0.87);
+    font-family:"Poppins-Regular" !important;
+    font-weight:600;
+}
+
+.caprofile-data{
+    word-break: break-all;
+    line-height: normal;
+    font-size: 17.14px;
+    margin-top: 1.22vh;
+    font-family:"Poppins-Regular" !important;
+    color: rgba(255, 255, 255, 0.87);
+
+
+}
+
+.caprofile-parent2-child2-programname{
+    width: 30vw;
+    overflow: hidden;
+
+}
+
+.caprofile-parent3-child2-Stateheading{
+
+
+}
+
+.caprofile-parent3-child2-city{
+
+    width: 30vw;
+    overflow: hidden;
+}
+
+.caprofile-grandparent{
+    height: 3.24vh;
+    width: 100%;
+
+}
+.caprofile-dropshape{
+    margin-left: auto;
+    margin-right: auto;
+    background: #359D9A;
+    color: white;
+    height: 14.62vh;
+    max-width: 14.62vh;
+    max-height: 14.62vh;
+    text-transform: uppercase;
+    /* padding-left: 5.4vh; */
+    text-align: center;
+    /* padding-top: 1.5vh; */
+    font-size: 6rem;
+    font-weight: 500;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ca-profile-modalparent1{
+    margin-left: -1.5vw !important;
+}
+
+.ca-profile-modalparent2{
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+.caprofile-parent2-child2-year{
+    width: 30vw;
+}
+
+.caprofile-parent3-child2-State{
+    width: 30vw;
+}
+#caprofile01:focus{
+    border: 2px solid #2EA2F8 !important;
+}
+#caprofile02:focus{
+    border: 2px solid #2EA2F8 !important;
+}
+#caprofile03:focus{
+    border: 2px solid #2EA2F8 !important;
+}
+
+#caprofile01{
+    outline: none !important;
+    margin-top: 0 !important;
+    width: 90%;
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 4.44vh;
+    padding: 5px;
+    background:#0d1719;
+}
+
+#caprofile02{
+    outline: none !important;
+    width: 91%;
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background:#0D1719;
+    height: 4.44vh;
+    padding: 1.11vh;
+}
+
+#caprofile03{
+    outline: none !important;
+    width: 81%;
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 4.44vh;
+    padding: 1.11vh;
+    background:#0D1719;
+}
+
+
+.caprofile-containter-parent{
+    padding-left: 1.875vw;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50vw;
+}
+
+.caprofile-containter-parent-child2{
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 0 !important;
+}
+
+.caprofile-containter-parent-child2-child1{
+    width: 23vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.caprofile-containter-parent-child2-child2{
+    width: 23vw;
+    display: flex;
+    flex-direction: column;
+}
+.caprofile-socialaccounts-child{
+    display: flex;
+    flex-direction: row;
+    margin-top:4.44vh;
+
+}
+.caprofile-socialaccounts-child-heading {
+    line-height: normal;
+    font-size: 19.88px;
+    width:20vw;
+    color: #B2B2B2;
+    font-family: "ProximaNova-Semibold" !important;
+
+}
+
+.caprofile-socialaccounts-child-data{
+    word-break: break-all;
+    line-height: normal;
+    font-size: 17.04px;
+    color: #4F4F4F;
+}
+@media only screen and (min-width: 900px){
+#caprofilemobile-b01 {
+
+display:none;
+}
+#caprofile-mobile-editprofilecontainter{
+display:none;}
+#caprofile-mobile-editprofile-parent2{
+display:none;}
+#caprofile-mobile-editprofile-parent3{
+display:none;}
+#caprofilemobile-b02{
+display:none}
+}
+@media (min-width: 1820px) and (max-width: 2560px){
+    #caprofile-scoreValue{
+        font-size: 16px;
+    }
+    #profile-dashboard-esummitId-value{
+        font-size: 16px;
+    }
+    #profile-dashboard-esummitId{
+        font-size: 16px;
+    }
+    #caprofile-b01{
+        font-size: 16px;
+    }
+    #caprofile-scoreWritten{
+        font-size: 16px;
+    }
+.caprofile-parent1-child1-heading{
+    font-size: 28px;
+}
+.caprofile-dropshape{
+    font-size: 6rem;
+    /* padding-top: 1.5vh; */
+}
+.caprofile-heading{
+    font-size: 24px;
+}
+.caprofile-data{
+    font-size:24px;
+}
+.caprofile-parent2-heading{
+font-size: 28px;
+}
+.caprofile-container-heading{
+font-size:28px;
+
+}
+.caprofile-socialaccounts-child-heading{
+ font-size: 28px;
+}
+
+.caprofile-socialaccounts-child-data{
+font-size:24px;
+}
+.profile-dashboard-type{
+    font-size: 14px;
+}
+
+.profile-dashboard-esummit{
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 900px){
+
+.caprofile-container{
+	top: 0;
+    	left:0;
+   	height: -webkit-fit-content;
+	height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 5rem;
+	padding-bottom: 2rem	;
+    background-color: #070F12;
+	width: 100%;
+	position: relative; 
+}
+.caprofile-parent1{
+    margin-right: .857rem;
+    margin-left: .857rem;
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    padding: 1.71rem;
+    height: fit-content;
+    min-height: 40rem;
+
+}
+.caprofile-parent1-child1 {
+    width: 100%;
+    height: 75.30%;
+}
+.caprofile-parent1-childline {
+    width: auto;
+    height: 2px;
+    background: #E0E0E0;
+    margin-top: 2.57rem;
+}
+.caprofile-parent1-child2-name-heading {
+    color: #B2B2B2;
+    margin-top: 3.21rem !important;
+    font-family:"ProximaNova-Semibold" !important;
+}
+.caprofile-containter-parent-child2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+.caprofile-heading {
+    line-height: normal;
+    font-size: 1.286rem;
+    margin-top: 1.42rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular" !important;
+    font-weight: 600;
+}
+.caprofile-data {
+    line-height: normal;
+    font-size: 1.14rem;
+    margin-top: .57rem;
+    color: #4F4F4F;
+    width: 100%;
+    word-break: unset;
+}
+.caprofile-parent1-child1-heading {
+    text-align: center;
+    line-height: normal;
+    font-size: 18px;
+    margin-bottom: 1.71rem;
+    font-family: "Poppins-Bold" !important;
+    color: rgba(255, 255, 255, 0.87);
+}
+.ca-profilescore {
+    margin-top: 1.14rem;
+}
+.caprofile-parent2{
+    margin-right: .857rem;
+    margin-left: .857rem;
+    margin-top: 1.71rem;
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    padding: 1.71rem;
+    height: fit-content;
+    min-height: 28rem;
+
+}
+.caprofile-parent2-heading {
+    text-align: center;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins-Bold" !important;
+    margin-bottom: 4vh;
+    color: rgba(255, 255, 255, 0.87);
+}
+.caprofile-parent2-child2-collegename-heading{
+
+margin-top:1.71rem;
+}
+.caprofile-parent2-innerchild {
+    display: flex;
+    flex-direction: column;
+}
+.caprofile-parent2-child2-programname {
+    width: auto;
+    overflow: hidden;
+}
+.caprofile-parent3-innerchild {
+    display: flex;
+    flex-direction: column;
+}
+.caprofile-container-heading {
+    padding-top: 1.78rem;
+    margin-left: .857rem;
+    margin-top:0;
+    
+}
+.caprofile-line1 {
+    flex-basis: 68vw;
+    height: 2px;
+    background-color: #E0E0E0;
+    margin-top: -.9rem;
+    width: 77%;
+    margin-left: 19vw;
+}
+#caprofilemobile-b01 {
+    height: 2.857rem;
+    width: 8.5rem;
+    margin-left: auto;
+    margin-right: .857rem;
+    margin-top: 1.35rem;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    background: transparent;
+    border: 1px solid #359D9A;
+    color: #359D9A;
+    cursor: pointer;
+    font-family: "Poppins-Regular";
+    font-weight: 600;
+}
+#caprofile-b01{
+display:none;}
+
+.caprofile-dropshape {
+    margin-top: 6%;
+    margin-left: auto;
+    margin-left: auto;
+    background: #359D9A;
+    color: white;
+    height: 11.28rem;
+    max-width: 11.28rem;
+    max-height: 11.28rem;
+    /* padding-left: 5rem;
+    padding-top: 3rem; */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 500;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+#profile-dashboard-esummitId-value {
+    float: right;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11.42px;
+    text-align: center;
+    color: #09C9C3;
+
+}
+#caprofile-scoreWritten{
+    font-size: 14px;
+
+}
+#profile-dashboard-esummitId {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
+    font-weight: 600;
+    
+}
+.profile-dashboard-type {
+    margin-top: 2.44vh;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins-Regular";
+    margin-bottom: 2.59vh;
+}
+.caprofile-containter-parent {
+   
+    width: auto;
+}
+#caprofile-mobile-editprofilecontainter{
+display:none;}
+#caprofile-mobile-editprofile-parent2{
+display:none;}
+#caprofile-mobile-editprofile-parent3{
+display:none;}
+#caprofilemobile-b02{
+display:none;
+border: 1px solid #359D9A;
+box-sizing: border-box;
+background: transparent;
+color: #359D9A;
+height:2.57rem;
+padding:.857rem;
+margin: auto;
+margin-top: 2vh;
+font-size: .857rem;
+font-family: "Poppins-Semibold" !important;
+}
+.caprofile-socialaccounts-child{
+    display: flex;
+    flex-direction: column;
+    margin-top:1.71rem;
+
+}
+.caprofile-socialaccounts-child-heading {
+    line-height: normal;
+    width: 100%;
+    word-break: break-word;
+    font-size: 1.286rem;
+    font-weight: 500;
+    color: #B2B2B2;
+    font-family: "ProximaNova-Semibold" !important;
+}
+
+.caprofile-socialaccounts-child-data{
+    line-height: normal;
+    font-size: 1.14rem;
+    margin-top: .57rem;
+    color: #4F4F4F;
+    word-break: unset;
+}
+.caprofile-containter-parent-child2-child1 {
+    width: 100% !important;
+    }
+.caprofile-containter-parent-child2-child2{
+   width: 100% !important;
+}
+.caprofile-parent2-child2-year{
+  width: 100% !important;
+}
+.caprofile-parent3-child2-city{
+  width: 100% !important;
+}
+.caprofile-parent3-child2-State{
+  width: 100% !important;
+}
+
+
+#editprofile-input-mobile{
+    width: 100%;
+    height: 2.28rem;
+    padding: 4px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.87);
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #0D1719;
+}
+}

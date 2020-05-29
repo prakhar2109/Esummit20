@@ -1,0 +1,59 @@
+.ideastormEligibility {
+  padding: 10rem 17% 0 17%;
+  display: block;
+  background: #030d0f;
+}
+
+@media (max-width: 1200px) {
+  .ideastormEligibility {
+    padding: 8rem 14%;
+  }
+}
+
+.ideastormEligibility p {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins-bold';
+  font-size: 2rem;
+  line-height: 3rem;
+  font-style: normal;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .ideastormEligibility p {
+    font-size: 1.5rem;
+  }
+}
+.ideastormEligibility ol {
+  padding-top: 4.5rem;
+  font-family: 'Proxima-nova-regular';
+  list-style-type: decimal;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .ideastormEligibility ol {
+    padding-top: 1.5rem;
+    margin: 0;
+  }
+}
+
+.ideastormEligibility ol li {
+  line-height: 2.5625rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1200px) {
+  .ideastormEligibility ol li {
+    line-height: 1.3125rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.ideastormEligibility ol li span {
+  font-weight: bold;
+}

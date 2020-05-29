@@ -1,0 +1,181 @@
+.ideastormHeaderSection {
+  min-height: 69.8125rem;
+  padding: 10rem 17% 2rem 17%;
+}
+.eventDashboard-background-image {
+  background-image: url('../../../assets/leadershipBack.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+    top: 7rem;
+}
+.ideastormHeaderSection .register a span:hover {
+  background: #359d9a;
+  color: white;
+}
+.leadership-speaker {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.leadership-speaker-image-each {
+  width: 220px;
+  border-radius: 220px 220px;
+}
+.leadership-speaker-details {
+  padding: 46px;
+}
+.leadership-speaker-time {
+  padding-left: 12px;
+}
+.leadership-speaker-name,
+.leadership-speaker-date-time {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: rgba(255, 255, 255, 0.87);
+}
+.leadership-speaker-designation {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.leadership-speaker-topic {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+@media only screen and (max-width: 800px) {
+  .leadership-speaker {
+    flex-direction: column;
+    align-items: center;
+  }
+  .leadership-speaker-details {
+    padding: 8px;
+    display: flex;
+    padding-left: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .leadership-speakers-name,
+  .leadership-speaker-date-time {
+    font-size: 15px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection {
+    min-height: 45rem;
+    padding: 6rem 14%;
+  }
+}
+.ideastormHeaderSection p:first-child {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 4.5rem;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:first-child {
+    font-size: 1.5rem;
+    padding-bottom: calc(0px + 1vh);
+    font-weight: bold;
+  }
+}
+
+.ideastormHeaderSection p:nth-child(2) {
+  font-size: 1.75rem;
+  line-height: 3rem;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: calc(0px + 3vh);
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:nth-child(2) {
+    line-height: 0.9375rem;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding-bottom: 0;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.ideastormHeaderSection p:nth-child(6) {
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 2.625rem;
+  padding-bottom: 4.62vh;
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:nth-child(6) {
+    line-height: 170%;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding-bottom: calc(15px + 3vh);
+  }
+}
+
+.ideastormHeaderSection p:nth-child(7) {
+  font-size: 1.625rem;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.6);
+  /* text-align: justify; */
+  margin-bottom: calc(10vh + 2rem);
+  line-height: 170%;
+}
+
+@media (max-width: 1200px) {
+  .ideastormHeaderSection p:nth-child(7) {
+    line-height: 1.125rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(6vh + 2rem);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.ideastormHeaderSection p {
+  text-align: left;
+  font-family: 'Poppins';
+}
+.ideastormHeaderSection .register a span {
+  padding: 0.875rem 1rem;
+  font-family: 'Poppins';
+  border: 2px solid #359d9a;
+  display: block;
+  width: fit-content;
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #359d9a;
+}
+.ideastormHeaderSection .register a span :hover {
+  background: #359d9a;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .ideastormHeaderSection .register a span {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,80 @@
+.sponsorsLanding {
+  padding: 12.875rem 17.5% 0 17.5%;
+  background: #030d0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.sponsorTitleBackground {
+  background-image: '../../assets/sponsors-heading-background.svg';
+}
+.sponsorTitle {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  color: rgba(255, 255, 255, 0.87);
+  align-self: center;
+}
+.titleSponsor {
+  align-self: center;
+  margin: 4rem 2.1rem;
+}
+/* #normalSponsorsCentered {
+  justify-content: center;
+} */
+.titleSponsor img {
+  width: 230px;
+  height: 230px;
+}
+.titleSponsor p {
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+.normalSponsors img {
+  width: 200px;
+  height: 200px;
+}
+.normalSponsors .sponsorimage {
+  margin: 4rem 2.1rem;
+  object-fit: contain;
+}
+.normalSponsors .sponsorimage img {
+  object-fit: contain;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.sponsorImage-background {
+  background-color: white;
+}
+.normalSponsors .sponsorimage p {
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: rgba(255, 255, 255, 0.87);
+  margin-top: 1.5rem;
+}
+
+.normalSponsors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media (max-width: 769px) {
+  .normalSponsors {
+    justify-content: center;
+  }
+}

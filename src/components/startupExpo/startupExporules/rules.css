@@ -1,0 +1,57 @@
+.Rules {
+  padding: 10rem 17% 0 17%;
+  display: block;
+  background: #030d0f;
+}
+
+@media (max-width: 1200px) {
+  .Rules {
+    padding: 6rem 14%;
+  }
+}
+
+.Rules p {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins';
+  font-size: 2rem;
+  line-height: 3rem;
+  font-style: normal;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .Rules p {
+    font-size: 1.5rem;
+  }
+}
+.Rules ol {
+  padding-top: 4.5rem;
+  font-family: 'Proxima-nova-regular';
+  list-style-type: decimal;
+}
+
+@media (max-width: 1200px) {
+  .Rules ol {
+    padding-top: 1.5rem;
+  }
+}
+
+.Rules ol li {
+  line-height: 2.5625rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1200px) {
+  .Rules ol li {
+    line-height: 1.3125rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.Rules ol li span {
+  font-weight: bold;
+}

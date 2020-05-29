@@ -1,0 +1,124 @@
+@mixin mobile {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin fhd {
+  @media (min-width: 1000px) and (max-width: 1600px) {
+    @content;
+  }
+}
+
+.land_faq {
+  padding: 10rem 17% 0 17%;
+  z-index: 2;
+  background: #030d0f;
+
+  @include mobile {
+    padding:6rem 14%;
+  }
+
+  .head1 {
+    color: #1a4d66;
+    font-family: 'Poppins-Bold';
+  }
+
+  @include fhd {
+    padding: 10rem 17% 0 17%;
+  }
+
+  .esummit-landing-faq-land-para {
+    line-height: 35px;
+    font-size: 1.75rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 4.5rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: 'Poppins-Medium';
+
+    @include mobile {
+      line-height: 20px;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      // padding-top: 10px;
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    @include fhd {
+      font-size: 1.5rem;
+      padding-top: 2rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+.esummit-landing-faq-update-question {
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.faq_unit {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.38);
+  margin-bottom: 1rem;
+
+  font-family: 'Poppins-regular';
+  @include mobile {
+    border-bottom: 2px solid #f7f8f9;
+  }
+
+  .answer {
+    display: none;
+    padding: 1.25rem 2.5rem;
+    line-height: 128%;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+
+    color: #b2b2b2;
+    background: #010c0f;
+    cursor: pointer;
+    @include mobile {
+      line-height: normal;
+      font-size: 0.875rem;
+      padding: 0rem 0.625rem 1.25rem 0.625rem;
+    }
+
+    @include fhd {
+      font-size: 1.125rem;
+    }
+  }
+
+  .question {
+    cursor: pointer;
+    line-height: normal;
+    font-size: 24px;
+    padding: 1.25rem 2.5rem;
+    color: #4f4f4f;
+
+    @include mobile {
+      line-height: normal;
+      font-size: 16px;
+      padding: 20px 45px 20px 10px;
+      color: #4f4f4f;
+      position: relative;
+    }
+
+    @include fhd {
+      font-size: 1.5rem;
+    }
+
+    img {
+      float: right;
+
+      @include mobile {
+        height: 20px;
+        position: absolute;
+        right: 0px;
+      }
+    }
+    .crox {
+      display: none;
+    }
+  }
+}

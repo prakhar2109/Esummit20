@@ -1,0 +1,59 @@
+
+  .team-container {
+    padding: 10rem 10% 0 10%;
+    display: block;
+    background: #030d0f;
+  }
+
+  .team-card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .team-container p {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .team-card {
+    width: 20rem;
+    background: #0d1719;
+    border-radius: 2%;
+    margin: 3%;
+  }
+
+  .team-card-content {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+  }
+
+  .team-card-image {
+    width: 100%;
+    height: 20rem;
+    padding: 0 auto;
+    border-radius: 2%;
+  }
+
+  .team-card-heading {
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .team-card-subheading {
+    color: rgba(255, 255, 255, 0.87);
+    line-height: 2rem;
+    font-size: 1.25rem;
+
+  }
+
+  .card-linkd-icon {
+    width: 3rem;
+  }
